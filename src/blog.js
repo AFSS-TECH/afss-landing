@@ -153,6 +153,190 @@ Peluncuran bukan akhir. Tanyakan soal masa garansi bug dan paket [maintenance](/
 Pilih partner yang transparan, menyerahkan kepemilikan kode, dan benar-benar memahami tujuan bisnis Anda — bukan sekadar mengejar transaksi. Punya pertanyaan? Cek [FAQ](/#faq) kami atau langsung [konsultasi gratis](/#pricing).
 `,
   },
+  {
+    slug: 'website-custom-vs-template',
+    title: 'Website Custom vs Template: Mana yang Tepat untuk Bisnis Anda?',
+    description:
+      'Perbandingan website custom vs template — biaya, kecepatan, SEO, fleksibilitas, dan kapan sebaiknya memilih masing-masing.',
+    date: '2026-06-14',
+    readMinutes: 6,
+    tags: ['Website', 'Perbandingan'],
+    c: '#2BB3A3',
+    c2: '#0E8C86',
+    excerpt:
+      'Template lebih murah dan cepat, custom lebih fleksibel dan unik. Mana yang sebaiknya Anda pilih?',
+    body: `
+Saat membuat website, Anda akan dihadapkan pada dua pilihan: pakai **template jadi** atau bangun **custom dari nol**. Keduanya valid — yang penting cocok dengan tujuan dan anggaran Anda. Mari bandingkan.
+
+## Apa bedanya?
+
+**Template** adalah desain siap pakai yang tinggal diisi konten. **Custom** dibangun khusus sesuai brand, kebutuhan, dan alur bisnis Anda — mulai dari desain hingga fungsionalitas.
+
+## Template: cepat & murah, tapi terbatas
+
+Kelebihan:
+
+- **Murah** dan cepat diluncurkan.
+- Cocok untuk kebutuhan sederhana atau uji pasar.
+
+Kekurangan:
+
+- Tampilan sering "kembar" dengan ribuan situs lain.
+- Sulit dikustomisasi saat kebutuhan berkembang.
+- Banyak kode bawaan yang tidak terpakai → bisa memperlambat situs dan menurunkan skor SEO.
+
+## Custom: investasi yang tumbuh bersama Anda
+
+Kelebihan:
+
+- **Unik** dan sesuai identitas brand.
+- Dibangun **cepat & SEO-ready** sejak awal (tanpa beban kode template).
+- Fleksibel — fitur bisa ditambah seiring bisnis berkembang.
+- Kode menjadi **milik Anda** sepenuhnya.
+
+Kekurangan:
+
+- Investasi awal lebih besar dan butuh waktu pengerjaan lebih lama. Lihat kisaran biayanya di artikel [biaya pembuatan website](/blog/biaya-pembuatan-website).
+
+## Jadi, mana yang sebaiknya dipilih?
+
+- **Pilih template** jika anggaran sangat terbatas, kebutuhan sederhana, dan Anda hanya ingin "hadir" online secepatnya.
+- **Pilih custom** jika website adalah aset bisnis serius yang harus mendatangkan pelanggan, mencerminkan brand, dan berkembang ke depan.
+
+Di AFSS, kami fokus pada [pembuatan website custom](/#services) yang cepat dan SEO-ready — bukan template pasaran. [Konsultasi gratis](/#pricing) untuk cari tahu mana yang paling tepat untuk Anda.
+`,
+  },
+  {
+    slug: 'website-seo-friendly',
+    title: 'Kenapa Website Bisnis Harus SEO-Friendly Sejak Awal',
+    description:
+      'Website yang tidak SEO-friendly = tidak ditemukan di Google. Pelajari elemen website SEO-friendly dan kenapa harus dibangun sejak awal.',
+    date: '2026-06-10',
+    readMinutes: 6,
+    tags: ['SEO', 'Website'],
+    c: '#0E8C86',
+    c2: '#1E88A8',
+    excerpt:
+      'Website cantik tapi tidak muncul di Google sama saja tidak ada. Inilah kenapa SEO harus dibangun sejak awal.',
+    body: `
+Website yang bagus tapi tidak bisa ditemukan di Google ibarat toko mewah di gang buntu. **SEO (Search Engine Optimization)** memastikan calon pelanggan menemukan Anda saat mencari "jasa pembuatan website", "software house", atau layanan Anda.
+
+## Apa itu website SEO-friendly?
+
+Website yang dirancang agar mudah dipahami mesin pencari dan nyaman bagi pengguna. Ini bukan trik — ini fondasi teknis dan konten yang benar.
+
+## Elemen utama website SEO-friendly
+
+### 1. Cepat (Core Web Vitals)
+Google memprioritaskan situs yang cepat. Skor Core Web Vitals yang baik (LCP, CLS, INP) meningkatkan peringkat sekaligus pengalaman pengguna.
+
+### 2. Struktur & konten yang jelas
+Satu H1 per halaman, hierarki heading yang rapi, dan konten yang menjawab kebutuhan pencari. Inilah peran [blog](/blog) — menarget banyak kata kunci turunan.
+
+### 3. Meta & data terstruktur
+Title dan meta description yang relevan, plus schema markup (JSON-LD) agar tampil lebih menonjol di hasil pencarian.
+
+### 4. Mobile-friendly
+Mayoritas trafik di Indonesia dari ponsel. Google memakai indeks mobile-first.
+
+### 5. Bisa di-crawl
+Konten harus muncul di HTML (bukan hanya setelah JavaScript jalan), plus sitemap.xml dan robots.txt yang benar.
+
+## Kenapa harus sejak awal?
+
+Menambahkan SEO setelah website jadi sering kali mahal dan tambal-sulam. Membangun **SEO-ready sejak awal** jauh lebih hemat dan efektif — ini salah satu prinsip kerja kami, dan salah satu hal yang sebaiknya Anda tanyakan saat [memilih software house](/blog/cara-memilih-software-house).
+
+## Kesimpulan
+
+SEO bukan biaya tambahan, tapi bagian dari membangun website yang benar. Ingin website yang cepat dan SEO-ready? Lihat [layanan kami](/#services) atau [konsultasi gratis](/#pricing).
+`,
+  },
+  {
+    slug: 'apa-itu-erp',
+    title: 'Apa Itu ERP? Panduan Sistem ERP untuk Perusahaan di Indonesia',
+    description:
+      'Penjelasan sederhana tentang sistem ERP, modul-modulnya, tanda bisnis Anda membutuhkan ERP, dan pilihan ERP custom vs paket.',
+    date: '2026-06-09',
+    readMinutes: 7,
+    tags: ['ERP', 'Sistem'],
+    c: '#15243B',
+    c2: '#0E8C86',
+    excerpt:
+      'ERP menyatukan keuangan, inventory, dan HR dalam satu sistem. Apakah bisnis Anda sudah membutuhkannya?',
+    body: `
+Seiring bisnis tumbuh, data tersebar di mana-mana: stok di Excel, keuangan di buku, absensi di aplikasi lain. **ERP (Enterprise Resource Planning)** menyatukan semuanya dalam satu sistem terintegrasi.
+
+## Apa itu ERP?
+
+ERP adalah sistem yang mengelola dan menghubungkan proses inti bisnis — keuangan, persediaan, pembelian, penjualan, hingga SDM — sehingga semua data mengalir di satu tempat dan laporan jadi real-time.
+
+## Modul yang umum ada di ERP
+
+- **Keuangan & Akuntansi** — pencatatan, laporan laba rugi, neraca.
+- **Inventory / Persediaan** — stok masuk-keluar, multi-gudang.
+- **Pembelian & Penjualan** — purchase order, invoice, pelanggan.
+- **HR & Payroll** — data karyawan, absensi, penggajian.
+- **Laporan** — dashboard dan analitik lintas departemen.
+
+## Tanda bisnis Anda butuh ERP
+
+- Data tersebar di banyak file/aplikasi dan sering tidak sinkron.
+- Laporan bulanan makan waktu berhari-hari.
+- Sering terjadi kesalahan input manual.
+- Tim kesulitan melihat kondisi bisnis secara real-time.
+
+Jika beberapa poin di atas terasa familier, ERP bisa menghemat waktu operasional Anda secara drastis.
+
+## ERP paket vs ERP custom
+
+**ERP paket** (siap pakai) cepat dipasang tapi sering tidak pas dengan alur bisnis Anda. **ERP custom** dibangun sesuai proses nyata perusahaan — lebih pas, dan kodenya milik Anda. Untuk memutuskan, pertimbangkan kompleksitas dan keunikan alur bisnis Anda — mirip pertimbangan [website custom vs template](/blog/website-custom-vs-template).
+
+## Mulai dari yang Anda butuhkan
+
+Tidak harus langsung lengkap. Kami biasa membangun ERP secara bertahap, mulai dari modul paling mendesak. Lihat [layanan pengembangan sistem kami](/#services) atau [minta penawaran](/#pricing).
+`,
+  },
+  {
+    slug: 'tips-meningkatkan-konversi-landing-page',
+    title: '7 Tips Meningkatkan Konversi Landing Page',
+    description:
+      'Tujuh tips praktis meningkatkan konversi landing page — dari headline, CTA, bukti sosial, hingga kecepatan dan mobile.',
+    date: '2026-06-08',
+    readMinutes: 6,
+    tags: ['Landing Page', 'Konversi'],
+    c: '#1E88A8',
+    c2: '#15243B',
+    excerpt:
+      'Trafik banyak tapi sedikit yang menghubungi? Tujuh tips ini membantu landing page Anda mengubah pengunjung jadi pelanggan.',
+    body: `
+Landing page yang baik bukan yang paling cantik, tapi yang paling banyak **mengubah pengunjung menjadi pelanggan**. Berikut tujuh tips yang terbukti meningkatkan konversi.
+
+## 1. Headline yang jelas & spesifik
+Pengunjung memutuskan dalam hitungan detik. Sampaikan manfaat utama secara jelas — bukan slogan kabur.
+
+## 2. Satu tujuan, satu CTA utama
+Fokuskan pada satu aksi (mis. "Konsultasi Gratis"). Terlalu banyak pilihan membingungkan dan menurunkan konversi.
+
+## 3. Tonjolkan manfaat, bukan fitur
+Pengunjung peduli pada hasil bagi mereka, bukan daftar fitur teknis. Ubah "punya dashboard" menjadi "lihat performa bisnis real-time".
+
+## 4. Bukti sosial
+Testimoni, jumlah klien, dan logo perusahaan meningkatkan kepercayaan. Orang cenderung mengikuti pilihan orang lain.
+
+## 5. Kurangi gesekan pada form
+Minta data seperlunya. Form pendek + opsi kontak via WhatsApp menurunkan hambatan untuk menghubungi Anda.
+
+## 6. Cepat & mobile-friendly
+Halaman lambat membunuh konversi. Pastikan ringan dan nyaman di ponsel — ini juga baik untuk SEO, seperti dibahas di [website SEO-friendly](/blog/website-seo-friendly).
+
+## 7. Hilangkan keraguan
+Sertakan FAQ, garansi, atau transparansi harga untuk menjawab keberatan sebelum muncul.
+
+## Kesimpulan
+
+Konversi adalah hasil dari kejelasan, kepercayaan, dan kemudahan. Ingin landing page yang dirancang untuk konversi? Lihat [layanan kami](/#services) atau [konsultasi gratis](/#pricing).
+`,
+  },
 ]
 
 export const getAllPosts = () =>
