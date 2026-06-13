@@ -337,6 +337,154 @@ Sertakan FAQ, garansi, atau transparansi harga untuk menjawab keberatan sebelum 
 Konversi adalah hasil dari kejelasan, kepercayaan, dan kemudahan. Ingin landing page yang dirancang untuk konversi? Lihat [layanan kami](/#services) atau [konsultasi gratis](/#pricing).
 `,
   },
+  {
+    slug: 'beda-website-webapp-aplikasi-mobile',
+    title: 'Beda Website, Web App, dan Aplikasi Mobile — Mana yang Anda Butuhkan?',
+    description:
+      'Penjelasan sederhana perbedaan website, web app, dan aplikasi mobile, beserta kapan sebaiknya bisnis memilih masing-masing.',
+    date: '2026-06-07',
+    readMinutes: 6,
+    tags: ['Website', 'Web App'],
+    c: '#0E8C86',
+    c2: '#15243B',
+    excerpt:
+      'Istilah ini sering tertukar. Pahami bedanya agar Anda tidak salah investasi membangun produk digital.',
+    body: `
+"Saya butuh website atau aplikasi?" — pertanyaan ini sering muncul, dan jawabannya tergantung apa yang ingin Anda capai. Mari perjelas tiga istilah yang kerap tertukar.
+
+## Website
+Halaman yang diakses lewat browser untuk **menyampaikan informasi**: company profile, landing page, blog, atau katalog. Fokusnya konten dan ditemukan di Google. Kalau tujuan utama Anda "hadir online dan mendatangkan calon pelanggan", inilah yang Anda butuhkan. Lihat [layanan pembuatan website](/#services).
+
+## Web App (aplikasi berbasis web)
+Aplikasi yang juga dibuka lewat browser, tapi **interaktif dan punya logika**: login, dashboard, manajemen data, laporan. Contohnya sistem kasir, CRM, atau [ERP](/blog/apa-itu-erp). Cocok saat Anda perlu *mengelola* sesuatu, bukan sekadar menampilkan informasi.
+
+## Aplikasi Mobile
+Aplikasi yang dipasang di ponsel (Android/iOS) lewat store. Unggul untuk **penggunaan rutin**, notifikasi push, fitur perangkat (kamera, GPS), dan pengalaman yang lebih cepat. Soal waktu pengerjaannya, baca [berapa lama pembuatan aplikasi mobile](/blog/lama-pembuatan-aplikasi-mobile).
+
+## Mana yang sebaiknya dipilih?
+
+- **Butuh dikenal & mendatangkan leads** → Website.
+- **Butuh mengelola operasional / data** → Web App.
+- **Butuh dipakai pengguna secara rutin di ponsel** → Aplikasi Mobile.
+
+Sering kali bisnis butuh kombinasi — misalnya website untuk marketing + web app untuk operasional internal. Bingung menentukan? [Konsultasi gratis](/#pricing), kami bantu petakan kebutuhan Anda.
+`,
+  },
+  {
+    slug: 'company-profile-website',
+    title: 'Apa Itu Company Profile Website dan Kenapa Bisnis Butuh?',
+    description:
+      'Company profile website membangun kredibilitas bisnis di mata calon klien. Pelajari isinya, manfaatnya, dan tips membuatnya efektif.',
+    date: '2026-06-06',
+    readMinutes: 5,
+    tags: ['Website', 'Bisnis'],
+    c: '#15243B',
+    c2: '#1E88A8',
+    excerpt:
+      'Di era digital, calon klien mengecek perusahaan Anda online sebelum memutuskan. Inilah peran company profile website.',
+    body: `
+Sebelum bekerja sama, calon klien hampir pasti mencari perusahaan Anda di Google. Jika yang muncul cuma akun media sosial atau bahkan nihil, kredibilitas Anda dipertaruhkan. Di sinilah **company profile website** berperan.
+
+## Apa itu company profile website?
+
+Website resmi yang memperkenalkan perusahaan Anda secara profesional: siapa Anda, apa layanan/produk Anda, portofolio, dan cara menghubungi. Ini "kartu nama digital" yang aktif 24/7.
+
+## Isi yang sebaiknya ada
+
+- **Beranda** dengan value proposition yang jelas.
+- **Tentang kami** — visi, misi, dan kredibilitas.
+- **Layanan / produk** — kaya kata kunci untuk SEO.
+- **Portofolio / studi kasus** — bukti nyata hasil kerja.
+- **Testimoni** — kepercayaan dari klien.
+- **Kontak & lokasi** (NAP) — penting untuk SEO lokal.
+
+## Manfaat untuk bisnis
+
+- **Kredibilitas** — terlihat serius dan terpercaya.
+- **Ditemukan di Google** — jika dibangun [SEO-friendly sejak awal](/blog/website-seo-friendly).
+- **Aset milik sendiri** — tidak bergantung pada algoritma media sosial.
+- **Buka 24 jam** — calon klien bisa mengenal Anda kapan saja.
+
+## Tips agar efektif
+
+Jangan sekadar "ada". Pastikan cepat, mobile-friendly, jelas CTA-nya, dan dibangun custom sesuai brand — bukan template pasaran (baca [custom vs template](/blog/website-custom-vs-template)).
+
+Ingin company profile yang profesional dan SEO-ready? Lihat [layanan kami](/#services) atau [konsultasi gratis](/#pricing).
+`,
+  },
+  {
+    slug: 'pentingnya-maintenance-website',
+    title: 'Maintenance Website: Kenapa Penting dan Apa Saja yang Dikerjakan',
+    description:
+      'Website bukan proyek sekali jadi. Pahami kenapa maintenance website penting dan apa saja yang dikerjakan agar situs tetap aman dan cepat.',
+    date: '2026-06-05',
+    readMinutes: 5,
+    tags: ['Maintenance', 'Website'],
+    c: '#2BB3A3',
+    c2: '#0B6E69',
+    excerpt:
+      'Peluncuran bukan akhir. Tanpa maintenance, website bisa lambat, rentan diretas, dan ketinggalan zaman.',
+    body: `
+Banyak yang mengira website selesai setelah diluncurkan. Padahal seperti kendaraan, website butuh perawatan agar tetap **aman, cepat, dan relevan**. Tanpa maintenance, risikonya nyata: diretas, error, atau ditinggalkan pengunjung.
+
+## Kenapa maintenance penting?
+
+- **Keamanan** — celah keamanan baru muncul terus; update menutupnya.
+- **Performa** — situs yang dirawat tetap cepat (baik untuk SEO & pengguna).
+- **Kompatibilitas** — browser dan perangkat terus berubah.
+- **Ketersediaan** — monitoring memastikan situs tidak down tanpa Anda sadari.
+
+## Apa saja yang dikerjakan?
+
+- **Update keamanan** rutin pada sistem dan dependensi.
+- **Backup berkala** agar data aman bila terjadi masalah.
+- **Monitoring uptime** dan perbaikan cepat saat ada gangguan.
+- **Perbaikan bug** dan penyesuaian kecil.
+- **Pembaruan konten** ringan bila diperlukan.
+
+## Berapa biayanya?
+
+Biasanya berupa paket bulanan/tahunan sesuai cakupan. Jauh lebih murah dibanding kerugian akibat situs diretas atau down saat momen penting.
+
+Saat [memilih software house](/blog/cara-memilih-software-house), pastikan tanyakan soal garansi dan paket maintenance. Di AFSS, [Maintenance & Support](/#services) tersedia untuk menjaga sistem Anda tetap prima. Butuh info lebih lanjut? [Konsultasi gratis](/#pricing).
+`,
+  },
+  {
+    slug: 'website-untuk-umkm',
+    title: 'Kenapa UMKM Wajib Punya Website di 2026',
+    description:
+      'Alasan UMKM perlu punya website di 2026, manfaat konkretnya, dan cara memulai dengan budget terjangkau.',
+    date: '2026-06-04',
+    readMinutes: 5,
+    tags: ['UMKM', 'Website'],
+    c: '#1E88A8',
+    c2: '#0E8C86',
+    excerpt:
+      'Media sosial saja tidak cukup. Website memberi UMKM kredibilitas, kontrol, dan peluang ditemukan di Google.',
+    body: `
+Banyak UMKM mengandalkan media sosial saja. Itu bagus, tapi tidak cukup. Di 2026, **website** memberi keunggulan yang tidak bisa diberikan media sosial — dan biayanya kini sangat terjangkau.
+
+## Kenapa media sosial saja tidak cukup?
+
+- Anda **menumpang** di platform orang lain — algoritma dan aturannya bisa berubah kapan saja.
+- Sulit ditemukan lewat **pencarian Google** saat orang mencari produk Anda.
+- Kredibilitas terbatas dibanding website resmi.
+
+## Manfaat website untuk UMKM
+
+- **Ditemukan di Google** — muncul saat calon pelanggan mencari produk/jasa Anda.
+- **Kredibilitas** — terlihat lebih profesional dan terpercaya.
+- **Buka 24 jam** — etalase yang tidak pernah tutup.
+- **Aset milik sendiri** — Anda yang pegang kendali penuh.
+- **Konversi** — diarahkan untuk mengubah pengunjung jadi pembeli (baca [tips konversi landing page](/blog/tips-meningkatkan-konversi-landing-page)).
+
+## Mulai dari yang terjangkau
+
+Tidak perlu langsung mahal. Sebuah landing page atau company profile sederhana sudah cukup untuk memulai — dan bisa dikembangkan seiring bisnis tumbuh. Cek kisaran [biaya pembuatan website](/blog/biaya-pembuatan-website).
+
+Siap membawa UMKM Anda online dengan benar? Lihat [layanan kami](/#services) atau [konsultasi gratis](/#pricing).
+`,
+  },
 ]
 
 export const getAllPosts = () =>

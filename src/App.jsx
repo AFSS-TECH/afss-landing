@@ -9,6 +9,7 @@ import {
   BRAND, products, workflow as steps, showcase, charts, reviews, stats,
   growthSeries, kpis, satisfaction, waLink, clients, why, techStack, pricing, faqs,
 } from './data.js'
+import { getAllPosts, formatDateId } from './blog.js'
 
 /* ── Motion presets — enter recipe: opacity + y + blur, smooth spring ── */
 const fadeUp = {
@@ -688,6 +689,43 @@ function Career() {
   )
 }
 
+/* ════════════════════════════════════════════════ BLOG TEASER (internal linking from home) */
+function BlogTeaser() {
+  const latest = getAllPosts().slice(0, 3)
+  return (
+    <section className="blog-teaser" id="blog-teaser">
+      <div className="container">
+        <Reveal className="sec-header center">
+          <div className="eyebrow"><i className="fa-solid fa-newspaper" /> Blog</div>
+          <h2 className="sec-title">Wawasan &amp; <span className="ital">tips</span> terbaru</h2>
+          <p className="sec-sub">Panduan praktis seputar pembuatan website, aplikasi, dan strategi digital untuk bisnis Anda.</p>
+        </Reveal>
+        <motion.div className="blog-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+          {latest.map((p) => (
+            <motion.article key={p.slug} className="blog-card" variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }}>
+              <Link to={`/blog/${p.slug}`} className="blog-card-link">
+                <div className="blog-cover" style={{ '--c': p.c, '--c2': p.c2 }}>
+                  <span className="blog-cover-mark">AF</span>
+                  <div className="blog-cover-tags">{p.tags.map((t) => <span key={t}>{t}</span>)}</div>
+                </div>
+                <div className="blog-card-body">
+                  <div className="blog-meta">{formatDateId(p.date)} · {p.readMinutes} menit baca</div>
+                  <h3 className="blog-card-title">{p.title}</h3>
+                  <p className="blog-card-excerpt">{p.excerpt}</p>
+                  <span className="blog-readmore">Baca selengkapnya <i className="fa-solid fa-arrow-right" /></span>
+                </div>
+              </Link>
+            </motion.article>
+          ))}
+        </motion.div>
+        <div className="blog-teaser-all">
+          <Link to="/blog" className="btn btn-ghost btn-lg">Lihat semua artikel <i className="fa-solid fa-arrow-right" /></Link>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 /* ════════════════════════════════════════════════ CTA BAND */
 function CtaBand() {
   return (
@@ -806,6 +844,7 @@ export function Home() {
       <Pricing />
       <Faq />
       <Career />
+      <BlogTeaser />
       <CtaBand />
     </>
   )
