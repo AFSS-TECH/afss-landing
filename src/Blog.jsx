@@ -93,6 +93,7 @@ export function BlogPost() {
   const url = `${SITE_URL}/blog/${post.slug}`
   const related = getAllPosts().filter((p) => p.slug !== post.slug).slice(0, 2)
 
+  const wordCount = post.body.trim().split(/\s+/).length
   const articleLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -103,7 +104,10 @@ export function BlogPost() {
     inLanguage: 'id-ID',
     mainEntityOfPage: url,
     image: `${SITE_URL}/og.png`,
-    author: { '@type': 'Organization', name: BRAND.legal },
+    keywords: post.tags.join(', '),
+    articleSection: post.tags[0],
+    wordCount,
+    author: { '@type': 'Organization', name: BRAND.legal, url: `${SITE_URL}/` },
     publisher: { '@type': 'Organization', name: BRAND.legal, logo: { '@type': 'ImageObject', url: `${SITE_URL}/favicon.svg` } },
   }
   const breadcrumbLd = {
