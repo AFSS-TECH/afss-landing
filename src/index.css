@@ -456,6 +456,65 @@ footer { background: var(--ink); color: #AAB6C4; padding: 80px 24px 36px; }
 .faq-a { overflow: hidden; }
 .faq-a p { padding: 0 26px 24px; color: var(--muted); font-size: .95rem; line-height: 1.75; }
 
+/* ════════ BLOG ════════ */
+.container-narrow { max-width: 760px; }
+.page-hero { padding: 168px 24px 60px; position: relative; overflow: hidden; }
+.page-title { font-size: clamp(2.1rem, 4vw, 3.2rem); font-weight: 800; line-height: 1.08; color: var(--ink); margin-bottom: 18px; }
+.page-title .ital { color: var(--accent); font-weight: 500; }
+.page-sub { color: var(--muted); font-size: 1.1rem; line-height: 1.7; max-width: 580px; }
+.blog-list-sec { padding: 30px 24px 110px; }
+
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 26px; }
+.blog-card { background: var(--surface); border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: box-shadow .35s var(--ease); }
+.blog-card:hover { box-shadow: var(--shadow); }
+.blog-card-link { display: flex; flex-direction: column; height: 100%; }
+.blog-cover { position: relative; aspect-ratio: 16 / 8; background: linear-gradient(135deg, var(--c), var(--c2)); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.blog-cover::after { content: ''; position: absolute; inset: 0; background: radial-gradient(60% 80% at 80% 10%, rgba(255,255,255,.18), transparent 60%); }
+.blog-cover-mark { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 2.6rem; color: rgba(255,255,255,.92); letter-spacing: -.04em; }
+.blog-cover-tags { position: absolute; left: 16px; bottom: 14px; display: flex; flex-wrap: wrap; gap: 6px; z-index: 1; }
+.blog-cover-tags span { font-size: .66rem; font-weight: 600; color: #fff; background: rgba(0,0,0,.22); backdrop-filter: blur(4px); padding: 4px 10px; border-radius: 50px; }
+.blog-card-body { padding: 24px 26px 28px; display: flex; flex-direction: column; flex: 1; }
+.blog-meta { font-size: .76rem; color: var(--faint); font-weight: 600; margin-bottom: 12px; letter-spacing: .01em; }
+.blog-card-title { font-size: 1.22rem; font-weight: 800; line-height: 1.3; color: var(--ink); margin-bottom: 12px; }
+.blog-card-excerpt { color: var(--muted); font-size: .92rem; line-height: 1.65; margin-bottom: 18px; }
+.blog-readmore { margin-top: auto; display: inline-flex; align-items: center; gap: 8px; color: var(--accent); font-weight: 700; font-size: .88rem; transition: gap .25s var(--ease); }
+.blog-card:hover .blog-readmore { gap: 12px; }
+
+/* ── Single post ── */
+.post { padding-bottom: 100px; }
+.post-head { padding: 160px 24px 40px; position: relative; overflow: hidden; }
+.breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: .82rem; color: var(--muted); margin-bottom: 22px; }
+.breadcrumb a { color: var(--accent); font-weight: 600; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb .bc-current { color: var(--faint); }
+.post-title { font-size: clamp(1.9rem, 3.6vw, 2.9rem); font-weight: 800; line-height: 1.14; color: var(--ink); margin-bottom: 16px; }
+.post-meta { font-size: .86rem; color: var(--muted); font-weight: 500; }
+
+/* ── Article typography (rendered Markdown) ── */
+.article { color: var(--ink-2); font-size: 1.06rem; line-height: 1.8; }
+.article > * + * { margin-top: 1.15em; }
+.article h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--ink); letter-spacing: -.02em; line-height: 1.25; margin-top: 2em; margin-bottom: .2em; }
+.article h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.22rem; font-weight: 800; color: var(--ink); margin-top: 1.6em; margin-bottom: .1em; }
+.article p { color: var(--ink-2); }
+.article a { color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.article a:hover { color: var(--accent-d); }
+.article strong { color: var(--ink); font-weight: 700; }
+.article ul, .article ol { padding-left: 1.4em; }
+.article ul { list-style: disc; }
+.article ol { list-style: decimal; }
+.article li { margin-top: .5em; padding-left: .2em; }
+.article li::marker { color: var(--accent); }
+.article blockquote { border-left: 3px solid var(--accent); padding: 4px 0 4px 20px; color: var(--muted); font-style: italic; }
+.article code { background: var(--paper-3); padding: 2px 7px; border-radius: 6px; font-size: .9em; }
+
+.post-cta { margin-top: 56px; text-align: center; background: var(--ink); color: var(--paper); border-radius: var(--r-lg); padding: 44px 32px; position: relative; overflow: hidden; box-shadow: var(--shadow); }
+.post-cta::after { content: ''; position: absolute; inset: 0; background: radial-gradient(60% 90% at 50% 0%, rgba(43,179,163,.22), transparent 55%); pointer-events: none; }
+.post-cta > * { position: relative; z-index: 1; }
+.post-cta h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 10px; }
+.post-cta p { color: #B2BECC; max-width: 460px; margin: 0 auto 24px; line-height: 1.65; }
+.post-cta .btn-pri { background: var(--paper); color: var(--ink); }
+.related-head { font-size: 1.3rem; font-weight: 800; color: var(--ink); margin: 80px 0 26px; text-align: center; }
+
 /* ════════ RESPONSIVE ════════ */
 @media (max-width: 1024px) {
   .hero-inner { grid-template-columns: 1fr; gap: 48px; }
@@ -483,11 +542,15 @@ footer { background: var(--ink); color: #AAB6C4; padding: 80px 24px 36px; }
   .rev-card { width: 300px; }
   .kpi-col { grid-template-columns: 1fr; }
   .graph-card, .vm-card, .career-card { padding: 30px 24px; }
+  .page-hero { padding: 124px 20px 40px; }
+  .post-head { padding: 120px 20px 32px; }
+  .blog-list-sec { padding: 24px 20px 84px; }
 }
 @media (max-width: 560px) {
   .hero-cta .btn { width: 100%; justify-content: center; }
   .proc-grid { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr; }
+  .blog-grid { grid-template-columns: 1fr; }
   .show-grid { grid-template-columns: 1fr 1fr; }
   .benefits-grid { grid-template-columns: 1fr 1fr; }
   .stat-item::after { display: none !important; }

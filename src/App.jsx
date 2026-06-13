@@ -3,6 +3,8 @@ import {
   motion, AnimatePresence, useScroll, useTransform, useSpring,
   useInView, animate, useReducedMotion,
 } from 'framer-motion'
+import { Link, Outlet } from 'react-router-dom'
+import { Head } from 'vite-react-ssg'
 import {
   BRAND, products, workflow as steps, showcase, charts, reviews, stats,
   growthSeries, kpis, satisfaction, waLink, clients, why, techStack, pricing, faqs,
@@ -190,15 +192,17 @@ function Nav() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
   const links = [
-    ['#services', 'Layanan'], ['#why', 'Keunggulan'], ['#process', 'Proses'],
-    ['#portfolio', 'Portofolio'], ['#pricing', 'Harga'], ['#faq', 'FAQ'], ['#career', 'Karir'],
+    ['/#services', 'Layanan'], ['/#why', 'Keunggulan'], ['/#portfolio', 'Portofolio'],
+    ['/#pricing', 'Harga'], ['/#faq', 'FAQ'],
   ]
+  const close = () => setOpen(false)
   return (
     <motion.nav className={`nav ${scrolled ? 'scrolled' : ''}`} initial={{ y: -70, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
       <div className="nav-inner">
-        <a href="#home"><Logo /></a>
+        <Link to="/" aria-label="AFSS beranda"><Logo /></Link>
         <ul className="nav-links">
           {links.map(([h, t]) => <li key={h}><a href={h}>{t}</a></li>)}
+          <li><Link to="/blog">Blog</Link></li>
           <li><a href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis.`)} className="btn btn-pri" target="_blank" rel="noreferrer">Konsultasi Gratis</a></li>
         </ul>
         <button className="hamburger" aria-label="Menu" onClick={() => setOpen((o) => !o)}><span /><span /><span /></button>
@@ -206,8 +210,9 @@ function Nav() {
       <AnimatePresence>
         {open && (
           <motion.div className="mobile-menu" initial={{ opacity: 0, y: -10, height: 0 }} animate={{ opacity: 1, y: 0, height: 'auto' }} exit={{ opacity: 0, y: -8, height: 0 }} transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}>
-            {links.map(([h, t]) => <a key={h} href={h} onClick={() => setOpen(false)}>{t}</a>)}
-            <a href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis.`)} className="btn btn-pri" target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>Konsultasi Gratis</a>
+            {links.map(([h, t]) => <a key={h} href={h} onClick={close}>{t}</a>)}
+            <Link to="/blog" onClick={close}>Blog</Link>
+            <a href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis.`)} className="btn btn-pri" target="_blank" rel="noreferrer" onClick={close}>Konsultasi Gratis</a>
           </motion.div>
         )}
       </AnimatePresence>
@@ -716,22 +721,22 @@ function Footer() {
         <div>
           <div className="ft-head">Layanan</div>
           <ul className="ft-links">
-            <li><a href="#services">Pembuatan Website Custom</a></li>
-            <li><a href="#services">Aplikasi Mobile Android &amp; iOS</a></li>
-            <li><a href="#services">Web App &amp; Sistem Internal</a></li>
-            <li><a href="#services">UI/UX Design</a></li>
-            <li><a href="#services">Maintenance &amp; Support</a></li>
+            <li><a href="/#services">Pembuatan Website Custom</a></li>
+            <li><a href="/#services">Aplikasi Mobile Android &amp; iOS</a></li>
+            <li><a href="/#services">Web App &amp; Sistem Internal</a></li>
+            <li><a href="/#services">UI/UX Design</a></li>
+            <li><a href="/#services">Maintenance &amp; Support</a></li>
           </ul>
         </div>
         <div>
           <div className="ft-head">Perusahaan</div>
           <ul className="ft-links">
-            <li><a href="#why">Keunggulan</a></li>
-            <li><a href="#process">Proses Kerja</a></li>
-            <li><a href="#portfolio">Portofolio</a></li>
-            <li><a href="#pricing">Paket Harga</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#career">Karir</a></li>
+            <li><a href="/#why">Keunggulan</a></li>
+            <li><a href="/#portfolio">Portofolio</a></li>
+            <li><a href="/#pricing">Paket Harga</a></li>
+            <li><Link to="/blog">Blog</Link></li>
+            <li><a href="/#faq">FAQ</a></li>
+            <li><a href="/#career">Karir</a></li>
           </ul>
         </div>
         <div>
@@ -751,16 +756,43 @@ function Footer() {
   )
 }
 
-/* ════════════════════════════════════════════════ APP */
-export default function App() {
-  const { scrollYProgress, scrollY } = useScroll()
+/* ════════════════════════════════════════════════ LAYOUT — shared chrome (nav + footer) */
+export function Layout() {
+  const { scrollYProgress } = useScroll()
   const reduce = useReducedMotion()
-  const parallax = useTransform(scrollY, [0, 600], [0, -40])
   return (
     <>
       <div className="grain" aria-hidden="true" />
       <motion.div className="progress" style={{ scaleX: scrollYProgress }} />
       <Nav />
+      <Outlet />
+      <Footer />
+      <motion.a className="float-wa" href={waLink(`Halo ${BRAND.short}, saya ingin bertanya.`)} target="_blank" rel="noreferrer" title="Chat WhatsApp"
+        animate={reduce ? {} : { y: [0, -7, 0] }} transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }} whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.92 }}>
+        <i className="fa-brands fa-whatsapp" />
+      </motion.a>
+    </>
+  )
+}
+
+/* ════════════════════════════════════════════════ HOME PAGE */
+export function Home() {
+  const { scrollY } = useScroll()
+  const reduce = useReducedMotion()
+  const parallax = useTransform(scrollY, [0, 600], [0, -40])
+  return (
+    <>
+      <Head>
+        <title>Jasa Pembuatan Website & Aplikasi Custom | AFSS</title>
+        <meta name="description" content="AFSS — software house Indonesia. Jasa pembuatan website custom, aplikasi mobile Android & iOS, web app & ERP. Cepat, SEO-ready, kode milik Anda." />
+        <link rel="canonical" href="https://afss-landing.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://afss-landing.vercel.app/" />
+        <meta property="og:title" content="Jasa Pembuatan Website & Aplikasi Custom | AFSS" />
+        <meta property="og:description" content="Bangun website & aplikasi custom sesuai kebutuhan bisnis Anda. Cepat, SEO-ready, kode milik Anda. Konsultasi gratis." />
+        <meta name="twitter:title" content="Jasa Pembuatan Website & Aplikasi Custom | AFSS" />
+        <meta name="twitter:description" content="Bangun website & aplikasi custom sesuai kebutuhan bisnis Anda. Cepat, SEO-ready, kode milik Anda." />
+      </Head>
       <Hero reduce={reduce} parallax={parallax} />
       <StatsBand />
       <TrustBar />
@@ -775,11 +807,6 @@ export default function App() {
       <Faq />
       <Career />
       <CtaBand />
-      <Footer />
-      <motion.a className="float-wa" href={waLink(`Halo ${BRAND.short}, saya ingin bertanya.`)} target="_blank" rel="noreferrer" title="Chat WhatsApp"
-        animate={reduce ? {} : { y: [0, -7, 0] }} transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }} whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.92 }}>
-        <i className="fa-brands fa-whatsapp" />
-      </motion.a>
     </>
   )
 }
