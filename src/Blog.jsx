@@ -35,6 +35,10 @@ export function BlogIndex() {
         <meta property="og:url" content={`${SITE_URL}/blog`} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
+        <meta property="og:image" content={`${SITE_URL}/og.png`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:image" content={`${SITE_URL}/og.png`} />
       </Head>
 
       <section className="page-hero">
@@ -55,8 +59,7 @@ export function BlogIndex() {
               <motion.article key={p.slug} className="blog-card" variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }}>
                 <Link to={`/blog/${p.slug}`} className="blog-card-link">
                   <div className="blog-cover" style={{ '--c': p.c, '--c2': p.c2 }}>
-                    <span className="blog-cover-mark">AF</span>
-                    <div className="blog-cover-tags">{p.tags.map((t) => <span key={t}>{t}</span>)}</div>
+                    <img src={`/blog/${p.slug}.png`} alt={`Ilustrasi artikel: ${p.title}`} width="1200" height="630" loading="lazy" />
                   </div>
                   <div className="blog-card-body">
                     <div className="blog-meta">{formatDateId(p.date)} · {p.readMinutes} menit baca</div>
@@ -91,6 +94,7 @@ export function BlogPost() {
   }
 
   const url = `${SITE_URL}/blog/${post.slug}`
+  const cover = `${SITE_URL}/blog/${post.slug}.png`
   const related = getAllPosts().filter((p) => p.slug !== post.slug).slice(0, 2)
 
   const wordCount = post.body.trim().split(/\s+/).length
@@ -103,7 +107,7 @@ export function BlogPost() {
     dateModified: post.date,
     inLanguage: 'id-ID',
     mainEntityOfPage: url,
-    image: `${SITE_URL}/og.png`,
+    image: cover,
     keywords: post.tags.join(', '),
     articleSection: post.tags[0],
     wordCount,
@@ -132,6 +136,10 @@ export function BlogPost() {
         <meta property="og:url" content={url} />
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.description} />
+        <meta property="og:image" content={cover} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:image" content={cover} />
       </Head>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
@@ -145,6 +153,7 @@ export function BlogPost() {
             </nav>
             <h1 className="post-title">{post.title}</h1>
             <div className="post-meta">{formatDateId(post.date)} · {post.readMinutes} menit baca</div>
+            <img className="post-cover" src={`/blog/${post.slug}.png`} alt={`Ilustrasi artikel: ${post.title}`} width="1200" height="630" fetchpriority="high" />
           </div>
         </div>
 
@@ -168,8 +177,7 @@ export function BlogPost() {
                 <article key={p.slug} className="blog-card">
                   <Link to={`/blog/${p.slug}`} className="blog-card-link">
                     <div className="blog-cover" style={{ '--c': p.c, '--c2': p.c2 }}>
-                      <span className="blog-cover-mark">AF</span>
-                      <div className="blog-cover-tags">{p.tags.map((t) => <span key={t}>{t}</span>)}</div>
+                      <img src={`/blog/${p.slug}.png`} alt={`Ilustrasi artikel: ${p.title}`} width="1200" height="630" loading="lazy" />
                     </div>
                     <div className="blog-card-body">
                       <div className="blog-meta">{formatDateId(p.date)} · {p.readMinutes} menit baca</div>

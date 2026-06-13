@@ -705,8 +705,7 @@ function BlogTeaser() {
             <motion.article key={p.slug} className="blog-card" variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }}>
               <Link to={`/blog/${p.slug}`} className="blog-card-link">
                 <div className="blog-cover" style={{ '--c': p.c, '--c2': p.c2 }}>
-                  <span className="blog-cover-mark">AF</span>
-                  <div className="blog-cover-tags">{p.tags.map((t) => <span key={t}>{t}</span>)}</div>
+                  <img src={`/blog/${p.slug}.png`} alt={`Ilustrasi artikel: ${p.title}`} width="1200" height="630" loading="lazy" />
                 </div>
                 <div className="blog-card-body">
                   <div className="blog-meta">{formatDateId(p.date)} · {p.readMinutes} menit baca</div>
@@ -830,6 +829,10 @@ export function Home() {
         <meta property="og:description" content="Bangun website & aplikasi custom sesuai kebutuhan bisnis Anda. Cepat, SEO-ready, kode milik Anda. Konsultasi gratis." />
         <meta name="twitter:title" content="Jasa Pembuatan Website & Aplikasi Custom | AFSS" />
         <meta name="twitter:description" content="Bangun website & aplikasi custom sesuai kebutuhan bisnis Anda. Cepat, SEO-ready, kode milik Anda." />
+        <meta property="og:image" content="https://afss-landing.vercel.app/og.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:image" content="https://afss-landing.vercel.app/og.png" />
       </Head>
       <Hero reduce={reduce} parallax={parallax} />
       <StatsBand />

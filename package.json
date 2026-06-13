@@ -8,6 +8,7 @@
     "build": "node scripts/gen-feeds.mjs && vite-react-ssg build",
     "build:client": "vite build",
     "gen:og": "node scripts/gen-og.mjs",
+    "gen:covers": "node scripts/gen-covers.mjs",
     "gen:feeds": "node scripts/gen-feeds.mjs",
     "preview": "vite preview"
   },
