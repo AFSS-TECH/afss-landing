@@ -1,0 +1,785 @@
+import { useEffect, useRef, useState } from 'react'
+import {
+  motion, AnimatePresence, useScroll, useTransform, useSpring,
+  useInView, animate, useReducedMotion,
+} from 'framer-motion'
+import {
+  BRAND, products, workflow as steps, showcase, charts, reviews, stats,
+  growthSeries, kpis, satisfaction, waLink, clients, why, techStack, pricing, faqs,
+} from './data.js'
+
+/* ── Motion presets — enter recipe: opacity + y + blur, smooth spring ── */
+const fadeUp = {
+  hidden: { opacity: 0, y: 22, filter: 'blur(6px)' },
+  show: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { type: 'spring', duration: 0.7, bounce: 0 } },
+}
+const container = { hidden: {}, show: { transition: { staggerChildren: 0.09, delayChildren: 0.05 } } }
+const viewport = { once: true, margin: '-60px' }
+
+/* ── Animated counter (respects reduced-motion) ── */
+function Counter({ to, prefix = '', suffix = '', duration = 1.6 }) {
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true })
+  const reduce = useReducedMotion()
+  const [val, setVal] = useState(0)
+  useEffect(() => {
+    if (!inView) return
+    if (reduce) { setVal(to); return }
+    const controls = animate(0, to, { duration, ease: [0.22, 1, 0.36, 1], onUpdate: (v) => setVal(Math.round(v)) })
+    return () => controls.stop()
+  }, [inView, to, reduce, duration])
+  return <span ref={ref}>{prefix}{val}{suffix}</span>
+}
+
+/* ── Cursor-following spotlight on cards (scoped, hover-only) ── */
+const onSpot = (e) => {
+  const r = e.currentTarget.getBoundingClientRect()
+  e.currentTarget.style.setProperty('--mx', `${e.clientX - r.left}px`)
+  e.currentTarget.style.setProperty('--my', `${e.clientY - r.top}px`)
+}
+
+/* ── Magnetic button — subtle pull toward cursor (rare, high-value CTA only) ── */
+function Magnetic({ href, className, children, ...rest }) {
+  const reduce = useReducedMotion()
+  const ref = useRef(null)
+  const x = useSpring(0, { stiffness: 240, damping: 16 })
+  const y = useSpring(0, { stiffness: 240, damping: 16 })
+  const onMove = (e) => {
+    if (reduce || !ref.current) return
+    const r = ref.current.getBoundingClientRect()
+    x.set((e.clientX - (r.left + r.width / 2)) * 0.28)
+    y.set((e.clientY - (r.top + r.height / 2)) * 0.45)
+  }
+  const reset = () => { x.set(0); y.set(0) }
+  return (
+    <motion.a ref={ref} href={href} className={className} style={{ x, y }} onMouseMove={onMove} onMouseLeave={reset} {...rest}>
+      {children}
+    </motion.a>
+  )
+}
+
+/* ── Censor reviewer name ── */
+const censor = (full) =>
+  full.split(' ').map((w) => (w.length <= 1 ? w : w[0] + '*'.repeat(w.length - 1))).join(' ')
+
+/* ── Reveal wrapper ── */
+const Reveal = ({ children, className = '', ...rest }) => (
+  <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={viewport} className={className} {...rest}>
+    {children}
+  </motion.div>
+)
+
+/* ── AFSS logo mark — "AF" peak monogram + teal base triangle.
+   Recreated as inline SVG so it scales crisply. To use the official PNG instead,
+   drop it in /public and swap this component for: <img src="/logo.png" .../> ── */
+function AFMark({ light = false }) {
+  const peak = light ? '#FFFFFF' : 'var(--navy)'
+  return (
+    <svg className="af-mark" viewBox="0 0 50 48" role="img" aria-label="Logo AFSS" fill="none"
+      strokeLinecap="round" strokeLinejoin="round">
+      {/* A left leg + right leg / F stem */}
+      <path d="M6 43 L24 8 L33 43" stroke={peak} strokeWidth="6.6" />
+      {/* F arms */}
+      <path d="M24 8 L45 8" stroke={peak} strokeWidth="6.6" />
+      <path d="M29 22 L43 22" stroke={peak} strokeWidth="5.8" />
+      {/* teal base triangle */}
+      <path d="M17.5 43 L24 30 L30.5 43 Z" fill="var(--accent)" />
+    </svg>
+  )
+}
+
+const Logo = ({ footer }) => (
+  <div className={footer ? 'ft-logo' : 'logo'}>
+    <span className="mark"><AFMark light={footer} /></span>
+    <span className="logo-word">AFSS</span>
+  </div>
+)
+
+/* ════════════════════════════════════════════════ ANIMATED AREA CHART (the motion graph) */
+function smoothPath(pts) {
+  if (pts.length < 2) return ''
+  const t = 0.16
+  const d = [`M ${pts[0].x.toFixed(1)},${pts[0].y.toFixed(1)}`]
+  for (let i = 0; i < pts.length - 1; i++) {
+    const p0 = pts[i - 1] || pts[i]
+    const p1 = pts[i]
+    const p2 = pts[i + 1]
+    const p3 = pts[i + 2] || p2
+    const c1x = p1.x + (p2.x - p0.x) * t
+    const c1y = p1.y + (p2.y - p0.y) * t
+    const c2x = p2.x - (p3.x - p1.x) * t
+    const c2y = p2.y - (p3.y - p1.y) * t
+    d.push(`C ${c1x.toFixed(1)},${c1y.toFixed(1)} ${c2x.toFixed(1)},${c2y.toFixed(1)} ${p2.x.toFixed(1)},${p2.y.toFixed(1)}`)
+  }
+  return d.join(' ')
+}
+
+function AreaChart({ id, data, big = false }) {
+  const reduce = useReducedMotion()
+  const W = big ? 760 : 440
+  const H = big ? 300 : 158
+  const padX = 8, padTop = big ? 28 : 16, padBot = big ? 10 : 8
+  const plotW = W - padX * 2
+  const plotH = H - padTop - padBot
+  const baseY = H - padBot
+  const pts = data.map((p, i) => ({
+    x: padX + (i / (data.length - 1)) * plotW,
+    y: padTop + (1 - p.v / 100) * plotH,
+  }))
+  const line = smoothPath(pts)
+  const area = `${line} L ${pts[pts.length - 1].x.toFixed(1)},${baseY} L ${pts[0].x.toFixed(1)},${baseY} Z`
+  const last = pts[pts.length - 1]
+  const grid = big ? [0, 25, 50, 75, 100] : [0, 50, 100]
+  const drawT = reduce ? 0 : (big ? 1.9 : 1.4)
+
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Grafik pertumbuhan klien">
+      <defs>
+        <linearGradient id={`${id}-fill`} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="var(--accent)" stopOpacity={big ? 0.18 : 0.16} />
+          <stop offset="100%" stopColor="var(--accent)" stopOpacity="0" />
+        </linearGradient>
+        <linearGradient id={`${id}-stroke`} x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stopColor="var(--accent)" />
+          <stop offset="100%" stopColor="var(--accent-2)" />
+        </linearGradient>
+      </defs>
+
+      {/* gridlines */}
+      {grid.map((g, i) => {
+        const gy = padTop + (1 - g / 100) * plotH
+        return (
+          <motion.line key={g} x1={padX} y1={gy} x2={W - padX} y2={gy}
+            stroke="var(--line)" strokeWidth="1" strokeDasharray="2 5"
+            initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: reduce ? 0 : i * 0.08 }} />
+        )
+      })}
+
+      {/* area fill rises in under the line */}
+      <motion.path d={area} fill={`url(#${id}-fill)`}
+        initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
+        transition={{ duration: reduce ? 0 : 1, delay: reduce ? 0 : 0.35, ease: 'easeOut' }} />
+
+      {/* line draws itself */}
+      <motion.path d={line} fill="none" stroke={`url(#${id}-stroke)`}
+        strokeWidth={big ? 3 : 2.6} strokeLinecap="round" strokeLinejoin="round"
+        initial={{ pathLength: reduce ? 1 : 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }}
+        transition={{ duration: drawT, ease: [0.4, 0, 0.1, 1] }} />
+
+      {/* end marker appears once the line arrives */}
+      <motion.g
+        initial={{ opacity: reduce ? 1 : 0, scale: reduce ? 1 : 0.4 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
+        transition={{ duration: 0.45, delay: drawT * 0.92, ease: [0.22, 1, 0.36, 1] }}
+        style={{ transformOrigin: `${last.x}px ${last.y}px` }}>
+        {big && <line x1={last.x} y1={last.y + 6} x2={last.x} y2={baseY} stroke="var(--accent)" strokeWidth="1" strokeDasharray="3 4" opacity="0.4" />}
+        <circle cx={last.x} cy={last.y} r={big ? 9 : 7} fill="var(--accent)" opacity="0.16" />
+        <circle cx={last.x} cy={last.y} r={big ? 4.5 : 3.6} fill="var(--accent)" stroke="#fff" strokeWidth="2" />
+      </motion.g>
+    </svg>
+  )
+}
+
+/* ════════════════════════════════════════════════ NAV */
+function Nav() {
+  const [scrolled, setScrolled] = useState(false)
+  const [open, setOpen] = useState(false)
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 30)
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+  const links = [
+    ['#services', 'Layanan'], ['#why', 'Keunggulan'], ['#process', 'Proses'],
+    ['#portfolio', 'Portofolio'], ['#pricing', 'Harga'], ['#faq', 'FAQ'], ['#career', 'Karir'],
+  ]
+  return (
+    <motion.nav className={`nav ${scrolled ? 'scrolled' : ''}`} initial={{ y: -70, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
+      <div className="nav-inner">
+        <a href="#home"><Logo /></a>
+        <ul className="nav-links">
+          {links.map(([h, t]) => <li key={h}><a href={h}>{t}</a></li>)}
+          <li><a href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis.`)} className="btn btn-pri" target="_blank" rel="noreferrer">Konsultasi Gratis</a></li>
+        </ul>
+        <button className="hamburger" aria-label="Menu" onClick={() => setOpen((o) => !o)}><span /><span /><span /></button>
+      </div>
+      <AnimatePresence>
+        {open && (
+          <motion.div className="mobile-menu" initial={{ opacity: 0, y: -10, height: 0 }} animate={{ opacity: 1, y: 0, height: 'auto' }} exit={{ opacity: 0, y: -8, height: 0 }} transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}>
+            {links.map(([h, t]) => <a key={h} href={h} onClick={() => setOpen(false)}>{t}</a>)}
+            <a href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis.`)} className="btn btn-pri" target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>Konsultasi Gratis</a>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
+  )
+}
+
+/* ── Reusable mockup (portfolio) ── */
+function Mock({ item }) {
+  return (
+    <div className="mock" style={{ '--c': item.c, '--c2': item.c2 }}>
+      <div className="mock-top"><i style={{ background: '#FF6058' }} /><i style={{ background: '#FFBD2E' }} /><i style={{ background: '#28C840' }} /></div>
+      <div className="mock-body">
+        {item.kind === 'dash' ? (
+          <>
+            <div className="m-side"><span className="act" /><span /><span /><span /><span /></div>
+            <div className="m-main">
+              <div className="m-bar" />
+              <div className="m-stats"><div className="m-chip" /><div className="m-chip" /><div className="m-chip" /></div>
+              <div className="m-chart">
+                <svg viewBox="0 0 100 36" preserveAspectRatio="none">
+                  <polyline points={charts[item.chart]} fill="none" stroke={item.c} strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
+              <div className="m-rows"><div className="m-row" /><div className="m-row" /><div className="m-row" /></div>
+            </div>
+          </>
+        ) : (
+          <div className="l-hero">
+            <div className="l-nav"><div className="l-logo" /><div className="l-dot" /><div className="l-dot" /><div className="l-dot" /></div>
+            <div className="l-h1" /><div className="l-h2" /><div className="l-btn" /><div className="l-img" />
+          </div>
+        )}
+        <div className="m-phone"><div className="m-screen"><div className="m-ph-head" /><div className="m-ph-body"><div className="m-ph-card" /><div className="m-ph-card" /><div className="m-ph-card" /><div className="m-ph-card" /></div></div></div>
+      </div>
+    </div>
+  )
+}
+
+/* ════════════════════════════════════════════════ HERO */
+function Hero({ reduce, parallax }) {
+  const floatA = reduce ? {} : { animate: { y: [0, -9, 0] }, transition: { duration: 4.2, repeat: Infinity, ease: 'easeInOut' } }
+  const floatB = reduce ? {} : { animate: { y: [0, 9, 0] }, transition: { duration: 4.8, repeat: Infinity, ease: 'easeInOut' } }
+  return (
+    <section className="hero" id="home">
+      <div className="hero-glow" />
+      <div className="hero-inner">
+        <motion.div variants={container} initial="hidden" animate="show">
+          <motion.div className="hero-badge" variants={fadeUp}>
+            <span className="stars">★★★★★</span> Dipercaya 50+ perusahaan di Indonesia
+          </motion.div>
+          <motion.h1 variants={fadeUp}>
+            Bangun Website &amp; Aplikasi Custom yang <span className="ital">sesuai kebutuhan</span> bisnis Anda
+          </motion.h1>
+          <motion.p className="lead" variants={fadeUp}>
+            Kami rancang dan kembangkan website dan aplikasi dari nol — cepat, aman, dan siap tumbuh
+            bersama bisnis Anda. Bukan template, bukan setengah jadi.
+          </motion.p>
+          <motion.div className="hero-cta" variants={fadeUp}>
+            <Magnetic href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis untuk proyek saya.`)} className="btn btn-pri btn-lg" target="_blank" rel="noreferrer"><i className="fa-brands fa-whatsapp" /> Konsultasi Gratis</Magnetic>
+            <a href="#portfolio" className="btn btn-ghost btn-lg"><i className="fa-solid fa-images" /> Lihat Portofolio</a>
+          </motion.div>
+          <motion.div className="hero-trust" variants={fadeUp}>
+            <div className="avatars"><span>50+</span></div>
+            <span><b>Dipercaya 50+ perusahaan</b> · 100+ proyek selesai</span>
+          </motion.div>
+        </motion.div>
+
+        <motion.div className="hero-visual" initial={{ opacity: 0, y: 26, filter: 'blur(8px)' }} animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }} transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}>
+          <motion.div className="panel" style={reduce ? {} : { y: parallax }}>
+            <div className="panel-head">
+              <div className="ph-l"><span className="panel-dot" /><span className="panel-title">Pertumbuhan Klien</span></div>
+              <span className="panel-tag">Live</span>
+            </div>
+            <div className="panel-figure">
+              <span className="big"><Counter to={218} prefix="+" suffix="%" /></span>
+              <span className="delta"><i className="fa-solid fa-arrow-up" /> 12,4% bln ini</span>
+            </div>
+            <div className="panel-sub">Rata-rata konversi klien · 12 bulan terakhir</div>
+            <div className="panel-chart"><AreaChart id="hero" data={growthSeries} /></div>
+            <div className="panel-x"><span>Jan</span><span>Apr</span><span>Jul</span><span>Okt</span><span>Des</span></div>
+          </motion.div>
+
+          <motion.div className="float-card fc-1" {...floatA}>
+            <div className="fc-ico" style={{ background: 'var(--wa)' }}><i className="fa-solid fa-arrow-trend-up" /></div>
+            <div><div className="fc-big">+38%</div><div className="fc-sm">Konversi</div></div>
+          </motion.div>
+          <motion.div className="float-card fc-2" {...floatB}>
+            <div className="fc-ico" style={{ background: 'var(--accent)' }}><i className="fa-solid fa-circle-check" /></div>
+            <div><div className="fc-big">100+</div><div className="fc-sm">Proyek Selesai</div></div>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
+/* ════════════════════════════════════════════════ STATS BAND */
+function StatsBand() {
+  return (
+    <div className="stats-band">
+      <motion.div className="stats-card" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+        {stats.map((s) => (
+          <motion.div className="stat-item" key={s.label} variants={fadeUp}>
+            <div className="stat-num"><Counter to={s.n} prefix={s.prefix || ''} suffix={s.suffix} /></div>
+            <div className="stat-lbl">{s.label}</div>
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
+  )
+}
+
+/* ════════════════════════════════════════════════ TRUST BAR — client / industry strip */
+function TrustBar() {
+  return (
+    <div className="trustbar">
+      <div className="container">
+        <Reveal className="trust-label">Dipercaya oleh bisnis di berbagai industri</Reveal>
+        <motion.div className="trust-logos" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+          {clients.map((c) => (
+            <motion.span className="trust-logo" key={c} variants={fadeUp}>
+              <i className="fa-solid fa-circle-nodes" /> {c}
+            </motion.span>
+          ))}
+        </motion.div>
+      </div>
+    </div>
+  )
+}
+
+/* ════════════════════════════════════════════════ SERVICES / LAYANAN */
+function Services() {
+  return (
+    <section id="services">
+      <div className="container">
+        <Reveal className="sec-header center">
+          <div className="eyebrow"><i className="fa-solid fa-layer-group" /> Layanan</div>
+          <h2 className="sec-title">Jasa pembuatan website &amp; aplikasi untuk <span className="ital">setiap</span> kebutuhan</h2>
+          <p className="sec-sub">Dari website custom hingga aplikasi mobile dan sistem internal — dibangun dari nol, cepat, dan SEO-ready sejak awal.</p>
+        </Reveal>
+        <motion.div className="svc-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+          {products.map((p) => (
+            <motion.div key={p.name} className={`svc-card spot ${p.hot ? 'hot' : ''}`} variants={fadeUp} whileHover={{ y: -8 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }} onMouseMove={onSpot}>
+              {p.hot && <span className="hot-tag">Terpopuler</span>}
+              <div className="svc-top">
+                <div className="svc-ico"><i className={p.icon} /></div>
+                <span className="metric-badge"><i className="fa-solid fa-circle-check" /> {p.metric}</span>
+              </div>
+              <div className="svc-name">{p.name}</div>
+              <p className="svc-desc">{p.desc}</p>
+              <ul className="svc-feats">{p.feats.map((f) => <li key={f}><i className="fa-solid fa-check" /> {f}</li>)}</ul>
+              <div className="svc-foot">
+                <a className="btn" href={waLink(`Halo ${BRAND.short}, saya tertarik dengan layanan ${p.name}.`)} target="_blank" rel="noreferrer">Konsultasi Sekarang <i className="fa-solid fa-arrow-right" /></a>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
+/* ════════════════════════════════════════════════ WHY / KENAPA MEMILIH AFSS */
+function Why() {
+  return (
+    <section className="whyus" id="why">
+      <div className="container">
+        <Reveal className="sec-header center">
+          <div className="eyebrow"><i className="fa-solid fa-award" /> Keunggulan</div>
+          <h2 className="sec-title">Kenapa memilih <span className="ital">{BRAND.short}</span>?</h2>
+          <p className="sec-sub">Kami membangun kemitraan jangka panjang, bukan sekadar proyek sekali jalan. Inilah yang membedakan kami.</p>
+        </Reveal>
+        <motion.div className="why-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+          {why.map((w) => (
+            <motion.div className="why-card spot" key={w.title} variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 300, damping: 24 }} onMouseMove={onSpot}>
+              <div className="why-ico"><i className={w.icon} /></div>
+              <h3>{w.title}</h3>
+              <p>{w.desc}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
+/* ════════════════════════════════════════════════ IMPACT / MOTION GRAPH */
+function Impact() {
+  return (
+    <section className="impact" id="impact">
+      <div className="container">
+        <Reveal className="sec-header center">
+          <div className="eyebrow"><i className="fa-solid fa-chart-line" /> Dampak</div>
+          <h2 className="sec-title">Hasil yang <span className="ital">terukur</span>, bukan sekadar janji</h2>
+          <p className="sec-sub">Setiap sistem yang kami bangun dirancang untuk menggerakkan angka yang penting bagi bisnis Anda.</p>
+        </Reveal>
+        <div className="impact-grid">
+          <Reveal className="graph-card spot" onMouseMove={onSpot}>
+            <div className="graph-head">
+              <h3>Pertumbuhan rata-rata klien</h3>
+              <div className="legend">
+                <span><i style={{ background: 'var(--accent)' }} /> Indeks konversi</span>
+              </div>
+            </div>
+            <div className="graph-figure">
+              <span className="num"><Counter to={218} prefix="+" suffix="%" duration={1.9} /></span>
+              <span className="pill"><i className="fa-solid fa-arrow-up" /> 12 bulan</span>
+            </div>
+            <div className="graph-canvas"><AreaChart id="impact" data={growthSeries} big /></div>
+            <div className="gx-labels">{growthSeries.map((p) => <span key={p.m}>{p.m}</span>)}</div>
+          </Reveal>
+
+          <div className="kpi-col">
+            {kpis.map((k) => (
+              <Reveal key={k.label} className="kpi-card">
+                <div className="kpi-top">
+                  <div className="kpi-num"><Counter to={k.n} prefix={k.prefix} suffix={k.suffix} /></div>
+                  <div className="kpi-label">{k.label}</div>
+                </div>
+                <div className="kpi-track">
+                  <motion.div className="kpi-fill"
+                    initial={{ scaleX: 0 }} whileInView={{ scaleX: k.bar / 100 }} viewport={{ once: true }}
+                    transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }} />
+                </div>
+              </Reveal>
+            ))}
+            <Reveal className="gauge-card">
+              <div className="gauge">
+                <svg viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,.12)" strokeWidth="8" />
+                  <motion.circle cx="50" cy="50" r="42" fill="none" stroke="var(--accent-2)" strokeWidth="8" strokeLinecap="round"
+                    initial={{ pathLength: 0 }} whileInView={{ pathLength: satisfaction / 100 }} viewport={{ once: true }}
+                    transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1], delay: 0.2 }} />
+                </svg>
+                <div className="gauge-val"><Counter to={satisfaction} suffix="%" /></div>
+              </div>
+              <div className="gauge-txt">
+                <div className="gt-t">Kepuasan klien</div>
+                <div className="gt-d">Diukur dari survei pasca-launching seluruh proyek yang telah kami selesaikan.</div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ════════════════════════════════════════════════ PROCESS — 6 langkah */
+function Process() {
+  return (
+    <section className="process" id="process">
+      <div className="container">
+        <Reveal className="sec-header center">
+          <div className="eyebrow green"><i className="fa-solid fa-route" /> Cara Kerja</div>
+          <h2 className="sec-title">Proses yang transparan &amp; <span className="ital">konsultatif</span></h2>
+          <p className="sec-sub">Kami selalu mengutamakan konsultasi sebelum membangun. Anda tahu persis apa yang dikerjakan di setiap tahap.</p>
+        </Reveal>
+        <motion.div className="proc-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+          {steps.map((s) => (
+            <motion.div className="proc-card spot" key={s.step} variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 300, damping: 24 }} onMouseMove={onSpot}>
+              <span className="proc-step">{s.step}</span>
+              <div className="proc-ico"><i className={s.icon} /></div>
+              <h4>{s.title}</h4>
+              <p>{s.desc}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+        <Reveal className="proc-note">💡 <b>Kepercayaan lebih penting dari transaksi</b> — itulah mengapa konsultasi awal selalu gratis.</Reveal>
+      </div>
+    </section>
+  )
+}
+
+/* ════════════════════════════════════════════════ SHOWCASE / PORTOFOLIO */
+function Showcase() {
+  return (
+    <section className="showcase" id="portfolio">
+      <div className="container">
+        <Reveal className="sec-header center">
+          <div className="eyebrow"><i className="fa-solid fa-images" /> Portofolio</div>
+          <h2 className="sec-title">Studi kasus &amp; <span className="ital">hasil nyata</span></h2>
+          <p className="sec-sub">Beragam sistem yang telah kami bangun — lengkap dengan stack teknologi &amp; hasil yang dirasakan klien.</p>
+        </Reveal>
+        <motion.div className="show-grid" variants={container} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-30px' }}>
+          {showcase.map((item) => (
+            <motion.div key={item.n} className="show-card spot" style={{ '--c': item.c, '--c2': item.c2 }} variants={fadeUp} whileHover={{ y: -8 }} transition={{ type: 'spring', stiffness: 260, damping: 22 }} onMouseMove={onSpot}>
+              <div className="show-head"><div className="show-num">{item.n}</div><div className="show-title">{item.title}</div></div>
+              <Mock item={item} />
+              <div className="show-tags">{item.tags.map((t) => <span key={t}>{t}</span>)}</div>
+              <div className="show-price"><i className="fa-solid fa-arrow-trend-up" /> {item.price}</div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
+/* ════════════════════════════════════════════════ REVIEWS / TESTIMONI */
+function ReviewCard({ r }) {
+  return (
+    <div className="rev-card">
+      <div className="rev-stars">{[...Array(5)].map((_, i) => <i key={i} className="fa-solid fa-star" />)}</div>
+      <p className="rev-text">“{r.text}”</p>
+      <div className="rev-author">
+        <div className="av" style={{ background: r.grad }}>{r.initials}</div>
+        <div>
+          <div className="av-name">{censor(r.name)}<i className="fa-solid fa-circle-check verified" title="Klien terverifikasi" /></div>
+          <div className="av-co">{r.company}</div>
+        </div>
+      </div>
+    </div>
+  )
+}
+function Reviews({ reduce }) {
+  const rowA = reviews.slice(0, 5)
+  const rowB = reviews.slice(4)
+  const Row = ({ items, dir }) => (
+    <div className="marquee">
+      <motion.div className="marquee-track" animate={reduce ? {} : { x: dir > 0 ? ['-50%', '0%'] : ['0%', '-50%'] }} transition={{ duration: 50, ease: 'linear', repeat: Infinity }}>
+        {[...items, ...items].map((r, i) => <ReviewCard key={i} r={r} />)}
+      </motion.div>
+    </div>
+  )
+  return (
+    <section className="reviews" id="reviews">
+      <div className="container">
+        <Reveal className="sec-header center">
+          <div className="eyebrow"><i className="fa-solid fa-heart" /> Testimoni</div>
+          <h2 className="sec-title">Apa kata <span className="ital">klien</span> kami?</h2>
+          <p className="sec-sub">Kepuasan klien adalah prioritas utama kami. Demi privasi, nama klien ditampilkan secara tersamar.</p>
+        </Reveal>
+      </div>
+      <Row items={rowA} dir={-1} />
+      <Row items={rowB} dir={1} />
+    </section>
+  )
+}
+
+/* ════════════════════════════════════════════════ TECH STACK / TEKNOLOGI */
+function TechStack() {
+  return (
+    <section className="tech" id="tech">
+      <div className="container">
+        <Reveal className="sec-header center">
+          <div className="eyebrow"><i className="fa-solid fa-microchip" /> Teknologi</div>
+          <h2 className="sec-title">Stack modern yang kami <span className="ital">gunakan</span></h2>
+          <p className="sec-sub">Teknologi terkini yang teruji — dipilih agar sistem Anda cepat, aman, dan mudah dikembangkan ke depan.</p>
+        </Reveal>
+        <motion.div className="tech-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+          {techStack.map((t) => (
+            <motion.div className="tech-chip" key={t.name} variants={fadeUp} whileHover={{ y: -4 }} transition={{ type: 'spring', stiffness: 320, damping: 22 }}>
+              <i className={t.icon} /> <span>{t.name}</span>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
+/* ════════════════════════════════════════════════ PRICING / PAKET HARGA */
+function Pricing() {
+  return (
+    <section className="pricing" id="pricing">
+      <div className="container">
+        <Reveal className="sec-header center">
+          <div className="eyebrow"><i className="fa-solid fa-tags" /> Paket Harga</div>
+          <h2 className="sec-title">Harga <span className="ital">transparan</span>, tanpa biaya tersembunyi</h2>
+          <p className="sec-sub">Pilih paket yang sesuai skala bisnis Anda. Semua harga adalah estimasi awal — final mengikuti ruang lingkup yang disepakati.</p>
+        </Reveal>
+        <motion.div className="price-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+          {pricing.map((p) => (
+            <motion.div className={`price-card spot ${p.hot ? 'hot' : ''}`} key={p.name} variants={fadeUp} whileHover={{ y: -8 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }} onMouseMove={onSpot}>
+              {p.hot && <span className="hot-tag">Paling diminati</span>}
+              <div className="price-name">{p.name}</div>
+              <div className="price-tagline">{p.tagline}</div>
+              <div className="price-amt"><span className="price-note">{p.note}</span>{p.price}</div>
+              <ul className="price-feats">{p.feats.map((f) => <li key={f}><i className="fa-solid fa-check" /> {f}</li>)}</ul>
+              <a className="btn" href={waLink(`Halo ${BRAND.short}, saya tertarik dengan paket ${p.name}.`)} target="_blank" rel="noreferrer">{p.cta} <i className="fa-solid fa-arrow-right" /></a>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
+/* ════════════════════════════════════════════════ FAQ */
+function Faq() {
+  const [open, setOpen] = useState(0)
+  return (
+    <section className="faq" id="faq">
+      <div className="container">
+        <Reveal className="sec-header center">
+          <div className="eyebrow"><i className="fa-solid fa-circle-question" /> FAQ</div>
+          <h2 className="sec-title">Pertanyaan yang <span className="ital">sering</span> ditanyakan</h2>
+          <p className="sec-sub">Belum menemukan jawabannya? Hubungi kami langsung via WhatsApp untuk konsultasi gratis.</p>
+        </Reveal>
+        <motion.div className="faq-list" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+          {faqs.map((f, i) => {
+            const isOpen = open === i
+            return (
+              <motion.div className={`faq-item ${isOpen ? 'open' : ''}`} key={f.q} variants={fadeUp}>
+                <button className="faq-q" onClick={() => setOpen(isOpen ? -1 : i)} aria-expanded={isOpen}>
+                  <span>{f.q}</span>
+                  <i className={`fa-solid ${isOpen ? 'fa-minus' : 'fa-plus'}`} />
+                </button>
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div className="faq-a" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}>
+                      <p>{f.a}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            )
+          })}
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
+/* ════════════════════════════════════════════════ CAREER */
+function Career() {
+  const reqs = [
+    'Minimal lulusan SMA/SMK (D3/S1 diutamakan)',
+    'Pengalaman di bidang sales minimal 1 tahun',
+    'Kemampuan komunikasi & presentasi yang baik',
+    'Memiliki jaringan bisnis yang luas',
+    'Berorientasi target & terbiasa bekerja mandiri',
+    'Tertarik & melek dunia teknologi & digital',
+  ]
+  const benefits = [
+    ['💰', 'Komisi Menarik', 'Komisi kompetitif tiap closing'],
+    ['📈', 'Jenjang Karir', 'Pertumbuhan karir yang jelas'],
+    ['🎓', 'Training Intensif', 'Pelatihan sales & produk'],
+    ['🏡', 'Remote Friendly', 'Fleksibel dari mana saja'],
+  ]
+  return (
+    <section id="career">
+      <div className="container">
+        <div className="career-grid">
+          <Reveal>
+            <div className="eyebrow green"><i className="fa-solid fa-briefcase" /> Karir</div>
+            <h2 className="sec-title">Bergabung dengan <span className="ital">tim {BRAND.short}</span></h2>
+            <p className="sec-sub" style={{ marginBottom: 0 }}>Kami mencari talenta berbakat yang ingin berkembang bersama kami dan ikut membangun masa depan digital Indonesia.</p>
+            <motion.div className="benefits-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+              {benefits.map(([ico, t, d]) => (
+                <motion.div className="benefit spot" key={t} variants={fadeUp} whileHover={{ y: -5 }} transition={{ type: 'spring', stiffness: 300, damping: 24 }} onMouseMove={onSpot}>
+                  <div className="benefit-ico">{ico}</div><div className="benefit-t">{t}</div><div className="benefit-d">{d}</div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </Reveal>
+          <Reveal>
+            <div className="career-card">
+              <div className="open-badge"><span className="open-dot" /> Sedang Dibuka</div>
+              <div className="pos-title">Sales Executive</div>
+              <p className="pos-desc">Kami mencari individu bersemangat dan berorientasi target untuk menjadi ujung tombak dalam memperkenalkan solusi digital {BRAND.short} kepada bisnis di seluruh Indonesia.</p>
+              <ul className="req-list">{reqs.map((r) => <li key={r}><i className="fa-solid fa-circle-check" /> {r}</li>)}</ul>
+              <a className="btn btn-wa btn-lg" href={waLink(`Halo ${BRAND.short}, saya tertarik melamar posisi Sales Executive. Boleh saya dapatkan informasi lebih lanjut?`)} target="_blank" rel="noreferrer">
+                <i className="fa-brands fa-whatsapp" /> Lamar via WhatsApp
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ════════════════════════════════════════════════ CTA BAND */
+function CtaBand() {
+  return (
+    <section className="cta-band">
+      <Reveal className="cta-card">
+        <h2>Siap mewujudkan website atau aplikasi <span className="ital">Anda</span>?</h2>
+        <p>Konsultasi gratis, tanpa komitmen. Ceritakan ide Anda hari ini — kami bantu temukan solusi terbaik untuk bisnis Anda.</p>
+        <div className="btns">
+          <Magnetic href={waLink(`Halo ${BRAND.short}, saya ingin memulai proyek dan konsultasi gratis.`)} className="btn btn-pri btn-lg" target="_blank" rel="noreferrer"><i className="fa-brands fa-whatsapp" /> Mulai Sekarang</Magnetic>
+          <a href="#pricing" className="btn btn-ghost btn-lg">Lihat Paket Harga</a>
+        </div>
+      </Reveal>
+    </section>
+  )
+}
+
+/* ════════════════════════════════════════════════ FOOTER */
+function Footer() {
+  return (
+    <footer>
+      <div className="footer-grid">
+        <div>
+          <Logo footer />
+          <p className="ft-legal">{BRAND.legal}</p>
+          <p className="ft-desc">Software house terpercaya yang membangun website, aplikasi, dan sistem digital berkualitas tinggi untuk semua skala bisnis di Indonesia. {BRAND.tagline}.</p>
+          <div className="ft-social">
+            {['instagram', 'linkedin-in', 'tiktok', 'youtube'].map((s) => <a key={s} href="#" className="soc" aria-label={s}><i className={`fa-brands fa-${s}`} /></a>)}
+            <a href={waLink(`Halo ${BRAND.short}!`)} target="_blank" rel="noreferrer" className="soc" aria-label="WhatsApp"><i className="fa-brands fa-whatsapp" /></a>
+          </div>
+        </div>
+        <div>
+          <div className="ft-head">Layanan</div>
+          <ul className="ft-links">
+            <li><a href="#services">Pembuatan Website Custom</a></li>
+            <li><a href="#services">Aplikasi Mobile Android &amp; iOS</a></li>
+            <li><a href="#services">Web App &amp; Sistem Internal</a></li>
+            <li><a href="#services">UI/UX Design</a></li>
+            <li><a href="#services">Maintenance &amp; Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <div className="ft-head">Perusahaan</div>
+          <ul className="ft-links">
+            <li><a href="#why">Keunggulan</a></li>
+            <li><a href="#process">Proses Kerja</a></li>
+            <li><a href="#portfolio">Portofolio</a></li>
+            <li><a href="#pricing">Paket Harga</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#career">Karir</a></li>
+          </ul>
+        </div>
+        <div>
+          <div className="ft-head">Kontak</div>
+          <ul className="ft-links">
+            <li><a href={waLink(`Halo ${BRAND.short}!`)} target="_blank" rel="noreferrer"><i className="fa-brands fa-whatsapp" />{BRAND.phone}</a></li>
+            <li><a href={`mailto:${BRAND.email}`}><i className="fa-solid fa-envelope" />{BRAND.email}</a></li>
+            <li><span><i className="fa-solid fa-location-dot" />{BRAND.address}</span></li>
+          </ul>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <p>© {new Date().getFullYear()} {BRAND.legal}. All rights reserved.</p>
+        <div className="legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+      </div>
+    </footer>
+  )
+}
+
+/* ════════════════════════════════════════════════ APP */
+export default function App() {
+  const { scrollYProgress, scrollY } = useScroll()
+  const reduce = useReducedMotion()
+  const parallax = useTransform(scrollY, [0, 600], [0, -40])
+  return (
+    <>
+      <div className="grain" aria-hidden="true" />
+      <motion.div className="progress" style={{ scaleX: scrollYProgress }} />
+      <Nav />
+      <Hero reduce={reduce} parallax={parallax} />
+      <StatsBand />
+      <TrustBar />
+      <Services />
+      <Why />
+      <Impact />
+      <Process />
+      <Showcase />
+      <Reviews reduce={reduce} />
+      <TechStack />
+      <Pricing />
+      <Faq />
+      <Career />
+      <CtaBand />
+      <Footer />
+      <motion.a className="float-wa" href={waLink(`Halo ${BRAND.short}, saya ingin bertanya.`)} target="_blank" rel="noreferrer" title="Chat WhatsApp"
+        animate={reduce ? {} : { y: [0, -7, 0] }} transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }} whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.92 }}>
+        <i className="fa-brands fa-whatsapp" />
+      </motion.a>
+    </>
+  )
+}
