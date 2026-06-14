@@ -41,6 +41,20 @@ function Breadcrumb({ items }) {
   )
 }
 
+/* ── Hero stat card — right column of 2-col page-hero ── */
+function HeroStatCard() {
+  return (
+    <div className="hero-stat-card">
+      {stats.map((s) => (
+        <div key={s.label}>
+          <div className="hero-stat-n">{s.prefix || ''}{s.n}<em>{s.suffix}</em></div>
+          <div className="hero-stat-l">{s.label}</div>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 /* ══════════════════════════════════════════════════ EXTENDED SERVICE CONTENT */
 const SERVICE_CONTENT = {
   'pembuatan-website': {
@@ -140,12 +154,21 @@ export function LayananIndex() {
       <section className="page-hero">
         <div className="hero-glow" />
         <div className="container">
-          <Reveal>
-            <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Layanan' }]} />
-            <div className="eyebrow"><Icon icon="fa-solid fa-layer-group" /> Layanan</div>
-            <h1 className="page-title">Solusi digital <span className="ital">lengkap</span> untuk bisnis Anda</h1>
-            <p className="page-sub">Dari website custom hingga aplikasi mobile dan sistem enterprise — semua dibangun dari nol, cepat, dan siap tumbuh bersama bisnis Anda.</p>
-          </Reveal>
+          <div className="page-hero-grid">
+            <Reveal>
+              <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Layanan' }]} />
+              <div className="eyebrow"><Icon icon="fa-solid fa-layer-group" /> Layanan</div>
+              <h1 className="page-title">Solusi digital <span className="ital">lengkap</span> untuk bisnis Anda</h1>
+              <p className="page-sub">Dari website custom hingga aplikasi mobile dan sistem enterprise — semua dibangun dari nol, cepat, dan siap tumbuh bersama bisnis Anda.</p>
+              <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
+                <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis tentang kebutuhan digital bisnis saya.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Konsultasi Gratis</a>
+                <Link className="btn btn-ghost btn-lg" to="/portofolio">Lihat Portofolio</Link>
+              </div>
+            </Reveal>
+            <Reveal className="page-hero-stat-col">
+              <HeroStatCard />
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -415,12 +438,21 @@ export function About() {
       <section className="page-hero">
         <div className="hero-glow" />
         <div className="container">
-          <Reveal>
-            <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Tentang Kami' }]} />
-            <div className="eyebrow"><Icon icon="fa-solid fa-award" /> Tentang Kami</div>
-            <h1 className="page-title">Software house yang <span className="ital">berpihak</span> pada bisnis Anda</h1>
-            <p className="page-sub">Kami bukan sekadar vendor. Kami adalah mitra digital jangka panjang yang ikut berpikir, berkonsultasi, dan membangun bersama Anda.</p>
-          </Reveal>
+          <div className="page-hero-grid">
+            <Reveal>
+              <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Tentang Kami' }]} />
+              <div className="eyebrow"><Icon icon="fa-solid fa-award" /> Tentang Kami</div>
+              <h1 className="page-title">Software house yang <span className="ital">berpihak</span> pada bisnis Anda</h1>
+              <p className="page-sub">Kami bukan sekadar vendor. Kami adalah mitra digital jangka panjang yang ikut berpikir, berkonsultasi, dan membangun bersama Anda.</p>
+              <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
+                <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya ingin berkenalan dan berdiskusi tentang proyek saya.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Konsultasi Gratis</a>
+                <Link className="btn btn-ghost btn-lg" to="/kontak">Lihat Kontak</Link>
+              </div>
+            </Reveal>
+            <Reveal className="page-hero-stat-col">
+              <HeroStatCard />
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -572,12 +604,20 @@ export function Contact() {
       <section className="page-hero">
         <div className="hero-glow" />
         <div className="container">
-          <Reveal>
-            <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Kontak' }]} />
-            <div className="eyebrow"><Icon icon="fa-solid fa-comments" /> Kontak</div>
-            <h1 className="page-title">Mari <span className="ital">ngobrol</span> tentang proyek Anda</h1>
-            <p className="page-sub">Konsultasi gratis, tanpa komitmen. Ceritakan kebutuhan bisnis Anda dan kami bantu temukan solusi terbaik.</p>
-          </Reveal>
+          <div className="page-hero-grid">
+            <Reveal>
+              <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Kontak' }]} />
+              <div className="eyebrow"><Icon icon="fa-solid fa-comments" /> Kontak</div>
+              <h1 className="page-title">Mari <span className="ital">ngobrol</span> tentang proyek Anda</h1>
+              <p className="page-sub">Konsultasi gratis, tanpa komitmen. Ceritakan kebutuhan bisnis Anda dan kami bantu temukan solusi terbaik.</p>
+              <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
+                <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Chat Sekarang</a>
+              </div>
+            </Reveal>
+            <Reveal className="page-hero-stat-col">
+              <HeroStatCard />
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -640,12 +680,21 @@ export function Portfolio() {
       <section className="page-hero">
         <div className="hero-glow" />
         <div className="container">
-          <Reveal>
-            <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Portofolio' }]} />
-            <div className="eyebrow"><Icon icon="fa-solid fa-images" /> Portofolio</div>
-            <h1 className="page-title">Studi kasus &amp; <span className="ital">hasil nyata</span></h1>
-            <p className="page-sub">Beragam sistem yang telah kami bangun — lengkap dengan tantangan, solusi, dan dampak yang dirasakan klien.</p>
-          </Reveal>
+          <div className="page-hero-grid">
+            <Reveal>
+              <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Portofolio' }]} />
+              <div className="eyebrow"><Icon icon="fa-solid fa-images" /> Portofolio</div>
+              <h1 className="page-title">Studi kasus &amp; <span className="ital">hasil nyata</span></h1>
+              <p className="page-sub">Beragam sistem yang telah kami bangun — lengkap dengan tantangan, solusi, dan dampak yang dirasakan klien.</p>
+              <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
+                <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya tertarik berdiskusi tentang proyek digital saya.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Diskusi Proyek</a>
+                <Link className="btn btn-ghost btn-lg" to="/layanan">Lihat Layanan</Link>
+              </div>
+            </Reveal>
+            <Reveal className="page-hero-stat-col">
+              <HeroStatCard />
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -879,12 +928,21 @@ export function Keunggulan() {
       <section className="page-hero">
         <div className="hero-glow" />
         <div className="container">
-          <Reveal>
-            <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Keunggulan' }]} />
-            <div className="eyebrow"><Icon icon="fa-solid fa-award" /> Keunggulan</div>
-            <h1 className="page-title">Kenapa memilih <span className="ital">AFSS</span>?</h1>
-            <p className="page-sub">Kami membangun kemitraan jangka panjang — bukan sekadar proyek sekali jalan. Inilah yang membedakan kami dari vendor lain.</p>
-          </Reveal>
+          <div className="page-hero-grid">
+            <Reveal>
+              <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Keunggulan' }]} />
+              <div className="eyebrow"><Icon icon="fa-solid fa-award" /> Keunggulan</div>
+              <h1 className="page-title">Kenapa memilih <span className="ital">AFSS</span>?</h1>
+              <p className="page-sub">Kami membangun kemitraan jangka panjang — bukan sekadar proyek sekali jalan. Inilah yang membedakan kami dari vendor lain.</p>
+              <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
+                <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis tentang kebutuhan digital bisnis saya.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Konsultasi Gratis</a>
+                <Link className="btn btn-ghost btn-lg" to="/layanan">Lihat Layanan</Link>
+              </div>
+            </Reveal>
+            <Reveal className="page-hero-stat-col">
+              <HeroStatCard />
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -966,12 +1024,20 @@ export function Harga() {
       <section className="page-hero">
         <div className="hero-glow" />
         <div className="container">
-          <Reveal>
-            <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Paket Harga' }]} />
-            <div className="eyebrow"><Icon icon="fa-solid fa-tags" /> Paket Harga</div>
-            <h1 className="page-title">Harga <span className="ital">transparan</span>, tanpa biaya tersembunyi</h1>
-            <p className="page-sub">Pilih paket yang sesuai skala bisnis Anda. Semua harga adalah estimasi awal — final mengikuti ruang lingkup yang disepakati bersama.</p>
-          </Reveal>
+          <div className="page-hero-grid">
+            <Reveal>
+              <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Paket Harga' }]} />
+              <div className="eyebrow"><Icon icon="fa-solid fa-tags" /> Paket Harga</div>
+              <h1 className="page-title">Harga <span className="ital">transparan</span>, tanpa biaya tersembunyi</h1>
+              <p className="page-sub">Pilih paket yang sesuai skala bisnis Anda. Semua harga adalah estimasi awal — final mengikuti ruang lingkup yang disepakati bersama.</p>
+              <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
+                <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi harga untuk proyek digital saya.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Konsultasi Harga</a>
+              </div>
+            </Reveal>
+            <Reveal className="page-hero-stat-col">
+              <HeroStatCard />
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -1027,12 +1093,21 @@ export function Faq() {
       <section className="page-hero">
         <div className="hero-glow" />
         <div className="container">
-          <Reveal>
-            <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'FAQ' }]} />
-            <div className="eyebrow"><Icon icon="fa-solid fa-circle-question" /> FAQ</div>
-            <h1 className="page-title">Pertanyaan yang <span className="ital">sering</span> ditanyakan</h1>
-            <p className="page-sub">Belum menemukan jawabannya? Hubungi kami langsung via WhatsApp untuk konsultasi gratis.</p>
-          </Reveal>
+          <div className="page-hero-grid">
+            <Reveal>
+              <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'FAQ' }]} />
+              <div className="eyebrow"><Icon icon="fa-solid fa-circle-question" /> FAQ</div>
+              <h1 className="page-title">Pertanyaan yang <span className="ital">sering</span> ditanyakan</h1>
+              <p className="page-sub">Belum menemukan jawabannya? Hubungi kami langsung via WhatsApp untuk konsultasi gratis.</p>
+              <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
+                <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya ada pertanyaan tentang layanan Anda.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Tanya via WhatsApp</a>
+                <Link className="btn btn-ghost btn-lg" to="/kontak">Lihat Kontak</Link>
+              </div>
+            </Reveal>
+            <Reveal className="page-hero-stat-col">
+              <HeroStatCard />
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -1110,12 +1185,20 @@ export function Karir() {
       <section className="page-hero">
         <div className="hero-glow" />
         <div className="container">
-          <Reveal>
-            <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Karir' }]} />
-            <div className="eyebrow green"><Icon icon="fa-solid fa-briefcase" /> Karir</div>
-            <h1 className="page-title">Bergabung dengan <span className="ital">tim AFSS</span></h1>
-            <p className="page-sub">Kami mencari talenta berbakat yang ingin berkembang bersama kami dan ikut membangun masa depan digital Indonesia.</p>
-          </Reveal>
+          <div className="page-hero-grid">
+            <Reveal>
+              <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Karir' }]} />
+              <div className="eyebrow green"><Icon icon="fa-solid fa-briefcase" /> Karir</div>
+              <h1 className="page-title">Bergabung dengan <span className="ital">tim AFSS</span></h1>
+              <p className="page-sub">Kami mencari talenta berbakat yang ingin berkembang bersama kami dan ikut membangun masa depan digital Indonesia.</p>
+              <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
+                <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya tertarik melamar posisi Marketing Executive. Boleh saya dapatkan informasi lebih lanjut?`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Lamar via WhatsApp</a>
+              </div>
+            </Reveal>
+            <Reveal className="page-hero-stat-col">
+              <HeroStatCard />
+            </Reveal>
+          </div>
         </div>
       </section>
 
