@@ -79,9 +79,15 @@ const Reveal = ({ children, className = '', ...rest }) => (
    drop it in /public and swap this component for: <img src="/logo.png" .../> ── */
 function AFMark({ light = false }) {
   const peak = light ? '#FFFFFF' : 'var(--navy)'
+  // Shadow only — no structural changes to paths.
+  // Dark (nav/hero): navy depth shadow + faint teal glow off the triangle.
+  // Light (footer): soft white glow so the mark lifts off the dark background.
+  const shadow = light
+    ? { filter: 'drop-shadow(0 1px 6px rgba(43,179,163,0.28))' }
+    : { filter: 'drop-shadow(0 2px 10px rgba(21,36,59,0.26)) drop-shadow(0 1px 4px rgba(14,140,134,0.18))' }
   return (
     <svg className="af-mark" viewBox="0 0 50 48" role="img" aria-label="Logo AFSS" fill="none"
-      strokeLinecap="round" strokeLinejoin="round">
+      strokeLinecap="round" strokeLinejoin="round" style={shadow}>
       {/* A left leg + right leg / F stem */}
       <path d="M6 43 L24 8 L33 43" stroke={peak} strokeWidth="6.6" />
       {/* F arms */}
