@@ -665,13 +665,18 @@ export function Portfolio() {
           <motion.div className="portfolio-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
             {caseStudies.map((item) => (
               <motion.div key={item.n} className="portfolio-card spot" style={{ '--c': item.c, '--c2': item.c2 }} variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 260, damping: 22 }}>
-                <div className="portfolio-header">
-                  <span className="portfolio-num">{String(item.n).padStart(2, '0')}</span>
-                  <span className="portfolio-result"><Icon icon="fa-solid fa-arrow-trend-up" /> {item.price}</span>
+                <div className="portfolio-img">
+                  <img src={`/portfolio/${item.n}.png`} alt={`Preview ${item.title}`} loading="lazy" width="1200" height="750" />
                 </div>
-                <h3 className="portfolio-title">{item.title}</h3>
-                <p className="portfolio-detail">{item.detail}</p>
-                <div className="portfolio-tags">{item.tags.map((t) => <span key={t}>{t}</span>)}</div>
+                <div className="portfolio-body">
+                  <div className="portfolio-header">
+                    <span className="portfolio-num">{String(item.n).padStart(2, '0')}</span>
+                    <span className="portfolio-result"><Icon icon="fa-solid fa-arrow-trend-up" /> {item.price}</span>
+                  </div>
+                  <h3 className="portfolio-title">{item.title}</h3>
+                  <p className="portfolio-detail">{item.detail}</p>
+                  <div className="portfolio-tags">{item.tags.map((t) => <span key={t}>{t}</span>)}</div>
+                </div>
               </motion.div>
             ))}
           </motion.div>

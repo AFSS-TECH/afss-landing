@@ -9,10 +9,15 @@
     "build:client": "vite build",
     "gen:og": "node scripts/gen-og.mjs",
     "gen:covers": "node scripts/gen-covers.mjs",
+    "gen:portfolio": "node scripts/gen-portfolio.mjs",
     "gen:feeds": "node scripts/gen-feeds.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.2.0",
+    "@fortawesome/free-brands-svg-icons": "^7.2.0",
+    "@fortawesome/free-solid-svg-icons": "^7.2.0",
+    "@fortawesome/react-fontawesome": "^3.3.1",
     "framer-motion": "^11.11.17",
     "marked": "^14.1.4",
     "react": "^18.3.1",
