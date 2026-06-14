@@ -138,6 +138,7 @@ section { padding: 110px 24px; position: relative; }
 .logo .mark { display: grid; place-items: center; }
 .logo-word { line-height: 1; }
 .af-mark { width: 32px; height: 30px; }
+.logo-img { height: 56px; width: auto; display: block; }
 .ft-logo .af-mark { width: 34px; height: 32px; }
 .nav-links { display: flex; align-items: center; gap: 32px; }
 .nav-links a { color: var(--ink-2); font-size: .9rem; font-weight: 500; position: relative; }

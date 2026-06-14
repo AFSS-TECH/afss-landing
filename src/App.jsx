@@ -97,12 +97,14 @@ function AFMark({ light = false }) {
   )
 }
 
-const Logo = ({ footer }) => (
-  <div className={footer ? 'ft-logo' : 'logo'}>
-    <span className="mark"><AFMark light={footer} /></span>
-    <span className="logo-word">AFSS</span>
-  </div>
-)
+const Logo = ({ footer }) => footer
+  ? (
+    <div className="ft-logo">
+      <span className="mark"><AFMark light /></span>
+      <span className="logo-word">AFSS</span>
+    </div>
+  )
+  : <img src="/logo.png" alt="AFSS" className="logo-img" />
 
 /* ════════════════════════════════════════════════ ANIMATED AREA CHART (the motion graph) */
 function smoothPath(pts) {
