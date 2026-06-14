@@ -551,7 +551,7 @@ function ReviewCard({ r }) {
 }
 function Reviews({ reduce }) {
   const rowA = reviews.slice(0, 5)
-  const rowB = reviews.slice(5)
+  const rowB = reviews.slice(4)
   const Row = ({ items, dir }) => (
     <div className="marquee">
       <motion.div className="marquee-track" animate={reduce ? {} : { x: dir > 0 ? ['-50%', '0%'] : ['0%', '-50%'] }} transition={{ duration: 50, ease: 'linear', repeat: Infinity }}>
