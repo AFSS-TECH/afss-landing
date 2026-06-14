@@ -46,22 +46,28 @@ export function BlogIndex() {
 
   const allTags = [...new Set(all.flatMap((p) => p.tags))].sort()
 
-  const filtered = all.filter((p) => {
-    const matchTag = !activeTag || p.tags.includes(activeTag)
-    const q = query.trim().toLowerCase()
-    const matchQ =
-      !q ||
-      p.title.toLowerCase().includes(q) ||
-      p.excerpt.toLowerCase().includes(q) ||
-      p.tags.some((t) => t.toLowerCase().includes(q))
-    return matchTag && matchQ
-  })
+  // Posts matching the search query (used to derive available tag chips)
+  const q = query.trim().toLowerCase()
+  const bySearch = q
+    ? all.filter((p) =>
+        p.title.toLowerCase().includes(q) ||
+        p.excerpt.toLowerCase().includes(q) ||
+        p.tags.some((t) => t.toLowerCase().includes(q))
+      )
+    : all
+
+  // Only show tag chips that exist in current search results
+  const availableTags = [...new Set(bySearch.flatMap((p) => p.tags))].sort()
+  // If the selected tag disappeared from available tags, treat as no tag filter
+  const effectiveTag = availableTags.includes(activeTag) ? activeTag : ''
+
+  const filtered = bySearch.filter((p) => !effectiveTag || p.tags.includes(effectiveTag))
 
   const totalPages = Math.ceil(filtered.length / PER_PAGE)
   const visible = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE)
 
   const handleSearch = (v) => { setQuery(v); setPage(1) }
-  const handleTag = (t) => { setActiveTag(activeTag === t ? '' : t); setPage(1) }
+  const handleTag = (t) => { setActiveTag(effectiveTag === t ? '' : t); setPage(1) }
   const goPage = (n) => { setPage(n); window.scrollTo({ top: 0, behavior: 'smooth' }) }
 
   const title = 'Blog AFSS — Tips Website, Aplikasi & Software House'
@@ -103,7 +109,7 @@ export function BlogIndex() {
                 </div>
                 <div className="bhs-item">
                   <span className="bhs-n">{allTags.length}</span>
-                  <span className="bhs-l">Topik dibahas</span>
+                  <span className="bhs-l">Topik tersedia</span>
                 </div>
                 <div className="bhs-item">
                   <span className="bhs-n bhs-icon"><Icon icon="fa-solid fa-calendar-check" /></span>
@@ -140,18 +146,18 @@ export function BlogIndex() {
           </div>
           <div className="blog-tags" role="list" aria-label="Filter topik">
             <button
-              className={`blog-tag-chip${!activeTag ? ' active' : ''}`}
+              className={`blog-tag-chip${!effectiveTag ? ' active' : ''}`}
               onClick={() => handleTag('')}
-              aria-pressed={!activeTag}
+              aria-pressed={!effectiveTag}
             >
               Semua
             </button>
-            {allTags.map((t) => (
+            {availableTags.map((t) => (
               <button
                 key={t}
-                className={`blog-tag-chip${activeTag === t ? ' active' : ''}`}
+                className={`blog-tag-chip${effectiveTag === t ? ' active' : ''}`}
                 onClick={() => handleTag(t)}
-                aria-pressed={activeTag === t}
+                aria-pressed={effectiveTag === t}
               >
                 {t}
               </button>
@@ -173,7 +179,7 @@ export function BlogIndex() {
             </div>
           ) : (
             <>
-              <motion.div className="blog-grid" variants={stagger} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-40px' }}>
+              <motion.div key={`${effectiveTag}|${page}`} className="blog-grid" variants={stagger} initial="hidden" animate="show">
                 {visible.map((p) => (
                   <motion.article key={p.slug} className="blog-card" variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }}>
                     <Link to={`/blog/${p.slug}`} className="blog-card-link">
@@ -195,10 +201,10 @@ export function BlogIndex() {
               </motion.div>
 
               {/* Result count when filtered */}
-              {(query || activeTag) && (
+              {(query || effectiveTag) && (
                 <p className="blog-result-count">
                   {filtered.length} artikel ditemukan
-                  {activeTag ? ` — topik "${activeTag}"` : ''}
+                  {effectiveTag ? ` — topik "${effectiveTag}"` : ''}
                   {query ? ` — kata kunci "${query}"` : ''}
                 </p>
               )}
