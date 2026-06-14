@@ -5,6 +5,7 @@ import {
 } from 'framer-motion'
 import { Link, Outlet } from 'react-router-dom'
 import { Head } from 'vite-react-ssg'
+import { Icon } from './Icon.jsx'
 import {
   BRAND, products, workflow as steps, showcase, charts, reviews, stats,
   growthSeries, kpis, satisfaction, waLink, clients, why, techStack, pricing, faqs,
@@ -24,10 +25,11 @@ function Counter({ to, prefix = '', suffix = '', duration = 1.6 }) {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true })
   const reduce = useReducedMotion()
-  const [val, setVal] = useState(0)
+  // Start at `to` so SSG pre-renders the real number (not 0).
+  // Client-side: animate from 0 when element enters view.
+  const [val, setVal] = useState(to)
   useEffect(() => {
-    if (!inView) return
-    if (reduce) { setVal(to); return }
+    if (!inView || reduce) return
     const controls = animate(0, to, { duration, ease: [0.22, 1, 0.36, 1], onUpdate: (v) => setVal(Math.round(v)) })
     return () => controls.stop()
   }, [inView, to, reduce, duration])
@@ -193,8 +195,11 @@ function Nav() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
   const links = [
-    ['/#services', 'Layanan'], ['/#why', 'Keunggulan'], ['/#portfolio', 'Portofolio'],
-    ['/#pricing', 'Harga'], ['/#faq', 'FAQ'],
+    { label: 'Layanan', to: '/layanan' },
+    { label: 'Keunggulan', href: '/#why' },
+    { label: 'Portofolio', to: '/portofolio' },
+    { label: 'Harga', href: '/#pricing' },
+    { label: 'FAQ', href: '/#faq' },
   ]
   const close = () => setOpen(false)
   return (
@@ -202,7 +207,11 @@ function Nav() {
       <div className="nav-inner">
         <Link to="/" aria-label="AFSS beranda"><Logo /></Link>
         <ul className="nav-links">
-          {links.map(([h, t]) => <li key={h}><a href={h}>{t}</a></li>)}
+          {links.map((lnk) => (
+            <li key={lnk.label}>
+              {lnk.to ? <Link to={lnk.to}>{lnk.label}</Link> : <a href={lnk.href}>{lnk.label}</a>}
+            </li>
+          ))}
           <li><Link to="/blog">Blog</Link></li>
           <li><a href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis.`)} className="btn btn-pri" target="_blank" rel="noreferrer">Konsultasi Gratis</a></li>
         </ul>
@@ -211,7 +220,11 @@ function Nav() {
       <AnimatePresence>
         {open && (
           <motion.div className="mobile-menu" initial={{ opacity: 0, y: -10, height: 0 }} animate={{ opacity: 1, y: 0, height: 'auto' }} exit={{ opacity: 0, y: -8, height: 0 }} transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}>
-            {links.map(([h, t]) => <a key={h} href={h} onClick={close}>{t}</a>)}
+            {links.map((lnk) =>
+              lnk.to
+                ? <Link key={lnk.label} to={lnk.to} onClick={close}>{lnk.label}</Link>
+                : <a key={lnk.label} href={lnk.href} onClick={close}>{lnk.label}</a>
+            )}
             <Link to="/blog" onClick={close}>Blog</Link>
             <a href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis.`)} className="btn btn-pri" target="_blank" rel="noreferrer" onClick={close}>Konsultasi Gratis</a>
           </motion.div>
@@ -273,8 +286,8 @@ function Hero({ reduce, parallax }) {
             bersama bisnis Anda. Bukan template, bukan setengah jadi.
           </motion.p>
           <motion.div className="hero-cta" variants={fadeUp}>
-            <Magnetic href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis untuk proyek saya.`)} className="btn btn-pri btn-lg" target="_blank" rel="noreferrer"><i className="fa-brands fa-whatsapp" /> Konsultasi Gratis</Magnetic>
-            <a href="#portfolio" className="btn btn-ghost btn-lg"><i className="fa-solid fa-images" /> Lihat Portofolio</a>
+            <Magnetic href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis untuk proyek saya.`)} className="btn btn-pri btn-lg" target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Konsultasi Gratis</Magnetic>
+            <a href="#portfolio" className="btn btn-ghost btn-lg"><Icon icon="fa-solid fa-images" /> Lihat Portofolio</a>
           </motion.div>
           <motion.div className="hero-trust" variants={fadeUp}>
             <div className="avatars"><span>50+</span></div>
@@ -290,7 +303,7 @@ function Hero({ reduce, parallax }) {
             </div>
             <div className="panel-figure">
               <span className="big"><Counter to={218} prefix="+" suffix="%" /></span>
-              <span className="delta"><i className="fa-solid fa-arrow-up" /> 12,4% bln ini</span>
+              <span className="delta"><Icon icon="fa-solid fa-arrow-up" /> 12,4% bln ini</span>
             </div>
             <div className="panel-sub">Rata-rata konversi klien · 12 bulan terakhir</div>
             <div className="panel-chart"><AreaChart id="hero" data={growthSeries} /></div>
@@ -298,11 +311,11 @@ function Hero({ reduce, parallax }) {
           </motion.div>
 
           <motion.div className="float-card fc-1" {...floatA}>
-            <div className="fc-ico" style={{ background: 'var(--wa)' }}><i className="fa-solid fa-arrow-trend-up" /></div>
+            <div className="fc-ico" style={{ background: 'var(--wa)' }}><Icon icon="fa-solid fa-arrow-trend-up" /></div>
             <div><div className="fc-big">+38%</div><div className="fc-sm">Konversi</div></div>
           </motion.div>
           <motion.div className="float-card fc-2" {...floatB}>
-            <div className="fc-ico" style={{ background: 'var(--accent)' }}><i className="fa-solid fa-circle-check" /></div>
+            <div className="fc-ico" style={{ background: 'var(--accent)' }}><Icon icon="fa-solid fa-circle-check" /></div>
             <div><div className="fc-big">100+</div><div className="fc-sm">Proyek Selesai</div></div>
           </motion.div>
         </motion.div>
@@ -336,7 +349,7 @@ function TrustBar() {
         <motion.div className="trust-logos" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
           {clients.map((c) => (
             <motion.span className="trust-logo" key={c} variants={fadeUp}>
-              <i className="fa-solid fa-circle-nodes" /> {c}
+              <Icon icon="fa-solid fa-circle-nodes" /> {c}
             </motion.span>
           ))}
         </motion.div>
@@ -351,7 +364,7 @@ function Services() {
     <section id="services">
       <div className="container">
         <Reveal className="sec-header center">
-          <div className="eyebrow"><i className="fa-solid fa-layer-group" /> Layanan</div>
+          <div className="eyebrow"><Icon icon="fa-solid fa-layer-group" /> Layanan</div>
           <h2 className="sec-title">Jasa pembuatan website &amp; aplikasi untuk <span className="ital">setiap</span> kebutuhan</h2>
           <p className="sec-sub">Dari website custom hingga aplikasi mobile dan sistem internal — dibangun dari nol, cepat, dan SEO-ready sejak awal.</p>
         </Reveal>
@@ -360,14 +373,14 @@ function Services() {
             <motion.div key={p.name} className={`svc-card spot ${p.hot ? 'hot' : ''}`} variants={fadeUp} whileHover={{ y: -8 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }} onMouseMove={onSpot}>
               {p.hot && <span className="hot-tag">Terpopuler</span>}
               <div className="svc-top">
-                <div className="svc-ico"><i className={p.icon} /></div>
-                <span className="metric-badge"><i className="fa-solid fa-circle-check" /> {p.metric}</span>
+                <div className="svc-ico"><Icon icon={p.icon} /></div>
+                <span className="metric-badge"><Icon icon="fa-solid fa-circle-check" /> {p.metric}</span>
               </div>
               <div className="svc-name">{p.name}</div>
               <p className="svc-desc">{p.desc}</p>
-              <ul className="svc-feats">{p.feats.map((f) => <li key={f}><i className="fa-solid fa-check" /> {f}</li>)}</ul>
+              <ul className="svc-feats">{p.feats.map((f) => <li key={f}><Icon icon="fa-solid fa-check" /> {f}</li>)}</ul>
               <div className="svc-foot">
-                <a className="btn" href={waLink(`Halo ${BRAND.short}, saya tertarik dengan layanan ${p.name}.`)} target="_blank" rel="noreferrer">Konsultasi Sekarang <i className="fa-solid fa-arrow-right" /></a>
+                <a className="btn" href={waLink(`Halo ${BRAND.short}, saya tertarik dengan layanan ${p.name}.`)} target="_blank" rel="noreferrer">Konsultasi Sekarang <Icon icon="fa-solid fa-arrow-right" /></a>
               </div>
             </motion.div>
           ))}
@@ -383,14 +396,14 @@ function Why() {
     <section className="whyus" id="why">
       <div className="container">
         <Reveal className="sec-header center">
-          <div className="eyebrow"><i className="fa-solid fa-award" /> Keunggulan</div>
+          <div className="eyebrow"><Icon icon="fa-solid fa-award" /> Keunggulan</div>
           <h2 className="sec-title">Kenapa memilih <span className="ital">{BRAND.short}</span>?</h2>
           <p className="sec-sub">Kami membangun kemitraan jangka panjang, bukan sekadar proyek sekali jalan. Inilah yang membedakan kami.</p>
         </Reveal>
         <motion.div className="why-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
           {why.map((w) => (
             <motion.div className="why-card spot" key={w.title} variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 300, damping: 24 }} onMouseMove={onSpot}>
-              <div className="why-ico"><i className={w.icon} /></div>
+              <div className="why-ico"><Icon icon={w.icon} /></div>
               <h3>{w.title}</h3>
               <p>{w.desc}</p>
             </motion.div>
@@ -407,7 +420,7 @@ function Impact() {
     <section className="impact" id="impact">
       <div className="container">
         <Reveal className="sec-header center">
-          <div className="eyebrow"><i className="fa-solid fa-chart-line" /> Dampak</div>
+          <div className="eyebrow"><Icon icon="fa-solid fa-chart-line" /> Dampak</div>
           <h2 className="sec-title">Hasil yang <span className="ital">terukur</span>, bukan sekadar janji</h2>
           <p className="sec-sub">Setiap sistem yang kami bangun dirancang untuk menggerakkan angka yang penting bagi bisnis Anda.</p>
         </Reveal>
@@ -421,7 +434,7 @@ function Impact() {
             </div>
             <div className="graph-figure">
               <span className="num"><Counter to={218} prefix="+" suffix="%" duration={1.9} /></span>
-              <span className="pill"><i className="fa-solid fa-arrow-up" /> 12 bulan</span>
+              <span className="pill"><Icon icon="fa-solid fa-arrow-up" /> 12 bulan</span>
             </div>
             <div className="graph-canvas"><AreaChart id="impact" data={growthSeries} big /></div>
             <div className="gx-labels">{growthSeries.map((p) => <span key={p.m}>{p.m}</span>)}</div>
@@ -469,7 +482,7 @@ function Process() {
     <section className="process" id="process">
       <div className="container">
         <Reveal className="sec-header center">
-          <div className="eyebrow green"><i className="fa-solid fa-route" /> Cara Kerja</div>
+          <div className="eyebrow green"><Icon icon="fa-solid fa-route" /> Cara Kerja</div>
           <h2 className="sec-title">Proses yang transparan &amp; <span className="ital">konsultatif</span></h2>
           <p className="sec-sub">Kami selalu mengutamakan konsultasi sebelum membangun. Anda tahu persis apa yang dikerjakan di setiap tahap.</p>
         </Reveal>
@@ -477,7 +490,7 @@ function Process() {
           {steps.map((s) => (
             <motion.div className="proc-card spot" key={s.step} variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 300, damping: 24 }} onMouseMove={onSpot}>
               <span className="proc-step">{s.step}</span>
-              <div className="proc-ico"><i className={s.icon} /></div>
+              <div className="proc-ico"><Icon icon={s.icon} /></div>
               <h4>{s.title}</h4>
               <p>{s.desc}</p>
             </motion.div>
@@ -495,7 +508,7 @@ function Showcase() {
     <section className="showcase" id="portfolio">
       <div className="container">
         <Reveal className="sec-header center">
-          <div className="eyebrow"><i className="fa-solid fa-images" /> Portofolio</div>
+          <div className="eyebrow"><Icon icon="fa-solid fa-images" /> Portofolio</div>
           <h2 className="sec-title">Studi kasus &amp; <span className="ital">hasil nyata</span></h2>
           <p className="sec-sub">Beragam sistem yang telah kami bangun — lengkap dengan stack teknologi &amp; hasil yang dirasakan klien.</p>
         </Reveal>
@@ -505,7 +518,7 @@ function Showcase() {
               <div className="show-head"><div className="show-num">{item.n}</div><div className="show-title">{item.title}</div></div>
               <Mock item={item} />
               <div className="show-tags">{item.tags.map((t) => <span key={t}>{t}</span>)}</div>
-              <div className="show-price"><i className="fa-solid fa-arrow-trend-up" /> {item.price}</div>
+              <div className="show-price"><Icon icon="fa-solid fa-arrow-trend-up" /> {item.price}</div>
             </motion.div>
           ))}
         </motion.div>
@@ -518,12 +531,12 @@ function Showcase() {
 function ReviewCard({ r }) {
   return (
     <div className="rev-card">
-      <div className="rev-stars">{[...Array(5)].map((_, i) => <i key={i} className="fa-solid fa-star" />)}</div>
+      <div className="rev-stars">{[...Array(5)].map((_, i) => <Icon key={i} icon="fa-solid fa-star" />)}</div>
       <p className="rev-text">“{r.text}”</p>
       <div className="rev-author">
         <div className="av" style={{ background: r.grad }}>{r.initials}</div>
         <div>
-          <div className="av-name">{censor(r.name)}<i className="fa-solid fa-circle-check verified" title="Klien terverifikasi" /></div>
+          <div className="av-name">{censor(r.name)}<Icon icon="fa-solid fa-circle-check verified" title="Klien terverifikasi" /></div>
           <div className="av-co">{r.company}</div>
         </div>
       </div>
@@ -532,7 +545,7 @@ function ReviewCard({ r }) {
 }
 function Reviews({ reduce }) {
   const rowA = reviews.slice(0, 5)
-  const rowB = reviews.slice(4)
+  const rowB = reviews.slice(5)
   const Row = ({ items, dir }) => (
     <div className="marquee">
       <motion.div className="marquee-track" animate={reduce ? {} : { x: dir > 0 ? ['-50%', '0%'] : ['0%', '-50%'] }} transition={{ duration: 50, ease: 'linear', repeat: Infinity }}>
@@ -544,7 +557,7 @@ function Reviews({ reduce }) {
     <section className="reviews" id="reviews">
       <div className="container">
         <Reveal className="sec-header center">
-          <div className="eyebrow"><i className="fa-solid fa-heart" /> Testimoni</div>
+          <div className="eyebrow"><Icon icon="fa-solid fa-heart" /> Testimoni</div>
           <h2 className="sec-title">Apa kata <span className="ital">klien</span> kami?</h2>
           <p className="sec-sub">Kepuasan klien adalah prioritas utama kami. Demi privasi, nama klien ditampilkan secara tersamar.</p>
         </Reveal>
@@ -561,14 +574,14 @@ function TechStack() {
     <section className="tech" id="tech">
       <div className="container">
         <Reveal className="sec-header center">
-          <div className="eyebrow"><i className="fa-solid fa-microchip" /> Teknologi</div>
+          <div className="eyebrow"><Icon icon="fa-solid fa-microchip" /> Teknologi</div>
           <h2 className="sec-title">Stack modern yang kami <span className="ital">gunakan</span></h2>
           <p className="sec-sub">Teknologi terkini yang teruji — dipilih agar sistem Anda cepat, aman, dan mudah dikembangkan ke depan.</p>
         </Reveal>
         <motion.div className="tech-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
           {techStack.map((t) => (
             <motion.div className="tech-chip" key={t.name} variants={fadeUp} whileHover={{ y: -4 }} transition={{ type: 'spring', stiffness: 320, damping: 22 }}>
-              <i className={t.icon} /> <span>{t.name}</span>
+              <Icon icon={t.icon} /> <span>{t.name}</span>
             </motion.div>
           ))}
         </motion.div>
@@ -583,7 +596,7 @@ function Pricing() {
     <section className="pricing" id="pricing">
       <div className="container">
         <Reveal className="sec-header center">
-          <div className="eyebrow"><i className="fa-solid fa-tags" /> Paket Harga</div>
+          <div className="eyebrow"><Icon icon="fa-solid fa-tags" /> Paket Harga</div>
           <h2 className="sec-title">Harga <span className="ital">transparan</span>, tanpa biaya tersembunyi</h2>
           <p className="sec-sub">Pilih paket yang sesuai skala bisnis Anda. Semua harga adalah estimasi awal — final mengikuti ruang lingkup yang disepakati.</p>
         </Reveal>
@@ -594,8 +607,8 @@ function Pricing() {
               <div className="price-name">{p.name}</div>
               <div className="price-tagline">{p.tagline}</div>
               <div className="price-amt"><span className="price-note">{p.note}</span>{p.price}</div>
-              <ul className="price-feats">{p.feats.map((f) => <li key={f}><i className="fa-solid fa-check" /> {f}</li>)}</ul>
-              <a className="btn" href={waLink(`Halo ${BRAND.short}, saya tertarik dengan paket ${p.name}.`)} target="_blank" rel="noreferrer">{p.cta} <i className="fa-solid fa-arrow-right" /></a>
+              <ul className="price-feats">{p.feats.map((f) => <li key={f}><Icon icon="fa-solid fa-check" /> {f}</li>)}</ul>
+              <a className="btn" href={waLink(`Halo ${BRAND.short}, saya tertarik dengan paket ${p.name}.`)} target="_blank" rel="noreferrer">{p.cta} <Icon icon="fa-solid fa-arrow-right" /></a>
             </motion.div>
           ))}
         </motion.div>
@@ -611,7 +624,7 @@ function Faq() {
     <section className="faq" id="faq">
       <div className="container">
         <Reveal className="sec-header center">
-          <div className="eyebrow"><i className="fa-solid fa-circle-question" /> FAQ</div>
+          <div className="eyebrow"><Icon icon="fa-solid fa-circle-question" /> FAQ</div>
           <h2 className="sec-title">Pertanyaan yang <span className="ital">sering</span> ditanyakan</h2>
           <p className="sec-sub">Belum menemukan jawabannya? Hubungi kami langsung via WhatsApp untuk konsultasi gratis.</p>
         </Reveal>
@@ -622,7 +635,7 @@ function Faq() {
               <motion.div className={`faq-item ${isOpen ? 'open' : ''}`} key={f.q} variants={fadeUp}>
                 <button className="faq-q" onClick={() => setOpen(isOpen ? -1 : i)} aria-expanded={isOpen}>
                   <span>{f.q}</span>
-                  <i className={`fa-solid ${isOpen ? 'fa-minus' : 'fa-plus'}`} />
+                  <Icon icon={`fa-solid ${isOpen ? 'fa-minus' : 'fa-plus'}`} />
                 </button>
                 <AnimatePresence initial={false}>
                   {isOpen && (
@@ -661,7 +674,7 @@ function Career() {
       <div className="container">
         <div className="career-grid">
           <Reveal>
-            <div className="eyebrow green"><i className="fa-solid fa-briefcase" /> Karir</div>
+            <div className="eyebrow green"><Icon icon="fa-solid fa-briefcase" /> Karir</div>
             <h2 className="sec-title">Bergabung dengan <span className="ital">tim {BRAND.short}</span></h2>
             <p className="sec-sub" style={{ marginBottom: 0 }}>Kami mencari talenta berbakat yang ingin berkembang bersama kami dan ikut membangun masa depan digital Indonesia.</p>
             <motion.div className="benefits-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
@@ -677,9 +690,9 @@ function Career() {
               <div className="open-badge"><span className="open-dot" /> Sedang Dibuka</div>
               <div className="pos-title">Sales Executive</div>
               <p className="pos-desc">Kami mencari individu bersemangat dan berorientasi target untuk menjadi ujung tombak dalam memperkenalkan solusi digital {BRAND.short} kepada bisnis di seluruh Indonesia.</p>
-              <ul className="req-list">{reqs.map((r) => <li key={r}><i className="fa-solid fa-circle-check" /> {r}</li>)}</ul>
+              <ul className="req-list">{reqs.map((r) => <li key={r}><Icon icon="fa-solid fa-circle-check" /> {r}</li>)}</ul>
               <a className="btn btn-wa btn-lg" href={waLink(`Halo ${BRAND.short}, saya tertarik melamar posisi Sales Executive. Boleh saya dapatkan informasi lebih lanjut?`)} target="_blank" rel="noreferrer">
-                <i className="fa-brands fa-whatsapp" /> Lamar via WhatsApp
+                <Icon icon="fa-brands fa-whatsapp" /> Lamar via WhatsApp
               </a>
             </div>
           </Reveal>
@@ -696,7 +709,7 @@ function BlogTeaser() {
     <section className="blog-teaser" id="blog-teaser">
       <div className="container">
         <Reveal className="sec-header center">
-          <div className="eyebrow"><i className="fa-solid fa-newspaper" /> Blog</div>
+          <div className="eyebrow"><Icon icon="fa-solid fa-newspaper" /> Blog</div>
           <h2 className="sec-title">Wawasan &amp; <span className="ital">tips</span> terbaru</h2>
           <p className="sec-sub">Panduan praktis seputar pembuatan website, aplikasi, dan strategi digital untuk bisnis Anda.</p>
         </Reveal>
@@ -711,14 +724,14 @@ function BlogTeaser() {
                   <div className="blog-meta">{formatDateId(p.date)} · {p.readMinutes} menit baca</div>
                   <h3 className="blog-card-title">{p.title}</h3>
                   <p className="blog-card-excerpt">{p.excerpt}</p>
-                  <span className="blog-readmore">Baca selengkapnya <i className="fa-solid fa-arrow-right" /></span>
+                  <span className="blog-readmore">Baca selengkapnya <Icon icon="fa-solid fa-arrow-right" /></span>
                 </div>
               </Link>
             </motion.article>
           ))}
         </motion.div>
         <div className="blog-teaser-all">
-          <Link to="/blog" className="btn btn-ghost btn-lg">Lihat semua artikel <i className="fa-solid fa-arrow-right" /></Link>
+          <Link to="/blog" className="btn btn-ghost btn-lg">Lihat semua artikel <Icon icon="fa-solid fa-arrow-right" /></Link>
         </div>
       </div>
     </section>
@@ -733,7 +746,7 @@ function CtaBand() {
         <h2>Siap mewujudkan website atau aplikasi <span className="ital">Anda</span>?</h2>
         <p>Konsultasi gratis, tanpa komitmen. Ceritakan ide Anda hari ini — kami bantu temukan solusi terbaik untuk bisnis Anda.</p>
         <div className="btns">
-          <Magnetic href={waLink(`Halo ${BRAND.short}, saya ingin memulai proyek dan konsultasi gratis.`)} className="btn btn-pri btn-lg" target="_blank" rel="noreferrer"><i className="fa-brands fa-whatsapp" /> Mulai Sekarang</Magnetic>
+          <Magnetic href={waLink(`Halo ${BRAND.short}, saya ingin memulai proyek dan konsultasi gratis.`)} className="btn btn-pri btn-lg" target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Mulai Sekarang</Magnetic>
           <a href="#pricing" className="btn btn-ghost btn-lg">Lihat Paket Harga</a>
         </div>
       </Reveal>
@@ -751,25 +764,26 @@ function Footer() {
           <p className="ft-legal">{BRAND.legal}</p>
           <p className="ft-desc">Software house terpercaya yang membangun website, aplikasi, dan sistem digital berkualitas tinggi untuk semua skala bisnis di Indonesia. {BRAND.tagline}.</p>
           <div className="ft-social">
-            {['instagram', 'linkedin-in', 'tiktok', 'youtube'].map((s) => <a key={s} href="#" className="soc" aria-label={s}><i className={`fa-brands fa-${s}`} /></a>)}
-            <a href={waLink(`Halo ${BRAND.short}!`)} target="_blank" rel="noreferrer" className="soc" aria-label="WhatsApp"><i className="fa-brands fa-whatsapp" /></a>
+            {['instagram', 'linkedin-in', 'tiktok', 'youtube'].map((s) => <a key={s} href="#" className="soc" aria-label={s}><Icon icon={`fa-brands fa-${s}`} /></a>)}
+            <a href={waLink(`Halo ${BRAND.short}!`)} target="_blank" rel="noreferrer" className="soc" aria-label="WhatsApp"><Icon icon="fa-brands fa-whatsapp" /></a>
           </div>
         </div>
         <div>
           <div className="ft-head">Layanan</div>
           <ul className="ft-links">
-            <li><a href="/#services">Pembuatan Website Custom</a></li>
-            <li><a href="/#services">Aplikasi Mobile Android &amp; iOS</a></li>
-            <li><a href="/#services">Web App &amp; Sistem Internal</a></li>
-            <li><a href="/#services">UI/UX Design</a></li>
-            <li><a href="/#services">Maintenance &amp; Support</a></li>
+            <li><Link to="/layanan/pembuatan-website">Pembuatan Website Custom</Link></li>
+            <li><Link to="/layanan/aplikasi-mobile">Aplikasi Mobile Android &amp; iOS</Link></li>
+            <li><Link to="/layanan/web-app">Web App &amp; Sistem Internal</Link></li>
+            <li><Link to="/layanan/ui-ux-design">UI/UX Design</Link></li>
+            <li><Link to="/layanan/maintenance">Maintenance &amp; Support</Link></li>
           </ul>
         </div>
         <div>
           <div className="ft-head">Perusahaan</div>
           <ul className="ft-links">
-            <li><a href="/#why">Keunggulan</a></li>
-            <li><a href="/#portfolio">Portofolio</a></li>
+            <li><Link to="/tentang">Tentang Kami</Link></li>
+            <li><Link to="/portofolio">Portofolio</Link></li>
+            <li><Link to="/kontak">Kontak</Link></li>
             <li><a href="/#pricing">Paket Harga</a></li>
             <li><Link to="/blog">Blog</Link></li>
             <li><a href="/#faq">FAQ</a></li>
@@ -779,15 +793,15 @@ function Footer() {
         <div>
           <div className="ft-head">Kontak</div>
           <ul className="ft-links">
-            <li><a href={waLink(`Halo ${BRAND.short}!`)} target="_blank" rel="noreferrer"><i className="fa-brands fa-whatsapp" />{BRAND.phone}</a></li>
-            <li><a href={`mailto:${BRAND.email}`}><i className="fa-solid fa-envelope" />{BRAND.email}</a></li>
-            <li><span><i className="fa-solid fa-location-dot" />{BRAND.address}</span></li>
+            <li><a href={waLink(`Halo ${BRAND.short}!`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" />{BRAND.phone}</a></li>
+            <li><a href={`mailto:${BRAND.email}`}><Icon icon="fa-solid fa-envelope" />{BRAND.email}</a></li>
+            <li><span><Icon icon="fa-solid fa-location-dot" />{BRAND.address}</span></li>
           </ul>
         </div>
       </div>
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} {BRAND.legal}. All rights reserved.</p>
-        <div className="legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+        <div className="legal"><Link to="/privacy">Privacy Policy</Link><Link to="/terms">Terms of Service</Link></div>
       </div>
     </footer>
   )
@@ -806,7 +820,7 @@ export function Layout() {
       <Footer />
       <motion.a className="float-wa" href={waLink(`Halo ${BRAND.short}, saya ingin bertanya.`)} target="_blank" rel="noreferrer" title="Chat WhatsApp"
         animate={reduce ? {} : { y: [0, -7, 0] }} transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }} whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.92 }}>
-        <i className="fa-brands fa-whatsapp" />
+        <Icon icon="fa-brands fa-whatsapp" />
       </motion.a>
     </>
   )

@@ -33,6 +33,7 @@ export const clients = [
 // ── Layanan (heading kaya keyword untuk SEO) ───────────────
 export const products = [
   {
+    slug: 'pembuatan-website',
     icon: 'fa-solid fa-window-maximize',
     name: 'Pembuatan Website Custom',
     desc: 'Website profesional yang dibangun sesuai brand dan kebutuhan bisnis Anda — bukan template pasaran. Cepat & SEO-ready sejak awal.',
@@ -41,6 +42,7 @@ export const products = [
     hot: false,
   },
   {
+    slug: 'aplikasi-mobile',
     icon: 'fa-solid fa-mobile-screen-button',
     name: 'Pembuatan Aplikasi Mobile (Android & iOS)',
     desc: 'Aplikasi native maupun cross-platform yang ringan, cepat, dan mudah dipakai pengguna di semua perangkat.',
@@ -49,6 +51,7 @@ export const products = [
     hot: true,
   },
   {
+    slug: 'web-app',
     icon: 'fa-solid fa-chart-line',
     name: 'Pengembangan Web App & Sistem Internal',
     desc: 'Dashboard, ERP, CRM, atau sistem custom untuk mengelola seluruh operasional perusahaan Anda dalam satu platform.',
@@ -57,6 +60,7 @@ export const products = [
     hot: false,
   },
   {
+    slug: 'ui-ux-design',
     icon: 'fa-solid fa-pen-ruler',
     name: 'UI/UX Design',
     desc: 'Desain yang tidak cuma cantik, tapi terbukti meningkatkan konversi dan memudahkan pengguna mencapai tujuannya.',
@@ -65,6 +69,7 @@ export const products = [
     hot: false,
   },
   {
+    slug: 'maintenance',
     icon: 'fa-solid fa-headset',
     name: 'Maintenance & Support',
     desc: 'Update, monitoring, dan perbaikan berkala supaya sistem Anda selalu jalan, aman, dan up-to-date.',
@@ -73,6 +78,8 @@ export const products = [
     hot: false,
   },
 ]
+
+export const getProductBySlug = (slug) => products.find((p) => p.slug === slug) || null
 
 // ── Kenapa memilih AFSS (diferensiasi) ─────────────────────
 export const why = [

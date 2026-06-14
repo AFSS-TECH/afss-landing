@@ -69,6 +69,9 @@ a { text-decoration: none; color: inherit; }
 img, svg { display: block; }
 ul { list-style: none; }
 
+/* inline-SVG icons (Font Awesome SVG data) — size to the surrounding font, keep aspect */
+.svg-inline--fa { display: inline-block; height: 1em; width: auto; vertical-align: -0.125em; overflow: visible; }
+
 /* ── Film grain overlay — the quiet luxury tell ── */
 .grain {
   position: fixed; inset: 0; z-index: 9000; pointer-events: none;
@@ -519,6 +522,54 @@ footer { background: var(--ink); color: #AAB6C4; padding: 80px 24px 36px; }
 .post-cta .btn-pri { background: var(--paper); color: var(--ink); }
 .related-head { font-size: 1.3rem; font-weight: 800; color: var(--ink); margin: 80px 0 26px; text-align: center; }
 
+/* ════════ NEW PAGES (Layanan, About, Contact, Portfolio, Legal) ════════ */
+
+/* breadcrumb */
+.breadcrumb { font-size: .82rem; color: var(--muted); margin-bottom: 22px; display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
+.breadcrumb a { color: var(--accent); font-weight: 500; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb .bc-current { color: var(--muted); }
+
+/* two-col layout */
+.pages-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+
+/* timeline (About) */
+.timeline-item { display: grid; grid-template-columns: 72px 1fr; gap: 20px; align-items: start; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.timeline-item:last-child { border-bottom: none; }
+.timeline-year { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; font-weight: 800; color: var(--accent); line-height: 1.7; }
+.timeline-text { color: var(--muted); font-size: .96rem; line-height: 1.7; }
+
+/* contact grid */
+.contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.contact-card { background: var(--surface); border-radius: var(--r-lg); padding: 36px 28px; box-shadow: var(--shadow-sm); border: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px; }
+.contact-ico { font-size: 2rem; line-height: 1; }
+.contact-label { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--ink); }
+.contact-val { font-size: 1rem; font-weight: 600; color: var(--ink-2); word-break: break-all; }
+.contact-sub { font-size: .88rem; color: var(--muted); line-height: 1.6; flex: 1; }
+.contact-card .btn { margin-top: 8px; }
+
+/* portfolio grid */
+.portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.portfolio-card { background: var(--surface); border-radius: var(--r-lg); padding: 32px 26px; box-shadow: var(--shadow-sm); border: 1px solid var(--line); position: relative; overflow: hidden; transition: box-shadow .3s var(--ease), transform .3s var(--ease); }
+.portfolio-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--c, var(--accent)), var(--c2, var(--accent-2))); }
+.portfolio-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.portfolio-num { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2rem; font-weight: 800; color: var(--c, var(--accent)); opacity: .25; line-height: 1; }
+.portfolio-result { display: inline-flex; align-items: center; gap: 6px; background: var(--paper-2); color: var(--ink-2); font-size: .75rem; font-weight: 700; padding: 5px 12px; border-radius: 50px; border: 1px solid var(--line); }
+.portfolio-result i { color: var(--wa); }
+.portfolio-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--ink); margin-bottom: 10px; line-height: 1.3; }
+.portfolio-detail { font-size: .9rem; color: var(--muted); line-height: 1.7; margin-bottom: 18px; }
+.portfolio-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.portfolio-tags span { background: var(--paper-2); color: var(--ink-2); font-size: .73rem; font-weight: 600; padding: 4px 10px; border-radius: 50px; border: 1px solid var(--line); }
+
+/* legal text */
+.legal-body { color: var(--ink-2); font-size: 1rem; line-height: 1.8; }
+.legal-body h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--ink); margin-top: 2.5em; margin-bottom: .5em; }
+.legal-body p + p { margin-top: 1em; }
+.legal-body ul { list-style: disc; padding-left: 1.5em; margin-top: .6em; }
+.legal-body li { margin-top: .4em; }
+.legal-body a { color: var(--accent); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.legal-body strong { color: var(--ink); }
+
 /* ════════ RESPONSIVE ════════ */
 @media (max-width: 1024px) {
   .hero-inner { grid-template-columns: 1fr; gap: 48px; }
@@ -535,6 +586,9 @@ footer { background: var(--ink); color: #AAB6C4; padding: 80px 24px 36px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
   .stats-card { grid-template-columns: 1fr 1fr; gap: 32px 24px; }
   .stat-item:nth-child(2)::after { display: none; }
+  .pages-two-col { grid-template-columns: 1fr; gap: 40px; }
+  .portfolio-grid { grid-template-columns: 1fr 1fr; }
+  .contact-grid { grid-template-columns: 1fr; max-width: 420px; }
 }
 @media (max-width: 768px) {
   section { padding: 84px 20px; }
@@ -549,6 +603,7 @@ footer { background: var(--ink); color: #AAB6C4; padding: 80px 24px 36px; }
   .page-hero { padding: 124px 20px 40px; }
   .post-head { padding: 120px 20px 32px; }
   .blog-list-sec { padding: 24px 20px 84px; }
+  .portfolio-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
   .hero-cta .btn { width: 100%; justify-content: center; }

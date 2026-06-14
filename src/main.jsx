@@ -2,22 +2,37 @@ import './index.css'
 import { ViteReactSSG } from 'vite-react-ssg'
 import { Layout, Home } from './App.jsx'
 import { BlogIndex, BlogPost } from './Blog.jsx'
+import { LayananIndex, LayananDetail, About, Contact, Portfolio, Privacy, Terms } from './Pages.jsx'
 import { posts } from './blog.js'
+import { products } from './data.js'
 
-// Multi-route SSG: every route is prerendered to its own static HTML file
-// (home, /blog, and one page per blog post) for full crawlability.
+// Multi-route SSG: every route is prerendered to its own static HTML file for full crawlability.
 export const routes = [
   {
     path: '/',
     element: <Layout />,
     children: [
       { index: true, element: <Home /> },
+      // Blog
       { path: 'blog', element: <BlogIndex /> },
       {
         path: 'blog/:slug',
         element: <BlogPost />,
         getStaticPaths: () => posts.map((p) => `/blog/${p.slug}`),
       },
+      // Layanan
+      { path: 'layanan', element: <LayananIndex /> },
+      {
+        path: 'layanan/:slug',
+        element: <LayananDetail />,
+        getStaticPaths: () => products.map((p) => `/layanan/${p.slug}`),
+      },
+      // Static pages
+      { path: 'tentang', element: <About /> },
+      { path: 'kontak', element: <Contact /> },
+      { path: 'portofolio', element: <Portfolio /> },
+      { path: 'privacy', element: <Privacy /> },
+      { path: 'terms', element: <Terms /> },
     ],
   },
 ]
