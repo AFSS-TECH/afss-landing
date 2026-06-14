@@ -276,6 +276,34 @@ const ILLUSTRATIONS = {
     <circle cx="1078" cy="122" r="8" fill="#FFFFFF" opacity="0" stroke="#FFFFFF" stroke-width="2" opacity_dummy="0.35"/>
   `,
 
+  'jasa-toko-online': () => `
+    <!-- Shopping cart -->
+    <circle cx="920" cy="220" r="110" fill="#FFFFFF" opacity="0.07"/>
+    <!-- cart body -->
+    <path d="M700 160 L730 160 L790 360 L1090 360 L1130 220 L760 220" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" opacity="0.40"/>
+    <!-- cart items (boxes) -->
+    <rect x="800" y="230" width="64" height="60" rx="8" fill="#FFFFFF" opacity="0.22"/>
+    <rect x="876" y="230" width="64" height="60" rx="8" fill="#FFFFFF" opacity="0.16"/>
+    <rect x="952" y="230" width="64" height="60" rx="8" fill="#FFFFFF" opacity="0.20"/>
+    <rect x="1028" y="230" width="64" height="60" rx="8" fill="#FFFFFF" opacity="0.13"/>
+    <!-- cart wheels -->
+    <circle cx="820" cy="400" r="28" fill="#FFFFFF" opacity="0.22"/>
+    <circle cx="820" cy="400" r="14" fill="#FFFFFF" opacity="0.14"/>
+    <circle cx="1060" cy="400" r="28" fill="#FFFFFF" opacity="0.22"/>
+    <circle cx="1060" cy="400" r="14" fill="#FFFFFF" opacity="0.14"/>
+    <!-- payment check badge -->
+    <circle cx="1100" cy="130" r="48" fill="#FFFFFF" opacity="0.18"/>
+    <polyline points="1078,130 1094,148 1124,110" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.80"/>
+    <!-- tag chips -->
+    <rect x="670" y="462" width="148" height="44" rx="10" fill="#FFFFFF" opacity="0.14"/>
+    <text x="744" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" opacity="0.75">Payment Gateway</text>
+    <rect x="832" y="462" width="120" height="44" rx="10" fill="#FFFFFF" opacity="0.14"/>
+    <text x="892" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" opacity="0.75">SEO-Ready</text>
+    <rect x="966" y="462" width="120" height="44" rx="10" fill="#FFFFFF" opacity="0.14"/>
+    <text x="1026" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" opacity="0.75">Mobile-First</text>
+    <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" opacity="0.45">Toko online custom · kode milik Anda</text>
+  `,
+
   'website-untuk-umkm': () => `
     <!-- Store front -->
     <!-- roof -->

@@ -450,6 +450,76 @@ Saat [memilih software house](/blog/cara-memilih-software-house), pastikan tanya
 `,
   },
   {
+    slug: 'jasa-toko-online',
+    title: 'Jasa Pembuatan Toko Online: Panduan Lengkap untuk Bisnis di Indonesia 2026',
+    description:
+      'Panduan memilih jasa pembuatan toko online di Indonesia 2026 — fitur wajib, perbandingan platform vs custom, kisaran biaya, dan tips sukses berjualan online.',
+    date: '2026-06-15',
+    readMinutes: 7,
+    tags: ['Toko Online', 'E-Commerce'],
+    c: '#0E5E78',
+    c2: '#0E8C86',
+    excerpt:
+      'Bisnis Anda siap berjualan online? Panduan ini membantu memilih jasa pembuatan toko online yang tepat — dari fitur, platform, hingga biaya.',
+    body: `
+Di Indonesia, nilai transaksi e-commerce terus tumbuh setiap tahun. Konsumen kini terbiasa berbelanja dari ponsel kapan saja. Artinya, **toko online bukan lagi keunggulan kompetitif — melainkan kebutuhan dasar** bagi bisnis yang ingin bertahan dan berkembang.
+
+## Apa itu toko online (e-commerce)?
+
+Toko online adalah website yang memungkinkan pelanggan **menelusuri produk, memesan, dan membayar** secara langsung — 24 jam sehari, tanpa batas geografis. Berbeda dengan marketplace (Tokopedia, Shopee), toko online milik sendiri memberi Anda kendali penuh atas brand, data pelanggan, dan margin keuntungan.
+
+## Fitur wajib toko online yang efektif
+
+Tidak semua toko online sama. Ini fitur yang sebaiknya ada sejak awal:
+
+- **Katalog produk** — filter kategori, varian, stok, dan galeri foto.
+- **Keranjang & checkout** — alur yang ringkas menurunkan abandonment rate.
+- **Pembayaran otomatis** — integrasi payment gateway (Midtrans, Xendit, dll.) dan QRIS.
+- **Manajemen pesanan** — notifikasi otomatis ke penjual dan pembeli.
+- **Dashboard penjual** — laporan penjualan, stok, dan performa real-time.
+- **SEO-ready** — URL bersih, meta per produk, schema markup — agar toko muncul di Google. Lihat [kenapa SEO harus dibangun sejak awal](/blog/website-seo-friendly).
+- **Mobile-first** — mayoritas pembeli Indonesia berbelanja via ponsel.
+
+## Platform siap pakai vs toko online custom
+
+Dua pendekatan umum:
+
+### Platform / SaaS (Shopify, WooCommerce, dll.)
+- Cepat dipasang, biaya awal rendah.
+- Fitur terbatas; biaya langganan bulanan terus berjalan.
+- Tampilan sering mirip toko lain dan sulit dikustomisasi penuh.
+- Data dan kode bukan milik Anda sepenuhnya — mirip dilema [website custom vs template](/blog/website-custom-vs-template).
+
+### Toko online custom
+- Dibangun sesuai alur bisnis dan brand Anda.
+- Fitur bisa berkembang (multi-cabang, loyalty poin, integrasi ERP, dll.).
+- **Kode milik Anda** — tidak ada biaya langganan vendor yang terus naik.
+- Cocok untuk bisnis yang serius membangun aset digital jangka panjang.
+
+## Kisaran biaya pembuatan toko online
+
+Harga bergantung pada fitur dan kompleksitas:
+
+- **Toko sederhana** (katalog + checkout dasar) — mulai **Rp 3–5 juta**.
+- **Toko menengah** (payment gateway, manajemen stok, dashboard) — **Rp 6–15 juta**.
+- **Toko kompleks** (multi-vendor, integrasi ERP, aplikasi mobile) — **mulai Rp 20 juta ke atas**.
+
+Untuk perbandingan yang lebih rinci, baca [panduan biaya pembuatan website](/blog/biaya-pembuatan-website).
+
+## Tips sukses membangun toko online
+
+1. **Mulai dari MVP** — rilis fitur inti dulu, kembangkan bertahap berdasarkan data nyata.
+2. **Foto produk berkualitas** — visual adalah daya jual utama di dunia online.
+3. **Deskripsi produk SEO-friendly** — bantu calon pembeli menemukan produk Anda di Google.
+4. **Checkout yang cepat dan mudah** — setiap langkah ekstra meningkatkan risiko pelanggan kabur.
+5. **Pilih partner terpercaya** — pastikan kode jadi milik Anda dan ada dukungan pasca peluncuran. Lihat [cara memilih software house](/blog/cara-memilih-software-house).
+
+## Siap mulai toko online Anda?
+
+AFSS membangun toko online custom yang SEO-ready, cepat, dan skalabel — dengan kode yang 100% menjadi milik Anda. Dari katalog sederhana hingga platform marketplace multi-penjual. [Konsultasi gratis lewat WhatsApp](/harga) untuk mendapat estimasi sesuai kebutuhan bisnis Anda.
+`,
+  },
+  {
     slug: 'website-untuk-umkm',
     title: 'Kenapa UMKM Wajib Punya Website di 2026',
     description:
