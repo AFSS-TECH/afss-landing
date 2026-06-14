@@ -551,8 +551,9 @@ footer { background: var(--ink); color: #AAB6C4; padding: 80px 24px 36px; }
 /* portfolio grid */
 .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 .portfolio-card { background: var(--surface); border-radius: var(--r-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--line); position: relative; overflow: hidden; transition: box-shadow .3s var(--ease), transform .3s var(--ease); padding: 0; }
-.portfolio-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--c, var(--accent)), var(--c2, var(--accent-2))); z-index: 1; }
-.portfolio-img { position: relative; width: 100%; aspect-ratio: 8/5; overflow: hidden; background: var(--paper-2); }
+/* Use ::after for the gradient accent bar — ::before is reserved for .spot spotlight effect */
+.portfolio-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--c, var(--accent)), var(--c2, var(--accent-2))); z-index: 2; pointer-events: none; }
+.portfolio-img { width: 100%; aspect-ratio: 8/5; overflow: hidden; background: var(--paper-2); }
 .portfolio-img img { width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block; transition: transform .45s var(--ease); }
 .portfolio-card:hover .portfolio-img img { transform: scale(1.04); }
 .portfolio-body { padding: 22px 22px 24px; }
