@@ -74,27 +74,25 @@ const Reveal = ({ children, className = '', ...rest }) => (
   </motion.div>
 )
 
-/* ── AFSS logo mark — "AF" peak monogram + teal base triangle.
-   Recreated as inline SVG so it scales crisply. To use the official PNG instead,
-   drop it in /public and swap this component for: <img src="/logo.png" .../> ── */
+/* ── AFSS logo mark — "AF" peak monogram + teal triangle.
+   Paths traced from official logo: A legs wide-open, F bars from right leg,
+   teal triangle centered inside A pointing up. ── */
 function AFMark({ light = false }) {
   const peak = light ? '#FFFFFF' : 'var(--navy)'
-  // Shadow only — no structural changes to paths.
-  // Dark (nav/hero): navy depth shadow + faint teal glow off the triangle.
-  // Light (footer): soft white glow so the mark lifts off the dark background.
   const shadow = light
     ? { filter: 'drop-shadow(0 1px 6px rgba(43,179,163,0.28))' }
     : { filter: 'drop-shadow(0 2px 10px rgba(21,36,59,0.26)) drop-shadow(0 1px 4px rgba(14,140,134,0.18))' }
   return (
     <svg className="af-mark" viewBox="0 0 50 48" role="img" aria-label="Logo AFSS" fill="none"
       strokeLinecap="round" strokeLinejoin="round" style={shadow}>
-      {/* A left leg + right leg / F stem */}
-      <path d="M6 43 L24 8 L33 43" stroke={peak} strokeWidth="6.6" />
-      {/* F arms */}
-      <path d="M24 8 L45 8" stroke={peak} strokeWidth="6.6" />
-      <path d="M29 22 L43 22" stroke={peak} strokeWidth="5.8" />
-      {/* teal base triangle */}
-      <path d="M17.5 43 L24 30 L30.5 43 Z" fill="var(--accent)" />
+      {/* A: wide open legs — left foot(5,43), peak(22,5), right foot/F-stem(34,43) */}
+      <path d="M5 43 L22 5 L34 43" stroke={peak} strokeWidth="7.5" />
+      {/* F top arm — extends right from the A peak */}
+      <path d="M22 5 L46 5" stroke={peak} strokeWidth="7.5" />
+      {/* F middle arm — starts where the right leg sits at this height */}
+      <path d="M28 23 L44 23" stroke={peak} strokeWidth="6.5" />
+      {/* teal triangle — upward-pointing, centered inside A */}
+      <path d="M15 36 L22 23 L29 36 Z" fill="var(--accent)" />
     </svg>
   )
 }
