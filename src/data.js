@@ -67,15 +67,6 @@ export const products = [
     hot: false,
   },
   {
-    slug: 'ui-ux-design',
-    icon: 'fa-solid fa-pen-ruler',
-    name: 'UI/UX Design',
-    desc: 'Desain yang tidak cuma cantik, tapi terbukti meningkatkan konversi dan memudahkan pengguna mencapai tujuannya.',
-    metric: 'Konversi-first',
-    feats: ['Riset & user flow', 'Wireframe & prototype', 'Design system konsisten', 'Usability testing'],
-    hot: false,
-  },
-  {
     slug: 'maintenance',
     icon: 'fa-solid fa-headset',
     name: 'Maintenance & Support',

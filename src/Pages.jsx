@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Link, useParams } from 'react-router-dom'
 import { Head } from 'vite-react-ssg'
 import { Icon } from './Icon.jsx'
-import { BRAND, products, why, showcase, stats, waLink, getProductBySlug } from './data.js'
+import { BRAND, products, why, showcase, stats, waLink, getProductBySlug, pricing, faqs } from './data.js'
 
 const SITE_URL = 'https://afss-landing.vercel.app'
 
@@ -19,6 +19,13 @@ const Reveal = ({ children, className = '', ...rest }) => (
     {children}
   </motion.div>
 )
+
+/* ── Cursor spotlight (same pattern as App.jsx) ── */
+const onSpot = (e) => {
+  const r = e.currentTarget.getBoundingClientRect()
+  e.currentTarget.style.setProperty('--mx', `${e.clientX - r.left}px`)
+  e.currentTarget.style.setProperty('--my', `${e.clientY - r.top}px`)
+}
 
 /* ── Breadcrumb ── */
 function Breadcrumb({ items }) {
@@ -52,7 +59,7 @@ const SERVICE_CONTENT = {
       { q: 'Bisakah saya update konten sendiri?', a: 'Ya. Kami menyediakan training singkat dan dokumentasi agar Anda bisa memperbarui konten tanpa harus kembali ke developer.' },
       { q: 'Apakah website saya akan muncul di Google?', a: 'Kami membangun dengan praktik SEO on-page terbaik sejak awal. Untuk peringkat organik, butuh waktu dan konten — kami bisa membantu strategi kontennya juga.' },
     ],
-    relatedSlugs: ['web-app', 'ui-ux-design'],
+    relatedSlugs: ['web-app', 'maintenance'],
   },
   'aplikasi-mobile': {
     headline: 'Jasa Pembuatan Aplikasi Mobile Android & iOS',
@@ -89,24 +96,6 @@ const SERVICE_CONTENT = {
       { q: 'Berapa user yang bisa mengakses sistem?', a: 'Tidak ada batasan user per lisensi. Sistem kami dibangun untuk multi-user secara bersamaan — skalabel sesuai pertumbuhan tim.' },
     ],
     relatedSlugs: ['pembuatan-website', 'maintenance'],
-  },
-  'ui-ux-design': {
-    headline: 'Jasa UI/UX Design Profesional untuk Website & Aplikasi',
-    subline: 'Desain yang bukan sekadar cantik — tapi terbukti meningkatkan konversi, mengurangi bounce rate, dan membuat pengguna betah.',
-    longDesc: 'Desain yang baik adalah yang tidak terasa. Pengguna tahu cara pakainya tanpa baca manual, dan bisnis Anda mendapat lebih banyak konversi. AFSS menggunakan pendekatan design thinking — riset, prototipe, uji, iterasi — bukan hanya estetika.',
-    benefits: [
-      { icon: 'fa-solid fa-route', title: 'User Research & Journey Mapping', desc: 'Riset perilaku target pengguna untuk memastikan desain yang dibuat relevan dan mudah digunakan.' },
-      { icon: 'fa-solid fa-pen-ruler', title: 'Wireframe & Prototype Interaktif', desc: 'Prototipe yang bisa diklik dan dirasakan sebelum coding dimulai — menghemat biaya revisi.' },
-      { icon: 'fa-solid fa-layer-group', title: 'Design System & Komponen', desc: 'Sistem desain yang konsisten sehingga tampilan seragam di seluruh halaman dan mudah dikembangkan.' },
-      { icon: 'fa-solid fa-check', title: 'Handoff Siap Developer', desc: 'File Figma terorganisir, aset tersedia, dan spesifikasi lengkap sehingga developer bisa langsung kerja.' },
-    ],
-    serviceFaq: [
-      { q: 'Software apa yang digunakan?', a: 'Kami menggunakan Figma sebagai tools utama. File desain final diserahkan ke Anda beserta aset-aset yang dibutuhkan.' },
-      { q: 'Berapa kali revisi yang diberikan?', a: 'Setiap tahap (wireframe, desain visual) mencakup 2–3 putaran revisi. Revisi di luar scope bisa disepakati terpisah.' },
-      { q: 'Bisa mendesain ulang sistem yang sudah ada?', a: 'Bisa. Kami lakukan audit UX terlebih dahulu untuk identifikasi titik masalah, lalu redesign bertahap agar tidak mengganggu operasional.' },
-      { q: 'Apakah termasuk copywriting?', a: 'Copywriting ringan (label, button, microcopy) sudah termasuk. Konten panjang seperti artikel atau halaman produk dari sisi Anda atau bisa dibahas terpisah.' },
-    ],
-    relatedSlugs: ['pembuatan-website', 'aplikasi-mobile'],
   },
   'maintenance': {
     headline: 'Jasa Maintenance & Support Website dan Aplikasi',
@@ -164,7 +153,7 @@ export function LayananIndex() {
         <div className="container">
           <motion.div className="svc-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
             {products.map((p) => (
-              <motion.div key={p.slug} className={`svc-card spot ${p.hot ? 'hot' : ''}`} variants={fadeUp} whileHover={{ y: -8 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }}>
+              <motion.div key={p.slug} className={`svc-card spot ${p.hot ? 'hot' : ''}`} variants={fadeUp} whileHover={{ y: -8 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }} onMouseMove={onSpot}>
                 {p.hot && <span className="hot-tag">Terpopuler</span>}
                 <div className="svc-top">
                   <div className="svc-ico"><Icon icon={p.icon} /></div>
@@ -856,6 +845,318 @@ export function Terms() {
             <p>Pertanyaan terkait syarat dan ketentuan ini dapat disampaikan ke <a href={`mailto:${BRAND.email}`}>{BRAND.email}</a> atau melalui WhatsApp di {BRAND.phone}.</p>
           </div>
         </div>
+      </section>
+    </>
+  )
+}
+
+/* ══════════════════════════════════════════════════ KEUNGGULAN (/keunggulan) */
+export function Keunggulan() {
+  const title = 'Keunggulan AFSS — Kenapa Memilih Kami?'
+  const desc = '4 alasan utama kenapa 50+ perusahaan mempercayakan proyek digital mereka ke AFSS: kode bersih, cepat SEO-ready, tim lokal, dan harga transparan.'
+  const guarantees = [
+    { icon: 'fa-solid fa-certificate', label: 'Garansi bug 30–90 hari' },
+    { icon: 'fa-solid fa-code', label: 'Kode & dokumentasi milik Anda' },
+    { icon: 'fa-solid fa-headset', label: 'Support prioritas pasca-launching' },
+    { icon: 'fa-solid fa-shield-halved', label: 'Kerahasiaan proyek terjamin' },
+  ]
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <link rel="canonical" href={`${SITE_URL}/keunggulan`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:url" content={`${SITE_URL}/keunggulan`} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={desc} />
+        <meta property="og:image" content={`${SITE_URL}/og.png`} />
+        <meta name="twitter:image" content={`${SITE_URL}/og.png`} />
+      </Head>
+
+      <section className="page-hero">
+        <div className="hero-glow" />
+        <div className="container">
+          <Reveal>
+            <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Keunggulan' }]} />
+            <div className="eyebrow"><Icon icon="fa-solid fa-award" /> Keunggulan</div>
+            <h1 className="page-title">Kenapa memilih <span className="ital">AFSS</span>?</h1>
+            <p className="page-sub">Kami membangun kemitraan jangka panjang — bukan sekadar proyek sekali jalan. Inilah yang membedakan kami dari vendor lain.</p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section style={{ paddingTop: 60, paddingBottom: 60 }}>
+        <div className="container">
+          <motion.div className="why-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+            {why.map((w) => (
+              <motion.div key={w.title} className="why-card spot" variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 300, damping: 24 }} onMouseMove={onSpot}>
+                <div className="why-ico"><Icon icon={w.icon} /></div>
+                <h3>{w.title}</h3>
+                <p>{w.desc}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="whyus" style={{ paddingTop: 60, paddingBottom: 60 }}>
+        <div className="container">
+          <Reveal className="sec-header center">
+            <div className="eyebrow"><Icon icon="fa-solid fa-shield-halved" /> Jaminan Kami</div>
+            <h2 className="sec-title">Yang kami <span className="ital">janjikan</span> di setiap proyek</h2>
+          </Reveal>
+          <motion.div className="tech-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+            {guarantees.map((g) => (
+              <motion.div key={g.label} className="tech-chip" variants={fadeUp} whileHover={{ y: -4 }}>
+                <Icon icon={g.icon} /> <span>{g.label}</span>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      <div className="stats-band">
+        <motion.div className="stats-card" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+          {stats.map((s) => (
+            <motion.div key={s.label} className="stat-item" variants={fadeUp}>
+              <div className="stat-num">{s.prefix || ''}{s.n}{s.suffix}</div>
+              <div className="stat-lbl">{s.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
+      <section className="cta-band" style={{ paddingTop: 80 }}>
+        <Reveal className="cta-card">
+          <h2>Siap bekerja sama dengan tim yang <span className="ital">berpihak</span> pada Anda?</h2>
+          <p>Konsultasi gratis, tanpa komitmen. Ceritakan kebutuhan bisnis Anda dan kami bantu temukan solusi terbaik.</p>
+          <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center' }}>
+            <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Konsultasi Gratis</a>
+            <Link className="btn btn-ghost btn-lg" to="/layanan">Lihat Layanan Kami</Link>
+          </div>
+        </Reveal>
+      </section>
+    </>
+  )
+}
+
+/* ══════════════════════════════════════════════════ HARGA (/harga) */
+export function Harga() {
+  const title = 'Paket Harga Jasa Website & Aplikasi — Transparan | AFSS'
+  const desc = 'Paket harga transparan untuk jasa website, web app, dan aplikasi mobile. Basic mulai Rp 1 juta, Business mulai Rp 4 juta, Custom untuk proyek besar. Konsultasi gratis.'
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <link rel="canonical" href={`${SITE_URL}/harga`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:url" content={`${SITE_URL}/harga`} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={desc} />
+        <meta property="og:image" content={`${SITE_URL}/og.png`} />
+        <meta name="twitter:image" content={`${SITE_URL}/og.png`} />
+      </Head>
+
+      <section className="page-hero">
+        <div className="hero-glow" />
+        <div className="container">
+          <Reveal>
+            <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Paket Harga' }]} />
+            <div className="eyebrow"><Icon icon="fa-solid fa-tags" /> Paket Harga</div>
+            <h1 className="page-title">Harga <span className="ital">transparan</span>, tanpa biaya tersembunyi</h1>
+            <p className="page-sub">Pilih paket yang sesuai skala bisnis Anda. Semua harga adalah estimasi awal — final mengikuti ruang lingkup yang disepakati bersama.</p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section style={{ paddingTop: 60, paddingBottom: 80 }}>
+        <div className="container">
+          <motion.div className="price-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+            {pricing.map((p) => (
+              <motion.div className={`price-card spot ${p.hot ? 'hot' : ''}`} key={p.name} variants={fadeUp} whileHover={{ y: -8 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }} onMouseMove={onSpot}>
+                {p.hot && <span className="hot-tag">Paling diminati</span>}
+                <div className="price-name">{p.name}</div>
+                <div className="price-tagline">{p.tagline}</div>
+                <div className="price-amt"><span className="price-note">{p.note}</span>{p.price}</div>
+                <ul className="price-feats">{p.feats.map((f) => <li key={f}><Icon icon="fa-solid fa-check" /> {f}</li>)}</ul>
+                <a className="btn" href={waLink(`Halo ${BRAND.short}, saya tertarik dengan paket ${p.name}.`)} target="_blank" rel="noreferrer">{p.cta} <Icon icon="fa-solid fa-arrow-right" /></a>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="cta-band" style={{ paddingTop: 0 }}>
+        <Reveal className="cta-card">
+          <h2>Tidak yakin paket mana yang <span className="ital">tepat</span>?</h2>
+          <p>Ceritakan kebutuhan bisnis Anda — kami bantu pilihkan paket yang paling sesuai. Konsultasi gratis, tanpa komitmen.</p>
+          <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi tentang paket harga yang sesuai untuk kebutuhan saya.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Konsultasi Harga Gratis</a>
+        </Reveal>
+      </section>
+    </>
+  )
+}
+
+/* ══════════════════════════════════════════════════ FAQ PAGE (/faq) */
+export function Faq() {
+  const [open, setOpen] = useState(-1)
+  const title = 'FAQ — Pertanyaan yang Sering Ditanyakan | AFSS'
+  const desc = 'Jawaban untuk pertanyaan umum seputar jasa pembuatan website, aplikasi, biaya, timeline, garansi, dan cara kerja AFSS.'
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <link rel="canonical" href={`${SITE_URL}/faq`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:url" content={`${SITE_URL}/faq`} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={desc} />
+        <meta property="og:image" content={`${SITE_URL}/og.png`} />
+        <meta name="twitter:image" content={`${SITE_URL}/og.png`} />
+      </Head>
+
+      <section className="page-hero">
+        <div className="hero-glow" />
+        <div className="container">
+          <Reveal>
+            <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'FAQ' }]} />
+            <div className="eyebrow"><Icon icon="fa-solid fa-circle-question" /> FAQ</div>
+            <h1 className="page-title">Pertanyaan yang <span className="ital">sering</span> ditanyakan</h1>
+            <p className="page-sub">Belum menemukan jawabannya? Hubungi kami langsung via WhatsApp untuk konsultasi gratis.</p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section style={{ paddingTop: 60, paddingBottom: 80 }}>
+        <div className="container container-narrow">
+          <div className="faq-list">
+            {faqs.map((f, i) => {
+              const isOpen = open === i
+              return (
+                <div key={f.q} className={`faq-item ${isOpen ? 'open' : ''}`}>
+                  <button className="faq-q" onClick={() => setOpen(isOpen ? -1 : i)} aria-expanded={isOpen}>
+                    <span>{f.q}</span>
+                    <Icon icon={`fa-solid ${isOpen ? 'fa-minus' : 'fa-plus'}`} />
+                  </button>
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.div className="faq-a" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}>
+                        <p>{f.a}</p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="cta-band" style={{ paddingTop: 0 }}>
+        <Reveal className="cta-card">
+          <h2>Masih ada pertanyaan <span className="ital">lain</span>?</h2>
+          <p>Hubungi kami langsung — kami siap membantu Anda menemukan jawaban dan solusi terbaik untuk bisnis Anda.</p>
+          <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya ada pertanyaan tentang layanan Anda.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Tanya via WhatsApp</a>
+        </Reveal>
+      </section>
+    </>
+  )
+}
+
+/* ══════════════════════════════════════════════════ KARIR (/karir) */
+export function Karir() {
+  const title = 'Karir di AFSS — Lowongan Marketing Executive'
+  const desc = 'Bergabung dengan tim AFSS. Kami membuka lowongan Marketing Executive — remote friendly, komisi menarik, jenjang karir jelas.'
+  const reqs = [
+    'Minimal lulusan SMA/SMK (D3/S1 diutamakan)',
+    'Pengalaman di bidang marketing/sales minimal 1 tahun',
+    'Kemampuan komunikasi & presentasi yang baik',
+    'Memiliki jaringan bisnis yang luas',
+    'Menguasai media sosial dan digital marketing dasar',
+    'Berorientasi target & terbiasa bekerja mandiri',
+    'Tertarik & melek dunia teknologi & digital',
+  ]
+  const benefits = [
+    ['💰', 'Komisi Menarik', 'Komisi kompetitif tiap closing'],
+    ['📈', 'Jenjang Karir', 'Pertumbuhan karir yang jelas'],
+    ['🎓', 'Training Intensif', 'Pelatihan marketing & produk'],
+    ['🏡', 'Remote Friendly', 'Fleksibel dari mana saja'],
+  ]
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <link rel="canonical" href={`${SITE_URL}/karir`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:url" content={`${SITE_URL}/karir`} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={desc} />
+        <meta property="og:image" content={`${SITE_URL}/og.png`} />
+        <meta name="twitter:image" content={`${SITE_URL}/og.png`} />
+      </Head>
+
+      <section className="page-hero">
+        <div className="hero-glow" />
+        <div className="container">
+          <Reveal>
+            <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Karir' }]} />
+            <div className="eyebrow green"><Icon icon="fa-solid fa-briefcase" /> Karir</div>
+            <h1 className="page-title">Bergabung dengan <span className="ital">tim AFSS</span></h1>
+            <p className="page-sub">Kami mencari talenta berbakat yang ingin berkembang bersama kami dan ikut membangun masa depan digital Indonesia.</p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section style={{ paddingTop: 60, paddingBottom: 80 }}>
+        <div className="container">
+          <div className="career-grid">
+            <Reveal>
+              <div className="eyebrow green"><Icon icon="fa-solid fa-star" /> Benefit</div>
+              <h2 className="sec-title">Kenapa bergabung dengan <span className="ital">{BRAND.short}</span>?</h2>
+              <p className="sec-sub" style={{ marginBottom: 0 }}>Kami percaya bahwa tim yang bahagia menghasilkan produk yang luar biasa.</p>
+              <motion.div className="benefits-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+                {benefits.map(([ico, t, d]) => (
+                  <motion.div className="benefit spot" key={t} variants={fadeUp} whileHover={{ y: -5 }} transition={{ type: 'spring', stiffness: 300, damping: 24 }} onMouseMove={onSpot}>
+                    <div className="benefit-ico">{ico}</div>
+                    <div className="benefit-t">{t}</div>
+                    <div className="benefit-d">{d}</div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </Reveal>
+            <Reveal>
+              <div className="career-card">
+                <div className="open-badge"><span className="open-dot" /> Sedang Dibuka</div>
+                <div className="pos-title">Marketing Executive</div>
+                <p className="pos-desc">Kami mencari individu bersemangat dan berorientasi target untuk memperkenalkan solusi digital {BRAND.short} kepada bisnis di seluruh Indonesia melalui berbagai saluran pemasaran dan jaringan bisnis.</p>
+                <ul className="req-list">{reqs.map((r) => <li key={r}><Icon icon="fa-solid fa-circle-check" /> {r}</li>)}</ul>
+                <a className="btn btn-wa btn-lg" href={waLink(`Halo ${BRAND.short}, saya tertarik melamar posisi Marketing Executive. Boleh saya dapatkan informasi lebih lanjut?`)} target="_blank" rel="noreferrer">
+                  <Icon icon="fa-brands fa-whatsapp" /> Lamar via WhatsApp
+                </a>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <section className="cta-band" style={{ paddingTop: 0 }}>
+        <Reveal className="cta-card">
+          <h2>Belum ada posisi yang <span className="ital">cocok</span>?</h2>
+          <p>Kirim CV dan portofolio Anda ke kami — kami selalu tertarik bertemu talenta terbaik untuk kolaborasi ke depan.</p>
+          <a className="btn btn-pri btn-lg" href={`mailto:${BRAND.email}`}><Icon icon="fa-solid fa-envelope" /> Kirim CV via Email</a>
+        </Reveal>
       </section>
     </>
   )

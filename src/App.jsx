@@ -3,7 +3,7 @@ import {
   motion, AnimatePresence, useScroll, useTransform, useSpring,
   useInView, animate, useReducedMotion,
 } from 'framer-motion'
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet, useLocation } from 'react-router-dom'
 import { Head } from 'vite-react-ssg'
 import { Icon } from './Icon.jsx'
 import {
@@ -66,6 +66,13 @@ function Magnetic({ href, className, children, ...rest }) {
 /* ── Censor reviewer name ── */
 const censor = (full) =>
   full.split(' ').map((w) => (w.length <= 1 ? w : w[0] + '*'.repeat(w.length - 1))).join(' ')
+
+/* ── Scroll to top on every route change ── */
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }) }, [pathname])
+  return null
+}
 
 /* ── Reveal wrapper ── */
 const Reveal = ({ children, className = '', ...rest }) => (
@@ -202,10 +209,11 @@ function Nav() {
   }, [])
   const links = [
     { label: 'Layanan', to: '/layanan' },
-    { label: 'Keunggulan', href: '/#why' },
+    { label: 'Keunggulan', to: '/keunggulan' },
     { label: 'Portofolio', to: '/portofolio' },
-    { label: 'Harga', href: '/#pricing' },
-    { label: 'FAQ', href: '/#faq' },
+    { label: 'Harga', to: '/harga' },
+    { label: 'FAQ', to: '/faq' },
+    { label: 'Karir', to: '/karir' },
   ]
   const close = () => setOpen(false)
   return (
@@ -214,9 +222,7 @@ function Nav() {
         <Link to="/" aria-label="AFSS beranda"><Logo /></Link>
         <ul className="nav-links">
           {links.map((lnk) => (
-            <li key={lnk.label}>
-              {lnk.to ? <Link to={lnk.to}>{lnk.label}</Link> : <a href={lnk.href}>{lnk.label}</a>}
-            </li>
+            <li key={lnk.label}><Link to={lnk.to}>{lnk.label}</Link></li>
           ))}
           <li><Link to="/blog">Blog</Link></li>
           <li><a href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis.`)} className="btn btn-pri" target="_blank" rel="noreferrer">Konsultasi Gratis</a></li>
@@ -226,11 +232,9 @@ function Nav() {
       <AnimatePresence>
         {open && (
           <motion.div className="mobile-menu" initial={{ opacity: 0, y: -10, height: 0 }} animate={{ opacity: 1, y: 0, height: 'auto' }} exit={{ opacity: 0, y: -8, height: 0 }} transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}>
-            {links.map((lnk) =>
-              lnk.to
-                ? <Link key={lnk.label} to={lnk.to} onClick={close}>{lnk.label}</Link>
-                : <a key={lnk.label} href={lnk.href} onClick={close}>{lnk.label}</a>
-            )}
+            {links.map((lnk) => (
+              <Link key={lnk.label} to={lnk.to} onClick={close}>{lnk.label}</Link>
+            ))}
             <Link to="/blog" onClick={close}>Blog</Link>
             <a href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis.`)} className="btn btn-pri" target="_blank" rel="noreferrer" onClick={close}>Konsultasi Gratis</a>
           </motion.div>
@@ -293,7 +297,7 @@ function Hero({ reduce, parallax }) {
           </motion.p>
           <motion.div className="hero-cta" variants={fadeUp}>
             <Magnetic href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis untuk proyek saya.`)} className="btn btn-pri btn-lg" target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Konsultasi Gratis</Magnetic>
-            <a href="#portfolio" className="btn btn-ghost btn-lg"><Icon icon="fa-solid fa-images" /> Lihat Portofolio</a>
+            <Link to="/portofolio" className="btn btn-ghost btn-lg"><Icon icon="fa-solid fa-images" /> Lihat Portofolio</Link>
           </motion.div>
           <motion.div className="hero-trust" variants={fadeUp}>
             <div className="avatars"><span>50+</span></div>
@@ -391,6 +395,9 @@ function Services() {
             </motion.div>
           ))}
         </motion.div>
+        <div style={{ textAlign: 'center', marginTop: 40 }}>
+          <Link to="/layanan" className="btn btn-ghost btn-lg">Lihat semua layanan <Icon icon="fa-solid fa-arrow-right" /></Link>
+        </div>
       </div>
     </section>
   )
@@ -528,6 +535,9 @@ function Showcase() {
             </motion.div>
           ))}
         </motion.div>
+        <div style={{ textAlign: 'center', marginTop: 40 }}>
+          <Link to="/portofolio" className="btn btn-ghost btn-lg">Lihat semua portofolio <Icon icon="fa-solid fa-arrow-right" /></Link>
+        </div>
       </div>
     </section>
   )
@@ -753,7 +763,7 @@ function CtaBand() {
         <p>Konsultasi gratis, tanpa komitmen. Ceritakan ide Anda hari ini — kami bantu temukan solusi terbaik untuk bisnis Anda.</p>
         <div className="btns">
           <Magnetic href={waLink(`Halo ${BRAND.short}, saya ingin memulai proyek dan konsultasi gratis.`)} className="btn btn-pri btn-lg" target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Mulai Sekarang</Magnetic>
-          <a href="#pricing" className="btn btn-ghost btn-lg">Lihat Paket Harga</a>
+          <Link to="/harga" className="btn btn-ghost btn-lg">Lihat Paket Harga</Link>
         </div>
       </Reveal>
     </section>
@@ -784,7 +794,6 @@ function Footer() {
             <li><Link to="/layanan/pembuatan-website">Pembuatan Website Custom</Link></li>
             <li><Link to="/layanan/aplikasi-mobile">Aplikasi Mobile Android &amp; iOS</Link></li>
             <li><Link to="/layanan/web-app">Web App &amp; Sistem Internal</Link></li>
-            <li><Link to="/layanan/ui-ux-design">UI/UX Design</Link></li>
             <li><Link to="/layanan/maintenance">Maintenance &amp; Support</Link></li>
           </ul>
         </div>
@@ -794,10 +803,10 @@ function Footer() {
             <li><Link to="/tentang">Tentang Kami</Link></li>
             <li><Link to="/portofolio">Portofolio</Link></li>
             <li><Link to="/kontak">Kontak</Link></li>
-            <li><a href="/#pricing">Paket Harga</a></li>
+            <li><Link to="/harga">Paket Harga</Link></li>
             <li><Link to="/blog">Blog</Link></li>
-            <li><a href="/#faq">FAQ</a></li>
-            <li><a href="/#career">Karir</a></li>
+            <li><Link to="/faq">FAQ</Link></li>
+            <li><Link to="/karir">Karir</Link></li>
           </ul>
         </div>
         <div>
@@ -823,6 +832,7 @@ export function Layout() {
   const reduce = useReducedMotion()
   return (
     <>
+      <ScrollToTop />
       <div className="grain" aria-hidden="true" />
       <motion.div className="progress" style={{ scaleX: scrollYProgress }} />
       <Nav />
@@ -862,15 +872,11 @@ export function Home() {
       <StatsBand />
       <TrustBar />
       <Services />
-      <Why />
       <Impact />
       <Process />
       <Showcase />
       <Reviews reduce={reduce} />
       <TechStack />
-      <Pricing />
-      <Faq />
-      <Career />
       <BlogTeaser />
       <CtaBand />
     </>
