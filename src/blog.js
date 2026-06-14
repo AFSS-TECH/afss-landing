@@ -29,14 +29,14 @@ Tidak semua website sama. Sebuah landing page satu halaman jelas berbeda dari si
 - **Web app / dashboard** (login, manajemen data, laporan) — **mulai Rp 4 juta**, naik sesuai jumlah fitur dan peran pengguna.
 - **Sistem custom / ERP** — dihitung per proyek karena sangat bergantung pada alur bisnis.
 
-Lihat rincian paket kami di halaman [Paket Harga](/#pricing) untuk perbandingan yang lebih konkret.
+Lihat rincian paket kami di halaman [Paket Harga](/harga) untuk perbandingan yang lebih konkret.
 
 ## Faktor yang memengaruhi harga
 
 Dua website dengan tampilan mirip bisa berbeda harga jauh. Inilah penyebabnya:
 
 ### 1. Custom vs template
-Template murah dan cepat, tapi terbatas dan sering "kembar" dengan situs lain. Website [custom](/#services) dibangun sesuai brand dan kebutuhan Anda — investasinya lebih besar, tapi hasilnya unik dan fleksibel.
+Template murah dan cepat, tapi terbatas dan sering "kembar" dengan situs lain. Website [custom](/layanan) dibangun sesuai brand dan kebutuhan Anda — investasinya lebih besar, tapi hasilnya unik dan fleksibel.
 
 ### 2. Jumlah & kompleksitas fitur
 Form kontak sederhana berbeda dengan sistem pembayaran, multi-bahasa, atau integrasi WhatsApp dan API pihak ketiga. Semakin banyak logika, semakin besar effort.
@@ -51,13 +51,13 @@ Website yang dibangun **SEO-ready** dan cepat (skor Core Web Vitals tinggi) lebi
 
 Website Rp 500 ribu yang lambat, tidak bisa di-update, dan tidak muncul di Google justru membuang uang. Yang penting bukan harga termurah, tapi **nilai per rupiah**: apakah website itu mendatangkan pelanggan, mudah dirawat, dan kodenya jadi milik Anda?
 
-Di AFSS, seluruh kode dan dokumentasi menjadi milik klien sepenuhnya — tanpa vendor lock-in. Pertanyaan umum lain soal harga dan timeline kami jawab di bagian [FAQ](/#faq).
+Di AFSS, seluruh kode dan dokumentasi menjadi milik klien sepenuhnya — tanpa vendor lock-in. Pertanyaan umum lain soal harga dan timeline kami jawab di bagian [FAQ](/faq).
 
 ## Cara mendapat estimasi yang akurat
 
 Angka pasti hanya bisa diberikan setelah kebutuhan jelas. Prosesnya singkat: ceritakan tujuan bisnis Anda, kami bantu rumuskan ruang lingkup, lalu beri proposal dengan harga dan timeline yang transparan — tanpa biaya tersembunyi.
 
-**Siap mulai?** [Konsultasi gratis lewat WhatsApp](/#pricing), tanpa komitmen.
+**Siap mulai?** [Konsultasi gratis lewat WhatsApp](/harga), tanpa komitmen.
 `,
   },
   {
@@ -81,11 +81,11 @@ Setelah biaya, pertanyaan kedua yang paling sering kami terima adalah: **berapa 
 - **Aplikasi menengah** (login, profil, notifikasi, integrasi backend) — **6–10 minggu**.
 - **Aplikasi kompleks** (pembayaran, real-time, peta, multi-peran) — **3 bulan ke atas**.
 
-Durasi juga dipengaruhi pilihan teknologi. Pendekatan **cross-platform** seperti Flutter memungkinkan satu basis kode untuk Android & iOS sekaligus — lebih cepat dan hemat dibanding membangun dua aplikasi native terpisah. Lihat [layanan aplikasi mobile kami](/#services).
+Durasi juga dipengaruhi pilihan teknologi. Pendekatan **cross-platform** seperti Flutter memungkinkan satu basis kode untuk Android & iOS sekaligus — lebih cepat dan hemat dibanding membangun dua aplikasi native terpisah. Lihat [layanan aplikasi mobile kami](/layanan).
 
 ## Tahapan yang dilalui
 
-Waktu pengerjaan terbagi ke beberapa fase — ini sama dengan [proses kerja](/#process) kami:
+Waktu pengerjaan terbagi ke beberapa fase — ini sama dengan [proses kerja](/tentang) kami:
 
 1. **Konsultasi & discovery** — memetakan kebutuhan dan fitur inti.
 2. **Desain UI/UX** — wireframe, prototype, lalu desain final.
@@ -109,7 +109,7 @@ Menyiapkan hal-hal ini di awal bisa memangkas waktu secara signifikan.
 - Tetapkan **ruang lingkup yang jelas** sejak proposal.
 - Pilih partner dengan **komunikasi cepat** — tim lokal tanpa beda zona waktu mempercepat keputusan.
 
-Ingin tahu estimasi untuk ide aplikasi Anda? [Konsultasikan gratis](/#pricing) — kami beri timeline yang realistis, bukan janji manis.
+Ingin tahu estimasi untuk ide aplikasi Anda? [Konsultasikan gratis](/harga) — kami beri timeline yang realistis, bukan janji manis.
 `,
   },
   {
@@ -128,7 +128,7 @@ Ingin tahu estimasi untuk ide aplikasi Anda? [Konsultasikan gratis](/#pricing) �
 Memilih **software house** ibarat memilih partner jangka panjang, bukan sekadar tukang. Salah pilih, proyek bisa molor, membengkak, atau ditinggal setengah jadi. Berikut hal-hal yang sebaiknya Anda cek sebelum memutuskan.
 
 ## 1. Portofolio & studi kasus nyata
-Minta contoh proyek yang relevan dengan kebutuhan Anda. Perhatikan bukan cuma tampilannya, tapi **hasilnya** — apakah membantu bisnis klien sebelumnya? Lihat contoh karya kami di bagian [Portofolio](/#portfolio).
+Minta contoh proyek yang relevan dengan kebutuhan Anda. Perhatikan bukan cuma tampilannya, tapi **hasilnya** — apakah membantu bisnis klien sebelumnya? Lihat contoh karya kami di bagian [Portofolio](/portofolio).
 
 ## 2. Kepemilikan kode (hindari vendor lock-in)
 Tanyakan: apakah kode dan dokumentasi menjadi milik Anda? Banyak vendor "menyandera" proyek sehingga Anda terpaksa terus bergantung. Di AFSS, **kode 100% milik klien** — tim mana pun bisa melanjutkannya.
@@ -137,7 +137,7 @@ Tanyakan: apakah kode dan dokumentasi menjadi milik Anda? Banyak vendor "menyand
 Software house yang baik memberi ruang lingkup, harga, dan timeline yang jelas **di depan**, tanpa biaya tersembunyi. Jika estimasi terlalu kabur atau terlalu murah untuk dipercaya, hati-hati.
 
 ## 4. Teknologi yang dipakai
-Stack modern (lihat [teknologi kami](/#tech)) memengaruhi kecepatan, keamanan, dan kemudahan pengembangan ke depan. Hindari teknologi usang yang sulit dirawat.
+Stack modern (lihat [teknologi kami](/keunggulan)) memengaruhi kecepatan, keamanan, dan kemudahan pengembangan ke depan. Hindari teknologi usang yang sulit dirawat.
 
 ## 5. SEO & performa sejak awal
 Website yang tidak bisa ditemukan di Google sama saja tidak ada. Pastikan vendor membangun situs yang **cepat dan SEO-ready**, bukan menambahkannya belakangan sebagai "biaya ekstra".
@@ -146,11 +146,11 @@ Website yang tidak bisa ditemukan di Google sama saja tidak ada. Pastikan vendor
 Seberapa responsif mereka? Apakah ada laporan progres berkala? Partner lokal dengan komunikasi cepat dan tanpa beda zona waktu sangat memudahkan koordinasi.
 
 ## 7. Garansi & maintenance
-Peluncuran bukan akhir. Tanyakan soal masa garansi bug dan paket [maintenance](/#services): monitoring, update keamanan, dan backup berkala.
+Peluncuran bukan akhir. Tanyakan soal masa garansi bug dan paket [maintenance](/layanan): monitoring, update keamanan, dan backup berkala.
 
 ## Kesimpulan
 
-Pilih partner yang transparan, menyerahkan kepemilikan kode, dan benar-benar memahami tujuan bisnis Anda — bukan sekadar mengejar transaksi. Punya pertanyaan? Cek [FAQ](/#faq) kami atau langsung [konsultasi gratis](/#pricing).
+Pilih partner yang transparan, menyerahkan kepemilikan kode, dan benar-benar memahami tujuan bisnis Anda — bukan sekadar mengejar transaksi. Punya pertanyaan? Cek [FAQ](/faq) kami atau langsung [konsultasi gratis](/harga).
 `,
   },
   {
@@ -203,7 +203,7 @@ Kekurangan:
 - **Pilih template** jika anggaran sangat terbatas, kebutuhan sederhana, dan Anda hanya ingin "hadir" online secepatnya.
 - **Pilih custom** jika website adalah aset bisnis serius yang harus mendatangkan pelanggan, mencerminkan brand, dan berkembang ke depan.
 
-Di AFSS, kami fokus pada [pembuatan website custom](/#services) yang cepat dan SEO-ready — bukan template pasaran. [Konsultasi gratis](/#pricing) untuk cari tahu mana yang paling tepat untuk Anda.
+Di AFSS, kami fokus pada [pembuatan website custom](/layanan) yang cepat dan SEO-ready — bukan template pasaran. [Konsultasi gratis](/harga) untuk cari tahu mana yang paling tepat untuk Anda.
 `,
   },
   {
@@ -248,7 +248,7 @@ Menambahkan SEO setelah website jadi sering kali mahal dan tambal-sulam. Membang
 
 ## Kesimpulan
 
-SEO bukan biaya tambahan, tapi bagian dari membangun website yang benar. Ingin website yang cepat dan SEO-ready? Lihat [layanan kami](/#services) atau [konsultasi gratis](/#pricing).
+SEO bukan biaya tambahan, tapi bagian dari membangun website yang benar. Ingin website yang cepat dan SEO-ready? Lihat [layanan kami](/layanan) atau [konsultasi gratis](/harga).
 `,
   },
   {
@@ -293,7 +293,7 @@ Jika beberapa poin di atas terasa familier, ERP bisa menghemat waktu operasional
 
 ## Mulai dari yang Anda butuhkan
 
-Tidak harus langsung lengkap. Kami biasa membangun ERP secara bertahap, mulai dari modul paling mendesak. Lihat [layanan pengembangan sistem kami](/#services) atau [minta penawaran](/#pricing).
+Tidak harus langsung lengkap. Kami biasa membangun ERP secara bertahap, mulai dari modul paling mendesak. Lihat [layanan pengembangan sistem kami](/layanan) atau [minta penawaran](/harga).
 `,
   },
   {
@@ -334,7 +334,7 @@ Sertakan FAQ, garansi, atau transparansi harga untuk menjawab keberatan sebelum 
 
 ## Kesimpulan
 
-Konversi adalah hasil dari kejelasan, kepercayaan, dan kemudahan. Ingin landing page yang dirancang untuk konversi? Lihat [layanan kami](/#services) atau [konsultasi gratis](/#pricing).
+Konversi adalah hasil dari kejelasan, kepercayaan, dan kemudahan. Ingin landing page yang dirancang untuk konversi? Lihat [layanan kami](/layanan) atau [konsultasi gratis](/harga).
 `,
   },
   {
@@ -353,7 +353,7 @@ Konversi adalah hasil dari kejelasan, kepercayaan, dan kemudahan. Ingin landing 
 "Saya butuh website atau aplikasi?" — pertanyaan ini sering muncul, dan jawabannya tergantung apa yang ingin Anda capai. Mari perjelas tiga istilah yang kerap tertukar.
 
 ## Website
-Halaman yang diakses lewat browser untuk **menyampaikan informasi**: company profile, landing page, blog, atau katalog. Fokusnya konten dan ditemukan di Google. Kalau tujuan utama Anda "hadir online dan mendatangkan calon pelanggan", inilah yang Anda butuhkan. Lihat [layanan pembuatan website](/#services).
+Halaman yang diakses lewat browser untuk **menyampaikan informasi**: company profile, landing page, blog, atau katalog. Fokusnya konten dan ditemukan di Google. Kalau tujuan utama Anda "hadir online dan mendatangkan calon pelanggan", inilah yang Anda butuhkan. Lihat [layanan pembuatan website](/layanan).
 
 ## Web App (aplikasi berbasis web)
 Aplikasi yang juga dibuka lewat browser, tapi **interaktif dan punya logika**: login, dashboard, manajemen data, laporan. Contohnya sistem kasir, CRM, atau [ERP](/blog/apa-itu-erp). Cocok saat Anda perlu *mengelola* sesuatu, bukan sekadar menampilkan informasi.
@@ -367,7 +367,7 @@ Aplikasi yang dipasang di ponsel (Android/iOS) lewat store. Unggul untuk **pengg
 - **Butuh mengelola operasional / data** → Web App.
 - **Butuh dipakai pengguna secara rutin di ponsel** → Aplikasi Mobile.
 
-Sering kali bisnis butuh kombinasi — misalnya website untuk marketing + web app untuk operasional internal. Bingung menentukan? [Konsultasi gratis](/#pricing), kami bantu petakan kebutuhan Anda.
+Sering kali bisnis butuh kombinasi — misalnya website untuk marketing + web app untuk operasional internal. Bingung menentukan? [Konsultasi gratis](/harga), kami bantu petakan kebutuhan Anda.
 `,
   },
   {
@@ -409,7 +409,7 @@ Website resmi yang memperkenalkan perusahaan Anda secara profesional: siapa Anda
 
 Jangan sekadar "ada". Pastikan cepat, mobile-friendly, jelas CTA-nya, dan dibangun custom sesuai brand — bukan template pasaran (baca [custom vs template](/blog/website-custom-vs-template)).
 
-Ingin company profile yang profesional dan SEO-ready? Lihat [layanan kami](/#services) atau [konsultasi gratis](/#pricing).
+Ingin company profile yang profesional dan SEO-ready? Lihat [layanan kami](/layanan) atau [konsultasi gratis](/harga).
 `,
   },
   {
@@ -446,7 +446,7 @@ Banyak yang mengira website selesai setelah diluncurkan. Padahal seperti kendara
 
 Biasanya berupa paket bulanan/tahunan sesuai cakupan. Jauh lebih murah dibanding kerugian akibat situs diretas atau down saat momen penting.
 
-Saat [memilih software house](/blog/cara-memilih-software-house), pastikan tanyakan soal garansi dan paket maintenance. Di AFSS, [Maintenance & Support](/#services) tersedia untuk menjaga sistem Anda tetap prima. Butuh info lebih lanjut? [Konsultasi gratis](/#pricing).
+Saat [memilih software house](/blog/cara-memilih-software-house), pastikan tanyakan soal garansi dan paket maintenance. Di AFSS, [Maintenance & Support](/layanan) tersedia untuk menjaga sistem Anda tetap prima. Butuh info lebih lanjut? [Konsultasi gratis](/harga).
 `,
   },
   {
@@ -482,7 +482,7 @@ Banyak UMKM mengandalkan media sosial saja. Itu bagus, tapi tidak cukup. Di 2026
 
 Tidak perlu langsung mahal. Sebuah landing page atau company profile sederhana sudah cukup untuk memulai — dan bisa dikembangkan seiring bisnis tumbuh. Cek kisaran [biaya pembuatan website](/blog/biaya-pembuatan-website).
 
-Siap membawa UMKM Anda online dengan benar? Lihat [layanan kami](/#services) atau [konsultasi gratis](/#pricing).
+Siap membawa UMKM Anda online dengan benar? Lihat [layanan kami](/layanan) atau [konsultasi gratis](/harga).
 `,
   },
 ]
