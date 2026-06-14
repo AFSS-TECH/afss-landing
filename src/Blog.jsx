@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { Head } from 'vite-react-ssg'
 import { motion } from 'framer-motion'
 import { BRAND, waLink } from './data.js'
+import { Icon } from './Icon.jsx'
 import { SITE_URL, getAllPosts, getPost, formatDateId } from './blog.js'
 
 const fadeUp = {
@@ -45,7 +46,7 @@ export function BlogIndex() {
         <div className="hero-glow" />
         <div className="container">
           <motion.div variants={fadeUp} initial="hidden" animate="show">
-            <div className="eyebrow"><i className="fa-solid fa-newspaper" /> Blog</div>
+            <div className="eyebrow"><Icon icon="fa-solid fa-newspaper" /> Blog</div>
             <h1 className="page-title">Wawasan seputar <span className="ital">website &amp; aplikasi</span></h1>
             <p className="page-sub">Panduan praktis soal biaya, timeline, teknologi, dan cara memilih partner digital yang tepat untuk bisnis Anda.</p>
           </motion.div>
@@ -65,7 +66,7 @@ export function BlogIndex() {
                     <div className="blog-meta">{formatDateId(p.date)} · {p.readMinutes} menit baca</div>
                     <h2 className="blog-card-title">{p.title}</h2>
                     <p className="blog-card-excerpt">{p.excerpt}</p>
-                    <span className="blog-readmore">Baca selengkapnya <i className="fa-solid fa-arrow-right" /></span>
+                    <span className="blog-readmore">Baca selengkapnya <Icon icon="fa-solid fa-arrow-right" /></span>
                   </div>
                 </Link>
               </motion.article>
@@ -164,7 +165,7 @@ export function BlogPost() {
             <h3>Punya proyek serupa?</h3>
             <p>Konsultasi gratis, tanpa komitmen. Ceritakan kebutuhan Anda — kami bantu temukan solusi terbaik.</p>
             <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya baru membaca artikel "${post.title}" dan ingin konsultasi.`)} target="_blank" rel="noreferrer">
-              <i className="fa-brands fa-whatsapp" /> Konsultasi Gratis
+              <Icon icon="fa-brands fa-whatsapp" /> Konsultasi Gratis
             </a>
           </div>
         </div>
@@ -182,7 +183,7 @@ export function BlogPost() {
                     <div className="blog-card-body">
                       <div className="blog-meta">{formatDateId(p.date)} · {p.readMinutes} menit baca</div>
                       <h2 className="blog-card-title">{p.title}</h2>
-                      <span className="blog-readmore">Baca selengkapnya <i className="fa-solid fa-arrow-right" /></span>
+                      <span className="blog-readmore">Baca selengkapnya <Icon icon="fa-solid fa-arrow-right" /></span>
                     </div>
                   </Link>
                 </article>
