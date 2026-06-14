@@ -9,6 +9,13 @@ export const BRAND = {
   // NAP (Name · Address · Phone) — penting untuk SEO lokal. Ganti sesuai kantor asli.
   address: 'Medan, Sumatera Utara, Indonesia',
   city: 'Medan',
+  // Isi URL akun sosial media — kosong = ikon tidak ditampilkan
+  social: [
+    { name: 'instagram',  icon: 'fa-brands fa-instagram',   url: '' },
+    { name: 'linkedin',   icon: 'fa-brands fa-linkedin-in', url: '' },
+    { name: 'tiktok',     icon: 'fa-brands fa-tiktok',      url: '' },
+    { name: 'youtube',    icon: 'fa-brands fa-youtube',     url: '' },
+  ],
 }
 
 export const WA = '6281265593904' // ganti dengan nomor WhatsApp asli

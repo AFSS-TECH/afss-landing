@@ -704,8 +704,13 @@ export function Privacy() {
         <title>{title}</title>
         <meta name="description" content={desc} />
         <link rel="canonical" href={`${SITE_URL}/privacy`} />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
         <meta property="og:url" content={`${SITE_URL}/privacy`} />
+        <meta property="og:image" content={`${SITE_URL}/og.png`} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={desc} />
         <meta name="robots" content="noindex" />
       </Head>
 
@@ -782,8 +787,13 @@ export function Terms() {
         <title>{title}</title>
         <meta name="description" content={desc} />
         <link rel="canonical" href={`${SITE_URL}/terms`} />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
         <meta property="og:url" content={`${SITE_URL}/terms`} />
+        <meta property="og:image" content={`${SITE_URL}/og.png`} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={desc} />
         <meta name="robots" content="noindex" />
       </Head>
 

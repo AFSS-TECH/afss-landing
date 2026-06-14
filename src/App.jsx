@@ -770,7 +770,11 @@ function Footer() {
           <p className="ft-legal">{BRAND.legal}</p>
           <p className="ft-desc">Software house terpercaya yang membangun website, aplikasi, dan sistem digital berkualitas tinggi untuk semua skala bisnis di Indonesia. {BRAND.tagline}.</p>
           <div className="ft-social">
-            {['instagram', 'linkedin-in', 'tiktok', 'youtube'].map((s) => <a key={s} href="#" className="soc" aria-label={s}><Icon icon={`fa-brands fa-${s}`} /></a>)}
+            {BRAND.social.filter((s) => s.url).map((s) => (
+              <a key={s.name} href={s.url} className="soc" aria-label={s.name} target="_blank" rel="noreferrer">
+                <Icon icon={s.icon} />
+              </a>
+            ))}
             <a href={waLink(`Halo ${BRAND.short}!`)} target="_blank" rel="noreferrer" className="soc" aria-label="WhatsApp"><Icon icon="fa-brands fa-whatsapp" /></a>
           </div>
         </div>
