@@ -304,6 +304,39 @@ const ILLUSTRATIONS = {
     <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" opacity="0.45">Toko online custom · kode milik Anda</text>
   `,
 
+  'transformasi-digital-bisnis': () => `
+    <!-- Digital network nodes -->
+    <circle cx="910" cy="300" r="54" fill="#FFFFFF" opacity="0.20"/>
+    <text x="910" y="287" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" opacity="0.80">Digital</text>
+    <text x="910" y="307" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" opacity="0.80">Hub</text>
+    <!-- Spoke nodes -->
+    ${[
+      { label: 'Website', x: 760, y: 180 },
+      { label: 'Aplikasi', x: 1060, y: 180 },
+      { label: 'ERP', x: 760, y: 420 },
+      { label: 'Data', x: 1060, y: 420 },
+      { label: 'SEO', x: 690, y: 300 },
+      { label: 'Mobile', x: 1130, y: 300 },
+    ].map(n => `
+      <line x1="${n.x}" y1="${n.y}" x2="910" y2="300" stroke="#FFFFFF" stroke-width="1.5" opacity="0.18"/>
+      <circle cx="${n.x}" cy="${n.y}" r="34" fill="#FFFFFF" opacity="0.14"/>
+      <text x="${n.x}" y="${n.y + 5}" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" opacity="0.70">${esc(n.label)}</text>
+    `).join('')}
+    <!-- Outer ring decoration -->
+    <circle cx="910" cy="300" r="140" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.10" stroke-dasharray="8 6"/>
+    <!-- Progress arrows at bottom -->
+    ${[
+      { x: 670, label: 'Online', pct: 100 },
+      { x: 808, label: 'Otomasi', pct: 70 },
+      { x: 946, label: 'Integrasi', pct: 45 },
+    ].map(b => `
+      <rect x="${b.x}" y="490" width="128" height="18" rx="9" fill="#FFFFFF" opacity="0.10"/>
+      <rect x="${b.x}" y="490" width="${b.pct * 1.28}" height="18" rx="9" fill="#FFFFFF" opacity="0.30"/>
+      <text x="${b.x + 64}" y="503" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" opacity="0.70">${esc(b.label)}</text>
+    `).join('')}
+    <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" opacity="0.45">Mulai transformasi digital bisnis Anda</text>
+  `,
+
   'website-untuk-umkm': () => `
     <!-- Store front -->
     <!-- roof -->
