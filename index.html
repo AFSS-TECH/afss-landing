@@ -37,7 +37,7 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": ["ProfessionalService", "LocalBusiness"],
     "name": "PT Advanced Future Software Solutions",
     "alternateName": "AFSS",
     "description": "Software house: jasa pembuatan website custom, aplikasi mobile Android & iOS, web app, ERP, dan UI/UX design.",
@@ -47,10 +47,16 @@
     "logo": "https://afss.tech/logo.png",
     "priceRange": "Rp",
     "areaServed": "ID",
-    "address": { "@type": "PostalAddress", "addressLocality": "Medan", "addressRegion": "Sumatera Utara", "addressCountry": "ID" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Medan", "addressRegion": "Sumatera Utara", "addressCountry": "ID", "postalCode": "20111" },
+    "geo": { "@type": "GeoCoordinates", "latitude": 3.5952, "longitude": 98.6722 },
+    "hasMap": "https://maps.google.com/?q=Medan,Sumatera+Utara,Indonesia",
+    "openingHours": "Mo-Fr 08:00-17:00",
     "telephone": "+62-813-9694-307",
     "email": "hendrik@afss.id",
-    "sameAs": ["https://instagram.com/afss.tech"],
+    "sameAs": [
+      "https://instagram.com/afss.tech",
+      "https://afss.tech"
+    ],
     "makesOffer": [
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pembuatan Website Custom" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pembuatan Aplikasi Mobile (Android & iOS)" } },
