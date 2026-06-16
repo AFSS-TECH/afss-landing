@@ -5,7 +5,7 @@ import { Head } from 'vite-react-ssg'
 import { Icon } from './Icon.jsx'
 import { BRAND, products, why, showcase, stats, waLink, getProductBySlug, pricing, faqs } from './data.js'
 
-const SITE_URL = 'https://afss-landing.vercel.app'
+const SITE_URL = 'https://afss.tech'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 22, filter: 'blur(6px)' },

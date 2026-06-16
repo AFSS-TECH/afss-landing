@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog AFSS — PT Advanced Future Software Solutions</title>
-    <link>https://afss-landing.vercel.app/blog</link>
-    <atom:link href="https://afss-landing.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
+    <link>https://afss.tech/blog</link>
+    <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
     <lastBuildDate>Tue, 16 Jun 2026 02:05:57 GMT</lastBuildDate>
     <item>
       <title>Keamanan Website: Langkah Penting Melindungi Bisnis Online Anda</title>
-      <link>https://afss-landing.vercel.app/blog/keamanan-website-cyber-security</link>
-      <guid>https://afss-landing.vercel.app/blog/keamanan-website-cyber-security</guid>
+      <link>https://afss.tech/blog/keamanan-website-cyber-security</link>
+      <guid>https://afss.tech/blog/keamanan-website-cyber-security</guid>
       <description>Website yang diretas atau data pelanggan bocor bisa merusak bisnis Anda. Pahami ancaman umum dan fitur keamanan yang harus ada.</description>
       <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
       <category>Keamanan</category>
@@ -19,8 +19,8 @@
     </item>
     <item>
       <title>Transformasi Digital: Panduan Lengkap untuk Bisnis di Indonesia 2026</title>
-      <link>https://afss-landing.vercel.app/blog/transformasi-digital-bisnis</link>
-      <guid>https://afss-landing.vercel.app/blog/transformasi-digital-bisnis</guid>
+      <link>https://afss.tech/blog/transformasi-digital-bisnis</link>
+      <guid>https://afss.tech/blog/transformasi-digital-bisnis</guid>
       <description>Bisnis yang belum bertransformasi digital akan tertinggal. Panduan ini menjelaskan langkah nyata — dari website hingga ERP — untuk memulai transformasi Anda.</description>
       <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
       <category>Transformasi Digital</category>
@@ -29,8 +29,8 @@
     </item>
     <item>
       <title>Jasa Pembuatan Toko Online: Panduan Lengkap untuk Bisnis di Indonesia 2026</title>
-      <link>https://afss-landing.vercel.app/blog/jasa-toko-online</link>
-      <guid>https://afss-landing.vercel.app/blog/jasa-toko-online</guid>
+      <link>https://afss.tech/blog/jasa-toko-online</link>
+      <guid>https://afss.tech/blog/jasa-toko-online</guid>
       <description>Bisnis Anda siap berjualan online? Panduan ini membantu memilih jasa pembuatan toko online yang tepat — dari fitur, platform, hingga biaya.</description>
       <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
       <category>Toko Online</category>
@@ -38,8 +38,8 @@
     </item>
     <item>
       <title>Website Custom vs Template: Mana yang Tepat untuk Bisnis Anda?</title>
-      <link>https://afss-landing.vercel.app/blog/website-custom-vs-template</link>
-      <guid>https://afss-landing.vercel.app/blog/website-custom-vs-template</guid>
+      <link>https://afss.tech/blog/website-custom-vs-template</link>
+      <guid>https://afss.tech/blog/website-custom-vs-template</guid>
       <description>Template lebih murah dan cepat, custom lebih fleksibel dan unik. Mana yang sebaiknya Anda pilih?</description>
       <pubDate>Sun, 14 Jun 2026 00:00:00 GMT</pubDate>
       <category>Website</category>
@@ -47,8 +47,8 @@
     </item>
     <item>
       <title>Berapa Biaya Pembuatan Website di Indonesia? Panduan Lengkap 2026</title>
-      <link>https://afss-landing.vercel.app/blog/biaya-pembuatan-website</link>
-      <guid>https://afss-landing.vercel.app/blog/biaya-pembuatan-website</guid>
+      <link>https://afss.tech/blog/biaya-pembuatan-website</link>
+      <guid>https://afss.tech/blog/biaya-pembuatan-website</guid>
       <description>Berapa sebenarnya biaya membuat website yang profesional? Kami uraikan kisaran harga per jenis website dan faktor yang memengaruhinya.</description>
       <pubDate>Sat, 13 Jun 2026 00:00:00 GMT</pubDate>
       <category>Website</category>
@@ -57,8 +57,8 @@
     </item>
     <item>
       <title>Berapa Lama Proses Pembuatan Aplikasi Mobile? (Android &amp; iOS)</title>
-      <link>https://afss-landing.vercel.app/blog/lama-pembuatan-aplikasi-mobile</link>
-      <guid>https://afss-landing.vercel.app/blog/lama-pembuatan-aplikasi-mobile</guid>
+      <link>https://afss.tech/blog/lama-pembuatan-aplikasi-mobile</link>
+      <guid>https://afss.tech/blog/lama-pembuatan-aplikasi-mobile</guid>
       <description>Dari ide sampai aplikasi tayang di Play Store — berapa lama prosesnya, dan apa saja yang menentukan durasinya?</description>
       <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
       <category>Aplikasi Mobile</category>
@@ -66,8 +66,8 @@
     </item>
     <item>
       <title>Cara Memilih Software House yang Tepat untuk Bisnis Anda</title>
-      <link>https://afss-landing.vercel.app/blog/cara-memilih-software-house</link>
-      <guid>https://afss-landing.vercel.app/blog/cara-memilih-software-house</guid>
+      <link>https://afss.tech/blog/cara-memilih-software-house</link>
+      <guid>https://afss.tech/blog/cara-memilih-software-house</guid>
       <description>Salah pilih vendor bisa membuat proyek molor, mahal, dan menyusahkan. Berikut cara memilih software house yang tepat.</description>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <category>Software House</category>
@@ -75,8 +75,8 @@
     </item>
     <item>
       <title>Kenapa Website Bisnis Harus SEO-Friendly Sejak Awal</title>
-      <link>https://afss-landing.vercel.app/blog/website-seo-friendly</link>
-      <guid>https://afss-landing.vercel.app/blog/website-seo-friendly</guid>
+      <link>https://afss.tech/blog/website-seo-friendly</link>
+      <guid>https://afss.tech/blog/website-seo-friendly</guid>
       <description>Website cantik tapi tidak muncul di Google sama saja tidak ada. Inilah kenapa SEO harus dibangun sejak awal.</description>
       <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
       <category>SEO</category>
@@ -84,8 +84,8 @@
     </item>
     <item>
       <title>Apa Itu ERP? Panduan Sistem ERP untuk Perusahaan di Indonesia</title>
-      <link>https://afss-landing.vercel.app/blog/apa-itu-erp</link>
-      <guid>https://afss-landing.vercel.app/blog/apa-itu-erp</guid>
+      <link>https://afss.tech/blog/apa-itu-erp</link>
+      <guid>https://afss.tech/blog/apa-itu-erp</guid>
       <description>ERP menyatukan keuangan, inventory, dan HR dalam satu sistem. Apakah bisnis Anda sudah membutuhkannya?</description>
       <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
       <category>ERP</category>
@@ -93,8 +93,8 @@
     </item>
     <item>
       <title>7 Tips Meningkatkan Konversi Landing Page</title>
-      <link>https://afss-landing.vercel.app/blog/tips-meningkatkan-konversi-landing-page</link>
-      <guid>https://afss-landing.vercel.app/blog/tips-meningkatkan-konversi-landing-page</guid>
+      <link>https://afss.tech/blog/tips-meningkatkan-konversi-landing-page</link>
+      <guid>https://afss.tech/blog/tips-meningkatkan-konversi-landing-page</guid>
       <description>Trafik banyak tapi sedikit yang menghubungi? Tujuh tips ini membantu landing page Anda mengubah pengunjung jadi pelanggan.</description>
       <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
       <category>Landing Page</category>
@@ -102,8 +102,8 @@
     </item>
     <item>
       <title>Beda Website, Web App, dan Aplikasi Mobile — Mana yang Anda Butuhkan?</title>
-      <link>https://afss-landing.vercel.app/blog/beda-website-webapp-aplikasi-mobile</link>
-      <guid>https://afss-landing.vercel.app/blog/beda-website-webapp-aplikasi-mobile</guid>
+      <link>https://afss.tech/blog/beda-website-webapp-aplikasi-mobile</link>
+      <guid>https://afss.tech/blog/beda-website-webapp-aplikasi-mobile</guid>
       <description>Istilah ini sering tertukar. Pahami bedanya agar Anda tidak salah investasi membangun produk digital.</description>
       <pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate>
       <category>Website</category>
@@ -111,8 +111,8 @@
     </item>
     <item>
       <title>Apa Itu Company Profile Website dan Kenapa Bisnis Butuh?</title>
-      <link>https://afss-landing.vercel.app/blog/company-profile-website</link>
-      <guid>https://afss-landing.vercel.app/blog/company-profile-website</guid>
+      <link>https://afss.tech/blog/company-profile-website</link>
+      <guid>https://afss.tech/blog/company-profile-website</guid>
       <description>Di era digital, calon klien mengecek perusahaan Anda online sebelum memutuskan. Inilah peran company profile website.</description>
       <pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate>
       <category>Website</category>
@@ -120,8 +120,8 @@
     </item>
     <item>
       <title>Maintenance Website: Kenapa Penting dan Apa Saja yang Dikerjakan</title>
-      <link>https://afss-landing.vercel.app/blog/pentingnya-maintenance-website</link>
-      <guid>https://afss-landing.vercel.app/blog/pentingnya-maintenance-website</guid>
+      <link>https://afss.tech/blog/pentingnya-maintenance-website</link>
+      <guid>https://afss.tech/blog/pentingnya-maintenance-website</guid>
       <description>Peluncuran bukan akhir. Tanpa maintenance, website bisa lambat, rentan diretas, dan ketinggalan zaman.</description>
       <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
       <category>Maintenance</category>
@@ -129,8 +129,8 @@
     </item>
     <item>
       <title>Kenapa UMKM Wajib Punya Website di 2026</title>
-      <link>https://afss-landing.vercel.app/blog/website-untuk-umkm</link>
-      <guid>https://afss-landing.vercel.app/blog/website-untuk-umkm</guid>
+      <link>https://afss.tech/blog/website-untuk-umkm</link>
+      <guid>https://afss.tech/blog/website-untuk-umkm</guid>
       <description>Media sosial saja tidak cukup. Website memberi UMKM kredibilitas, kontrol, dan peluang ditemukan di Google.</description>
       <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
       <category>UMKM</category>

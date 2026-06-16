@@ -720,17 +720,17 @@ export function Home() {
       <Head>
         <title>Jasa Pembuatan Website & Aplikasi Custom | AFSS</title>
         <meta name="description" content="AFSS — software house Indonesia. Jasa pembuatan website custom, aplikasi mobile Android & iOS, web app & ERP. Cepat, SEO-ready, kode milik Anda." />
-        <link rel="canonical" href="https://afss-landing.vercel.app/" />
+        <link rel="canonical" href="https://afss.tech/" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://afss-landing.vercel.app/" />
+        <meta property="og:url" content="https://afss.tech/" />
         <meta property="og:title" content="Jasa Pembuatan Website & Aplikasi Custom | AFSS" />
         <meta property="og:description" content="Bangun website & aplikasi custom sesuai kebutuhan bisnis Anda. Cepat, SEO-ready, kode milik Anda. Konsultasi gratis." />
         <meta name="twitter:title" content="Jasa Pembuatan Website & Aplikasi Custom | AFSS" />
         <meta name="twitter:description" content="Bangun website & aplikasi custom sesuai kebutuhan bisnis Anda. Cepat, SEO-ready, kode milik Anda." />
-        <meta property="og:image" content="https://afss-landing.vercel.app/og.png" />
+        <meta property="og:image" content="https://afss.tech/og.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta name="twitter:image" content="https://afss-landing.vercel.app/og.png" />
+        <meta name="twitter:image" content="https://afss.tech/og.png" />
       </Head>
       <Hero reduce={reduce} parallax={parallax} />
       <StatsBand />

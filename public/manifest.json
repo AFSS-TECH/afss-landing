@@ -1,0 +1,14 @@
+{
+  "name": "AFSS — Advanced Future Software Solutions",
+  "short_name": "AFSS",
+  "description": "Jasa pembuatan website custom, aplikasi mobile, dan sistem digital untuk bisnis di Indonesia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#15243B",
+  "theme_color": "#15243B",
+  "lang": "id-ID",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" },
+    { "src": "/logo.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

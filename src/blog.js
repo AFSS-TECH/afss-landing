@@ -2,7 +2,7 @@
 // Tambah post baru = tambahkan objek ke array ini + entri di public/sitemap.xml.
 // Body ditulis dalam Markdown (dirender via `marked`).
 
-export const SITE_URL = 'https://afss-landing.vercel.app'
+export const SITE_URL = 'https://afss.tech'
 
 export const posts = [
   {
