@@ -3,6 +3,8 @@
    Luxury Light · navy ink + teal accent · editorial software studio
    ════════════════════════════════════════════════ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+.skip-link:focus { position: fixed; top: 12px; left: 12px; z-index: 9999; width: auto; height: auto; padding: 8px 16px; background: var(--teal); color: #fff; font-weight: 700; border-radius: 6px; outline: none; }
 
 :root {
   /* warm paper neutrals (complements the navy + teal brand) */
@@ -284,7 +286,7 @@ section { padding: 110px 24px; position: relative; }
 .proc-card { position: relative; background: var(--surface); border-radius: var(--r); padding: 32px 26px; box-shadow: var(--shadow-sm); }
 .proc-step { font-size: 2.6rem; font-weight: 800; font-family: 'Plus Jakarta Sans'; line-height: 1; -webkit-text-stroke: 1.4px var(--line-2); -webkit-text-fill-color: transparent; position: absolute; top: 20px; right: 22px; }
 .proc-ico { width: 50px; height: 50px; border-radius: 14px; display: grid; place-items: center; font-size: 1.2rem; color: #fff; background: var(--ink); margin-bottom: 20px; }
-.proc-card h4 { font-size: 1.1rem; font-weight: 800; margin-bottom: 9px; }
+.proc-card h4, .proc-title { font-size: 1.1rem; font-weight: 800; margin-bottom: 9px; }
 .proc-card p { color: var(--muted); font-size: .88rem; line-height: 1.65; margin-bottom: 18px; }
 .proc-pay { display: inline-flex; align-items: center; gap: 7px; font-size: .74rem; font-weight: 600; color: var(--accent); background: var(--accent-l); padding: 6px 13px; border-radius: 50px; }
 .proc-note { text-align: center; margin-top: 40px; color: var(--ink-2); font-size: 1rem; }

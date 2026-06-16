@@ -111,7 +111,7 @@ const Logo = ({ footer }) => footer
       <span className="logo-word">AFSS</span>
     </div>
   )
-  : <img src="/logo.png" alt="AFSS" className="logo-img" />
+  : <img src="/logo.png" alt="AFSS" className="logo-img" width="120" height="40" />
 
 /* ════════════════════════════════════════════════ ANIMATED AREA CHART (the motion graph) */
 function smoothPath(pts) {
@@ -480,7 +480,7 @@ function Process() {
             <motion.div className="proc-card spot" key={s.step} variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 300, damping: 24 }} onMouseMove={onSpot}>
               <span className="proc-step">{s.step}</span>
               <div className="proc-ico"><Icon icon={s.icon} /></div>
-              <h4>{s.title}</h4>
+              <h3 className="proc-title">{s.title}</h3>
               <p>{s.desc}</p>
             </motion.div>
           ))}
@@ -697,10 +697,13 @@ export function Layout() {
   return (
     <>
       <ScrollToTop />
+      <a href="#main-content" className="skip-link">Langsung ke konten</a>
       <div className="grain" aria-hidden="true" />
       <motion.div className="progress" style={{ scaleX: scrollYProgress }} />
       <Nav />
-      <Outlet />
+      <main id="main-content">
+        <Outlet />
+      </main>
       <Footer />
       <motion.a className="float-wa" href={waLink(`Halo ${BRAND.short}, saya ingin bertanya.`)} target="_blank" rel="noreferrer" title="Chat WhatsApp"
         animate={reduce ? {} : { y: [0, -7, 0] }} transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }} whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.92 }}>
