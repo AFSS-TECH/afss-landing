@@ -77,7 +77,7 @@ export const products = [
   },
   {
     slug: 'jasa-pembuatan-landing-page',
-    icon: 'fa-solid fa-rectangle-ad',
+    icon: 'fa-solid fa-layer-group',
     name: 'Jasa Pembuatan Landing Page',
     desc: 'Landing page konversi tinggi untuk iklan, produk, atau kampanye pemasaran — dioptimasi agar pengunjung jadi pelanggan.',
     metric: 'Konversi tinggi',
@@ -86,7 +86,7 @@ export const products = [
   },
   {
     slug: 'jasa-pembuatan-company-profile',
-    icon: 'fa-solid fa-building',
+    icon: 'fa-solid fa-briefcase',
     name: 'Jasa Pembuatan Company Profile Website',
     desc: 'Website company profile profesional yang membangun kepercayaan, menampilkan layanan, dan mengundang calon klien menghubungi Anda.',
     metric: 'Profesional & kredibel',
@@ -95,7 +95,7 @@ export const products = [
   },
   {
     slug: 'jasa-pembuatan-toko-online',
-    icon: 'fa-solid fa-cart-shopping',
+    icon: 'fa-solid fa-tags',
     name: 'Jasa Pembuatan Toko Online',
     desc: 'Toko online custom dengan fitur lengkap: katalog produk, keranjang belanja, pembayaran, dan manajemen pesanan.',
     metric: 'Siap berjualan',
@@ -104,7 +104,7 @@ export const products = [
   },
   {
     slug: 'jasa-pembuatan-erp',
-    icon: 'fa-solid fa-diagram-project',
+    icon: 'fa-solid fa-circle-nodes',
     name: 'Jasa Pembuatan Sistem ERP Custom',
     desc: 'Sistem ERP yang dibangun sesuai alur kerja bisnis Anda — menyatukan keuangan, inventory, SDM, dan operasional dalam satu platform.',
     metric: 'Efisiensi operasional',
@@ -113,7 +113,7 @@ export const products = [
   },
   {
     slug: 'jasa-pembuatan-dashboard',
-    icon: 'fa-solid fa-gauge',
+    icon: 'fa-solid fa-gauge-high',
     name: 'Jasa Pembuatan Dashboard Bisnis',
     desc: 'Dashboard analitik dan sistem manajemen internal yang menampilkan data bisnis secara real-time untuk keputusan yang lebih cepat.',
     metric: 'Data real-time',
