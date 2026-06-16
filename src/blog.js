@@ -688,6 +688,113 @@ Tidak perlu langsung mahal. Sebuah landing page atau company profile sederhana s
 Siap membawa UMKM Anda online dengan benar? Lihat [layanan kami](/layanan) atau [konsultasi gratis](/harga).
 `,
   },
+  {
+    slug: 'keamanan-website-cyber-security',
+    title: 'Keamanan Website: Langkah Penting Melindungi Bisnis Online Anda',
+    description:
+      'Panduan keamanan website untuk bisnis — ancaman yang ada, fitur keamanan wajib, dan cara menjaga data pelanggan tetap aman.',
+    date: '2026-06-16',
+    readMinutes: 8,
+    tags: ['Keamanan', 'Website', 'Teknologi'],
+    c: '#15243B',
+    c2: '#0E5E78',
+    excerpt:
+      'Website yang diretas atau data pelanggan bocor bisa merusak bisnis Anda. Pahami ancaman umum dan fitur keamanan yang harus ada.',
+    body: `
+Di era digital, keamanan website bukan lagi pilihan — ini **keharusan**. Satu celah keamanan bisa merugikan bisnis Anda: data hilang, pelanggan tidak percaya, atau bahkan kena denda regulasi. Artikel ini menjelaskan ancaman umum dan bagaimana melindungi website Anda.
+
+## Ancaman keamanan website yang umum
+
+### 1. SQL Injection
+Penyerang memasukkan kode SQL berbahaya melalui form input untuk mengakses atau merusak database. **Solusi:** Gunakan prepared statements dan validasi input yang ketat.
+
+### 2. Cross-Site Scripting (XSS)
+Kode JavaScript berbahaya dimasukkan ke website untuk mencuri data pengunjung atau merusak tampilan. **Solusi:** Sanitasi semua input pengguna sebelum ditampilkan.
+
+### 3. Brute Force Attack
+Penyerang mencoba ribuan kombinasi password untuk masuk ke akun admin. **Solusi:** Gunakan login yang kuat, rate limiting, dan two-factor authentication (2FA).
+
+### 4. DDoS (Distributed Denial of Service)
+Website diserang dengan traffic masif sehingga tidak bisa diakses. **Solusi:** Gunakan CDN dan layanan DDoS protection seperti Cloudflare.
+
+### 5. Man-in-the-Middle (MITM)
+Penyerang mencuri data yang dikirim antara browser dan server. **Solusi:** Selalu gunakan HTTPS (SSL/TLS encryption).
+
+### 6. Malware & Backdoor
+Kode berbahaya dimasukkan ke website yang memungkinkan akses tanpa izin. **Solusi:** Update sistem rutin, gunakan Web Application Firewall (WAF), dan monitoring aktif.
+
+## Fitur keamanan yang wajib ada
+
+### 1. HTTPS / SSL Certificate
+Semua komunikasi antara pengguna dan website harus terenkripsi. Tidak ada alasan untuk tidak punya SSL di 2026 — gratisnya sudah tersedia.
+
+### 2. Autentikasi yang Kuat
+- Password minimal 12 karakter dengan kombinasi huruf, angka, dan simbol.
+- Two-Factor Authentication (2FA) — khususnya untuk akun admin.
+- Session timeout otomatis untuk login yang lama.
+
+### 3. Validasi & Sanitasi Input
+Semua data dari form harus divalidasi dan dibersihkan sebelum disimpan ke database. Jangan pernah percaya input pengguna.
+
+### 4. Rate Limiting
+Batasi jumlah request per IP dalam waktu tertentu untuk mencegah brute force dan DDoS.
+
+### 5. Logging & Monitoring
+Catat semua aktivitas login, perubahan data, dan error. Monitor 24/7 untuk mendeteksi aktivitas mencurigakan.
+
+### 6. Backup Berkala
+Backup database dan file secara rutin — minimal harian. Simpan di lokasi terpisah dari server utama.
+
+### 7. Update & Patching
+Update sistem operasi, framework, dan dependencies secara rutin. Celah keamanan baru terus ditemukan — update adalah pertahanan pertama.
+
+### 8. Web Application Firewall (WAF)
+Firewall khusus yang melindungi aplikasi web dari serangan umum — seperti SQL Injection dan XSS. Cloudflare atau ModSecurity adalah contohnya.
+
+## Compliance & Regulasi
+
+Jika website Anda mengelola data pelanggan, Anda mungkin terikat regulasi:
+
+- **GDPR** (Eropa) — melindungi data pribadi EU residents.
+- **CCPA** (California) — hak privasi konsumen.
+- **PDP Act** (Indonesia) — perlindungan data pribadi pengguna Indonesia.
+
+Pelanggaran bisa mengakibatkan denda besar. Pastikan tanyakan soal compliance saat [memilih software house](/blog/cara-memilih-software-house).
+
+## Langkah konkret menjaga keamanan website
+
+1. **Audit keamanan** — cek website Anda dengan tools seperti OWASP ZAP atau Burp Suite.
+2. **Penetration testing** — minta tim keamanan mencoba "hack" website Anda untuk menemukan celah.
+3. **Security headers** — implementasikan X-Frame-Options, Content-Security-Policy, dll.
+4. **Monitoring aktif** — gunakan layanan monitoring untuk alert kalau ada aktivitas aneh.
+5. **Incident response plan** — siapkan rencana jika terjadi serangan (siapa yang dihubungi, langkah apa yang diambil).
+6. **Training tim** — ajari tim cara recogn phishing dan praktik keamanan baik.
+
+## Tools & Layanan Keamanan
+
+- **SSL Certificate:** Let's Encrypt (gratis), Sectigo, DigiCert.
+- **WAF:** Cloudflare, AWS WAF, ModSecurity.
+- **Monitoring:** Uptime Robot, Datadog, New Relic.
+- **Backup:** AWS S3, Google Cloud Storage, Backblaze.
+- **Vulnerability Scanning:** OWASP ZAP, Nessus, Burp Suite Community.
+
+## Cost vs Risk
+
+"Keamanan mahal!" — mungkin terdengar begitu. Tapi biaya mencegah serangan jauh lebih murah daripada membersihkan setelah sistem diretas. Satu insiden bisa mengakibatkan:
+- Kehilangan data pelanggan.
+- Downtime yang merugikan.
+- Reputation damage yang sulit dipulihkan.
+- Biaya forensik dan remediation yang besar.
+
+Investasi keamanan di awal jauh lebih bijak.
+
+## Kesimpulan
+
+Keamanan website bukan tugas sekali jadi — ini upaya berkelanjutan. Update, monitor, test, dan improve terus-menerus. Saat [memilih partner teknologi](/blog/cara-memilih-software-house), pastikan mereka memahami dan prioritaskan keamanan sejak awal — bukan menambahkannya belakangan sebagai "fitur ekstra".
+
+Ingin website yang aman dan compliant? Lihat [layanan kami](/layanan) atau [konsultasi gratis](/harga) untuk membahas keamanan spesifik bisnis Anda.
+`,
+  },
 ]
 
 export const getAllPosts = () =>
