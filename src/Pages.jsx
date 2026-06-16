@@ -129,12 +129,120 @@ const SERVICE_CONTENT = {
     ],
     relatedSlugs: ['pembuatan-website', 'web-app'],
   },
+  'jasa-pembuatan-landing-page': {
+    headline: 'Jasa Pembuatan Landing Page Konversi Tinggi',
+    subline: 'Landing page yang dirancang khusus untuk mengubah pengunjung iklan menjadi pelanggan — cepat, persuasif, dan terukur.',
+    longDesc: 'Landing page bukan sekadar halaman web biasa. Ia adalah ujung tombak kampanye iklan Anda — satu halaman yang harus meyakinkan pengunjung dalam hitungan detik. AFSS merancang landing page dengan pendekatan konversi: copywriting persuasif, desain yang fokus pada CTA, dan kecepatan loading di bawah 2 detik.',
+    benefits: [
+      { icon: 'fa-solid fa-bullseye', title: 'Fokus Satu Tujuan', desc: 'Tidak ada distraksi. Setiap elemen landing page diarahkan untuk mendorong satu aksi: hubungi, beli, atau daftar.' },
+      { icon: 'fa-solid fa-gauge-high', title: 'Loading < 2 Detik', desc: 'Setiap detik keterlambatan menurunkan konversi 7%. Landing page kami dioptimasi untuk kecepatan maksimal.' },
+      { icon: 'fa-solid fa-mobile-screen', title: 'Mobile-First', desc: 'Lebih dari 70% trafik iklan datang dari HP. Desain kami prioritaskan mobile tanpa mengorbankan desktop.' },
+      { icon: 'fa-solid fa-chart-bar', title: 'Tracking & Analytics', desc: 'Integrasi Google Analytics, Meta Pixel, dan konversi event untuk mengukur ROI kampanye Anda secara akurat.' },
+    ],
+    serviceFaq: [
+      { q: 'Berapa harga landing page?', a: 'Landing page mulai dari Rp 1 juta untuk desain sederhana. Dengan fitur tambahan (form, animasi, tracking) mulai Rp 2–5 juta. Estimasi pasti diberikan setelah konsultasi.' },
+      { q: 'Berapa lama pengerjaannya?', a: 'Landing page standar selesai 3–7 hari kerja. Dengan revisi dan approval konten, biasanya 1–2 minggu total.' },
+      { q: 'Apakah termasuk copywriting?', a: 'Bisa. Kami menawarkan paket dengan copywriting persuasif berbasis riset kompetitor dan target audiens Anda.' },
+      { q: 'Apakah bisa dihubungkan ke iklan Meta/Google?', a: 'Ya. Kami pasang tracking pixel, konversi event, dan pastikan URL landing page siap dipakai di campaign iklan berbayar.' },
+    ],
+    relatedSlugs: ['jasa-pembuatan-company-profile', 'pembuatan-website'],
+  },
+  'jasa-pembuatan-company-profile': {
+    headline: 'Jasa Pembuatan Company Profile Website Profesional',
+    subline: 'Website company profile yang membangun kepercayaan, menampilkan layanan bisnis Anda, dan mengundang calon klien untuk menghubungi Anda.',
+    longDesc: 'Di era digital, calon klien mengecek website perusahaan Anda sebelum memutuskan untuk bekerja sama. Company profile website yang baik adalah representasi digital terbaik bisnis Anda — menampilkan kredibilitas, layanan, tim, dan cara menghubungi Anda dengan jelas dan profesional.',
+    benefits: [
+      { icon: 'fa-solid fa-building', title: 'Desain Corporate Modern', desc: 'Tampilan profesional yang mencerminkan identitas brand Anda — dipercaya oleh calon klien sejak kunjungan pertama.' },
+      { icon: 'fa-solid fa-magnifying-glass', title: 'SEO Lokal Optimasi', desc: 'Dioptimasi agar muncul di Google saat calon klien mencari bisnis seperti Anda di kota atau industri Anda.' },
+      { icon: 'fa-solid fa-layer-group', title: 'Multi-Halaman Lengkap', desc: 'Beranda, Tentang Kami, Layanan/Produk, Portofolio, dan Kontak — struktur yang lengkap dan mudah dinavigasi.' },
+      { icon: 'fa-solid fa-pen-to-square', title: 'Mudah Diperbarui', desc: 'Sistem manajemen konten sederhana agar Anda bisa memperbarui berita, portofolio, dan informasi tanpa developer.' },
+    ],
+    serviceFaq: [
+      { q: 'Berapa halaman yang termasuk?', a: 'Paket standar mencakup 5–7 halaman utama. Halaman tambahan (blog, galeri, karir) bisa ditambahkan sesuai kebutuhan.' },
+      { q: 'Apakah ada versi bahasa Inggris?', a: 'Bisa dibuat bilingual (Indonesia & Inggris). Kami tambahkan fitur ganti bahasa dengan biaya tambahan yang terjangkau.' },
+      { q: 'Berapa lama pengerjaan company profile website?', a: 'Umumnya 2–4 minggu termasuk desain, development, dan revisi. Timeline pasti disepakati di awal.' },
+      { q: 'Apakah termasuk foto dan konten?', a: 'Kami bisa membantu menyiapkan template konten. Foto perusahaan disiapkan oleh Anda, atau kami bisa rekomendasikan fotografer.' },
+    ],
+    relatedSlugs: ['jasa-pembuatan-landing-page', 'pembuatan-website'],
+  },
+  'jasa-pembuatan-toko-online': {
+    headline: 'Jasa Pembuatan Toko Online Custom',
+    subline: 'Toko online dengan fitur lengkap — katalog, keranjang, pembayaran, dan manajemen pesanan — dibangun sesuai kebutuhan bisnis Anda.',
+    longDesc: 'Toko online yang baik bukan sekadar memindahkan produk ke internet. Ia harus meyakinkan pembeli, memudahkan transaksi, dan memberikan pengalaman belanja yang menyenangkan. AFSS membangun toko online custom dengan payment gateway Indonesia, manajemen produk yang mudah, dan desain yang mendorong penjualan.',
+    benefits: [
+      { icon: 'fa-solid fa-credit-card', title: 'Payment Gateway Lengkap', desc: 'Integrasi Midtrans atau Xendit untuk transfer bank, QRIS, kartu kredit, dan dompet digital seperti GoPay & OVO.' },
+      { icon: 'fa-solid fa-boxes-stacked', title: 'Manajemen Produk & Stok', desc: 'Tambah, edit, dan kelola ribuan produk dengan mudah. Stok otomatis berkurang saat ada pesanan masuk.' },
+      { icon: 'fa-solid fa-truck', title: 'Kalkulasi Ongkir Otomatis', desc: 'Integrasi JNE, J&T, SiCepat, dan kurir lain dengan kalkulasi ongkos kirim otomatis berdasarkan berat dan lokasi.' },
+      { icon: 'fa-solid fa-chart-line', title: 'Dashboard Penjualan', desc: 'Pantau omzet, pesanan masuk, produk terlaris, dan performa toko dalam satu dashboard yang mudah dipahami.' },
+    ],
+    serviceFaq: [
+      { q: 'Lebih baik custom atau pakai platform (Shopify/WooCommerce)?', a: 'Platform lebih cepat dan murah untuk toko sederhana. Custom lebih fleksibel untuk kebutuhan unik, integrasi sistem, atau volume tinggi. Kami bantu memilih yang paling sesuai.' },
+      { q: 'Apakah bisa impor produk massal?', a: 'Ya. Kami siapkan fitur import produk via Excel/CSV sehingga Anda tidak perlu input satu per satu.' },
+      { q: 'Berapa biaya pembuatan toko online?', a: 'Mulai dari Rp 5 juta untuk fitur dasar. Toko dengan fitur lengkap (multi-seller, langganan) mulai Rp 15 juta. Estimasi pasti setelah konsultasi.' },
+      { q: 'Apakah bisa terkoneksi ke Tokopedia/Shopee?', a: 'Bisa. Kami integrasikan dengan marketplace via API untuk sinkronisasi stok dan pesanan dari berbagai channel penjualan.' },
+    ],
+    relatedSlugs: ['jasa-pembuatan-dashboard', 'web-app'],
+  },
+  'jasa-pembuatan-erp': {
+    headline: 'Jasa Pembuatan Sistem ERP Custom untuk Bisnis',
+    subline: 'ERP yang dibangun sesuai alur kerja bisnis Anda — bukan dipaksakan ke template generik — menyatukan seluruh operasional dalam satu platform.',
+    longDesc: 'ERP (Enterprise Resource Planning) mengintegrasikan semua departemen bisnis Anda: keuangan, inventory, SDM, produksi, dan penjualan — dalam satu platform terpusat. AFSS membangun ERP custom yang benar-benar sesuai dengan proses bisnis Anda, bukan solusi generik yang memaksa Anda mengubah cara kerja.',
+    benefits: [
+      { icon: 'fa-solid fa-coins', title: 'Modul Keuangan & Akuntansi', desc: 'Pembukuan, faktur, laporan laba-rugi, dan arus kas — semua tercatat otomatis dan akurat.' },
+      { icon: 'fa-solid fa-warehouse', title: 'Manajemen Inventory & Gudang', desc: 'Stok real-time, mutasi barang, dan peringatan stok minimum agar tidak ada kehabisan atau kelebihan stok.' },
+      { icon: 'fa-solid fa-users', title: 'HR & Penggajian', desc: 'Data karyawan, absensi, perhitungan gaji, dan slip gaji otomatis — terintegrasi dengan BPJS dan PPh 21.' },
+      { icon: 'fa-solid fa-file-chart-column', title: 'Laporan Manajemen', desc: 'Dashboard eksekutif dengan KPI utama bisnis Anda — bisa diakses kapan saja, dari perangkat apa pun.' },
+    ],
+    serviceFaq: [
+      { q: 'Berapa lama implementasi ERP?', a: 'ERP sederhana (1–3 modul) biasanya 8–12 minggu. ERP lengkap bisa 4–6 bulan termasuk migrasi data dan training tim.' },
+      { q: 'Apakah bisa integrasi dengan sistem yang sudah ada?', a: 'Ya. Kami evaluasi sistem existing Anda dan buat jembatan integrasi agar data tidak perlu diinput dua kali.' },
+      { q: 'Berapa biaya ERP custom?', a: 'Mulai dari Rp 30 juta untuk 2–3 modul dasar. Estimasi akurat diberikan setelah discovery session karena setiap bisnis berbeda.' },
+      { q: 'Apakah ada training untuk tim kami?', a: 'Ya. Setiap proyek ERP mencakup sesi training lengkap dan dokumentasi user manual agar tim Anda mandiri mengoperasikan sistem.' },
+    ],
+    relatedSlugs: ['jasa-pembuatan-dashboard', 'web-app'],
+  },
+  'jasa-pembuatan-dashboard': {
+    headline: 'Jasa Pembuatan Dashboard Bisnis & Sistem Manajemen',
+    subline: 'Dashboard analitik yang menampilkan data bisnis real-time — untuk pengambilan keputusan yang lebih cepat dan akurat.',
+    longDesc: 'Data bisnis yang tersebar di spreadsheet dan email membuat pengambilan keputusan lambat dan rawan kesalahan. Dashboard bisnis yang baik mengumpulkan semua data penting dalam satu tampilan terpusat — bisa diakses kapan saja, dari mana saja, oleh tim yang berwenang.',
+    benefits: [
+      { icon: 'fa-solid fa-chart-pie', title: 'Visualisasi Data Interaktif', desc: 'Grafik, tabel, dan metrik utama yang mudah dipahami — bukan spreadsheet yang membingungkan.' },
+      { icon: 'fa-solid fa-shield-halved', title: 'Multi-User & Role Access', desc: 'Setiap departemen dan jabatan melihat data yang relevan dengan hak akses yang sesuai wewenangnya.' },
+      { icon: 'fa-solid fa-file-export', title: 'Export Laporan Otomatis', desc: 'Laporan harian, mingguan, atau bulanan bisa diexport ke Excel atau PDF dengan satu klik, atau dikirim otomatis via email.' },
+      { icon: 'fa-solid fa-plug', title: 'Integrasi Sumber Data', desc: 'Tarik data dari database Anda, Google Sheets, API eksternal, atau sistem akuntansi yang sudah dipakai.' },
+    ],
+    serviceFaq: [
+      { q: 'Apa bedanya dashboard dengan ERP?', a: 'Dashboard fokus pada visualisasi dan monitoring data. ERP lebih luas — mencakup input transaksi, proses bisnis, dan alur kerja antar departemen.' },
+      { q: 'Berapa lama pengerjaan dashboard?', a: 'Dashboard sederhana (5–10 metrik) bisa selesai 2–4 minggu. Dashboard kompleks dengan banyak sumber data 4–8 minggu.' },
+      { q: 'Apakah bisa diakses dari HP?', a: 'Ya. Semua dashboard kami dibangun responsive — bisa diakses dari desktop, tablet, maupun smartphone tanpa install aplikasi.' },
+      { q: 'Berapa biaya pembuatan dashboard?', a: 'Mulai dari Rp 4 juta untuk dashboard sederhana. Dashboard kompleks dengan integrasi banyak sistem mulai Rp 15 juta.' },
+    ],
+    relatedSlugs: ['jasa-pembuatan-erp', 'web-app'],
+  },
+  'jasa-pembuatan-website-medan': {
+    headline: 'Jasa Pembuatan Website Medan — Software House Lokal Sumatera Utara',
+    subline: 'Tim developer lokal Medan yang memahami kebutuhan bisnis Sumatera Utara — website, aplikasi, dan sistem digital dengan komunikasi langsung.',
+    longDesc: 'AFSS adalah software house yang berbasis di Medan, Sumatera Utara. Kami melayani bisnis lokal Medan dan seluruh Indonesia dengan keunggulan komunikasi tatap muka, pemahaman pasar lokal, dan harga yang kompetitif. Dari UMKM Medan hingga perusahaan menengah Sumut — kami hadir untuk membantu digitalisasi bisnis Anda.',
+    benefits: [
+      { icon: 'fa-solid fa-location-dot', title: 'Tim Lokal, Konsultasi Tatap Muka', desc: 'Kami di Medan. Bisa bertemu langsung untuk diskusi kebutuhan, presentasi desain, atau training penggunaan sistem.' },
+      { icon: 'fa-solid fa-handshake', title: 'Paham Pasar Lokal Sumut', desc: 'Kami mengerti konteks bisnis Medan — perilaku konsumen lokal hingga kebutuhan industri unggulan Sumatera Utara.' },
+      { icon: 'fa-solid fa-clock', title: 'Respons Cepat, Zona Waktu Sama', desc: 'Tidak ada beda waktu. Chat, telepon, atau meeting bisa dilakukan di jam kerja yang sama dengan tim Anda.' },
+      { icon: 'fa-solid fa-tag', title: 'Harga Kompetitif', desc: 'Tanpa biaya jarak atau overhead kantor kota besar. Kualitas Jakarta, harga ramah bisnis lokal Medan.' },
+    ],
+    serviceFaq: [
+      { q: 'Apakah AFSS hanya melayani bisnis di Medan?', a: 'Tidak. Kami melayani klien di seluruh Indonesia secara remote. Namun untuk bisnis di Medan & Sumut, kami bisa konsultasi tatap muka.' },
+      { q: 'Layanan apa saja yang tersedia di Medan?', a: 'Semua layanan: website custom, landing page, company profile, aplikasi mobile, web app, dashboard, ERP, dan maintenance.' },
+      { q: 'Berapa harga jasa website di Medan?', a: 'Landing page mulai Rp 1 juta, company profile mulai Rp 3 juta, toko online mulai Rp 5 juta, web app mulai Rp 4 juta. Konsultasi gratis untuk estimasi akurat.' },
+      { q: 'Bisa minta portofolio proyek bisnis Medan?', a: 'Ya. Hubungi kami via WhatsApp dan kami akan bagikan portofolio proyek yang relevan dengan industri Anda.' },
+    ],
+    relatedSlugs: ['pembuatan-website', 'jasa-pembuatan-company-profile'],
+  },
 }
 
 /* ══════════════════════════════════════════════════ LAYANAN INDEX (/layanan) */
 export function LayananIndex() {
-  const title = 'Layanan AFSS — Jasa Website, Aplikasi, & Sistem Digital'
-  const desc = 'Daftar lengkap layanan AFSS: pembuatan website custom, aplikasi mobile Android & iOS, web app, UI/UX design, dan maintenance. Konsultasi gratis.'
+  const title = 'Layanan AFSS — Jasa Website, Aplikasi Mobile, Dashboard & ERP'
+  const desc = 'Jasa pembuatan website custom, aplikasi mobile Android & iOS, toko online, dashboard bisnis, ERP, dan maintenance. Software house Indonesia, tim lokal Medan.'
   return (
     <>
       <Head>
@@ -1003,8 +1111,8 @@ export function Keunggulan() {
 
 /* ══════════════════════════════════════════════════ HARGA (/harga) */
 export function Harga() {
-  const title = 'Paket Harga Jasa Website & Aplikasi — Transparan | AFSS'
-  const desc = 'Paket harga transparan untuk jasa website, web app, dan aplikasi mobile. Basic mulai Rp 1 juta, Business mulai Rp 4 juta, Custom untuk proyek besar. Konsultasi gratis.'
+  const title = 'Harga Jasa Pembuatan Website, Aplikasi & ERP Custom | AFSS'
+  const desc = 'Lihat estimasi harga pembuatan landing page, company profile, toko online, dashboard bisnis, aplikasi mobile, dan ERP custom bersama AFSS. Mulai Rp 1 juta.'
   return (
     <>
       <Head>

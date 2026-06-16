@@ -289,11 +289,11 @@ function Hero({ reduce, parallax }) {
             <span className="stars">★★★★★</span> Dipercaya 50+ perusahaan di Indonesia
           </motion.div>
           <motion.h1 variants={fadeUp}>
-            Bangun Website &amp; Aplikasi Custom yang <span className="ital">sesuai kebutuhan</span> bisnis Anda
+            Jasa Pembuatan Website, Aplikasi Mobile &amp; Sistem ERP Custom untuk <span className="ital">Bisnis Indonesia</span>
           </motion.h1>
           <motion.p className="lead" variants={fadeUp}>
-            Kami rancang dan kembangkan website dan aplikasi dari nol — cepat, aman, dan siap tumbuh
-            bersama bisnis Anda. Bukan template, bukan setengah jadi.
+            Software house Medan — kami bangun website profesional, aplikasi Android & iOS, dashboard, dan ERP dari nol.
+            Cepat, SEO-ready, kode milik Anda sepenuhnya.
           </motion.p>
           <motion.div className="hero-cta" variants={fadeUp}>
             <Magnetic href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis untuk proyek saya.`)} className="btn btn-pri btn-lg" target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Konsultasi Gratis</Magnetic>
@@ -537,7 +537,7 @@ function ReviewCard({ r }) {
 }
 function Reviews({ reduce }) {
   const rowA = reviews.slice(0, 5)
-  const rowB = reviews.slice(4)
+  const rowB = reviews.slice(5)
   const Row = ({ items, dir }) => (
     <div className="marquee">
       <motion.div className="marquee-track" animate={reduce ? {} : { x: dir > 0 ? ['-50%', '0%'] : ['0%', '-50%'] }} transition={{ duration: 50, ease: 'linear', repeat: Infinity }}>
@@ -718,15 +718,15 @@ export function Home() {
   return (
     <>
       <Head>
-        <title>Jasa Pembuatan Website & Aplikasi Custom | AFSS</title>
-        <meta name="description" content="AFSS — software house Indonesia. Jasa pembuatan website custom, aplikasi mobile Android & iOS, web app & ERP. Cepat, SEO-ready, kode milik Anda." />
+        <title>Jasa Pembuatan Website, Aplikasi & ERP Custom | AFSS</title>
+        <meta name="description" content="AFSS adalah software house Indonesia — jasa pembuatan website, aplikasi mobile Android & iOS, dashboard, ERP & sistem bisnis custom. Konsultasi gratis via WhatsApp." />
         <link rel="canonical" href="https://afss.tech/" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://afss.tech/" />
-        <meta property="og:title" content="Jasa Pembuatan Website & Aplikasi Custom | AFSS" />
-        <meta property="og:description" content="Bangun website & aplikasi custom sesuai kebutuhan bisnis Anda. Cepat, SEO-ready, kode milik Anda. Konsultasi gratis." />
-        <meta name="twitter:title" content="Jasa Pembuatan Website & Aplikasi Custom | AFSS" />
-        <meta name="twitter:description" content="Bangun website & aplikasi custom sesuai kebutuhan bisnis Anda. Cepat, SEO-ready, kode milik Anda." />
+        <meta property="og:title" content="Jasa Pembuatan Website, Aplikasi & ERP Custom | AFSS" />
+        <meta property="og:description" content="Software house Indonesia — website, aplikasi mobile, dashboard, ERP & sistem bisnis custom. Konsultasi gratis." />
+        <meta name="twitter:title" content="Jasa Pembuatan Website, Aplikasi & ERP Custom | AFSS" />
+        <meta name="twitter:description" content="Software house Indonesia — website, aplikasi mobile, dashboard, ERP & sistem bisnis custom. Konsultasi gratis." />
         <meta property="og:image" content="https://afss.tech/og.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
