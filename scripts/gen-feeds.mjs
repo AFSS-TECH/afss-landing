@@ -12,17 +12,35 @@ const xmlEsc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/
 
 const byDateDesc = [...posts].sort((a, b) => (a.date < b.date ? 1 : -1))
 
-const serviceSlugs = ['pembuatan-website', 'aplikasi-mobile', 'web-app', 'ui-ux-design', 'maintenance']
+const serviceSlugs = [
+  'pembuatan-website',
+  'aplikasi-mobile',
+  'web-app',
+  'ui-ux-design',
+  'maintenance',
+  'jasa-pembuatan-landing-page',
+  'jasa-pembuatan-company-profile',
+  'jasa-pembuatan-toko-online',
+  'jasa-pembuatan-erp',
+  'jasa-pembuatan-dashboard',
+  'jasa-pembuatan-website-medan',
+]
 
 // ── sitemap.xml ──
 const urls = [
   { loc: `${SITE_URL}/`, lastmod: today, changefreq: 'weekly', priority: '1.0' },
   // Core pages
   { loc: `${SITE_URL}/layanan`, lastmod: today, changefreq: 'weekly', priority: '0.9' },
-  { loc: `${SITE_URL}/tentang`, lastmod: today, changefreq: 'monthly', priority: '0.7' },
-  { loc: `${SITE_URL}/kontak`, lastmod: today, changefreq: 'monthly', priority: '0.8' },
-  { loc: `${SITE_URL}/portofolio`, lastmod: today, changefreq: 'weekly', priority: '0.8' },
+  { loc: `${SITE_URL}/harga`, lastmod: today, changefreq: 'weekly', priority: '0.9' },
   { loc: `${SITE_URL}/blog`, lastmod: today, changefreq: 'weekly', priority: '0.8' },
+  { loc: `${SITE_URL}/portofolio`, lastmod: today, changefreq: 'weekly', priority: '0.8' },
+  { loc: `${SITE_URL}/kontak`, lastmod: today, changefreq: 'monthly', priority: '0.8' },
+  { loc: `${SITE_URL}/keunggulan`, lastmod: today, changefreq: 'monthly', priority: '0.8' },
+  { loc: `${SITE_URL}/faq`, lastmod: today, changefreq: 'monthly', priority: '0.8' },
+  { loc: `${SITE_URL}/tentang`, lastmod: today, changefreq: 'monthly', priority: '0.7' },
+  { loc: `${SITE_URL}/karir`, lastmod: today, changefreq: 'monthly', priority: '0.6' },
+  { loc: `${SITE_URL}/privacy`, lastmod: today, changefreq: 'yearly', priority: '0.3' },
+  { loc: `${SITE_URL}/terms`, lastmod: today, changefreq: 'yearly', priority: '0.3' },
   // Service pages (high priority — keyword-rich landing pages)
   ...serviceSlugs.map((s) => ({
     loc: `${SITE_URL}/layanan/${s}`, lastmod: today, changefreq: 'monthly', priority: '0.85',

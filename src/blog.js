@@ -109,7 +109,7 @@ Menyiapkan hal-hal ini di awal bisa memangkas waktu secara signifikan.
 - Tetapkan **ruang lingkup yang jelas** sejak proposal.
 - Pilih partner dengan **komunikasi cepat** — tim lokal tanpa beda zona waktu mempercepat keputusan.
 
-Ingin tahu estimasi untuk ide aplikasi Anda? [Konsultasikan gratis](/harga) — kami beri timeline yang realistis, bukan janji manis.
+Ingin tahu estimasi untuk ide aplikasi Anda? Lihat detail di [jasa pembuatan aplikasi mobile kami](/layanan/aplikasi-mobile) atau [konsultasikan gratis](/harga) — kami beri timeline yang realistis, bukan janji manis.
 `,
   },
   {
@@ -150,7 +150,7 @@ Peluncuran bukan akhir. Tanyakan soal masa garansi bug dan paket [maintenance](/
 
 ## Kesimpulan
 
-Pilih partner yang transparan, menyerahkan kepemilikan kode, dan benar-benar memahami tujuan bisnis Anda — bukan sekadar mengejar transaksi. Punya pertanyaan? Cek [FAQ](/faq) kami atau langsung [konsultasi gratis](/harga).
+Pilih partner yang transparan, menyerahkan kepemilikan kode, dan benar-benar memahami tujuan bisnis Anda — bukan sekadar mengejar transaksi. Berbasis di Medan? AFSS adalah [software house lokal Sumatera Utara](/layanan/jasa-pembuatan-website-medan) yang bisa konsultasi tatap muka. Punya pertanyaan? Cek [FAQ](/faq) kami atau langsung [konsultasi gratis](/harga).
 `,
   },
   {
@@ -293,7 +293,7 @@ Jika beberapa poin di atas terasa familier, ERP bisa menghemat waktu operasional
 
 ## Mulai dari yang Anda butuhkan
 
-Tidak harus langsung lengkap. Kami biasa membangun ERP secara bertahap, mulai dari modul paling mendesak. Lihat [layanan pengembangan sistem kami](/layanan) atau [minta penawaran](/harga).
+Tidak harus langsung lengkap. Kami biasa membangun ERP secara bertahap, mulai dari modul paling mendesak. Lihat [jasa pembuatan ERP custom kami](/layanan/jasa-pembuatan-erp) atau [minta penawaran](/harga).
 `,
   },
   {
@@ -334,7 +334,7 @@ Sertakan FAQ, garansi, atau transparansi harga untuk menjawab keberatan sebelum 
 
 ## Kesimpulan
 
-Konversi adalah hasil dari kejelasan, kepercayaan, dan kemudahan. Ingin landing page yang dirancang untuk konversi? Lihat [layanan kami](/layanan) atau [konsultasi gratis](/harga).
+Konversi adalah hasil dari kejelasan, kepercayaan, dan kemudahan. Ingin landing page yang dirancang untuk konversi? Lihat [jasa pembuatan landing page kami](/layanan/jasa-pembuatan-landing-page) atau [konsultasi gratis](/harga).
 `,
   },
   {
@@ -363,11 +363,11 @@ Aplikasi yang dipasang di ponsel (Android/iOS) lewat store. Unggul untuk **pengg
 
 ## Mana yang sebaiknya dipilih?
 
-- **Butuh dikenal & mendatangkan leads** → Website.
-- **Butuh mengelola operasional / data** → Web App.
-- **Butuh dipakai pengguna secara rutin di ponsel** → Aplikasi Mobile.
+- **Butuh dikenal & mendatangkan leads** → [Website atau landing page](/layanan/pembuatan-website).
+- **Butuh mengelola operasional / data** → [Web app atau dashboard bisnis](/layanan/jasa-pembuatan-dashboard).
+- **Butuh dipakai pengguna secara rutin di ponsel** → [Aplikasi mobile](/layanan/aplikasi-mobile).
 
-Sering kali bisnis butuh kombinasi — misalnya website untuk marketing + web app untuk operasional internal. Bingung menentukan? [Konsultasi gratis](/harga), kami bantu petakan kebutuhan Anda.
+Sering kali bisnis butuh kombinasi — misalnya website untuk marketing + [web app](/layanan/web-app) untuk operasional internal. Bingung menentukan? [Konsultasi gratis](/harga), kami bantu petakan kebutuhan Anda.
 `,
   },
   {
@@ -409,7 +409,7 @@ Website resmi yang memperkenalkan perusahaan Anda secara profesional: siapa Anda
 
 Jangan sekadar "ada". Pastikan cepat, mobile-friendly, jelas CTA-nya, dan dibangun custom sesuai brand — bukan template pasaran (baca [custom vs template](/blog/website-custom-vs-template)).
 
-Ingin company profile yang profesional dan SEO-ready? Lihat [layanan kami](/layanan) atau [konsultasi gratis](/harga).
+Ingin company profile yang profesional dan SEO-ready? Lihat [jasa pembuatan company profile website kami](/layanan/jasa-pembuatan-company-profile) atau cek [paket harga](/harga). Bisnis di Medan? Kami juga melayani [klien lokal Sumatera Utara](/layanan/jasa-pembuatan-website-medan).
 `,
   },
   {
@@ -516,7 +516,7 @@ Untuk perbandingan yang lebih rinci, baca [panduan biaya pembuatan website](/blo
 
 ## Siap mulai toko online Anda?
 
-AFSS membangun toko online custom yang SEO-ready, cepat, dan skalabel — dengan kode yang 100% menjadi milik Anda. Dari katalog sederhana hingga platform marketplace multi-penjual. [Konsultasi gratis lewat WhatsApp](/harga) untuk mendapat estimasi sesuai kebutuhan bisnis Anda.
+AFSS membangun toko online custom yang SEO-ready, cepat, dan skalabel — dengan kode yang 100% menjadi milik Anda. Dari katalog sederhana hingga platform marketplace multi-penjual. Lihat detail di [jasa pembuatan toko online kami](/layanan/jasa-pembuatan-toko-online) atau [konsultasi gratis lewat WhatsApp](/harga).
 `,
   },
   {
@@ -685,7 +685,7 @@ Banyak UMKM mengandalkan media sosial saja. Itu bagus, tapi tidak cukup. Di 2026
 
 Tidak perlu langsung mahal. Sebuah landing page atau company profile sederhana sudah cukup untuk memulai — dan bisa dikembangkan seiring bisnis tumbuh. Cek kisaran [biaya pembuatan website](/blog/biaya-pembuatan-website).
 
-Siap membawa UMKM Anda online dengan benar? Lihat [layanan kami](/layanan) atau [konsultasi gratis](/harga).
+Siap membawa UMKM Anda online dengan benar? Mulai dari [landing page](/layanan/jasa-pembuatan-landing-page) atau [company profile website](/layanan/jasa-pembuatan-company-profile). Berbasis di Medan atau Sumatera Utara? Kami layani [klien lokal dengan konsultasi tatap muka](/layanan/jasa-pembuatan-website-medan). [Konsultasi gratis](/harga), tanpa komitmen.
 `,
   },
   {
