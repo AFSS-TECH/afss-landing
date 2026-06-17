@@ -795,6 +795,851 @@ Keamanan website bukan tugas sekali jadi — ini upaya berkelanjutan. Update, mo
 Ingin website yang aman dan compliant? Lihat [layanan kami](/layanan) atau [konsultasi gratis](/harga) untuk membahas keamanan spesifik bisnis Anda.
 `,
   },
+  {
+    slug: 'optimasi-kecepatan-website',
+    title: 'Optimasi Kecepatan Website: Panduan Lengkap Meningkatkan Performance 2026',
+    description:
+      'Website lambat membunuh konversi. Pelajari teknik optimasi website, tools pengukuran, dan cara meningkatkan skor Lighthouse Anda di 2026.',
+    date: '2026-06-17',
+    readMinutes: 9,
+    tags: ['Website', 'Performa', 'Teknologi'],
+    c: '#2BB3A3',
+    c2: '#0E8C86',
+    excerpt:
+      'Setiap detik loading tambahan = penurunan konversi. Panduan lengkap mengoptimalkan kecepatan website supaya pengunjung tidak pergi.',
+    body: `
+Tahun 2026, pengguna internet semakin tidak sabar. Website yang lambat bahkan 3 detik bisa kehilangan 40% pengunjung. Bagi bisnis online, ini berarti **kerugian penjualan yang nyata**. Artikel ini membahas cara sistematis mengoptimalkan kecepatan website Anda.
+
+## Mengapa kecepatan website sangat penting
+
+### 1. Pengaruh pada konversi
+Studi menunjukkan setiap 100 milidetik delay loading = **1% penurunan konversi**. Website 3 detik bisa menyebabkan kehilangan jutaan rupiah per bulan.
+
+### 2. Faktor SEO
+Google memprioritaskan website cepat dalam ranking. [Core Web Vitals](/blog/website-seo-friendly) (LCP, CLS, INP) adalah metrik utama yang digunakan Google untuk menilai website.
+
+### 3. Pengalaman pengguna
+Website cepat membuat pengunjung lebih senang, berlama-lama, dan cenderung kembali.
+
+### 4. Mobile optimization
+Di Indonesia, mayoritas pengguna internet dari ponsel dengan koneksi yang tidak selalu stabil. Kecepatan adalah kriteria utama.
+
+## Metrik kecepatan yang perlu Anda ketahui
+
+### 1. Core Web Vitals (Google's metrics)
+- **LCP (Largest Contentful Paint)** — waktu elemen terbesar muncul. Target: < 2.5 detik.
+- **FID (First Input Delay)** — delay input pengguna. Target: < 100 milidetik. (Catatan: mulai 2024, Google ganti dengan INP).
+- **INP (Interaction to Next Paint)** — respons website terhadap interaksi pengguna. Target: < 200 milidetik.
+- **CLS (Cumulative Layout Shift)** — pergeseran elemen tak terduga. Target: < 0.1.
+
+### 2. Metrik lain
+- **TTFB (Time to First Byte)** — waktu server merespon. Target: < 600 milidetik.
+- **FCP (First Contentful Paint)** — waktu content pertama muncul. Target: < 1.8 detik.
+- **Pageload Time** — waktu total halaman selesai loading. Target: < 3 detik.
+
+## Tools untuk mengukur kecepatan
+
+Sebelum mengoptimalkan, Anda harus bisa mengukur. Tools ini gratis:
+
+### 1. Google PageSpeed Insights
+Website resmi dari Google — menunjukkan skor dari 0-100 dan rekomendasi spesifik. Anda bisa cek skor halaman mana saja di [pagespeedinsights.web.dev](https://pagespeedinsights.web.dev).
+
+### 2. Google Lighthouse
+Terintegrasi di Chrome DevTools — bisa dijalankan langsung dari browser. Pilih menu DevTools > Lighthouse.
+
+### 3. GTmetrix
+Website pihak ketiga yang memberikan breakdown detail performa, waterfall chart, dan rekomendasi. Gratis di [gtmetrix.com](https://gtmetrix.com).
+
+### 4. WebPageTest
+Tools advanced untuk testing performa dari berbagai lokasi dan jenis koneksi. Berguna untuk understanding bottleneck.
+
+## Teknik optimasi kecepatan website
+
+### 1. Image Optimization
+Gambar sering menjadi penyebab utama website lambat. Solusi:
+
+- **Gunakan format modern:** WebP alih-alih JPEG/PNG (lebih ringan 25-35%).
+- **Lazy loading:** Gambar di bawah fold dimuat hanya saat dibutuhkan.
+- **Responsive images:** Gunakan `srcset` agar ponsel tidak download gambar untuk desktop.
+- **Kompresi:** Gunakan tools seperti TinyPNG, ImageOptim, atau Squoosh.
+
+Contoh:
+\`\`\`html
+<img
+  src="image.webp"
+  alt="Deskripsi"
+  loading="lazy"
+  srcset="image-small.webp 480w, image-medium.webp 800w, image-large.webp 1200w"
+  sizes="(max-width: 480px) 100vw, (max-width: 800px) 50vw, 33vw"
+/>
+\`\`\`
+
+### 2. Minifikasi dan Kompresi
+- **CSS & JavaScript:** Hapus whitespace dan komentar. Gunakan tools seperti Terser (JS) atau cssnano (CSS).
+- **GZIP compression:** Server harus mengirim file dengan gzip. Hemat 60-80% ukuran file.
+- **Brotli compression:** Format kompresi lebih baik dari gzip. Support di mayoritas server modern.
+
+### 3. Code Splitting
+Jangan load seluruh JavaScript untuk halaman yang tidak membutuhkannya. Bagi kode jadi chunks yang dimuat sesuai kebutuhan.
+
+Contoh di React:
+\`\`\`javascript
+const Dashboard = React.lazy(() => import('./Dashboard'));
+<Suspense fallback={<Loading />}>
+  <Dashboard />
+</Suspense>
+\`\`\`
+
+### 4. Caching Strategy
+- **Browser caching:** Instruksikan browser menyimpan file statis (CSS, JS, image) sehingga tidak perlu di-download lagi. Set cache headers:
+  \`\`\`
+  Cache-Control: public, max-age=31536000
+  \`\`\`
+- **Server caching:** Cache hasil database query atau API response yang jarang berubah.
+- **CDN:** Gunakan Content Delivery Network (Cloudflare, Akamai) untuk distribute file ke server terdekat user.
+
+### 5. Database Optimization
+- **Index yang tepat:** Query cepat ke database yang sudah di-index jauh lebih cepat.
+- **Reduce queries:** Jangan fetch data lebih dari yang dibutuhkan. Gunakan pagination.
+- **Query optimization:** Hindari N+1 queries (fetch parent lalu loop fetch child satu-satu).
+
+### 6. Rendering Optimization
+- **Critical CSS:** Prioritas CSS di atas fold dimuat terlebih dahulu.
+- **Defer non-critical JS:** Script yang tidak urgent (analytics, ads) dimuat di akhir.
+- **Server-side rendering (SSR) atau Static Generation:** Pre-render halaman di server/build time, kirim HTML sudah siap ke browser.
+
+### 7. Third-party Scripts
+Banyak website lambat karena banyak third-party (analytics, ads, widgets):
+
+- **Lazy load:** Jangan load analytics saat page load. Defer hingga user idle.
+- **Audit:** Cek apakah semua third-party benar-benar perlu. Setiap script menambah overhead.
+- **Sandbox:** Isolasi third-party dengan iframe agar tidak mempengaruhi performa main thread.
+
+### 8. Web Fonts Optimization
+- **System fonts:** Jika memungkinkan, gunakan font sistem yang sudah ada di perangkat (tidak perlu download).
+- **Font subsetting:** Hanya load karakter yang digunakan (misal hanya Latin, buang CJK jika tidak perlu).
+- **Font preloading:** Preload font kritis untuk mencegah delay.
+
+\`\`\`html
+<link rel="preload" href="font.woff2" as="font" type="font/woff2" crossorigin>
+\`\`\`
+
+- **Variable fonts:** Gunakan variable fonts untuk mengurangi jumlah file font yang perlu diload.
+
+### 9. Monitoring & Continuous Improvement
+- **Monitoring tools:** Gunakan Datadog, New Relic, atau uptime monitoring untuk alert jika performa menurun.
+- **Synthetic monitoring:** Test website dari berbagai lokasi dan browser secara berkala.
+- **Real User Monitoring (RUM):** Track metrik performa dari user nyata, bukan hanya lab data.
+
+## Checklist optimasi kecepatan
+
+- [ ] Ukur performa baseline di PageSpeed Insights / Lighthouse
+- [ ] Optimasi semua image (kompresi, WebP, lazy load, responsive)
+- [ ] Minifikasi CSS dan JS
+- [ ] Enable gzip atau Brotli compression di server
+- [ ] Setup CDN untuk asset statis
+- [ ] Optimize database queries dan tambah index
+- [ ] Implement caching strategy (browser & server)
+- [ ] Defer atau lazy load non-critical JS
+- [ ] Optimize web fonts
+- [ ] Audit & remove unnecessary third-party scripts
+- [ ] Test performa di mobile dengan koneksi 4G
+- [ ] Setup monitoring untuk alert jika ada penurunan performa
+
+## Cost benefit
+
+Optimasi kecepatan bukan sekadar teknis — ini **ROI bisnis yang terbukti**.
+
+- Website 1 detik lebih cepat = **7% peningkatan konversi** (contoh dari AWS).
+- Website cepat + SEO baik = **lebih banyak organic traffic**.
+- User experience baik = **repeat visit rate lebih tinggi**.
+
+Investasi optimasi performa Anda akan kembali melalui penjualan lebih banyak.
+
+## Kesimpulan
+
+Kecepatan website bukan luxury — ini **basic requirement** di 2026. Website yang cepat menghasilkan lebih banyak konversi, rank lebih baik di Google, dan memberikan experience yang lebih baik ke user.
+
+Ingin website yang dioptimalkan untuk kecepatan maksimal? AFSS membangun website dengan performa premium sebagai prioritas utama. Lihat [layanan kami](/layanan) atau [konsultasi gratis](/harga) untuk audit performa website Anda saat ini.
+`,
+  },
+  {
+    slug: 'api-integration-sistem-bisnis',
+    title: 'API Integration: Menghubungkan Sistem Bisnis Anda Dengan Teknologi Modern',
+    description:
+      'Panduan API integration untuk bisnis — apa itu API, manfaat integrasi sistem, dan bagaimana caranya agar semua tools bisnis Anda terhubung seamless.',
+    date: '2026-06-18',
+    readMinutes: 9,
+    tags: ['API', 'Integrasi', 'Sistem'],
+    c: '#1E88A8',
+    c2: '#0E5E78',
+    excerpt:
+      'Sistem bisnis yang terisolasi = data tidak sinkron dan operasional tidak efisien. API integration menyatukan semua tools Anda.',
+    body: `
+Bayangkan Anda menggunakan 10 tools berbeda untuk menjalankan bisnis: CRM untuk pelanggan, accounting software untuk keuangan, marketplace untuk penjualan, email marketing untuk promosi. Tanpa integrasi, data harus di-entry manual di setiap platform — **buang waktu, error-prone, dan tidak real-time**.
+
+**API integration** adalah solusi untuk menyatukan semua tools ini sehingga data mengalir otomatis antar sistem. Artikel ini menjelaskan konsep, manfaat, dan cara implementasinya.
+
+## Apa itu API?
+
+API (Application Programming Interface) adalah "jembatan" yang memungkinkan dua aplikasi berkomunikasi dan berbagi data.
+
+Analogi sederhana: API seperti waiter di restoran. Anda (client) memesan makanan (request), waiter membawa pesanan ke dapur (server), dapur menyiapkan makanan, dan waiter mengantar kembali (response).
+
+## Jenis API yang umum
+
+### REST API
+Standar industri saat ini. Menggunakan HTTP methods (GET, POST, PUT, DELETE) untuk manipulasi data. Mudah dipahami dan diimplementasikan.
+
+Contoh:
+\`\`\`
+GET /api/orders/123 → Ambil data order 123
+POST /api/orders → Buat order baru
+PUT /api/orders/123 → Update order 123
+DELETE /api/orders/123 → Hapus order 123
+\`\`\`
+
+### GraphQL
+Query language yang lebih fleksibel — ambil data persis yang Anda butuhkan, tidak lebih tidak kurang. Berguna untuk aplikasi mobile yang perlu bandwidth efisien.
+
+### Webhook
+Kebalikan dari API tradisional — server provider *push* data ke Anda saat ada event tertentu (contoh: notifikasi pembayaran berhasil).
+
+### SOAP
+Standar lama dan kompleks. Masih digunakan di enterprise legacy systems, tapi REST jauh lebih populer sekarang.
+
+## Manfaat API integration untuk bisnis
+
+### 1. Otomasi dan efisiensi
+Tanpa integrasi:
+- Order masuk → manual entry ke sistem inventory dan accounting.
+- Waktu terbuang, sering error.
+
+Dengan API integration:
+- Order masuk di marketplace → otomatis update inventory → otomatis buat invoice.
+- Real-time, zero error.
+
+Efisiensi bisa mencapai 80% untuk proses yang repetitif.
+
+### 2. Data terpusat dan real-time
+Dengan integrasi, semua sistem melihat data yang sama — tidak ada lagi sinkronisasi manual atau data yang beda di sistem berbeda.
+
+Contoh: pelanggan baru registrasi di website → otomatis masuk CRM → otomatis dapat welcome email → otomatis tracking untuk follow-up sales.
+
+### 3. Insight yang lebih baik
+Saat data terpadu, Anda bisa buat laporan cross-functional:
+- Revenue per product category (data penjualan + inventory + accounting).
+- Customer lifetime value (data penjualan + engagement + support).
+- Performa tim sales per region (data CRM + orders + finance).
+
+Insight ini hanya possible jika data terintegrasi.
+
+### 4. Skalabilitas tanpa menambah tim
+Sistem terintegrasi memproses volume tinggi tanpa menambah manual work. Tim Anda fokus pada hal yang bernilai (strategy, relationship) bukan data entry.
+
+### 5. Competitive advantage
+Competitor Anda yang masih manual tidak bisa bergerak cepat. Anda dengan sistem terintegrasi bisa pivot, launch produk baru, atau respond ke market trend jauh lebih cepat.
+
+## Contoh kasus API integration dalam bisnis
+
+### Kasus 1: Toko online + accounting
+**Tanpa integrasi:**
+- Penjualan tercatat di toko online.
+- Setiap hari, akuntan harus download report, entry manual ke software accounting, reconcile.
+- Laporan keuangan tertunda hingga 1-2 minggu.
+
+**Dengan API integration:**
+- Setiap transaksi di toko → otomatis kirim invoice ke accounting system.
+- Dashboard accounting real-time update.
+- Laporan keuangan bisa dibuat setiap hari, akurat 100%.
+
+### Kasus 2: CRM + email marketing
+**Tanpa integrasi:**
+- Data pelanggan di CRM.
+- Email marketing pakai list terpisah.
+- Saat customer status berubah (converted, churned), list email marketing tidak update.
+- Hasil: mengirim email ke customer yang sudah churn, atau lupa follow-up prospek.
+
+**Dengan API integration:**
+- Customer di CRM → otomatis sync ke email marketing list.
+- Automation rules di email marketing trigger based on CRM stage.
+- Prospek hot → auto follow-up emails.
+- Customer churned → auto remove dari campaign.
+
+### Kasus 3: Sistem penjualan + inventory + supply chain
+**Kompleks tapi sangat penting:**
+- Order masuk → inventory system kurangi stok.
+- Jika stok minimal → otomatis trigger PO ke supplier.
+- Shipment dari supplier → otomatis update inventory.
+- Jika ada backorder → otomatis notify customer via email/SMS.
+
+Semua ini hanya bisa terjadi seamless dengan API integration antar sistem.
+
+## Teknologi untuk API integration
+
+### Native API (langsung dari provider)
+Mayoritas tools bisnis (Shopify, Salesforce, Stripe, Midtrans) punya API documentation sendiri. Developer Anda bisa build custom integration.
+
+**Pro:** Kontrol penuh, custom logic sesuai kebutuhan.
+**Con:** Butuh developer experienced, butuh waktu development.
+
+### Integration platforms (iPaaS)
+Tools seperti Zapier, Make (formerly Integromat), Integrant — punya UI visual, pre-built connectors ke ratusan tools. Tidak perlu coding.
+
+Contoh action:
+- "Saat spreadsheet Google di-update → kirim ke Slack"
+- "Saat order masuk Shopify → buat task di Asana"
+- "Saat pembayaran Stripe berhasil → kirim invoice email"
+
+**Pro:** Cepat, tidak perlu technical skill tinggi.
+**Con:** Terbatas pada integrasi yang sudah support platform. Custom logic terbatas.
+
+### Custom development
+Untuk integrasi kompleks yang platform standard tidak bisa support, Anda perlu tim developer build custom solution.
+
+**Pro:** Unlimited flexibility.
+**Con:** Mahal, butuh waktu, butuh maintenance.
+
+Keputusan tergantung kompleksitas need Anda:
+- **Simple:** pakai Zapier/Make.
+- **Medium:** mix platform + custom.
+- **Complex:** custom end-to-end (mirip sistem [ERP](/blog/apa-itu-erp)).
+
+## Langkah implementasi API integration
+
+### 1. Audit sistem existing
+Mapping:
+- Tools apa saja yang dipakai?
+- Di mana data mengalir saat ini?
+- Proses mana yang paling banyak manual work?
+- Di mana data tidak sinkron?
+
+### 2. Prioritas integrasi
+Fokus pada:
+- Integrasi yang paling mengurangi manual work.
+- Integrasi yang paling meningkatkan akurasi.
+- Integrasi yang enable business value tertinggi.
+
+### 3. Pilih approach
+- Platform iPaaS (Zapier/Make) untuk simple use cases.
+- Custom development untuk complex logic.
+- Hybrid untuk medium complexity.
+
+### 4. Test & monitor
+- Test setiap integrasi dengan data sample.
+- Monitor continuously — siapa tahu API provider update dan break integrasi.
+- Setup alert jika integrasi fail.
+
+### 5. Training tim
+Tim Anda harus paham:
+- Bagaimana data mengalir.
+- Apa yang perlu di-monitor.
+- Bagaimana respond jika ada error.
+
+## Keamanan API integration
+
+Saat menghubungkan sistem, data lebih exposed. Keamanan harus prioritas:
+
+- **API keys & tokens:** Jangan hardcode di code. Gunakan environment variables atau secret manager.
+- **HTTPS:** Semua komunikasi API harus encrypted.
+- **Rate limiting:** Lindungi API dari abuse dengan membatasi request per IP/user.
+- **Audit logging:** Catat semua API calls untuk compliance dan debugging.
+- **Least privilege:** Token/API key hanya punya permission yang dibutuhkan, bukan akses penuh.
+
+## Cost & ROI API integration
+
+**Cost:**
+- Platform iPaaS: $50-500/month tergantung volume.
+- Custom development: $5,000-50,000+ tergantung kompleksitas.
+
+**ROI:**
+- 1 FTE dihemat untuk manual data entry = $20,000-40,000/tahun.
+- Mengurangi error = mengurangi operational cost.
+- Insight lebih baik = keputusan bisnis lebih tajam = revenue growth.
+
+ROI biasanya positive dalam 6-12 bulan.
+
+## Kesimpulan
+
+Di era yang tools bisnis semakin banyak, integrasi bukan pilihan — ini **keharusan untuk scale**. Bisnis yang sistemnya terintegrasi bergerak lebih cepat, lebih akurat, dan lebih profitable.
+
+Jika sistem bisnis Anda masih terisolasi — data tersebar di spreadsheet, manual entry, tidak real-time — ini red flag. Saatnya integrasi.
+
+AFSS bisa membantu audit sistem Anda dan design integration strategy yang tepat. Dari platform iPaaS untuk quick wins, hingga custom development untuk complex scenarios. [Konsultasi gratis](/harga) untuk discuss kebutuhan integrasi bisnis Anda.
+`,
+  },
+  {
+    slug: 'progressive-web-app-pwa',
+    title: 'Progressive Web App (PWA): Website yang Bekerja Seperti Aplikasi Mobile',
+    description:
+      'PWA menggabungkan yang terbaik dari website dan aplikasi mobile. Pelajari keuntungan PWA, cara buildnya, dan mengapa bisnis Anda perlu PWA di 2026.',
+    date: '2026-06-19',
+    readMinutes: 8,
+    tags: ['Web App', 'Teknologi', 'App'],
+    c: '#0E8C86',
+    c2: '#1E88A8',
+    excerpt:
+      'PWA memberikan pengalaman seperti aplikasi mobile, tapi tanpa harus di-download dari app store. Lebih cepat, lebih ekonomis, dan lebih reach.',
+    body: `
+Dilemma bisnis digital: "Apakah saya perlu aplikasi mobile atau cukup website?" Jawabannya: **PWA (Progressive Web App)** menggabungkan yang terbaik dari keduanya.
+
+PWA adalah website yang terasa dan bekerja seperti aplikasi mobile — bisa offline, punya ikon di home screen, notifikasi push — tapi tanpa perlu di-download dari app store. Di 2026, PWA jadi pilihan semakin populer untuk bisnis yang ingin reach luas dengan biaya efisien.
+
+## Apa itu PWA?
+
+PWA adalah aplikasi web yang dibangun dengan teknologi modern (Service Workers, Web APIs) sehingga memberikan pengalaman mirip aplikasi native mobile.
+
+Karakteristik PWA:
+- **Responsive:** Bekerja baik di semua ukuran layar.
+- **Offline capability:** Bisa berfungsi tanpa internet (data cached).
+- **Installable:** Bisa di-install di home screen seperti app.
+- **Push notifications:** Bisa kirim notifikasi ke user.
+- **Fast:** Load cepat, smooth interactions.
+
+## Perbedaan PWA vs Aplikasi Native vs Website
+
+| Aspek | Website | PWA | Aplikasi Native |
+|-------|---------|-----|-----------------|
+| **Download** | Tidak perlu | Tidak perlu (optional) | Harus dari store |
+| **Ukuran** | 0 (streaming) | 100-500 KB | 10-100 MB |
+| **Offline** | Tidak | Ya (cache) | Ya |
+| **Notifikasi** | Tidak | Ya | Ya |
+| **Akses hardware** | Terbatas | Beberapa (camera, GPS) | Full access |
+| **Distribution** | URL / QR | URL / QR / app store | App store only |
+| **Update** | Automatic | Automatic | User harus manual |
+| **Development** | React, Vue, etc | React, Vue, etc | Swift/Kotlin |
+| **Cost** | Murah | Murah | Expensive |
+
+**Kesimpulan:** PWA adalah sweet spot untuk kebanyakan bisnis — kombinasi cost effectiveness, reach, dan functionality.
+
+## Keuntungan PWA untuk bisnis
+
+### 1. Reach lebih luas
+- Website bisa diakses siapa saja lewat browser.
+- Tidak perlu download dari app store.
+- Link bisa di-share via WhatsApp, social media, email.
+
+Contoh: promo flash sale → share link di social → user bisa langsung akses tanpa perlu install app dulu.
+
+### 2. Cost jauh lebih murah
+- Satu codebase untuk semua platform (iOS, Android, web).
+- Tidak perlu maintain 2-3 tim (iOS dev, Android dev, backend).
+- Update automatic — tidak perlu tunggu app store approval.
+
+Biaya PWA: **Rp 5-15 juta** (seperti website bagus).
+Biaya native mobile app: **Rp 15-50 juta+** (iOS dan Android terpisah).
+
+### 3. User experience superior
+- **Instant loading:** Cached assets load instant, bahkan offline.
+- **No app store friction:** User bisa langsung akses tanpa buka app store.
+- **Home screen icon:** Bisa pin ke home screen, launch instant seperti app native.
+- **Full screen:** Bisa launch fullscreen tanpa browser chrome.
+
+### 4. Offline functionality
+PWA dengan Service Workers bisa:
+- Load halaman yang sudah pernah dibuka saat offline.
+- Form input bisa diisi offline, sync saat online.
+- Cocok untuk koneksi buruk atau area remote.
+
+Contoh: aplikasi order offline — customer bisa browse dan add to cart, auto-sync saat ada koneksi.
+
+### 5. Installability di home screen
+User bisa install PWA ke home screen dengan sekali tap — tidak perlu buka app store. Install faster, diskoverability lebih tinggi.
+
+### 6. Notifikasi push
+Engagement tool yang powerful — bisa notify user tentang order, promo, atau update penting. Conversion dari push notification lebih tinggi dari email.
+
+## Cara kerja PWA: teknologi utama
+
+### 1. Service Worker
+Script yang jalan di background browser, di luar main thread. Fungsi utama:
+- **Caching:** Save asset (HTML, CSS, JS, image) ke local storage.
+- **Offline support:** Serve cached content saat offline.
+- **Background sync:** Sync data saat online.
+- **Push notifications:** Receive dan tampilkan notifikasi.
+
+Contoh registrasi Service Worker:
+\`\`\`javascript
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+    .then(reg => console.log('SW registered'))
+    .catch(err => console.log('SW registration failed'))
+}
+\`\`\`
+
+### 2. Web Manifest
+File JSON yang define app metadata:
+\`\`\`json
+{
+  "name": "Toko Online Saya",
+  "short_name": "TokoSaya",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0E8C86",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
+\`\`\`
+
+### 3. HTTPS
+Service Workers hanya jalan di HTTPS (atau localhost untuk dev). Security requirement ini adalah baik.
+
+### 4. Responsive design
+Harus bekerja optimal di semua ukuran layar — mobile, tablet, desktop.
+
+## Teknologi & framework untuk PWA
+
+### Dari scratch
+- **Vanilla JS + Service Worker API:** Full control, tapi kompleks.
+- **Workbox (Google):** Library yang simplify Service Worker setup.
+
+### Framework modern
+- **React + PWA tools:** Create React App punya PWA template.
+- **Vue + PWA:** Nuxt.js punya built-in PWA support.
+- **Next.js:** Punya next-pwa plugin untuk PWA.
+- **Svelte:** Lightweight, cocok untuk PWA karena performance.
+
+### Platform siap pakai
+- **Firebase Hosting:** Auto-serve PWA, SSL, CDN included.
+- **Netlify / Vercel:** PWA-friendly hosting dengan analytics.
+
+## Checklist membuat PWA
+
+- [ ] Install HTTPS certificate
+- [ ] Buat Web Manifest (manifest.json) dengan icons
+- [ ] Register Service Worker
+- [ ] Implement caching strategy (cache-first vs network-first)
+- [ ] Test offline functionality
+- [ ] Optimize untuk mobile (responsive, touch-friendly)
+- [ ] Test installability di chrome / safari
+- [ ] Setup push notifications (optional tapi recommended)
+- [ ] Test di slow 4G network (Chrome DevTools > Network)
+- [ ] Audit dengan Lighthouse
+- [ ] Setup analytics untuk track install rate
+
+## Benchmark: PWA vs native mobile app
+
+**Case study: Global brand**
+- **Sebelum PWA:** Native iOS app = 20 MB, iOS dev team = 2 orang, update setiap 2 minggu.
+- **Setelah PWA:** Single PWA = 500 KB, web team = 1 orang, update instant.
+- **Result:** User acquisition 3x lebih cepat, retention setara native app.
+
+## Batasan PWA yang perlu diketahui
+
+### 1. Hardware access terbatas
+PWA tidak bisa akses semua hardware native app bisa (Bluetooth, camera lanjut di iOS).
+
+### 2. App store presence optional
+Kecuali PWA Anda juga distribusi di app store (baru di 2023), visibility lebih terbatas.
+
+### 3. iOS support lebih lambat
+Apple adopt PWA features lebih lambat dibanding Android. Tapi support terus improve.
+
+### 4. Dependency pada browser
+PWA jalan di browser — jika browser bug atau update breaking, Anda affected. Native app lebih isolated.
+
+**Kesimpulan:** PWA sangat bagus untuk kebanyakan business case, tapi untuk app yang butuh akses hardware ekstensif (AR, Bluetooth), native app lebih cocok.
+
+## Kapan memilih PWA vs native app
+
+**Pilih PWA jika:**
+- Budget terbatas.
+- Need reach luas & cepat.
+- App adalah productivity / utility (tidak game intensive).
+- Need offline capability.
+- Update frequent penting.
+
+**Pilih native app jika:**
+- Budget besar & timeline flexible.
+- Need akses hardware ekstensif.
+- App adalah game dengan graphics kompleks.
+- Target specific market (hanya iOS atau hanya Android).
+- Need app store presence crucial.
+
+**Hybrid approach:**
+Banyak bisnis mulai PWA dulu (launch cepat, cost low), terus develop native app jika sudah proven dan ada budget.
+
+## Cost breakdown PWA
+
+- **Design & development:** Rp 5-10 juta (timeless untuk website bagus)
+- **Icons & branding:** Rp 1-2 juta
+- **Hosting:** Rp 0-500 ribu/bulan (Firebase / Netlify)
+- **Push notification service:** Gratis-2 juta/bulan tergantung volume
+- **Maintenance:** Rp 2-5 juta/bulan
+
+**Total tahun pertama:** Rp 15-30 juta + hosting. Jauh lebih murah dari native app (Rp 40-100 juta).
+
+## Contoh PWA sukses
+
+- **Twitter Lite:** PWA yang ringan, load di koneksi 2G sekalipun. Engagement meningkat.
+- **Spotify:** Web player yang bekerja offline (cache lagu).
+- **Pinterest:** PWA dengan home screen install. Traffic dari PWA naik 250%.
+- **Telegram:** PWA powerful dengan messaging real-time dan offline support.
+
+## Kesimpulan
+
+PWA adalah **future-proof choice** untuk bisnis yang ingin aplikasi mobile-like experience tanpa cost prohibitive. Kombinasi reach, affordability, dan functionality menjadikan PWA pilihan strategis untuk 2026.
+
+AFSS bisa membantu build PWA Anda — dari design, development, push notifications, hingga deployment. Lihat [layanan PWA dan web app kami](/layanan) atau [konsultasi gratis](/harga) untuk discuss PWA strategy untuk bisnis Anda.
+`,
+  },
+  {
+    slug: 'devops-continuous-deployment',
+    title: 'DevOps dan Continuous Deployment: Mempercepat Development dan Minimalisir Risk',
+    description:
+      'DevOps adalah praktik dan kultur yang mempercepat software development. Pelajari CI/CD, automation, dan bagaimana deployment bisa done setiap hari tanpa fear.',
+    date: '2026-06-20',
+    readMinutes: 9,
+    tags: ['DevOps', 'Teknologi', 'Deployment'],
+    c: '#15243B',
+    c2: '#2BB3A3',
+    excerpt:
+      'DevOps mengatasi gap antara development dan operations. Dengan CI/CD automation, Anda bisa deploy berkali-kali sehari, dengan confidence tinggi.',
+    body: `
+Bayangkan skenario tradisional: developer selesai code → submit ke production → tegang tunggu feedback → jika ada bug, proses perbaikan lama. Atau worse: kode berjalan baik di dev, tapi crash di production.
+
+**DevOps** adalah praktik modern yang solve masalah ini. Dengan automation, testing, dan culture yang tepat, Anda bisa deploy berkali-kali sehari dengan confidence tinggi. Bug ditemukan cepat, fixed cepat, deployed cepat.
+
+## Apa itu DevOps?
+
+DevOps adalah gabungan **development** dan **operations** — breaking down silos antara developer dan ops team. Tujuan: ship software cepat, dengan confidence tinggi, minimal downtime, dan reliable.
+
+Key principle DevOps:
+1. **Automation:** Automate everything yang bisa diautomasi.
+2. **Monitoring:** Monitor aplikasi & infrastructure real-time.
+3. **Testing:** Test otomatis di setiap stage (unit, integration, e2e).
+4. **Collaboration:** Dev & ops bekerja sama, bukan adversarial.
+5. **Continuous improvement:** Regular retrospective, iterate.
+
+## CI/CD: Inti dari DevOps
+
+### Continuous Integration (CI)
+Developer commit kode → server otomatis:
+- Build aplikasi.
+- Run unit tests.
+- Run integration tests.
+- Check code quality (linting, security scan).
+- Hanya jika semua pass, merge ke main branch.
+
+Jika ada failure, developer notified langsung untuk fix. Time cycle: minutes, bukan hours/days.
+
+### Continuous Deployment (CD)
+Kode yang merge ke main → otomatis:
+- Deploy ke staging environment.
+- Run e2e tests.
+- Jika pass, deploy ke production.
+- Monitor untuk anomali.
+- Jika ada issue, automatic rollback.
+
+Hasil: **zero-downtime deployment** — production tidak pernah shutdown.
+
+Dalam praktik, deployment bisa happen berkali-kali per hari tanpa user notice.
+
+## Tools CI/CD yang populer
+
+### GitHub Actions
+Terintegrasi langsung di GitHub. Free untuk public repo.
+
+\`\`\`yaml
+name: CI/CD Pipeline
+on: [push]
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run tests
+        run: npm test
+      - name: Build
+        run: npm run build
+      - name: Deploy
+        run: npm run deploy
+\`\`\`
+
+### GitLab CI/CD
+Built-in CI/CD di GitLab, powerful dan flexible.
+
+### Jenkins
+Open-source, on-premise, sangat powerful tapi setup kompleks.
+
+### CircleCI, Travis CI
+Cloud-based CI services, user-friendly untuk startup.
+
+## Infrastructure as Code (IaC)
+
+Jamannya infrastructure (server, database, network) di-setup manual sudah berlalu. Modern DevOps define infrastructure via code.
+
+### Terraform
+Infrastructure as Code tool yang popular. Define server, database, networking via configuration files.
+
+\`\`\`hcl
+resource "aws_instance" "app_server" {
+  ami           = "ami-0c55b159cbfafe1f0"
+  instance_type = "t2.micro"
+  tags = {
+    Name = "AppServer"
+  }
+}
+\`\`\`
+
+Pro: Version control infrastructure, reproducible environment, easy rollback.
+
+### Docker & Container
+Package aplikasi dengan dependencies dalam container — run identik di dev, staging, production.
+
+\`\`\`dockerfile
+FROM node:16
+WORKDIR /app
+COPY . .
+RUN npm install
+CMD ["node", "index.js"]
+\`\`\`
+
+### Kubernetes
+Orchestrate container di multiple server, auto-scaling, load balancing. Enterprise-grade deployment.
+
+## Monitoring & Observability
+
+Kode deployed !== selesai. Harus monitor 24/7:
+- **Logs:** Centralize logs dari semua aplikasi.
+- **Metrics:** Monitor CPU, memory, latency, error rate.
+- **Tracing:** Understand request flow across services.
+
+Tools: **ELK stack, Prometheus, Datadog, New Relic, CloudWatch**.
+
+Alert jika ada anomali:
+- Error rate naik > 1%.
+- Response time > 1 detik.
+- Server CPU > 80%.
+- Disk space < 10%.
+
+## Testing dalam DevOps
+
+Automation testing adalah cornerstone:
+
+### Unit tests
+Test individual function. Jalankan setiap commit.
+
+### Integration tests
+Test antar components. Jalankan setiap build.
+
+### End-to-end (E2E) tests
+Test workflow user complete. Jalankan sebelum production deploy.
+
+### Load testing
+Simulasi traffic tinggi untuk cek capacity. Run regular (weekly/monthly).
+
+### Security testing
+OWASP scanning, dependency vulnerability check, penetration testing.
+
+Target: **Test coverage > 80%**, semua automated, fail fast.
+
+## Deployment Strategies
+
+### Blue-Green Deployment
+Maintain dua identical production environment (blue & green). Deploy ke green, test, switch traffic. Jika issue, instant rollback ke blue.
+
+### Canary Deployment
+Deploy ke sebagian user dulu (5%), monitor metrics. Jika OK, expand ke 50%, terus 100%. Jika ada issue, rollback instant.
+
+### Rolling deployment
+Update server satu per satu, tanpa downtime. User routed ke server yang belum update.
+
+### Feature flags
+Deploy kode ke production, tapi fitur off. Enable untuk % user tertentu, monitor, terus expand. Jika issue, instant toggle off.
+
+Advantage: Decouple deploy dari feature release.
+
+## Reliability & Disaster Recovery
+
+### SLA (Service Level Agreement)
+Commit uptime tertentu. Contoh: **99.9% uptime** = maksimal 43 menit downtime per bulan.
+
+### MTTR (Mean Time To Recover)
+Seberapa cepat sistem recover dari failure. DevOps aim untuk MTTR kurang dari 15 menit.
+
+### Backup & Disaster Recovery Plan
+- Backup database minimum daily.
+- Test restore regular (jangan mati saat perlu).
+- Multi-region deployment untuk high availability.
+
+### Incident response
+- Dokumentasi runbook untuk common issues.
+- On-call schedule + escalation path.
+- Post-mortem setiap incident untuk continuous improvement.
+
+## Organizational culture dalam DevOps
+
+Technical tools aja tidak cukup. Culture harus align:
+
+### 1. Shared responsibility
+Dev bertanggung jawab production bukan hanya ops. Ops paham development constraint.
+
+### 2. Blame-free culture
+Ketika incident terjadi, fokus pada "bagaimana prevent lagi" bukan "siapa yang salah". Psychological safety encourage reporting dan learning.
+
+### 3. Continuous learning
+Regular training, conference, internal tech talk untuk stay updated dengan technology trends.
+
+### 4. Automation-first mindset
+Manual process = boring & error-prone. Automate dulu, baru manual jika benar-benar tidak bisa.
+
+### 5. Metrics-driven decisions
+Keputusan based on data, bukan "feeling". Measure MTTR, deployment frequency, error rate, customer satisfaction.
+
+## Tahap adopsi DevOps
+
+### Tahap 1: Build & test automation
+- Setup CI/CD pipeline.
+- Automated testing (unit, integration).
+- Standardized build process.
+
+### Tahap 2: Deployment automation
+- Automated deployment ke staging & production.
+- Infrastructure as Code.
+- Monitoring & alerting.
+
+### Tahap 3: Operational excellence
+- Incident response automation.
+- Feature flags & canary deployment.
+- Chaos engineering (intentional test failure untuk learn resilience).
+
+### Tahap 4: Data-driven culture
+- Comprehensive observability.
+- Metrics & KPI yang tracked.
+- Regular retrospectives & improvement cycles.
+
+## ROI dari DevOps
+
+**Cost:**
+- Tools: $1,000-5,000/bulan (GitHub Actions, monitoring, etc).
+- Training: $10,000-20,000 per tahun.
+- Cultural change: Effort significant.
+
+**Benefit:**
+- **Deployment frequency:** 1x per bulan → 10x per hari.
+- **MTTR:** From hours → minutes.
+- **Production incident:** Down 50-80% through better testing.
+- **Team productivity:** 30-40% efficiency gain.
+- **Time to market:** New feature, dari months to weeks.
+
+**Payback period:** Usually 6-12 months, terus positive.
+
+## Kesimpulan
+
+DevOps bukan sekadar tools — ini mindset & culture. Dengan CI/CD automation, infrastructure as code, monitoring, dan blame-free culture, Anda bisa move fast tanpa breaking things.
+
+Di 2026, DevOps adalah standard best practice. Bisnis yang adopt DevOps deploy feature lebih cepat, ship dengan confidence, dan respond ke customer feedback lebih agile.
+
+AFSS punya expertise DevOps — dari setup CI/CD pipeline, containerization, infrastructure, hingga culture coaching. Lihat [layanan teknologi kami](/layanan) atau [konsultasi gratis](/harga) untuk discuss DevOps strategy untuk organisasi Anda.
+`,
+  },
 ]
 
 export const getAllPosts = () =>

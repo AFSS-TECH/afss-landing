@@ -139,6 +139,30 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://afss.tech/blog/devops-continuous-deployment</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://afss.tech/blog/progressive-web-app-pwa</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://afss.tech/blog/api-integration-sistem-bisnis</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://afss.tech/blog/optimasi-kecepatan-website</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://afss.tech/blog/keamanan-website-cyber-security</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
