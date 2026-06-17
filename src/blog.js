@@ -860,19 +860,18 @@ Gambar sering menjadi penyebab utama website lambat. Solusi:
 
 - **Gunakan format modern:** WebP alih-alih JPEG/PNG (lebih ringan 25-35%).
 - **Lazy loading:** Gambar di bawah fold dimuat hanya saat dibutuhkan.
-- **Responsive images:** Gunakan `srcset` agar ponsel tidak download gambar untuk desktop.
+- **Responsive images:** Gunakan srcset agar ponsel tidak download gambar untuk desktop.
 - **Kompresi:** Gunakan tools seperti TinyPNG, ImageOptim, atau Squoosh.
 
-Contoh:
-\`\`\`html
-<img
-  src="image.webp"
-  alt="Deskripsi"
-  loading="lazy"
-  srcset="image-small.webp 480w, image-medium.webp 800w, image-large.webp 1200w"
-  sizes="(max-width: 480px) 100vw, (max-width: 800px) 50vw, 33vw"
-/>
-\`\`\`
+Contoh HTML:
+
+    <img
+      src="image.webp"
+      alt="Deskripsi"
+      loading="lazy"
+      srcset="image-small.webp 480w, image-medium.webp 800w, image-large.webp 1200w"
+      sizes="(max-width: 480px) 100vw, (max-width: 800px) 50vw, 33vw"
+    />
 
 ### 2. Minifikasi dan Kompresi
 - **CSS & JavaScript:** Hapus whitespace dan komentar. Gunakan tools seperti Terser (JS) atau cssnano (CSS).
