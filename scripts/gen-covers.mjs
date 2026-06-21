@@ -369,6 +369,140 @@ const ILLUSTRATIONS = {
     <rect x="776" y="510" width="162" height="14" rx="4" fill="#FFFFFF" opacity="0.14"/>
     <text x="912" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" opacity="0.45">Buka toko online — jangkau lebih banyak pembeli</text>
   `,
+
+  'tren-desain-website-2026': () => `
+    <!-- Browser window frame -->
+    <rect x="668" y="90" width="500" height="360" rx="14" fill="#FFFFFF" opacity="0.10"/>
+    <rect x="668" y="90" width="500" height="38" rx="14" fill="#FFFFFF" opacity="0.16"/>
+    <rect x="668" y="116" width="500" height="12" fill="#FFFFFF" opacity="0.16"/>
+    <!-- traffic dots -->
+    <circle cx="700" cy="109" r="8" fill="#FFFFFF" opacity="0.40"/>
+    <circle cx="722" cy="109" r="8" fill="#FFFFFF" opacity="0.28"/>
+    <circle cx="744" cy="109" r="8" fill="#FFFFFF" opacity="0.20"/>
+    <!-- address bar -->
+    <rect x="768" y="100" width="340" height="18" rx="9" fill="#FFFFFF" opacity="0.20"/>
+    <!-- Hero section mockup inside browser -->
+    <rect x="680" y="140" width="476" height="56" rx="5" fill="#FFFFFF" opacity="0.18"/>
+    <rect x="700" y="152" width="220" height="14" rx="3" fill="#FFFFFF" opacity="0.5"/>
+    <rect x="700" y="172" width="160" height="10" rx="2" fill="#FFFFFF" opacity="0.28"/>
+    <!-- content blocks -->
+    ${[0,1,2].map(i => `<rect x="688" y="${214+i*60}" width="${[240,200,220][i]}" height="12" rx="3" fill="#FFFFFF" opacity="${[0.3,0.22,0.26][i]}"/>`).join('')}
+    ${[0,1,2].map(i => `<rect x="688" y="${234+i*60}" width="${[180,160,190][i]}" height="8" rx="2" fill="#FFFFFF" opacity="${[0.18,0.14,0.16][i]}"/>`).join('')}
+    <!-- right image placeholder -->
+    <rect x="956" y="140" width="200" height="220" rx="8" fill="#FFFFFF" opacity="0.12"/>
+    <!-- trend tags at bottom -->
+    ${['Dark Mode','Micro-UX','AI Personal','Mobile-First'].map((t,i) => `
+      <rect x="${668+i*122}" y="466" width="114" height="36" rx="10" fill="#FFFFFF" opacity="0.14"/>
+      <text x="${668+i*122+57}" y="489" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" opacity="0.75">${t}</text>
+    `).join('')}
+    <text x="918" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" opacity="0.45">Desain modern yang mengkonversi</text>
+  `,
+
+  'aplikasi-mobile-untuk-bisnis': () => `
+    <!-- Large phone -->
+    <rect x="820" y="68" width="178" height="358" rx="28" fill="#FFFFFF" opacity="0.14"/>
+    <rect x="834" y="84" width="150" height="326" rx="16" fill="#FFFFFF" opacity="0.08"/>
+    <!-- notch -->
+    <rect x="878" y="78" width="62" height="14" rx="7" fill="#FFFFFF" opacity="0.25"/>
+    <!-- screen content: app UI -->
+    <rect x="844" y="108" width="130" height="22" rx="4" fill="#FFFFFF" opacity="0.32"/>
+    ${[0,1,2,3].map(i => `
+      <rect x="844" y="${142+i*56}" width="130" height="42" rx="8" fill="#FFFFFF" opacity="${[0.20,0.14,0.18,0.12][i]}"/>
+      <circle cx="862" cy="${163+i*56}" r="10" fill="#FFFFFF" opacity="${[0.40,0.30,0.35,0.25][i]}"/>
+      <rect x="880" y="${155+i*56}" width="80" height="8" rx="2" fill="#FFFFFF" opacity="0.35"/>
+      <rect x="880" y="${169+i*56}" width="56" height="6" rx="2" fill="#FFFFFF" opacity="0.20"/>
+    `).join('')}
+    <!-- home indicator -->
+    <rect x="883" y="384" width="52" height="5" rx="3" fill="#FFFFFF" opacity="0.35"/>
+    <!-- notification badge -->
+    <circle cx="982" cy="106" r="20" fill="#FFFFFF" opacity="0.22"/>
+    <text x="982" y="114" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" opacity="0.9">3</text>
+    <!-- benefit pills on left -->
+    ${['Push Notif','Offline Mode','Biometric','Camera/GPS'].map((t,i) => `
+      <rect x="668" y="${120+i*78}" width="136" height="40" rx="10" fill="#FFFFFF" opacity="0.14"/>
+      <text x="736" y="${146+i*78}" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" opacity="0.75">${t}</text>
+      <line x1="804" y1="${140+i*78}" x2="820" y2="${140+i*78}" stroke="#FFFFFF" stroke-width="1.5" opacity="0.25"/>
+    `).join('')}
+    <text x="918" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" opacity="0.45">App mobile · konversi lebih tinggi</text>
+  `,
+
+  'erp-cloud-vs-on-premise': () => `
+    <!-- VS split: cloud (left) vs on-premise (right) -->
+    <!-- Cloud side -->
+    <rect x="668" y="90" width="228" height="360" rx="14" fill="#FFFFFF" opacity="0.09"/>
+    <text x="782" y="130" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="800" fill="#FFFFFF" opacity="0.70">Cloud ERP</text>
+    <!-- cloud icon -->
+    <ellipse cx="782" cy="188" rx="56" ry="36" fill="#FFFFFF" opacity="0.18"/>
+    <ellipse cx="748" cy="200" rx="36" ry="28" fill="#FFFFFF" opacity="0.18"/>
+    <ellipse cx="816" cy="196" rx="38" ry="30" fill="#FFFFFF" opacity="0.18"/>
+    <rect x="740" y="204" width="84" height="24" rx="0" fill="#FFFFFF" opacity="0.18"/>
+    <!-- cloud benefits -->
+    ${['Cepat deploy','Subscription','Auto update','Skalabel'].map((t,i) => `
+      <text x="700" y="${264+i*38}" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" opacity="0.65">✓ ${t}</text>
+    `).join('')}
+    <!-- VS badge -->
+    <rect x="878" y="242" width="62" height="62" rx="31" fill="#FFFFFF" opacity="0.18"/>
+    <text x="909" y="281" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="900" fill="#FFFFFF" opacity="0.9">VS</text>
+    <!-- On-Premise side -->
+    <rect x="952" y="90" width="216" height="360" rx="14" fill="#FFFFFF" opacity="0.09"/>
+    <text x="1060" y="130" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="800" fill="#FFFFFF" opacity="0.70">On-Premise</text>
+    <!-- server icon -->
+    ${[0,1,2].map(i => `<rect x="1006" y="${160+i*30}" width="108" height="22" rx="4" fill="#FFFFFF" opacity="${[0.22,0.16,0.12][i]}"/>
+      <circle cx="1098" cy="${171+i*30}" r="5" fill="#FFFFFF" opacity="${[0.6,0.4,0.3][i]}"/>
+    `).join('')}
+    ${['Full kontrol','Biaya awal','IT mandiri','Kustomisasi'].map((t,i) => `
+      <text x="968" y="${264+i*38}" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" opacity="0.65">✓ ${t}</text>
+    `).join('')}
+    <!-- bottom comparison bars -->
+    <rect x="668" y="468" width="500" height="2" fill="#FFFFFF" opacity="0.12"/>
+    <text x="918" y="510" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" opacity="0.50">Pilih berdasarkan kebutuhan bisnis Anda</text>
+  `,
+
+  'ai-otomasi-bisnis-2026': () => `
+    <!-- Central AI brain / neural net -->
+    <circle cx="910" cy="280" r="68" fill="#FFFFFF" opacity="0.14"/>
+    <circle cx="910" cy="280" r="48" fill="#FFFFFF" opacity="0.10"/>
+    <text x="910" y="268" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="900" fill="#FFFFFF" opacity="0.85">AI</text>
+    <text x="910" y="292" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" opacity="0.60">Engine</text>
+    <!-- Neural connections & satellite nodes -->
+    ${[
+      { label: 'Chatbot', x: 700,  y: 168, ex: 865, ey: 248 },
+      { label: 'Analytics', x: 1080, y: 168, ex: 955, ey: 248 },
+      { label: 'Prediksi', x: 688,  y: 310, ex: 842, ey: 284 },
+      { label: 'Pricing', x: 1092, y: 310, ex: 978, ey: 284 },
+      { label: 'HR AI', x: 762,  y: 430, ex: 876, ey: 334 },
+      { label: 'Quality', x: 1018, y: 430, ex: 944, ey: 334 },
+    ].map(n => `
+      <line x1="${n.x+44}" y1="${n.y+20}" x2="${n.ex}" y2="${n.ey}" stroke="#FFFFFF" stroke-width="1.5" opacity="0.20" stroke-dasharray="6 4"/>
+      <rect x="${n.x}" y="${n.y}" width="88" height="40" rx="10" fill="#FFFFFF" opacity="0.13"/>
+      <text x="${n.x+44}" y="${n.y+25}" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" opacity="0.72">${n.label}</text>
+    `).join('')}
+    <!-- glow ring -->
+    <circle cx="910" cy="280" r="120" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.09" stroke-dasharray="10 7"/>
+    <!-- ROI stat badge -->
+    <rect x="836" y="492" width="148" height="44" rx="22" fill="#FFFFFF" opacity="0.20"/>
+    <text x="910" y="520" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="900" fill="#FFFFFF" opacity="0.95">ROI +40%</text>
+    <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" opacity="0.45">Otomasi cerdas · efisiensi nyata</text>
+  `,
+
+  'kenapa-bisnis-perlu-website': () => `
+    <!-- 10 reasons grid: 2 cols x 5 rows of reason cards -->
+    ${Array.from({length:10},(_,i) => {
+      const col = i % 2
+      const row = Math.floor(i / 2)
+      const x = 668 + col * 252
+      const y = 90 + row * 88
+      return `<rect x="${x}" y="${y}" width="238" height="74" rx="10" fill="#FFFFFF" opacity="${i<4?'0.16':i<7?'0.12':'0.09'}"/>
+      <circle cx="${x+26}" cy="${y+26}" r="16" fill="#FFFFFF" opacity="${i<4?'0.30':i<7?'0.22':'0.16'}"/>
+      <text x="${x+26}" y="${y+32}" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" opacity="0.9">${i+1}</text>
+      <rect x="${x+52}" y="${y+16}" width="${[148,138,160,142,150,136,152,144,140,130][i]}" height="10" rx="3" fill="#FFFFFF" opacity="${i<4?'0.35':i<7?'0.28':'0.20'}"/>
+      <rect x="${x+52}" y="${y+34}" width="${[110,100,120,108,112,96,108,100,96,90][i]}" height="7" rx="2" fill="#FFFFFF" opacity="${i<4?'0.20':i<7?'0.15':'0.10'}"/>
+      `
+    }).join('')}
+    <!-- big number badge -->
+    <rect x="700" y="534" width="436" height="2" fill="#FFFFFF" opacity="0.12"/>
+    <text x="918" y="568" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" opacity="0.45">10 alasan bisnis Anda butuh website</text>
+  `,
 }
 
 // Fallback: decorative circles if slug has no illustration

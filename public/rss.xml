@@ -6,7 +6,97 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Tue, 16 Jun 2026 17:51:44 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2026 16:34:05 GMT</lastBuildDate>
+    <item>
+      <title>10 Alasan Bisnis Anda Wajib Punya Website Profesional di 2026</title>
+      <link>https://afss.tech/blog/kenapa-bisnis-perlu-website</link>
+      <guid>https://afss.tech/blog/kenapa-bisnis-perlu-website</guid>
+      <description>Di 2026, tidak punya website berarti tidak terlihat oleh sebagian besar calon pelanggan Anda. Inilah 10 alasan bisnis Anda butuh website profesional — bukan sekadar akun media sosial.</description>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Website</category>
+      <category>Bisnis</category>
+      <category>Strategi Digital</category>
+    </item>
+    <item>
+      <title>AI dan Otomasi: Cara Teknologi Mengubah Cara Bisnis Beroperasi di 2026</title>
+      <link>https://afss.tech/blog/ai-otomasi-bisnis-2026</link>
+      <guid>https://afss.tech/blog/ai-otomasi-bisnis-2026</guid>
+      <description>AI bukan lagi milik perusahaan raksasa. Di 2026, bisnis skala menengah Indonesia sudah bisa mengadopsi AI untuk efisiensi operasional yang nyata — tanpa biaya astronomis.</description>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Teknologi</category>
+      <category>AI</category>
+      <category>Bisnis Digital</category>
+    </item>
+    <item>
+      <title>ERP Cloud vs On-Premise: Panduan Memilih untuk Bisnis Indonesia 2026</title>
+      <link>https://afss.tech/blog/erp-cloud-vs-on-premise</link>
+      <guid>https://afss.tech/blog/erp-cloud-vs-on-premise</guid>
+      <description>ERP cloud atau on-premise? Keputusan ini berdampak besar pada biaya, fleksibilitas, dan keamanan data bisnis Anda. Pelajari perbandingannya sebelum memutuskan.</description>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 GMT</pubDate>
+      <category>ERP</category>
+      <category>Bisnis</category>
+      <category>Teknologi</category>
+    </item>
+    <item>
+      <title>Mengapa Bisnis Anda Membutuhkan Aplikasi Mobile di 2026 — Bukan Hanya Website</title>
+      <link>https://afss.tech/blog/aplikasi-mobile-untuk-bisnis</link>
+      <guid>https://afss.tech/blog/aplikasi-mobile-untuk-bisnis</guid>
+      <description>Website sudah tidak cukup untuk sebagian bisnis. Pelajari kapan waktunya berinvestasi di aplikasi mobile — dan apa manfaat konkretnya untuk bisnis Anda.</description>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi Mobile</category>
+      <category>Bisnis</category>
+      <category>Strategi Digital</category>
+    </item>
+    <item>
+      <title>Tren Desain Website 2026 yang Wajib Anda Terapkan Sekarang</title>
+      <link>https://afss.tech/blog/tren-desain-website-2026</link>
+      <guid>https://afss.tech/blog/tren-desain-website-2026</guid>
+      <description>Desain website bukan sekadar estetika — ini strategi konversi. Pelajari tren 2026 yang mengubah cara pengguna berinteraksi dengan bisnis online Anda.</description>
+      <pubDate>Sun, 21 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Website</category>
+      <category>Desain</category>
+      <category>Tren 2026</category>
+    </item>
+    <item>
+      <title>DevOps dan Continuous Deployment: Mempercepat Development dan Minimalisir Risk</title>
+      <link>https://afss.tech/blog/devops-continuous-deployment</link>
+      <guid>https://afss.tech/blog/devops-continuous-deployment</guid>
+      <description>DevOps mengatasi gap antara development dan operations. Dengan CI/CD automation, Anda bisa deploy berkali-kali sehari, dengan confidence tinggi.</description>
+      <pubDate>Sat, 20 Jun 2026 00:00:00 GMT</pubDate>
+      <category>DevOps</category>
+      <category>Teknologi</category>
+      <category>Deployment</category>
+    </item>
+    <item>
+      <title>Progressive Web App (PWA): Website yang Bekerja Seperti Aplikasi Mobile</title>
+      <link>https://afss.tech/blog/progressive-web-app-pwa</link>
+      <guid>https://afss.tech/blog/progressive-web-app-pwa</guid>
+      <description>PWA memberikan pengalaman seperti aplikasi mobile, tapi tanpa harus di-download dari app store. Lebih cepat, lebih ekonomis, dan lebih reach.</description>
+      <pubDate>Fri, 19 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Web App</category>
+      <category>Teknologi</category>
+      <category>App</category>
+    </item>
+    <item>
+      <title>API Integration: Menghubungkan Sistem Bisnis Anda Dengan Teknologi Modern</title>
+      <link>https://afss.tech/blog/api-integration-sistem-bisnis</link>
+      <guid>https://afss.tech/blog/api-integration-sistem-bisnis</guid>
+      <description>Sistem bisnis yang terisolasi = data tidak sinkron dan operasional tidak efisien. API integration menyatukan semua tools Anda.</description>
+      <pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate>
+      <category>API</category>
+      <category>Integrasi</category>
+      <category>Sistem</category>
+    </item>
+    <item>
+      <title>Optimasi Kecepatan Website: Panduan Lengkap Meningkatkan Performance 2026</title>
+      <link>https://afss.tech/blog/optimasi-kecepatan-website</link>
+      <guid>https://afss.tech/blog/optimasi-kecepatan-website</guid>
+      <description>Setiap detik loading tambahan = penurunan konversi. Panduan lengkap mengoptimalkan kecepatan website supaya pengunjung tidak pergi.</description>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Website</category>
+      <category>Performa</category>
+      <category>Teknologi</category>
+    </item>
     <item>
       <title>Keamanan Website: Langkah Penting Melindungi Bisnis Online Anda</title>
       <link>https://afss.tech/blog/keamanan-website-cyber-security</link>
