@@ -240,6 +240,30 @@ const SERVICE_CONTENT = {
 }
 
 /* ══════════════════════════════════════════════════ LAYANAN INDEX (/layanan) */
+const SVC_CATS = [
+  {
+    id: 'web',
+    icon: 'fa-solid fa-window-maximize',
+    label: 'Website & Digital Marketing',
+    sub: 'Dari landing page hingga company profile — cepat, SEO-ready, dan siap mengkonversi pengunjung.',
+    slugs: ['pembuatan-website', 'jasa-pembuatan-landing-page', 'jasa-pembuatan-company-profile', 'jasa-pembuatan-website-medan'],
+  },
+  {
+    id: 'app',
+    icon: 'fa-solid fa-layer-group',
+    label: 'Aplikasi & Sistem',
+    sub: 'Solusi digital yang mengotomasi dan menskalakan operasional bisnis Anda dari satu platform terpusat.',
+    slugs: ['aplikasi-mobile', 'web-app', 'jasa-pembuatan-erp', 'jasa-pembuatan-dashboard'],
+  },
+  {
+    id: 'ecomm',
+    icon: 'fa-solid fa-tags',
+    label: 'E-Commerce & Maintenance',
+    sub: 'Buka channel penjualan baru dan pastikan sistem Anda selalu jalan, aman, dan up-to-date.',
+    slugs: ['jasa-pembuatan-toko-online', 'maintenance'],
+  },
+]
+
 export function LayananIndex() {
   const title = 'Layanan AFSS — Jasa Website, Aplikasi Mobile, Dashboard & ERP'
   const desc = 'Jasa pembuatan website custom, aplikasi mobile Android & iOS, toko online, dashboard bisnis, ERP, dan maintenance. Software house Indonesia, tim lokal Medan.'
@@ -259,6 +283,7 @@ export function LayananIndex() {
         <meta name="twitter:image" content={`${SITE_URL}/og.png`} />
       </Head>
 
+      {/* Hero */}
       <section className="page-hero">
         <div className="hero-glow" />
         <div className="container">
@@ -280,34 +305,56 @@ export function LayananIndex() {
         </div>
       </section>
 
-      <section style={{ paddingTop: 40 }}>
-        <div className="container">
-          <motion.div className="svc-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
-            {products.map((p) => (
-              <motion.div key={p.slug} className={`svc-card spot ${p.hot ? 'hot' : ''}`} variants={fadeUp} whileHover={{ y: -8 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }} onMouseMove={onSpot}>
-                {p.hot && <span className="hot-tag">Terpopuler</span>}
-                <div className="svc-top">
-                  <div className="svc-ico"><Icon icon={p.icon} /></div>
-                  <span className="metric-badge"><Icon icon="fa-solid fa-circle-check" /> {p.metric}</span>
-                </div>
-                <div className="svc-name">{p.name}</div>
-                <p className="svc-desc">{p.desc}</p>
-                <ul className="svc-feats">{p.feats.map((f) => <li key={f}><Icon icon="fa-solid fa-check" /> {f}</li>)}</ul>
-                <div className="svc-foot" style={{ display: 'flex', gap: 10 }}>
-                  <Link className="btn btn-pri" to={`/layanan/${p.slug}`}>Detail <Icon icon="fa-solid fa-arrow-right" /></Link>
-                  <a className="btn btn-ghost" href={waLink(`Halo ${BRAND.short}, saya tertarik dengan layanan ${p.name}.`)} target="_blank" rel="noreferrer">Konsultasi</a>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+      {/* Category sections */}
+      <div className="svc-pg-wrap">
+        {SVC_CATS.map((cat) => {
+          const catProds = products.filter((p) => cat.slugs.includes(p.slug))
+          return (
+            <section key={cat.id} className="svc-cat-sec">
+              <div className="container">
+                {/* Category header */}
+                <Reveal className="svc-cat-hd">
+                  <div className="svc-cat-ico"><Icon icon={cat.icon} /></div>
+                  <div>
+                    <div className="svc-cat-name">{cat.label}</div>
+                    <div className="svc-cat-sub">{cat.sub}</div>
+                  </div>
+                </Reveal>
 
-      <section className="cta-band" style={{ paddingTop: 40 }}>
+                {/* Cards grid */}
+                <motion.div className="svc-pg-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+                  {catProds.map((p) => (
+                    <motion.div key={p.slug} variants={fadeUp} whileHover={{ y: -5 }} transition={{ type: 'spring', stiffness: 300, damping: 24 }}>
+                      <Link to={`/layanan/${p.slug}`} className={`svc-item${p.hot ? ' hot' : ''}`}>
+                        {p.hot && <span className="hot-tag">Terpopuler</span>}
+                        <div className="svc-item-hd">
+                          <div className="svc-item-ico"><Icon icon={p.icon} /></div>
+                          <span className="svc-item-metric">{p.metric}</span>
+                        </div>
+                        <div className="svc-item-name">{p.name}</div>
+                        <p className="svc-item-desc">{p.desc}</p>
+                        <div className="svc-item-cta">
+                          Lihat detail <Icon icon="fa-solid fa-arrow-right" />
+                        </div>
+                      </Link>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              </div>
+            </section>
+          )
+        })}
+      </div>
+
+      {/* CTA */}
+      <section className="cta-band">
         <Reveal className="cta-card">
           <h2>Tidak yakin layanan mana yang <span className="ital">tepat</span>?</h2>
           <p>Ceritakan kebutuhan bisnis Anda — kami bantu pilihkan solusi terbaik. Konsultasi gratis, tanpa komitmen.</p>
-          <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis tentang kebutuhan digital bisnis saya.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Konsultasi Gratis</a>
+          <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center' }}>
+            <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis tentang kebutuhan digital bisnis saya.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Konsultasi Gratis</a>
+            <Link className="btn btn-ghost btn-lg" to="/ajukan-proyek"><Icon icon="fa-solid fa-rocket" /> Ajukan Proyek</Link>
+          </div>
         </Reveal>
       </section>
     </>
