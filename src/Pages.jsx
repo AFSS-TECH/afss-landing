@@ -219,6 +219,24 @@ const SERVICE_CONTENT = {
     ],
     relatedSlugs: ['jasa-pembuatan-erp', 'web-app'],
   },
+  'jasa-pembuatan-crm': {
+    headline: 'Jasa Pembuatan Sistem CRM Custom untuk Tim Sales',
+    subline: 'Dari lead masuk hingga closing — seluruh pipeline penjualan terkelola rapi dalam satu platform, dengan reminder otomatis agar tidak ada prospek yang terlewat.',
+    longDesc: 'Banyak bisnis kehilangan potensi penjualan bukan karena produknya kurang, tapi karena data pelanggan tersebar di WhatsApp, Excel, dan catatan pribadi sales. CRM (Customer Relationship Management) mengubah itu: semua kontak, history komunikasi, dan status deal tersimpan di satu tempat — bisa diakses siapa saja yang berwenang, kapan saja, dari perangkat apa pun. Hasilnya? Tim sales lebih fokus closing, manajer punya visibilitas penuh, dan tidak ada prospek hangat yang mendingin karena terlupakan.',
+    benefits: [
+      { icon: 'fa-solid fa-users', title: 'Database Pelanggan Terpusat', desc: 'Semua kontak, perusahaan, dan riwayat komunikasi tersimpan rapi — tidak ada data hilang saat sales resign atau berganti tim.' },
+      { icon: 'fa-solid fa-diagram-project', title: 'Pipeline Penjualan Visual', desc: 'Pantau setiap deal dari prospek hingga closing dalam tampilan kanban yang mudah dipahami — manajemen tahu persis posisi setiap peluang.' },
+      { icon: 'fa-solid fa-bell', title: 'Reminder & Follow-Up Otomatis', desc: 'Sistem mengingatkan tim sales untuk follow-up tepat waktu — prospek hangat tidak akan pernah mendingin karena lupa dihubungi.' },
+      { icon: 'fa-solid fa-chart-line', title: 'Laporan Performa Tim', desc: 'Dashboard yang menampilkan konversi, jumlah deal per sales, rata-rata waktu closing, dan target vs realisasi — semua real-time.' },
+    ],
+    serviceFaq: [
+      { q: 'Apa bedanya CRM dengan sistem manajemen (dashboard) biasa?', a: 'CRM difokuskan untuk siklus penjualan: lead, follow-up, deal, dan pelanggan. Dashboard umum lebih luas — bisa untuk inventory, keuangan, atau operasional. Jika tujuan Anda meningkatkan produktivitas tim sales dan konversi, CRM adalah solusi yang tepat.' },
+      { q: 'Berapa lama pengerjaan CRM?', a: 'CRM dengan fitur standar (kontak, pipeline, reminder, laporan) biasanya 4–6 minggu. Fitur tambahan seperti integrasi WhatsApp Business API, email tracking, atau lead scoring bisa menambah 2–4 minggu.' },
+      { q: 'Apakah bisa diintegrasikan dengan WhatsApp?', a: 'Bisa. Kami integrasikan dengan WhatsApp Business API sehingga percakapan WhatsApp langsung tercatat di CRM, dan tim bisa kirim pesan dari dalam sistem — semua terlacak otomatis.' },
+      { q: 'Berapa user yang bisa mengakses?', a: 'Tidak ada batasan jumlah user di lisensi. Sistem dibangun multi-user dengan role berbeda: admin, manajer sales, dan sales representative — masing-masing melihat data dan fitur sesuai wewenangnya.' },
+    ],
+    relatedSlugs: ['jasa-pembuatan-dashboard', 'web-app'],
+  },
   'jasa-pembuatan-website-medan': {
     headline: 'Jasa Pembuatan Website Medan — Software House Lokal Sumatera Utara',
     subline: 'Tim developer lokal Medan yang memahami kebutuhan bisnis Sumatera Utara — website, aplikasi, dan sistem digital dengan komunikasi langsung.',
@@ -253,7 +271,7 @@ const SVC_CATS = [
     icon: 'fa-solid fa-layer-group',
     label: 'Aplikasi & Sistem',
     sub: 'Solusi digital yang mengotomasi dan menskalakan operasional bisnis Anda dari satu platform terpusat.',
-    slugs: ['aplikasi-mobile', 'web-app', 'jasa-pembuatan-erp', 'jasa-pembuatan-dashboard'],
+    slugs: ['aplikasi-mobile', 'web-app', 'jasa-pembuatan-crm', 'jasa-pembuatan-erp', 'jasa-pembuatan-dashboard'],
   },
   {
     id: 'ecomm',
