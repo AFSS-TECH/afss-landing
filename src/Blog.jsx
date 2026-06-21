@@ -128,40 +128,44 @@ export function BlogIndex() {
       {/* Search + Tag filter */}
       <div className="blog-controls">
         <div className="container">
-          <div className="blog-search-wrap">
-            <Icon icon="fa-solid fa-magnifying-glass" />
-            <input
-              className="blog-search"
-              type="search"
-              placeholder="Cari artikel..."
-              value={query}
-              onChange={(e) => handleSearch(e.target.value)}
-              aria-label="Cari artikel"
-            />
-            {query && (
-              <button className="blog-search-clear" onClick={() => handleSearch('')} aria-label="Hapus pencarian">
-                <Icon icon="fa-solid fa-xmark" />
-              </button>
-            )}
-          </div>
-          <div className="blog-tags" role="list" aria-label="Filter topik">
-            <button
-              className={`blog-tag-chip${!effectiveTag ? ' active' : ''}`}
-              onClick={() => handleTag('')}
-              aria-pressed={!effectiveTag}
-            >
-              Semua
-            </button>
-            {availableTags.map((t) => (
-              <button
-                key={t}
-                className={`blog-tag-chip${effectiveTag === t ? ' active' : ''}`}
-                onClick={() => handleTag(t)}
-                aria-pressed={effectiveTag === t}
-              >
-                {t}
-              </button>
-            ))}
+          <div className="blog-controls-inner">
+            <div className="blog-search-wrap">
+              <Icon icon="fa-solid fa-magnifying-glass" />
+              <input
+                className="blog-search"
+                type="search"
+                placeholder="Cari artikel..."
+                value={query}
+                onChange={(e) => handleSearch(e.target.value)}
+                aria-label="Cari artikel"
+              />
+              {query && (
+                <button className="blog-search-clear" onClick={() => handleSearch('')} aria-label="Hapus pencarian">
+                  <Icon icon="fa-solid fa-xmark" />
+                </button>
+              )}
+            </div>
+            <div className="blog-tags-wrap">
+              <div className="blog-tags" role="list" aria-label="Filter topik">
+                <button
+                  className={`blog-tag-chip${!effectiveTag ? ' active' : ''}`}
+                  onClick={() => handleTag('')}
+                  aria-pressed={!effectiveTag}
+                >
+                  Semua
+                </button>
+                {availableTags.map((t) => (
+                  <button
+                    key={t}
+                    className={`blog-tag-chip${effectiveTag === t ? ' active' : ''}`}
+                    onClick={() => handleTag(t)}
+                    aria-pressed={effectiveTag === t}
+                  >
+                    {t}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -190,7 +194,10 @@ export function BlogIndex() {
                         </div>
                       </div>
                       <div className="blog-card-body">
-                        <div className="blog-meta">{formatDateId(p.date)} · {p.readMinutes} menit baca</div>
+                        <div className="blog-meta">
+                          <span>Terbit {formatDateId(p.date)}</span>
+                          {p.updatedAt && p.updatedAt !== p.date && <span className="blog-meta-upd"> · Diperbarui {formatDateId(p.updatedAt)}</span>}
+                        </div>
                         <h2 className="blog-card-title">{p.title}</h2>
                         <p className="blog-card-excerpt">{p.excerpt}</p>
                         <span className="blog-readmore">Baca selengkapnya <Icon icon="fa-solid fa-arrow-right" /></span>
@@ -320,7 +327,10 @@ export function BlogPost() {
               <Link to="/">Beranda</Link> <span>/</span> <Link to="/blog">Blog</Link> <span>/</span> <span className="bc-current">{post.tags[0]}</span>
             </nav>
             <h1 className="post-title">{post.title}</h1>
-            <div className="post-meta">{formatDateId(post.date)} · {post.readMinutes} menit baca</div>
+            <div className="post-meta">
+              Terbit {formatDateId(post.date)}
+              {post.updatedAt && post.updatedAt !== post.date && <span className="blog-meta-upd"> · Diperbarui {formatDateId(post.updatedAt)}</span>}
+            </div>
             <div className="post-tag-row">
               {post.tags.map((t) => (
                 <Link key={t} to={`/blog?tag=${encodeURIComponent(t)}`} className="post-tag-chip">{t}</Link>
@@ -356,7 +366,7 @@ export function BlogPost() {
                       </div>
                     </div>
                     <div className="blog-card-body">
-                      <div className="blog-meta">{formatDateId(p.date)} · {p.readMinutes} menit baca</div>
+                      <div className="blog-meta">Terbit {formatDateId(p.date)}</div>
                       <h2 className="blog-card-title">{p.title}</h2>
                       <span className="blog-readmore">Baca selengkapnya <Icon icon="fa-solid fa-arrow-right" /></span>
                     </div>

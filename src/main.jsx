@@ -2,7 +2,7 @@ import './index.css'
 import { ViteReactSSG } from 'vite-react-ssg'
 import { Layout, Home } from './App.jsx'
 import { BlogIndex, BlogPost } from './Blog.jsx'
-import { LayananIndex, LayananDetail, About, Contact, Portfolio, Privacy, Terms, Keunggulan, Harga, Faq, Karir } from './Pages.jsx'
+import { LayananIndex, LayananDetail, About, Contact, Portfolio, Privacy, Terms, Keunggulan, Harga, Faq, Karir, AjukanProyek, Dashboard } from './Pages.jsx'
 import { posts } from './blog.js'
 import { products } from './data.js'
 
@@ -37,6 +37,8 @@ export const routes = [
       { path: 'harga', element: <Harga /> },
       { path: 'faq', element: <Faq /> },
       { path: 'karir', element: <Karir /> },
+      { path: 'ajukan-proyek', element: <AjukanProyek /> },
+      { path: 'dashboard', element: <Dashboard /> },
     ],
   },
 ]

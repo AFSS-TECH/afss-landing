@@ -209,9 +209,9 @@ function Nav() {
   }, [])
   const links = [
     { label: 'Layanan', to: '/layanan' },
-    { label: 'Keunggulan', to: '/keunggulan' },
     { label: 'Portofolio', to: '/portofolio' },
     { label: 'Harga', to: '/harga' },
+    { label: 'Blog', to: '/blog' },
     { label: 'FAQ', to: '/faq' },
     { label: 'Karir', to: '/karir' },
   ]
@@ -224,7 +224,7 @@ function Nav() {
           {links.map((lnk) => (
             <li key={lnk.label}><Link to={lnk.to}>{lnk.label}</Link></li>
           ))}
-          <li><Link to="/blog">Blog</Link></li>
+          <li><Link to="/ajukan-proyek" className="nav-cta-link">Ajukan Proyek</Link></li>
           <li><a href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis.`)} className="btn btn-pri" target="_blank" rel="noreferrer">Konsultasi Gratis</a></li>
         </ul>
         <button className="hamburger" aria-label="Menu" onClick={() => setOpen((o) => !o)}><span /><span /><span /></button>
@@ -235,7 +235,7 @@ function Nav() {
             {links.map((lnk) => (
               <Link key={lnk.label} to={lnk.to} onClick={close}>{lnk.label}</Link>
             ))}
-            <Link to="/blog" onClick={close}>Blog</Link>
+            <Link to="/ajukan-proyek" onClick={close}>Ajukan Proyek</Link>
             <a href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis.`)} className="btn btn-pri" target="_blank" rel="noreferrer" onClick={close}>Konsultasi Gratis</a>
           </motion.div>
         )}

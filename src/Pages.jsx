@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link, useParams } from 'react-router-dom'
 import { Head } from 'vite-react-ssg'
@@ -1348,6 +1348,419 @@ export function Karir() {
           <p>Kirim CV dan portofolio Anda ke kami — kami selalu tertarik bertemu talenta terbaik untuk kolaborasi ke depan.</p>
           <a className="btn btn-pri btn-lg" href={`mailto:${BRAND.email}`}><Icon icon="fa-solid fa-envelope" /> Kirim CV via Email</a>
         </Reveal>
+      </section>
+    </>
+  )
+}
+
+/* ══════════════════════════════════════════════════ AJUKAN PROYEK (/ajukan-proyek) */
+export function AjukanProyek() {
+  const [form, setForm] = useState({ nama: '', kontak: '', perusahaan: '', jenis: '', anggaran: '', timeline: '', deskripsi: '' })
+  const [submitted, setSubmitted] = useState(false)
+  const [errors, setErrors] = useState({})
+
+  const set = (k) => (e) => { setForm((f) => ({ ...f, [k]: e.target.value })); setErrors((er) => ({ ...er, [k]: '' })) }
+
+  const validate = () => {
+    const e = {}
+    if (!form.nama.trim()) e.nama = 'Nama wajib diisi'
+    if (!form.kontak.trim()) e.kontak = 'Email / WhatsApp wajib diisi'
+    if (!form.jenis) e.jenis = 'Pilih jenis proyek'
+    if (!form.deskripsi.trim()) e.deskripsi = 'Deskripsi proyek wajib diisi'
+    return e
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const errs = validate()
+    if (Object.keys(errs).length > 0) { setErrors(errs); return }
+    if (typeof window !== 'undefined') {
+      const all = JSON.parse(localStorage.getItem('afss_submissions') || '[]')
+      all.push({ id: Date.now(), ...form, status: 'Baru', tanggal: new Date().toISOString() })
+      localStorage.setItem('afss_submissions', JSON.stringify(all))
+    }
+    setSubmitted(true)
+    if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const title = 'Ajukan Proyek — AFSS | Mulai Proyek Digital Anda'
+  const desc = 'Ajukan proyek website, aplikasi, atau sistem digital Anda ke AFSS. Ceritakan kebutuhan bisnis Anda dan tim kami akan menghubungi dalam 1×24 jam kerja.'
+
+  if (submitted) {
+    return (
+      <>
+        <Head>
+          <title>{title}</title>
+          <meta name="robots" content="noindex" />
+        </Head>
+        <section className="page-hero" style={{ minHeight: '60vh', display: 'flex', alignItems: 'center' }}>
+          <div className="hero-glow" />
+          <div className="container">
+            <Reveal>
+              <div className="form-success">
+                <div className="success-ico"><Icon icon="fa-solid fa-circle-check" /></div>
+                <h1 className="page-title">Pengajuan <span className="ital">terkirim!</span></h1>
+                <p className="page-sub">Terima kasih, <strong>{form.nama}</strong>. Tim kami akan menghubungi Anda di <strong>{form.kontak}</strong> dalam 1×24 jam kerja untuk mendiskusikan proyek Anda.</p>
+                <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center', marginTop: 32 }}>
+                  <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya baru mengajukan proyek "${form.jenis}" melalui website AFSS. Nama saya ${form.nama}.`)} target="_blank" rel="noreferrer">
+                    <Icon icon="fa-brands fa-whatsapp" /> Chat Langsung
+                  </a>
+                  <Link className="btn btn-ghost btn-lg" to="/">Kembali ke Beranda</Link>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      </>
+    )
+  }
+
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <link rel="canonical" href={`${SITE_URL}/ajukan-proyek`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:url" content={`${SITE_URL}/ajukan-proyek`} />
+        <meta property="og:image" content={`${SITE_URL}/og.png`} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={desc} />
+        <meta name="twitter:image" content={`${SITE_URL}/og.png`} />
+      </Head>
+
+      <section className="page-hero">
+        <div className="hero-glow" />
+        <div className="container">
+          <div className="page-hero-grid">
+            <Reveal>
+              <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Ajukan Proyek' }]} />
+              <div className="eyebrow"><Icon icon="fa-solid fa-rocket" /> Ajukan Proyek</div>
+              <h1 className="page-title">Mulai proyek <span className="ital">digital</span> Anda bersama kami</h1>
+              <p className="page-sub">Ceritakan kebutuhan bisnis Anda melalui formulir berikut. Tim kami akan menghubungi Anda dalam 1×24 jam kerja untuk mendiskusikan lebih lanjut — tanpa biaya atau komitmen.</p>
+            </Reveal>
+            <Reveal className="page-hero-stat-col">
+              <HeroStatCard />
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ paddingTop: 40, paddingBottom: 100 }}>
+        <div className="container container-narrow">
+          <form className="proj-form" onSubmit={handleSubmit} noValidate>
+            <div className="form-row-2">
+              <div className="form-group">
+                <label className="form-label">Nama Lengkap <span className="form-req">*</span></label>
+                <input className={`form-ctrl${errors.nama ? ' err' : ''}`} type="text" placeholder="Nama Anda" value={form.nama} onChange={set('nama')} />
+                {errors.nama && <span className="form-err-msg">{errors.nama}</span>}
+              </div>
+              <div className="form-group">
+                <label className="form-label">Email / WhatsApp <span className="form-req">*</span></label>
+                <input className={`form-ctrl${errors.kontak ? ' err' : ''}`} type="text" placeholder="Email atau nomor WA aktif" value={form.kontak} onChange={set('kontak')} />
+                {errors.kontak && <span className="form-err-msg">{errors.kontak}</span>}
+              </div>
+            </div>
+
+            <div className="form-row-2">
+              <div className="form-group">
+                <label className="form-label">Nama Perusahaan / Usaha</label>
+                <input className="form-ctrl" type="text" placeholder="Opsional" value={form.perusahaan} onChange={set('perusahaan')} />
+              </div>
+              <div className="form-group">
+                <label className="form-label">Jenis Proyek <span className="form-req">*</span></label>
+                <select className={`form-ctrl${errors.jenis ? ' err' : ''}`} value={form.jenis} onChange={set('jenis')}>
+                  <option value="">-- Pilih Jenis Proyek --</option>
+                  <option>Website / Company Profile</option>
+                  <option>Landing Page</option>
+                  <option>Toko Online</option>
+                  <option>Aplikasi Mobile (Android / iOS)</option>
+                  <option>Web App / Dashboard</option>
+                  <option>Sistem ERP</option>
+                  <option>Maintenance &amp; Support</option>
+                  <option>Lainnya</option>
+                </select>
+                {errors.jenis && <span className="form-err-msg">{errors.jenis}</span>}
+              </div>
+            </div>
+
+            <div className="form-row-2">
+              <div className="form-group">
+                <label className="form-label">Estimasi Anggaran</label>
+                <select className="form-ctrl" value={form.anggaran} onChange={set('anggaran')}>
+                  <option value="">-- Pilih Rentang --</option>
+                  <option>Di bawah Rp 5 juta</option>
+                  <option>Rp 5–15 juta</option>
+                  <option>Rp 15–50 juta</option>
+                  <option>Di atas Rp 50 juta</option>
+                  <option>Belum tahu / fleksibel</option>
+                </select>
+              </div>
+              <div className="form-group">
+                <label className="form-label">Target Waktu Selesai</label>
+                <select className="form-ctrl" value={form.timeline} onChange={set('timeline')}>
+                  <option value="">-- Pilih Target --</option>
+                  <option>Kurang dari 1 bulan</option>
+                  <option>1–3 bulan</option>
+                  <option>3–6 bulan</option>
+                  <option>Lebih dari 6 bulan</option>
+                  <option>Belum tahu / fleksibel</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label className="form-label">Deskripsi Proyek <span className="form-req">*</span></label>
+              <textarea
+                className={`form-ctrl form-ta${errors.deskripsi ? ' err' : ''}`}
+                placeholder="Ceritakan kebutuhan Anda: fitur yang diinginkan, target pengguna, referensi desain, atau pertanyaan khusus..."
+                rows={6}
+                value={form.deskripsi}
+                onChange={set('deskripsi')}
+              />
+              {errors.deskripsi && <span className="form-err-msg">{errors.deskripsi}</span>}
+            </div>
+
+            <div className="form-submit-row">
+              <button className="btn btn-pri btn-lg" type="submit">
+                <Icon icon="fa-solid fa-paper-plane" /> Kirim Pengajuan
+              </button>
+              <p className="form-note">
+                Atau langsung chat via{' '}
+                <a href={waLink(`Halo ${BRAND.short}, saya ingin mengajukan proyek digital.`)} target="_blank" rel="noreferrer">
+                  <Icon icon="fa-brands fa-whatsapp" /> WhatsApp
+                </a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </>
+  )
+}
+
+/* ══════════════════════════════════════════════════ DASHBOARD ADMIN (/dashboard) */
+const STATUS_LIST = ['Baru', 'Dihubungi', 'Proses', 'Selesai', 'Ditolak']
+const ADMIN_PIN = 'afss2026'
+
+export function Dashboard() {
+  const [isClient, setIsClient] = useState(false)
+  const [unlocked, setUnlocked] = useState(false)
+  const [pin, setPin] = useState('')
+  const [pinError, setPinError] = useState(false)
+  const [submissions, setSubmissions] = useState([])
+  const [filter, setFilter] = useState('Semua')
+
+  useEffect(() => {
+    setIsClient(true)
+    if (typeof window !== 'undefined' && sessionStorage.getItem('afss_admin') === ADMIN_PIN) {
+      setUnlocked(true)
+      loadSubs()
+    }
+  }, [])
+
+  const loadSubs = () => {
+    const raw = typeof window !== 'undefined' ? localStorage.getItem('afss_submissions') : null
+    setSubmissions(raw ? [...JSON.parse(raw)].reverse() : [])
+  }
+
+  const login = (e) => {
+    e.preventDefault()
+    if (pin === ADMIN_PIN) {
+      sessionStorage.setItem('afss_admin', ADMIN_PIN)
+      setUnlocked(true)
+      setPinError(false)
+      loadSubs()
+    } else {
+      setPinError(true)
+    }
+  }
+
+  const updateStatus = (id, status) => {
+    const all = JSON.parse(localStorage.getItem('afss_submissions') || '[]')
+    localStorage.setItem('afss_submissions', JSON.stringify(all.map((s) => (s.id === id ? { ...s, status } : s))))
+    loadSubs()
+  }
+
+  const del = (id) => {
+    if (!window.confirm('Hapus pengajuan ini?')) return
+    const all = JSON.parse(localStorage.getItem('afss_submissions') || '[]')
+    localStorage.setItem('afss_submissions', JSON.stringify(all.filter((s) => s.id !== id)))
+    loadSubs()
+  }
+
+  /* SSG — return nothing until client hydrates */
+  if (!isClient) return null
+
+  if (!unlocked) {
+    return (
+      <>
+        <Head>
+          <title>Admin Dashboard | AFSS</title>
+          <meta name="robots" content="noindex,nofollow" />
+        </Head>
+        <section className="page-hero" style={{ minHeight: '70vh', display: 'flex', alignItems: 'center' }}>
+          <div className="hero-glow" />
+          <div className="container">
+            <Reveal>
+              <div className="eyebrow"><Icon icon="fa-solid fa-lock" /> Admin Area</div>
+              <h1 className="page-title">Dashboard <span className="ital">Admin</span></h1>
+              <p className="page-sub" style={{ marginBottom: 32 }}>Masukkan PIN untuk mengakses dashboard pengajuan proyek.</p>
+              <form className="pin-form" onSubmit={login}>
+                <input
+                  type="password"
+                  className={`form-ctrl${pinError ? ' err' : ''}`}
+                  placeholder="PIN Admin"
+                  value={pin}
+                  onChange={(e) => { setPin(e.target.value); setPinError(false) }}
+                  autoFocus
+                  style={{ maxWidth: 280 }}
+                />
+                {pinError && <p className="form-err-msg">PIN salah. Silakan coba lagi.</p>}
+                <button className="btn btn-pri" type="submit" style={{ width: 'fit-content' }}>
+                  Masuk <Icon icon="fa-solid fa-arrow-right" />
+                </button>
+              </form>
+            </Reveal>
+          </div>
+        </section>
+      </>
+    )
+  }
+
+  const tabs = ['Semua', ...STATUS_LIST]
+  const filtered = filter === 'Semua' ? submissions : submissions.filter((s) => s.status === filter)
+  const countOf = (st) => submissions.filter((s) => s.status === st).length
+
+  return (
+    <>
+      <Head>
+        <title>Dashboard Pengajuan | AFSS Admin</title>
+        <meta name="robots" content="noindex,nofollow" />
+      </Head>
+
+      {/* Header */}
+      <section className="page-hero" style={{ paddingBottom: 40 }}>
+        <div className="hero-glow" />
+        <div className="container">
+          <Reveal>
+            <div className="eyebrow"><Icon icon="fa-solid fa-gauge-high" /> Admin</div>
+            <h1 className="page-title">Dashboard <span className="ital">Pengajuan</span></h1>
+            <p className="page-sub">Kelola semua pengajuan proyek yang masuk dari calon klien.</p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section style={{ paddingTop: 0, paddingBottom: 32 }}>
+        <div className="container">
+          <div className="dash-stats">
+            <div className="dash-stat-card">
+              <div className="dash-stat-n">{submissions.length}</div>
+              <div className="dash-stat-l">Total Pengajuan</div>
+            </div>
+            <div className="dash-stat-card baru">
+              <div className="dash-stat-n">{countOf('Baru')}</div>
+              <div className="dash-stat-l">Belum Ditangani</div>
+            </div>
+            <div className="dash-stat-card proses">
+              <div className="dash-stat-n">{countOf('Proses')}</div>
+              <div className="dash-stat-l">Sedang Proses</div>
+            </div>
+            <div className="dash-stat-card selesai">
+              <div className="dash-stat-n">{countOf('Selesai')}</div>
+              <div className="dash-stat-l">Selesai</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Filter tabs */}
+      <div className="dash-filter-bar">
+        <div className="container">
+          <div className="dash-tabs">
+            {tabs.map((t) => (
+              <button key={t} className={`dash-tab${filter === t ? ' active' : ''}`} onClick={() => setFilter(t)}>
+                {t}
+                {t !== 'Semua' && countOf(t) > 0 && <span className="dash-tab-count">{countOf(t)}</span>}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Submissions list */}
+      <section style={{ paddingTop: 24, paddingBottom: 80 }}>
+        <div className="container">
+          {filtered.length === 0 ? (
+            <div className="blog-empty">
+              <Icon icon="fa-solid fa-inbox" />
+              <p>Belum ada pengajuan{filter !== 'Semua' ? ` berstatus "${filter}"` : ''}.</p>
+              {filter !== 'Semua' && (
+                <button className="btn btn-ghost" onClick={() => setFilter('Semua')}>Lihat semua</button>
+              )}
+            </div>
+          ) : (
+            <div className="submission-list">
+              {filtered.map((s) => (
+                <div key={s.id} className={`submission-card status-border-${s.status.toLowerCase()}`}>
+                  <div className="sub-head">
+                    <div>
+                      <div className="sub-name">{s.nama}</div>
+                      <div className="sub-date">
+                        <Icon icon="fa-solid fa-clock" />{' '}
+                        {new Date(s.tanggal).toLocaleString('id-ID', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' })}
+                      </div>
+                    </div>
+                    <span className={`status-badge status-${s.status.toLowerCase()}`}>{s.status}</span>
+                  </div>
+
+                  <div className="sub-body">
+                    {s.perusahaan && <div className="sub-row"><Icon icon="fa-solid fa-building" /> {s.perusahaan}</div>}
+                    <div className="sub-row"><Icon icon="fa-solid fa-phone" /> {s.kontak}</div>
+                    <div className="sub-row"><Icon icon="fa-solid fa-layer-group" /> {s.jenis}</div>
+                    {s.anggaran && <div className="sub-row"><Icon icon="fa-solid fa-coins" /> {s.anggaran}</div>}
+                    {s.timeline && <div className="sub-row"><Icon icon="fa-regular fa-calendar" /> {s.timeline}</div>}
+                  </div>
+
+                  {s.deskripsi && (
+                    <div className="sub-desc">{s.deskripsi}</div>
+                  )}
+
+                  <div className="sub-actions">
+                    <div className="status-btns">
+                      {STATUS_LIST.map((st) => (
+                        <button
+                          key={st}
+                          className={`status-btn${s.status === st ? ' active' : ''}`}
+                          data-status={st.toLowerCase()}
+                          onClick={() => updateStatus(s.id, st)}
+                        >
+                          {st}
+                        </button>
+                      ))}
+                    </div>
+                    <div className="sub-act-right">
+                      <a
+                        className="btn btn-ghost"
+                        href={`https://wa.me/${s.kontak.replace(/\D/g, '')}`}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <Icon icon="fa-brands fa-whatsapp" /> Hubungi
+                      </a>
+                      <button className="btn-del" onClick={() => del(s.id)} aria-label="Hapus">
+                        <Icon icon="fa-solid fa-trash" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </section>
     </>
   )
