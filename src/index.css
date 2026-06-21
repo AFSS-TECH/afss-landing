@@ -829,3 +829,63 @@ select.form-ctrl { cursor: pointer; background-image: url("data:image/svg+xml,%3
   .svc-pg-grid { grid-template-columns: 1fr 1fr; }
   .svc-item { padding: 20px 18px 18px; }
 }
+
+/* ════════════════════════════════════════════════
+   HALAMAN HARGA — produk individual & bundle
+   ════════════════════════════════════════════════ */
+
+/* ── Produk individual ── */
+.price-prod-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); gap: 18px; }
+.price-prod-card { position: relative; display: flex; flex-direction: column; background: var(--surface); border-radius: var(--r-lg); padding: 28px 26px 24px; box-shadow: var(--shadow-sm); border: 1.5px solid var(--line); transition: box-shadow .25s var(--ease), transform .25s var(--ease); }
+.price-prod-card:hover { box-shadow: var(--shadow); transform: translateY(-5px); }
+.price-prod-card.hot { border-color: var(--accent); box-shadow: var(--shadow); }
+.price-prod-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+.price-prod-ico { width: 46px; height: 46px; border-radius: 13px; display: grid; place-items: center; font-size: 1.15rem; }
+.price-prod-cat { font-size: .67rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; padding: 4px 10px; border-radius: 50px; border: 1px solid; }
+.price-prod-name { font-size: 1.08rem; font-weight: 800; color: var(--ink); margin-bottom: 7px; line-height: 1.25; }
+.price-prod-desc { font-size: .84rem; color: var(--muted); line-height: 1.65; flex: 1; margin-bottom: 16px; }
+.price-prod-price-wrap { margin-bottom: 14px; }
+.price-prod-note { font-size: .7rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 2px; }
+.price-prod-price { font-size: 1.7rem; font-weight: 800; color: var(--ink); font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -.03em; line-height: 1; }
+.price-prod-feats { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+.price-prod-feats li { display: flex; align-items: center; gap: 8px; font-size: .82rem; color: var(--ink-2); }
+.price-prod-feats li i { color: var(--accent); font-size: .74rem; flex-shrink: 0; }
+.price-prod-card .btn { margin-top: auto; width: 100%; justify-content: center; background: var(--ink); color: var(--paper); }
+.price-prod-card.hot .btn { background: var(--accent); }
+
+/* ── Paket kombinasi / bundle ── */
+.price-bundle-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.price-bundle-card { position: relative; display: flex; flex-direction: column; background: var(--surface); border-radius: var(--r-lg); padding: 30px 28px 26px; box-shadow: var(--shadow-sm); border: 1.5px solid var(--line); transition: box-shadow .25s var(--ease), transform .25s var(--ease); }
+.price-bundle-card:hover { box-shadow: var(--shadow); transform: translateY(-6px); }
+.price-bundle-card.hot { background: var(--ink); color: var(--paper); border-color: var(--ink); box-shadow: var(--shadow-lg); }
+.price-bundle-card.hot::after { content: ''; position: absolute; inset: 0; border-radius: inherit; background: radial-gradient(70% 90% at 100% 0%, rgba(43,179,163,.22), transparent 55%); pointer-events: none; }
+.price-bundle-card.hot > * { position: relative; z-index: 1; }
+.price-bundle-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 16px; }
+.price-bundle-ico { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; font-size: 1.1rem; color: var(--accent); background: var(--accent-l); flex-shrink: 0; }
+.price-bundle-card.hot .price-bundle-ico { background: rgba(255,255,255,.12); color: #fff; }
+.price-bundle-tag { font-size: .67rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent); padding: 4px 10px; border-radius: 50px; white-space: nowrap; }
+.price-bundle-card.hot .price-bundle-tag { background: rgba(255,255,255,.12); border-color: transparent; color: var(--accent-2); }
+.price-bundle-name { font-size: 1.18rem; font-weight: 800; margin-bottom: 8px; line-height: 1.2; }
+.price-bundle-desc { font-size: .86rem; color: var(--muted); line-height: 1.65; margin-bottom: 18px; flex: 1; }
+.price-bundle-card.hot .price-bundle-desc { color: #B2BECC; }
+.price-bundle-items { display: flex; flex-direction: column; gap: 7px; margin-bottom: 22px; }
+.price-bundle-item { display: flex; align-items: center; gap: 9px; font-size: .84rem; color: var(--ink-2); }
+.price-bundle-card.hot .price-bundle-item { color: #D3DBE4; }
+.price-bundle-item i { color: var(--accent); font-size: .74rem; flex-shrink: 0; }
+.price-bundle-card.hot .price-bundle-item i { color: var(--accent-2); }
+.price-bundle-price-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+.price-bundle-price { font-size: 1.75rem; font-weight: 800; font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -.03em; line-height: 1; }
+.price-bundle-save { font-size: .71rem; font-weight: 700; color: #16a34a; background: #f0fdf4; padding: 4px 10px; border-radius: 50px; white-space: nowrap; }
+.price-bundle-card.hot .price-bundle-save { background: rgba(255,255,255,.12); color: var(--accent-2); }
+.price-bundle-card .btn { width: 100%; justify-content: center; margin-top: auto; background: var(--ink); color: var(--paper); }
+.price-bundle-card.hot .btn { background: var(--accent); color: #fff; }
+
+@media (max-width: 768px) {
+  .price-prod-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+  .price-bundle-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+}
+@media (max-width: 480px) {
+  .price-prod-grid { grid-template-columns: 1fr 1fr; }
+  .price-prod-card { padding: 20px 18px 18px; }
+  .price-prod-price { font-size: 1.4rem; }
+}

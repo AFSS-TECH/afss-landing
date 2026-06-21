@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Link, useParams } from 'react-router-dom'
 import { Head } from 'vite-react-ssg'
 import { Icon } from './Icon.jsx'
-import { BRAND, products, why, showcase, stats, waLink, getProductBySlug, pricing, faqs } from './data.js'
+import { BRAND, products, why, showcase, stats, waLink, getProductBySlug, pricing, pricingBundles, faqs } from './data.js'
 
 const SITE_URL = 'https://afss.tech'
 
@@ -1158,8 +1158,11 @@ export function Keunggulan() {
 
 /* ══════════════════════════════════════════════════ HARGA (/harga) */
 export function Harga() {
-  const title = 'Harga Jasa Pembuatan Website, Aplikasi & ERP Custom | AFSS'
-  const desc = 'Lihat estimasi harga pembuatan landing page, company profile, toko online, dashboard bisnis, aplikasi mobile, dan ERP custom bersama AFSS. Mulai Rp 1 juta.'
+  const title = 'Harga Jasa Website, Aplikasi & Sistem | AFSS — Transparan, Tanpa Biaya Tersembunyi'
+  const desc = 'Landing page Rp 1,5 jt, company profile Rp 6 jt, ERP Rp 20 jt, app mobile Rp 15 jt, e-commerce Rp 35 jt, marketplace Rp 50 jt. Paket kombinasi hemat tersedia.'
+
+  const catColor = { 'Website': 'var(--accent)', 'Sistem': '#1E88A8', 'Mobile': '#8B5CF6', 'E-Commerce': '#D97706' }
+
   return (
     <>
       <Head>
@@ -1176,48 +1179,108 @@ export function Harga() {
         <meta name="twitter:image" content={`${SITE_URL}/og.png`} />
       </Head>
 
+      {/* Hero */}
       <section className="page-hero">
         <div className="hero-glow" />
         <div className="container">
           <div className="page-hero-grid">
             <Reveal>
-              <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Paket Harga' }]} />
-              <div className="eyebrow"><Icon icon="fa-solid fa-tags" /> Paket Harga</div>
+              <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Harga' }]} />
+              <div className="eyebrow"><Icon icon="fa-solid fa-tags" /> Harga</div>
               <h1 className="page-title">Harga <span className="ital">transparan</span>, tanpa biaya tersembunyi</h1>
-              <p className="page-sub">Pilih paket yang sesuai skala bisnis Anda. Semua harga adalah estimasi awal — final mengikuti ruang lingkup yang disepakati bersama.</p>
+              <p className="page-sub">Semua harga adalah estimasi awal. Harga final ditentukan setelah konsultasi gratis dan ruang lingkup proyek disepakati bersama.</p>
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
-                <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi harga untuk proyek digital saya.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Konsultasi Harga</a>
+                <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya ingin tanya harga untuk proyek digital saya.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Tanya Harga Gratis</a>
+                <Link className="btn btn-ghost btn-lg" to="/ajukan-proyek"><Icon icon="fa-solid fa-rocket" /> Ajukan Proyek</Link>
               </div>
             </Reveal>
-            <Reveal className="page-hero-stat-col">
-              <HeroStatCard />
-            </Reveal>
+            <Reveal className="page-hero-stat-col"><HeroStatCard /></Reveal>
           </div>
         </div>
       </section>
 
-      <section style={{ paddingTop: 60, paddingBottom: 80 }}>
+      {/* ── Produk individual ── */}
+      <section style={{ paddingTop: 60, paddingBottom: 24 }}>
         <div className="container">
-          <motion.div className="price-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+          <Reveal className="sec-header center">
+            <div className="eyebrow"><Icon icon="fa-solid fa-box-open" /> Produk</div>
+            <h2 className="sec-title">Harga per <span className="ital">produk</span></h2>
+            <p className="sec-sub">Pilih produk sesuai kebutuhan, atau lihat paket kombinasi hemat di bawah.</p>
+          </Reveal>
+          <motion.div className="price-prod-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
             {pricing.map((p) => (
-              <motion.div className={`price-card spot ${p.hot ? 'hot' : ''}`} key={p.name} variants={fadeUp} whileHover={{ y: -8 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }} onMouseMove={onSpot}>
+              <motion.div key={p.name} className={`price-prod-card${p.hot ? ' hot' : ''}`} variants={fadeUp} whileHover={{ y: -5 }} transition={{ type: 'spring', stiffness: 300, damping: 24 }}>
                 {p.hot && <span className="hot-tag">Paling diminati</span>}
-                <div className="price-name">{p.name}</div>
-                <div className="price-tagline">{p.tagline}</div>
-                <div className="price-amt"><span className="price-note">{p.note}</span>{p.price}</div>
-                <ul className="price-feats">{p.feats.map((f) => <li key={f}><Icon icon="fa-solid fa-check" /> {f}</li>)}</ul>
-                <a className="btn" href={waLink(`Halo ${BRAND.short}, saya tertarik dengan paket ${p.name}.`)} target="_blank" rel="noreferrer">{p.cta} <Icon icon="fa-solid fa-arrow-right" /></a>
+                <div className="price-prod-top">
+                  <div className="price-prod-ico" style={{ color: catColor[p.category], background: `color-mix(in srgb, ${catColor[p.category]} 12%, transparent)` }}>
+                    <Icon icon={p.icon} />
+                  </div>
+                  <span className="price-prod-cat" style={{ color: catColor[p.category], background: `color-mix(in srgb, ${catColor[p.category]} 10%, transparent)`, borderColor: `color-mix(in srgb, ${catColor[p.category]} 25%, transparent)` }}>
+                    {p.category}
+                  </span>
+                </div>
+                <div className="price-prod-name">{p.name}</div>
+                <p className="price-prod-desc">{p.desc}</p>
+                <div className="price-prod-price-wrap">
+                  <div className="price-prod-note">{p.note}</div>
+                  <div className="price-prod-price">{p.price}</div>
+                </div>
+                <ul className="price-prod-feats">
+                  {p.feats.map((f) => <li key={f}><Icon icon="fa-solid fa-check" /> {f}</li>)}
+                </ul>
+                <a className="btn btn-pri" href={waLink(`Halo ${BRAND.short}, saya tertarik dengan ${p.name} (${p.price}). Boleh konsultasi?`)} target="_blank" rel="noreferrer">
+                  Konsultasi <Icon icon="fa-solid fa-arrow-right" />
+                </a>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
+      {/* ── Paket kombinasi ── */}
+      <section style={{ paddingTop: 60, paddingBottom: 80 }}>
+        <div className="container">
+          <Reveal className="sec-header center">
+            <div className="eyebrow"><Icon icon="fa-solid fa-layer-group" /> Paket Kombinasi</div>
+            <h2 className="sec-title">Bundle lebih hemat, <span className="ital">hasil lebih lengkap</span></h2>
+            <p className="sec-sub">Kombinasi produk yang sering dipakai bersama — dengan harga lebih terjangkau dibanding beli terpisah.</p>
+          </Reveal>
+          <motion.div className="price-bundle-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+            {pricingBundles.map((b) => (
+              <motion.div key={b.name} className={`price-bundle-card${b.hot ? ' hot' : ''}`} variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }}>
+                <div className="price-bundle-top">
+                  <div className="price-bundle-ico"><Icon icon={b.icon} /></div>
+                  <span className="price-bundle-tag">{b.tag}</span>
+                </div>
+                <div className="price-bundle-name">{b.name}</div>
+                <p className="price-bundle-desc">{b.desc}</p>
+                <ul className="price-bundle-items">
+                  {b.items.map((item) => (
+                    <li key={item} className="price-bundle-item"><Icon icon="fa-solid fa-circle-check" /> {item}</li>
+                  ))}
+                </ul>
+                <div className="price-bundle-price-row">
+                  <div className="price-bundle-price">{b.price}</div>
+                  <span className="price-bundle-save">{b.save}</span>
+                </div>
+                <a className="btn" href={waLink(`Halo ${BRAND.short}, saya tertarik dengan ${b.name} (${b.price}). Boleh konsultasi lebih lanjut?`)} target="_blank" rel="noreferrer">
+                  Mulai Konsultasi <Icon icon="fa-solid fa-arrow-right" />
+                </a>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA */}
       <section className="cta-band" style={{ paddingTop: 0 }}>
         <Reveal className="cta-card">
-          <h2>Tidak yakin paket mana yang <span className="ital">tepat</span>?</h2>
-          <p>Ceritakan kebutuhan bisnis Anda — kami bantu pilihkan paket yang paling sesuai. Konsultasi gratis, tanpa komitmen.</p>
-          <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi tentang paket harga yang sesuai untuk kebutuhan saya.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Konsultasi Harga Gratis</a>
+          <h2>Tidak yakin produk atau paket mana yang <span className="ital">tepat</span>?</h2>
+          <p>Ceritakan kebutuhan bisnis Anda — kami bantu pilihkan solusi yang paling sesuai. Konsultasi gratis, tanpa komitmen.</p>
+          <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center' }}>
+            <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi pilihan paket yang sesuai untuk bisnis saya.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Konsultasi Gratis</a>
+            <Link className="btn btn-ghost btn-lg" to="/ajukan-proyek"><Icon icon="fa-solid fa-rocket" /> Ajukan Proyek</Link>
+          </div>
         </Reveal>
       </section>
     </>
