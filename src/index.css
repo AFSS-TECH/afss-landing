@@ -889,3 +889,7 @@ select.form-ctrl { cursor: pointer; background-image: url("data:image/svg+xml,%3
   .price-prod-card { padding: 20px 18px 18px; }
   .price-prod-price { font-size: 1.4rem; }
 }
+
+/* harga normal dicoret di bundle card */
+.price-bundle-normal { font-size: .8rem; color: var(--muted); text-decoration: line-through; margin-bottom: 2px; }
+.price-bundle-card.hot .price-bundle-normal { color: #6B7A90; }

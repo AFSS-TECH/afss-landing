@@ -1260,7 +1260,10 @@ export function Harga() {
                   ))}
                 </ul>
                 <div className="price-bundle-price-row">
-                  <div className="price-bundle-price">{b.price}</div>
+                  <div>
+                    {b.normalPrice && <div className="price-bundle-normal">{b.normalPrice}</div>}
+                    <div className="price-bundle-price">{b.price}</div>
+                  </div>
                   <span className="price-bundle-save">{b.save}</span>
                 </div>
                 <a className="btn" href={waLink(`Halo ${BRAND.short}, saya tertarik dengan ${b.name} (${b.price}). Boleh konsultasi lebih lanjut?`)} target="_blank" rel="noreferrer">
