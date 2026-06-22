@@ -8,12 +8,14 @@ import { posts } from './blog.js'
 import { products } from './data.js'
 
 // Multi-route SSG: every route is prerendered to its own static HTML file for full crawlability.
+// NOTE: `staging` branch → deploys to staging.afss.tech. The simplified homepage (StagingHome)
+// is the index here; the live homepage (Home) stays on `main` → afss.tech.
 export const routes = [
   {
     path: '/',
-    element: <Layout />,
+    element: <StagingLayout />,
     children: [
-      { index: true, element: <Home /> },
+      { index: true, element: <StagingHome /> },
       // Blog
       { path: 'blog', element: <BlogIndex /> },
       {
@@ -40,14 +42,6 @@ export const routes = [
       { path: 'karir', element: <Karir /> },
       { path: 'ajukan-proyek', element: <AjukanProyek /> },
       { path: 'dashboard', element: <Dashboard /> },
-    ],
-  },
-  // ── Disposable simplified-homepage preview (/staging). Delete this block + Staging.jsx before going live. ──
-  {
-    path: '/staging',
-    element: <StagingLayout />,
-    children: [
-      { index: true, element: <StagingHome /> },
     ],
   },
 ]
