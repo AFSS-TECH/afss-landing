@@ -3,6 +3,7 @@ import { ViteReactSSG } from 'vite-react-ssg'
 import { Layout, Home } from './App.jsx'
 import { BlogIndex, BlogPost } from './Blog.jsx'
 import { LayananIndex, LayananDetail, About, Contact, Portfolio, Privacy, Terms, Keunggulan, Harga, Faq, Karir, AjukanProyek, Dashboard } from './Pages.jsx'
+import { StagingLayout, StagingHome } from './Staging.jsx'
 import { posts } from './blog.js'
 import { products } from './data.js'
 
@@ -39,6 +40,14 @@ export const routes = [
       { path: 'karir', element: <Karir /> },
       { path: 'ajukan-proyek', element: <AjukanProyek /> },
       { path: 'dashboard', element: <Dashboard /> },
+    ],
+  },
+  // ── Disposable simplified-homepage preview (/staging). Delete this block + Staging.jsx before going live. ──
+  {
+    path: '/staging',
+    element: <StagingLayout />,
+    children: [
+      { index: true, element: <StagingHome /> },
     ],
   },
 ]

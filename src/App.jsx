@@ -199,7 +199,7 @@ function AreaChart({ id, data, big = false }) {
 }
 
 /* ════════════════════════════════════════════════ NAV */
-function Nav() {
+export function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   useEffect(() => {
@@ -245,7 +245,7 @@ function Nav() {
 }
 
 /* ── Reusable mockup (portfolio) ── */
-function Mock({ item }) {
+export function Mock({ item }) {
   return (
     <div className="mock" style={{ '--c': item.c, '--c2': item.c2 }}>
       <div className="mock-top"><i style={{ background: '#FF6058' }} /><i style={{ background: '#FFBD2E' }} /><i style={{ background: '#28C840' }} /></div>
@@ -635,10 +635,10 @@ function CtaBand() {
 }
 
 /* ════════════════════════════════════════════════ FOOTER */
-function Footer() {
+export function Footer({ trimmed = false }) {
   return (
     <footer>
-      <div className="footer-grid">
+      <div className="footer-grid" style={trimmed ? { gridTemplateColumns: '2fr 1.2fr' } : undefined}>
         <div>
           <Logo footer />
           <p className="ft-legal">{BRAND.legal}</p>
@@ -652,6 +652,7 @@ function Footer() {
             <a href={waLink(`Halo ${BRAND.short}!`)} target="_blank" rel="noreferrer" className="soc" aria-label="WhatsApp"><Icon icon="fa-brands fa-whatsapp" /></a>
           </div>
         </div>
+        {!trimmed && (<>
         <div>
           <div className="ft-head">Layanan</div>
           <ul className="ft-links">
@@ -673,6 +674,7 @@ function Footer() {
             <li><Link to="/karir">Karir</Link></li>
           </ul>
         </div>
+        </>)}
         <div>
           <div className="ft-head">Kontak</div>
           <ul className="ft-links">
