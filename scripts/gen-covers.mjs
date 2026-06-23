@@ -503,6 +503,146 @@ const ILLUSTRATIONS = {
     <rect x="700" y="534" width="436" height="2" fill="#FFFFFF" opacity="0.12"/>
     <text x="918" y="568" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" opacity="0.45">10 alasan bisnis Anda butuh website</text>
   `,
+
+  'sistem-crm-untuk-bisnis': () => `
+    <!-- Central CRM hub -->
+    <circle cx="910" cy="260" r="64" fill="#FFFFFF" opacity="0.18"/>
+    <text x="910" y="248" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="900" fill="#FFFFFF" opacity="0.9">CRM</text>
+    <text x="910" y="272" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" opacity="0.60">360° View</text>
+    ${[
+      { label: 'Kontak',   x: 690,  y: 148, ex: 862, ey: 232 },
+      { label: 'Pipeline', x: 1085, y: 148, ex: 958, ey: 232 },
+      { label: 'Email',    x: 680,  y: 300, ex: 846, ey: 268 },
+      { label: 'Laporan',  x: 1090, y: 300, ex: 974, ey: 268 },
+      { label: 'Service',  x: 760,  y: 420, ex: 878, ey: 314 },
+      { label: 'Analytics',x: 1010, y: 420, ex: 942, ey: 314 },
+    ].map(n => `
+      <line x1="${n.x+50}" y1="${n.y+20}" x2="${n.ex}" y2="${n.ey}" stroke="#FFFFFF" stroke-width="1.5" opacity="0.20" stroke-dasharray="6 4"/>
+      <rect x="${n.x}" y="${n.y}" width="100" height="40" rx="10" fill="#FFFFFF" opacity="0.14"/>
+      <text x="${n.x+50}" y="${n.y+25}" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" opacity="0.72">${n.label}</text>
+    `).join('')}
+    <circle cx="910" cy="260" r="118" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.09" stroke-dasharray="10 7"/>
+    <rect x="830" y="476" width="160" height="44" rx="22" fill="#FFFFFF" opacity="0.20"/>
+    <text x="910" y="504" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="900" fill="#FFFFFF" opacity="0.95">+34% Produktif</text>
+    <text x="910" y="550" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">Kelola pelanggan dengan sistem terpadu</text>
+  `,
+
+  'cloud-computing-untuk-bisnis': () => `
+    <!-- Cloud icon center -->
+    <ellipse cx="910" cy="220" rx="120" ry="74" fill="#FFFFFF" opacity="0.16"/>
+    <ellipse cx="840" cy="244" rx="72" ry="54" fill="#FFFFFF" opacity="0.14"/>
+    <ellipse cx="980" cy="240" rx="76" ry="58" fill="#FFFFFF" opacity="0.14"/>
+    <rect x="784" y="260" width="252" height="52" rx="0" fill="#FFFFFF" opacity="0.14"/>
+    <!-- cloud label -->
+    <text x="910" y="245" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="900" fill="#FFFFFF" opacity="0.85">Cloud</text>
+    <!-- server racks below -->
+    ${[0,1,2].map(i => `
+      <rect x="${720+i*168}" y="336" width="140" height="100" rx="10" fill="#FFFFFF" opacity="${[0.14,0.18,0.12][i]}"/>
+      <rect x="${730+i*168}" y="348" width="120" height="18" rx="4" fill="#FFFFFF" opacity="0.25"/>
+      <rect x="${730+i*168}" y="374" width="120" height="18" rx="4" fill="#FFFFFF" opacity="0.18"/>
+      <rect x="${730+i*168}" y="400" width="120" height="18" rx="4" fill="#FFFFFF" opacity="0.14"/>
+      <circle cx="${848+i*168}" cy="357" r="5" fill="#FFFFFF" opacity="0.6"/>
+    `).join('')}
+    <!-- connection lines from cloud to servers -->
+    ${[790, 910, 1030].map(x => `<line x1="${x}" y1="290" x2="${x}" y2="336" stroke="#FFFFFF" stroke-width="2" opacity="0.22" stroke-dasharray="6 3"/>`).join('')}
+    <!-- benefit chips -->
+    ${['Skalabel','Aman','Hemat','Anywhere'].map((t,i) => `
+      <rect x="${668+i*122}" y="462" width="114" height="36" rx="10" fill="#FFFFFF" opacity="0.14"/>
+      <text x="${668+i*122+57}" y="485" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" opacity="0.75">${t}</text>
+    `).join('')}
+    <text x="918" y="550" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">Infrastruktur enterprise · harga UMKM</text>
+  `,
+
+  'ui-ux-design-terbaik': () => `
+    <!-- Layered design frames -->
+    <rect x="668" y="90" width="500" height="340" rx="18" fill="#FFFFFF" opacity="0.07"/>
+    <rect x="680" y="102" width="476" height="316" rx="14" fill="#FFFFFF" opacity="0.07"/>
+    <!-- browser chrome -->
+    <rect x="680" y="102" width="476" height="36" rx="14" fill="#FFFFFF" opacity="0.14"/>
+    <circle cx="710" cy="120" r="7" fill="#FFFFFF" opacity="0.40"/>
+    <circle cx="730" cy="120" r="7" fill="#FFFFFF" opacity="0.28"/>
+    <circle cx="750" cy="120" r="7" fill="#FFFFFF" opacity="0.20"/>
+    <rect x="770" y="111" width="326" height="18" rx="9" fill="#FFFFFF" opacity="0.20"/>
+    <!-- hero section mockup -->
+    <rect x="692" y="150" width="452" height="58" rx="6" fill="#FFFFFF" opacity="0.16"/>
+    <rect x="706" y="162" width="210" height="14" rx="3" fill="#FFFFFF" opacity="0.50"/>
+    <rect x="706" y="182" width="160" height="10" rx="2" fill="#FFFFFF" opacity="0.28"/>
+    <!-- content + image split -->
+    <rect x="692" y="222" width="218" height="140" rx="6" fill="#FFFFFF" opacity="0.10"/>
+    <rect x="706" y="234" width="170" height="10" rx="3" fill="#FFFFFF" opacity="0.35"/>
+    <rect x="706" y="252" width="150" height="8" rx="2" fill="#FFFFFF" opacity="0.22"/>
+    <rect x="706" y="268" width="158" height="8" rx="2" fill="#FFFFFF" opacity="0.18"/>
+    <rect x="706" y="300" width="96" height="30" rx="8" fill="#FFFFFF" opacity="0.28"/>
+    <rect x="924" y="222" width="218" height="140" rx="10" fill="#FFFFFF" opacity="0.13"/>
+    <!-- design score badge -->
+    <circle cx="1096" cy="108" r="38" fill="#FFFFFF" opacity="0.22"/>
+    <text x="1096" y="103" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="900" fill="#FFFFFF" opacity="0.9">98</text>
+    <text x="1096" y="122" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" opacity="0.7">UX Score</text>
+    <!-- ROI stat chips at bottom -->
+    <rect x="668" y="452" width="158" height="44" rx="10" fill="#FFFFFF" opacity="0.18"/>
+    <text x="747" y="479" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="800" fill="#FFFFFF" opacity="0.9">ROI 9.900%</text>
+    <rect x="838" y="452" width="154" height="44" rx="10" fill="#FFFFFF" opacity="0.14"/>
+    <text x="915" y="479" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" opacity="0.80">+38% CVR</text>
+    <rect x="1004" y="452" width="164" height="44" rx="10" fill="#FFFFFF" opacity="0.14"/>
+    <text x="1086" y="479" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" opacity="0.80">-70% Support</text>
+    <text x="918" y="548" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">Desain yang mengkonversi · bukan sekadar cantik</text>
+  `,
+
+  'cara-memilih-hosting-website-bisnis': () => `
+    <!-- Server rack with tiers -->
+    ${[0,1,2,3].map(i => `
+      <rect x="720" y="${110+i*92}" width="520" height="72" rx="12" fill="#FFFFFF" opacity="${[0.18,0.14,0.12,0.10][i]}"/>
+      <rect x="736" y="${124+i*92}" width="180" height="18" rx="4" fill="#FFFFFF" opacity="0.30"/>
+      <circle cx="916" cy="${133+i*92}" r="9" fill="#FFFFFF" opacity="${[0.7,0.5,0.4,0.3][i]}"/>
+      <rect x="938" y="${124+i*92}" width="80" height="8" rx="2" fill="#FFFFFF" opacity="0.22"/>
+      <rect x="938" y="${140+i*92}" width="60" height="6" rx="2" fill="#FFFFFF" opacity="0.16"/>
+      <rect x="1130" y="${128+i*92}" width="90" height="28" rx="6" fill="#FFFFFF" opacity="0.20"/>
+    `).join('')}
+    <!-- Tier labels -->
+    ${['Shared','VPS','Cloud','Dedicated'].map((t,i) => `
+      <text x="738" y="${134+i*92}" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" opacity="0.85">${t}</text>
+    `).join('')}
+    <!-- Price labels -->
+    ${['Rp 20rb/bln','Rp 200rb/bln','Pay-as-go','Rp 3jt/bln'].map((t,i) => `
+      <text x="1130" y="${145+i*92}" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" opacity="0.80">${t}</text>
+    `).join('')}
+    <!-- uptime badge -->
+    <rect x="668" y="492" width="192" height="44" rx="22" fill="#FFFFFF" opacity="0.20"/>
+    <text x="764" y="520" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="900" fill="#FFFFFF" opacity="0.95">99.9% Uptime</text>
+    <text x="918" y="550" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">Pilih hosting yang tepat untuk bisnis Anda</text>
+  `,
+
+  'saas-vs-custom-software': () => `
+    <!-- SaaS side (left) -->
+    <rect x="668" y="88" width="228" height="368" rx="14" fill="#FFFFFF" opacity="0.09"/>
+    <text x="782" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="800" fill="#FFFFFF" opacity="0.70">SaaS</text>
+    <!-- subscription stacks -->
+    ${[0,1,2,3,4].map(i => `
+      <rect x="686" y="${150+i*44}" width="192" height="34" rx="7" fill="#FFFFFF" opacity="${[0.22,0.18,0.16,0.13,0.10][i]}"/>
+      <circle cx="710" cy="${167+i*44}" r="8" fill="#FFFFFF" opacity="0.40"/>
+      <rect x="728" y="${160+i*44}" width="120" height="8" rx="2" fill="#FFFFFF" opacity="0.35"/>
+      <rect x="728" y="${173+i*44}" width="90" height="6" rx="2" fill="#FFFFFF" opacity="0.20"/>
+    `).join('')}
+    <text x="782" y="382" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" opacity="0.55">Rp X/bulan selamanya</text>
+    <!-- VS badge -->
+    <rect x="878" y="242" width="62" height="62" rx="31" fill="#FFFFFF" opacity="0.18"/>
+    <text x="909" y="281" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="900" fill="#FFFFFF" opacity="0.9">VS</text>
+    <!-- Custom side (right) -->
+    <rect x="952" y="88" width="216" height="368" rx="14" fill="#FFFFFF" opacity="0.12"/>
+    <text x="1060" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="800" fill="#FFFFFF" opacity="0.70">Custom</text>
+    <!-- one-time build icon -->
+    <rect x="970" y="150" width="180" height="90" rx="10" fill="#FFFFFF" opacity="0.18"/>
+    <text x="1060" y="198" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" opacity="0.80">1×</text>
+    <text x="1060" y="222" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" opacity="0.60">Bangun sekali</text>
+    <!-- ownership badge -->
+    <rect x="970" y="256" width="180" height="80" rx="10" fill="#FFFFFF" opacity="0.14"/>
+    <text x="1060" y="295" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" opacity="0.75">Kode 100% milik Anda</text>
+    <text x="1060" y="318" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" opacity="0.55">Tidak ada lock-in</text>
+    <text x="1060" y="382" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#FFFFFF" opacity="0.55">Aset jangka panjang</text>
+    <!-- bottom divider -->
+    <rect x="668" y="476" width="500" height="2" fill="#FFFFFF" opacity="0.12"/>
+    <text x="918" y="514" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" opacity="0.50">Pilih berdasarkan kebutuhan nyata bisnis Anda</text>
+  `,
 }
 
 // Fallback: decorative circles if slug has no illustration
