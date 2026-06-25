@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Tue, 23 Jun 2026 02:15:16 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2026 02:17:07 GMT</lastBuildDate>
+    <item>
+      <title>Tren ERP di Indonesia 2026: Cloud-Native, AI-Powered, dan Mobile-First</title>
+      <link>https://afss.tech/blog/tren-erp-indonesia-2026</link>
+      <guid>https://afss.tech/blog/tren-erp-indonesia-2026</guid>
+      <description>ERP 2026 sudah jauh berbeda dari sistem kaku yang Anda kenal dulu — lebih cerdas, lebih mobile, dan jauh lebih mudah diimplementasikan.</description>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
+      <category>ERP</category>
+      <category>Bisnis</category>
+      <category>Teknologi</category>
+    </item>
+    <item>
+      <title>Low-Code &amp; No-Code: Revolusi Pengembangan Software tanpa Programmer</title>
+      <link>https://afss.tech/blog/low-code-no-code-pengembangan-software</link>
+      <guid>https://afss.tech/blog/low-code-no-code-pengembangan-software</guid>
+      <description>Low-code dan no-code memungkinkan non-developer membangun aplikasi. Tapi apakah ini solusi untuk semua kebutuhan bisnis? Panduan jujur untuk Anda.</description>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Teknologi</category>
+      <category>Software</category>
+      <category>Low-Code</category>
+    </item>
+    <item>
+      <title>Strategi Monetisasi Aplikasi Mobile &amp; Web App: Cara Menghasilkan Pendapatan dari App Anda</title>
+      <link>https://afss.tech/blog/strategi-monetisasi-aplikasi</link>
+      <guid>https://afss.tech/blog/strategi-monetisasi-aplikasi</guid>
+      <description>Punya ide aplikasi yang bagus tapi bingung bagaimana menghasilkan uang darinya? Panduan ini membahas model monetisasi yang terbukti berhasil.</description>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi Mobile</category>
+      <category>Bisnis</category>
+      <category>Monetisasi</category>
+    </item>
+    <item>
+      <title>AI untuk Website &amp; Aplikasi: Fitur Kecerdasan Buatan yang Bisa Diterapkan Sekarang</title>
+      <link>https://afss.tech/blog/ai-untuk-website-dan-aplikasi</link>
+      <guid>https://afss.tech/blog/ai-untuk-website-dan-aplikasi</guid>
+      <description>AI bukan lagi teknologi masa depan — ini sudah bisa diintegrasikan ke website dan aplikasi bisnis Anda hari ini, dengan biaya yang terjangkau.</description>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>Website</category>
+      <category>Teknologi</category>
+    </item>
+    <item>
+      <title>Microservices vs Monolith: Arsitektur Aplikasi yang Tepat untuk Bisnis Anda</title>
+      <link>https://afss.tech/blog/microservices-vs-monolith</link>
+      <guid>https://afss.tech/blog/microservices-vs-monolith</guid>
+      <description>Memilih arsitektur yang salah bisa memperlambat seluruh tim development Anda. Pelajari perbedaan microservices dan monolith sebelum memulai proyek.</description>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Arsitektur</category>
+      <category>Aplikasi</category>
+      <category>Teknologi</category>
+    </item>
     <item>
       <title>SaaS vs Software Custom: Mana yang Tepat untuk Bisnis Anda di 2026?</title>
       <link>https://afss.tech/blog/saas-vs-custom-software</link>

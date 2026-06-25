@@ -643,6 +643,148 @@ const ILLUSTRATIONS = {
     <rect x="668" y="476" width="500" height="2" fill="#FFFFFF" opacity="0.12"/>
     <text x="918" y="514" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" opacity="0.50">Pilih berdasarkan kebutuhan nyata bisnis Anda</text>
   `,
+  'microservices-vs-monolith': () => `
+    <!-- Left: Monolith block -->
+    <rect x="668" y="90" width="200" height="380" rx="12" fill="#FFFFFF" opacity="0.14"/>
+    <text x="768" y="126" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="800" fill="#FFFFFF" opacity="0.70">Monolith</text>
+    ${['UI', 'API', 'Auth', 'Orders', 'Payments', 'Reports', 'Notif'].map((m, i) => `
+      <rect x="682" y="${144+i*46}" width="172" height="34" rx="6" fill="#FFFFFF" opacity="${0.22-i*0.02}"/>
+      <text x="768" y="${167+i*46}" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" opacity="0.80">${m}</text>
+    `).join('')}
+    <!-- VS divider -->
+    <rect x="868" y="100" width="2" height="360" rx="1" fill="#FFFFFF" opacity="0.18"/>
+    <rect x="843" y="260" width="54" height="54" rx="27" fill="#FFFFFF" opacity="0.18"/>
+    <text x="870" y="295" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="900" fill="#FFFFFF" opacity="0.9">VS</text>
+    <!-- Right: Microservices nodes -->
+    <text x="1065" y="116" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="800" fill="#FFFFFF" opacity="0.70">Microservices</text>
+    ${[
+      { label: 'User', x: 916, y: 148 },
+      { label: 'Auth', x: 1050, y: 148 },
+      { label: 'Orders', x: 1184, y: 148 },
+      { label: 'Payment', x: 916, y: 274 },
+      { label: 'Notif', x: 1050, y: 274 },
+      { label: 'Report', x: 1184, y: 274 },
+      { label: 'API GW', x: 1050, y: 400 },
+    ].map(n => `
+      <rect x="${n.x-40}" y="${n.y-22}" width="80" height="44" rx="10" fill="#FFFFFF" opacity="0.16"/>
+      <text x="${n.x}" y="${n.y+6}" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" opacity="0.80">${n.label}</text>
+    `).join('')}
+    <line x1="1050" y1="378" x2="1050" y2="320" stroke="#FFFFFF" stroke-width="1.5" opacity="0.20" stroke-dasharray="5 3"/>
+    <line x1="1050" y1="378" x2="956" y2="318" stroke="#FFFFFF" stroke-width="1.5" opacity="0.18" stroke-dasharray="5 3"/>
+    <line x1="1050" y1="378" x2="1144" y2="318" stroke="#FFFFFF" stroke-width="1.5" opacity="0.18" stroke-dasharray="5 3"/>
+    <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">Arsitektur yang tepat · bisnis yang scalable</text>
+  `,
+
+  'ai-untuk-website-dan-aplikasi': () => `
+    <!-- Central AI circle -->
+    <circle cx="910" cy="270" r="78" fill="#FFFFFF" opacity="0.16"/>
+    <circle cx="910" cy="270" r="56" fill="#FFFFFF" opacity="0.10"/>
+    <text x="910" y="258" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" opacity="0.90">AI</text>
+    <text x="910" y="286" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" opacity="0.65">Powered</text>
+    <!-- Orbiting feature nodes -->
+    ${[
+      { label: 'Chatbot', x: 700, y: 148, ex: 854, ey: 228 },
+      { label: 'Semantic Search', x: 1070, y: 148, ex: 966, ey: 228 },
+      { label: 'Personalisasi', x: 680, y: 310, ex: 832, ey: 278 },
+      { label: 'Prediksi', x: 1080, y: 310, ex: 988, ey: 278 },
+      { label: 'Content AI', x: 762, y: 432, ex: 874, ey: 334 },
+      { label: 'Fraud AI', x: 1018, y: 432, ex: 946, ey: 334 },
+    ].map(n => `
+      <line x1="${n.ex}" y1="${n.ey}" x2="${n.x+52}" y2="${n.y+20}" stroke="#FFFFFF" stroke-width="1.5" opacity="0.20" stroke-dasharray="6 4"/>
+      <rect x="${n.x}" y="${n.y}" width="104" height="40" rx="10" fill="#FFFFFF" opacity="0.14"/>
+      <text x="${n.x+52}" y="${n.y+25}" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" opacity="0.75">${n.label}</text>
+    `).join('')}
+    <!-- Glow ring -->
+    <circle cx="910" cy="270" r="140" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.09" stroke-dasharray="10 7"/>
+    <!-- Stat badge -->
+    <rect x="822" y="488" width="176" height="44" rx="22" fill="#FFFFFF" opacity="0.20"/>
+    <text x="910" y="516" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" font-weight="900" fill="#FFFFFF" opacity="0.95">ROI Terukur</text>
+    <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">Integrasikan AI ke produk digital Anda</text>
+  `,
+
+  'strategi-monetisasi-aplikasi': () => `
+    <!-- Revenue growth chart -->
+    <rect x="668" y="90" width="500" height="360" rx="14" fill="#FFFFFF" opacity="0.08"/>
+    <!-- Chart axes -->
+    <line x1="710" y1="410" x2="1140" y2="410" stroke="#FFFFFF" stroke-width="2" opacity="0.22"/>
+    <line x1="710" y1="120" x2="710" y2="410" stroke="#FFFFFF" stroke-width="2" opacity="0.22"/>
+    <!-- Revenue curve (growing) -->
+    <polyline points="710,400 780,370 860,330 940,270 1020,190 1100,130" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+    <!-- Data points -->
+    ${[{x:710,y:400},{x:780,y:370},{x:860,y:330},{x:940,y:270},{x:1020,y:190},{x:1100,y:130}].map(p =>
+      `<circle cx="${p.x}" cy="${p.y}" r="8" fill="#FFFFFF" opacity="0.60"/>`
+    ).join('')}
+    <!-- Area fill under curve -->
+    <polygon points="710,410 710,400 780,370 860,330 940,270 1020,190 1100,130 1100,410" fill="#FFFFFF" opacity="0.06"/>
+    <!-- Model labels -->
+    ${['Freemium','Subscription','IAP','Marketplace'].map((t,i) => `
+      <rect x="${668+i*120}" y="458" width="112" height="38" rx="10" fill="#FFFFFF" opacity="0.14"/>
+      <text x="${668+i*120+56}" y="482" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" opacity="0.78">${t}</text>
+    `).join('')}
+    <!-- MRR badge -->
+    <rect x="1024" y="100" width="130" height="54" rx="10" fill="#FFFFFF" opacity="0.20"/>
+    <text x="1089" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="900" fill="#FFFFFF" opacity="0.9">MRR ↑</text>
+    <text x="1089" y="146" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" opacity="0.70">Grow</text>
+    <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">Monetisasi cerdas · revenue berkelanjutan</text>
+  `,
+
+  'low-code-no-code-pengembangan-software': () => `
+    <!-- Drag-drop interface mockup -->
+    <rect x="668" y="88" width="500" height="358" rx="14" fill="#FFFFFF" opacity="0.09"/>
+    <rect x="668" y="88" width="500" height="38" rx="14" fill="#FFFFFF" opacity="0.14"/>
+    <!-- Window dots -->
+    <circle cx="698" cy="107" r="7" fill="#FFFFFF" opacity="0.40"/>
+    <circle cx="718" cy="107" r="7" fill="#FFFFFF" opacity="0.28"/>
+    <circle cx="738" cy="107" r="7" fill="#FFFFFF" opacity="0.20"/>
+    <!-- Left component panel -->
+    <rect x="678" y="140" width="118" height="296" rx="8" fill="#FFFFFF" opacity="0.09"/>
+    <text x="737" y="164" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" opacity="0.60">Components</text>
+    ${['Button','Input','Table','Chart','Form','Image'].map((c,i) => `
+      <rect x="688" y="${174+i*42}" width="98" height="30" rx="6" fill="#FFFFFF" opacity="0.16"/>
+      <text x="737" y="${194+i*42}" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" opacity="0.70">${c}</text>
+    `).join('')}
+    <!-- Main canvas with placed components -->
+    <rect x="808" y="140" width="350" height="290" rx="8" fill="#FFFFFF" opacity="0.06"/>
+    <rect x="820" y="152" width="326" height="38" rx="6" fill="#FFFFFF" opacity="0.18"/>
+    <text x="983" y="177" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" opacity="0.65">Dashboard Title</text>
+    <rect x="820" y="202" width="155" height="90" rx="8" fill="#FFFFFF" opacity="0.14"/>
+    <rect x="985" y="202" width="161" height="90" rx="8" fill="#FFFFFF" opacity="0.12"/>
+    <rect x="820" y="304" width="326" height="60" rx="6" fill="#FFFFFF" opacity="0.12"/>
+    ${[0,1,2].map(i => `<rect x="${832+i*106}" y="314" width="94" height="8" rx="2" fill="#FFFFFF" opacity="${[0.35,0.22,0.28][i]}"/>`).join('')}
+    <!-- Drag indicator -->
+    <rect x="850" y="200" width="4" height="100" rx="2" fill="#FFFFFF" opacity="0.40"/>
+    <!-- Badge -->
+    <rect x="750" y="492" width="320" height="40" rx="20" fill="#FFFFFF" opacity="0.18"/>
+    <text x="910" y="517" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="800" fill="#FFFFFF" opacity="0.90">Build faster · Ship sooner</text>
+    <text x="910" y="554" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">No-code &amp; low-code untuk bisnis modern</text>
+  `,
+
+  'tren-erp-indonesia-2026': () => `
+    <!-- Central ERP 2026 hub -->
+    <circle cx="910" cy="268" r="70" fill="#FFFFFF" opacity="0.18"/>
+    <circle cx="910" cy="268" r="50" fill="#FFFFFF" opacity="0.10"/>
+    <text x="910" y="258" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" font-weight="900" fill="#FFFFFF" opacity="0.90">ERP</text>
+    <text x="910" y="280" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" opacity="0.65">2026</text>
+    <!-- Trend nodes -->
+    ${[
+      { label: 'Cloud-Native', x: 690, y: 148, ex: 856, ey: 234 },
+      { label: 'AI-Powered', x: 1070, y: 148, ex: 964, ey: 234 },
+      { label: 'Mobile-First', x: 668, y: 298, ex: 840, ey: 272 },
+      { label: 'Real-Time', x: 1092, y: 298, ex: 980, ey: 272 },
+      { label: 'Modular', x: 748, y: 430, ex: 876, ey: 324 },
+      { label: 'Vertical', x: 1032, y: 430, ex: 944, ey: 324 },
+    ].map(n => `
+      <line x1="${n.ex}" y1="${n.ey}" x2="${n.x+58}" y2="${n.y+20}" stroke="#FFFFFF" stroke-width="1.5" opacity="0.22" stroke-dasharray="6 4"/>
+      <rect x="${n.x}" y="${n.y}" width="116" height="40" rx="10" fill="#FFFFFF" opacity="0.14"/>
+      <text x="${n.x+58}" y="${n.y+25}" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" opacity="0.76">${n.label}</text>
+    `).join('')}
+    <!-- Outer dashed ring -->
+    <circle cx="910" cy="268" r="148" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.10" stroke-dasharray="10 7"/>
+    <!-- Stat badge -->
+    <rect x="806" y="490" width="208" height="44" rx="22" fill="#FFFFFF" opacity="0.20"/>
+    <text x="910" y="518" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="900" fill="#FFFFFF" opacity="0.95">Indonesia Ready</text>
+    <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">ERP cerdas · efisiensi nyata untuk bisnis Anda</text>
+  `,
 }
 
 // Fallback: decorative circles if slug has no illustration
