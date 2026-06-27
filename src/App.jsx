@@ -438,7 +438,7 @@ function Services() {
           <p className="sec-sub">Dari website custom hingga aplikasi mobile dan sistem internal — dibangun dari nol, cepat, dan SEO-ready sejak awal.</p>
         </Reveal>
         <motion.div className="svc-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
-          {products.map((p) => (
+          {products.slice(0, 6).map((p) => (
             <motion.div key={p.name} className={`svc-card spot ${p.hot ? 'hot' : ''}`} variants={fadeUp} whileHover={{ y: -8 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }} onMouseMove={onSpot}>
               {p.hot && <span className="hot-tag">Terpopuler</span>}
               <div className="svc-top">
@@ -449,7 +449,7 @@ function Services() {
               <p className="svc-desc">{p.desc}</p>
               <ul className="svc-feats">{p.feats.map((f) => <li key={f}><Icon icon="fa-solid fa-check" /> {f}</li>)}</ul>
               <div className="svc-foot">
-                <a className="btn" href={waLink(`Halo ${BRAND.short}, saya tertarik dengan layanan ${p.name}.`)} target="_blank" rel="noreferrer">Konsultasi Sekarang <Icon icon="fa-solid fa-arrow-right" /></a>
+                <Link className="btn" to={`/layanan/${p.slug}`}>Selengkapnya <Icon icon="fa-solid fa-arrow-right" /></Link>
               </div>
             </motion.div>
           ))}

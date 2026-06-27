@@ -44,7 +44,9 @@ export function BlogIndex() {
   const [activeTag, setActiveTag] = useState('')
   const [page, setPage] = useState(1)
 
-  const allTags = [...new Set(all.flatMap((p) => p.tags))].sort()
+  // Hitung frekuensi tag, ambil top 15 yang paling banyak dipakai
+  const tagFreq = all.flatMap((p) => p.tags).reduce((acc, t) => { acc[t] = (acc[t] || 0) + 1; return acc; }, {})
+  const allTags = Object.entries(tagFreq).sort((a, b) => b[1] - a[1]).slice(0, 15).map(([t]) => t).sort()
 
   // Posts matching the search query (used to derive available tag chips)
   const q = query.trim().toLowerCase()
