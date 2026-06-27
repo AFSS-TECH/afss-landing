@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Link, useParams } from 'react-router-dom'
 import { Head } from 'vite-react-ssg'
 import { Icon } from './Icon.jsx'
+import emailjs from '@emailjs/browser'
 import { BRAND, products, why, showcase, stats, waLink, getProductBySlug, pricing, pricingBundles, faqs } from './data.js'
 
 const SITE_URL = 'https://afss.tech'
@@ -726,38 +727,60 @@ export function About() {
 }
 
 /* ══════════════════════════════════════════════════ CONTACT (/kontak) */
+/* ── Contact Form with EmailJS ── */
+const EMAILJS_SERVICE  = 'service_7w4dccc'
+const EMAILJS_TEMPLATE = 'template_0ogubg3'
+const EMAILJS_KEY      = 'ig9sNOB9hNjTymRoP'
+
+const JENIS_OPTS = ['Landing Page', 'Website Profil / Company Profile', 'Toko Online', 'Aplikasi Mobile', 'Web App / Dashboard', 'Sistem ERP', 'Sistem CRM', 'Lainnya']
+
 export function Contact() {
-  const title = 'Kontak AFSS — Konsultasi Gratis via WhatsApp, Email & Lokasi'
-  const desc = 'Hubungi AFSS untuk konsultasi gratis pembuatan website, aplikasi mobile, dan sistem digital. WhatsApp, email, atau kunjungi kantor kami di Medan.'
+  const title = 'Kontak AFSS — Konsultasi Gratis via WhatsApp, Email & Form'
+  const desc = 'Hubungi AFSS untuk konsultasi gratis pembuatan website, aplikasi mobile, dan sistem digital. WhatsApp, email, atau isi form kontak kami.'
+
+  const [form, setForm] = useState({ nama: '', wa: '', jenis: '', pesan: '' })
+  const [status, setStatus] = useState('idle') // idle | sending | sent | error
+  const [errors, setErrors] = useState({})
+
+  const set = (k) => (e) => { setForm((f) => ({ ...f, [k]: e.target.value })); setErrors((er) => ({ ...er, [k]: '' })) }
+
+  const validate = () => {
+    const e = {}
+    if (!form.nama.trim()) e.nama = 'Nama wajib diisi'
+    if (!form.wa.trim()) e.wa = 'Nomor WhatsApp / email wajib diisi'
+    if (!form.jenis) e.jenis = 'Pilih jenis kebutuhan'
+    if (!form.pesan.trim()) e.pesan = 'Ceritakan kebutuhan Anda'
+    return e
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const errs = validate()
+    if (Object.keys(errs).length > 0) { setErrors(errs); return }
+    setStatus('sending')
+    try {
+      await emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE, {
+        from_name: form.nama,
+        from_contact: form.wa,
+        jenis_proyek: form.jenis,
+        message: form.pesan,
+        to_email: BRAND.email,
+      }, EMAILJS_KEY)
+      setStatus('sent')
+    } catch {
+      // Fallback: redirect ke WA dengan data form
+      const msg = `Halo ${BRAND.short},%0Anama: ${form.nama}%0AKontak: ${form.wa}%0AKebutuhan: ${form.jenis}%0APesan: ${form.pesan}`
+      window.open(`https://wa.me/628139694307?text=${msg}`, '_blank')
+      setStatus('sent')
+    }
+  }
+
   const methods = [
-    {
-      icon: 'fa-brands fa-whatsapp',
-      title: 'WhatsApp',
-      value: BRAND.phone,
-      sub: 'Respons tercepat — biasanya dalam hitungan menit.',
-      href: waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis.`),
-      cta: 'Mulai Chat',
-      color: 'var(--wa)',
-    },
-    {
-      icon: 'fa-solid fa-envelope',
-      title: 'Email',
-      value: BRAND.email,
-      sub: 'Untuk pertanyaan detail atau pengiriman brief proyek.',
-      href: `mailto:${BRAND.email}`,
-      cta: 'Kirim Email',
-      color: 'var(--accent)',
-    },
-    {
-      icon: 'fa-solid fa-location-dot',
-      title: 'Lokasi',
-      value: BRAND.address,
-      sub: 'Kunjungan dan meeting online tersedia. Hubungi dulu untuk jadwal.',
-      href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(BRAND.address)}`,
-      cta: 'Lihat Maps',
-      color: 'var(--ink-2)',
-    },
+    { icon: 'fa-brands fa-whatsapp', title: 'WhatsApp', value: BRAND.phone, sub: 'Respons paling cepat — rata-rata < 5 menit.', href: waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis.`), cta: 'Chat Sekarang', color: 'var(--wa)' },
+    { icon: 'fa-solid fa-envelope', title: 'Email', value: BRAND.email, sub: 'Untuk brief detail, RFQ, atau lampiran dokumen.', href: `mailto:${BRAND.email}`, cta: 'Kirim Email', color: 'var(--blue)' },
+    { icon: 'fa-solid fa-location-dot', title: 'Lokasi', value: BRAND.address, sub: 'Meeting tatap muka tersedia — hubungi untuk jadwal.', href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(BRAND.address)}`, cta: 'Buka Maps', color: 'var(--accent)' },
   ]
+
   return (
     <>
       <Head>
@@ -782,19 +805,19 @@ export function Contact() {
               <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Kontak' }]} />
               <div className="eyebrow"><Icon icon="fa-solid fa-comments" /> Kontak</div>
               <h1 className="page-title">Mari <span className="ital">ngobrol</span> tentang proyek Anda</h1>
-              <p className="page-sub">Konsultasi gratis, tanpa komitmen. Ceritakan kebutuhan bisnis Anda dan kami bantu temukan solusi terbaik.</p>
+              <p className="page-sub">Konsultasi gratis, tanpa komitmen. Ceritakan kebutuhan bisnis Anda dan kami bantu temukan solusi terbaik dalam 1×24 jam kerja.</p>
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
-                <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Chat Sekarang</a>
+                <a className="btn btn-wa btn-lg" href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Chat Langsung</a>
+                <a className="btn btn-ghost btn-lg" href="#contact-form">Isi Form <Icon icon="fa-solid fa-arrow-down" /></a>
               </div>
             </Reveal>
-            <Reveal className="page-hero-stat-col">
-              <HeroStatCard />
-            </Reveal>
+            <Reveal className="page-hero-stat-col"><HeroStatCard /></Reveal>
           </div>
         </div>
       </section>
 
-      <section style={{ paddingTop: 60, paddingBottom: 80 }}>
+      {/* Contact methods */}
+      <section style={{ paddingBottom: 0 }}>
         <div className="container">
           <motion.div className="contact-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
             {methods.map((m) => (
@@ -807,12 +830,68 @@ export function Contact() {
               </motion.div>
             ))}
           </motion.div>
+        </div>
+      </section>
 
-          <Reveal style={{ marginTop: 80, textAlign: 'center' }}>
-            <div className="eyebrow center" style={{ justifyContent: 'center', marginBottom: 16 }}><Icon icon="fa-solid fa-clock" /> Jam Operasional</div>
-            <p style={{ color: 'var(--muted)', fontSize: '1.05rem' }}>Senin – Jumat: <strong style={{ color: 'var(--ink)' }}>08.00 – 17.00 WIB</strong></p>
-            <p style={{ color: 'var(--muted)', fontSize: '1.05rem' }}>Sabtu: <strong style={{ color: 'var(--ink)' }}>09.00 – 13.00 WIB</strong> &nbsp;·&nbsp; Minggu & Libur Nasional: <strong style={{ color: 'var(--ink)' }}>Tutup</strong></p>
-            <p style={{ color: 'var(--muted)', fontSize: '.9rem', marginTop: 12 }}>WhatsApp tetap bisa dikirim di luar jam kerja — kami balas saat jam operasional.</p>
+      {/* Contact Form */}
+      <section id="contact-form" style={{ paddingTop: 60, paddingBottom: 80 }}>
+        <div className="container container-narrow">
+          <Reveal className="sec-header center">
+            <div className="eyebrow"><Icon icon="fa-solid fa-paper-plane" /> Form Kontak</div>
+            <h2 className="sec-title">Atau isi form ini — kami <span className="ital">respons dalam 1×24 jam</span></h2>
+          </Reveal>
+
+          {status === 'sent' ? (
+            <Reveal className="contact-success">
+              <div className="success-ico"><Icon icon="fa-solid fa-circle-check" /></div>
+              <h3>Pesan terkirim!</h3>
+              <p>Terima kasih, <strong>{form.nama}</strong>. Tim kami akan menghubungi <strong>{form.wa}</strong> dalam 1×24 jam kerja.</p>
+              <a href={waLink(`Halo ${BRAND.short}, saya baru isi form kontak — nama ${form.nama}. Ingin follow up lebih cepat.`)} target="_blank" rel="noreferrer" className="btn btn-wa btn-lg" style={{ marginTop: 24 }}>
+                <Icon icon="fa-brands fa-whatsapp" /> Follow Up via WhatsApp
+              </a>
+            </Reveal>
+          ) : (
+            <form className="contact-form" onSubmit={handleSubmit} noValidate>
+              <div className="cf-row">
+                <div className={`cf-field${errors.nama ? ' error' : ''}`}>
+                  <label>Nama Lengkap *</label>
+                  <input type="text" value={form.nama} onChange={set('nama')} placeholder="Budi Santoso" />
+                  {errors.nama && <span className="cf-err">{errors.nama}</span>}
+                </div>
+                <div className={`cf-field${errors.wa ? ' error' : ''}`}>
+                  <label>WhatsApp / Email *</label>
+                  <input type="text" value={form.wa} onChange={set('wa')} placeholder="+62 812 xxxx / email@bisnis.com" />
+                  {errors.wa && <span className="cf-err">{errors.wa}</span>}
+                </div>
+              </div>
+              <div className={`cf-field${errors.jenis ? ' error' : ''}`}>
+                <label>Saya butuh bantuan untuk *</label>
+                <select value={form.jenis} onChange={set('jenis')}>
+                  <option value="">— Pilih jenis kebutuhan —</option>
+                  {JENIS_OPTS.map((o) => <option key={o} value={o}>{o}</option>)}
+                </select>
+                {errors.jenis && <span className="cf-err">{errors.jenis}</span>}
+              </div>
+              <div className={`cf-field${errors.pesan ? ' error' : ''}`}>
+                <label>Ceritakan kebutuhan Anda *</label>
+                <textarea value={form.pesan} onChange={set('pesan')} rows={5} placeholder="Bisnis saya bergerak di bidang... Saya ingin membuat... Target waktu launching..." />
+                {errors.pesan && <span className="cf-err">{errors.pesan}</span>}
+              </div>
+              <button type="submit" className="btn btn-pri btn-lg" style={{ width: '100%', justifyContent: 'center' }} disabled={status === 'sending'}>
+                {status === 'sending' ? <><Icon icon="fa-solid fa-spinner fa-spin" /> Mengirim...</> : <><Icon icon="fa-solid fa-paper-plane" /> Kirim Pesan</>}
+              </button>
+              <p style={{ textAlign: 'center', fontSize: '.8rem', color: 'var(--muted)', marginTop: 12 }}>
+                Tidak suka form? <a href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi langsung.`)} target="_blank" rel="noreferrer" className="accent-link">Chat langsung via WhatsApp →</a>
+              </p>
+            </form>
+          )}
+
+          <Reveal style={{ marginTop: 52, textAlign: 'center', padding: '24px', background: 'var(--paper-2)', borderRadius: 'var(--r)', border: '1px solid var(--line)' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: 32, flexWrap: 'wrap' }}>
+              <div><strong style={{ display: 'block', color: 'var(--ink)', marginBottom: 4 }}>Senin – Jumat</strong><span style={{ color: 'var(--muted)', fontSize: '.9rem' }}>08.00 – 17.00 WIB</span></div>
+              <div><strong style={{ display: 'block', color: 'var(--ink)', marginBottom: 4 }}>Sabtu</strong><span style={{ color: 'var(--muted)', fontSize: '.9rem' }}>09.00 – 13.00 WIB</span></div>
+              <div><strong style={{ display: 'block', color: 'var(--ink)', marginBottom: 4 }}>Respons WA</strong><span style={{ color: 'var(--muted)', fontSize: '.9rem' }}>Di luar jam kerja, balas besok pagi</span></div>
+            </div>
           </Reveal>
         </div>
       </section>
@@ -1387,23 +1466,73 @@ export function Faq() {
 }
 
 /* ══════════════════════════════════════════════════ KARIR (/karir) */
+const JOBS = [
+  {
+    pos: 'Full-Stack Web Developer',
+    type: 'Full-time · Remote/Hybrid',
+    badge: 'Prioritas',
+    badgeColor: 'var(--blue)',
+    desc: 'Membangun website, web app, dan API untuk klien dari berbagai industri. Bertanggung jawab dari desain database sampai deployment.',
+    skills: ['Next.js / React', 'Node.js + PostgreSQL', 'REST API & integrasi third-party', 'Pengalaman min. 1 tahun'],
+    salary: 'Negosiasi + project bonus',
+  },
+  {
+    pos: 'Flutter Mobile Developer',
+    type: 'Full-time · Remote',
+    badge: 'Buka',
+    badgeColor: '#10C7B2',
+    desc: 'Membangun aplikasi Android & iOS dengan Flutter. Berkolaborasi dengan backend developer dan desainer untuk deliver aplikasi yang siap publish ke store.',
+    skills: ['Flutter & Dart', 'State management (Riverpod/BLoC)', 'Integrasi REST API & Firebase', 'Pengalaman min. 1 tahun'],
+    salary: 'Negosiasi + project bonus',
+  },
+  {
+    pos: 'UI/UX Designer',
+    type: 'Full-time · Remote/Freelance',
+    badge: 'Buka',
+    badgeColor: '#10C7B2',
+    desc: 'Merancang pengalaman pengguna yang intuitif dan antarmuka yang bersih untuk produk klien AFSS — website, dashboard, hingga aplikasi mobile.',
+    skills: ['Figma (wajib)', 'User research & wireframing', 'Design system & component library', 'Memahami dasar frontend adalah nilai plus'],
+    salary: 'Per proyek / retainer',
+  },
+  {
+    pos: 'Digital Marketing & Sales',
+    type: 'Full-time · Remote',
+    badge: 'Buka',
+    badgeColor: '#10C7B2',
+    desc: 'Memperkenalkan layanan AFSS ke bisnis di seluruh Indonesia melalui media sosial, jaringan bisnis, dan strategi konten. Target-driven dengan komisi menarik.',
+    skills: ['Kemampuan komunikasi & presentasi', 'Pengalaman sales B2B / digital agency', 'Memahami LinkedIn, Instagram, dan cold outreach', 'Memiliki jaringan pengusaha adalah nilai plus'],
+    salary: 'Gaji pokok + komisi closing',
+  },
+  {
+    pos: 'Project Manager',
+    type: 'Part-time / Freelance',
+    badge: 'Buka',
+    badgeColor: '#10C7B2',
+    desc: 'Memastikan proyek klien berjalan on-track, on-budget, dan on-scope. Menjadi jembatan antara tim developer dan klien agar komunikasi selalu lancar.',
+    skills: ['Pengalaman PM di software house / startup', 'Mahir menggunakan tools PM (Notion, Linear, Jira)', 'Kemampuan komunikasi klien yang baik', 'Memahami siklus development (discovery → launch)'],
+    salary: 'Per proyek / retainer',
+  },
+  {
+    pos: 'Content Writer (Tech)',
+    type: 'Freelance · Remote',
+    badge: 'Buka',
+    badgeColor: '#10C7B2',
+    desc: 'Menulis artikel blog SEO tentang teknologi, software bisnis, dan transformasi digital untuk audiens pelaku usaha Indonesia.',
+    skills: ['Kemampuan menulis konten SEO', 'Memahami topik teknologi & bisnis digital', 'Riset keyword dasar', 'Konsisten dan tepat deadline'],
+    salary: 'Per artikel (negosiasi)',
+  },
+]
+
 export function Karir() {
-  const title = 'Karir di AFSS — Lowongan Marketing Executive'
-  const desc = 'Bergabung dengan tim AFSS. Kami membuka lowongan Marketing Executive — remote friendly, komisi menarik, jenjang karir jelas.'
-  const reqs = [
-    'Minimal lulusan SMA/SMK (D3/S1 diutamakan)',
-    'Pengalaman di bidang marketing/sales minimal 1 tahun',
-    'Kemampuan komunikasi & presentasi yang baik',
-    'Memiliki jaringan bisnis yang luas',
-    'Menguasai media sosial dan digital marketing dasar',
-    'Berorientasi target & terbiasa bekerja mandiri',
-    'Tertarik & melek dunia teknologi & digital',
-  ]
+  const title = 'Karir di AFSS — Lowongan Developer, Designer, Marketing & PM'
+  const desc = 'Bergabung dengan AFSS. Kami buka lowongan Full-Stack Developer, Flutter Developer, UI/UX Designer, Digital Marketing, Project Manager, dan Content Writer.'
+  const [selectedJob, setSelectedJob] = useState(null)
+
   const benefits = [
-    ['💰', 'Komisi Menarik', 'Komisi kompetitif tiap closing'],
-    ['📈', 'Jenjang Karir', 'Pertumbuhan karir yang jelas'],
-    ['🎓', 'Training Intensif', 'Pelatihan marketing & produk'],
-    ['🏡', 'Remote Friendly', 'Fleksibel dari mana saja'],
+    { icon: 'fa-solid fa-coins', title: 'Kompensasi Kompetitif', desc: 'Gaji + bonus project. Semakin bagus output, semakin besar reward.' },
+    { icon: 'fa-solid fa-laptop-house', title: 'Remote-First', desc: 'Kerja dari mana saja. Output yang dinilai, bukan jam duduk di kursi.' },
+    { icon: 'fa-solid fa-graduation-cap', title: 'Belajar Terus', desc: 'Akses kursus, conference, dan buku teknis. Kami invest di pertumbuhan tim.' },
+    { icon: 'fa-solid fa-people-group', title: 'Tim yang Solid', desc: 'Kolaborasi dengan developer, desainer, dan PM yang saling support.' },
   ]
   return (
     <>
@@ -1428,56 +1557,77 @@ export function Karir() {
             <Reveal>
               <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Karir' }]} />
               <div className="eyebrow green"><Icon icon="fa-solid fa-briefcase" /> Karir</div>
-              <h1 className="page-title">Bergabung dengan <span className="ital">tim AFSS</span></h1>
-              <p className="page-sub">Kami mencari talenta berbakat yang ingin berkembang bersama kami dan ikut membangun masa depan digital Indonesia.</p>
+              <h1 className="page-title">Bangun karir di <span className="ital">AFSS</span></h1>
+              <p className="page-sub">Kami mencari developer, desainer, PM, dan marketer yang ingin ikut membangun produk digital untuk bisnis Indonesia — remote-first, output-driven.</p>
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
-                <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya tertarik melamar posisi Marketing Executive. Boleh saya dapatkan informasi lebih lanjut?`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Lamar via WhatsApp</a>
+                <a className="btn btn-pri btn-lg" href="#lowongan">Lihat Lowongan <Icon icon="fa-solid fa-arrow-down" /></a>
+                <a className="btn btn-ghost btn-lg" href={`mailto:${BRAND.email}`}><Icon icon="fa-solid fa-envelope" /> Kirim CV Spontan</a>
               </div>
             </Reveal>
-            <Reveal className="page-hero-stat-col">
-              <HeroStatCard />
-            </Reveal>
+            <Reveal className="page-hero-stat-col"><HeroStatCard /></Reveal>
           </div>
         </div>
       </section>
 
-      <section style={{ paddingTop: 60, paddingBottom: 80 }}>
+      {/* Benefits */}
+      <section style={{ paddingBottom: 0 }}>
         <div className="container">
-          <div className="career-grid">
-            <Reveal>
-              <div className="eyebrow green"><Icon icon="fa-solid fa-star" /> Benefit</div>
-              <h2 className="sec-title">Kenapa bergabung dengan <span className="ital">{BRAND.short}</span>?</h2>
-              <p className="sec-sub" style={{ marginBottom: 0 }}>Kami percaya bahwa tim yang bahagia menghasilkan produk yang luar biasa.</p>
-              <motion.div className="benefits-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
-                {benefits.map(([ico, t, d]) => (
-                  <motion.div className="benefit spot" key={t} variants={fadeUp} whileHover={{ y: -5 }} transition={{ type: 'spring', stiffness: 300, damping: 24 }} onMouseMove={onSpot}>
-                    <div className="benefit-ico">{ico}</div>
-                    <div className="benefit-t">{t}</div>
-                    <div className="benefit-d">{d}</div>
-                  </motion.div>
-                ))}
+          <Reveal className="sec-header center">
+            <div className="eyebrow green"><Icon icon="fa-solid fa-star" /> Benefit</div>
+            <h2 className="sec-title">Kenapa bergabung dengan <span className="ital">AFSS</span>?</h2>
+          </Reveal>
+          <motion.div className="why-home-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+            {benefits.map((b) => (
+              <motion.div key={b.title} className="why-home-card spot" variants={fadeUp} whileHover={{ y: -5 }} onMouseMove={onSpot}>
+                <div className="why-home-ico" style={{ color: 'var(--blue)', background: 'var(--blue-l)' }}><Icon icon={b.icon} /></div>
+                <h3>{b.title}</h3>
+                <p>{b.desc}</p>
               </motion.div>
-            </Reveal>
-            <Reveal>
-              <div className="career-card">
-                <div className="open-badge"><span className="open-dot" /> Sedang Dibuka</div>
-                <div className="pos-title">Marketing Executive</div>
-                <p className="pos-desc">Kami mencari individu bersemangat dan berorientasi target untuk memperkenalkan solusi digital {BRAND.short} kepada bisnis di seluruh Indonesia melalui berbagai saluran pemasaran dan jaringan bisnis.</p>
-                <ul className="req-list">{reqs.map((r) => <li key={r}><Icon icon="fa-solid fa-circle-check" /> {r}</li>)}</ul>
-                <a className="btn btn-wa btn-lg" href={waLink(`Halo ${BRAND.short}, saya tertarik melamar posisi Marketing Executive. Boleh saya dapatkan informasi lebih lanjut?`)} target="_blank" rel="noreferrer">
-                  <Icon icon="fa-brands fa-whatsapp" /> Lamar via WhatsApp
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Job listings */}
+      <section id="lowongan" style={{ paddingTop: 60, paddingBottom: 80 }}>
+        <div className="container">
+          <Reveal className="sec-header center">
+            <div className="eyebrow"><Icon icon="fa-solid fa-rectangle-list" /> Lowongan Tersedia</div>
+            <h2 className="sec-title">{JOBS.length} posisi yang <span className="ital">sedang dibuka</span></h2>
+            <p className="sec-sub">Semua posisi terbuka untuk kandidat dari seluruh Indonesia. Remote-friendly kecuali disebutkan hybrid.</p>
+          </Reveal>
+          <motion.div className="jobs-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+            {JOBS.map((j) => (
+              <motion.div key={j.pos} className="job-card spot" variants={fadeUp} whileHover={{ y: -4 }} onMouseMove={onSpot}>
+                <div className="job-header">
+                  <div>
+                    <span className="job-badge" style={{ background: j.badgeColor + '1a', color: j.badgeColor }}>{j.badge}</span>
+                    <h3 className="job-pos">{j.pos}</h3>
+                    <div className="job-type"><Icon icon="fa-solid fa-clock" /> {j.type}</div>
+                  </div>
+                  <div className="job-salary">{j.salary}</div>
+                </div>
+                <p className="job-desc">{j.desc}</p>
+                <div className="job-skills">
+                  {j.skills.map((s) => <span key={s}><Icon icon="fa-solid fa-check" /> {s}</span>)}
+                </div>
+                <a className="btn btn-pri" href={waLink(`Halo ${BRAND.short}, saya tertarik melamar posisi "${j.pos}". Boleh saya kirim CV?`)} target="_blank" rel="noreferrer">
+                  <Icon icon="fa-brands fa-whatsapp" /> Lamar Posisi Ini
                 </a>
-              </div>
-            </Reveal>
-          </div>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
       <section className="cta-band" style={{ paddingTop: 0 }}>
         <Reveal className="cta-card">
-          <h2>Belum ada posisi yang <span className="ital">cocok</span>?</h2>
-          <p>Kirim CV dan portofolio Anda ke kami — kami selalu tertarik bertemu talenta terbaik untuk kolaborasi ke depan.</p>
-          <a className="btn btn-pri btn-lg" href={`mailto:${BRAND.email}`}><Icon icon="fa-solid fa-envelope" /> Kirim CV via Email</a>
+          <h2>Tidak ada posisi yang <span className="ital">cocok</span> sekarang?</h2>
+          <p>Kirim CV dan portofolio Anda — kami simpan untuk project atau lowongan berikutnya yang sesuai profil Anda.</p>
+          <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center' }}>
+            <a className="btn btn-pri btn-lg" href={`mailto:${BRAND.email}?subject=CV Spontan - [Nama] [Posisi]`}><Icon icon="fa-solid fa-envelope" /> Kirim CV via Email</a>
+            <a className="btn btn-ghost btn-lg" href={waLink(`Halo ${BRAND.short}, saya ingin mendaftar spontan untuk bergabung dengan tim AFSS.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Chat Dulu</a>
+          </div>
         </Reveal>
       </section>
     </>
@@ -1488,6 +1638,7 @@ export function Karir() {
 export function AjukanProyek() {
   const [form, setForm] = useState({ nama: '', kontak: '', perusahaan: '', jenis: '', anggaran: '', timeline: '', deskripsi: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [sending, setSending] = useState(false)
   const [errors, setErrors] = useState({})
 
   const set = (k) => (e) => { setForm((f) => ({ ...f, [k]: e.target.value })); setErrors((er) => ({ ...er, [k]: '' })) }
@@ -1501,17 +1652,39 @@ export function AjukanProyek() {
     return e
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const errs = validate()
     if (Object.keys(errs).length > 0) { setErrors(errs); return }
+    setSending(true)
+    const pesan = [
+      form.perusahaan ? `Perusahaan: ${form.perusahaan}` : '',
+      `Anggaran: ${form.anggaran || 'Belum ditentukan'}`,
+      `Timeline: ${form.timeline || 'Belum ditentukan'}`,
+      '',
+      'Deskripsi Proyek:',
+      form.deskripsi,
+    ].filter(Boolean).join('\n')
+
+    try {
+      await emailjs.send('service_7w4dccc', 'template_0ogubg3', {
+        from_name: form.nama,
+        from_contact: form.kontak,
+        jenis_proyek: `[BRIEF PROYEK] ${form.jenis}`,
+        message: pesan,
+        to_email: BRAND.email,
+      }, 'ig9sNOB9hNjTymRoP')
+    } catch {
+      // Fallback to localStorage only
+    }
     if (typeof window !== 'undefined') {
       const all = JSON.parse(localStorage.getItem('afss_submissions') || '[]')
       all.push({ id: Date.now(), ...form, status: 'Baru', tanggal: new Date().toISOString() })
       localStorage.setItem('afss_submissions', JSON.stringify(all))
     }
+    setSending(false)
     setSubmitted(true)
-    if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   const title = 'Ajukan Proyek — AFSS | Mulai Proyek Digital Anda'
@@ -1655,8 +1828,8 @@ export function AjukanProyek() {
             </div>
 
             <div className="form-submit-row">
-              <button className="btn btn-pri btn-lg" type="submit">
-                <Icon icon="fa-solid fa-paper-plane" /> Kirim Pengajuan
+              <button className="btn btn-pri btn-lg" type="submit" disabled={sending}>
+                {sending ? <><Icon icon="fa-solid fa-spinner fa-spin" /> Mengirim...</> : <><Icon icon="fa-solid fa-paper-plane" /> Kirim Pengajuan</>}
               </button>
               <p className="form-note">
                 Atau langsung chat via{' '}

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import {
-  motion, AnimatePresence, useScroll, useTransform, useSpring,
+  motion, AnimatePresence, useScroll, useSpring,
   useInView, animate, useReducedMotion,
 } from 'framer-motion'
 import { Link, Outlet, useLocation } from 'react-router-dom'
@@ -9,6 +9,7 @@ import { Icon } from './Icon.jsx'
 import {
   BRAND, products, workflow as steps, showcase, charts, reviews, stats,
   growthSeries, kpis, satisfaction, waLink, clients, why, techStack, pricing, faqs,
+  testimonials,
 } from './data.js'
 import { getAllPosts, formatDateId } from './blog.js'
 
@@ -277,55 +278,81 @@ export function Mock({ item }) {
 }
 
 /* ════════════════════════════════════════════════ HERO */
-function Hero({ reduce, parallax }) {
-  const floatA = reduce ? {} : { animate: { y: [0, -9, 0] }, transition: { duration: 4.2, repeat: Infinity, ease: 'easeInOut' } }
-  const floatB = reduce ? {} : { animate: { y: [0, 9, 0] }, transition: { duration: 4.8, repeat: Infinity, ease: 'easeInOut' } }
+function Hero({ reduce }) {
+  const floatA = reduce ? {} : { animate: { y: [0, -12, 0] }, transition: { duration: 6, repeat: Infinity, ease: 'easeInOut' } }
   return (
     <section className="hero" id="home">
       <div className="hero-glow" />
       <div className="hero-inner">
         <motion.div variants={container} initial="hidden" animate="show">
           <motion.div className="hero-badge" variants={fadeUp}>
-            <span className="stars">★★★★★</span> Dipercaya 50+ perusahaan di Indonesia
+            <span className="pulse-dot" />
+            Software House untuk Bisnis Indonesia
           </motion.div>
           <motion.h1 variants={fadeUp}>
-            Jasa Pembuatan Website, Aplikasi Mobile &amp; Sistem ERP Custom untuk <span className="ital">Bisnis Indonesia</span>
+            Bangun Website, Aplikasi Mobile &amp; <span className="grad">Sistem Bisnis Digital</span> dengan Harga Masuk Akal
           </motion.h1>
           <motion.p className="lead" variants={fadeUp}>
-            Software house Medan — kami bangun website profesional, aplikasi Android & iOS, dashboard, dan ERP dari nol.
-            Cepat, SEO-ready, kode milik Anda sepenuhnya.
+            AFSS membantu bisnis Indonesia memiliki website, dashboard, aplikasi mobile, hingga ERP custom yang profesional, mudah digunakan, dan bisa dikembangkan sesuai kebutuhan.
           </motion.p>
           <motion.div className="hero-cta" variants={fadeUp}>
-            <Magnetic href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis untuk proyek saya.`)} className="btn btn-pri btn-lg" target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Konsultasi Gratis</Magnetic>
-            <Link to="/portofolio" className="btn btn-ghost btn-lg"><Icon icon="fa-solid fa-images" /> Lihat Portofolio</Link>
+            <Magnetic href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi gratis untuk proyek saya.`)} className="btn btn-wa btn-lg" target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Konsultasi Gratis via WhatsApp</Magnetic>
+            <Link to="/portofolio" className="btn btn-ghost btn-lg">Lihat Portofolio <Icon icon="fa-solid fa-arrow-right" /></Link>
           </motion.div>
           <motion.div className="hero-trust" variants={fadeUp}>
             <div className="avatars"><span>50+</span></div>
-            <span><b>Dipercaya 50+ perusahaan</b> · 100+ proyek selesai</span>
+            <span>Cocok untuk <b>UMKM, startup, klinik, sekolah, retail</b> & perusahaan yang ingin naik level digital.</span>
           </motion.div>
         </motion.div>
 
         <motion.div className="hero-visual" initial={{ opacity: 0, y: 26, filter: 'blur(8px)' }} animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }} transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}>
-          <motion.div className="panel" style={reduce ? {} : { y: parallax }}>
-            <div className="panel-head">
-              <div className="ph-l"><span className="panel-dot" /><span className="panel-title">Pertumbuhan Klien</span></div>
-              <span className="panel-tag">Live</span>
+          {/* Browser window mockup */}
+          <div className="hero-browser">
+            <div className="br-bar">
+              <i style={{ background: '#FF6058' }} />
+              <i style={{ background: '#FFBD2E' }} />
+              <i style={{ background: '#28C840' }} />
+              <div className="br-url" />
             </div>
-            <div className="panel-figure">
-              <span className="big"><Counter to={218} prefix="+" suffix="%" /></span>
-              <span className="delta"><Icon icon="fa-solid fa-arrow-up" /> 12,4% bln ini</span>
+            <div className="br-body">
+              <div className="br-row">
+                <div className="br-text">
+                  <div className="br-h" />
+                  <div className="br-p" />
+                  <div className="br-p w60" />
+                  <div className="br-btn" />
+                </div>
+                <div className="br-img" />
+              </div>
+              <div className="br-grid">
+                <div className="br-grid-item" />
+                <div className="br-grid-item" />
+                <div className="br-grid-item" />
+              </div>
             </div>
-            <div className="panel-sub">Rata-rata konversi klien · 12 bulan terakhir</div>
-            <div className="panel-chart"><AreaChart id="hero" data={growthSeries} /></div>
-            <div className="panel-x"><span>Jan</span><span>Apr</span><span>Jul</span><span>Okt</span><span>Des</span></div>
+          </div>
+
+          {/* Dark revenue card */}
+          <motion.div className="hero-revenue" {...floatA}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
+              <span className="rev-label">Revenue Bulanan</span>
+              <span className="rev-tag">+38%</span>
+            </div>
+            <div className="rev-amount">Rp 128,4 Jt</div>
+            <div className="rev-bars">
+              {[40, 58, 46, 74, 64, 92].map((h, i) => (
+                <div key={i} className={`rev-bar${h >= 70 ? ' hi' : ''}`} style={{ height: `${h}%` }} />
+              ))}
+            </div>
           </motion.div>
 
-          <motion.div className="float-card fc-1" {...floatA}>
+          {/* Float cards */}
+          <motion.div className="float-card fc-1" animate={reduce ? {} : { y: [0, 9, 0] }} transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}>
             <div className="fc-ico" style={{ background: 'var(--wa)' }}><Icon icon="fa-solid fa-arrow-trend-up" /></div>
-            <div><div className="fc-big">+38%</div><div className="fc-sm">Konversi</div></div>
+            <div><div className="fc-big">+218%</div><div className="fc-sm">Rata-rata pertumbuhan klien</div></div>
           </motion.div>
-          <motion.div className="float-card fc-2" {...floatB}>
-            <div className="fc-ico" style={{ background: 'var(--accent)' }}><Icon icon="fa-solid fa-circle-check" /></div>
+          <motion.div className="float-card" style={{ bottom: 90, left: -10, zIndex: 3 }} animate={reduce ? {} : { y: [0, -7, 0] }} transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 1.2 }}>
+            <div className="fc-ico" style={{ background: 'var(--blue)' }}><Icon icon="fa-solid fa-circle-check" /></div>
             <div><div className="fc-big">100+</div><div className="fc-sm">Proyek Selesai</div></div>
           </motion.div>
         </motion.div>
@@ -350,19 +377,51 @@ function StatsBand() {
   )
 }
 
-/* ════════════════════════════════════════════════ TRUST BAR — client / industry strip */
-function TrustBar() {
+/* ════════════════════════════════════════════════ KENAPA AFSS */
+function WhyUs() {
+  const items = [
+    { icon: 'fa-solid fa-code', color: 'var(--blue)', bg: 'var(--blue-l)', title: 'Kode Milik Anda Sepenuhnya', desc: 'Tidak ada vendor lock-in. Seluruh source code, dokumentasi, dan aset diserahkan setelah proyek selesai.' },
+    { icon: 'fa-solid fa-gauge-high', color: '#10C7B2', bg: 'rgba(16,199,178,.1)', title: 'Cepat & SEO-Ready Sejak Awal', desc: 'Core Web Vitals 90+ dan struktur SEO on-page yang benar sejak baris kode pertama — bukan tambalan belakangan.' },
+    { icon: 'fa-solid fa-comments', color: 'var(--blue)', bg: 'var(--blue-l)', title: 'Komunikasi Transparan', desc: 'Update progres berkala, bisa dichat kapan saja, dan perubahan kecil tidak tiba-tiba ada biaya tambahan.' },
+    { icon: 'fa-solid fa-shield-halved', color: '#10C7B2', bg: 'rgba(16,199,178,.1)', title: 'Garansi Bug 30–90 Hari', desc: 'Setiap proyek dilengkapi masa garansi bug setelah launching. Jika ada yang rusak karena kode kami — kami perbaiki gratis.' },
+    { icon: 'fa-solid fa-location-dot', color: 'var(--blue)', bg: 'var(--blue-l)', title: 'Tim Lokal, Paham Konteks Indonesia', desc: 'Memahami kebutuhan bisnis Indonesia — dari integrasi e-commerce lokal, payment gateway Rupiah, hingga regulasi pajak.' },
+    { icon: 'fa-solid fa-chart-line', color: '#10C7B2', bg: 'rgba(16,199,178,.1)', title: 'Berorientasi Hasil Bisnis', desc: 'Kami tidak hanya membangun tampilan. Setiap fitur yang kami rekomendasikan punya alasan bisnis yang jelas.' },
+  ]
   return (
-    <div className="trustbar">
+    <section className="whyus-home">
       <div className="container">
-        <Reveal className="trust-label">Dipercaya oleh bisnis di berbagai industri</Reveal>
-        <motion.div className="trust-logos" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
-          {clients.map((c) => (
-            <motion.span className="trust-logo" key={c} variants={fadeUp}>
-              <Icon icon="fa-solid fa-circle-nodes" /> {c}
-            </motion.span>
+        <Reveal className="sec-header center">
+          <div className="eyebrow"><Icon icon="fa-solid fa-award" /> Kenapa AFSS</div>
+          <h2 className="sec-title">Kami tidak hanya membuat tampilan — kami membantu bisnis <span className="ital">benar-benar bisa dipakai</span></h2>
+        </Reveal>
+        <motion.div className="why-home-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+          {items.map((it) => (
+            <motion.div key={it.title} className="why-home-card spot" variants={fadeUp} whileHover={{ y: -5 }} transition={{ type: 'spring', stiffness: 300, damping: 24 }} onMouseMove={onSpot}>
+              <div className="why-home-ico" style={{ color: it.color, background: it.bg }}><Icon icon={it.icon} /></div>
+              <h3>{it.title}</h3>
+              <p>{it.desc}</p>
+            </motion.div>
           ))}
         </motion.div>
+      </div>
+    </section>
+  )
+}
+
+/* ════════════════════════════════════════════════ TRUST BAR — client / industry strip */
+function TrustBar() {
+  const doubled = [...clients, ...clients]
+  return (
+    <div className="trustbar">
+      <div className="trust-label">Dipercaya beragam bisnis di Indonesia</div>
+      <div className="trust-marquee-wrap">
+        <div className="trust-logos">
+          {doubled.map((c, i) => (
+            <span className="trust-logo" key={i}>
+              <Icon icon="fa-solid fa-circle-nodes" /> {c}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   )
@@ -491,15 +550,98 @@ function Process() {
   )
 }
 
+/* ════════════════════════════════════════════════ PORTFOLIO MODAL */
+function PortfolioModal({ item, onClose }) {
+  useEffect(() => {
+    const esc = (e) => e.key === 'Escape' && onClose()
+    document.addEventListener('keydown', esc)
+    document.body.style.overflow = 'hidden'
+    return () => { document.removeEventListener('keydown', esc); document.body.style.overflow = '' }
+  }, [onClose])
+
+  const waMsg = encodeURIComponent(`Halo AFSS, saya tertarik diskusi proyek serupa dengan "${item.title}". Boleh konsultasi?`)
+
+  return (
+    <AnimatePresence>
+      <motion.div className="pf-overlay" onClick={onClose}
+        initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}>
+        <motion.div className="pf-modal" onClick={(e) => e.stopPropagation()}
+          initial={{ opacity: 0, y: 40, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 20, scale: 0.98 }}
+          transition={{ type: 'spring', stiffness: 300, damping: 28 }}>
+          {/* Header banner */}
+          <div className="pf-banner" style={{ '--c': item.c, '--c2': item.c2 }}>
+            <div className="pf-banner-mock"><Mock item={item} /></div>
+            <button className="pf-close" onClick={onClose} aria-label="Tutup"><Icon icon="fa-solid fa-xmark" /></button>
+          </div>
+
+          {/* Body */}
+          <div className="pf-body">
+            <div className="pf-meta">
+              <span className="pf-cat">{item.cat}</span>
+              <span className="pf-budget"><Icon icon="fa-solid fa-tag" /> {item.budget}</span>
+            </div>
+            <h3 className="pf-title">{item.title}</h3>
+
+            {/* Result pill */}
+            <div className="pf-result">
+              <Icon icon="fa-solid fa-arrow-trend-up" />
+              <span>{item.price}</span>
+              <span className="pf-result-detail">— {item.result}</span>
+            </div>
+
+            {/* Problem & Solution */}
+            <div className="pf-two-col">
+              <div className="pf-block problem">
+                <div className="pf-block-label"><Icon icon="fa-solid fa-circle-exclamation" /> Masalah Klien</div>
+                <p>{item.problem}</p>
+              </div>
+              <div className="pf-block solution">
+                <div className="pf-block-label"><Icon icon="fa-solid fa-circle-check" /> Solusi AFSS</div>
+                <p>{item.solution}</p>
+              </div>
+            </div>
+
+            {/* Features */}
+            <div className="pf-features-label">Fitur yang Dibangun</div>
+            <div className="pf-features">
+              {item.features.map((f) => (
+                <span key={f} className="pf-feat"><Icon icon="fa-solid fa-check" /> {f}</span>
+              ))}
+            </div>
+
+            {/* Tech + CTAs */}
+            <div className="pf-footer">
+              <div className="pf-tech">
+                <span className="pf-tech-label">Teknologi</span>
+                <span className="pf-tech-val">{item.tech}</span>
+              </div>
+              <div className="pf-ctas">
+                <a href={`https://wa.me/628139694307?text=${waMsg}`} target="_blank" rel="noreferrer" className="btn btn-wa">
+                  <Icon icon="fa-brands fa-whatsapp" /> Diskusi Proyek Serupa
+                </a>
+                <Link to="/portofolio" className="btn btn-ghost" onClick={onClose}>
+                  Lihat Semua <Icon icon="fa-solid fa-arrow-right" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
+  )
+}
+
 /* ════════════════════════════════════════════════ SHOWCASE / PORTOFOLIO */
 function Showcase() {
+  const [active, setActive] = useState(null)
+
   return (
     <section className="showcase" id="portfolio">
       <div className="container">
         <Reveal className="sec-header center">
           <div className="eyebrow"><Icon icon="fa-solid fa-images" /> Portofolio</div>
           <h2 className="sec-title">Studi kasus &amp; <span className="ital">hasil nyata</span></h2>
-          <p className="sec-sub">Beragam sistem yang telah kami bangun — lengkap dengan stack teknologi &amp; hasil yang dirasakan klien.</p>
+          <p className="sec-sub">Beragam sistem yang telah kami bangun — lengkap dengan tantangan, solusi, dan dampak terukur yang dirasakan klien.</p>
         </Reveal>
         <motion.div className="show-grid" variants={container} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-30px' }}>
           {showcase.map((item) => (
@@ -507,7 +649,12 @@ function Showcase() {
               <div className="show-head"><div className="show-num">{item.n}</div><div className="show-title">{item.title}</div></div>
               <Mock item={item} />
               <div className="show-tags">{item.tags.map((t) => <span key={t}>{t}</span>)}</div>
-              <div className="show-price"><Icon icon="fa-solid fa-arrow-trend-up" /> {item.price}</div>
+              <div className="show-card-foot">
+                <span className="show-price"><Icon icon="fa-solid fa-arrow-trend-up" /> {item.price}</span>
+                <button className="show-detail-btn" onClick={() => setActive(item)}>
+                  Lihat Detail <Icon icon="fa-solid fa-arrow-right" />
+                </button>
+              </div>
             </motion.div>
           ))}
         </motion.div>
@@ -515,6 +662,7 @@ function Showcase() {
           <Link to="/portofolio" className="btn btn-ghost btn-lg">Lihat semua portofolio <Icon icon="fa-solid fa-arrow-right" /></Link>
         </div>
       </div>
+      {active && <PortfolioModal item={active} onClose={() => setActive(null)} />}
     </section>
   )
 }
@@ -560,6 +708,77 @@ function Reviews({ reduce }) {
   )
 }
 
+/* ════════════════════════════════════════════════ ADD-ON SERVICES */
+const ADDONS_DISPLAY = [
+  { icon: 'fa-solid fa-magnifying-glass-chart', color: '#2563FF', bg: 'rgba(37,99,255,.09)', title: 'SEO On-Page Lengkap', desc: 'Riset keyword, optimasi meta tag, schema markup, internal linking, dan sitemap — semua siap submit ke Google.', price: 'Rp 1,5–3 Jt' },
+  { icon: 'fa-solid fa-server', color: '#10C7B2', bg: 'rgba(16,199,178,.09)', title: 'Domain + Hosting 1 Tahun', desc: 'Setup domain pilihan Anda (.com / .id / .co.id) + hosting cepat dengan SSL gratis dan backup mingguan.', price: 'Rp 500rb–1,5 Jt' },
+  { icon: 'fa-solid fa-credit-card', color: '#2563FF', bg: 'rgba(37,99,255,.09)', title: 'Integrasi Payment Gateway', desc: 'Midtrans atau Xendit — transfer bank, QRIS, kartu kredit, GoPay, OVO, Dana. Siap produksi.', price: 'Rp 1,5–3 Jt' },
+  { icon: 'fa-brands fa-whatsapp', color: '#1EBE5D', bg: 'rgba(30,190,93,.09)', title: 'WhatsApp Business API', desc: 'Notifikasi otomatis ke pelanggan — konfirmasi order, reminder jadwal, OTP, hingga broadcast promo.', price: 'Rp 1,5–2,5 Jt' },
+  { icon: 'fa-solid fa-chart-bar', color: '#10C7B2', bg: 'rgba(16,199,178,.09)', title: 'Analytics & Tracking Setup', desc: 'Google Analytics 4, Google Tag Manager, Meta Pixel, dan konversi event — data akurat untuk keputusan iklan.', price: 'Rp 500rb–1,5 Jt' },
+  { icon: 'fa-solid fa-pen-ruler', color: '#2563FF', bg: 'rgba(37,99,255,.09)', title: 'Desain UI/UX Tambahan', desc: 'Wireframe, mockup Figma, dan user flow untuk halaman atau fitur tambahan di luar scope awal.', price: 'Rp 1–3 Jt/halaman' },
+]
+
+function AddOns() {
+  return (
+    <section className="addons-sec">
+      <div className="container">
+        <Reveal className="sec-header center">
+          <div className="eyebrow"><Icon icon="fa-solid fa-puzzle-piece" /> Add-On</div>
+          <h2 className="sec-title">Tambahkan layanan sesuai <span className="ital">kebutuhan proyek</span></h2>
+          <p className="sec-sub">Kombinasikan layanan utama dengan add-on untuk solusi yang lebih lengkap. Bisa ditambahkan kapan saja, bahkan setelah proyek selesai.</p>
+        </Reveal>
+        <motion.div className="addons-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+          {ADDONS_DISPLAY.map((a) => (
+            <motion.div key={a.title} className="addon-card spot" variants={fadeUp} whileHover={{ y: -5 }} transition={{ type: 'spring', stiffness: 300, damping: 24 }} onMouseMove={onSpot}>
+              <div className="addon-ico" style={{ color: a.color, background: a.bg }}><Icon icon={a.icon} /></div>
+              <div className="addon-content">
+                <h3>{a.title}</h3>
+                <p>{a.desc}</p>
+              </div>
+              <div className="addon-price">{a.price}</div>
+            </motion.div>
+          ))}
+        </motion.div>
+        <Reveal className="addons-note">
+          Harga add-on adalah estimasi. Kombinasi dengan proyek utama bisa mendapat <b>harga lebih baik</b>.{' '}
+          <a href={waLink(`Halo ${BRAND.short}, saya ingin tanya tentang add-on layanan AFSS.`)} target="_blank" rel="noreferrer" className="accent-link">Tanya via WhatsApp →</a>
+        </Reveal>
+      </div>
+    </section>
+  )
+}
+
+/* ════════════════════════════════════════════════ TESTIMONIALS */
+function Testimonials() {
+  return (
+    <section className="testi-sec">
+      <div className="container">
+        <Reveal className="sec-header center">
+          <div className="eyebrow green"><Icon icon="fa-solid fa-heart" /> Testimoni</div>
+          <h2 className="sec-title">Apa kata klien <span className="ital">kami</span>?</h2>
+          <p className="sec-sub">Kepuasan klien adalah prioritas utama kami. Demi privasi, nama klien hanya ditampilkan sebagian.</p>
+        </Reveal>
+        <motion.div className="testi-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+          {testimonials.map((t, i) => (
+            <motion.div key={i} className="testi-card spot" variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }} onMouseMove={onSpot}>
+              <div className="testi-stars">{[...Array(t.star)].map((_, j) => <Icon key={j} icon="fa-solid fa-star" />)}</div>
+              <p className="testi-quote">"{t.quote}"</p>
+              <div className="testi-footer">
+                <div className="testi-avatar" style={{ background: t.grad }}>{t.initial}</div>
+                <div>
+                  <div className="testi-name">{t.name.split(' ')[0]} {t.name.split(' ').slice(1).map(w => w[0] + '*'.repeat(w.length - 1)).join(' ')}</div>
+                  <div className="testi-role">{t.role} · {t.company}</div>
+                </div>
+                <span className="testi-tag"><Icon icon="fa-solid fa-arrow-trend-up" /> {t.result}</span>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
 /* ════════════════════════════════════════════════ TECH STACK / TEKNOLOGI */
 function TechStack() {
   return (
@@ -598,7 +817,7 @@ function BlogTeaser() {
             <motion.article key={p.slug} className="blog-card" variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }}>
               <Link to={`/blog/${p.slug}`} className="blog-card-link">
                 <div className="blog-cover" style={{ '--c': p.c, '--c2': p.c2 }}>
-                  <img src={`/blog/${p.slug}.png`} alt={`Ilustrasi artikel: ${p.title}`} width="1200" height="630" loading="lazy" />
+                  <img src={`/blog/${p.slug}.png`} alt={`Ilustrasi artikel: ${p.title}`} width="1200" height="630" loading="lazy" onError={(e) => { e.target.style.display = 'none' }} />
                 </div>
                 <div className="blog-card-body">
                   <div className="blog-meta">{formatDateId(p.date)} · {p.readMinutes} menit baca</div>
@@ -692,6 +911,183 @@ export function Footer({ trimmed = false }) {
   )
 }
 
+/* ════════════════════════════════════════════════ PROJECT ESTIMATOR */
+const EST_PRODUCTS = [
+  { id: 'landing',  label: 'Landing Page',        base: [1.5, 4],    perUnit: 0.5,  unit: 'halaman', icon: 'fa-solid fa-file' },
+  { id: 'website',  label: 'Website Profil',       base: [3, 12],     perUnit: 0.8,  unit: 'halaman', icon: 'fa-solid fa-window-maximize' },
+  { id: 'toko',     label: 'Toko Online',          base: [5, 20],     perUnit: 1.2,  unit: 'modul',   icon: 'fa-solid fa-cart-shopping' },
+  { id: 'mobile',   label: 'Aplikasi Mobile',      base: [15, 50],    perUnit: 3,    unit: 'fitur',   icon: 'fa-solid fa-mobile-screen-button' },
+  { id: 'webapp',   label: 'Web App / Dashboard',  base: [4, 25],     perUnit: 1.8,  unit: 'modul',   icon: 'fa-solid fa-chart-line' },
+  { id: 'erp',      label: 'ERP / Sistem Custom',  base: [25, 100],   perUnit: 5,    unit: 'modul',   icon: 'fa-solid fa-layer-group' },
+]
+
+const EST_ADDONS = [
+  { id: 'seo',       label: 'SEO On-page Lengkap',        price: 1.5 },
+  { id: 'hosting',   label: 'Domain + Hosting 1 Tahun',   price: 0.8 },
+  { id: 'payment',   label: 'Payment Gateway',            price: 2   },
+  { id: 'wa',        label: 'Integrasi WhatsApp API',     price: 1.5 },
+  { id: 'maint',     label: 'Maintenance 3 Bulan',        price: 2.4 },
+  { id: 'uiux',      label: 'Desain Custom UI/UX',        price: 3   },
+]
+
+function fmtPrice(val) {
+  if (val >= 1000) return `Rp ${(val / 1000).toFixed(0)} M`
+  return `Rp ${val % 1 === 0 ? val : val.toFixed(1)} Jt`
+}
+
+function Estimator() {
+  const [prodId, setProdId] = useState('website')
+  const [units, setUnits] = useState(5)
+  const [addons, setAddons] = useState({})
+
+  const prod = EST_PRODUCTS.find((p) => p.id === prodId)
+  const addonTotal = EST_ADDONS.filter((a) => addons[a.id]).reduce((s, a) => s + a.price, 0)
+  const low  = prod.base[0] + (units - 1) * prod.perUnit + addonTotal
+  const high = prod.base[1] + (units - 1) * prod.perUnit * 1.6 + addonTotal
+
+  const waMsg = encodeURIComponent(
+    `Halo AFSS, saya ingin konsultasi proyek:\n- Jenis: ${prod.label}\n- ${units} ${prod.unit}\n- Estimasi: ${fmtPrice(low)} – ${fmtPrice(high)}\n\nBoleh diskusi lebih lanjut?`
+  )
+
+  const toggleAddon = (id) => setAddons((a) => ({ ...a, [id]: !a[id] }))
+
+  return (
+    <section className="estimator" id="estimator">
+      <div className="container">
+        <Reveal className="sec-header center">
+          <div className="eyebrow"><Icon icon="fa-solid fa-calculator" /> Estimator</div>
+          <h2 className="sec-title">Berapa estimasi biaya <span className="ital">proyek Anda</span>?</h2>
+          <p className="sec-sub">Pilih jenis proyek dan kebutuhan Anda — dapatkan estimasi harga awal secara instan. Tanpa komitmen.</p>
+        </Reveal>
+
+        <div className="est-wrap">
+          {/* Left — inputs */}
+          <div className="est-left">
+            {/* Step 1 */}
+            <div className="est-step">
+              <div className="est-step-label"><span>1</span> Jenis Produk</div>
+              <div className="est-prod-grid">
+                {EST_PRODUCTS.map((p) => (
+                  <button key={p.id} className={`est-prod-btn${prodId === p.id ? ' active' : ''}`} onClick={() => { setProdId(p.id); setUnits(5) }}>
+                    <Icon icon={p.icon} />
+                    <span>{p.label}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="est-step">
+              <div className="est-step-label">
+                <span>2</span> Jumlah {prod.unit} — <strong>{units} {prod.unit}</strong>
+              </div>
+              <input type="range" min="1" max="15" value={units} onChange={(e) => setUnits(+e.target.value)} className="est-slider" />
+              <div className="est-slider-marks"><span>1</span><span>5</span><span>10</span><span>15</span></div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="est-step">
+              <div className="est-step-label"><span>3</span> Layanan Tambahan</div>
+              <div className="est-addons">
+                {EST_ADDONS.map((a) => (
+                  <button key={a.id} className={`est-addon-btn${addons[a.id] ? ' active' : ''}`} onClick={() => toggleAddon(a.id)}>
+                    <span className={`est-addon-check${addons[a.id] ? ' on' : ''}`}>
+                      <Icon icon="fa-solid fa-check" />
+                    </span>
+                    <span className="est-addon-label">{a.label}</span>
+                    <span className="est-addon-price">+ {fmtPrice(a.price)}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Right — result */}
+          <div className="est-result">
+            <div className="est-result-inner">
+              <div className="est-result-label">Estimasi Awal Project</div>
+              <motion.div className="est-result-low" key={`${prodId}-${units}-${JSON.stringify(addons)}`}
+                initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
+                {fmtPrice(low)}
+              </motion.div>
+              <div className="est-result-range">s/d <strong>{fmtPrice(high)}</strong></div>
+              <div className="est-divider" />
+
+              <div className="est-breakdown">
+                <div className="est-brow">
+                  <span>Base {prod.label}</span>
+                  <span>{fmtPrice(prod.base[0])} – {fmtPrice(prod.base[1])}</span>
+                </div>
+                <div className="est-brow">
+                  <span>{units} {prod.unit} × {fmtPrice(prod.perUnit)}</span>
+                  <span>+{fmtPrice((units - 1) * prod.perUnit)}</span>
+                </div>
+                {addonTotal > 0 && (
+                  <div className="est-brow accent">
+                    <span>Add-on terpilih</span>
+                    <span>+{fmtPrice(addonTotal)}</span>
+                  </div>
+                )}
+              </div>
+
+              <div className="est-divider" />
+              <p className="est-note">Estimasi awal — harga final menyesuaikan tingkat kesulitan, integrasi, dan kebutuhan khusus. Konsultasi gratis untuk angka pasti.</p>
+              <a href={`https://wa.me/628139694307?text=${waMsg}`} target="_blank" rel="noreferrer" className="btn btn-wa" style={{ width: '100%', justifyContent: 'center', marginTop: 8 }}>
+                <Icon icon="fa-brands fa-whatsapp" /> Konsultasi Estimasi Ini
+              </a>
+              <a href="/ajukan-proyek" className="btn btn-ghost" style={{ width: '100%', justifyContent: 'center', marginTop: 10 }}>
+                <Icon icon="fa-solid fa-file-pen" /> Ajukan Brief Proyek
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ════════════════════════════════════════════════ SMART WA FLOAT */
+const WA_MESSAGES = {
+  '/layanan':      `Halo ${BRAND.short}, saya tertarik dengan layanan Anda. Boleh konsultasi?`,
+  '/harga':        `Halo ${BRAND.short}, saya mau tanya lebih lanjut soal paket harga AFSS.`,
+  '/portofolio':   `Halo ${BRAND.short}, saya lihat portofolio AFSS dan tertarik diskusi proyek serupa.`,
+  '/kontak':       `Halo ${BRAND.short}, saya ingin konsultasi gratis.`,
+  '/ajukan-proyek':`Halo ${BRAND.short}, saya ingin mengajukan brief proyek.`,
+  '/karir':        `Halo ${BRAND.short}, saya tertarik bergabung dengan tim AFSS.`,
+  '/blog':         `Halo ${BRAND.short}, saya baca artikel di blog AFSS dan ingin tahu lebih lanjut.`,
+  '/faq':          `Halo ${BRAND.short}, saya punya pertanyaan tentang layanan AFSS.`,
+  default:         `Halo ${BRAND.short}, saya ingin konsultasi gratis tentang proyek digital saya.`,
+}
+
+function SmartWA({ reduce }) {
+  const { pathname } = useLocation()
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const t = setTimeout(() => setVisible(true), 1500)
+    return () => clearTimeout(t)
+  }, [])
+
+  const msg = Object.entries(WA_MESSAGES).find(([k]) => k !== 'default' && pathname.startsWith(k))?.[1] || WA_MESSAGES.default
+
+  if (!visible) return null
+  return (
+    <motion.a
+      className="float-wa"
+      href={waLink(msg)}
+      target="_blank" rel="noreferrer"
+      title="Chat WhatsApp — Konsultasi Gratis"
+      initial={{ scale: 0, opacity: 0 }}
+      animate={reduce ? { scale: 1, opacity: 1 } : { scale: 1, opacity: 1, y: [0, -7, 0] }}
+      transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.92 }}
+    >
+      <Icon icon="fa-brands fa-whatsapp" />
+    </motion.a>
+  )
+}
+
 /* ════════════════════════════════════════════════ LAYOUT — shared chrome (nav + footer) */
 export function Layout() {
   const { scrollYProgress } = useScroll()
@@ -707,19 +1103,14 @@ export function Layout() {
         <Outlet />
       </main>
       <Footer />
-      <motion.a className="float-wa" href={waLink(`Halo ${BRAND.short}, saya ingin bertanya.`)} target="_blank" rel="noreferrer" title="Chat WhatsApp"
-        animate={reduce ? {} : { y: [0, -7, 0] }} transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }} whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.92 }}>
-        <Icon icon="fa-brands fa-whatsapp" />
-      </motion.a>
+      <SmartWA reduce={reduce} />
     </>
   )
 }
 
 /* ════════════════════════════════════════════════ HOME PAGE */
 export function Home() {
-  const { scrollY } = useScroll()
   const reduce = useReducedMotion()
-  const parallax = useTransform(scrollY, [0, 600], [0, -40])
   return (
     <>
       <Head>
@@ -737,14 +1128,17 @@ export function Home() {
         <meta property="og:image:height" content="630" />
         <meta name="twitter:image" content="https://afss.tech/og.png" />
       </Head>
-      <Hero reduce={reduce} parallax={parallax} />
+      <Hero reduce={reduce} />
       <StatsBand />
       <TrustBar />
+      <WhyUs />
       <Services />
+      <AddOns />
+      <Estimator />
       <Impact />
       <Process />
       <Showcase />
-      <Reviews reduce={reduce} />
+      <Testimonials />
       <TechStack />
       <BlogTeaser />
       <CtaBand />

@@ -188,7 +188,7 @@ export function BlogIndex() {
                   <motion.article key={p.slug} className="blog-card" variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }}>
                     <Link to={`/blog/${p.slug}`} className="blog-card-link">
                       <div className="blog-cover" style={{ '--c': p.c, '--c2': p.c2 }}>
-                        <img src={`/blog/${p.slug}.png`} alt={`Ilustrasi artikel: ${p.title}`} width="1200" height="630" loading="lazy" />
+                        <img src={`/blog/${p.slug}.png`} alt={`Ilustrasi artikel: ${p.title}`} width="1200" height="630" loading="lazy" onError={(e) => { e.target.style.display = 'none' }} />
                         <div className="blog-cover-tags">
                           {p.tags.map((t) => <span key={t}>{t}</span>)}
                         </div>
@@ -360,7 +360,7 @@ export function BlogPost() {
                 <article key={p.slug} className="blog-card">
                   <Link to={`/blog/${p.slug}`} className="blog-card-link">
                     <div className="blog-cover" style={{ '--c': p.c, '--c2': p.c2 }}>
-                      <img src={`/blog/${p.slug}.png`} alt={`Ilustrasi artikel: ${p.title}`} width="1200" height="630" loading="lazy" />
+                      <img src={`/blog/${p.slug}.png`} alt={`Ilustrasi artikel: ${p.title}`} width="1200" height="630" loading="lazy" onError={(e) => { e.target.style.display = 'none' }} />
                       <div className="blog-cover-tags">
                         {p.tags.map((t) => <span key={t}>{t}</span>)}
                       </div>

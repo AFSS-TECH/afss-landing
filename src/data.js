@@ -4,7 +4,7 @@ export const BRAND = {
   legal: 'PT Advanced Future Software Solutions',
   name: 'Advanced Future Software Solutions',
   tagline: 'Building Future Digital Solutions',
-  email: 'hendrik@afss.id',
+  email: 'hendrik@afss.tech',
   phone: '+62 813-9694-307',
   // NAP (Name · Address · Phone) — penting untuk SEO lokal. Ganti sesuai kantor asli.
   address: 'Medan, Sumatera Utara, Indonesia',
@@ -162,12 +162,72 @@ export const workflow = [
 
 // ── Portofolio / studi kasus (masalah → solusi → hasil) ────
 export const showcase = [
-  { n: 1,  title: 'Landing Page UMKM / Toko Online', price: 'Konversi +300%',        c: '#0E8C86', c2: '#0B6E69', kind: 'land', chart: 0, tags: ['Next.js', 'Tailwind', 'SEO'] },
-  { n: 2,  title: 'Company Profile Kontraktor',      price: 'Lead +2x',              c: '#15243B', c2: '#0E1A2E', kind: 'land', chart: 0, tags: ['Next.js', 'SEO'] },
-  { n: 3,  title: 'Dashboard & Mobile App Klinik',   price: 'Antrian -60%',          c: '#1E88A8', c2: '#0E5E78', kind: 'dash', chart: 2, tags: ['React', 'Flutter'] },
-  { n: 4,  title: 'Sistem Rental Mobil',             price: 'Operasional rapi',      c: '#2BB3A3', c2: '#0E8C86', kind: 'dash', chart: 1, tags: ['Laravel', 'MySQL'] },
-  { n: 5,  title: 'Sistem Dealer Motor',             price: 'Stok real-time',        c: '#15243B', c2: '#26405E', kind: 'dash', chart: 2, tags: ['React', 'Postgres'] },
-  { n: 6,  title: 'ERP Lite Toko Grosir',            price: 'Lapor -70% waktu',      c: '#0E8C86', c2: '#0B6E69', kind: 'dash', chart: 0, tags: ['Node.js', 'Postgres'] },
+  {
+    n: 1, title: 'Toko Batik Sari Melati', cat: 'Landing Page · UMKM',
+    price: 'Konversi +340%', result: '0 → 52 leads/bulan dalam 6 minggu',
+    c: '#10C7B2', c2: '#2563FF', kind: 'land', chart: 0,
+    tags: ['Next.js', 'Tailwind CSS', 'SEO', 'WhatsApp API'],
+    problem: 'Pemilik hanya mengandalkan foto di status WhatsApp. Tidak ada tampilan profesional, sulit ditemukan di Google, dan tidak bisa mengukur berapa yang menghubungi setelah melihat produk.',
+    solution: 'Landing page 1 halaman yang cepat (<1.8 detik), dengan galeri produk, testimoni pelanggan, dan CTA WhatsApp teroptimasi. SEO lokal Medan diatur sejak baris kode pertama.',
+    features: ['Galeri produk dengan filter kategori', 'CTA WhatsApp dengan pesan pre-filled', 'SEO lokal + Google Business integration', 'Google Analytics & heatmap tracking'],
+    tech: 'Next.js 14, Tailwind CSS, Vercel, GA4',
+    budget: 'Rp 4,5 Jt',
+  },
+  {
+    n: 2, title: 'CV Bangun Prima Kontraktor', cat: 'Company Profile · Konstruksi',
+    price: 'Lead Organik +210%', result: 'Dari 2 → 18 inquiry/bulan via Google',
+    c: '#0E2240', c2: '#2563FF', kind: 'land', chart: 0,
+    tags: ['Next.js', 'SEO Lokal', 'Schema Markup'],
+    problem: 'Website lama dibuat 2018 — lambat, tidak mobile-friendly, dan tidak pernah muncul di Google. Calon klien sulit menemukan perusahaan ini meski sudah cari nama mereknya.',
+    solution: 'Redesign total dengan Core Web Vitals 95+, struktur SEO yang benar, halaman portofolio proyek bergambar, dan schema markup untuk konstruksi lokal Medan.',
+    features: ['Halaman About, Layanan, Portofolio, Kontak', 'Galeri proyek dengan lightbox', 'Schema markup LocalBusiness & Service', 'Contact form + WhatsApp redirect'],
+    tech: 'Next.js 14, Tailwind CSS, Vercel, Schema.org',
+    budget: 'Rp 8 Jt',
+  },
+  {
+    n: 3, title: 'Klinik Sehat Bersama', cat: 'Mobile App + Dashboard · Kesehatan',
+    price: 'Waktu Tunggu -62%', result: 'Rating Google naik dari 3.8 → 4.7 bintang',
+    c: '#1E88A8', c2: '#10C7B2', kind: 'dash', chart: 2,
+    tags: ['React', 'Flutter', 'Node.js', 'PostgreSQL'],
+    problem: 'Pasien mengantri manual dengan kertas nomor — sering ricuh, pasien kabur karena terlalu lama. Rekam medis masih di buku besar, sulit dicari saat darurat.',
+    solution: 'Aplikasi Flutter untuk pasien (ambil nomor antrian dari HP) + dashboard web untuk staff (kelola antrian & rekam medis). Data tersinkronisasi real-time.',
+    features: ['Booking antrian via smartphone', 'Rekam medis digital per pasien', 'Dashboard dokter & staff real-time', 'Notifikasi push saat nomor antrian dipanggil', 'Laporan kunjungan harian/bulanan'],
+    tech: 'Flutter (Android + iOS), React, Node.js, PostgreSQL, Firebase',
+    budget: 'Rp 32 Jt',
+  },
+  {
+    n: 4, title: 'Armada Rental Mitra Jaya', cat: 'Sistem Manajemen · Transportasi',
+    price: 'Double Booking 0%', result: 'Pendapatan +28% dari utilisasi armada lebih baik',
+    c: '#2563FF', c2: '#10C7B2', kind: 'dash', chart: 1,
+    tags: ['React', 'Laravel', 'MySQL', 'Midtrans'],
+    problem: 'Pemesanan via WhatsApp dan telepon sering bentrok. Tidak ada sistem jadwal armada, supir sering tidak tahu order terbarunya, dan laporan pendapatan harus dihitung manual setiap hari.',
+    solution: 'Sistem rental terintegrasi: booking online dengan kalender real-time, manajemen armada & supir, pembayaran DP via payment gateway, dan laporan otomatis setiap hari.',
+    features: ['Booking online + kalender ketersediaan armada', 'Manajemen supir & notifikasi WA otomatis', 'Pembayaran DP via Midtrans', 'Dashboard laporan pendapatan harian', 'Riwayat perjalanan per kendaraan'],
+    tech: 'React, Laravel 10, MySQL, Midtrans, WhatsApp Cloud API',
+    budget: 'Rp 22 Jt',
+  },
+  {
+    n: 5, title: 'Dealer Motor Sejahtera (3 Cabang)', cat: 'Sistem Inventory · Otomotif',
+    price: 'Stok Sinkron 3 Cabang', result: 'Selisih stok & laporan hilang 100%',
+    c: '#0E2240', c2: '#10C7B2', kind: 'dash', chart: 2,
+    tags: ['React', 'Node.js', 'PostgreSQL', 'REST API'],
+    problem: 'Tiga cabang mencatat stok di Excel berbeda. Sering terjadi unit sudah terjual di satu cabang tapi masih ditawarkan di cabang lain. Rekonsiliasi bulanan memakan 2 hari penuh.',
+    solution: 'Sistem manajemen dealer terpusat dengan stok real-time lintas cabang, pencatatan unit masuk-keluar, laporan penjualan per cabang, dan role akses per kepala toko.',
+    features: ['Stok unit real-time 3 cabang', 'SPK (Surat Pesanan Kendaraan) digital', 'Laporan penjualan per salesperson', 'Dashboard eksekutif multi-cabang', 'Export laporan ke Excel / PDF'],
+    tech: 'React, Node.js, PostgreSQL, REST API, Vercel + Railway',
+    budget: 'Rp 27 Jt',
+  },
+  {
+    n: 6, title: 'UD Berkah Sembako Grosir', cat: 'ERP Lite · Perdagangan',
+    price: 'Laporan -88% Lebih Cepat', result: '8 jam/bulan → 45 menit',
+    c: '#10C7B2', c2: '#2563FF', kind: 'dash', chart: 0,
+    tags: ['Next.js', 'Node.js', 'PostgreSQL', 'Prisma'],
+    problem: 'Semua transaksi dicatat di buku dan Excel terpisah. Rekap hutang-piutang supplier dan pelanggan sering salah. Pemilik tidak tahu posisi stok & laba realnya kapan pun.',
+    solution: 'ERP lite: modul pembelian, penjualan, stok, dan hutang-piutang dalam satu sistem. Dashboard laba-rugi sederhana yang bisa diakses kapan saja dari HP pemilik.',
+    features: ['Pencatatan pembelian & penjualan', 'Stok otomatis bertambah/berkurang', 'Manajemen hutang-piutang supplier & pelanggan', 'Laporan laba-rugi & neraca sederhana', 'Akses mobile untuk pemilik'],
+    tech: 'Next.js, Node.js, PostgreSQL, Prisma ORM, Vercel',
+    budget: 'Rp 35 Jt',
+  },
 ]
 
 // Sparkline presets (viewBox 0 0 100 36)
@@ -193,57 +253,48 @@ export const techStack = [
   { name: 'Docker',      icon: 'fa-brands fa-docker' },
 ]
 
-// ── Harga per produk ─────────────────────────────────────────
-// Urutan: dari harga entry → high ticket
+// ── Harga per produk — riset pasar software house Indonesia 2024-2025 ──
+// Referensi: rata-rata boutique house Tier-2 (Medan, Surabaya, Jogja)
+// Kompetitor: Arkatama, Ambisius, Digicreate, Pena Digital — range Rp 1.5–150 Jt
 export const pricing = [
   {
     name: 'Maintenance Bulanan',
     icon: 'fa-solid fa-shield-halved',
     category: 'Support',
-    price: 'Rp 750 rb',
+    price: 'Rp 500 rb',
     note: 'mulai dari / bulan',
-    desc: 'Langganan bulanan untuk menjaga sistem Anda tetap aman, cepat, dan berjalan optimal — tanpa khawatir soal teknis.',
-    feats: ['Monitoring uptime 24/7', 'Update keamanan rutin', 'Backup data berkala', 'Respons bug < 4 jam kerja'],
+    desc: 'Jaga sistem Anda tetap aman, cepat, dan berjalan optimal setiap bulan tanpa khawatir soal teknis.',
+    feats: ['Monitoring uptime & alert otomatis', 'Update keamanan & patch bulanan', 'Backup data mingguan', 'Respons bug kritis < 4 jam kerja'],
     hot: false,
   },
   {
     name: 'Landing Page',
     icon: 'fa-solid fa-rectangle-ad',
     category: 'Website',
-    price: 'Rp 2,5 Jt',
+    price: 'Rp 1,5 Jt',
     note: 'mulai dari',
-    desc: 'Halaman konversi untuk iklan atau kampanye produk — persuasif, cepat, dan terukur hasilnya.',
-    feats: ['Desain fokus konversi tinggi', 'Loading < 2 detik', 'Form lead & CTA WhatsApp', 'Mobile-first & SEO-ready'],
-    hot: false,
-  },
-  {
-    name: 'Website Revamp',
-    icon: 'fa-solid fa-arrows-rotate',
-    category: 'Website',
-    price: 'Rp 4 Jt',
-    note: 'mulai dari',
-    desc: 'Redesign total website lama yang sudah tidak relevan — tampilan baru, performa lebih cepat, SEO dipertahankan.',
-    feats: ['Audit & analisis website lama', 'Desain ulang sesuai brand terkini', 'Migrasi konten & SEO preservation', 'Responsif & Core Web Vitals baru'],
+    desc: 'Satu halaman fokus konversi untuk iklan, produk, atau event — persuasif, cepat, dan terukur hasilnya.',
+    feats: ['Desain berfokus konversi & CTA jelas', 'Loading < 2 detik (LCP optimal)', 'Form lead + CTA WhatsApp', 'Mobile-first & tracking siap'],
     hot: false,
   },
   {
     name: 'Company Profile',
     icon: 'fa-solid fa-building',
     category: 'Website',
-    price: 'Rp 6 Jt',
+    price: 'Rp 4,5 Jt',
     note: 'mulai dari',
-    desc: 'Website multi-halaman profesional yang membangun kepercayaan dan menampilkan layanan bisnis Anda.',
-    feats: ['Desain custom & responsif', 'SEO on-page lengkap', 'Halaman Tentang, Layanan, Kontak', 'Mudah diperbarui sendiri'],
+    desc: 'Website 5–7 halaman yang membangun kepercayaan, menampilkan layanan, dan mengundang calon klien menghubungi Anda.',
+    feats: ['Desain custom & responsif', 'SEO on-page + Google Business', 'Halaman Tentang, Layanan, Portofolio, Kontak', 'CMS sederhana untuk update mandiri'],
     hot: false,
   },
   {
-    name: 'Mini Dashboard',
+    name: 'Web App / Dashboard',
     icon: 'fa-solid fa-gauge-high',
     category: 'Sistem',
-    price: 'Rp 12 Jt',
+    price: 'Rp 8 Jt',
     note: 'mulai dari',
-    desc: 'Sistem manajemen internal untuk mencatat, memantau, dan melaporkan data bisnis — menggantikan spreadsheet yang kacau.',
-    feats: ['Login multi-user & role access', 'CRUD data & manajemen tabel', 'Laporan & export Excel/PDF', 'Notifikasi & dashboard ringkasan'],
+    desc: 'Sistem manajemen internal berbasis web — gantikan spreadsheet dengan platform yang terpusat, real-time, dan bisa diakses tim dari mana saja.',
+    feats: ['Login multi-user & role access (RBAC)', 'CRUD data, filter, & pencarian', 'Laporan & export Excel/PDF', 'Dashboard ringkasan & notifikasi'],
     hot: false,
   },
   {
@@ -252,45 +303,45 @@ export const pricing = [
     category: 'Mobile',
     price: 'Rp 15 Jt',
     note: 'mulai dari',
-    desc: 'Aplikasi Android & iOS (Flutter atau native) yang ringan, cepat, dan siap publish ke Play Store & App Store.',
-    feats: ['Android & iOS dari satu codebase', 'Push notification & deeplink', 'Backend & REST API terintegrasi', 'Asistensi publish ke toko aplikasi'],
+    desc: 'Aplikasi Android & iOS dari satu codebase Flutter — ringan, cepat, dan siap publish ke Play Store & App Store.',
+    feats: ['Android & iOS dari satu codebase', 'Push notification & deep link', 'Backend & REST API terintegrasi', 'Asistensi proses publish ke toko'],
     hot: true,
   },
   {
     name: 'Sistem CRM',
     icon: 'fa-solid fa-users-gear',
     category: 'Sistem',
-    price: 'Rp 15 Jt',
+    price: 'Rp 12 Jt',
     note: 'mulai dari',
-    desc: 'Kelola seluruh siklus penjualan — dari lead masuk, follow-up, hingga closing — dalam satu platform terpusat untuk tim sales Anda.',
-    feats: ['Database & segmentasi pelanggan', 'Pipeline penjualan visual (kanban)', 'Reminder & follow-up otomatis', 'Laporan performa tim & konversi'],
+    desc: 'Kelola leads, follow-up, dan pipeline penjualan dalam satu sistem — tim sales lebih produktif, tidak ada prospek yang terlewat.',
+    feats: ['Database & segmentasi pelanggan', 'Pipeline kanban visual', 'Reminder & follow-up otomatis', 'Laporan konversi & performa tim'],
+    hot: false,
+  },
+  {
+    name: 'Toko Online',
+    icon: 'fa-solid fa-cart-shopping',
+    category: 'E-Commerce',
+    price: 'Rp 18 Jt',
+    note: 'mulai dari',
+    desc: 'Toko online custom dengan payment gateway lokal, manajemen produk & stok, dan dashboard penjualan.',
+    feats: ['Payment gateway Midtrans / Xendit', 'Manajemen produk, kategori & stok', 'Kalkulasi ongkir otomatis (JNE, J&T, SiCepat)', 'Dashboard & laporan penjualan'],
     hot: false,
   },
   {
     name: 'Sistem ERP',
     icon: 'fa-solid fa-circle-nodes',
     category: 'Sistem',
-    price: 'Rp 20 Jt',
+    price: 'Rp 28 Jt',
     note: 'mulai dari',
-    desc: 'ERP custom yang menyatukan keuangan, inventory, SDM, dan operasional sesuai alur kerja unik bisnis Anda.',
-    feats: ['Modul keuangan & akuntansi', 'Inventory & manajemen gudang', 'HR & penggajian otomatis', 'Laporan eksekutif real-time'],
-    hot: false,
-  },
-  {
-    name: 'Toko Online (E-Commerce)',
-    icon: 'fa-solid fa-cart-shopping',
-    category: 'E-Commerce',
-    price: 'Rp 35 Jt',
-    note: 'mulai dari',
-    desc: 'Toko online custom dengan payment gateway, katalog produk, manajemen stok, dan dashboard penjualan lengkap.',
-    feats: ['Payment gateway (Midtrans / Xendit)', 'Katalog produk & manajemen stok', 'Dashboard penjualan & laporan', 'SEO-ready & mobile-first'],
+    desc: 'ERP custom sesuai alur kerja bisnis Anda — menyatukan keuangan, inventory, SDM, dan operasional dalam satu platform.',
+    feats: ['Modul keuangan & faktur', 'Inventory & manajemen gudang', 'HR, absensi & penggajian', 'Dashboard eksekutif & laporan real-time'],
     hot: false,
   },
   {
     name: 'Platform Marketplace',
     icon: 'fa-solid fa-store',
     category: 'E-Commerce',
-    price: 'Rp 75 Jt',
+    price: 'Rp 65 Jt',
     note: 'mulai dari',
     desc: 'Platform multi-vendor lengkap — seller mendaftar, upload produk, buyer bertransaksi, admin kelola semua dari satu panel.',
     feats: ['Multi-vendor: seller, buyer & admin', 'Komisi & settlement otomatis', 'Manajemen dispute, review & rating', 'App mobile buyer + seller tersedia'],
@@ -370,7 +421,7 @@ export const pricingBundles = [
 
 // ── FAQ (target featured snippet — long-tail keyword) ──────
 export const faqs = [
-  { q: 'Berapa biaya pembuatan website atau aplikasi?', a: 'Landing page mulai Rp 2,5 juta, website revamp Rp 4 juta, company profile Rp 6 juta, mini dashboard Rp 12 juta, aplikasi mobile Rp 15 juta, ERP Rp 20 juta, toko online Rp 35 juta, dan marketplace Rp 75 juta. Tersedia juga paket kombinasi hemat. Semua harga adalah estimasi awal — final menyesuaikan ruang lingkup setelah konsultasi gratis.' },
+  { q: 'Berapa biaya pembuatan website atau aplikasi?', a: 'Landing page mulai Rp 1,5 juta, company profile Rp 4,5 juta, web app / dashboard Rp 8 juta, sistem CRM Rp 12 juta, aplikasi mobile Rp 15 juta, toko online Rp 18 juta, ERP Rp 28 juta, dan marketplace Rp 65 juta. Maintenance mulai Rp 500 ribu/bulan. Semua harga adalah estimasi awal — final menyesuaikan ruang lingkup dan kompleksitas setelah konsultasi gratis.' },
   { q: 'Berapa lama pengerjaannya?', a: 'Landing page biasanya 1–2 minggu, website dashboard 3–5 minggu, aplikasi mobile 4–8 minggu, dan ERP 8–16 minggu. Timeline pasti akan kami sepakati bersama di tahap proposal.' },
   { q: 'Apakah saya mendapat akses penuh ke kode?', a: 'Ya. Seluruh kode dan dokumentasinya milik Anda sepenuhnya — tidak ada vendor lock-in. Tim Anda bisa melanjutkan kapan saja.' },
   { q: 'Apakah ada garansi dan maintenance?', a: 'Ada. Setiap proyek mencakup masa garansi bug, dan kami menyediakan paket maintenance untuk monitoring, update keamanan, serta backup berkala.' },
@@ -391,6 +442,34 @@ export const kpis = [
 ]
 
 export const satisfaction = 100
+
+// ── Testimonials (homepage featured — 3 cards) ─────────────
+export const testimonials = [
+  {
+    name: 'Budi Santoso', role: 'Owner', company: 'Batik Nusantara Medan', initial: 'BS',
+    grad: 'linear-gradient(135deg,#2563FF,#10C7B2)',
+    star: 5,
+    quote: 'AFSS benar-benar paham kebutuhan bisnis kami. Landing page mereka meningkatkan penjualan online 340% dalam 6 minggu. Yang bikin kagum, mereka tidak cuma deliver tampilan — mereka kasih saran copy dan struktur CTA yang terbukti convert.',
+    project: 'Landing Page UMKM',
+    result: 'Konversi +340%',
+  },
+  {
+    name: 'Dewi Kusuma', role: 'Direktur Operasional', company: 'CV Nusantara Jaya Abadi', initial: 'DK',
+    grad: 'linear-gradient(135deg,#0E2240,#2563FF)',
+    star: 5,
+    quote: 'Sistem ERP-nya mengintegrasikan seluruh operasional kami yang dulunya manual. Efisiensi laporan bulanan dari 8 jam jadi 45 menit. Tim support juga responsif bahkan setelah proyek selesai — itu yang bikin kami percaya untuk proyek berikutnya.',
+    project: 'ERP Custom Toko Grosir',
+    result: 'Efisiensi +88%',
+  },
+  {
+    name: 'Ahmad Fauzi', role: 'Founder', company: 'KlinikQ App', initial: 'AF',
+    grad: 'linear-gradient(135deg,#10C7B2,#2563FF)',
+    star: 5,
+    quote: 'Dari konsultasi sampai launching, AFSS selalu bantu cari solusi terbaik. Aplikasi mobile klinik kami sekarang dipakai di 3 cabang. Waktu tunggu pasien turun 62% dan rating Google kami naik dari 3.8 jadi 4.7 bintang.',
+    project: 'Mobile App + Dashboard Klinik',
+    result: 'Rating Google 4.7⭐',
+  },
+]
 
 // ── Reviews (Bahasa Indonesia, semua positif). Nama disensor saat render. ──
 export const reviews = [
