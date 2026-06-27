@@ -913,12 +913,12 @@ export function Footer({ trimmed = false }) {
 
 /* ════════════════════════════════════════════════ PROJECT ESTIMATOR */
 const EST_PRODUCTS = [
-  { id: 'landing',  label: 'Landing Page',        base: [1.5, 4],    perUnit: 0.5,  unit: 'halaman', icon: 'fa-solid fa-file' },
-  { id: 'website',  label: 'Website Profil',       base: [3, 12],     perUnit: 0.8,  unit: 'halaman', icon: 'fa-solid fa-window-maximize' },
-  { id: 'toko',     label: 'Toko Online',          base: [5, 20],     perUnit: 1.2,  unit: 'modul',   icon: 'fa-solid fa-cart-shopping' },
-  { id: 'mobile',   label: 'Aplikasi Mobile',      base: [15, 50],    perUnit: 3,    unit: 'fitur',   icon: 'fa-solid fa-mobile-screen-button' },
-  { id: 'webapp',   label: 'Web App / Dashboard',  base: [4, 25],     perUnit: 1.8,  unit: 'modul',   icon: 'fa-solid fa-chart-line' },
-  { id: 'erp',      label: 'ERP / Sistem Custom',  base: [25, 100],   perUnit: 5,    unit: 'modul',   icon: 'fa-solid fa-layer-group' },
+  { id: 'landing',     label: 'Landing Page',      base: [1.5, 5],   perUnit: 0.4,  unit: 'halaman', icon: 'fa-solid fa-rectangle-ad' },
+  { id: 'profile',     label: 'Company Profile',   base: [4.5, 12],  perUnit: 0.6,  unit: 'halaman', icon: 'fa-solid fa-briefcase' },
+  { id: 'software',    label: 'Software Custom',   base: [8, 30],    perUnit: 2,    unit: 'modul',   icon: 'fa-solid fa-code' },
+  { id: 'erp',         label: 'ERP',               base: [28, 100],  perUnit: 5,    unit: 'modul',   icon: 'fa-solid fa-circle-nodes' },
+  { id: 'ecommerce',   label: 'E-Commerce',        base: [18, 50],   perUnit: 2.5,  unit: 'modul',   icon: 'fa-solid fa-cart-shopping' },
+  { id: 'marketplace', label: 'Marketplace',       base: [65, 150],  perUnit: 8,    unit: 'modul',   icon: 'fa-solid fa-store' },
 ]
 
 const EST_ADDONS = [
@@ -936,7 +936,7 @@ function fmtPrice(val) {
 }
 
 function Estimator() {
-  const [prodId, setProdId] = useState('website')
+  const [prodId, setProdId] = useState('profile')
   const [units, setUnits] = useState(5)
   const [addons, setAddons] = useState({})
 

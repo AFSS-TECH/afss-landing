@@ -58,6 +58,114 @@ function HeroStatCard() {
 
 /* ══════════════════════════════════════════════════ EXTENDED SERVICE CONTENT */
 const SERVICE_CONTENT = {
+  'landing-page': {
+    headline: 'Jasa Pembuatan Landing Page Konversi Tinggi',
+    subline: 'Satu halaman yang dirancang untuk mengubah pengunjung iklan menjadi leads atau pelanggan — cepat, persuasif, dan terukur.',
+    longDesc: 'Landing page bukan sekadar halaman web biasa. Ia adalah ujung tombak kampanye iklan Anda — harus meyakinkan pengunjung dalam hitungan detik. AFSS merancang landing page dengan pendekatan konversi: copywriting persuasif, desain fokus CTA, dan kecepatan loading di bawah 2 detik.',
+    benefits: [
+      { icon: 'fa-solid fa-bullseye', title: 'Fokus Satu Tujuan', desc: 'Tidak ada distraksi. Setiap elemen diarahkan untuk mendorong satu aksi: hubungi, beli, atau daftar.' },
+      { icon: 'fa-solid fa-gauge-high', title: 'Loading < 2 Detik', desc: 'Setiap detik keterlambatan menurunkan konversi 7%. Landing page kami dioptimasi untuk kecepatan maksimal.' },
+      { icon: 'fa-solid fa-mobile-screen', title: 'Mobile-First', desc: 'Lebih dari 70% trafik iklan dari HP. Desain kami prioritaskan mobile tanpa mengorbankan desktop.' },
+      { icon: 'fa-solid fa-chart-bar', title: 'Tracking & Analytics', desc: 'Integrasi Google Analytics, Meta Pixel, dan konversi event untuk mengukur ROI kampanye secara akurat.' },
+    ],
+    serviceFaq: [
+      { q: 'Berapa harga landing page?', a: 'Mulai dari Rp 1,5 juta untuk desain sederhana. Dengan fitur tambahan (animasi, tracking, copywriting) mulai Rp 3–6 juta.' },
+      { q: 'Berapa lama pengerjaannya?', a: 'Landing page standar selesai 3–7 hari kerja. Dengan revisi dan approval konten, biasanya 1–2 minggu total.' },
+      { q: 'Apakah termasuk copywriting?', a: 'Bisa. Kami menawarkan paket dengan copywriting persuasif berbasis riset audiens dan kompetitor.' },
+      { q: 'Apakah bisa dihubungkan ke iklan Meta/Google?', a: 'Ya. Kami pasang tracking pixel, konversi event, dan pastikan URL siap dipakai di campaign iklan berbayar.' },
+    ],
+    relatedSlugs: ['company-profile', 'ecommerce'],
+  },
+  'company-profile': {
+    headline: 'Jasa Pembuatan Company Profile Website',
+    subline: 'Website profil perusahaan yang membangun kepercayaan, menampilkan layanan bisnis Anda, dan mengundang calon klien menghubungi Anda.',
+    longDesc: 'Di era digital, calon klien mengecek website perusahaan sebelum memutuskan bekerja sama. Company profile yang baik adalah representasi terbaik bisnis Anda — menampilkan kredibilitas, layanan, tim, dan cara menghubungi dengan jelas dan profesional.',
+    benefits: [
+      { icon: 'fa-solid fa-building', title: 'Desain Corporate Modern', desc: 'Tampilan profesional yang mencerminkan identitas brand — dipercaya calon klien sejak kunjungan pertama.' },
+      { icon: 'fa-solid fa-magnifying-glass', title: 'SEO Lokal Optimasi', desc: 'Dioptimasi agar muncul di Google saat calon klien mencari bisnis seperti Anda di kota atau industri Anda.' },
+      { icon: 'fa-solid fa-layer-group', title: 'Multi-Halaman Lengkap', desc: 'Beranda, Tentang Kami, Layanan, Portofolio, dan Kontak — struktur yang lengkap dan mudah dinavigasi.' },
+      { icon: 'fa-solid fa-pen-to-square', title: 'Mudah Diperbarui', desc: 'Sistem manajemen konten sederhana agar Anda bisa memperbarui berita, portofolio, dan info tanpa developer.' },
+    ],
+    serviceFaq: [
+      { q: 'Berapa halaman yang termasuk?', a: 'Paket standar mencakup 5–7 halaman utama. Halaman tambahan bisa ditambahkan sesuai kebutuhan.' },
+      { q: 'Berapa lama pengerjaannya?', a: 'Umumnya 2–4 minggu termasuk desain, development, dan revisi. Timeline pasti disepakati di awal.' },
+      { q: 'Apakah sudah termasuk hosting dan domain?', a: 'Bisa. Kami bantu setup domain pilihan Anda dan hosting cepat dengan SSL gratis.' },
+      { q: 'Apakah bisa versi bahasa Inggris?', a: 'Bisa dibuat bilingual (Indonesia & Inggris) dengan biaya tambahan yang terjangkau.' },
+    ],
+    relatedSlugs: ['landing-page', 'software-custom'],
+  },
+  'software-custom': {
+    headline: 'Jasa Pembuatan Software & Aplikasi Web Custom',
+    subline: 'Web app, dashboard, CRM, atau sistem internal yang dibuat dari nol sesuai alur kerja bisnis Anda — bukan template generik.',
+    longDesc: 'Bisnis yang berkembang butuh sistem yang tumbuh bersamanya. AFSS membangun software custom yang menggantikan spreadsheet dan proses manual dengan platform terpusat — dari dashboard sederhana hingga sistem manajemen skala perusahaan.',
+    benefits: [
+      { icon: 'fa-solid fa-chart-line', title: 'Dashboard Real-Time', desc: 'Data penjualan, stok, dan KPI ditampilkan secara langsung untuk pengambilan keputusan yang lebih cepat.' },
+      { icon: 'fa-solid fa-layer-group', title: 'Multi-User & Role (RBAC)', desc: 'Atur hak akses per departemen — staf hanya melihat data yang perlu mereka lihat.' },
+      { icon: 'fa-solid fa-file-invoice', title: 'Laporan & Export Otomatis', desc: 'Laporan harian, mingguan, atau custom yang bisa diexport ke Excel/PDF dengan satu klik.' },
+      { icon: 'fa-solid fa-circle-nodes', title: 'Integrasi Sistem', desc: 'Bisa diintegrasikan dengan sistem akuntansi, payment gateway, logistik, atau ERP yang sudah Anda pakai.' },
+    ],
+    serviceFaq: [
+      { q: 'Berapa estimasi biaya software custom?', a: 'Dashboard sederhana mulai Rp 8 juta. Software kompleks dengan banyak modul mulai Rp 20–50 juta. Estimasi pasti setelah konsultasi.' },
+      { q: 'Berapa lama pengerjaannya?', a: 'Software sederhana 3–6 minggu. Sistem kompleks 2–4 bulan. Timeline pasti disepakati di tahap proposal.' },
+      { q: 'Apakah bisa diakses dari smartphone?', a: 'Ya. Kami bangun responsive — bisa dipakai di desktop kantor maupun smartphone di lapangan tanpa install apapun.' },
+      { q: 'Apakah kode menjadi milik kami?', a: 'Ya. Seluruh source code, dokumentasi, dan aset menjadi milik Anda sepenuhnya setelah pelunasan.' },
+    ],
+    relatedSlugs: ['erp', 'ecommerce'],
+  },
+  'erp': {
+    headline: 'Jasa Pembuatan Sistem ERP Custom untuk Bisnis',
+    subline: 'ERP yang dibangun sesuai alur kerja bisnis Anda — bukan dipaksakan ke template generik — menyatukan seluruh operasional dalam satu platform.',
+    longDesc: 'ERP (Enterprise Resource Planning) mengintegrasikan semua departemen bisnis Anda: keuangan, inventory, SDM, produksi, dan penjualan — dalam satu platform terpusat. AFSS membangun ERP custom yang benar-benar sesuai proses bisnis Anda.',
+    benefits: [
+      { icon: 'fa-solid fa-coins', title: 'Modul Keuangan & Akuntansi', desc: 'Pembukuan, faktur, laporan laba-rugi, dan arus kas — semua tercatat otomatis dan akurat.' },
+      { icon: 'fa-solid fa-warehouse', title: 'Manajemen Inventory & Gudang', desc: 'Stok real-time, mutasi barang, dan peringatan stok minimum agar tidak ada kehabisan atau kelebihan.' },
+      { icon: 'fa-solid fa-users', title: 'HR & Penggajian', desc: 'Data karyawan, absensi, perhitungan gaji, dan slip gaji otomatis — terintegrasi dengan BPJS dan PPh 21.' },
+      { icon: 'fa-solid fa-file-chart-column', title: 'Dashboard Eksekutif', desc: 'KPI utama bisnis Anda bisa diakses kapan saja dari perangkat apa pun.' },
+    ],
+    serviceFaq: [
+      { q: 'Berapa lama implementasi ERP?', a: 'ERP sederhana 2–3 modul: 8–12 minggu. ERP lengkap: 4–6 bulan termasuk migrasi data dan training tim.' },
+      { q: 'Berapa biaya ERP custom?', a: 'Mulai dari Rp 28 juta untuk 2–3 modul dasar. Estimasi akurat diberikan setelah discovery session.' },
+      { q: 'Apakah bisa integrasi dengan sistem lama?', a: 'Ya. Kami evaluasi sistem existing dan buat jembatan integrasi agar data tidak perlu diinput dua kali.' },
+      { q: 'Apakah ada training untuk tim kami?', a: 'Ya. Setiap proyek ERP mencakup sesi training lengkap dan dokumentasi user manual.' },
+    ],
+    relatedSlugs: ['software-custom', 'ecommerce'],
+  },
+  'ecommerce': {
+    headline: 'Jasa Pembuatan E-Commerce & Toko Online Custom',
+    subline: 'Toko online dengan fitur lengkap — katalog, keranjang, pembayaran, dan manajemen pesanan — dibangun sesuai kebutuhan bisnis Anda.',
+    longDesc: 'Toko online yang baik bukan sekadar memindahkan produk ke internet. Ia harus meyakinkan pembeli, memudahkan transaksi, dan memberikan pengalaman belanja yang menyenangkan. AFSS membangun e-commerce custom dengan payment gateway Indonesia, manajemen produk yang mudah, dan desain yang mendorong penjualan.',
+    benefits: [
+      { icon: 'fa-solid fa-credit-card', title: 'Payment Gateway Lengkap', desc: 'Integrasi Midtrans atau Xendit untuk transfer bank, QRIS, kartu kredit, dan dompet digital.' },
+      { icon: 'fa-solid fa-boxes-stacked', title: 'Manajemen Produk & Stok', desc: 'Tambah, edit, dan kelola ribuan produk dengan mudah. Stok otomatis berkurang saat ada pesanan.' },
+      { icon: 'fa-solid fa-truck', title: 'Kalkulasi Ongkir Otomatis', desc: 'Integrasi JNE, J&T, SiCepat, dan kurir lain dengan kalkulasi ongkir otomatis.' },
+      { icon: 'fa-solid fa-chart-line', title: 'Dashboard Penjualan', desc: 'Pantau omzet, pesanan masuk, produk terlaris, dan performa toko dalam satu dashboard.' },
+    ],
+    serviceFaq: [
+      { q: 'Berapa biaya e-commerce custom?', a: 'Mulai dari Rp 18 juta untuk fitur dasar. E-commerce dengan fitur kompleks mulai Rp 35 juta. Estimasi pasti setelah konsultasi.' },
+      { q: 'Lebih baik custom atau platform (Shopify/WooCommerce)?', a: 'Platform lebih cepat dan murah untuk toko sederhana. Custom lebih fleksibel untuk kebutuhan unik atau volume tinggi.' },
+      { q: 'Apakah bisa impor produk massal?', a: 'Ya. Kami siapkan fitur import produk via Excel/CSV sehingga tidak perlu input satu per satu.' },
+      { q: 'Apakah bisa terkoneksi ke marketplace (Tokopedia/Shopee)?', a: 'Bisa. Kami integrasikan via API untuk sinkronisasi stok dan pesanan dari berbagai channel.' },
+    ],
+    relatedSlugs: ['marketplace', 'software-custom'],
+  },
+  'marketplace': {
+    headline: 'Jasa Pembuatan Platform Marketplace Multi-Vendor',
+    subline: 'Platform marketplace lengkap — seller mendaftar, upload produk, buyer bertransaksi, admin kelola semua dari satu panel.',
+    longDesc: 'Marketplace multi-vendor adalah platform yang mempertemukan banyak seller dengan buyer dalam satu ekosistem. AFSS membangun marketplace custom dengan sistem komisi, manajemen seller, payment gateway, dan app mobile untuk buyer dan seller.',
+    benefits: [
+      { icon: 'fa-solid fa-store', title: 'Multi-Vendor Management', desc: 'Seller mendaftar dan kelola toko sendiri. Admin pantau, approve, dan kontrol semua aktivitas dari satu panel.' },
+      { icon: 'fa-solid fa-percentage', title: 'Komisi & Settlement Otomatis', desc: 'Sistem komisi fleksibel per kategori atau seller. Settlement otomatis ke rekening seller sesuai jadwal.' },
+      { icon: 'fa-solid fa-star-half-stroke', title: 'Review, Rating & Dispute', desc: 'Sistem ulasan pembeli, rating seller, dan penyelesaian sengketa yang terstruktur.' },
+      { icon: 'fa-solid fa-mobile-screen-button', title: 'App Mobile Buyer & Seller', desc: 'Aplikasi mobile Android & iOS untuk buyer berbelanja dan seller mengelola toko dari mana saja.' },
+    ],
+    serviceFaq: [
+      { q: 'Berapa biaya pembuatan marketplace?', a: 'Mulai dari Rp 65 juta untuk marketplace dasar. Marketplace dengan app mobile lengkap mulai Rp 100 juta.' },
+      { q: 'Berapa lama pengerjaan marketplace?', a: 'Marketplace tanpa app mobile: 3–5 bulan. Dengan app mobile: 5–8 bulan.' },
+      { q: 'Apakah ada fitur chat antara buyer dan seller?', a: 'Bisa ditambahkan. Kami integrasikan chat real-time menggunakan WebSocket atau Firebase.' },
+      { q: 'Bagaimana sistem pembayarannya?', a: 'Dana masuk ke rekening perusahaan dulu, lalu didistribusikan ke seller setelah dikurangi komisi. Midtrans/Xendit siap diintegrasikan.' },
+    ],
+    relatedSlugs: ['ecommerce', 'software-custom'],
+  },
   'pembuatan-website': {
     headline: 'Jasa Pembuatan Website Custom Profesional',
     subline: 'Dari landing page UMKM hingga company profile enterprise — dibangun dari nol, cepat, dan SEO-ready sejak hari pertama.',
@@ -262,30 +370,30 @@ const SERVICE_CONTENT = {
 const SVC_CATS = [
   {
     id: 'web',
-    icon: 'fa-solid fa-window-maximize',
-    label: 'Website & Digital Marketing',
-    sub: 'Dari landing page hingga company profile — cepat, SEO-ready, dan siap mengkonversi pengunjung.',
-    slugs: ['pembuatan-website', 'jasa-pembuatan-landing-page', 'jasa-pembuatan-company-profile', 'jasa-pembuatan-website-medan'],
+    icon: 'fa-solid fa-globe',
+    label: 'Website',
+    sub: 'Dari landing page iklan hingga company profile enterprise — cepat, SEO-ready, dan siap mengkonversi pengunjung.',
+    slugs: ['landing-page', 'company-profile'],
   },
   {
-    id: 'app',
-    icon: 'fa-solid fa-layer-group',
-    label: 'Aplikasi & Sistem',
-    sub: 'Solusi digital yang mengotomasi dan menskalakan operasional bisnis Anda dari satu platform terpusat.',
-    slugs: ['aplikasi-mobile', 'web-app', 'jasa-pembuatan-crm', 'jasa-pembuatan-erp', 'jasa-pembuatan-dashboard'],
+    id: 'software',
+    icon: 'fa-solid fa-code',
+    label: 'Software & Sistem',
+    sub: 'Solusi digital custom yang mengotomasi dan menskalakan operasional bisnis Anda dari satu platform terpusat.',
+    slugs: ['software-custom', 'erp'],
   },
   {
-    id: 'ecomm',
-    icon: 'fa-solid fa-tags',
-    label: 'E-Commerce & Maintenance',
-    sub: 'Buka channel penjualan baru dan pastikan sistem Anda selalu jalan, aman, dan up-to-date.',
-    slugs: ['jasa-pembuatan-toko-online', 'maintenance'],
+    id: 'commerce',
+    icon: 'fa-solid fa-cart-shopping',
+    label: 'E-Commerce & Marketplace',
+    sub: 'Buka channel penjualan baru — dari toko online sederhana hingga platform marketplace multi-vendor.',
+    slugs: ['ecommerce', 'marketplace'],
   },
 ]
 
 export function LayananIndex() {
-  const title = 'Layanan AFSS — Jasa Website, Aplikasi Mobile, Dashboard & ERP'
-  const desc = 'Jasa pembuatan website custom, aplikasi mobile Android & iOS, toko online, dashboard bisnis, ERP, dan maintenance. Software house Indonesia, tim lokal Medan.'
+  const title = 'Layanan AFSS — Landing Page, Company Profile, Software, ERP, E-Commerce & Marketplace'
+  const desc = 'Jasa pembuatan landing page, company profile, software custom, ERP, e-commerce, dan marketplace. Software house Indonesia terpercaya, tim lokal Medan.'
   return (
     <>
       <Head>
