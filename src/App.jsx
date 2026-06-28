@@ -211,10 +211,10 @@ export function Nav() {
   const links = [
     { label: 'Layanan', to: '/layanan' },
     { label: 'Portofolio', to: '/portofolio' },
+    { label: 'Estimasi', to: '/estimasi' },
     { label: 'Harga', to: '/harga' },
     { label: 'Blog', to: '/blog' },
     { label: 'FAQ', to: '/faq' },
-    { label: 'Karir', to: '/karir' },
   ]
   const close = () => setOpen(false)
   return (

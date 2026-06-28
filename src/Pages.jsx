@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import { Head } from 'vite-react-ssg'
 import { Icon } from './Icon.jsx'
 import emailjs from '@emailjs/browser'
-import { BRAND, products, why, showcase, stats, waLink, getProductBySlug, pricing, pricingBundles, faqs } from './data.js'
+import { BRAND, products, why, showcase, stats, waLink, getProductBySlug, pricing, pricingBundles, faqs, portfolioProjects } from './data.js'
 
 const SITE_URL = 'https://afss.tech'
 
@@ -1008,18 +1008,52 @@ export function Contact() {
 }
 
 /* ══════════════════════════════════════════════════ PORTFOLIO (/portofolio) */
-export function Portfolio() {
-  const title = 'Portofolio AFSS — Studi Kasus Website, Aplikasi & Sistem'
-  const desc = 'Lihat studi kasus dan hasil nyata proyek AFSS: landing page UMKM, dashboard klinik, sistem rental, ERP toko grosir, dan lainnya.'
+/* ── Portfolio card mockup visual ── */
+function PortoMock({ p }) {
+  return (
+    <div className="porto-mock" style={{ background: `linear-gradient(135deg, ${p.c}, ${p.c2})` }}>
+      <div className="porto-mock-inner">
+        {p.kind === 'dash' ? (
+          <div className="pm-dash">
+            <div className="pm-sidebar"><span/><span/><span className="act"/><span/></div>
+            <div className="pm-main">
+              <div className="pm-topbar"/>
+              <div className="pm-stats"><div/><div/><div/></div>
+              <div className="pm-chart"/>
+              <div className="pm-rows"><div/><div/><div/></div>
+            </div>
+          </div>
+        ) : (
+          <div className="pm-land">
+            <div className="pm-nav"><div className="pm-logo"/><div/><div/><div/></div>
+            <div className="pm-hero-h"/><div className="pm-hero-p"/><div className="pm-btn"/>
+            <div className="pm-grid"><div/><div/><div/></div>
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
 
-  const caseStudies = [
-    { ...showcase[0], detail: 'Landing page toko batik UMKM dengan desain custom, optimasi SEO, dan integrasi WhatsApp. Dalam 2 bulan pertama, konversi naik signifikan berkat kecepatan loading dan CTA yang dioptimasi.' },
-    { ...showcase[1], detail: 'Website company profile kontraktor dengan galeri proyek, halaman layanan terpisah, dan form kontak. Peningkatan lead inquiry organik dari Google dalam 3 bulan.' },
-    { ...showcase[2], detail: 'Aplikasi Flutter + dashboard web untuk klinik: registrasi pasien digital, antrian real-time, dan rekam medis sederhana. Waktu tunggu pasien berkurang drastis.' },
-    { ...showcase[3], detail: 'Sistem reservasi dan manajemen armada untuk rental mobil: booking online, jadwal pengemudi, laporan pendapatan harian. Operasional lebih rapi dan terukur.' },
-    { ...showcase[4], detail: 'Sistem manajemen stok dan penjualan untuk dealer motor multi-cabang. Data stok tersinkron real-time antar cabang, laporan otomatis setiap hari.' },
-    { ...showcase[5], detail: 'ERP lite untuk toko grosir: pembelian, penjualan, stok, dan hutang-piutang dalam satu sistem. Waktu pembuatan laporan bulanan dari 8 jam menjadi kurang dari 1 jam.' },
-  ]
+const PORTO_TABS = [
+  { label: 'Semua', slug: 'semua' },
+  { label: 'Landing Page', slug: 'landing-page' },
+  { label: 'Company Profile', slug: 'company-profile' },
+  { label: 'Software Custom', slug: 'software-custom' },
+  { label: 'ERP', slug: 'erp' },
+  { label: 'App Mobile', slug: 'app-mobile' },
+  { label: 'E-Commerce', slug: 'ecommerce' },
+  { label: 'Marketplace', slug: 'marketplace' },
+]
+
+export function Portfolio() {
+  const title = 'Portofolio AFSS — Landing Page, Company Profile, Software, ERP, App & Marketplace'
+  const desc = 'Lihat karya nyata AFSS: landing page UMKM, company profile, software custom, ERP, app mobile, e-commerce, dan marketplace. Klik untuk detail & hasil.'
+  const [activeTab, setActiveTab] = useState('semua')
+
+  const filtered = activeTab === 'semua'
+    ? portfolioProjects
+    : portfolioProjects.filter(p => p.catSlug === activeTab)
 
   return (
     <>
@@ -1044,48 +1078,375 @@ export function Portfolio() {
             <Reveal>
               <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Portofolio' }]} />
               <div className="eyebrow"><Icon icon="fa-solid fa-images" /> Portofolio</div>
-              <h1 className="page-title">Studi kasus &amp; <span className="ital">hasil nyata</span></h1>
-              <p className="page-sub">Beragam sistem yang telah kami bangun — lengkap dengan tantangan, solusi, dan dampak yang dirasakan klien.</p>
+              <h1 className="page-title">Karya nyata &amp; <span className="ital">hasil terukur</span></h1>
+              <p className="page-sub">{portfolioProjects.length} proyek dari berbagai industri — klik kartu untuk lihat detail masalah, solusi, fitur, dan testimoni klien.</p>
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
-                <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya tertarik berdiskusi tentang proyek digital saya.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Diskusi Proyek</a>
-                <Link className="btn btn-ghost btn-lg" to="/layanan">Lihat Layanan</Link>
+                <a className="btn btn-wa btn-lg" href={waLink(`Halo ${BRAND.short}, saya tertarik berdiskusi tentang proyek digital saya.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Diskusi Proyek</a>
+                <Link className="btn btn-ghost btn-lg" to="/estimasi"><Icon icon="fa-solid fa-calculator" /> Estimasi Harga</Link>
               </div>
             </Reveal>
-            <Reveal className="page-hero-stat-col">
-              <HeroStatCard />
-            </Reveal>
+            <Reveal className="page-hero-stat-col"><HeroStatCard /></Reveal>
           </div>
         </div>
       </section>
 
+      {/* Tab filter */}
+      <div className="porto-tabs-wrap">
+        <div className="container">
+          <div className="porto-tabs">
+            {PORTO_TABS.map(t => (
+              <button key={t.slug} className={`porto-tab${activeTab === t.slug ? ' active' : ''}`} onClick={() => setActiveTab(t.slug)}>
+                {t.label}
+                <span className="porto-tab-count">{t.slug === 'semua' ? portfolioProjects.length : portfolioProjects.filter(p => p.catSlug === t.slug).length}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Grid */}
       <section style={{ paddingTop: 40, paddingBottom: 80 }}>
         <div className="container">
-          <motion.div className="portfolio-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
-            {caseStudies.map((item) => (
-              <motion.div key={item.n} className="portfolio-card spot" style={{ '--c': item.c, '--c2': item.c2 }} variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 260, damping: 22 }}>
-                <div className="portfolio-img">
-                  <img src={`/portfolio/${item.n}.png`} alt={`Preview ${item.title}`} loading="lazy" width="1200" height="750" />
-                </div>
-                <div className="portfolio-body">
-                  <div className="portfolio-header">
-                    <span className="portfolio-num">{String(item.n).padStart(2, '0')}</span>
-                    <span className="portfolio-result"><Icon icon="fa-solid fa-arrow-trend-up" /> {item.price}</span>
-                  </div>
-                  <h3 className="portfolio-title">{item.title}</h3>
-                  <p className="portfolio-detail">{item.detail}</p>
-                  <div className="portfolio-tags">{item.tags.map((t) => <span key={t}>{t}</span>)}</div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
+          <AnimatePresence mode="wait">
+            <motion.div key={activeTab} className="porto-grid"
+              initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}>
+              {filtered.map((p, i) => (
+                <motion.div key={p.slug} className="porto-card spot" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }}>
+                  <Link to={`/portofolio/${p.slug}`} className="porto-card-link">
+                    <PortoMock p={p} />
+                    <div className="porto-card-body">
+                      <div className="porto-card-meta">
+                        <span className="porto-cat-badge">{p.cat}</span>
+                        <span className="porto-budget">{p.budget}</span>
+                      </div>
+                      <h3 className="porto-card-title">{p.title}</h3>
+                      <p className="porto-card-tagline">{p.tagline}</p>
+                      <div className="porto-card-result"><Icon icon="fa-solid fa-arrow-trend-up" /> {p.result} <span>— {p.result2}</span></div>
+                      <div className="porto-card-tags">{p.tags.slice(0,3).map(t => <span key={t}>{t}</span>)}</div>
+                    </div>
+                    <div className="porto-card-footer">
+                      <span>Lihat Detail Proyek</span>
+                      <Icon icon="fa-solid fa-arrow-right" />
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </motion.div>
+          </AnimatePresence>
+          {filtered.length === 0 && (
+            <div style={{ textAlign: 'center', padding: '60px 0', color: 'var(--muted)' }}>
+              <Icon icon="fa-solid fa-folder-open" style={{ fontSize: '2rem', marginBottom: 12, opacity: .4 }} />
+              <p>Belum ada proyek di kategori ini.</p>
+            </div>
+          )}
         </div>
       </section>
 
       <section className="cta-band" style={{ paddingTop: 0 }}>
         <Reveal className="cta-card">
-          <h2>Proyek Anda bisa jadi <span className="ital">studi kasus</span> berikutnya</h2>
-          <p>Ceritakan kebutuhan bisnis Anda — kami bantu wujudkan dengan standar yang sama seperti portofolio di atas.</p>
-          <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya tertarik berdiskusi tentang proyek digital saya.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Diskusi Proyek</a>
+          <h2>Proyek Anda bisa jadi <span className="ital">karya berikutnya</span></h2>
+          <p>Ceritakan kebutuhan bisnis Anda — kami bantu wujudkan dengan standar yang sama.</p>
+          <div className="btns">
+            <a className="btn btn-wa btn-lg" href={waLink(`Halo ${BRAND.short}, saya tertarik berdiskusi tentang proyek digital saya.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Diskusi Proyek</a>
+            <Link className="btn btn-ghost btn-lg" to="/estimasi">Estimasi Harga <Icon icon="fa-solid fa-calculator" /></Link>
+          </div>
+        </Reveal>
+      </section>
+    </>
+  )
+}
+
+/* ══════════════════════════════════════════════════ PORTFOLIO DETAIL (/portofolio/:slug) */
+export function PortfolioDetail() {
+  const { slug } = useParams()
+  const p = portfolioProjects.find(x => x.slug === slug)
+
+  if (!p) return (
+    <section className="page-hero">
+      <div className="container">
+        <h1 className="page-title">Proyek tidak ditemukan</h1>
+        <Link to="/portofolio" className="btn btn-ghost" style={{ marginTop: 20 }}><Icon icon="fa-solid fa-arrow-left" /> Kembali ke Portofolio</Link>
+      </div>
+    </section>
+  )
+
+  const url = `${SITE_URL}/portofolio/${p.slug}`
+
+  return (
+    <>
+      <Head>
+        <title>{`${p.title} — Portofolio AFSS`}</title>
+        <meta name="description" content={p.tagline} />
+        <link rel="canonical" href={url} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`${p.title} — Portofolio AFSS`} />
+        <meta property="og:description" content={p.tagline} />
+        <meta property="og:url" content={url} />
+        <meta property="og:image" content={`${SITE_URL}/og.png`} />
+      </Head>
+
+      {/* Hero banner */}
+      <section className="pd-hero" style={{ '--c': p.c, '--c2': p.c2 }}>
+        <div className="pd-hero-bg" />
+        <div className="container">
+          <Reveal>
+            <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Portofolio', to: '/portofolio' }, { label: p.title }]} />
+            <span className="pd-cat-badge">{p.cat}</span>
+            <h1 className="pd-title">{p.title}</h1>
+            <p className="pd-tagline">{p.tagline}</p>
+            <div className="pd-stats">
+              <div className="pd-stat"><Icon icon="fa-solid fa-tag" /><span className="pd-stat-label">Budget</span><span className="pd-stat-val">{p.budget}</span></div>
+              <div className="pd-stat-div" />
+              <div className="pd-stat"><Icon icon="fa-solid fa-arrow-trend-up" /><span className="pd-stat-label">Hasil Utama</span><span className="pd-stat-val">{p.result}</span></div>
+              <div className="pd-stat-div" />
+              <div className="pd-stat"><Icon icon="fa-solid fa-chart-line" /><span className="pd-stat-label">Detail</span><span className="pd-stat-val">{p.result2}</span></div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Mockup visual */}
+      <div className="pd-mockup-wrap" style={{ '--c': p.c, '--c2': p.c2 }}>
+        <div className="container">
+          <div className="pd-mockup">
+            <div className="pd-mockup-browser">
+              <div className="pd-browser-bar">
+                <i style={{ background: '#FF6058' }} /><i style={{ background: '#FFBD2E' }} /><i style={{ background: '#28C840' }} />
+                <div className="pd-browser-url">afss.tech · {p.title.toLowerCase()}</div>
+              </div>
+              <div className="pd-browser-body">
+                {p.kind === 'dash' ? (
+                  <div className="pd-screen-dash">
+                    <div className="pd-dash-side"><span/><span className="on"/><span/><span/><span/></div>
+                    <div className="pd-dash-main">
+                      <div className="pd-dash-topbar"/>
+                      <div className="pd-dash-kpis"><div/><div/><div/><div/></div>
+                      <div className="pd-dash-chart"/>
+                      <div className="pd-dash-table"><div/><div/><div/><div/></div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="pd-screen-land">
+                    <div className="pd-land-nav"><div className="pd-land-logo"/><div/><div/><div className="pd-land-cta"/></div>
+                    <div className="pd-land-hero"><div className="pd-land-h1"/><div className="pd-land-p"/><div className="pd-land-btn"/></div>
+                    <div className="pd-land-cards"><div/><div/><div/></div>
+                    <div className="pd-land-strip"/>
+                  </div>
+                )}
+              </div>
+            </div>
+            {/* Phone mockup */}
+            <div className="pd-phone">
+              <div className="pd-phone-screen">
+                <div className="pd-phone-header" style={{ background: `linear-gradient(135deg,${p.c},${p.c2})` }}/>
+                <div className="pd-phone-body"><div/><div/><div/><div/></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Content */}
+      <section style={{ paddingTop: 60, paddingBottom: 80 }}>
+        <div className="container">
+          {/* Problem + Solution */}
+          <Reveal>
+            <div className="pd-two-col">
+              <div className="pd-block problem">
+                <div className="pd-block-label"><Icon icon="fa-solid fa-circle-exclamation" /> Masalah Klien</div>
+                <p>{p.problem}</p>
+              </div>
+              <div className="pd-block solution">
+                <div className="pd-block-label"><Icon icon="fa-solid fa-circle-check" /> Solusi AFSS</div>
+                <p>{p.solution}</p>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Features */}
+          <Reveal style={{ marginTop: 48 }}>
+            <div className="eyebrow"><Icon icon="fa-solid fa-list-check" /> Fitur yang Dibangun</div>
+            <h2 className="sec-title" style={{ fontSize: '1.6rem' }}>Yang kami bangun <span className="ital">untuk proyek ini</span></h2>
+            <div className="pd-features">
+              {p.features.map(f => (
+                <div key={f} className="pd-feat">
+                  <div className="pd-feat-ico"><Icon icon="fa-solid fa-check" /></div>
+                  <span>{f}</span>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+
+          {/* Tech stack */}
+          <Reveal style={{ marginTop: 40 }}>
+            <div className="pd-tech-bar">
+              <span className="pd-tech-label"><Icon icon="fa-solid fa-microchip" /> Teknologi</span>
+              <span className="pd-tech-val">{p.tech}</span>
+            </div>
+          </Reveal>
+
+          {/* Testimonial */}
+          <Reveal style={{ marginTop: 48 }}>
+            <div className="pd-review">
+              <div className="pd-review-stars">{[...Array(5)].map((_,i) => <Icon key={i} icon="fa-solid fa-star" />)}</div>
+              <p className="pd-review-text">"{p.review}"</p>
+              <div className="pd-review-author">
+                <div className="pd-review-avatar" style={{ background: `linear-gradient(135deg,${p.c},${p.c2})` }}>{p.clientName[0]}</div>
+                <div>
+                  <div className="pd-review-name">{p.clientName}</div>
+                  <div className="pd-review-role">{p.clientRole}</div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* CTA */}
+          <Reveal style={{ marginTop: 56, textAlign: 'center' }}>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: 12, color: 'var(--ink)', letterSpacing: '-.03em' }}>Tertarik dengan proyek serupa?</h2>
+            <p style={{ color: 'var(--muted)', marginBottom: 28 }}>Konsultasi gratis, tanpa komitmen. Ceritakan kebutuhan Anda.</p>
+            <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <a className="btn btn-wa btn-lg" href={waLink(`Halo ${BRAND.short}, saya tertarik proyek serupa dengan "${p.title}". Boleh konsultasi?`)} target="_blank" rel="noreferrer">
+                <Icon icon="fa-brands fa-whatsapp" /> Diskusi Proyek Serupa
+              </a>
+              <Link className="btn btn-ghost btn-lg" to="/portofolio">
+                <Icon icon="fa-solid fa-arrow-left" /> Lihat Portofolio Lain
+              </Link>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+    </>
+  )
+}
+
+/* ══════════════════════════════════════════════════ ESTIMASI (/estimasi) */
+const EST_PRODS = [
+  { id: 'landing',     label: 'Landing Page',    base: [1.5, 5],   perUnit: 0.4, unit: 'halaman', icon: 'fa-solid fa-rectangle-ad' },
+  { id: 'profile',     label: 'Company Profile', base: [4.5, 12],  perUnit: 0.6, unit: 'halaman', icon: 'fa-solid fa-briefcase' },
+  { id: 'software',    label: 'Software Custom', base: [8, 30],    perUnit: 2,   unit: 'modul',   icon: 'fa-solid fa-code' },
+  { id: 'erp',         label: 'ERP',             base: [28, 100],  perUnit: 5,   unit: 'modul',   icon: 'fa-solid fa-circle-nodes' },
+  { id: 'ecommerce',   label: 'E-Commerce',      base: [18, 50],   perUnit: 2.5, unit: 'modul',   icon: 'fa-solid fa-cart-shopping' },
+  { id: 'marketplace', label: 'Marketplace',     base: [65, 150],  perUnit: 8,   unit: 'modul',   icon: 'fa-solid fa-store' },
+]
+const EST_ADDONS_PG = [
+  { id: 'seo',     label: 'SEO On-page Lengkap',       price: 1.5 },
+  { id: 'hosting', label: 'Domain + Hosting 1 Tahun',  price: 0.8 },
+  { id: 'payment', label: 'Payment Gateway',           price: 2   },
+  { id: 'wa',      label: 'Integrasi WhatsApp API',    price: 1.5 },
+  { id: 'maint',   label: 'Maintenance 3 Bulan',       price: 2.4 },
+  { id: 'uiux',    label: 'Desain Custom UI/UX',       price: 3   },
+]
+function fmtPg(v) { return v >= 1000 ? `Rp ${(v/1000).toFixed(0)} M` : `Rp ${v%1===0?v:v.toFixed(1)} Jt` }
+
+export function Estimasi() {
+  const title = 'Estimasi Harga Proyek — AFSS'
+  const desc = 'Hitung estimasi biaya pembuatan website, software, ERP, e-commerce, atau marketplace. Pilih jenis proyek, jumlah modul, dan add-on yang dibutuhkan.'
+
+  const [prodId, setProdId] = useState('profile')
+  const [units, setUnits] = useState(5)
+  const [addons, setAddons] = useState({})
+
+  const prod = EST_PRODS.find(p => p.id === prodId)
+  const addonTotal = EST_ADDONS_PG.filter(a => addons[a.id]).reduce((s,a) => s+a.price, 0)
+  const low  = prod.base[0] + (units-1)*prod.perUnit + addonTotal
+  const high = prod.base[1] + (units-1)*prod.perUnit*1.6 + addonTotal
+  const toggle = id => setAddons(a => ({ ...a, [id]: !a[id] }))
+  const waMsg = encodeURIComponent(`Halo AFSS, saya ingin konsultasi proyek:\n- Jenis: ${prod.label}\n- ${units} ${prod.unit}\n- Estimasi: ${fmtPg(low)} – ${fmtPg(high)}\n\nBoleh diskusi lebih lanjut?`)
+
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={desc} />
+        <link rel="canonical" href={`${SITE_URL}/estimasi`} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={desc} />
+        <meta property="og:url" content={`${SITE_URL}/estimasi`} />
+        <meta property="og:image" content={`${SITE_URL}/og.png`} />
+      </Head>
+
+      <section className="page-hero">
+        <div className="hero-glow" />
+        <div className="container">
+          <Reveal>
+            <Breadcrumb items={[{ label: 'Beranda', to: '/' }, { label: 'Estimasi Harga' }]} />
+            <div className="eyebrow"><Icon icon="fa-solid fa-calculator" /> Estimasi Harga</div>
+            <h1 className="page-title">Berapa estimasi biaya <span className="ital">proyek Anda</span>?</h1>
+            <p className="page-sub">Pilih jenis proyek, jumlah halaman/modul, dan layanan tambahan — dapatkan estimasi harga awal secara instan. Gratis, tanpa komitmen.</p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section style={{ paddingTop: 20, paddingBottom: 80, background: 'var(--ink)', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 900px 500px at 50% -10%, rgba(37,99,255,.22), transparent 60%), radial-gradient(circle 400px at 90% 100%, rgba(16,199,178,.16), transparent 60%)', pointerEvents: 'none' }} />
+        <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+          <div className="est-wrap">
+            <div className="est-left">
+              <div className="est-step">
+                <div className="est-step-label"><span>1</span> Jenis Produk</div>
+                <div className="est-prod-grid">
+                  {EST_PRODS.map(p => (
+                    <button key={p.id} className={`est-prod-btn${prodId===p.id?' active':''}`} onClick={() => { setProdId(p.id); setUnits(5) }}>
+                      <Icon icon={p.icon} /><span>{p.label}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div className="est-step">
+                <div className="est-step-label"><span>2</span> Jumlah {prod.unit} — <strong>{units} {prod.unit}</strong></div>
+                <input type="range" min="1" max="15" value={units} onChange={e => setUnits(+e.target.value)} className="est-slider" />
+                <div className="est-slider-marks"><span>1</span><span>5</span><span>10</span><span>15</span></div>
+              </div>
+              <div className="est-step">
+                <div className="est-step-label"><span>3</span> Layanan Tambahan</div>
+                <div className="est-addons">
+                  {EST_ADDONS_PG.map(a => (
+                    <button key={a.id} className={`est-addon-btn${addons[a.id]?' active':''}`} onClick={() => toggle(a.id)}>
+                      <span className={`est-addon-check${addons[a.id]?' on':''}`}><Icon icon="fa-solid fa-check" /></span>
+                      <span className="est-addon-label">{a.label}</span>
+                      <span className="est-addon-price">+ {fmtPg(a.price)}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="est-result">
+              <div className="est-result-inner">
+                <div className="est-result-label">Estimasi Awal Project</div>
+                <motion.div className="est-result-low" key={`${prodId}-${units}-${JSON.stringify(addons)}`}
+                  initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
+                  {fmtPg(low)}
+                </motion.div>
+                <div className="est-result-range">s/d <strong>{fmtPg(high)}</strong></div>
+                <div className="est-divider" />
+                <div className="est-breakdown">
+                  <div className="est-brow"><span>Base {prod.label}</span><span>{fmtPg(prod.base[0])} – {fmtPg(prod.base[1])}</span></div>
+                  <div className="est-brow"><span>{units} {prod.unit} × {fmtPg(prod.perUnit)}</span><span>+{fmtPg((units-1)*prod.perUnit)}</span></div>
+                  {addonTotal > 0 && <div className="est-brow accent"><span>Add-on terpilih</span><span>+{fmtPg(addonTotal)}</span></div>}
+                </div>
+                <div className="est-divider" />
+                <p className="est-note">Estimasi awal — harga final menyesuaikan tingkat kesulitan, integrasi, dan kebutuhan khusus.</p>
+                <a href={`https://wa.me/628139694307?text=${waMsg}`} target="_blank" rel="noreferrer" className="btn btn-wa" style={{ width:'100%', justifyContent:'center', marginTop: 8 }}>
+                  <Icon icon="fa-brands fa-whatsapp" /> Konsultasi Estimasi Ini
+                </a>
+                <Link to="/ajukan-proyek" className="btn btn-ghost" style={{ width:'100%', justifyContent:'center', marginTop: 10 }}>
+                  <Icon icon="fa-solid fa-file-pen" /> Ajukan Brief Proyek
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="cta-band">
+        <Reveal className="cta-card">
+          <h2>Butuh angka yang <span className="ital">lebih pasti</span>?</h2>
+          <p>Konsultasi gratis 30 menit — kami bantu tentukan scope yang tepat dan estimasi yang akurat untuk proyek Anda.</p>
+          <div className="btns">
+            <a className="btn btn-wa btn-lg" href={waLink(`Halo ${BRAND.short}, saya ingin konsultasi estimasi harga proyek saya.`)} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> Konsultasi Gratis</a>
+            <Link className="btn btn-ghost btn-lg" to="/portofolio"><Icon icon="fa-solid fa-images" /> Lihat Portofolio</Link>
+          </div>
         </Reveal>
       </section>
     </>

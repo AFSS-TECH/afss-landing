@@ -2,10 +2,10 @@ import './index.css'
 import { ViteReactSSG } from 'vite-react-ssg'
 import { Layout, Home } from './App.jsx'
 import { BlogIndex, BlogPost } from './Blog.jsx'
-import { LayananIndex, LayananDetail, About, Contact, Portfolio, Privacy, Terms, Keunggulan, Harga, Faq, Karir, AjukanProyek, Dashboard } from './Pages.jsx'
+import { LayananIndex, LayananDetail, About, Contact, Portfolio, PortfolioDetail, Estimasi, Privacy, Terms, Keunggulan, Harga, Faq, Karir, AjukanProyek, Dashboard } from './Pages.jsx'
 import { StagingLayout, StagingHome } from './Staging.jsx'
 import { posts } from './blog.js'
-import { products } from './data.js'
+import { products, portfolioProjects } from './data.js'
 
 // Multi-route SSG: every route is prerendered to its own static HTML file for full crawlability.
 export const routes = [
@@ -32,6 +32,12 @@ export const routes = [
       { path: 'tentang', element: <About /> },
       { path: 'kontak', element: <Contact /> },
       { path: 'portofolio', element: <Portfolio /> },
+      {
+        path: 'portofolio/:slug',
+        element: <PortfolioDetail />,
+        getStaticPaths: () => portfolioProjects.map(p => `/portofolio/${p.slug}`),
+      },
+      { path: 'estimasi', element: <Estimasi /> },
       { path: 'privacy', element: <Privacy /> },
       { path: 'terms', element: <Terms /> },
       { path: 'keunggulan', element: <Keunggulan /> },
