@@ -15,10 +15,14 @@ const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.08, delay
 
 marked.setOptions({ gfm: true, breaks: false })
 
+const imgRenderer = new marked.Renderer()
+imgRenderer.image = ({ href, text }) =>
+  `<img src="${href}" alt="${text || ''}" loading="lazy" style="max-width:100%;width:100%;max-height:420px;object-fit:cover;object-position:center;border-radius:12px;margin:2rem auto;display:block;box-shadow:0 2px 16px rgba(0,0,0,.10)">`
+
 const PER_PAGE = 6
 
 function Article({ markdown }) {
-  return <div className="article" dangerouslySetInnerHTML={{ __html: marked.parse(markdown.trim()) }} />
+  return <div className="article" dangerouslySetInnerHTML={{ __html: marked.parse(markdown.trim(), { renderer: imgRenderer }) }} />
 }
 
 /* ── Reading progress bar (fixed at top during article scroll) ── */
