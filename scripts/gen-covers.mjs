@@ -785,6 +785,158 @@ const ILLUSTRATIONS = {
     <text x="910" y="518" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="900" fill="#FFFFFF" opacity="0.95">Indonesia Ready</text>
     <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">ERP cerdas · efisiensi nyata untuk bisnis Anda</text>
   `,
+
+  'website-responsif-mobile-first': () => `
+    <!-- Large phone (center) -->
+    <rect x="860" y="68" width="148" height="294" rx="24" fill="#FFFFFF" opacity="0.14"/>
+    <rect x="872" y="82" width="124" height="268" rx="14" fill="#FFFFFF" opacity="0.08"/>
+    <!-- notch -->
+    <rect x="906" y="72" width="56" height="12" rx="6" fill="#FFFFFF" opacity="0.25"/>
+    <!-- screen: mobile-first content -->
+    <rect x="882" y="104" width="104" height="16" rx="4" fill="#FFFFFF" opacity="0.35"/>
+    <rect x="882" y="128" width="104" height="60" rx="8" fill="#FFFFFF" opacity="0.14"/>
+    <rect x="882" y="196" width="80" height="10" rx="3" fill="#FFFFFF" opacity="0.28"/>
+    <rect x="882" y="212" width="96" height="8" rx="2" fill="#FFFFFF" opacity="0.18"/>
+    <rect x="882" y="228" width="88" height="8" rx="2" fill="#FFFFFF" opacity="0.14"/>
+    <rect x="882" y="252" width="104" height="28" rx="8" fill="#FFFFFF" opacity="0.25"/>
+    <!-- home bar -->
+    <rect x="910" y="348" width="48" height="4" rx="2" fill="#FFFFFF" opacity="0.35"/>
+    <!-- Desktop (behind/right, smaller) -->
+    <rect x="1010" y="180" width="160" height="110" rx="8" fill="#FFFFFF" opacity="0.10"/>
+    <rect x="1010" y="180" width="160" height="24" rx="8" fill="#FFFFFF" opacity="0.14"/>
+    <rect x="1018" y="215" width="144" height="8" rx="2" fill="#FFFFFF" opacity="0.22"/>
+    <rect x="1018" y="230" width="120" height="6" rx="2" fill="#FFFFFF" opacity="0.14"/>
+    <rect x="1018" y="244" width="132" height="6" rx="2" fill="#FFFFFF" opacity="0.12"/>
+    <rect x="1066" y="290" width="12" height="28" rx="2" fill="#FFFFFF" opacity="0.14"/>
+    <rect x="1040" y="318" width="64" height="6" rx="2" fill="#FFFFFF" opacity="0.12"/>
+    <!-- Speed meter (left) -->
+    <circle cx="744" cy="230" r="72" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.18"/>
+    <circle cx="744" cy="230" r="58" fill="#FFFFFF" opacity="0.07"/>
+    <text x="744" y="218" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="900" fill="#FFFFFF" opacity="0.90">98</text>
+    <text x="744" y="240" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" opacity="0.60">Mobile Score</text>
+    <!-- stat chips -->
+    <rect x="668" y="398" width="148" height="40" rx="10" fill="#FFFFFF" opacity="0.16"/>
+    <text x="742" y="423" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="800" fill="#FFFFFF" opacity="0.9">70% Mobile</text>
+    <rect x="828" y="398" width="148" height="40" rx="10" fill="#FFFFFF" opacity="0.14"/>
+    <text x="902" y="423" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="800" fill="#FFFFFF" opacity="0.85">&lt; 3s Load</text>
+    <rect x="988" y="398" width="148" height="40" rx="10" fill="#FFFFFF" opacity="0.14"/>
+    <text x="1062" y="423" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="800" fill="#FFFFFF" opacity="0.85">SEO #1</text>
+    <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">Mobile-first · cepat · unggul di Google</text>
+  `,
+
+  'erp-manufaktur-indonesia': () => `
+    <!-- Factory floor abstraction -->
+    <!-- Conveyor belt -->
+    <rect x="668" y="340" width="500" height="28" rx="8" fill="#FFFFFF" opacity="0.14"/>
+    ${[0,1,2,3,4,5,6].map(i => `<circle cx="${698+i*72}" cy="354" r="10" fill="#FFFFFF" opacity="${0.25-i*0.02}"/>`).join('')}
+    <!-- Product boxes on belt -->
+    ${[0,1,2,3].map(i => `<rect x="${700+i*118}" y="300" width="60" height="40" rx="6" fill="#FFFFFF" opacity="${[0.24,0.18,0.20,0.14][i]}"/>`).join('')}
+    <!-- Central ERP hub (top center) -->
+    <rect x="820" y="90" width="180" height="80" rx="14" fill="#FFFFFF" opacity="0.20"/>
+    <text x="910" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="900" fill="#FFFFFF" opacity="0.90">ERP</text>
+    <text x="910" y="150" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" opacity="0.65">Manufaktur</text>
+    <!-- Module nodes -->
+    ${[
+      { label: 'BOM', x: 672, y: 160, ex: 820, ey: 120 },
+      { label: 'MRP', x: 672, y: 240, ex: 820, ey: 140 },
+      { label: 'Work Order', x: 1050, y: 160, ex: 1000, ey: 120 },
+      { label: 'Quality', x: 1055, y: 240, ex: 1000, ey: 140 },
+      { label: 'Inventory', x: 760, y: 230, ex: 835, ey: 170 },
+      { label: 'Planning', x: 978, y: 230, ex: 985, ey: 170 },
+    ].map(n => `
+      <line x1="${n.x+50}" y1="${n.y+18}" x2="${n.ex}" y2="${n.ey}" stroke="#FFFFFF" stroke-width="1.5" opacity="0.20" stroke-dasharray="5 3"/>
+      <rect x="${n.x}" y="${n.y}" width="100" height="36" rx="8" fill="#FFFFFF" opacity="0.14"/>
+      <text x="${n.x+50}" y="${n.y+22}" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" opacity="0.76">${n.label}</text>
+    `).join('')}
+    <!-- Efficiency badge -->
+    <rect x="804" y="448" width="212" height="44" rx="22" fill="#FFFFFF" opacity="0.20"/>
+    <text x="910" y="476" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="900" fill="#FFFFFF" opacity="0.95">Efisiensi +30%</text>
+    <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">Integrasikan seluruh lini produksi Anda</text>
+  `,
+
+  'aplikasi-loyalty-program': () => `
+    <!-- Central loyalty star/badge -->
+    <circle cx="910" cy="260" r="76" fill="#FFFFFF" opacity="0.16"/>
+    <circle cx="910" cy="260" r="54" fill="#FFFFFF" opacity="0.10"/>
+    <text x="910" y="248" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="800" fill="#FFFFFF" opacity="0.85">Loyalty</text>
+    <text x="910" y="272" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="900" fill="#FFFFFF" opacity="0.95">★</text>
+    <!-- Tier rings orbiting -->
+    ${[
+      { label: 'Bronze', x: 694, y: 148, ex: 858, ey: 226 },
+      { label: 'Silver', x: 1078, y: 148, ex: 962, ey: 226 },
+      { label: 'Gold', x: 680, y: 304, ex: 842, ey: 278 },
+      { label: 'Platinum', x: 1074, y: 304, ex: 978, ey: 278 },
+      { label: 'Poin', x: 756, y: 428, ex: 878, ey: 326 },
+      { label: 'Cashback', x: 1018, y: 428, ex: 942, ey: 326 },
+    ].map(n => `
+      <line x1="${n.ex}" y1="${n.ey}" x2="${n.x+50}" y2="${n.y+18}" stroke="#FFFFFF" stroke-width="1.5" opacity="0.20" stroke-dasharray="6 4"/>
+      <rect x="${n.x}" y="${n.y}" width="100" height="36" rx="18" fill="#FFFFFF" opacity="0.15"/>
+      <text x="${n.x+50}" y="${n.y+22}" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" opacity="0.78">${n.label}</text>
+    `).join('')}
+    <circle cx="910" cy="260" r="136" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.09" stroke-dasharray="10 7"/>
+    <!-- ROI badge -->
+    <rect x="800" y="482" width="220" height="44" rx="22" fill="#FFFFFF" opacity="0.20"/>
+    <text x="910" y="510" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="900" fill="#FFFFFF" opacity="0.95">Retensi 3x Lebih Baik</text>
+    <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">Loyalty app · pelanggan setia jangka panjang</text>
+  `,
+
+  'website-konstruksi-kontraktor': () => `
+    <!-- Building under construction -->
+    <!-- Foundation -->
+    <rect x="720" y="490" width="420" height="20" rx="4" fill="#FFFFFF" opacity="0.22"/>
+    <!-- Floor columns -->
+    <rect x="730" y="220" width="24" height="270" rx="4" fill="#FFFFFF" opacity="0.18"/>
+    <rect x="1106" y="220" width="24" height="270" rx="4" fill="#FFFFFF" opacity="0.18"/>
+    <!-- Floors - 4 levels -->
+    ${[0,1,2,3].map(i => `
+      <rect x="730" y="${418-i*66}" width="400" height="4" rx="2" fill="#FFFFFF" opacity="0.22"/>
+      ${[0,1,2,3,4].map(col => `<rect x="${754+col*72}" y="${360-i*66}" width="54" height="56" rx="4" fill="#FFFFFF" opacity="${0.16-i*0.02}"/>`).join('')}
+    `).join('')}
+    <!-- Crane (right side) -->
+    <rect x="1100" y="88" width="10" height="310" rx="3" fill="#FFFFFF" opacity="0.20"/>
+    <rect x="980" y="88" width="132" height="10" rx="3" fill="#FFFFFF" opacity="0.20"/>
+    <line x1="1050" y1="98" x2="1105" y2="420" stroke="#FFFFFF" stroke-width="2" opacity="0.15" stroke-dasharray="8 4"/>
+    <!-- Helmet icon top-left -->
+    <path d="M680 150 Q680 100 730 100 Q780 100 780 150 L780 170 L680 170 Z" fill="#FFFFFF" opacity="0.18"/>
+    <rect x="672" y="168" width="116" height="16" rx="4" fill="#FFFFFF" opacity="0.22"/>
+    <!-- badge -->
+    <rect x="672" y="462" width="220" height="40" rx="10" fill="#FFFFFF" opacity="0.16"/>
+    <text x="782" y="487" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" opacity="0.90">500+ Proyek Selesai</text>
+    <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">Website kontraktor yang menghasilkan proyek</text>
+  `,
+
+  'tren-app-development-2027': () => `
+    <!-- Timeline / roadmap -->
+    <line x1="720" y1="300" x2="1160" y2="300" stroke="#FFFFFF" stroke-width="3" opacity="0.22"/>
+    ${[
+      { label: '2025', sub: 'AI Add-on', x: 720, active: false },
+      { label: '2026', sub: 'AI-Native', x: 880, active: true },
+      { label: '2026+', sub: 'Offline-1st', x: 1020, active: false },
+      { label: '2027', sub: 'Multimodal', x: 1160, active: false },
+    ].map(n => `
+      <circle cx="${n.x}" cy="300" r="${n.active?20:14}" fill="#FFFFFF" opacity="${n.active?0.28:0.16}"/>
+      <text x="${n.x}" y="${n.active?305:304}" text-anchor="middle" font-family="Arial,sans-serif" font-size="${n.active?13:11}" font-weight="800" fill="#FFFFFF" opacity="${n.active?0.9:0.6}">${n.label}</text>
+      <text x="${n.x}" y="${n.active?334:330}" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="600" fill="#FFFFFF" opacity="${n.active?0.75:0.45}">${n.sub}</text>
+    `).join('')}
+    <!-- Trend chips (top area) -->
+    ${[
+      { label: 'AI-Native', x: 668, y: 110 },
+      { label: 'Edge Computing', x: 798, y: 110 },
+      { label: 'WASM', x: 956, y: 110 },
+      { label: 'Super App 2.0', x: 1060, y: 110 },
+      { label: 'Voice UI', x: 668, y: 170 },
+      { label: 'Security-First', x: 778, y: 170 },
+      { label: 'Low-code 2.0', x: 922, y: 170 },
+      { label: 'Green Tech', x: 1062, y: 170 },
+    ].map(n => `
+      <rect x="${n.x}" y="${n.y}" width="120" height="36" rx="10" fill="#FFFFFF" opacity="0.14"/>
+      <text x="${n.x+60}" y="${n.y+22}" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" opacity="0.78">${n.label}</text>
+    `).join('')}
+    <!-- "Siap 2027?" badge -->
+    <rect x="796" y="380" width="228" height="48" rx="24" fill="#FFFFFF" opacity="0.20"/>
+    <text x="910" y="410" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" font-weight="900" fill="#FFFFFF" opacity="0.95">Siap untuk 2027?</text>
+    <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">Tren teknologi · keputusan bisnis yang lebih baik</text>
+  `,
 }
 
 // Fallback: decorative circles if slug has no illustration
