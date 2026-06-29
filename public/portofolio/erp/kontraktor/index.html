@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFSS Contractor ERP — Enterprise Construction Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.47.0/dist/tabler-icons.min.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ======= LOGIN PAGE ======= -->
+<div id="page-login" class="login-page">
+  <div class="login-container">
+    <div class="login-card">
+      <div class="text-center mb-4">
+        <div class="login-logo mx-auto mb-3">
+          <i class="ti ti-building-skyscraper"></i>
+        </div>
+        <h1 class="fs-5 fw-bold text-navy mb-1">AFSS Contractor ERP</h1>
+        <p class="text-muted small mb-3">Enterprise Construction Management System</p>
+        <span class="badge-demo"><i class="ti ti-circle-filled"></i> Demo Mode Aktif</span>
+      </div>
+      <div class="mb-3">
+        <label class="form-label-erp">Email / Username</label>
+        <input id="login-email" type="text" class="form-control form-control-erp" value="owner@afsscontractor.com">
+      </div>
+      <div class="mb-3">
+        <label class="form-label-erp">Password</label>
+        <input id="login-pass" type="password" class="form-control form-control-erp" value="demo1234">
+      </div>
+      <div class="mb-4">
+        <label class="form-label-erp">Masuk sebagai</label>
+        <div class="role-chips" id="role-chips">
+          <span class="role-chip active" data-role="Owner">Owner</span>
+          <span class="role-chip" data-role="Admin">Admin</span>
+          <span class="role-chip" data-role="Finance">Finance</span>
+          <span class="role-chip" data-role="PM">Project Manager</span>
+          <span class="role-chip" data-role="Mandor">Mandor</span>
+          <span class="role-chip" data-role="Warehouse">Warehouse</span>
+        </div>
+      </div>
+      <button class="btn btn-primary w-100 btn-login" onclick="doLogin()">
+        <i class="ti ti-login me-1"></i> Masuk ke Sistem
+      </button>
+      <p class="text-center text-muted mt-3" style="font-size:11px">v2.5.0 · PT AFSS Contractor Indonesia · 2025</p>
+    </div>
+  </div>
+</div>
+
+<!-- ======= MAIN APP ======= -->
+<div id="app" class="d-none">
+
+  <!-- TOPBAR -->
+  <nav class="topbar navbar">
+    <div class="d-flex align-items-center gap-2">
+      <button class="btn-sb-toggle" onclick="toggleSidebar()" title="Toggle Sidebar">
+        <i class="ti ti-menu-2"></i>
+      </button>
+      <div class="brand d-flex align-items-center gap-2">
+        <div class="brand-icon"><i class="ti ti-building-skyscraper"></i></div>
+        <div class="d-none d-md-block">
+          <div class="brand-name">AFSS Contractor ERP</div>
+          <div class="brand-sub">Enterprise Construction Management</div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+      <div class="tb-clock d-none d-lg-flex align-items-center gap-1">
+        <i class="ti ti-clock"></i><span id="clock-val">--:--</span>
+      </div>
+      <button class="btn-tb-pill d-none d-md-flex" onclick="navigate('map')">
+        <i class="ti ti-sitemap"></i> Peta Sistem
+      </button>
+      <!-- Notif Dropdown -->
+      <div class="dropdown">
+        <button class="btn-tb-icon position-relative" data-bs-toggle="dropdown">
+          <i class="ti ti-bell"></i>
+          <span class="notif-dot position-absolute"></span>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end shadow-lg border-0 notif-dropdown" style="width:320px;border-radius:14px;overflow:hidden">
+          <div class="px-3 py-2 d-flex align-items-center justify-content-between border-bottom">
+            <span class="fw-bold small">Notifikasi</span>
+            <span class="badge bg-danger rounded-pill">5</span>
+          </div>
+          <div class="notif-item unread"><i class="ti ti-alert-triangle text-warning"></i><div><div class="small fw-semibold">3 PO menunggu approval Owner</div><small class="text-muted">2 menit lalu</small></div></div>
+          <div class="notif-item unread"><i class="ti ti-clock text-primary"></i><div><div class="small fw-semibold">7 absensi pending Mandor</div><small class="text-muted">15 menit lalu</small></div></div>
+          <div class="notif-item unread"><i class="ti ti-package text-danger"></i><div><div class="small fw-semibold">Stok Semen kritis — 45 sak</div><small class="text-muted">1 jam lalu</small></div></div>
+          <div class="notif-item"><i class="ti ti-cash text-success"></i><div><div class="small fw-semibold">Payroll Juni siap diproses</div><small class="text-muted">3 jam lalu</small></div></div>
+          <div class="notif-item"><i class="ti ti-check text-success"></i><div><div class="small fw-semibold">Invoice Termin 2 dikirim</div><small class="text-muted">5 jam lalu</small></div></div>
+        </div>
+      </div>
+      <!-- User Dropdown -->
+      <div class="dropdown">
+        <button class="btn-user d-flex align-items-center gap-2" data-bs-toggle="dropdown">
+          <div class="user-av" id="tb-av">BO</div>
+          <div class="d-none d-sm-block text-start">
+            <div class="user-name" id="tb-name">Budi Owner</div>
+            <div class="user-role" id="tb-role">Owner</div>
+          </div>
+          <i class="ti ti-chevron-down text-white-50 d-none d-sm-block" style="font-size:12px"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-end shadow border-0" style="border-radius:12px;min-width:200px">
+          <div class="px-3 py-2 border-bottom">
+            <div class="fw-bold small" id="dd-uname">Budi Owner</div>
+            <small class="text-muted" id="dd-urole">Owner</small>
+          </div>
+          <button class="dropdown-item py-2" onclick="navigate('settings')"><i class="ti ti-user me-2 text-muted"></i>Profil Saya</button>
+          <button class="dropdown-item py-2" onclick="navigate('settings')"><i class="ti ti-settings me-2 text-muted"></i>Pengaturan</button>
+          <button class="dropdown-item py-2 text-warning" onclick="resetDB()"><i class="ti ti-refresh me-2"></i>Reset Demo Data</button>
+          <div class="dropdown-divider"></div>
+          <button class="dropdown-item py-2 text-danger" onclick="doLogout()"><i class="ti ti-logout me-2"></i>Keluar</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BODY -->
+  <div class="app-body">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <nav class="sb-nav">
+        <div class="sb-section-label">UTAMA</div>
+        <a class="sb-link" data-page="dashboard"><i class="ti ti-layout-dashboard"></i><span>Dashboard</span></a>
+        <a class="sb-link" data-page="map"><i class="ti ti-sitemap"></i><span>Peta Sistem</span></a>
+
+        <div class="sb-section-label">PROYEK</div>
+        <a class="sb-link" data-page="projects"><i class="ti ti-folder-open"></i><span>Daftar Proyek</span></a>
+        <a class="sb-link" data-page="rab"><i class="ti ti-file-description"></i><span>RAB / BOQ</span></a>
+        <a class="sb-link" data-page="hpp"><i class="ti ti-chart-pie"></i><span>HPP &amp; Profit</span></a>
+
+        <div class="sb-section-label">SDM &amp; GAJI</div>
+        <a class="sb-link" data-page="employees"><i class="ti ti-users"></i><span>Karyawan</span></a>
+        <a class="sb-link" data-page="attendance"><i class="ti ti-clock"></i><span>Absensi</span><span class="sb-badge">7</span></a>
+        <a class="sb-link" data-page="payroll"><i class="ti ti-cash"></i><span>Payroll Harian</span><span class="sb-badge warn">3</span></a>
+
+        <div class="sb-section-label">INVENTORY</div>
+        <a class="sb-link" data-page="stock-general"><i class="ti ti-package"></i><span>Stock Umum</span></a>
+        <a class="sb-link" data-page="stock-project"><i class="ti ti-building-warehouse"></i><span>Stock Proyek</span></a>
+        <a class="sb-link" data-page="stock-transfer"><i class="ti ti-transfer"></i><span>Transfer Stock</span></a>
+        <a class="sb-link" data-page="equipment"><i class="ti ti-tool"></i><span>Alat &amp; Perlengkapan</span></a>
+
+        <div class="sb-section-label">PEMBELIAN</div>
+        <a class="sb-link" data-page="purchase-request"><i class="ti ti-clipboard-list"></i><span>Purchase Request</span><span class="sb-badge">5</span></a>
+        <a class="sb-link" data-page="purchase-order"><i class="ti ti-shopping-cart"></i><span>Purchase Order</span></a>
+
+        <div class="sb-section-label">KEUANGAN</div>
+        <a class="sb-link" data-page="finance"><i class="ti ti-report-money"></i><span>Finance</span></a>
+        <a class="sb-link" data-page="gl"><i class="ti ti-book"></i><span>General Ledger</span></a>
+        <a class="sb-link" data-page="reports"><i class="ti ti-file-analytics"></i><span>Laporan</span></a>
+
+        <div class="sb-section-label">SISTEM</div>
+        <a class="sb-link" data-page="master"><i class="ti ti-database"></i><span>Master Data</span></a>
+        <a class="sb-link" data-page="settings"><i class="ti ti-settings"></i><span>Pengaturan</span></a>
+      </nav>
+      <div class="sb-footer">
+        <span class="online-dot"></span>
+        <span class="sb-footer-text">Sistem Online · v2.5</span>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main id="main" class="main-content"></main>
+  </div>
+</div>
+
+<!-- BOOTSTRAP MODAL (Bootstrap handles animations & accessibility) -->
+<div class="modal fade" id="erp-modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-0 shadow-lg" style="border-radius:16px">
+      <div class="modal-header border-bottom-0 pb-0 px-4 pt-4">
+        <h5 class="modal-title fw-bold" id="modal-title"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body px-4 py-3" id="modal-body"></div>
+      <div class="modal-footer border-top-0 px-4 pb-4 pt-0">
+        <button type="button" class="btn btn-light px-4" data-bs-dismiss="modal">Batal</button>
+        <button type="button" class="btn btn-primary px-4" id="modal-save-btn">
+          <i class="ti ti-check me-1"></i> Simpan
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONFIRM MODAL -->
+<div class="modal fade" id="confirm-modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content border-0 shadow-lg text-center p-4" style="border-radius:16px">
+      <div class="confirm-icon mx-auto mb-3"><i class="ti ti-alert-triangle"></i></div>
+      <h6 class="fw-bold mb-1" id="confirm-title">Konfirmasi</h6>
+      <p class="text-muted small" id="confirm-msg">Apakah Anda yakin?</p>
+      <div class="d-flex gap-2 justify-content-center mt-3">
+        <button class="btn btn-light px-3" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-danger px-3" id="confirm-ok-btn">Ya, Lanjutkan</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST CONTAINER (Bootstrap toasts) -->
+<div id="toast-container" class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index:9999"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/pages.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

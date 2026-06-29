@@ -1301,6 +1301,20 @@ export function PortfolioDetail() {
             </div>
           </Reveal>
 
+          {/* Visit Project button */}
+          {p.visitUrl && (
+            <Reveal style={{ marginTop: 48, textAlign: 'center' }}>
+              <div style={{ background: 'var(--paper-2)', border: '1px solid var(--line)', borderRadius: 'var(--r-lg)', padding: '32px 24px' }}>
+                <div className="eyebrow" style={{ justifyContent: 'center', marginBottom: 12 }}><Icon icon="fa-solid fa-eye" /> Live Demo</div>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: 8, color: 'var(--ink)' }}>Lihat langsung sistemnya</h3>
+                <p style={{ color: 'var(--muted)', fontSize: '.95rem', marginBottom: 20 }}>Demo aktif — coba login dengan berbagai role: Owner, Admin, Finance, PM, Mandor, Warehouse.</p>
+                <a className="btn btn-pri btn-lg" href={p.visitUrl} target="_blank" rel="noreferrer">
+                  <Icon icon="fa-solid fa-arrow-up-right-from-square" /> Buka Demo Sistem
+                </a>
+              </div>
+            </Reveal>
+          )}
+
           {/* CTA */}
           <Reveal style={{ marginTop: 56, textAlign: 'center' }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: 12, color: 'var(--ink)', letterSpacing: '-.03em' }}>Tertarik dengan proyek serupa?</h2>
