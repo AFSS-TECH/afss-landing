@@ -577,6 +577,7 @@ footer { background: var(--ink); color: #AAB6C4; padding: 72px 28px 32px; }
 .blog-meta { font-size: .76rem; color: var(--faint); font-weight: 600; margin-bottom: 12px; letter-spacing: .01em; }
 .blog-card-title { font-size: 1.22rem; font-weight: 800; line-height: 1.3; color: var(--ink); margin-bottom: 12px; }
 .blog-card-excerpt { color: var(--muted); font-size: .92rem; line-height: 1.65; margin-bottom: 18px; }
+.blog-view-stat { font-size: .72rem; color: var(--faint); margin: -10px 0 14px; display: flex; align-items: center; gap: 5px; }
 .blog-readmore { margin-top: auto; display: inline-flex; align-items: center; gap: 8px; color: var(--blue); font-weight: 700; font-size: .88rem; transition: gap .25s var(--ease); }
 .blog-card:hover .blog-readmore { gap: 12px; }
 

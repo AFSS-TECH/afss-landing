@@ -8,6 +8,19 @@ import { Icon } from './Icon.jsx'
 import { getPost } from './blog.js'
 import { SITE_URL, formatDateId } from './site.js'
 import { postsMeta } from './blog-meta.js'
+import { incrementBlogView, fetchAllBlogViews } from './lib/supabase.js'
+
+/* ── Relative-ish "terakhir dibuka" formatter ── */
+function formatLastViewed(iso) {
+  if (!iso) return null
+  const d = new Date(iso)
+  const diffMin = Math.round((Date.now() - d.getTime()) / 60000)
+  if (diffMin < 1) return 'baru saja'
+  if (diffMin < 60) return `${diffMin} menit lalu`
+  const diffH = Math.round(diffMin / 60)
+  if (diffH < 24) return `${diffH} jam lalu`
+  return formatDateId(iso)
+}
 
 const fadeUp = {
   hidden: { opacity: 0, y: 18 },
@@ -49,6 +62,9 @@ export function BlogIndex() {
   const [query, setQuery] = useState('')
   const [activeTag, setActiveTag] = useState('')
   const [page, setPage] = useState(1)
+  const [views, setViews] = useState(new Map())
+
+  useEffect(() => { fetchAllBlogViews().then(setViews) }, [])
 
   // Hitung frekuensi tag, ambil top 15 yang paling banyak dipakai
   const tagFreq = all.flatMap((p) => p.tags).reduce((acc, t) => { acc[t] = (acc[t] || 0) + 1; return acc; }, {})
@@ -208,6 +224,12 @@ export function BlogIndex() {
                         </div>
                         <h2 className="blog-card-title">{p.title}</h2>
                         <p className="blog-card-excerpt">{p.excerpt}</p>
+                        {views.has(p.slug) && (
+                          <div className="blog-view-stat">
+                            <Icon icon="fa-solid fa-eye" /> {views.get(p.slug).view_count.toLocaleString('id-ID')}x dibuka
+                            {views.get(p.slug).last_viewed_at && <span> · terakhir {formatLastViewed(views.get(p.slug).last_viewed_at)}</span>}
+                          </div>
+                        )}
                         <span className="blog-readmore">Baca selengkapnya <Icon icon="fa-solid fa-arrow-right" /></span>
                       </div>
                     </Link>
@@ -257,6 +279,12 @@ export function BlogIndex() {
 export function BlogPost() {
   const { slug } = useParams()
   const post = getPost(slug)
+  const [viewStat, setViewStat] = useState(null)
+
+  useEffect(() => {
+    if (!slug) return
+    incrementBlogView(slug).then((res) => { if (res) setViewStat(res) })
+  }, [slug])
 
   if (!post) {
     return (
@@ -338,6 +366,11 @@ export function BlogPost() {
             <div className="post-meta">
               Terbit {formatDateId(post.date)}
               {post.updatedAt && post.updatedAt !== post.date && <span className="blog-meta-upd"> · Diperbarui {formatDateId(post.updatedAt)}</span>}
+              {viewStat && (
+                <span className="blog-meta-upd">
+                  {' · '}<Icon icon="fa-solid fa-eye" /> {viewStat.view_count.toLocaleString('id-ID')}x dibuka · terakhir {formatLastViewed(viewStat.last_viewed_at)}
+                </span>
+              )}
             </div>
             <div className="post-tag-row">
               {post.tags.map((t) => (
