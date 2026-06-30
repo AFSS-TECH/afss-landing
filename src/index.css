@@ -898,6 +898,22 @@ footer { background: var(--ink); color: #AAB6C4; padding: 72px 28px 32px; }
 .pd-phone-body { display: flex; flex-direction: column; gap: 5px; padding: 4px; }
 .pd-phone-body div { height: 10px; background: rgba(255,255,255,.15); border-radius: 3px; }
 
+/* Screenshot gallery (real product images) */
+.pd-gallery-wrap { background: var(--paper-2); padding: 32px 0; border-bottom: 1px solid var(--line); }
+.pd-gallery { display: grid; grid-template-columns: 1.4fr 1fr; grid-template-rows: auto auto; gap: 16px; max-width: 980px; margin: 0 auto; }
+.pd-gallery-item.main { grid-row: 1 / 3; }
+.pd-gallery-frame { background: #fff; border-radius: 12px; box-shadow: var(--shadow-lg); border: 1px solid var(--line); overflow: hidden; aspect-ratio: 16/10; }
+.pd-gallery-item.main .pd-gallery-frame { aspect-ratio: 4/3; }
+.pd-gallery-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.pd-gallery-cap { margin-top: 8px; font-size: .8rem; color: var(--muted); line-height: 1.5; }
+
+/* Benefit analysis cards */
+.pd-benefits { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 22px; }
+.pd-benefit-card { padding: 20px; background: var(--paper-2); border-radius: var(--r); border: 1px solid var(--line); }
+.pd-benefit-ico { width: 38px; height: 38px; border-radius: 10px; color: #fff; display: grid; place-items: center; font-size: .9rem; margin-bottom: 14px; }
+.pd-benefit-card h3 { font-size: .95rem; font-weight: 800; color: var(--ink); margin-bottom: 6px; letter-spacing: -.01em; }
+.pd-benefit-card p { font-size: .82rem; line-height: 1.6; color: var(--muted); }
+
 /* Detail content */
 .pd-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .pd-block { padding: 20px; border-radius: var(--r); }
@@ -931,6 +947,9 @@ footer { background: var(--ink); color: #AAB6C4; padding: 72px 28px 32px; }
   .pd-phone { width: 100%; }
   .pd-stats { gap: 16px; }
   .pd-stat-div { display: none; }
+  .pd-gallery { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .pd-gallery-item.main { grid-row: auto; }
+  .pd-benefits { grid-template-columns: 1fr; }
 }
 
 /* ════════ CONTACT FORM ════════ */

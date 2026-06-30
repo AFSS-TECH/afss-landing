@@ -1213,54 +1213,63 @@ export function PortfolioDetail() {
         </div>
       </section>
 
-      {/* Mockup visual */}
-      <div className="pd-mockup-wrap" style={{ '--c': p.c, '--c2': p.c2 }}>
-        <div className="container">
-          <div className="pd-mockup">
-            <div className="pd-mockup-browser">
-              <div className="pd-browser-bar">
-                <i style={{ background: '#FF6058' }} /><i style={{ background: '#FFBD2E' }} /><i style={{ background: '#28C840' }} />
-                <div className="pd-browser-url">afss.tech · {p.title.toLowerCase()}</div>
-              </div>
-              <div className="pd-browser-body">
-                {p.image ? (
-                  <img src={p.image} alt={p.title} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
-                ) : p.kind === 'dash' ? (
-                  <div className="pd-screen-dash">
-                    <div className="pd-dash-side"><span/><span className="on"/><span/><span/><span/></div>
-                    <div className="pd-dash-main">
-                      <div className="pd-dash-topbar"/>
-                      <div className="pd-dash-kpis"><div/><div/><div/><div/></div>
-                      <div className="pd-dash-chart"/>
-                      <div className="pd-dash-table"><div/><div/><div/><div/></div>
-                    </div>
+      {/* Screenshot gallery (real product) or fake mockup fallback */}
+      {p.images?.length ? (
+        <div className="pd-gallery-wrap" style={{ '--c': p.c, '--c2': p.c2 }}>
+          <div className="container">
+            <div className="pd-gallery">
+              {p.images.map((src, i) => (
+                <Reveal key={src} className={`pd-gallery-item${i === 0 ? ' main' : ''}`} style={{ transitionDelay: `${i*60}ms` }}>
+                  <div className="pd-gallery-frame">
+                    <img src={src} alt={p.imageCaptions?.[i] || p.title} loading="lazy" />
                   </div>
-                ) : (
-                  <div className="pd-screen-land">
-                    <div className="pd-land-nav"><div className="pd-land-logo"/><div/><div/><div className="pd-land-cta"/></div>
-                    <div className="pd-land-hero"><div className="pd-land-h1"/><div className="pd-land-p"/><div className="pd-land-btn"/></div>
-                    <div className="pd-land-cards"><div/><div/><div/></div>
-                    <div className="pd-land-strip"/>
-                  </div>
-                )}
-              </div>
+                  {p.imageCaptions?.[i] && <p className="pd-gallery-cap">{p.imageCaptions[i]}</p>}
+                </Reveal>
+              ))}
             </div>
-            {/* Phone mockup */}
-            <div className="pd-phone">
-              <div className="pd-phone-screen">
-                {p.images?.[2] ? (
-                  <img src={p.images[2]} alt={`${p.title} mobile`} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                ) : (
-                  <>
-                    <div className="pd-phone-header" style={{ background: `linear-gradient(135deg,${p.c},${p.c2})` }}/>
-                    <div className="pd-phone-body"><div/><div/><div/><div/></div>
-                  </>
-                )}
+          </div>
+        </div>
+      ) : (
+        <div className="pd-mockup-wrap" style={{ '--c': p.c, '--c2': p.c2 }}>
+          <div className="container">
+            <div className="pd-mockup">
+              <div className="pd-mockup-browser">
+                <div className="pd-browser-bar">
+                  <i style={{ background: '#FF6058' }} /><i style={{ background: '#FFBD2E' }} /><i style={{ background: '#28C840' }} />
+                  <div className="pd-browser-url">afss.tech · {p.title.toLowerCase()}</div>
+                </div>
+                <div className="pd-browser-body">
+                  {p.kind === 'dash' ? (
+                    <div className="pd-screen-dash">
+                      <div className="pd-dash-side"><span/><span className="on"/><span/><span/><span/></div>
+                      <div className="pd-dash-main">
+                        <div className="pd-dash-topbar"/>
+                        <div className="pd-dash-kpis"><div/><div/><div/><div/></div>
+                        <div className="pd-dash-chart"/>
+                        <div className="pd-dash-table"><div/><div/><div/><div/></div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="pd-screen-land">
+                      <div className="pd-land-nav"><div className="pd-land-logo"/><div/><div/><div className="pd-land-cta"/></div>
+                      <div className="pd-land-hero"><div className="pd-land-h1"/><div className="pd-land-p"/><div className="pd-land-btn"/></div>
+                      <div className="pd-land-cards"><div/><div/><div/></div>
+                      <div className="pd-land-strip"/>
+                    </div>
+                  )}
+                </div>
+              </div>
+              {/* Phone mockup */}
+              <div className="pd-phone">
+                <div className="pd-phone-screen">
+                  <div className="pd-phone-header" style={{ background: `linear-gradient(135deg,${p.c},${p.c2})` }}/>
+                  <div className="pd-phone-body"><div/><div/><div/><div/></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Content */}
       <section style={{ paddingTop: 60, paddingBottom: 80 }}>
@@ -1278,6 +1287,23 @@ export function PortfolioDetail() {
               </div>
             </div>
           </Reveal>
+
+          {/* Benefit analysis (per feature) */}
+          {p.benefits?.length > 0 && (
+            <Reveal style={{ marginTop: 48 }}>
+              <div className="eyebrow"><Icon icon="fa-solid fa-chart-line" /> Analisa Keuntungan</div>
+              <h2 className="sec-title" style={{ fontSize: '1.6rem' }}>Kenapa sistem ini <span className="ital">menguntungkan bisnis</span></h2>
+              <div className="pd-benefits">
+                {p.benefits.map(b => (
+                  <div key={b.title} className="pd-benefit-card">
+                    <div className="pd-benefit-ico" style={{ background: `linear-gradient(135deg,${p.c},${p.c2})` }}><Icon icon={b.icon} /></div>
+                    <h3>{b.title}</h3>
+                    <p>{b.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          )}
 
           {/* Features */}
           <Reveal style={{ marginTop: 48 }}>
