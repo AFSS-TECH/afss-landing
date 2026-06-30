@@ -201,6 +201,24 @@ export const portfolioProjects = [
       { icon:'fa-solid fa-boxes-stacked', title:'Stok material selalu akurat', desc:'Pengadaan dan pemakaian material tercatat per proyek — mencegah kelebihan beli atau kehabisan stok mendadak.' },
     ],
   },
+  // LANDING PAGE
+  { slug:'koperasi-emas-kimberli', cat:'Landing Page', catSlug:'landing-page', title:'Koperasi Emas Kimberli', tagline:'Platform investasi emas koperasi: tabungan, cicil emas, gadai simpanan & simulasi real-time', c:'#1A1305', c2:'#D4A93B', kind:'land', budget:'Rp 14 Jt', result:'Konversi Daftar +180%', result2:'150.000+ anggota terlayani di platform', tags:['Next.js','Supabase','Multi-Role Dashboard','Realtime Gold Price'],
+    problem:'Koperasi emas mengandalkan brosur dan WhatsApp manual untuk jualan produk tabungan & cicil emas. Calon anggota tidak bisa cek harga emas terkini atau simulasi cicilan sendiri, sehingga banyak yang ragu mendaftar.',
+    solution:'Landing page investasi emas dengan harga emas real-time, simulator cicilan & buyback interaktif, serta dashboard multi-role (Admin, Master, Member) untuk kelola anggota, tabungan, dan SHU tahunan.',
+    features:['Harga emas hari ini real-time + grafik 30 hari','Simulasi cicilan & buyback interaktif','Tabungan emas, gadai simpanan, SHU tahunan','Dashboard member: portofolio & riwayat transaksi','Dashboard admin/master: kelola anggota & transaksi','Autentikasi & registrasi anggota terverifikasi'],
+    tech:'Next.js 15, TypeScript, Supabase, Tailwind CSS, Vercel',
+    review:'Anggota sekarang bisa cek harga emas dan simulasi cicilan sendiri kapan saja — tim kami tidak perlu lagi jawab pertanyaan yang sama berulang-ulang di WhatsApp.',
+    clientName:'Tim AFSS', clientRole:'Demo Project — Koperasi Emas Kimberli',
+    image:'/portofolio/landing-page/koperasi-emas-kimberli/mockup/hero.png',
+    images:['/portofolio/landing-page/koperasi-emas-kimberli/mockup/hero.png','/portofolio/landing-page/koperasi-emas-kimberli/mockup/simulasi.png','/portofolio/landing-page/koperasi-emas-kimberli/mockup/mobile.png'],
+    imageCaptions:['Beranda — harga emas live, simulasi cicilan, dan ringkasan layanan dalam satu layar','Halaman Harga Emas — grafik 30 hari, simulasi cicilan & buyback dengan estimasi hasil','Tampilan Mobile — akses harga emas dan simulasi investasi langsung dari HP'],
+    benefits:[
+      { icon:'fa-solid fa-coins', title:'Harga emas selalu update', desc:'Anggota lihat harga beli/buyback hari ini dan grafik 30 hari tanpa perlu tanya admin — kepercayaan naik karena transparan.' },
+      { icon:'fa-solid fa-calculator', title:'Simulasi sebelum daftar', desc:'Calon anggota bisa hitung sendiri cicilan & estimasi hasil sebelum mendaftar — mengurangi keraguan dan mempercepat keputusan.' },
+      { icon:'fa-solid fa-users-gear', title:'Operasional admin lebih ringan', desc:'Dashboard admin & master mengelola anggota, transaksi, dan SHU tahunan tanpa rekap manual di Excel.' },
+      { icon:'fa-solid fa-shield-halved', title:'Kepercayaan & legalitas terlihat', desc:'Status terdaftar Kementerian Koperasi & UKM RI dan informasi keamanan ditampilkan jelas di landing page — penting untuk produk finansial.' },
+    ],
+  },
 ]
 
 // Sparkline presets (viewBox 0 0 100 36)
