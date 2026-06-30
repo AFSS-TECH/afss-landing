@@ -6,6 +6,7 @@ import {
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import { Head } from 'vite-react-ssg'
 import { Icon } from './Icon.jsx'
+import { ProductFinder } from './ProductFinder.jsx'
 import {
   BRAND, products, workflow as steps, stats,
   waLink, clients, techStack, pricing, faqs,
@@ -731,6 +732,7 @@ export function Layout() {
       </main>
       <Footer />
       <SmartWA reduce={reduce} />
+      <ProductFinder />
     </>
   )
 }
