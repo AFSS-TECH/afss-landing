@@ -1010,6 +1010,13 @@ export function Contact() {
 /* ══════════════════════════════════════════════════ PORTFOLIO (/portofolio) */
 /* ── Portfolio card mockup visual ── */
 function PortoMock({ p }) {
+  if (p.image) {
+    return (
+      <div className="porto-mock" style={{ background: `linear-gradient(135deg, ${p.c}, ${p.c2})` }}>
+        <img src={p.image} alt={p.title} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
+      </div>
+    )
+  }
   return (
     <div className="porto-mock" style={{ background: `linear-gradient(135deg, ${p.c}, ${p.c2})` }}>
       <div className="porto-mock-inner">
@@ -1216,7 +1223,9 @@ export function PortfolioDetail() {
                 <div className="pd-browser-url">afss.tech · {p.title.toLowerCase()}</div>
               </div>
               <div className="pd-browser-body">
-                {p.kind === 'dash' ? (
+                {p.image ? (
+                  <img src={p.image} alt={p.title} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
+                ) : p.kind === 'dash' ? (
                   <div className="pd-screen-dash">
                     <div className="pd-dash-side"><span/><span className="on"/><span/><span/><span/></div>
                     <div className="pd-dash-main">
@@ -1239,8 +1248,14 @@ export function PortfolioDetail() {
             {/* Phone mockup */}
             <div className="pd-phone">
               <div className="pd-phone-screen">
-                <div className="pd-phone-header" style={{ background: `linear-gradient(135deg,${p.c},${p.c2})` }}/>
-                <div className="pd-phone-body"><div/><div/><div/><div/></div>
+                {p.images?.[2] ? (
+                  <img src={p.images[2]} alt={`${p.title} mobile`} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                ) : (
+                  <>
+                    <div className="pd-phone-header" style={{ background: `linear-gradient(135deg,${p.c},${p.c2})` }}/>
+                    <div className="pd-phone-body"><div/><div/><div/><div/></div>
+                  </>
+                )}
               </div>
             </div>
           </div>
