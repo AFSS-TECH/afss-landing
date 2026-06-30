@@ -1236,7 +1236,7 @@ export function PortfolioDetail() {
           <div className="container">
             <div className="pd-gallery">
               {p.images.map((src, i) => (
-                <Reveal key={src} className={`pd-gallery-item${i === 0 ? ' main' : ''}`} style={{ transitionDelay: `${i*60}ms` }}>
+                <Reveal key={src} className={`pd-gallery-item${i === 0 ? ' main' : ''}${p.imagePortrait?.[i] ? ' portrait' : ''}`} style={{ transitionDelay: `${i*60}ms` }}>
                   <ZoomImage className="pd-gallery-frame" src={src} alt={p.imageCaptions?.[i] || p.title} />
                   {p.imageCaptions?.[i] && <p className="pd-gallery-cap">{p.imageCaptions[i]}</p>}
                 </Reveal>

@@ -900,12 +900,14 @@ footer { background: var(--ink); color: #AAB6C4; padding: 72px 28px 32px; }
 
 /* Screenshot gallery (real product images) */
 .pd-gallery-wrap { background: var(--paper-2); padding: 32px 0; border-bottom: 1px solid var(--line); }
-.pd-gallery { display: grid; grid-template-columns: 1.4fr 1fr; grid-template-rows: auto auto; gap: 16px; max-width: 980px; margin: 0 auto; }
-.pd-gallery-item.main { grid-row: 1 / 3; }
+.pd-gallery { display: grid; grid-template-columns: 1.3fr 1fr .72fr; grid-template-rows: auto auto; gap: 16px; max-width: 1080px; margin: 0 auto; }
+.pd-gallery-item.main { grid-row: 1 / 3; grid-column: 1; }
+.pd-gallery-item.portrait { grid-row: 1 / 3; grid-column: 3; }
 .pd-gallery-frame { background: #fff; border-radius: 12px; box-shadow: var(--shadow-lg); border: 1px solid var(--line); overflow: hidden; aspect-ratio: 16/10; cursor: zoom-in; }
 .pd-gallery-item.main .pd-gallery-frame { aspect-ratio: 4/3; }
-.pd-gallery-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; transform: scale(1); transition: transform .25s ease-out; will-change: transform; }
-.pd-gallery-frame:hover img { transform: scale(2.2); }
+.pd-gallery-item.portrait .pd-gallery-frame { aspect-ratio: 9/17; }
+.pd-gallery-frame img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; transform: scale(1); transition: transform .25s ease-out; will-change: transform; }
+.pd-gallery-frame:hover img { transform: scale(1.8); }
 .pd-gallery-cap { margin-top: 8px; font-size: .8rem; color: var(--muted); line-height: 1.5; }
 
 /* Benefit analysis cards */
@@ -949,7 +951,8 @@ footer { background: var(--ink); color: #AAB6C4; padding: 72px 28px 32px; }
   .pd-stats { gap: 16px; }
   .pd-stat-div { display: none; }
   .pd-gallery { grid-template-columns: 1fr; grid-template-rows: auto; }
-  .pd-gallery-item.main { grid-row: auto; }
+  .pd-gallery-item.main, .pd-gallery-item.portrait { grid-row: auto; grid-column: auto; }
+  .pd-gallery-item.portrait .pd-gallery-frame { aspect-ratio: 9/16; max-width: 280px; margin: 0 auto; }
   .pd-benefits { grid-template-columns: 1fr; }
 }
 

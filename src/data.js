@@ -210,8 +210,9 @@ export const portfolioProjects = [
     review:'Anggota sekarang bisa cek harga emas dan simulasi cicilan sendiri kapan saja — tim kami tidak perlu lagi jawab pertanyaan yang sama berulang-ulang di WhatsApp.',
     clientName:'Tim AFSS', clientRole:'Demo Project — Koperasi Emas Kimberli',
     image:'/portofolio/landing-page/koperasi-emas-kimberli/mockup/hero.png',
-    images:['/portofolio/landing-page/koperasi-emas-kimberli/mockup/hero.png','/portofolio/landing-page/koperasi-emas-kimberli/mockup/simulasi.png','/portofolio/landing-page/koperasi-emas-kimberli/mockup/mobile.png'],
-    imageCaptions:['Beranda — harga emas live, simulasi cicilan, dan ringkasan layanan dalam satu layar','Halaman Harga Emas — grafik 30 hari, simulasi cicilan & buyback dengan estimasi hasil','Tampilan Mobile — akses harga emas dan simulasi investasi langsung dari HP'],
+    images:['/portofolio/landing-page/koperasi-emas-kimberli/mockup/hero.png','/portofolio/landing-page/koperasi-emas-kimberli/mockup/harga-emas.png','/portofolio/landing-page/koperasi-emas-kimberli/mockup/simulasi.png','/portofolio/landing-page/koperasi-emas-kimberli/mockup/mobile.png'],
+    imageCaptions:['Beranda — harga emas live, simulasi cicilan, dan ringkasan layanan dalam satu layar','Harga Emas Hari Ini — perbandingan harga & produk simpanan terbaru','Halaman Harga Emas — grafik 30 hari, simulasi cicilan & buyback dengan estimasi hasil','Tampilan Mobile — akses harga emas dan simulasi investasi langsung dari HP'],
+    imagePortrait:[false,false,false,true],
     benefits:[
       { icon:'fa-solid fa-coins', title:'Harga emas selalu update', desc:'Anggota lihat harga beli/buyback hari ini dan grafik 30 hari tanpa perlu tanya admin — kepercayaan naik karena transparan.' },
       { icon:'fa-solid fa-calculator', title:'Simulasi sebelum daftar', desc:'Calon anggota bisa hitung sendiri cicilan & estimasi hasil sebelum mendaftar — mengurangi keraguan dan mempercepat keputusan.' },
