@@ -10,16 +10,18 @@ import { SITE_URL, formatDateId } from './site.js'
 import { postsMeta } from './blog-meta.js'
 import { incrementBlogView, fetchAllBlogViews } from './lib/supabase.js'
 
-/* ── Relative-ish "terakhir dibuka" formatter ── */
+/* ── Format penuh: dd/mmm/yyyy HH:mm:ss ── */
+const MONTHS_ID = ['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des']
 function formatLastViewed(iso) {
   if (!iso) return null
   const d = new Date(iso)
-  const diffMin = Math.round((Date.now() - d.getTime()) / 60000)
-  if (diffMin < 1) return 'baru saja'
-  if (diffMin < 60) return `${diffMin} menit lalu`
-  const diffH = Math.round(diffMin / 60)
-  if (diffH < 24) return `${diffH} jam lalu`
-  return formatDateId(iso)
+  const dd = String(d.getDate()).padStart(2, '0')
+  const mmm = MONTHS_ID[d.getMonth()]
+  const yyyy = d.getFullYear()
+  const hh = String(d.getHours()).padStart(2, '0')
+  const mi = String(d.getMinutes()).padStart(2, '0')
+  const ss = String(d.getSeconds()).padStart(2, '0')
+  return `${dd}/${mmm}/${yyyy} ${hh}:${mi}:${ss}`
 }
 
 const fadeUp = {
@@ -224,12 +226,17 @@ export function BlogIndex() {
                         </div>
                         <h2 className="blog-card-title">{p.title}</h2>
                         <p className="blog-card-excerpt">{p.excerpt}</p>
-                        {views.has(p.slug) && (
-                          <div className="blog-view-stat">
-                            <Icon icon="fa-solid fa-eye" /> {views.get(p.slug).view_count.toLocaleString('id-ID')}x dibuka
-                            {views.get(p.slug).last_viewed_at && <span> · terakhir {formatLastViewed(views.get(p.slug).last_viewed_at)}</span>}
-                          </div>
-                        )}
+                        {(() => {
+                          const vs = views.get(p.slug)
+                          const count = vs?.view_count ?? 0
+                          const lastIso = vs?.last_viewed_at || p.date
+                          return (
+                            <div className="blog-view-stat">
+                              <Icon icon="fa-solid fa-eye" /> {count.toLocaleString('id-ID')}x dibuka
+                              <span> · {count > 0 ? 'terakhir' : 'terbit'} {formatLastViewed(lastIso)}</span>
+                            </div>
+                          )
+                        })()}
                         <span className="blog-readmore">Baca selengkapnya <Icon icon="fa-solid fa-arrow-right" /></span>
                       </div>
                     </Link>
