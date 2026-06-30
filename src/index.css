@@ -902,9 +902,10 @@ footer { background: var(--ink); color: #AAB6C4; padding: 72px 28px 32px; }
 .pd-gallery-wrap { background: var(--paper-2); padding: 32px 0; border-bottom: 1px solid var(--line); }
 .pd-gallery { display: grid; grid-template-columns: 1.4fr 1fr; grid-template-rows: auto auto; gap: 16px; max-width: 980px; margin: 0 auto; }
 .pd-gallery-item.main { grid-row: 1 / 3; }
-.pd-gallery-frame { background: #fff; border-radius: 12px; box-shadow: var(--shadow-lg); border: 1px solid var(--line); overflow: hidden; aspect-ratio: 16/10; }
+.pd-gallery-frame { background: #fff; border-radius: 12px; box-shadow: var(--shadow-lg); border: 1px solid var(--line); overflow: hidden; aspect-ratio: 16/10; cursor: zoom-in; }
 .pd-gallery-item.main .pd-gallery-frame { aspect-ratio: 4/3; }
-.pd-gallery-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.pd-gallery-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; transition: transform .45s cubic-bezier(.2,.8,.2,1); }
+.pd-gallery-frame:hover img { transform: scale(1.15); }
 .pd-gallery-cap { margin-top: 8px; font-size: .8rem; color: var(--muted); line-height: 1.5; }
 
 /* Benefit analysis cards */
