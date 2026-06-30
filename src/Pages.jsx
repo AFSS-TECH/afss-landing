@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import { Head } from 'vite-react-ssg'
 import { Icon } from './Icon.jsx'
 import emailjs from '@emailjs/browser'
-import { BRAND, products, why, showcase, stats, waLink, getProductBySlug, pricing, pricingBundles, faqs, portfolioProjects } from './data.js'
+import { BRAND, products, why, stats, waLink, getProductBySlug, pricing, pricingBundles, faqs, portfolioProjects } from './data.js'
 
 const SITE_URL = 'https://afss.tech'
 

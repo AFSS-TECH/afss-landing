@@ -7,9 +7,8 @@ import { Link, Outlet, useLocation } from 'react-router-dom'
 import { Head } from 'vite-react-ssg'
 import { Icon } from './Icon.jsx'
 import {
-  BRAND, products, workflow as steps, showcase, charts, reviews, stats,
-  growthSeries, kpis, satisfaction, waLink, clients, why, techStack, pricing, faqs,
-  testimonials,
+  BRAND, products, workflow as steps, stats,
+  waLink, clients, techStack, pricing, faqs,
 } from './data.js'
 import { formatDateId } from './site.js'
 import { postsMeta } from './blog-meta.js'
@@ -65,10 +64,6 @@ function Magnetic({ href, className, children, ...rest }) {
   )
 }
 
-/* ── Censor reviewer name ── */
-const censor = (full) =>
-  full.split(' ').map((w) => (w.length <= 1 ? w : w[0] + '*'.repeat(w.length - 1))).join(' ')
-
 /* ── Scroll to top on every route change ── */
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -115,90 +110,6 @@ const Logo = ({ footer }) => footer
   )
   : <img src="/logo.png" alt="AFSS" className="logo-img" width="120" height="40" />
 
-/* ════════════════════════════════════════════════ ANIMATED AREA CHART (the motion graph) */
-function smoothPath(pts) {
-  if (pts.length < 2) return ''
-  const t = 0.16
-  const d = [`M ${pts[0].x.toFixed(1)},${pts[0].y.toFixed(1)}`]
-  for (let i = 0; i < pts.length - 1; i++) {
-    const p0 = pts[i - 1] || pts[i]
-    const p1 = pts[i]
-    const p2 = pts[i + 1]
-    const p3 = pts[i + 2] || p2
-    const c1x = p1.x + (p2.x - p0.x) * t
-    const c1y = p1.y + (p2.y - p0.y) * t
-    const c2x = p2.x - (p3.x - p1.x) * t
-    const c2y = p2.y - (p3.y - p1.y) * t
-    d.push(`C ${c1x.toFixed(1)},${c1y.toFixed(1)} ${c2x.toFixed(1)},${c2y.toFixed(1)} ${p2.x.toFixed(1)},${p2.y.toFixed(1)}`)
-  }
-  return d.join(' ')
-}
-
-function AreaChart({ id, data, big = false }) {
-  const reduce = useReducedMotion()
-  const W = big ? 760 : 440
-  const H = big ? 300 : 158
-  const padX = 8, padTop = big ? 28 : 16, padBot = big ? 10 : 8
-  const plotW = W - padX * 2
-  const plotH = H - padTop - padBot
-  const baseY = H - padBot
-  const pts = data.map((p, i) => ({
-    x: padX + (i / (data.length - 1)) * plotW,
-    y: padTop + (1 - p.v / 100) * plotH,
-  }))
-  const line = smoothPath(pts)
-  const area = `${line} L ${pts[pts.length - 1].x.toFixed(1)},${baseY} L ${pts[0].x.toFixed(1)},${baseY} Z`
-  const last = pts[pts.length - 1]
-  const grid = big ? [0, 25, 50, 75, 100] : [0, 50, 100]
-  const drawT = reduce ? 0 : (big ? 1.9 : 1.4)
-
-  return (
-    <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Grafik pertumbuhan klien">
-      <defs>
-        <linearGradient id={`${id}-fill`} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="var(--accent)" stopOpacity={big ? 0.18 : 0.16} />
-          <stop offset="100%" stopColor="var(--accent)" stopOpacity="0" />
-        </linearGradient>
-        <linearGradient id={`${id}-stroke`} x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor="var(--accent)" />
-          <stop offset="100%" stopColor="var(--accent-2)" />
-        </linearGradient>
-      </defs>
-
-      {/* gridlines */}
-      {grid.map((g, i) => {
-        const gy = padTop + (1 - g / 100) * plotH
-        return (
-          <motion.line key={g} x1={padX} y1={gy} x2={W - padX} y2={gy}
-            stroke="var(--line)" strokeWidth="1" strokeDasharray="2 5"
-            initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: reduce ? 0 : i * 0.08 }} />
-        )
-      })}
-
-      {/* area fill rises in under the line */}
-      <motion.path d={area} fill={`url(#${id}-fill)`}
-        initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-        transition={{ duration: reduce ? 0 : 1, delay: reduce ? 0 : 0.35, ease: 'easeOut' }} />
-
-      {/* line draws itself */}
-      <motion.path d={line} fill="none" stroke={`url(#${id}-stroke)`}
-        strokeWidth={big ? 3 : 2.6} strokeLinecap="round" strokeLinejoin="round"
-        initial={{ pathLength: reduce ? 1 : 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }}
-        transition={{ duration: drawT, ease: [0.4, 0, 0.1, 1] }} />
-
-      {/* end marker appears once the line arrives */}
-      <motion.g
-        initial={{ opacity: reduce ? 1 : 0, scale: reduce ? 1 : 0.4 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
-        transition={{ duration: 0.45, delay: drawT * 0.92, ease: [0.22, 1, 0.36, 1] }}
-        style={{ transformOrigin: `${last.x}px ${last.y}px` }}>
-        {big && <line x1={last.x} y1={last.y + 6} x2={last.x} y2={baseY} stroke="var(--accent)" strokeWidth="1" strokeDasharray="3 4" opacity="0.4" />}
-        <circle cx={last.x} cy={last.y} r={big ? 9 : 7} fill="var(--accent)" opacity="0.16" />
-        <circle cx={last.x} cy={last.y} r={big ? 4.5 : 3.6} fill="var(--accent)" stroke="#fff" strokeWidth="2" />
-      </motion.g>
-    </svg>
-  )
-}
 
 /* ════════════════════════════════════════════════ NAV */
 export function Nav() {
@@ -246,37 +157,6 @@ export function Nav() {
   )
 }
 
-/* ── Reusable mockup (portfolio) ── */
-export function Mock({ item }) {
-  return (
-    <div className="mock" style={{ '--c': item.c, '--c2': item.c2 }}>
-      <div className="mock-top"><i style={{ background: '#FF6058' }} /><i style={{ background: '#FFBD2E' }} /><i style={{ background: '#28C840' }} /></div>
-      <div className="mock-body">
-        {item.kind === 'dash' ? (
-          <>
-            <div className="m-side"><span className="act" /><span /><span /><span /><span /></div>
-            <div className="m-main">
-              <div className="m-bar" />
-              <div className="m-stats"><div className="m-chip" /><div className="m-chip" /><div className="m-chip" /></div>
-              <div className="m-chart">
-                <svg viewBox="0 0 100 36" preserveAspectRatio="none">
-                  <polyline points={charts[item.chart]} fill="none" stroke={item.c} strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-              <div className="m-rows"><div className="m-row" /><div className="m-row" /><div className="m-row" /></div>
-            </div>
-          </>
-        ) : (
-          <div className="l-hero">
-            <div className="l-nav"><div className="l-logo" /><div className="l-dot" /><div className="l-dot" /><div className="l-dot" /></div>
-            <div className="l-h1" /><div className="l-h2" /><div className="l-btn" /><div className="l-img" />
-          </div>
-        )}
-        <div className="m-phone"><div className="m-screen"><div className="m-ph-head" /><div className="m-ph-body"><div className="m-ph-card" /><div className="m-ph-card" /><div className="m-ph-card" /><div className="m-ph-card" /></div></div></div>
-      </div>
-    </div>
-  )
-}
 
 /* ════════════════════════════════════════════════ HERO */
 function Hero({ reduce }) {
@@ -301,7 +181,6 @@ function Hero({ reduce }) {
             <Link to="/portofolio" className="btn btn-ghost btn-lg">Lihat Portofolio <Icon icon="fa-solid fa-arrow-right" /></Link>
           </motion.div>
           <motion.div className="hero-trust" variants={fadeUp}>
-            <div className="avatars"><span>50+</span></div>
             <span>Cocok untuk <b>UMKM, startup, klinik, sekolah, retail</b> & perusahaan yang ingin naik level digital.</span>
           </motion.div>
         </motion.div>
@@ -333,13 +212,11 @@ function Hero({ reduce }) {
             </div>
           </div>
 
-          {/* Dark revenue card */}
+          {/* Dark dashboard card (generic mockup, no fabricated figures) */}
           <motion.div className="hero-revenue" {...floatA}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
-              <span className="rev-label">Revenue Bulanan</span>
-              <span className="rev-tag">+38%</span>
+              <span className="rev-label">Dashboard Bisnis Real-time</span>
             </div>
-            <div className="rev-amount">Rp 128,4 Jt</div>
             <div className="rev-bars">
               {[40, 58, 46, 74, 64, 92].map((h, i) => (
                 <div key={i} className={`rev-bar${h >= 70 ? ' hi' : ''}`} style={{ height: `${h}%` }} />
@@ -347,14 +224,14 @@ function Hero({ reduce }) {
             </div>
           </motion.div>
 
-          {/* Float cards */}
+          {/* Float cards — genuine policy guarantees, not performance claims */}
           <motion.div className="float-card fc-1" animate={reduce ? {} : { y: [0, 9, 0] }} transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}>
-            <div className="fc-ico" style={{ background: 'var(--wa)' }}><Icon icon="fa-solid fa-arrow-trend-up" /></div>
-            <div><div className="fc-big">+218%</div><div className="fc-sm">Rata-rata pertumbuhan klien</div></div>
+            <div className="fc-ico" style={{ background: 'var(--wa)' }}><Icon icon="fa-solid fa-code" /></div>
+            <div><div className="fc-big">100%</div><div className="fc-sm">Kode milik klien</div></div>
           </motion.div>
           <motion.div className="float-card" style={{ bottom: 90, left: -10, zIndex: 3 }} animate={reduce ? {} : { y: [0, -7, 0] }} transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 1.2 }}>
-            <div className="fc-ico" style={{ background: 'var(--blue)' }}><Icon icon="fa-solid fa-circle-check" /></div>
-            <div><div className="fc-big">100+</div><div className="fc-sm">Proyek Selesai</div></div>
+            <div className="fc-ico" style={{ background: 'var(--blue)' }}><Icon icon="fa-solid fa-shield-halved" /></div>
+            <div><div className="fc-big">30–90 Hari</div><div className="fc-sm">Garansi bug gratis</div></div>
           </motion.div>
         </motion.div>
       </div>
@@ -463,68 +340,6 @@ function Services() {
   )
 }
 
-/* ════════════════════════════════════════════════ IMPACT / MOTION GRAPH */
-function Impact() {
-  return (
-    <section className="impact" id="impact">
-      <div className="container">
-        <Reveal className="sec-header center">
-          <div className="eyebrow"><Icon icon="fa-solid fa-chart-line" /> Dampak</div>
-          <h2 className="sec-title">Hasil yang <span className="ital">terukur</span>, bukan sekadar janji</h2>
-          <p className="sec-sub">Setiap sistem yang kami bangun dirancang untuk menggerakkan angka yang penting bagi bisnis Anda.</p>
-        </Reveal>
-        <div className="impact-grid">
-          <Reveal className="graph-card spot" onMouseMove={onSpot}>
-            <div className="graph-head">
-              <h3>Pertumbuhan rata-rata klien</h3>
-              <div className="legend">
-                <span><i style={{ background: 'var(--accent)' }} /> Indeks konversi</span>
-              </div>
-            </div>
-            <div className="graph-figure">
-              <span className="num"><Counter to={218} prefix="+" suffix="%" duration={1.9} /></span>
-              <span className="pill"><Icon icon="fa-solid fa-arrow-up" /> 12 bulan</span>
-            </div>
-            <div className="graph-canvas"><AreaChart id="impact" data={growthSeries} big /></div>
-            <div className="gx-labels">{growthSeries.map((p) => <span key={p.m}>{p.m}</span>)}</div>
-          </Reveal>
-
-          <div className="kpi-col">
-            {kpis.map((k) => (
-              <Reveal key={k.label} className="kpi-card">
-                <div className="kpi-top">
-                  <div className="kpi-num"><Counter to={k.n} prefix={k.prefix} suffix={k.suffix} /></div>
-                  <div className="kpi-label">{k.label}</div>
-                </div>
-                <div className="kpi-track">
-                  <motion.div className="kpi-fill"
-                    initial={{ scaleX: 0 }} whileInView={{ scaleX: k.bar / 100 }} viewport={{ once: true }}
-                    transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }} />
-                </div>
-              </Reveal>
-            ))}
-            <Reveal className="gauge-card">
-              <div className="gauge">
-                <svg viewBox="0 0 100 100">
-                  <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255,255,255,.12)" strokeWidth="8" />
-                  <motion.circle cx="50" cy="50" r="42" fill="none" stroke="var(--accent-2)" strokeWidth="8" strokeLinecap="round"
-                    initial={{ pathLength: 0 }} whileInView={{ pathLength: satisfaction / 100 }} viewport={{ once: true }}
-                    transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1], delay: 0.2 }} />
-                </svg>
-                <div className="gauge-val"><Counter to={satisfaction} suffix="%" /></div>
-              </div>
-              <div className="gauge-txt">
-                <div className="gt-t">Kepuasan klien</div>
-                <div className="gt-d">Diukur dari survei pasca-launching seluruh proyek yang telah kami selesaikan.</div>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
 /* ════════════════════════════════════════════════ PROCESS — 6 langkah */
 function Process() {
   return (
@@ -547,164 +362,6 @@ function Process() {
         </motion.div>
         <Reveal className="proc-note">💡 <b>Kepercayaan lebih penting dari transaksi</b> — itulah mengapa konsultasi awal selalu gratis.</Reveal>
       </div>
-    </section>
-  )
-}
-
-/* ════════════════════════════════════════════════ PORTFOLIO MODAL */
-function PortfolioModal({ item, onClose }) {
-  useEffect(() => {
-    const esc = (e) => e.key === 'Escape' && onClose()
-    document.addEventListener('keydown', esc)
-    document.body.style.overflow = 'hidden'
-    return () => { document.removeEventListener('keydown', esc); document.body.style.overflow = '' }
-  }, [onClose])
-
-  const waMsg = encodeURIComponent(`Halo AFSS, saya tertarik diskusi proyek serupa dengan "${item.title}". Boleh konsultasi?`)
-
-  return (
-    <AnimatePresence>
-      <motion.div className="pf-overlay" onClick={onClose}
-        initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}>
-        <motion.div className="pf-modal" onClick={(e) => e.stopPropagation()}
-          initial={{ opacity: 0, y: 40, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 20, scale: 0.98 }}
-          transition={{ type: 'spring', stiffness: 300, damping: 28 }}>
-          {/* Header banner */}
-          <div className="pf-banner" style={{ '--c': item.c, '--c2': item.c2 }}>
-            <div className="pf-banner-mock"><Mock item={item} /></div>
-            <button className="pf-close" onClick={onClose} aria-label="Tutup"><Icon icon="fa-solid fa-xmark" /></button>
-          </div>
-
-          {/* Body */}
-          <div className="pf-body">
-            <div className="pf-meta">
-              <span className="pf-cat">{item.cat}</span>
-              <span className="pf-budget"><Icon icon="fa-solid fa-tag" /> {item.budget}</span>
-            </div>
-            <h3 className="pf-title">{item.title}</h3>
-
-            {/* Result pill */}
-            <div className="pf-result">
-              <Icon icon="fa-solid fa-arrow-trend-up" />
-              <span>{item.price}</span>
-              <span className="pf-result-detail">— {item.result}</span>
-            </div>
-
-            {/* Problem & Solution */}
-            <div className="pf-two-col">
-              <div className="pf-block problem">
-                <div className="pf-block-label"><Icon icon="fa-solid fa-circle-exclamation" /> Masalah Klien</div>
-                <p>{item.problem}</p>
-              </div>
-              <div className="pf-block solution">
-                <div className="pf-block-label"><Icon icon="fa-solid fa-circle-check" /> Solusi AFSS</div>
-                <p>{item.solution}</p>
-              </div>
-            </div>
-
-            {/* Features */}
-            <div className="pf-features-label">Fitur yang Dibangun</div>
-            <div className="pf-features">
-              {item.features.map((f) => (
-                <span key={f} className="pf-feat"><Icon icon="fa-solid fa-check" /> {f}</span>
-              ))}
-            </div>
-
-            {/* Tech + CTAs */}
-            <div className="pf-footer">
-              <div className="pf-tech">
-                <span className="pf-tech-label">Teknologi</span>
-                <span className="pf-tech-val">{item.tech}</span>
-              </div>
-              <div className="pf-ctas">
-                <a href={`https://wa.me/628139694307?text=${waMsg}`} target="_blank" rel="noreferrer" className="btn btn-wa">
-                  <Icon icon="fa-brands fa-whatsapp" /> Diskusi Proyek Serupa
-                </a>
-                <Link to="/portofolio" className="btn btn-ghost" onClick={onClose}>
-                  Lihat Semua <Icon icon="fa-solid fa-arrow-right" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
-  )
-}
-
-/* ════════════════════════════════════════════════ SHOWCASE / PORTOFOLIO */
-function Showcase() {
-  const [active, setActive] = useState(null)
-
-  return (
-    <section className="showcase" id="portfolio">
-      <div className="container">
-        <Reveal className="sec-header center">
-          <div className="eyebrow"><Icon icon="fa-solid fa-images" /> Portofolio</div>
-          <h2 className="sec-title">Studi kasus &amp; <span className="ital">hasil nyata</span></h2>
-          <p className="sec-sub">Beragam sistem yang telah kami bangun — lengkap dengan tantangan, solusi, dan dampak terukur yang dirasakan klien.</p>
-        </Reveal>
-        <motion.div className="show-grid" variants={container} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-30px' }}>
-          {showcase.map((item) => (
-            <motion.div key={item.n} className="show-card spot" style={{ '--c': item.c, '--c2': item.c2 }} variants={fadeUp} whileHover={{ y: -8 }} transition={{ type: 'spring', stiffness: 260, damping: 22 }} onMouseMove={onSpot}>
-              <div className="show-head"><div className="show-num">{item.n}</div><div className="show-title">{item.title}</div></div>
-              <Mock item={item} />
-              <div className="show-tags">{item.tags.map((t) => <span key={t}>{t}</span>)}</div>
-              <div className="show-card-foot">
-                <span className="show-price"><Icon icon="fa-solid fa-arrow-trend-up" /> {item.price}</span>
-                <button className="show-detail-btn" onClick={() => setActive(item)}>
-                  Lihat Detail <Icon icon="fa-solid fa-arrow-right" />
-                </button>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-        <div style={{ textAlign: 'center', marginTop: 40 }}>
-          <Link to="/portofolio" className="btn btn-ghost btn-lg">Lihat semua portofolio <Icon icon="fa-solid fa-arrow-right" /></Link>
-        </div>
-      </div>
-      {active && <PortfolioModal item={active} onClose={() => setActive(null)} />}
-    </section>
-  )
-}
-
-/* ════════════════════════════════════════════════ REVIEWS / TESTIMONI */
-function ReviewCard({ r }) {
-  return (
-    <div className="rev-card">
-      <div className="rev-stars">{[...Array(5)].map((_, i) => <Icon key={i} icon="fa-solid fa-star" />)}</div>
-      <p className="rev-text">“{r.text}”</p>
-      <div className="rev-author">
-        <div className="av" style={{ background: r.grad }}>{r.initials}</div>
-        <div>
-          <div className="av-name">{censor(r.name)}<Icon icon="fa-solid fa-circle-check verified" title="Klien terverifikasi" /></div>
-          <div className="av-co">{r.company}</div>
-        </div>
-      </div>
-    </div>
-  )
-}
-function Reviews({ reduce }) {
-  const rowA = reviews.slice(0, 5)
-  const rowB = reviews.slice(5)
-  const Row = ({ items, dir }) => (
-    <div className="marquee">
-      <motion.div className="marquee-track" animate={reduce ? {} : { x: dir > 0 ? ['-50%', '0%'] : ['0%', '-50%'] }} transition={{ duration: 50, ease: 'linear', repeat: Infinity }}>
-        {[...items, ...items].map((r, i) => <ReviewCard key={i} r={r} />)}
-      </motion.div>
-    </div>
-  )
-  return (
-    <section className="reviews" id="reviews">
-      <div className="container">
-        <Reveal className="sec-header center">
-          <div className="eyebrow"><Icon icon="fa-solid fa-heart" /> Testimoni</div>
-          <h2 className="sec-title">Apa kata <span className="ital">klien</span> kami?</h2>
-          <p className="sec-sub">Kepuasan klien adalah prioritas utama kami. Demi privasi, nama klien ditampilkan secara tersamar.</p>
-        </Reveal>
-      </div>
-      <Row items={rowA} dir={-1} />
-      <Row items={rowB} dir={1} />
     </section>
   )
 }
@@ -744,37 +401,6 @@ function AddOns() {
           Harga add-on adalah estimasi. Kombinasi dengan proyek utama bisa mendapat <b>harga lebih baik</b>.{' '}
           <a href={waLink(`Halo ${BRAND.short}, saya ingin tanya tentang add-on layanan AFSS.`)} target="_blank" rel="noreferrer" className="accent-link">Tanya via WhatsApp →</a>
         </Reveal>
-      </div>
-    </section>
-  )
-}
-
-/* ════════════════════════════════════════════════ TESTIMONIALS */
-function Testimonials() {
-  return (
-    <section className="testi-sec">
-      <div className="container">
-        <Reveal className="sec-header center">
-          <div className="eyebrow green"><Icon icon="fa-solid fa-heart" /> Testimoni</div>
-          <h2 className="sec-title">Apa kata klien <span className="ital">kami</span>?</h2>
-          <p className="sec-sub">Kepuasan klien adalah prioritas utama kami. Demi privasi, nama klien hanya ditampilkan sebagian.</p>
-        </Reveal>
-        <motion.div className="testi-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
-          {testimonials.map((t, i) => (
-            <motion.div key={i} className="testi-card spot" variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }} onMouseMove={onSpot}>
-              <div className="testi-stars">{[...Array(t.star)].map((_, j) => <Icon key={j} icon="fa-solid fa-star" />)}</div>
-              <p className="testi-quote">"{t.quote}"</p>
-              <div className="testi-footer">
-                <div className="testi-avatar" style={{ background: t.grad }}>{t.initial}</div>
-                <div>
-                  <div className="testi-name">{t.name.split(' ')[0]} {t.name.split(' ').slice(1).map(w => w[0] + '*'.repeat(w.length - 1)).join(' ')}</div>
-                  <div className="testi-role">{t.role} · {t.company}</div>
-                </div>
-                <span className="testi-tag"><Icon icon="fa-solid fa-arrow-trend-up" /> {t.result}</span>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
     </section>
   )
@@ -1136,10 +762,7 @@ export function Home() {
       <Services />
       <AddOns />
       <Estimator />
-      <Impact />
       <Process />
-      <Showcase />
-      <Testimonials />
       <TechStack />
       <BlogTeaser />
       <CtaBand />

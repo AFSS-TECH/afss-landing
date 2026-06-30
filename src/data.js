@@ -22,10 +22,8 @@ export const WA = '628139694307'
 export const waLink = (msg) =>
   `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`
 
-// ── Hero trust stats ───────────────────────────────────────
+// ── Hero trust stats — kebijakan/jaminan nyata, bukan klaim jumlah klien/proyek ──
 export const stats = [
-  { n: 100, suffix: '+', label: 'Proyek Selesai' },
-  { n: 50,  suffix: '+', label: 'Perusahaan Dipercaya' },
   { n: 100, suffix: '%', label: 'Kode Milik Klien' },
   { n: 24,  suffix: '/7', label: 'Maintenance & Support' },
 ]
@@ -115,76 +113,6 @@ export const workflow = [
   { step: '06', icon: 'fa-solid fa-headset',      title: 'Maintenance',             desc: 'Monitoring, update, dan perbaikan supaya sistem terus berjalan optimal.' },
 ]
 
-// ── Portofolio / studi kasus (masalah → solusi → hasil) ────
-export const showcase = [
-  {
-    n: 1, title: 'Toko Batik Sari Melati', cat: 'Landing Page · UMKM',
-    price: 'Konversi +340%', result: '0 → 52 leads/bulan dalam 6 minggu',
-    c: '#10C7B2', c2: '#2563FF', kind: 'land', chart: 0,
-    tags: ['Next.js', 'Tailwind CSS', 'SEO', 'WhatsApp API'],
-    problem: 'Pemilik hanya mengandalkan foto di status WhatsApp. Tidak ada tampilan profesional, sulit ditemukan di Google, dan tidak bisa mengukur berapa yang menghubungi setelah melihat produk.',
-    solution: 'Landing page 1 halaman yang cepat (<1.8 detik), dengan galeri produk, testimoni pelanggan, dan CTA WhatsApp teroptimasi. SEO lokal Medan diatur sejak baris kode pertama.',
-    features: ['Galeri produk dengan filter kategori', 'CTA WhatsApp dengan pesan pre-filled', 'SEO lokal + Google Business integration', 'Google Analytics & heatmap tracking'],
-    tech: 'Next.js 14, Tailwind CSS, Vercel, GA4',
-    budget: 'Rp 4,5 Jt',
-  },
-  {
-    n: 2, title: 'CV Bangun Prima Kontraktor', cat: 'Company Profile · Konstruksi',
-    price: 'Lead Organik +210%', result: 'Dari 2 → 18 inquiry/bulan via Google',
-    c: '#0E2240', c2: '#2563FF', kind: 'land', chart: 0,
-    tags: ['Next.js', 'SEO Lokal', 'Schema Markup'],
-    problem: 'Website lama dibuat 2018 — lambat, tidak mobile-friendly, dan tidak pernah muncul di Google. Calon klien sulit menemukan perusahaan ini meski sudah cari nama mereknya.',
-    solution: 'Redesign total dengan Core Web Vitals 95+, struktur SEO yang benar, halaman portofolio proyek bergambar, dan schema markup untuk konstruksi lokal Medan.',
-    features: ['Halaman About, Layanan, Portofolio, Kontak', 'Galeri proyek dengan lightbox', 'Schema markup LocalBusiness & Service', 'Contact form + WhatsApp redirect'],
-    tech: 'Next.js 14, Tailwind CSS, Vercel, Schema.org',
-    budget: 'Rp 8 Jt',
-  },
-  {
-    n: 3, title: 'Klinik Sehat Bersama', cat: 'Mobile App + Dashboard · Kesehatan',
-    price: 'Waktu Tunggu -62%', result: 'Rating Google naik dari 3.8 → 4.7 bintang',
-    c: '#1E88A8', c2: '#10C7B2', kind: 'dash', chart: 2,
-    tags: ['React', 'Flutter', 'Node.js', 'PostgreSQL'],
-    problem: 'Pasien mengantri manual dengan kertas nomor — sering ricuh, pasien kabur karena terlalu lama. Rekam medis masih di buku besar, sulit dicari saat darurat.',
-    solution: 'Aplikasi Flutter untuk pasien (ambil nomor antrian dari HP) + dashboard web untuk staff (kelola antrian & rekam medis). Data tersinkronisasi real-time.',
-    features: ['Booking antrian via smartphone', 'Rekam medis digital per pasien', 'Dashboard dokter & staff real-time', 'Notifikasi push saat nomor antrian dipanggil', 'Laporan kunjungan harian/bulanan'],
-    tech: 'Flutter (Android + iOS), React, Node.js, PostgreSQL, Firebase',
-    budget: 'Rp 32 Jt',
-  },
-  {
-    n: 4, title: 'Armada Rental Mitra Jaya', cat: 'Sistem Manajemen · Transportasi',
-    price: 'Double Booking 0%', result: 'Pendapatan +28% dari utilisasi armada lebih baik',
-    c: '#2563FF', c2: '#10C7B2', kind: 'dash', chart: 1,
-    tags: ['React', 'Laravel', 'MySQL', 'Midtrans'],
-    problem: 'Pemesanan via WhatsApp dan telepon sering bentrok. Tidak ada sistem jadwal armada, supir sering tidak tahu order terbarunya, dan laporan pendapatan harus dihitung manual setiap hari.',
-    solution: 'Sistem rental terintegrasi: booking online dengan kalender real-time, manajemen armada & supir, pembayaran DP via payment gateway, dan laporan otomatis setiap hari.',
-    features: ['Booking online + kalender ketersediaan armada', 'Manajemen supir & notifikasi WA otomatis', 'Pembayaran DP via Midtrans', 'Dashboard laporan pendapatan harian', 'Riwayat perjalanan per kendaraan'],
-    tech: 'React, Laravel 10, MySQL, Midtrans, WhatsApp Cloud API',
-    budget: 'Rp 22 Jt',
-  },
-  {
-    n: 5, title: 'Dealer Motor Sejahtera (3 Cabang)', cat: 'Sistem Inventory · Otomotif',
-    price: 'Stok Sinkron 3 Cabang', result: 'Selisih stok & laporan hilang 100%',
-    c: '#0E2240', c2: '#10C7B2', kind: 'dash', chart: 2,
-    tags: ['React', 'Node.js', 'PostgreSQL', 'REST API'],
-    problem: 'Tiga cabang mencatat stok di Excel berbeda. Sering terjadi unit sudah terjual di satu cabang tapi masih ditawarkan di cabang lain. Rekonsiliasi bulanan memakan 2 hari penuh.',
-    solution: 'Sistem manajemen dealer terpusat dengan stok real-time lintas cabang, pencatatan unit masuk-keluar, laporan penjualan per cabang, dan role akses per kepala toko.',
-    features: ['Stok unit real-time 3 cabang', 'SPK (Surat Pesanan Kendaraan) digital', 'Laporan penjualan per salesperson', 'Dashboard eksekutif multi-cabang', 'Export laporan ke Excel / PDF'],
-    tech: 'React, Node.js, PostgreSQL, REST API, Vercel + Railway',
-    budget: 'Rp 27 Jt',
-  },
-  {
-    n: 6, title: 'UD Berkah Sembako Grosir', cat: 'ERP Lite · Perdagangan',
-    price: 'Laporan -88% Lebih Cepat', result: '8 jam/bulan → 45 menit',
-    c: '#10C7B2', c2: '#2563FF', kind: 'dash', chart: 0,
-    tags: ['Next.js', 'Node.js', 'PostgreSQL', 'Prisma'],
-    problem: 'Semua transaksi dicatat di buku dan Excel terpisah. Rekap hutang-piutang supplier dan pelanggan sering salah. Pemilik tidak tahu posisi stok & laba realnya kapan pun.',
-    solution: 'ERP lite: modul pembelian, penjualan, stok, dan hutang-piutang dalam satu sistem. Dashboard laba-rugi sederhana yang bisa diakses kapan saja dari HP pemilik.',
-    features: ['Pencatatan pembelian & penjualan', 'Stok otomatis bertambah/berkurang', 'Manajemen hutang-piutang supplier & pelanggan', 'Laporan laba-rugi & neraca sederhana', 'Akses mobile untuk pemilik'],
-    tech: 'Next.js, Node.js, PostgreSQL, Prisma ORM, Vercel',
-    budget: 'Rp 35 Jt',
-  },
-]
-
 // ── Portfolio projects — contoh karya per kategori ──────────
 export const portfolioProjects = [
   // ERP
@@ -220,13 +148,6 @@ export const portfolioProjects = [
       { icon:'fa-solid fa-shield-halved', title:'Kepercayaan & legalitas terlihat', desc:'Status terdaftar Kementerian Koperasi & UKM RI dan informasi keamanan ditampilkan jelas di landing page — penting untuk produk finansial.' },
     ],
   },
-]
-
-// Sparkline presets (viewBox 0 0 100 36)
-export const charts = [
-  '0,28 12,22 24,26 36,14 48,18 60,8 72,12 84,4 100,9',
-  '0,30 14,18 28,24 42,12 56,20 70,10 84,16 100,6',
-  '0,20 12,24 24,12 36,18 48,8 60,16 72,6 84,12 100,3',
 ]
 
 // ── Teknologi yang kami gunakan (authority + keyword teknis) ──
@@ -394,94 +315,3 @@ export const faqs = [
   { q: 'Teknologi apa yang dipakai?', a: 'Kami memakai stack modern: Next.js, React, TypeScript, Tailwind CSS, Node.js, Flutter, PostgreSQL, dan Laravel — dipilih sesuai kebutuhan proyek agar cepat, aman, dan mudah dikembangkan.' },
 ]
 
-// ── Impact section: animated motion graph ──────────────────
-export const growthSeries = [
-  { m: 'Jan', v: 26 }, { m: 'Feb', v: 33 }, { m: 'Mar', v: 30 }, { m: 'Apr', v: 44 },
-  { m: 'Mei', v: 51 }, { m: 'Jun', v: 47 }, { m: 'Jul', v: 62 }, { m: 'Agu', v: 70 },
-  { m: 'Sep', v: 66 }, { m: 'Okt', v: 81 }, { m: 'Nov', v: 90 }, { m: 'Des', v: 100 },
-]
-
-export const kpis = [
-  { label: 'Rata-rata kenaikan konversi', n: 38, prefix: '+', suffix: '%', bar: 76 },
-  { label: 'Proyek selesai tepat waktu',   n: 98, prefix: '',  suffix: '%', bar: 98 },
-  { label: 'Klien yang kembali lagi',      n: 92, prefix: '',  suffix: '%', bar: 92 },
-]
-
-export const satisfaction = 100
-
-// ── Testimonials (homepage featured — 3 cards) ─────────────
-export const testimonials = [
-  {
-    name: 'Budi Santoso', role: 'Owner', company: 'Batik Nusantara Medan', initial: 'BS',
-    grad: 'linear-gradient(135deg,#2563FF,#10C7B2)',
-    star: 5,
-    quote: 'AFSS benar-benar paham kebutuhan bisnis kami. Landing page mereka meningkatkan penjualan online 340% dalam 6 minggu. Yang bikin kagum, mereka tidak cuma deliver tampilan — mereka kasih saran copy dan struktur CTA yang terbukti convert.',
-    project: 'Landing Page UMKM',
-    result: 'Konversi +340%',
-  },
-  {
-    name: 'Dewi Kusuma', role: 'Direktur Operasional', company: 'CV Nusantara Jaya Abadi', initial: 'DK',
-    grad: 'linear-gradient(135deg,#0E2240,#2563FF)',
-    star: 5,
-    quote: 'Sistem ERP-nya mengintegrasikan seluruh operasional kami yang dulunya manual. Efisiensi laporan bulanan dari 8 jam jadi 45 menit. Tim support juga responsif bahkan setelah proyek selesai — itu yang bikin kami percaya untuk proyek berikutnya.',
-    project: 'ERP Custom Toko Grosir',
-    result: 'Efisiensi +88%',
-  },
-  {
-    name: 'Ahmad Fauzi', role: 'Founder', company: 'KlinikQ App', initial: 'AF',
-    grad: 'linear-gradient(135deg,#10C7B2,#2563FF)',
-    star: 5,
-    quote: 'Dari konsultasi sampai launching, AFSS selalu bantu cari solusi terbaik. Aplikasi mobile klinik kami sekarang dipakai di 3 cabang. Waktu tunggu pasien turun 62% dan rating Google kami naik dari 3.8 jadi 4.7 bintang.',
-    project: 'Mobile App + Dashboard Klinik',
-    result: 'Rating Google 4.7⭐',
-  },
-]
-
-// ── Reviews (Bahasa Indonesia, semua positif). Nama disensor saat render. ──
-export const reviews = [
-  {
-    name: 'Budi Santoso', company: 'Owner, Batik Nusantara UMKM', initials: 'BS',
-    grad: 'linear-gradient(135deg,#15243B,#0E8C86)',
-    text: 'Tim AFSS sangat profesional dan benar-benar memahami kebutuhan bisnis kami. Landing page mereka meningkatkan penjualan online kami hingga 300% dalam 2 bulan pertama!',
-  },
-  {
-    name: 'Siti Rahmawati', company: 'CEO, PT Maju Bersama Digital', initials: 'SR',
-    grad: 'linear-gradient(135deg,#0E8C86,#2BB3A3)',
-    text: 'Dashboard manajemen dari AFSS mengubah cara kami mengelola data. Semua laporan kini real-time. Tim support-nya responsif bahkan jauh setelah sistem diluncurkan.',
-  },
-  {
-    name: 'Ahmad Fauzi', company: 'Founder, StartupKita.id', initials: 'AF',
-    grad: 'linear-gradient(135deg,#1E88A8,#15243B)',
-    text: 'Dari konsultasi hingga launching, AFSS selalu memberi saran terbaik. Aplikasi mobile kami kini diunduh lebih dari 10.000 pengguna! Kualitas kodenya solid.',
-  },
-  {
-    name: 'Dewi Kusuma', company: 'Direktur, CV Nusantara Jaya Abadi', initials: 'DK',
-    grad: 'linear-gradient(135deg,#15243B,#26405E)',
-    text: 'Sistem ERP-nya mengintegrasikan seluruh operasional kami yang dulunya manual. Efisiensi meningkat drastis — hemat waktu hingga 60% untuk pelaporan bulanan!',
-  },
-  {
-    name: 'Rizky Pratama', company: 'IT Manager, PT Solusi Digital Indonesia', initials: 'RP',
-    grad: 'linear-gradient(135deg,#0E8C86,#1E88A8)',
-    text: 'Harga sangat kompetitif untuk kualitas luar biasa! AFSS bukan sekadar membangun software, tapi juga memberi konsultasi strategis. Mitra jangka panjang yang kami percaya.',
-  },
-  {
-    name: 'Linda Maharani', company: 'Owner, Toko Berkah Fashion', initials: 'LM',
-    grad: 'linear-gradient(135deg,#2BB3A3,#0E8C86)',
-    text: 'Awalnya ragu karena toko online saya masih kecil, tapi AFSS melayani dengan serius. Website saya jauh lebih profesional dan omzet naik 2x lipat dalam 3 bulan!',
-  },
-  {
-    name: 'Andi Wijaya', company: 'Manajer, Restoran Sederhana Group', initials: 'AW',
-    grad: 'linear-gradient(135deg,#1E88A8,#15243B)',
-    text: 'Website restoran kami benar-benar membantu. Pelanggan jadi lebih gampang lihat menu dan promo. Proses pengerjaannya cepat dan komunikatif. Recommended!',
-  },
-  {
-    name: 'Maya Sari', company: 'Manajer Operasional, Klinik Sehat Sentosa', initials: 'MS',
-    grad: 'linear-gradient(135deg,#0E8C86,#0B6E69)',
-    text: 'Sistem antrian & rekam medis digital dari AFSS sangat memudahkan operasional klinik kami. Pasien lebih nyaman dan staf lebih produktif. Terima kasih AFSS!',
-  },
-  {
-    name: 'Hendra Gunawan', company: 'Owner, Bengkel Jaya Motor', initials: 'HG',
-    grad: 'linear-gradient(135deg,#15243B,#0E8C86)',
-    text: 'Aplikasi manajemen bengkel buatan AFSS bikin pencatatan servis & stok sparepart jadi rapi. Tim-nya sabar membimbing dari nol sampai kami bisa pakai sendiri.',
-  },
-]
