@@ -1142,7 +1142,6 @@ export function Portfolio() {
                     <div className="porto-card-body">
                       <div className="porto-card-meta">
                         <span className="porto-cat-badge">{p.cat}</span>
-                        <span className="porto-budget">{p.budget}</span>
                       </div>
                       <h3 className="porto-card-title">{p.title}</h3>
                       <p className="porto-card-tagline">{p.tagline}</p>
@@ -1220,8 +1219,6 @@ export function PortfolioDetail() {
             <h1 className="pd-title">{p.title}</h1>
             <p className="pd-tagline">{p.tagline}</p>
             <div className="pd-stats">
-              <div className="pd-stat"><Icon icon="fa-solid fa-tag" /><span className="pd-stat-label">Budget</span><span className="pd-stat-val">{p.budget}</span></div>
-              <div className="pd-stat-div" />
               <div className="pd-stat"><Icon icon="fa-solid fa-arrow-trend-up" /><span className="pd-stat-label">Hasil Utama</span><span className="pd-stat-val">{p.result}</span></div>
               <div className="pd-stat-div" />
               <div className="pd-stat"><Icon icon="fa-solid fa-chart-line" /><span className="pd-stat-label">Detail</span><span className="pd-stat-val">{p.result2}</span></div>
