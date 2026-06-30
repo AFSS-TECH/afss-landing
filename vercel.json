@@ -16,19 +16,19 @@
   "rewrites": [
     {
       "source": "/portofolio/landing_page/koperasi_emas",
-      "destination": "https://koperasiemas.com"
+      "destination": "https://koperasi-emas-demo.vercel.app"
     },
     {
       "source": "/portofolio/landing_page/koperasi_emas/:path*",
-      "destination": "https://koperasiemas.com/:path*"
+      "destination": "https://koperasi-emas-demo.vercel.app/:path*"
     },
     {
       "source": "/_next/:path*",
-      "destination": "https://koperasiemas.com/_next/:path*"
+      "destination": "https://koperasi-emas-demo.vercel.app/_next/:path*"
     },
     {
       "source": "/api/:path*",
-      "destination": "https://koperasiemas.com/api/:path*"
+      "destination": "https://koperasi-emas-demo.vercel.app/api/:path*"
     }
   ],
   "headers": [
