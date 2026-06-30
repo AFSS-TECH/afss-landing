@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/gen-feeds.mjs && vite-react-ssg build",
+    "build": "node scripts/gen-feeds.mjs && node scripts/gen-blog-meta.mjs && vite-react-ssg build",
     "build:client": "vite build",
     "gen:og": "node scripts/gen-og.mjs",
     "gen:covers": "node scripts/gen-covers.mjs",
     "gen:portfolio": "node scripts/gen-portfolio.mjs",
     "gen:feeds": "node scripts/gen-feeds.mjs",
+    "gen:blog-meta": "node scripts/gen-blog-meta.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

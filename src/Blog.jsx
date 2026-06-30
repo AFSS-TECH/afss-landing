@@ -5,7 +5,9 @@ import { Head } from 'vite-react-ssg'
 import { motion } from 'framer-motion'
 import { BRAND, waLink } from './data.js'
 import { Icon } from './Icon.jsx'
-import { SITE_URL, getAllPosts, getPost, formatDateId } from './blog.js'
+import { getPost } from './blog.js'
+import { SITE_URL, formatDateId } from './site.js'
+import { postsMeta } from './blog-meta.js'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 18 },
@@ -43,7 +45,7 @@ function ReadingProgress() {
 
 /* ════════════════════════════════════════════════ BLOG INDEX (/blog) */
 export function BlogIndex() {
-  const all = getAllPosts()
+  const all = postsMeta
   const [query, setQuery] = useState('')
   const [activeTag, setActiveTag] = useState('')
   const [page, setPage] = useState(1)
@@ -271,8 +273,8 @@ export function BlogPost() {
   const cover = `${SITE_URL}/blog/${post.slug}.png`
 
   /* Related: prefer posts sharing a tag, fall back to any recent post */
-  const byTag = getAllPosts().filter((p) => p.slug !== post.slug && p.tags.some((t) => post.tags.includes(t)))
-  const fallback = getAllPosts().filter((p) => p.slug !== post.slug && !byTag.find((r) => r.slug === p.slug))
+  const byTag = postsMeta.filter((p) => p.slug !== post.slug && p.tags.some((t) => post.tags.includes(t)))
+  const fallback = postsMeta.filter((p) => p.slug !== post.slug && !byTag.find((r) => r.slug === p.slug))
   const related = [...byTag, ...fallback].slice(0, 3)
 
   const wordCount = post.body.trim().split(/\s+/).length

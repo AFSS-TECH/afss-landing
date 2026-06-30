@@ -3,7 +3,8 @@
 import { writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
-import { posts, SITE_URL } from '../src/blog.js'
+import { posts } from '../src/blog.js'
+import { SITE_URL } from '../src/site.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const pub = join(__dirname, '..', 'public')

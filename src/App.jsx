@@ -11,7 +11,8 @@ import {
   growthSeries, kpis, satisfaction, waLink, clients, why, techStack, pricing, faqs,
   testimonials,
 } from './data.js'
-import { getAllPosts, formatDateId } from './blog.js'
+import { formatDateId } from './site.js'
+import { postsMeta } from './blog-meta.js'
 
 /* ── Motion presets — enter recipe: opacity + y, smooth easing (GPU-cheap, no filter) ── */
 const fadeUp = {
@@ -803,7 +804,7 @@ function TechStack() {
 
 /* ════════════════════════════════════════════════ BLOG TEASER (internal linking from home) */
 function BlogTeaser() {
-  const latest = getAllPosts().slice(0, 3)
+  const latest = postsMeta.slice(0, 3)
   return (
     <section className="blog-teaser" id="blog-teaser">
       <div className="container">

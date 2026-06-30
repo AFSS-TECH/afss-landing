@@ -2,8 +2,6 @@
 // Tambah post baru = tambahkan objek ke array ini + entri di public/sitemap.xml.
 // Body ditulis dalam Markdown (dirender via `marked`).
 
-export const SITE_URL = 'https://afss.tech'
-
 export const posts = [
   {
     slug: 'biaya-pembuatan-website',
@@ -10420,6 +10418,3 @@ export const getAllPosts = () =>
   [...posts].sort((a, b) => (a.date < b.date ? 1 : -1))
 
 export const getPost = (slug) => posts.find((p) => p.slug === slug)
-
-export const formatDateId = (iso) =>
-  new Date(iso).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })

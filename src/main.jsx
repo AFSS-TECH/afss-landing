@@ -1,24 +1,27 @@
 import './index.css'
 import { ViteReactSSG } from 'vite-react-ssg'
 import { Layout, Home } from './App.jsx'
-import { BlogIndex, BlogPost } from './Blog.jsx'
 import { LayananIndex, LayananDetail, About, Contact, Portfolio, PortfolioDetail, Estimasi, Privacy, Terms, Keunggulan, Harga, Faq, Karir, AjukanProyek, Dashboard } from './Pages.jsx'
-import { posts } from './blog.js'
+import { postsMeta } from './blog-meta.js'
 import { products, portfolioProjects } from './data.js'
 
 // Multi-route SSG: every route is prerendered to its own static HTML file for full crawlability.
+// Blog routes are lazy-loaded (`lazy:`) so src/blog.js (~600KB of article markdown) only
+// downloads when a visitor actually opens /blog — every other page (home, portofolio, harga,
+// etc.) no longer pays that weight. The homepage teaser instead reads the lightweight
+// `blog-meta.js` (titles/excerpts only, no article body).
 export const routes = [
   {
     path: '/',
     element: <Layout />,
     children: [
       { index: true, element: <Home /> },
-      // Blog
-      { path: 'blog', element: <BlogIndex /> },
+      // Blog (lazy chunk — only loaded on /blog/*)
+      { path: 'blog', lazy: async () => { const m = await import('./Blog.jsx'); return { Component: m.BlogIndex } } },
       {
         path: 'blog/:slug',
-        element: <BlogPost />,
-        getStaticPaths: () => posts.map((p) => `/blog/${p.slug}`),
+        lazy: async () => { const m = await import('./Blog.jsx'); return { Component: m.BlogPost } },
+        getStaticPaths: () => postsMeta.map((p) => `/blog/${p.slug}`),
       },
       // Layanan
       { path: 'layanan', element: <LayananIndex /> },
