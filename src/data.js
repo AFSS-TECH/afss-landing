@@ -189,8 +189,8 @@ export const showcase = [
 export const portfolioProjects = [
   // ERP
   { slug:'erp-kontraktor', cat:'ERP', catSlug:'erp', title:'AFSS Contractor ERP', tagline:'Sistem ERP kontraktor: proyek, RAB, keuangan, SDM & gudang terintegrasi', c:'#0E2240', c2:'#2563FF', kind:'dash', budget:'Rp 48 Jt', result:'Efisiensi Ops +60%', result2:'Laporan proyek real-time, 0 delay', tags:['Bootstrap','Vanilla JS','Multi-Role','Demo'], problem:'Kontraktor mengelola proyek, RAB, pengadaan material, absensi mandor, dan laporan keuangan di file Excel terpisah — sering tidak sinkron dan rawan hilang.', solution:'Sistem ERP kontraktor terpadu: login multi-role (Owner, PM, Finance, Mandor, Warehouse), dashboard proyek real-time, RAB, BAST, penggajian, dan laporan keuangan.', features:['Dashboard eksekutif per proyek & keuangan','Manajemen proyek & RAB','Modul keuangan & faktur BAST','HR: absensi, penggajian, PPh 21','Gudang & pengadaan material','Multi-role: Owner / Admin / Finance / PM / Mandor / Warehouse'], tech:'Bootstrap 5, Vanilla JS, Tabler Icons, Demo Mode Multi-Role', review:'ERP ini mengubah cara kami mengelola proyek. Semua data proyek, keuangan, dan SDM kini terpusat — Owner bisa pantau dari mana saja.', clientName:'Tim AFSS', clientRole:'Demo Project — AFSS Contractor ERP', visitUrl:'https://afss.tech/portofolio/erp/kontraktor/',
-    image:'/portofolio/erp/kontraktor/mockup/dashboard.png',
-    images:['/portofolio/erp/kontraktor/mockup/dashboard.png','/portofolio/erp/kontraktor/mockup/project-hpp.png','/portofolio/erp/kontraktor/mockup/mobile-lapangan.png'],
+    image:'/portofolio/erp/kontraktor/mockup/dashboard.webp',
+    images:['/portofolio/erp/kontraktor/mockup/dashboard.webp','/portofolio/erp/kontraktor/mockup/project-hpp.webp','/portofolio/erp/kontraktor/mockup/mobile-lapangan.webp'],
     imageCaptions:['Dashboard Eksekutif — kontrol proyek, HPP, stok & keuangan dalam satu layar','Kontrol Proyek & HPP — RAB vs realisasi biaya, profit margin per proyek real-time','Mobile Lapangan — mandor input absensi, foto progres & request material langsung dari HP'],
     benefits:[
       { icon:'fa-solid fa-chart-pie', title:'Profit per proyek transparan', desc:'HPP vs RAB dan realisasi biaya terlihat real-time — Owner tahu untung-rugi tiap proyek tanpa tunggu tutup buku.' },
@@ -209,8 +209,8 @@ export const portfolioProjects = [
     tech:'Next.js 15, TypeScript, Supabase, Tailwind CSS, Vercel',
     review:'Anggota sekarang bisa cek harga emas dan simulasi cicilan sendiri kapan saja — tim kami tidak perlu lagi jawab pertanyaan yang sama berulang-ulang di WhatsApp.',
     clientName:'Tim AFSS', clientRole:'Demo Project — Koperasi Emas Kimberli',
-    image:'/portofolio/landing-page/koperasi-emas-kimberli/mockup/hero.png',
-    images:['/portofolio/landing-page/koperasi-emas-kimberli/mockup/hero.png','/portofolio/landing-page/koperasi-emas-kimberli/mockup/harga-emas.png','/portofolio/landing-page/koperasi-emas-kimberli/mockup/simulasi.png','/portofolio/landing-page/koperasi-emas-kimberli/mockup/mobile.png'],
+    image:'/portofolio/landing-page/koperasi-emas-kimberli/mockup/hero.webp',
+    images:['/portofolio/landing-page/koperasi-emas-kimberli/mockup/hero.webp','/portofolio/landing-page/koperasi-emas-kimberli/mockup/harga-emas.webp','/portofolio/landing-page/koperasi-emas-kimberli/mockup/simulasi.webp','/portofolio/landing-page/koperasi-emas-kimberli/mockup/mobile.webp'],
     imageCaptions:['Beranda — harga emas live, simulasi cicilan, dan ringkasan layanan dalam satu layar','Harga Emas Hari Ini — perbandingan harga & produk simpanan terbaru','Halaman Harga Emas — grafik 30 hari, simulasi cicilan & buyback dengan estimasi hasil','Tampilan Mobile — akses harga emas dan simulasi investasi langsung dari HP'],
     imagePortrait:[false,false,false,true],
     benefits:[

@@ -13,12 +13,12 @@ import {
 } from './data.js'
 import { getAllPosts, formatDateId } from './blog.js'
 
-/* ── Motion presets — enter recipe: opacity + y + blur, smooth spring ── */
+/* ── Motion presets — enter recipe: opacity + y, smooth easing (GPU-cheap, no filter) ── */
 const fadeUp = {
-  hidden: { opacity: 0, y: 22, filter: 'blur(6px)' },
-  show: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { type: 'spring', duration: 0.7, bounce: 0 } },
+  hidden: { opacity: 0, y: 18 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
 }
-const container = { hidden: {}, show: { transition: { staggerChildren: 0.09, delayChildren: 0.05 } } }
+const container = { hidden: {}, show: { transition: { staggerChildren: 0.07, delayChildren: 0.05 } } }
 const viewport = { once: true, margin: '-60px' }
 
 /* ── Animated counter (respects reduced-motion) ── */
@@ -305,7 +305,7 @@ function Hero({ reduce }) {
           </motion.div>
         </motion.div>
 
-        <motion.div className="hero-visual" initial={{ opacity: 0, y: 26, filter: 'blur(8px)' }} animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }} transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}>
+        <motion.div className="hero-visual" initial={{ opacity: 0, y: 26, scale: 0.97 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}>
           {/* Browser window mockup */}
           <div className="hero-browser">
             <div className="br-bar">

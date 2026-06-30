@@ -8,10 +8,10 @@ import { Icon } from './Icon.jsx'
 import { SITE_URL, getAllPosts, getPost, formatDateId } from './blog.js'
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 20, filter: 'blur(6px)' },
-  show: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { type: 'spring', duration: 0.7, bounce: 0 } },
+  hidden: { opacity: 0, y: 18 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
 }
-const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.08, delayChildren: 0.04 } } }
+const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.07, delayChildren: 0.04 } } }
 
 marked.setOptions({ gfm: true, breaks: false })
 
