@@ -202,7 +202,7 @@ export const portfolioProjects = [
     ],
   },
   // LANDING PAGE
-  { slug:'koperasi-emas-kimberli', cat:'Landing Page', catSlug:'landing-page', title:'Koperasi Emas Kimberli', tagline:'Platform investasi emas koperasi: tabungan, cicil emas, gadai simpanan & simulasi real-time', c:'#1A1305', c2:'#D4A93B', kind:'land', budget:'Rp 14 Jt', result:'Konversi Daftar +180%', result2:'150.000+ anggota terlayani di platform', tags:['Next.js','Supabase','Multi-Role Dashboard','Realtime Gold Price'],
+  { slug:'koperasi-emas-kimberli', cat:'Landing Page', catSlug:'landing-page', title:'Koperasi Emas Kimberli', tagline:'Platform investasi emas koperasi: tabungan, cicil emas, gadai simpanan & simulasi real-time', c:'#1A1305', c2:'#D4A93B', kind:'land', budget:'Rp 14 Jt', result:'Konversi Daftar +180%', result2:'150.000+ anggota terlayani di platform', tags:['Next.js','Supabase','Multi-Role Dashboard','Realtime Gold Price'], visitUrl:'https://koperasiemas.com',
     problem:'Koperasi emas mengandalkan brosur dan WhatsApp manual untuk jualan produk tabungan & cicil emas. Calon anggota tidak bisa cek harga emas terkini atau simulasi cicilan sendiri, sehingga banyak yang ragu mendaftar.',
     solution:'Landing page investasi emas dengan harga emas real-time, simulator cicilan & buyback interaktif, serta dashboard multi-role (Admin, Master, Member) untuk kelola anggota, tabungan, dan SHU tahunan.',
     features:['Harga emas hari ini real-time + grafik 30 hari','Simulasi cicilan & buyback interaktif','Tabungan emas, gadai simpanan, SHU tahunan','Dashboard member: portofolio & riwayat transaksi','Dashboard admin/master: kelola anggota & transaksi','Autentikasi & registrasi anggota terverifikasi'],
