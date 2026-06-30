@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 29 Jun 2026 02:15:57 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2026 02:24:27 GMT</lastBuildDate>
+    <item>
+      <title>Internet of Things (IoT) untuk Bisnis Indonesia: Peluang dan Penerapan di 2026</title>
+      <link>https://afss.tech/blog/internet-of-things-iot-untuk-bisnis-indonesia</link>
+      <guid>https://afss.tech/blog/internet-of-things-iot-untuk-bisnis-indonesia</guid>
+      <description>Dari pelacakan kendaraan hingga pemantauan suhu gudang otomatis, IoT mulai menjadi alat nyata bagi bisnis Indonesia. Berikut peluang konkret dan cara memulainya.</description>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Teknologi</category>
+      <category>IoT</category>
+      <category>Inovasi</category>
+    </item>
+    <item>
+      <title>Cara Mengukur ROI Investasi Teknologi: Website, Aplikasi, dan ERP untuk Bisnis Anda</title>
+      <link>https://afss.tech/blog/cara-mengukur-roi-investasi-teknologi-bisnis</link>
+      <guid>https://afss.tech/blog/cara-mengukur-roi-investasi-teknologi-bisnis</guid>
+      <description>Banyak pemilik bisnis ragu berinvestasi di teknologi karena sulit mengukur hasilnya. Berikut cara praktis menghitung ROI website, aplikasi, dan ERP untuk pengambilan keputusan yang lebih percaya diri.</description>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Bisnis</category>
+      <category>Strategi</category>
+      <category>ROI</category>
+    </item>
+    <item>
+      <title>ERP untuk UMKM: Kapan Saatnya Upgrade dari Excel ke Sistem Terintegrasi?</title>
+      <link>https://afss.tech/blog/erp-untuk-umkm-kapan-saatnya-upgrade</link>
+      <guid>https://afss.tech/blog/erp-untuk-umkm-kapan-saatnya-upgrade</guid>
+      <description>Excel pernah cukup untuk mengelola bisnis kecil — tapi seiring pertumbuhan, ia mulai menjadi penghambat, bukan alat bantu. Kenali tanda-tanda UMKM Anda sudah waktunya beralih ke ERP.</description>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+      <category>ERP</category>
+      <category>UMKM</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>Fitur Wajib Aplikasi Mobile Bisnis di 2026: Apa yang Diharapkan Pengguna</title>
+      <link>https://afss.tech/blog/fitur-wajib-aplikasi-mobile-2026</link>
+      <guid>https://afss.tech/blog/fitur-wajib-aplikasi-mobile-2026</guid>
+      <description>Pengguna aplikasi mobile makin tidak sabar dengan pengalaman yang lambat atau rumit. Berikut fitur-fitur yang wajib ada di aplikasi bisnis Anda supaya tidak ditinggalkan pengguna di 2026.</description>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi Mobile</category>
+      <category>UX</category>
+      <category>Teknologi</category>
+    </item>
+    <item>
+      <title>Headless CMS: Solusi Website Modern yang Cepat, Aman, dan Fleksibel di 2026</title>
+      <link>https://afss.tech/blog/headless-cms-website-modern-2026</link>
+      <guid>https://afss.tech/blog/headless-cms-website-modern-2026</guid>
+      <description>Headless CMS memisahkan konten dari tampilan, menghasilkan website yang lebih cepat, aman, dan siap didistribusikan ke berbagai channel. Apakah bisnis Anda sudah waktunya beralih?</description>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+      <category>Website</category>
+      <category>CMS</category>
+      <category>Teknologi</category>
+    </item>
     <item>
       <title>Tren Pengembangan Aplikasi 2026–2027: Teknologi yang Wajib Dipahami Bisnis Indonesia</title>
       <link>https://afss.tech/blog/tren-app-development-2027</link>
