@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link, useParams } from 'react-router-dom'
 import { Head } from 'vite-react-ssg'
@@ -1008,6 +1008,23 @@ export function Contact() {
 }
 
 /* ══════════════════════════════════════════════════ PORTFOLIO (/portofolio) */
+/* ── Hover-zoom image (Tokopedia-style: zoom follows cursor) ── */
+function ZoomImage({ src, alt, className }) {
+  const imgRef = useRef(null)
+  const onMove = e => {
+    const rect = e.currentTarget.getBoundingClientRect()
+    const x = ((e.clientX - rect.left) / rect.width) * 100
+    const y = ((e.clientY - rect.top) / rect.height) * 100
+    if (imgRef.current) imgRef.current.style.transformOrigin = `${x}% ${y}%`
+  }
+  const onLeave = () => { if (imgRef.current) imgRef.current.style.transformOrigin = 'center' }
+  return (
+    <div className={className} onMouseMove={onMove} onMouseLeave={onLeave}>
+      <img ref={imgRef} src={src} alt={alt} loading="lazy" />
+    </div>
+  )
+}
+
 /* ── Portfolio card mockup visual ── */
 function PortoMock({ p }) {
   if (p.image) {
@@ -1220,9 +1237,7 @@ export function PortfolioDetail() {
             <div className="pd-gallery">
               {p.images.map((src, i) => (
                 <Reveal key={src} className={`pd-gallery-item${i === 0 ? ' main' : ''}`} style={{ transitionDelay: `${i*60}ms` }}>
-                  <div className="pd-gallery-frame">
-                    <img src={src} alt={p.imageCaptions?.[i] || p.title} loading="lazy" />
-                  </div>
+                  <ZoomImage className="pd-gallery-frame" src={src} alt={p.imageCaptions?.[i] || p.title} />
                   {p.imageCaptions?.[i] && <p className="pd-gallery-cap">{p.imageCaptions[i]}</p>}
                 </Reveal>
               ))}
