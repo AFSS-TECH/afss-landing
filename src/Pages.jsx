@@ -1062,7 +1062,6 @@ function PortoMock({ p }) {
 const PORTO_TABS = [
   { label: 'Semua', slug: 'semua' },
   { label: 'Landing Page', slug: 'landing-page' },
-  { label: 'Company Profile', slug: 'company-profile' },
   { label: 'Software Custom', slug: 'software-custom' },
   { label: 'ERP', slug: 'erp' },
   { label: 'App Mobile', slug: 'app-mobile' },
