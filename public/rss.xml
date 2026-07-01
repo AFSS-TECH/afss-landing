@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Tue, 30 Jun 2026 02:24:27 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2026 05:12:42 GMT</lastBuildDate>
+    <item>
+      <title>Website &amp; Aplikasi Custom sebagai Fondasi Pertumbuhan Bisnis di Era Digital</title>
+      <link>https://afss.tech/blog/website-aplikasi-fondasi-pertumbuhan-bisnis</link>
+      <guid>https://afss.tech/blog/website-aplikasi-fondasi-pertumbuhan-bisnis</guid>
+      <description>Website dan aplikasi bukan pengeluaran IT — ini adalah investasi infrastruktur bisnis yang menentukan seberapa cepat dan seberapa jauh bisnis Anda bisa berkembang.</description>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Website</category>
+      <category>Aplikasi</category>
+      <category>Pertumbuhan Bisnis</category>
+    </item>
+    <item>
+      <title>Agile &amp; Scrum dalam Pengembangan Software: Apa Artinya untuk Bisnis Anda?</title>
+      <link>https://afss.tech/blog/agile-scrum-pengembangan-software</link>
+      <guid>https://afss.tech/blog/agile-scrum-pengembangan-software</guid>
+      <description>Memahami Agile bukan hanya urusan developer. Pemilik bisnis yang memahami metodologi ini bisa berkolaborasi jauh lebih efektif dengan tim teknis dan menghasilkan produk yang lebih baik.</description>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Agile</category>
+      <category>Software</category>
+      <category>Teknologi</category>
+    </item>
+    <item>
+      <title>ERP untuk Bisnis Jasa: Manfaat, Modul Kunci, dan Kapan Harus Mulai</title>
+      <link>https://afss.tech/blog/erp-untuk-bisnis-jasa</link>
+      <guid>https://afss.tech/blog/erp-untuk-bisnis-jasa</guid>
+      <description>ERP bukan hanya untuk pabrik dan gudang. Bisnis jasa seperti konsultan, agensi, klinik, dan kontraktor juga butuh ERP — dan manfaatnya bisa lebih signifikan.</description>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <category>ERP</category>
+      <category>Bisnis Jasa</category>
+      <category>Teknologi</category>
+    </item>
+    <item>
+      <title>Keamanan Data Bisnis di Era Digital 2026: Ancaman Nyata dan Cara Melindunginya</title>
+      <link>https://afss.tech/blog/keamanan-data-bisnis-era-digital-2026</link>
+      <guid>https://afss.tech/blog/keamanan-data-bisnis-era-digital-2026</guid>
+      <description>Data bisnis Anda adalah aset yang paling berharga sekaligus paling rentan. Berikut ancaman nyata yang perlu diwaspadai dan langkah konkret untuk melindunginya.</description>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Keamanan Data</category>
+      <category>Teknologi</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>Cara Mengintegrasikan Digital Payment ke Website &amp; Aplikasi Bisnis Anda</title>
+      <link>https://afss.tech/blog/digital-payment-website-aplikasi</link>
+      <guid>https://afss.tech/blog/digital-payment-website-aplikasi</guid>
+      <description>Payment gateway mana yang paling cocok untuk bisnis Anda, dan bagaimana cara mengintegrasikannya ke website atau aplikasi tanpa hambatan teknis?</description>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Digital Payment</category>
+      <category>Website</category>
+      <category>Aplikasi</category>
+    </item>
     <item>
       <title>Internet of Things (IoT) untuk Bisnis Indonesia: Peluang dan Penerapan di 2026</title>
       <link>https://afss.tech/blog/internet-of-things-iot-untuk-bisnis-indonesia</link>
