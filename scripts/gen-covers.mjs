@@ -937,6 +937,161 @@ const ILLUSTRATIONS = {
     <text x="910" y="410" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" font-weight="900" fill="#FFFFFF" opacity="0.95">Siap untuk 2027?</text>
     <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">Tren teknologi · keputusan bisnis yang lebih baik</text>
   `,
+
+  'digital-payment-website-aplikasi': () => `
+    <!-- Central phone with payment UI -->
+    <rect x="858" y="68" width="148" height="294" rx="24" fill="#FFFFFF" opacity="0.14"/>
+    <rect x="870" y="82" width="124" height="266" rx="14" fill="#FFFFFF" opacity="0.08"/>
+    <rect x="904" y="72" width="56" height="12" rx="6" fill="#FFFFFF" opacity="0.25"/>
+    <!-- payment screen content -->
+    <rect x="880" y="104" width="104" height="16" rx="4" fill="#FFFFFF" opacity="0.35"/>
+    <rect x="880" y="130" width="104" height="52" rx="8" fill="#FFFFFF" opacity="0.14"/>
+    <text x="932" y="163" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="900" fill="#FFFFFF" opacity="0.80">Rp 350rb</text>
+    <!-- payment method pills on screen -->
+    ${['QRIS','VA Bank','GoPay','OVO'].map((m,i) => `
+      <rect x="880" y="${196+i*32}" width="104" height="24" rx="6" fill="#FFFFFF" opacity="${[0.28,0.20,0.16,0.12][i]}"/>
+      <text x="932" y="${213+i*32}" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" opacity="0.80">${m}</text>
+    `).join('')}
+    <rect x="880" y="330" width="104" height="28" rx="8" fill="#FFFFFF" opacity="0.30"/>
+    <text x="932" y="349" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="800" fill="#FFFFFF" opacity="0.90">Bayar Sekarang</text>
+    <rect x="900" y="360" width="64" height="4" rx="2" fill="#FFFFFF" opacity="0.30"/>
+    <!-- Left: payment icons -->
+    ${[
+      { label: 'QRIS', x: 668, y: 110 },
+      { label: 'Virtual Account', x: 668, y: 178 },
+      { label: 'Paylater', x: 668, y: 246 },
+      { label: 'Kartu Kredit', x: 668, y: 314 },
+    ].map(n => `
+      <rect x="${n.x}" y="${n.y}" width="170" height="48" rx="10" fill="#FFFFFF" opacity="0.14"/>
+      <text x="${n.x+85}" y="${n.y+29}" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" opacity="0.78">${n.label}</text>
+      <line x1="838" y1="${n.y+24}" x2="858" y2="${n.y+24}" stroke="#FFFFFF" stroke-width="1.5" opacity="0.25"/>
+    `).join('')}
+    <!-- Checkmark badge -->
+    <circle cx="1082" cy="130" r="44" fill="#FFFFFF" opacity="0.18"/>
+    <polyline points="1060,130 1076,148 1106,110" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.80"/>
+    <!-- stat badge -->
+    <rect x="800" y="472" width="218" height="44" rx="22" fill="#FFFFFF" opacity="0.20"/>
+    <text x="909" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="900" fill="#FFFFFF" opacity="0.95">Checkout &lt; 10 Detik</text>
+    <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">Integrasi payment gateway · konversi lebih tinggi</text>
+  `,
+
+  'keamanan-data-bisnis-era-digital-2026': () => `
+    <!-- Shield center -->
+    <path d="M910 82 L1082 138 L1082 298 Q1082 428 910 508 Q738 428 738 298 L738 138 Z" fill="#FFFFFF" opacity="0.12"/>
+    <path d="M910 104 L1060 154 L1060 298 Q1060 414 910 486 Q760 414 760 298 L760 154 Z" fill="#FFFFFF" opacity="0.07"/>
+    <!-- Lock inside shield -->
+    <rect x="868" y="232" width="84" height="72" rx="10" fill="#FFFFFF" opacity="0.25"/>
+    <path d="M886 232 Q886 196 910 196 Q934 196 934 232" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" opacity="0.55"/>
+    <circle cx="910" cy="270" r="10" fill="#FFFFFF" opacity="0.80"/>
+    <rect x="906" y="270" width="8" height="18" rx="3" fill="#FFFFFF" opacity="0.80"/>
+    <!-- Threat labels (corners) -->
+    ${[
+      { label: 'Phishing', x: 668, y: 118 },
+      { label: 'Ransomware', x: 668, y: 198 },
+      { label: 'Data Breach', x: 668, y: 278 },
+      { label: 'SQL Injection', x: 668, y: 358 },
+    ].map(n => `
+      <rect x="${n.x}" y="${n.y}" width="148" height="44" rx="10" fill="#FFFFFF" opacity="0.12"/>
+      <text x="${n.x+74}" y="${n.y+27}" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" opacity="0.70">⚠ ${n.label}</text>
+      <line x1="816" y1="${n.y+22}" x2="838" y2="${n.y+22}" stroke="#FFFFFF" stroke-width="1.5" opacity="0.22"/>
+    `).join('')}
+    <!-- protection chips at bottom -->
+    ${['Enkripsi','MFA','Backup','UU PDP'].map((t,i) => `
+      <rect x="${668+i*122}" y="458" width="114" height="38" rx="10" fill="#FFFFFF" opacity="0.16"/>
+      <text x="${668+i*122+57}" y="482" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" opacity="0.80">${t}</text>
+    `).join('')}
+    <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">Data aman · bisnis terlindungi · pelanggan percaya</text>
+  `,
+
+  'erp-untuk-bisnis-jasa': () => `
+    <!-- Central service-ERP hub -->
+    <circle cx="910" cy="268" r="66" fill="#FFFFFF" opacity="0.18"/>
+    <circle cx="910" cy="268" r="46" fill="#FFFFFF" opacity="0.10"/>
+    <text x="910" y="258" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="900" fill="#FFFFFF" opacity="0.90">ERP</text>
+    <text x="910" y="278" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" opacity="0.65">Bisnis Jasa</text>
+    <!-- Service business module nodes -->
+    ${[
+      { label: 'Proyek', x: 688,  y: 144, ex: 858, ey: 234 },
+      { label: 'Timesheet', x: 1078, y: 144, ex: 962, ey: 234 },
+      { label: 'Billing', x: 672,  y: 298, ex: 844, ey: 272 },
+      { label: 'CRM', x: 1088, y: 298, ex: 976, ey: 272 },
+      { label: 'SDM', x: 752,  y: 428, ex: 876, ey: 322 },
+      { label: 'Laporan', x: 1020, y: 428, ex: 944, ey: 322 },
+    ].map(n => `
+      <line x1="${n.ex}" y1="${n.ey}" x2="${n.x+50}" y2="${n.y+18}" stroke="#FFFFFF" stroke-width="1.5" opacity="0.20" stroke-dasharray="6 4"/>
+      <rect x="${n.x}" y="${n.y}" width="100" height="36" rx="10" fill="#FFFFFF" opacity="0.14"/>
+      <text x="${n.x+50}" y="${n.y+22}" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" opacity="0.76">${n.label}</text>
+    `).join('')}
+    <circle cx="910" cy="268" r="132" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.09" stroke-dasharray="10 7"/>
+    <!-- Service types chips -->
+    ${['Konsultan','Klinik','Agensi','Kontraktor'].map((t,i) => `
+      <rect x="${668+i*122}" y="476" width="114" height="38" rx="10" fill="#FFFFFF" opacity="0.14"/>
+      <text x="${668+i*122+57}" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" opacity="0.78">${t}</text>
+    `).join('')}
+    <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">ERP untuk jasa · kelola proyek &amp; billing efisien</text>
+  `,
+
+  'agile-scrum-pengembangan-software': () => `
+    <!-- Scrum board -->
+    <rect x="668" y="88" width="500" height="360" rx="14" fill="#FFFFFF" opacity="0.09"/>
+    <rect x="668" y="88" width="500" height="40" rx="14" fill="#FFFFFF" opacity="0.14"/>
+    <text x="918" y="114" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="800" fill="#FFFFFF" opacity="0.75">Sprint Board</text>
+    <!-- Columns -->
+    ${['To Do','In Progress','Review','Done'].map((col,i) => `
+      <rect x="${680+i*120}" y="142" width="108" height="20" rx="4" fill="#FFFFFF" opacity="${[0.18,0.22,0.16,0.14][i]}"/>
+      <text x="${680+i*120+54}" y="157" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#FFFFFF" opacity="0.80">${col}</text>
+      ${[0,1,2].map(r => `
+        <rect x="${684+i*120}" y="${172+r*62}" width="100" height="52" rx="8" fill="#FFFFFF" opacity="${r===0&&i===1?0.28:r<(3-i)?0.16:0.08}"/>
+        <rect x="${692+i*120}" y="${180+r*62}" width="${[70,82,60,74][i]}" height="8" rx="2" fill="#FFFFFF" opacity="${r<(3-i)?0.35:0.15}"/>
+        <rect x="${692+i*120}" y="${194+r*62}" width="${[55,66,44,58][i]}" height="6" rx="2" fill="#FFFFFF" opacity="${r<(3-i)?0.22:0.10}"/>
+      `).join('')}
+    `).join('')}
+    <!-- Sprint cycle arrow at bottom -->
+    <path d="M690 452 Q910 430 1130 452" fill="none" stroke="#FFFFFF" stroke-width="2.5" opacity="0.25" stroke-dasharray="8 4"/>
+    <polygon points="1130,442 1140,452 1130,462" fill="#FFFFFF" opacity="0.40"/>
+    <text x="910" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" opacity="0.55">Sprint 2 Minggu</text>
+    <!-- Velocity badge -->
+    <rect x="810" y="502" width="200" height="40" rx="20" fill="#FFFFFF" opacity="0.20"/>
+    <text x="910" y="527" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="900" fill="#FFFFFF" opacity="0.95">Delivery Lebih Cepat</text>
+    <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">Agile &amp; Scrum · iterasi cepat · hasil nyata</text>
+  `,
+
+  'website-aplikasi-fondasi-pertumbuhan-bisnis': () => `
+    <!-- Growth chart (bars + line) -->
+    <rect x="668" y="88" width="500" height="350" rx="14" fill="#FFFFFF" opacity="0.08"/>
+    <!-- Chart axes -->
+    <line x1="710" y1="400" x2="1140" y2="400" stroke="#FFFFFF" stroke-width="2" opacity="0.20"/>
+    <line x1="710" y1="130" x2="710" y2="400" stroke="#FFFFFF" stroke-width="2" opacity="0.20"/>
+    <!-- Growing bars -->
+    ${[
+      { x: 740,  h: 60, label: 'Q1' },
+      { x: 830,  h: 100, label: 'Q2' },
+      { x: 920,  h: 158, label: 'Q3' },
+      { x: 1010, h: 220, label: 'Q4' },
+      { x: 1100, h: 270, label: 'Q5' },
+    ].map(b => `
+      <rect x="${b.x}" y="${400-b.h}" width="60" height="${b.h}" rx="6 6 0 0" fill="#FFFFFF" opacity="${0.12+b.h*0.001}"/>
+      <text x="${b.x+30}" y="418" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" opacity="0.55">${b.label}</text>
+    `).join('')}
+    <!-- Trend line over bars -->
+    <polyline points="770,340 860,300 950,242 1040,180 1130,130" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.50"/>
+    ${[{x:770,y:340},{x:860,y:300},{x:950,y:242},{x:1040,y:180},{x:1130,y:130}].map(p =>
+      `<circle cx="${p.x}" cy="${p.y}" r="7" fill="#FFFFFF" opacity="0.65"/>`
+    ).join('')}
+    <!-- Growth labels left -->
+    ${['Website Custom','SEO + Traffic','App Mobile','Integrasi ERP'].map((t,i) => `
+      <rect x="668" y="${96+i*64}" width="158" height="44" rx="8" fill="#FFFFFF" opacity="0.13"/>
+      <text x="747" y="${122+i*64}" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" opacity="0.75">${t}</text>
+    `).join('')}
+    <!-- ROI badge -->
+    <rect x="1040" y="96" width="120" height="52" rx="10" fill="#FFFFFF" opacity="0.22"/>
+    <text x="1100" y="120" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="900" fill="#FFFFFF" opacity="0.9">+300%</text>
+    <text x="1100" y="138" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" opacity="0.70">Revenue</text>
+    <!-- bottom badge -->
+    <rect x="790" y="460" width="240" height="44" rx="22" fill="#FFFFFF" opacity="0.20"/>
+    <text x="910" y="488" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="900" fill="#FFFFFF" opacity="0.95">Tumbuh Lebih Cepat</text>
+    <text x="910" y="556" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" opacity="0.45">Digital sebagai fondasi · bukan pengeluaran</text>
+  `,
 }
 
 // Fallback: decorative circles if slug has no illustration

@@ -4,6 +4,81 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "website-aplikasi-fondasi-pertumbuhan-bisnis",
+    "title": "Website & Aplikasi Custom sebagai Fondasi Pertumbuhan Bisnis di Era Digital",
+    "description": "Mengapa bisnis yang serius berinvestasi pada website dan aplikasi custom — bukan template atau tool SaaS generik — tumbuh lebih cepat dan memiliki keunggulan kompetitif yang berkelanjutan.",
+    "date": "2026-07-01",
+    "readMinutes": 10,
+    "tags": [
+      "Website",
+      "Aplikasi",
+      "Pertumbuhan Bisnis"
+    ],
+    "c": "#B45309",
+    "c2": "#78350F",
+    "excerpt": "Website dan aplikasi bukan pengeluaran IT — ini adalah investasi infrastruktur bisnis yang menentukan seberapa cepat dan seberapa jauh bisnis Anda bisa berkembang."
+  },
+  {
+    "slug": "agile-scrum-pengembangan-software",
+    "title": "Agile & Scrum dalam Pengembangan Software: Apa Artinya untuk Bisnis Anda?",
+    "description": "Panduan praktis memahami metodologi Agile dan Scrum dalam pengembangan software — bagaimana cara kerjanya, apa keuntungannya untuk bisnis, dan bagaimana berkolaborasi efektif dengan tim teknis.",
+    "date": "2026-07-01",
+    "readMinutes": 8,
+    "tags": [
+      "Agile",
+      "Software",
+      "Teknologi"
+    ],
+    "c": "#0369A1",
+    "c2": "#0C4A6E",
+    "excerpt": "Memahami Agile bukan hanya urusan developer. Pemilik bisnis yang memahami metodologi ini bisa berkolaborasi jauh lebih efektif dengan tim teknis dan menghasilkan produk yang lebih baik."
+  },
+  {
+    "slug": "erp-untuk-bisnis-jasa",
+    "title": "ERP untuk Bisnis Jasa: Manfaat, Modul Kunci, dan Kapan Harus Mulai",
+    "description": "ERP bukan hanya untuk bisnis manufaktur atau ritel. Bisnis jasa juga bisa merasakan manfaat besar dari sistem ERP yang dirancang sesuai kebutuhan spesifik mereka.",
+    "date": "2026-07-01",
+    "readMinutes": 9,
+    "tags": [
+      "ERP",
+      "Bisnis Jasa",
+      "Teknologi"
+    ],
+    "c": "#6D28D9",
+    "c2": "#4C1D95",
+    "excerpt": "ERP bukan hanya untuk pabrik dan gudang. Bisnis jasa seperti konsultan, agensi, klinik, dan kontraktor juga butuh ERP — dan manfaatnya bisa lebih signifikan."
+  },
+  {
+    "slug": "keamanan-data-bisnis-era-digital-2026",
+    "title": "Keamanan Data Bisnis di Era Digital 2026: Ancaman Nyata dan Cara Melindunginya",
+    "description": "Panduan keamanan data bisnis 2026: ancaman siber yang nyata, standar perlindungan data, dan langkah praktis melindungi aset digital bisnis Anda dari kebocoran dan serangan.",
+    "date": "2026-07-01",
+    "readMinutes": 9,
+    "tags": [
+      "Keamanan Data",
+      "Teknologi",
+      "Bisnis"
+    ],
+    "c": "#B91C1C",
+    "c2": "#7F1D1D",
+    "excerpt": "Data bisnis Anda adalah aset yang paling berharga sekaligus paling rentan. Berikut ancaman nyata yang perlu diwaspadai dan langkah konkret untuk melindunginya."
+  },
+  {
+    "slug": "digital-payment-website-aplikasi",
+    "title": "Cara Mengintegrasikan Digital Payment ke Website & Aplikasi Bisnis Anda",
+    "description": "Panduan lengkap integrasi digital payment ke website dan aplikasi bisnis di Indonesia: pilihan payment gateway, teknis integrasi, dan strategi meningkatkan konversi checkout.",
+    "date": "2026-07-01",
+    "readMinutes": 8,
+    "tags": [
+      "Digital Payment",
+      "Website",
+      "Aplikasi"
+    ],
+    "c": "#1A6B4A",
+    "c2": "#0E4A32",
+    "excerpt": "Payment gateway mana yang paling cocok untuk bisnis Anda, dan bagaimana cara mengintegrasikannya ke website atau aplikasi tanpa hambatan teknis?"
+  },
+  {
     "slug": "internet-of-things-iot-untuk-bisnis-indonesia",
     "title": "Internet of Things (IoT) untuk Bisnis Indonesia: Peluang dan Penerapan di 2026",
     "description": "IoT bukan lagi teknologi masa depan — bisnis Indonesia di berbagai sektor sudah mulai menerapkannya. Pelajari peluang nyata dan cara memulai penerapan IoT untuk bisnis Anda.",
