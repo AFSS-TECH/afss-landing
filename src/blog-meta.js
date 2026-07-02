@@ -4,6 +4,81 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-logistik-manajemen-armada",
+    "title": "Aplikasi Manajemen Logistik & Armada: Efisiensi Rantai Pasok Bisnis",
+    "description": "Aplikasi manajemen logistik & armada membantu bisnis lacak pengiriman real-time, optimalkan rute, dan kurangi biaya operasional transportasi.",
+    "date": "2026-07-03",
+    "readMinutes": 8,
+    "tags": [
+      "Aplikasi Mobile",
+      "Logistik",
+      "Bisnis"
+    ],
+    "c": "#0B6E69",
+    "c2": "#15243B",
+    "excerpt": "Pengiriman telat, rute tidak efisien, dan owner tidak tahu posisi armada secara real-time — aplikasi manajemen logistik menyelesaikan masalah operasional ini secara sistematis."
+  },
+  {
+    "slug": "omnichannel-commerce-integrasi-bisnis",
+    "title": "Omnichannel Commerce: Integrasi Website, Marketplace & Aplikasi untuk Bisnis Ritel Modern",
+    "description": "Strategi omnichannel commerce menyatukan website, marketplace, dan aplikasi dalam satu data terpadu. Pelajari cara membangun pengalaman belanja tanpa batas kanal.",
+    "date": "2026-07-03",
+    "readMinutes": 9,
+    "tags": [
+      "E-Commerce",
+      "Omnichannel",
+      "Bisnis"
+    ],
+    "c": "#15243B",
+    "c2": "#1E88A8",
+    "excerpt": "Pelanggan Anda berbelanja lewat marketplace, website, dan toko fisik — tapi apakah stok dan datanya terhubung? Inilah kenapa omnichannel bukan lagi pilihan, tapi keharusan."
+  },
+  {
+    "slug": "rpa-otomasi-proses-bisnis",
+    "title": "RPA (Robotic Process Automation): Otomasi Proses Bisnis untuk Efisiensi Operasional",
+    "description": "RPA mengotomasi tugas repetitif seperti input data dan rekonsiliasi laporan tanpa mengganti sistem lama. Kenali cara kerja, contoh kasus, dan cara memulainya.",
+    "date": "2026-07-03",
+    "readMinutes": 8,
+    "tags": [
+      "Otomasi",
+      "RPA",
+      "Teknologi"
+    ],
+    "c": "#2BB3A3",
+    "c2": "#0E5E78",
+    "excerpt": "Tim Anda masih copy-paste data antar sistem setiap hari? RPA bisa mengotomasi tugas repetitif itu tanpa harus mengganti sistem lama yang sudah berjalan."
+  },
+  {
+    "slug": "erp-untuk-bisnis-ritel-fnb",
+    "title": "ERP untuk Bisnis Ritel & F&B: Kelola Stok, Kasir, dan Cabang dalam Satu Sistem",
+    "description": "ERP untuk ritel dan F&B menyatukan kasir (POS), stok, dan laporan multi-cabang dalam satu sistem. Ketahui fitur wajib dan cara memilih ERP yang tepat.",
+    "date": "2026-07-03",
+    "readMinutes": 9,
+    "tags": [
+      "ERP",
+      "Ritel",
+      "F&B"
+    ],
+    "c": "#0E8C86",
+    "c2": "#15243B",
+    "excerpt": "Stok tidak sinkron antar cabang, laporan penjualan telat, dan owner tidak tahu kondisi bisnis real-time — ERP ritel & F&B menyelesaikan masalah ini dari akarnya."
+  },
+  {
+    "slug": "aplikasi-hr-payroll-digital",
+    "title": "Aplikasi HR & Payroll Digital: Solusi Modern Kelola Karyawan Tanpa Ribet",
+    "description": "Aplikasi HR & payroll digital membantu bisnis kelola absensi, gaji, cuti, dan data karyawan secara otomatis. Simak fitur wajib dan cara memulainya.",
+    "date": "2026-07-03",
+    "readMinutes": 8,
+    "tags": [
+      "Aplikasi Mobile",
+      "HR Tech",
+      "Bisnis"
+    ],
+    "c": "#1E88A8",
+    "c2": "#15243B",
+    "excerpt": "Absensi kertas dan payroll manual di Excel rawan human error dan memakan waktu tim HR. Kenali fitur aplikasi HR digital yang benar-benar dibutuhkan bisnis modern."
+  },
+  {
     "slug": "website-aplikasi-fondasi-pertumbuhan-bisnis",
     "title": "Website & Aplikasi Custom sebagai Fondasi Pertumbuhan Bisnis di Era Digital",
     "description": "Mengapa bisnis yang serius berinvestasi pada website dan aplikasi custom — bukan template atau tool SaaS generik — tumbuh lebih cepat dan memiliki keunggulan kompetitif yang berkelanjutan.",

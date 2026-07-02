@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Wed, 01 Jul 2026 05:12:42 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 17:12:09 GMT</lastBuildDate>
+    <item>
+      <title>Aplikasi Manajemen Logistik &amp; Armada: Efisiensi Rantai Pasok Bisnis</title>
+      <link>https://afss.tech/blog/aplikasi-logistik-manajemen-armada</link>
+      <guid>https://afss.tech/blog/aplikasi-logistik-manajemen-armada</guid>
+      <description>Pengiriman telat, rute tidak efisien, dan owner tidak tahu posisi armada secara real-time — aplikasi manajemen logistik menyelesaikan masalah operasional ini secara sistematis.</description>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi Mobile</category>
+      <category>Logistik</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>Omnichannel Commerce: Integrasi Website, Marketplace &amp; Aplikasi untuk Bisnis Ritel Modern</title>
+      <link>https://afss.tech/blog/omnichannel-commerce-integrasi-bisnis</link>
+      <guid>https://afss.tech/blog/omnichannel-commerce-integrasi-bisnis</guid>
+      <description>Pelanggan Anda berbelanja lewat marketplace, website, dan toko fisik — tapi apakah stok dan datanya terhubung? Inilah kenapa omnichannel bukan lagi pilihan, tapi keharusan.</description>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
+      <category>E-Commerce</category>
+      <category>Omnichannel</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>RPA (Robotic Process Automation): Otomasi Proses Bisnis untuk Efisiensi Operasional</title>
+      <link>https://afss.tech/blog/rpa-otomasi-proses-bisnis</link>
+      <guid>https://afss.tech/blog/rpa-otomasi-proses-bisnis</guid>
+      <description>Tim Anda masih copy-paste data antar sistem setiap hari? RPA bisa mengotomasi tugas repetitif itu tanpa harus mengganti sistem lama yang sudah berjalan.</description>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Otomasi</category>
+      <category>RPA</category>
+      <category>Teknologi</category>
+    </item>
+    <item>
+      <title>ERP untuk Bisnis Ritel &amp; F&amp;B: Kelola Stok, Kasir, dan Cabang dalam Satu Sistem</title>
+      <link>https://afss.tech/blog/erp-untuk-bisnis-ritel-fnb</link>
+      <guid>https://afss.tech/blog/erp-untuk-bisnis-ritel-fnb</guid>
+      <description>Stok tidak sinkron antar cabang, laporan penjualan telat, dan owner tidak tahu kondisi bisnis real-time — ERP ritel &amp; F&amp;B menyelesaikan masalah ini dari akarnya.</description>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
+      <category>ERP</category>
+      <category>Ritel</category>
+      <category>F&amp;B</category>
+    </item>
+    <item>
+      <title>Aplikasi HR &amp; Payroll Digital: Solusi Modern Kelola Karyawan Tanpa Ribet</title>
+      <link>https://afss.tech/blog/aplikasi-hr-payroll-digital</link>
+      <guid>https://afss.tech/blog/aplikasi-hr-payroll-digital</guid>
+      <description>Absensi kertas dan payroll manual di Excel rawan human error dan memakan waktu tim HR. Kenali fitur aplikasi HR digital yang benar-benar dibutuhkan bisnis modern.</description>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi Mobile</category>
+      <category>HR Tech</category>
+      <category>Bisnis</category>
+    </item>
     <item>
       <title>Website &amp; Aplikasi Custom sebagai Fondasi Pertumbuhan Bisnis di Era Digital</title>
       <link>https://afss.tech/blog/website-aplikasi-fondasi-pertumbuhan-bisnis</link>
