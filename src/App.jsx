@@ -79,37 +79,18 @@ const Reveal = ({ children, className = '', ...rest }) => (
   </motion.div>
 )
 
-/* ── AFSS logo mark — "AF" peak monogram + teal triangle.
-   Paths traced from official logo: A legs wide-open, F bars from right leg,
-   teal triangle centered inside A pointing up. ── */
-function AFMark({ light = false }) {
-  const peak = light ? '#FFFFFF' : 'var(--navy)'
-  const shadow = light
-    ? { filter: 'drop-shadow(0 1px 6px rgba(43,179,163,0.28))' }
-    : { filter: 'drop-shadow(0 2px 10px rgba(21,36,59,0.26)) drop-shadow(0 1px 4px rgba(14,140,134,0.18))' }
-  return (
-    <svg className="af-mark" viewBox="0 0 50 48" role="img" aria-label="Logo AFSS" fill="none"
-      strokeLinecap="round" strokeLinejoin="round" style={shadow}>
-      {/* A: wide open legs — left foot(5,43), peak(22,5), right foot/F-stem(34,43) */}
-      <path d="M5 43 L22 5 L34 43" stroke={peak} strokeWidth="7.5" />
-      {/* F top arm — extends right from the A peak */}
-      <path d="M22 5 L46 5" stroke={peak} strokeWidth="7.5" />
-      {/* F middle arm — starts where the right leg sits at this height */}
-      <path d="M28 23 L44 23" stroke={peak} strokeWidth="6.5" />
-      {/* teal triangle — upward-pointing, centered inside A */}
-      <path d="M15 36 L22 23 L29 36 Z" fill="var(--accent)" />
-    </svg>
-  )
-}
-
-const Logo = ({ footer }) => footer
-  ? (
-    <div className="ft-logo">
-      <span className="mark"><AFMark light /></span>
-      <span className="logo-word">AFSS</span>
-    </div>
-  )
-  : <img src="/logo.png" alt="AFSS" className="logo-img" width="120" height="40" />
+const Logo = ({ footer }) => (
+  <div className={footer ? 'ft-logo' : 'logo'}>
+    <img
+      src={footer ? '/logo-mark-light.png' : '/logo-mark.png'}
+      alt="AFSS"
+      className="af-mark"
+      width="40"
+      height="25"
+    />
+    <span className="logo-word">AFSS</span>
+  </div>
+)
 
 
 /* ════════════════════════════════════════════════ NAV */
