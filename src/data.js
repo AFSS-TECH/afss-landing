@@ -156,6 +156,10 @@ export const portfolioProjects = [
     tech:'React, Tailwind CSS, Vercel, SEO on-page',
     review:'Pasien baru sekarang sudah tahu treatment dan kisaran harga sebelum chat — tim front office kami tidak perlu jawab pertanyaan yang sama berulang kali setiap hari.',
     clientName:'Tim AFSS', clientRole:'Demo Project — Radiance Aesthetic Clinic',
+    image:'/portofolio/landing-page/radiance-aesthetic-clinic/mockup/hero.webp',
+    images:['/portofolio/landing-page/radiance-aesthetic-clinic/mockup/hero.webp','/portofolio/landing-page/radiance-aesthetic-clinic/mockup/catalog.webp','/portofolio/landing-page/radiance-aesthetic-clinic/mockup/gallery.webp','/portofolio/landing-page/radiance-aesthetic-clinic/mockup/mobile.webp'],
+    imageCaptions:['Beranda — headline utama, trust badge, dan CTA booking konsultasi','Katalog Treatment — daftar layanan populer dengan kisaran harga','Before & After — galeri hasil nyata per kategori treatment','Tampilan Mobile — booking konsultasi langsung dari HP'],
+    imagePortrait:[false,false,false,true],
     benefits:[
       { icon:'fa-solid fa-calendar-check', title:'Booking tanpa bolak-balik chat', desc:'Form booking terarah langsung ke WhatsApp dengan detail treatment yang diminati — admin tidak perlu tanya ulang dari awal.' },
       { icon:'fa-solid fa-images', title:'Before-after jadi alat percaya', desc:'Galeri hasil nyata per kategori treatment membantu calon pasien lebih yakin sebelum datang konsultasi.' },
@@ -171,6 +175,10 @@ export const portfolioProjects = [
     tech:'Next.js, Tailwind CSS, Google Sheets API, Vercel',
     review:'Calon peserta datang ke WhatsApp sudah tahu jadwal dan harga — pertanyaan berulang jauh berkurang, dan kami tidak lagi rekap manual pendaftar satu-satu.',
     clientName:'Tim AFSS', clientRole:'Demo Project — Skilva Digital Bootcamp',
+    image:'/portofolio/landing-page/skilva-digital-bootcamp/mockup/hero.webp',
+    images:['/portofolio/landing-page/skilva-digital-bootcamp/mockup/hero.webp','/portofolio/landing-page/skilva-digital-bootcamp/mockup/catalog.webp','/portofolio/landing-page/skilva-digital-bootcamp/mockup/gallery.webp','/portofolio/landing-page/skilva-digital-bootcamp/mockup/mobile.webp'],
+    imageCaptions:['Beranda — headline utama, countdown batch, dan visual code editor','Kurikulum — modul per batch dengan topik dan durasi jelas','Testimoni Alumni — cerita nyata dari peserta yang sudah lulus','Tampilan Mobile — pendaftaran batch langsung dari HP'],
+    imagePortrait:[false,false,false,true],
     benefits:[
       { icon:'fa-solid fa-graduation-cap', title:'Kurikulum jelas sejak awal', desc:'Calon peserta tahu materi, jadwal, dan harga sebelum mendaftar — mengurangi pertanyaan berulang ke panitia.' },
       { icon:'fa-solid fa-clock', title:'Urgensi tanpa paksaan', desc:'Countdown batch berjalan mendorong keputusan mendaftar lebih cepat, tanpa bahasa yang memaksa.' },
