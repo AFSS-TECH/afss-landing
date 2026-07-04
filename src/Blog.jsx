@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { marked } from 'marked'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import { Link } from './i18n/link.jsx'
 import { Head } from 'vite-react-ssg'
 import { motion } from 'framer-motion'
 import { BRAND, waLink } from './data.js'

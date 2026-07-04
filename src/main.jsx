@@ -4,52 +4,69 @@ import { Layout, Home } from './App.jsx'
 import { LayananIndex, LayananDetail, About, Contact, Portfolio, PortfolioDetail, Estimasi, Privacy, Terms, Keunggulan, Harga, Faq, Karir, AjukanProyek, Dashboard } from './Pages.jsx'
 import { postsMeta } from './blog-meta.js'
 import { products, portfolioProjects } from './data.js'
+import { LOCALES, LOCALE_PREFIX, DEFAULT_LOCALE } from './i18n/locales.js'
 
 // Multi-route SSG: every route is prerendered to its own static HTML file for full crawlability.
 // Blog routes are lazy-loaded (`lazy:`) so src/blog.js (~600KB of article markdown) only
 // downloads when a visitor actually opens /blog — every other page (home, portofolio, harga,
 // etc.) no longer pays that weight. The homepage teaser instead reads the lightweight
 // `blog-meta.js` (titles/excerpts only, no article body).
-export const routes = [
-  {
-    path: '/',
-    element: <Layout />,
-    children: [
-      { index: true, element: <Home /> },
-      // Blog (lazy chunk — only loaded on /blog/*)
+//
+// i18n: the whole route tree below is built once per supported locale (id/en/zh) via
+// `buildRouteTree(locale)`, each mounted at its own prefix ('' for id, '/en', '/zh' — see
+// src/i18n/locales.js). Adding a new language later is just one more locale in that list;
+// nothing here needs to change. Blog + legal pages are Indonesian-only for now (see
+// isDefaultLocale below) so /en/* and /zh/* never link to an untranslated page.
+function buildRouteTree(locale) {
+  const prefix = LOCALE_PREFIX[locale]
+  const abs = (path) => prefix + path // absolute path for getStaticPaths, e.g. '/en/layanan/erp'
+  const isDefaultLocale = locale === DEFAULT_LOCALE
+
+  const children = [
+    { index: true, element: <Home /> },
+    // Layanan
+    { path: 'layanan', element: <LayananIndex /> },
+    {
+      path: 'layanan/:slug',
+      element: <LayananDetail />,
+      getStaticPaths: () => products.map((p) => abs(`/layanan/${p.slug}`)),
+    },
+    // Static pages
+    { path: 'tentang', element: <About /> },
+    { path: 'kontak', element: <Contact /> },
+    { path: 'portofolio', element: <Portfolio /> },
+    {
+      path: 'portofolio/:slug',
+      element: <PortfolioDetail />,
+      getStaticPaths: () => portfolioProjects.map((p) => abs(`/portofolio/${p.slug}`)),
+    },
+    { path: 'estimasi', element: <Estimasi /> },
+    { path: 'keunggulan', element: <Keunggulan /> },
+    { path: 'harga', element: <Harga /> },
+    { path: 'faq', element: <Faq /> },
+    { path: 'karir', element: <Karir /> },
+    { path: 'ajukan-proyek', element: <AjukanProyek /> },
+    { path: 'dashboard', element: <Dashboard /> },
+  ]
+
+  // Blog (lazy chunk — only loaded on /blog/*) + legal pages: Indonesian-only
+  // until Phase 2/3 of the i18n rollout translate them.
+  if (isDefaultLocale) {
+    children.push(
       { path: 'blog', lazy: async () => { const m = await import('./Blog.jsx'); return { Component: m.BlogIndex } } },
       {
         path: 'blog/:slug',
         lazy: async () => { const m = await import('./Blog.jsx'); return { Component: m.BlogPost } },
-        getStaticPaths: () => postsMeta.map((p) => `/blog/${p.slug}`),
+        getStaticPaths: () => postsMeta.map((p) => abs(`/blog/${p.slug}`)),
       },
-      // Layanan
-      { path: 'layanan', element: <LayananIndex /> },
-      {
-        path: 'layanan/:slug',
-        element: <LayananDetail />,
-        getStaticPaths: () => products.map((p) => `/layanan/${p.slug}`),
-      },
-      // Static pages
-      { path: 'tentang', element: <About /> },
-      { path: 'kontak', element: <Contact /> },
-      { path: 'portofolio', element: <Portfolio /> },
-      {
-        path: 'portofolio/:slug',
-        element: <PortfolioDetail />,
-        getStaticPaths: () => portfolioProjects.map(p => `/portofolio/${p.slug}`),
-      },
-      { path: 'estimasi', element: <Estimasi /> },
       { path: 'privacy', element: <Privacy /> },
       { path: 'terms', element: <Terms /> },
-      { path: 'keunggulan', element: <Keunggulan /> },
-      { path: 'harga', element: <Harga /> },
-      { path: 'faq', element: <Faq /> },
-      { path: 'karir', element: <Karir /> },
-      { path: 'ajukan-proyek', element: <AjukanProyek /> },
-      { path: 'dashboard', element: <Dashboard /> },
-    ],
-  },
-]
+    )
+  }
+
+  return { path: prefix || '/', element: <Layout />, children }
+}
+
+export const routes = LOCALES.map(buildRouteTree)
 
 export const createRoot = ViteReactSSG({ routes })

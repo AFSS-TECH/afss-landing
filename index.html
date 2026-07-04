@@ -12,9 +12,9 @@
   <link rel="alternate" type="application/rss+xml" title="Blog AFSS" href="https://afss.tech/rss.xml" />
 
   <!-- Global defaults. Per-page tags (title, description, canonical, og:title/description/url/type,
-       twitter:title/description) are set per-route via vite-react-ssg <Head> to avoid duplicates. -->
+       twitter:title/description, og:locale, hreflang) are set per-route via vite-react-ssg <Head>
+       (see src/i18n/HreflangTags.jsx) to avoid duplicates across id/en/zh. -->
   <meta property="og:site_name" content="AFSS — Advanced Future Software Solutions" />
-  <meta property="og:locale" content="id_ID" />
   <meta name="twitter:card" content="summary_large_image" />
   <!-- og:image / twitter:image are set per-route via <Head> (home & blog index use og.png, posts use their own cover) -->
 

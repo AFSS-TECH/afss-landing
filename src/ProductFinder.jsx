@@ -4,9 +4,10 @@
 // people who'd rather click. Either path ends in the same product recommendation.
 import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link } from './i18n/link.jsx'
 import { Icon } from './Icon.jsx'
 import { products, waLink, BRAND } from './data.js'
+import { useLocale, pick } from './i18n/context.jsx'
 
 // keyword → product slug, used to score free-text input against each product.
 // Multi-word phrases score higher (specific intent); single words are broader
@@ -60,44 +61,14 @@ function matchProduct(text) {
   return products.find((p) => p.slug === scores[0].slug) || null
 }
 
-// fallback branching Q&A — for visitors who'd rather click than type
-const TREE = {
-  start: {
-    q: 'Boleh, apa tujuan utama proyeknya?',
-    options: [
-      { label: 'Jualan produk/jasa online', next: 'jual' },
-      { label: 'Bangun kepercayaan & profil bisnis', next: 'company-profile' },
-      { label: 'Kelola operasional internal bisnis', next: 'internal' },
-      { label: 'Kampanye/promosi sesaat (iklan, produk baru, event)', next: 'landing-page' },
-    ],
-  },
-  jual: {
-    q: 'Siap. Ini toko/brand Anda sendiri, atau platform untuk banyak penjual berbeda?',
-    options: [
-      { label: 'Toko/brand saya sendiri', next: 'ecommerce' },
-      { label: 'Banyak penjual berbeda (marketplace)', next: 'marketplace' },
-    ],
-  },
-  internal: {
-    q: 'Fokus utama operasionalnya yang mana?',
-    options: [
-      { label: 'Keuangan, inventory & SDM dalam satu sistem terpusat', next: 'erp' },
-      { label: 'Sistem/dashboard custom sesuai alur kerja spesifik', next: 'software-custom' },
-    ],
-  },
-}
-
-const QUICK_PROMPTS = [
-  'Saya mau jualan baju online, butuh apa?',
-  'Butuh sistem buat kelola stok & keuangan pabrik',
-  'Mau bikin website biar keliatan lebih profesional',
-]
-
 export function ProductFinder() {
+  const { locale, t } = useLocale()
+  const TREE = t('finder.tree')
+  const QUICK_PROMPTS = t('finder.quickPrompts')
   const [open, setOpen] = useState(false)
   const [input, setInput] = useState('')
   const [thread, setThread] = useState([
-    { from: 'bot', text: 'Halo! Ceritakan kebutuhan bisnis Anda dalam kalimat sendiri, atau pilih salah satu di bawah — saya bantu cari layanan yang paling cocok.' },
+    { from: 'bot', text: t('finder.greeting') },
   ])
   const [nodeId, setNodeId] = useState(null) // active fallback-tree node, if any
   const [result, setResult] = useState(null)
@@ -108,11 +79,9 @@ export function ProductFinder() {
   }, [thread, nodeId, result])
 
   const showResult = (product, viaText) => {
-    setResult(product)
+    setResult(pick(product, locale))
     setNodeId(null)
-    setThread((h) => [...h, { from: 'bot', text: viaText
-      ? `Berdasarkan cerita Anda, ini yang paling cocok:`
-      : `Berdasarkan jawaban Anda, ini yang paling cocok:` }])
+    setThread((h) => [...h, { from: 'bot', text: viaText ? t('finder.viaText') : t('finder.viaTree') }])
   }
 
   const handleFreeText = (text) => {
@@ -125,12 +94,11 @@ export function ProductFinder() {
       showResult(match, true)
     } else {
       setNodeId('start')
-      setThread((h) => [...h, { from: 'bot', text: 'Boleh dibantu lebih spesifik? Pilih salah satu yang paling dekat dengan kebutuhan Anda:' }])
+      setThread((h) => [...h, { from: 'bot', text: t('finder.clarify') }])
     }
   }
 
   const choose = (opt) => {
-    const node = TREE[nodeId]
     setThread((h) => [...h, { from: 'user', text: opt.label }])
     if (TREE[opt.next]) {
       setNodeId(opt.next)
@@ -144,7 +112,7 @@ export function ProductFinder() {
   const reset = () => {
     setNodeId(null)
     setResult(null)
-    setThread([{ from: 'bot', text: 'Oke, mulai lagi. Ceritakan kebutuhan Anda, atau pilih dari opsi di bawah.' }])
+    setThread([{ from: 'bot', text: t('finder.restartMsg') }])
   }
 
   const node = nodeId ? TREE[nodeId] : null
@@ -154,7 +122,7 @@ export function ProductFinder() {
       <motion.button
         className="finder-fab"
         onClick={() => setOpen((o) => !o)}
-        title="Bantu cari produk yang cocok"
+        title={t('finder.fabTitle')}
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         whileHover={{ scale: 1.08 }}
@@ -175,15 +143,15 @@ export function ProductFinder() {
             <div className="finder-head">
               <div className="finder-head-ico"><Icon icon="fa-solid fa-comments" /></div>
               <div>
-                <div className="finder-head-title">Cari Produk yang Cocok</div>
-                <div className="finder-head-sub">Chat singkat berbasis kata kunci — bukan AI generatif, langsung dipetakan ke layanan kami.</div>
+                <div className="finder-head-title">{t('finder.headTitle')}</div>
+                <div className="finder-head-sub">{t('finder.headSub')}</div>
               </div>
-              <button className="finder-close" onClick={() => setOpen(false)} aria-label="Tutup"><Icon icon="fa-solid fa-xmark" /></button>
+              <button className="finder-close" onClick={() => setOpen(false)} aria-label={t('finder.close')}><Icon icon="fa-solid fa-xmark" /></button>
             </div>
 
             <div className="finder-body" ref={bodyRef}>
-              {thread.map((t, i) => (
-                <div key={i} className={`finder-bubble ${t.from}`}>{t.text}</div>
+              {thread.map((msg, i) => (
+                <div key={i} className={`finder-bubble ${msg.from}`}>{msg.text}</div>
               ))}
 
               {!result && node && (
@@ -212,18 +180,18 @@ export function ProductFinder() {
                     <p className="finder-card-desc">{result.desc}</p>
                     <div className="finder-card-ctas">
                       <Link to={`/layanan/${result.slug}`} className="btn btn-pri" onClick={() => setOpen(false)}>
-                        Lihat Detail <Icon icon="fa-solid fa-arrow-right" />
+                        {t('finder.viewDetail')} <Icon icon="fa-solid fa-arrow-right" />
                       </Link>
                       <a
-                        href={waLink(`Halo ${BRAND.short}, saya tertarik dengan layanan ${result.name}. Boleh konsultasi?`)}
+                        href={waLink(t('finder.waAsk', { brand: BRAND.short, product: result.name }))}
                         target="_blank" rel="noreferrer" className="btn btn-wa"
                       >
-                        <Icon icon="fa-brands fa-whatsapp" /> Tanya via WhatsApp
+                        <Icon icon="fa-brands fa-whatsapp" /> {t('finder.askWa')}
                       </a>
                     </div>
                   </div>
                   <button className="finder-restart" onClick={reset}>
-                    <Icon icon="fa-solid fa-rotate-left" /> Mulai ulang
+                    <Icon icon="fa-solid fa-rotate-left" /> {t('finder.restart')}
                   </button>
                 </div>
               )}
@@ -238,10 +206,10 @@ export function ProductFinder() {
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder="Ketik kebutuhan Anda di sini..."
+                  placeholder={t('finder.placeholder')}
                   className="finder-input"
                 />
-                <button type="submit" className="finder-send" aria-label="Kirim"><Icon icon="fa-solid fa-paper-plane" /></button>
+                <button type="submit" className="finder-send" aria-label={t('finder.send')}><Icon icon="fa-solid fa-paper-plane" /></button>
               </form>
             )}
           </motion.div>

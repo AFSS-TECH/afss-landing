@@ -6,6 +6,7 @@ import { dirname, join } from 'node:path'
 import { posts } from '../src/blog.js'
 import { products, portfolioProjects } from '../src/data.js'
 import { SITE_URL } from '../src/site.js'
+import { LOCALES, LOCALE_PREFIX, HREFLANG } from '../src/i18n/locales.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const pub = join(__dirname, '..', 'public')
@@ -15,41 +16,66 @@ const xmlEsc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/
 const byDateDesc = [...posts].sort((a, b) => (a.date < b.date ? 1 : -1))
 
 // ── sitemap.xml ──
+// Every core/service/portfolio page exists under all 3 locale trees (id/en/zh —
+// see src/main.jsx's buildRouteTree), so each gets one <url> per locale with
+// xhtml:link hreflang alternates pointing at its siblings + x-default. Blog and
+// legal pages are Indonesian-only for now (Phase 2/3 of the i18n rollout — see
+// buildRouteTree's isDefaultLocale branch), so they get a single, unprefixed
+// <url> with no alternates.
+const withLocale = (locale, path) => {
+  const prefix = LOCALE_PREFIX[locale] || ''
+  if (!prefix) return path
+  return path === '/' ? prefix : prefix + path
+}
+
+const localizedEntries = (path, { changefreq, priority, lastmod }) => {
+  const variants = LOCALES.map((l) => ({ locale: l, loc: `${SITE_URL}${withLocale(l, path)}` }))
+  return variants.map(({ locale, loc }) => ({
+    loc, lastmod: lastmod || today, changefreq, priority,
+    alternates: [
+      ...variants.map((v) => ({ hreflang: HREFLANG[v.locale], href: v.loc })),
+      { hreflang: 'x-default', href: `${SITE_URL}${path}` },
+    ],
+  }))
+}
+
+const CORE_PATHS = [
+  { path: '/', changefreq: 'weekly', priority: '1.0' },
+  { path: '/layanan', changefreq: 'weekly', priority: '0.9' },
+  { path: '/harga', changefreq: 'weekly', priority: '0.9' },
+  { path: '/portofolio', changefreq: 'weekly', priority: '0.8' },
+  { path: '/kontak', changefreq: 'monthly', priority: '0.8' },
+  { path: '/keunggulan', changefreq: 'monthly', priority: '0.8' },
+  { path: '/faq', changefreq: 'monthly', priority: '0.8' },
+  { path: '/tentang', changefreq: 'monthly', priority: '0.7' },
+  { path: '/karir', changefreq: 'monthly', priority: '0.6' },
+  { path: '/ajukan-proyek', changefreq: 'monthly', priority: '0.8' },
+]
+// Indonesian-only for now — no locale alternates to link to yet.
+const ID_ONLY_PATHS = [
+  { path: '/blog', changefreq: 'weekly', priority: '0.8' },
+  { path: '/privacy', changefreq: 'yearly', priority: '0.3' },
+  { path: '/terms', changefreq: 'yearly', priority: '0.3' },
+]
+
 const urls = [
-  { loc: `${SITE_URL}/`, lastmod: today, changefreq: 'weekly', priority: '1.0' },
-  // Core pages
-  { loc: `${SITE_URL}/layanan`, lastmod: today, changefreq: 'weekly', priority: '0.9' },
-  { loc: `${SITE_URL}/harga`, lastmod: today, changefreq: 'weekly', priority: '0.9' },
-  { loc: `${SITE_URL}/blog`, lastmod: today, changefreq: 'weekly', priority: '0.8' },
-  { loc: `${SITE_URL}/portofolio`, lastmod: today, changefreq: 'weekly', priority: '0.8' },
-  { loc: `${SITE_URL}/kontak`, lastmod: today, changefreq: 'monthly', priority: '0.8' },
-  { loc: `${SITE_URL}/keunggulan`, lastmod: today, changefreq: 'monthly', priority: '0.8' },
-  { loc: `${SITE_URL}/faq`, lastmod: today, changefreq: 'monthly', priority: '0.8' },
-  { loc: `${SITE_URL}/tentang`, lastmod: today, changefreq: 'monthly', priority: '0.7' },
-  { loc: `${SITE_URL}/karir`, lastmod: today, changefreq: 'monthly', priority: '0.6' },
-  { loc: `${SITE_URL}/ajukan-proyek`, lastmod: today, changefreq: 'monthly', priority: '0.8' },
-  { loc: `${SITE_URL}/privacy`, lastmod: today, changefreq: 'yearly', priority: '0.3' },
-  { loc: `${SITE_URL}/terms`, lastmod: today, changefreq: 'yearly', priority: '0.3' },
+  ...CORE_PATHS.flatMap((p) => localizedEntries(p.path, p)),
   // Service pages (high priority — keyword-rich landing pages)
-  ...products.map((p) => ({
-    loc: `${SITE_URL}/layanan/${p.slug}`, lastmod: today, changefreq: 'monthly', priority: '0.85',
-  })),
+  ...products.flatMap((p) => localizedEntries(`/layanan/${p.slug}`, { changefreq: 'monthly', priority: '0.85' })),
   // Portfolio detail pages
-  ...portfolioProjects.map((p) => ({
-    loc: `${SITE_URL}/portofolio/${p.slug}`, lastmod: today, changefreq: 'monthly', priority: '0.7',
-  })),
-  // Blog posts
-  ...byDateDesc.map((p) => ({
-    loc: `${SITE_URL}/blog/${p.slug}`, lastmod: p.date, changefreq: 'monthly', priority: '0.7',
-  })),
+  ...portfolioProjects.flatMap((p) => localizedEntries(`/portofolio/${p.slug}`, { changefreq: 'monthly', priority: '0.7' })),
+  // Indonesian-only sections
+  ...ID_ONLY_PATHS.map((p) => ({ loc: `${SITE_URL}${p.path}`, lastmod: today, changefreq: p.changefreq, priority: p.priority, alternates: [] })),
+  ...byDateDesc.map((p) => ({ loc: `${SITE_URL}/blog/${p.slug}`, lastmod: p.date, changefreq: 'monthly', priority: '0.7', alternates: [] })),
 ]
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls.map((u) => `  <url>
     <loc>${u.loc}</loc>
     <lastmod>${u.lastmod}</lastmod>
     <changefreq>${u.changefreq}</changefreq>
     <priority>${u.priority}</priority>
+${u.alternates.map((a) => `    <xhtml:link rel="alternate" hreflang="${a.hreflang}" href="${a.href}" />`).join('\n')}
   </url>`).join('\n')}
 </urlset>
 `
