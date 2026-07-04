@@ -120,7 +120,7 @@ const SERVICE_CONTENT = {
       { icon: 'fa-solid fa-coins', title: 'Modul Keuangan & Akuntansi', desc: 'Pembukuan, faktur, laporan laba-rugi, dan arus kas — semua tercatat otomatis dan akurat.' },
       { icon: 'fa-solid fa-warehouse', title: 'Manajemen Inventory & Gudang', desc: 'Stok real-time, mutasi barang, dan peringatan stok minimum agar tidak ada kehabisan atau kelebihan.' },
       { icon: 'fa-solid fa-users', title: 'HR & Penggajian', desc: 'Data karyawan, absensi, perhitungan gaji, dan slip gaji otomatis — terintegrasi dengan BPJS dan PPh 21.' },
-      { icon: 'fa-solid fa-file-chart-column', title: 'Dashboard Eksekutif', desc: 'KPI utama bisnis Anda bisa diakses kapan saja dari perangkat apa pun.' },
+      { icon: 'fa-solid fa-chart-column', title: 'Dashboard Eksekutif', desc: 'KPI utama bisnis Anda bisa diakses kapan saja dari perangkat apa pun.' },
     ],
     serviceFaq: [
       { q: 'Berapa lama implementasi ERP?', a: 'ERP sederhana 2–3 modul: 8–12 minggu. ERP lengkap: 4–6 bulan termasuk migrasi data dan training tim.' },
@@ -300,7 +300,7 @@ const SERVICE_CONTENT = {
       { icon: 'fa-solid fa-coins', title: 'Modul Keuangan & Akuntansi', desc: 'Pembukuan, faktur, laporan laba-rugi, dan arus kas — semua tercatat otomatis dan akurat.' },
       { icon: 'fa-solid fa-warehouse', title: 'Manajemen Inventory & Gudang', desc: 'Stok real-time, mutasi barang, dan peringatan stok minimum agar tidak ada kehabisan atau kelebihan stok.' },
       { icon: 'fa-solid fa-users', title: 'HR & Penggajian', desc: 'Data karyawan, absensi, perhitungan gaji, dan slip gaji otomatis — terintegrasi dengan BPJS dan PPh 21.' },
-      { icon: 'fa-solid fa-file-chart-column', title: 'Laporan Manajemen', desc: 'Dashboard eksekutif dengan KPI utama bisnis Anda — bisa diakses kapan saja, dari perangkat apa pun.' },
+      { icon: 'fa-solid fa-chart-column', title: 'Laporan Manajemen', desc: 'Dashboard eksekutif dengan KPI utama bisnis Anda — bisa diakses kapan saja, dari perangkat apa pun.' },
     ],
     serviceFaq: [
       { q: 'Berapa lama implementasi ERP?', a: 'ERP sederhana (1–3 modul) biasanya 8–12 minggu. ERP lengkap bisa 4–6 bulan termasuk migrasi data dan training tim.' },
@@ -392,7 +392,7 @@ const SVC_CATS = [
 ]
 
 export function LayananIndex() {
-  const title = 'Layanan AFSS — Landing Page, Company Profile, Software, ERP, E-Commerce & Marketplace'
+  const title = 'Layanan AFSS — Website, Software & ERP Custom'
   const desc = 'Jasa pembuatan landing page, company profile, software custom, ERP, e-commerce, dan marketplace. Software house Indonesia terpercaya, tim lokal Medan.'
   return (
     <>
@@ -1070,7 +1070,7 @@ const PORTO_TABS = [
 ]
 
 export function Portfolio() {
-  const title = 'Portofolio AFSS — Landing Page, Company Profile, Software, ERP, App & Marketplace'
+  const title = 'Portofolio AFSS — Karya Website & Software Custom'
   const desc = 'Lihat karya nyata AFSS: landing page UMKM, company profile, software custom, ERP, app mobile, e-commerce, dan marketplace. Klik untuk detail & hasil.'
   const [activeTab, setActiveTab] = useState('semua')
 
@@ -1445,7 +1445,7 @@ export function Estimasi() {
       </section>
 
       <section style={{ paddingTop: 20, paddingBottom: 80, background: 'var(--ink)', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 900px 500px at 50% -10%, rgba(37,99,255,.22), transparent 60%), radial-gradient(circle 400px at 90% 100%, rgba(16,199,178,.16), transparent 60%)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 900px 500px at 50% -10%, rgba(169,113,31,.22), transparent 60%), radial-gradient(circle 400px at 90% 100%, rgba(16,199,178,.16), transparent 60%)', pointerEvents: 'none' }} />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="est-wrap">
             <div className="est-left">
@@ -1790,7 +1790,7 @@ export function Keunggulan() {
 
 /* ══════════════════════════════════════════════════ HARGA (/harga) */
 export function Harga() {
-  const title = 'Harga Jasa Website, Aplikasi & Sistem | AFSS — Transparan, Tanpa Biaya Tersembunyi'
+  const title = 'Harga Jasa Website, Aplikasi & Sistem | AFSS'
   const desc = 'Landing page Rp 1,5 jt, company profile Rp 6 jt, ERP Rp 20 jt, app mobile Rp 15 jt, e-commerce Rp 35 jt, marketplace Rp 50 jt. Paket kombinasi hemat tersedia.'
 
   const catColor = { 'Website': 'var(--accent)', 'Sistem': '#1E88A8', 'Mobile': '#8B5CF6', 'E-Commerce': '#D97706' }
@@ -2561,7 +2561,7 @@ export function Dashboard() {
                     <div className="sub-row"><Icon icon="fa-solid fa-phone" /> {s.kontak}</div>
                     <div className="sub-row"><Icon icon="fa-solid fa-layer-group" /> {s.jenis}</div>
                     {s.anggaran && <div className="sub-row"><Icon icon="fa-solid fa-coins" /> {s.anggaran}</div>}
-                    {s.timeline && <div className="sub-row"><Icon icon="fa-regular fa-calendar" /> {s.timeline}</div>}
+                    {s.timeline && <div className="sub-row"><Icon icon="fa-solid fa-calendar" /> {s.timeline}</div>}
                   </div>
 
                   {s.deskripsi && (

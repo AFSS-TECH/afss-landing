@@ -160,8 +160,7 @@ export function Nav() {
 
 
 /* ════════════════════════════════════════════════ HERO */
-function Hero({ reduce }) {
-  const floatA = reduce ? {} : { animate: { y: [0, -12, 0] }, transition: { duration: 6, repeat: Infinity, ease: 'easeInOut' } }
+function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-glow" />
@@ -172,7 +171,7 @@ function Hero({ reduce }) {
             Software House untuk Bisnis Indonesia
           </motion.div>
           <motion.h1 variants={fadeUp}>
-            Bangun Website, Aplikasi Mobile &amp; <span className="grad">Sistem Bisnis Digital</span> dengan Harga Masuk Akal
+            Bangun Website, Aplikasi Mobile &amp; <span className="ital">Sistem Bisnis Digital</span> dengan Harga Masuk Akal
           </motion.h1>
           <motion.p className="lead" variants={fadeUp}>
             AFSS membantu bisnis Indonesia memiliki website, dashboard, aplikasi mobile, hingga ERP custom yang profesional, mudah digunakan, dan bisa dikembangkan sesuai kebutuhan.
@@ -186,54 +185,46 @@ function Hero({ reduce }) {
           </motion.div>
         </motion.div>
 
-        <motion.div className="hero-visual" initial={{ opacity: 0, y: 26, scale: 0.97 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}>
-          {/* Browser window mockup */}
-          <div className="hero-browser">
-            <div className="br-bar">
-              <i style={{ background: '#FF6058' }} />
-              <i style={{ background: '#FFBD2E' }} />
-              <i style={{ background: '#28C840' }} />
-              <div className="br-url" />
+        {/* Blueprint spec plate — a build manifest for what AFSS actually ships, not a fake SaaS dashboard */}
+        <motion.div className="hero-visual" initial={{ opacity: 0, y: 26 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}>
+          <div className="bp-plate">
+            <i className="corner tl" /><i className="corner tr" /><i className="corner bl" /><i className="corner br" />
+            <div className="bp-head">
+              <span className="bp-tag">AFSS / BUILD SPEC</span>
+              <span className="bp-status"><span className="dot" /> Dalam Pengerjaan</span>
             </div>
-            <div className="br-body">
-              <div className="br-row">
-                <div className="br-text">
-                  <div className="br-h" />
-                  <div className="br-p" />
-                  <div className="br-p w60" />
-                  <div className="br-btn" />
-                </div>
-                <div className="br-img" />
+            <div className="bp-title">Website <span className="ital">→</span> Dashboard <span className="ital">→</span> ERP</div>
+            <div className="bp-flow">
+              <div className="bp-node">
+                <div className="bp-node-ico"><Icon icon="fa-solid fa-window-maximize" /></div>
+                <div className="bp-node-lbl">Website / App</div>
               </div>
-              <div className="br-grid">
-                <div className="br-grid-item" />
-                <div className="br-grid-item" />
-                <div className="br-grid-item" />
+              <div className="bp-connector" />
+              <div className="bp-node">
+                <div className="bp-node-ico"><Icon icon="fa-solid fa-gauge-high" /></div>
+                <div className="bp-node-lbl">Dashboard</div>
+              </div>
+              <div className="bp-connector" />
+              <div className="bp-node">
+                <div className="bp-node-ico"><Icon icon="fa-solid fa-circle-nodes" /></div>
+                <div className="bp-node-lbl">ERP / Sistem</div>
+              </div>
+            </div>
+            <div className="bp-stats">
+              <div className="bp-stat">
+                <div className="bp-stat-num">100%</div>
+                <div className="bp-stat-lbl">Kode milik klien</div>
+              </div>
+              <div className="bp-stat">
+                <div className="bp-stat-num">30–90 Hari</div>
+                <div className="bp-stat-lbl">Garansi bug gratis</div>
+              </div>
+              <div className="bp-stat">
+                <div className="bp-stat-num">24/7</div>
+                <div className="bp-stat-lbl">Maintenance &amp; support</div>
               </div>
             </div>
           </div>
-
-          {/* Dark dashboard card (generic mockup, no fabricated figures) */}
-          <motion.div className="hero-revenue" {...floatA}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
-              <span className="rev-label">Dashboard Bisnis Real-time</span>
-            </div>
-            <div className="rev-bars">
-              {[40, 58, 46, 74, 64, 92].map((h, i) => (
-                <div key={i} className={`rev-bar${h >= 70 ? ' hi' : ''}`} style={{ height: `${h}%` }} />
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Float cards — genuine policy guarantees, not performance claims */}
-          <motion.div className="float-card fc-1" animate={reduce ? {} : { y: [0, 9, 0] }} transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}>
-            <div className="fc-ico" style={{ background: 'var(--wa)' }}><Icon icon="fa-solid fa-code" /></div>
-            <div><div className="fc-big">100%</div><div className="fc-sm">Kode milik klien</div></div>
-          </motion.div>
-          <motion.div className="float-card" style={{ bottom: 90, left: -10, zIndex: 3 }} animate={reduce ? {} : { y: [0, -7, 0] }} transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 1.2 }}>
-            <div className="fc-ico" style={{ background: 'var(--blue)' }}><Icon icon="fa-solid fa-shield-halved" /></div>
-            <div><div className="fc-big">30–90 Hari</div><div className="fc-sm">Garansi bug gratis</div></div>
-          </motion.div>
         </motion.div>
       </div>
     </section>
@@ -503,17 +494,21 @@ export function Footer({ trimmed = false }) {
         <div>
           <div className="ft-head">Layanan</div>
           <ul className="ft-links">
-            <li><Link to="/layanan/pembuatan-website">Pembuatan Website Custom</Link></li>
-            <li><Link to="/layanan/aplikasi-mobile">Aplikasi Mobile Android &amp; iOS</Link></li>
-            <li><Link to="/layanan/web-app">Web App &amp; Sistem Internal</Link></li>
-            <li><Link to="/layanan/maintenance">Maintenance &amp; Support</Link></li>
+            <li><Link to="/layanan/landing-page">Landing Page</Link></li>
+            <li><Link to="/layanan/company-profile">Company Profile</Link></li>
+            <li><Link to="/layanan/software-custom">Software Custom</Link></li>
+            <li><Link to="/layanan/erp">ERP Custom</Link></li>
+            <li><Link to="/layanan/ecommerce">E-Commerce</Link></li>
+            <li><Link to="/layanan/marketplace">Marketplace</Link></li>
           </ul>
         </div>
         <div>
           <div className="ft-head">Perusahaan</div>
           <ul className="ft-links">
             <li><Link to="/tentang">Tentang Kami</Link></li>
+            <li><Link to="/keunggulan">Keunggulan</Link></li>
             <li><Link to="/portofolio">Portofolio</Link></li>
+            <li><Link to="/estimasi">Estimasi Biaya</Link></li>
             <li><Link to="/kontak">Kontak</Link></li>
             <li><Link to="/harga">Paket Harga</Link></li>
             <li><Link to="/blog">Blog</Link></li>
@@ -757,7 +752,7 @@ export function Home() {
         <meta property="og:image:height" content="630" />
         <meta name="twitter:image" content="https://afss.tech/og.png" />
       </Head>
-      <Hero reduce={reduce} />
+      <Hero />
       <StatsBand />
       <TrustBar />
       <WhyUs />
