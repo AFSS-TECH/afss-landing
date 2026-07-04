@@ -37,6 +37,17 @@ export function withLocale(locale, path) {
   return path === '/' ? prefix : prefix + path
 }
 
+// Same as withLocale(), but falls back to the target locale's homepage when
+// `path` is under an ID_ONLY_SECTIONS path (blog/privacy/terms) — those pages
+// don't exist under /en or /zh yet, so linking straight to them would 404.
+// Use this (not withLocale) for any link a visitor can trigger while already
+// on the site, e.g. the language switcher.
+export function safeLocalePath(locale, path) {
+  const isIdOnly = ID_ONLY_SECTIONS.some((p) => path === p || path.startsWith(p + '/'))
+  if (isIdOnly && locale !== DEFAULT_LOCALE) return withLocale(locale, '/')
+  return withLocale(locale, path)
+}
+
 // Persists an explicit language choice so the Accept-Language edge middleware
 // (middleware.js) never overrides it on a later visit.
 export function setLocaleCookie(locale) {

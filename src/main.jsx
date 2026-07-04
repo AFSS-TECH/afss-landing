@@ -1,6 +1,6 @@
 import './index.css'
 import { ViteReactSSG } from 'vite-react-ssg'
-import { Layout, Home } from './App.jsx'
+import { Layout, Home, NotFound } from './App.jsx'
 import { LayananIndex, LayananDetail, About, Contact, Portfolio, PortfolioDetail, Estimasi, Privacy, Terms, Keunggulan, Harga, Faq, Karir, AjukanProyek, Dashboard } from './Pages.jsx'
 import { postsMeta } from './blog-meta.js'
 import { products, portfolioProjects } from './data.js'
@@ -63,6 +63,11 @@ function buildRouteTree(locale) {
       { path: 'terms', element: <Terms /> },
     )
   }
+
+  // Catch-all — must be last. Covers any unmatched path (e.g. an id-only
+  // section like /blog reached under /en or /zh) with a proper branded 404
+  // instead of React Router's default error boundary.
+  children.push({ path: '*', element: <NotFound /> })
 
   return { path: prefix || '/', element: <Layout />, children }
 }

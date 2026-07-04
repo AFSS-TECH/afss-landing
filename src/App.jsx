@@ -15,7 +15,7 @@ import { SITE_URL, formatDateId } from './site.js'
 import { postsMeta } from './blog-meta.js'
 import { Link, RawLink } from './i18n/link.jsx'
 import { LocaleProvider, useLocale, pick } from './i18n/context.jsx'
-import { LOCALES, LOCALE_SHORT, withLocale, setLocaleCookie } from './i18n/locales.js'
+import { LOCALES, LOCALE_SHORT, withLocale, safeLocalePath, setLocaleCookie } from './i18n/locales.js'
 import { useHreflangTags } from './i18n/HreflangTags.jsx'
 
 /* ── Motion presets — enter recipe: opacity + y, smooth easing (GPU-cheap, no filter) ── */
@@ -105,7 +105,7 @@ function LangSwitcher({ mobile, onNavigate }) {
       {LOCALES.map((l) => (
         <RawLink
           key={l}
-          to={withLocale(l, path)}
+          to={safeLocalePath(l, path)}
           className={`lang-opt${l === locale ? ' active' : ''}`}
           onClick={() => { setLocaleCookie(l); onNavigate?.() }}
         >
@@ -761,6 +761,33 @@ function LayoutInner() {
       <Footer />
       <SmartWA reduce={reduce} />
       <ProductFinder />
+    </>
+  )
+}
+
+/* ════════════════════════════════════════════════ 404 — catch-all for unmatched paths
+   (e.g. a stray link into an Indonesian-only section like /blog under /en or /zh). */
+export function NotFound() {
+  const { locale, t } = useLocale()
+  const hreflangTags = useHreflangTags('/')
+  return (
+    <>
+      <Head>
+        <title>{t('notFound.title')} | AFSS</title>
+        <meta name="robots" content="noindex" />
+        {hreflangTags}
+      </Head>
+      <section className="notfound">
+        <div className="container notfound-inner">
+          <div className="notfound-code">404</div>
+          <h1>{t('notFound.title')}</h1>
+          <p>{t('notFound.desc')}</p>
+          <div className="notfound-ctas">
+            <Link to="/" className="btn btn-pri btn-lg">{t('notFound.cta')}</Link>
+            <Link to="/layanan" className="btn btn-ghost btn-lg">{t('notFound.ctaSecondary')}</Link>
+          </div>
+        </div>
+      </section>
     </>
   )
 }

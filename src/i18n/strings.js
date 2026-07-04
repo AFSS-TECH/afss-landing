@@ -122,6 +122,12 @@ export const STRINGS = {
       greetShort: 'Halo {brand}!',
     },
     common: { skipLink: 'Langsung ke konten' },
+    notFound: {
+      title: 'Halaman Tidak Ditemukan',
+      desc: 'Maaf, halaman yang Anda cari tidak ada atau belum tersedia dalam bahasa ini.',
+      cta: 'Kembali ke Beranda',
+      ctaSecondary: 'Lihat Layanan',
+    },
     forms: {
       jenisOpts: ['Landing Page', 'Website Profil / Company Profile', 'Toko Online', 'Aplikasi Mobile', 'Web App / Dashboard', 'Sistem ERP', 'Sistem CRM', 'Lainnya'],
       ajukanProyek: {
@@ -538,6 +544,12 @@ export const STRINGS = {
       greetShort: 'Hi {brand}!',
     },
     common: { skipLink: 'Skip to content' },
+    notFound: {
+      title: 'Page Not Found',
+      desc: "Sorry, the page you're looking for doesn't exist or isn't available in this language yet.",
+      cta: 'Back to Homepage',
+      ctaSecondary: 'View Services',
+    },
     forms: {
       jenisOpts: ['Landing Page', 'Website Profile / Company Profile', 'Online Store', 'Mobile App', 'Web App / Dashboard', 'ERP System', 'CRM System', 'Other'],
       ajukanProyek: {
@@ -954,6 +966,12 @@ export const STRINGS = {
       greetShort: '您好 {brand}！',
     },
     common: { skipLink: '跳转到主要内容' },
+    notFound: {
+      title: '页面未找到',
+      desc: '抱歉，您访问的页面不存在，或该语言版本尚未提供。',
+      cta: '返回首页',
+      ctaSecondary: '查看服务',
+    },
     forms: {
       jenisOpts: ['落地页', '企业官网 / 公司简介', '在线商店', '移动应用', 'Web应用 / 仪表盘', 'ERP系统', 'CRM客户管理系统', '其他'],
       ajukanProyek: {
