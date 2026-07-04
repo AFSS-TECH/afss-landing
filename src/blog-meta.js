@@ -4,6 +4,81 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-inventory-manajemen-gudang",
+    "title": "Aplikasi Manajemen Inventory & Gudang: Stok Akurat, Bisnis Efisien",
+    "description": "Aplikasi manajemen inventory & gudang membantu bisnis hindari stok kosong, kelebihan stok, dan selisih data — dengan pencatatan real-time berbasis barcode/QR.",
+    "date": "2026-07-04",
+    "readMinutes": 9,
+    "tags": [
+      "Aplikasi Mobile",
+      "ERP",
+      "Bisnis"
+    ],
+    "c": "#0B6E69",
+    "c2": "#15243B",
+    "excerpt": "Stok yang tercatat di sistem tidak pernah sama dengan stok fisik di gudang — masalah klasik ini menyebabkan kehilangan penjualan sekaligus modal yang mengendap sia-sia di rak."
+  },
+  {
+    "slug": "voice-search-seo-ai-2026",
+    "title": "Voice Search & SEO Berbasis AI 2026: Cara Bisnis Tetap Ditemukan",
+    "description": "Pencarian suara dan AI Overview mengubah cara orang menemukan bisnis online. Pelajari strategi SEO 2026 agar website Anda tetap muncul di era pencarian berbasis AI.",
+    "date": "2026-07-04",
+    "readMinutes": 8,
+    "tags": [
+      "Teknologi",
+      "Website",
+      "Tren 2026"
+    ],
+    "c": "#15243B",
+    "c2": "#2BB3A3",
+    "excerpt": "Semakin banyak orang bertanya ke asisten suara dan chatbot AI ketimbang mengetik di kolom pencarian — bisnis yang tidak menyesuaikan strategi SEO-nya berisiko tidak lagi \"ditemukan\" sama sekali."
+  },
+  {
+    "slug": "website-multibahasa-ekspansi-bisnis-global",
+    "title": "Website Multibahasa: Kunci Ekspansi Bisnis ke Pasar Global",
+    "description": "Website multibahasa membuka jalan bisnis Indonesia menjangkau pasar internasional — pelajari strategi, teknis implementasi, dan kesalahan umum yang harus dihindari.",
+    "date": "2026-07-04",
+    "readMinutes": 8,
+    "tags": [
+      "Website",
+      "Bisnis",
+      "Strategi Digital"
+    ],
+    "c": "#0B6E69",
+    "c2": "#0E8C86",
+    "excerpt": "Bisnis yang ingin menjangkau pelanggan di luar Indonesia tidak bisa mengandalkan website berbahasa Indonesia saja — website multibahasa yang dirancang tepat membuka pintu ke pasar global."
+  },
+  {
+    "slug": "erp-industri-konstruksi-properti",
+    "title": "ERP untuk Industri Konstruksi & Properti: Kelola Proyek Tanpa Kebocoran Biaya",
+    "description": "ERP konstruksi & properti membantu kontraktor dan pengembang kelola RAB, progres proyek, pengadaan material, dan keuangan dalam satu sistem terintegrasi.",
+    "date": "2026-07-04",
+    "readMinutes": 9,
+    "tags": [
+      "ERP",
+      "Bisnis",
+      "Panduan"
+    ],
+    "c": "#0E2240",
+    "c2": "#2563FF",
+    "excerpt": "Biaya proyek yang membengkak diam-diam, laporan progres yang terlambat, dan RAB versus realisasi yang tidak pernah cocok — ERP konstruksi menutup celah ini dengan data real-time."
+  },
+  {
+    "slug": "aplikasi-booking-reservasi-online",
+    "title": "Aplikasi Booking & Reservasi Online: Solusi Wajib Bisnis Jasa Modern",
+    "description": "Aplikasi booking & reservasi online membantu bisnis jasa (klinik, salon, resto, rental) kurangi no-show, isi kalender otomatis, dan tingkatkan kepuasan pelanggan.",
+    "date": "2026-07-04",
+    "readMinutes": 9,
+    "tags": [
+      "Aplikasi Mobile",
+      "Bisnis",
+      "Panduan"
+    ],
+    "c": "#0E8C86",
+    "c2": "#15243B",
+    "excerpt": "Telepon terus berdering untuk booking, jadwal bentrok, dan pelanggan yang tidak datang tanpa kabar — aplikasi booking online menyelesaikan seluruh masalah ini dalam satu sistem otomatis."
+  },
+  {
     "slug": "aplikasi-logistik-manajemen-armada",
     "title": "Aplikasi Manajemen Logistik & Armada: Efisiensi Rantai Pasok Bisnis",
     "description": "Aplikasi manajemen logistik & armada membantu bisnis lacak pengiriman real-time, optimalkan rute, dan kurangi biaya operasional transportasi.",

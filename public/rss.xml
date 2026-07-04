@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Fri, 03 Jul 2026 18:58:07 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2026 02:14:03 GMT</lastBuildDate>
+    <item>
+      <title>Aplikasi Manajemen Inventory &amp; Gudang: Stok Akurat, Bisnis Efisien</title>
+      <link>https://afss.tech/blog/aplikasi-inventory-manajemen-gudang</link>
+      <guid>https://afss.tech/blog/aplikasi-inventory-manajemen-gudang</guid>
+      <description>Stok yang tercatat di sistem tidak pernah sama dengan stok fisik di gudang — masalah klasik ini menyebabkan kehilangan penjualan sekaligus modal yang mengendap sia-sia di rak.</description>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi Mobile</category>
+      <category>ERP</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>Voice Search &amp; SEO Berbasis AI 2026: Cara Bisnis Tetap Ditemukan</title>
+      <link>https://afss.tech/blog/voice-search-seo-ai-2026</link>
+      <guid>https://afss.tech/blog/voice-search-seo-ai-2026</guid>
+      <description>Semakin banyak orang bertanya ke asisten suara dan chatbot AI ketimbang mengetik di kolom pencarian — bisnis yang tidak menyesuaikan strategi SEO-nya berisiko tidak lagi &quot;ditemukan&quot; sama sekali.</description>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Teknologi</category>
+      <category>Website</category>
+      <category>Tren 2026</category>
+    </item>
+    <item>
+      <title>Website Multibahasa: Kunci Ekspansi Bisnis ke Pasar Global</title>
+      <link>https://afss.tech/blog/website-multibahasa-ekspansi-bisnis-global</link>
+      <guid>https://afss.tech/blog/website-multibahasa-ekspansi-bisnis-global</guid>
+      <description>Bisnis yang ingin menjangkau pelanggan di luar Indonesia tidak bisa mengandalkan website berbahasa Indonesia saja — website multibahasa yang dirancang tepat membuka pintu ke pasar global.</description>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Website</category>
+      <category>Bisnis</category>
+      <category>Strategi Digital</category>
+    </item>
+    <item>
+      <title>ERP untuk Industri Konstruksi &amp; Properti: Kelola Proyek Tanpa Kebocoran Biaya</title>
+      <link>https://afss.tech/blog/erp-industri-konstruksi-properti</link>
+      <guid>https://afss.tech/blog/erp-industri-konstruksi-properti</guid>
+      <description>Biaya proyek yang membengkak diam-diam, laporan progres yang terlambat, dan RAB versus realisasi yang tidak pernah cocok — ERP konstruksi menutup celah ini dengan data real-time.</description>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <category>ERP</category>
+      <category>Bisnis</category>
+      <category>Panduan</category>
+    </item>
+    <item>
+      <title>Aplikasi Booking &amp; Reservasi Online: Solusi Wajib Bisnis Jasa Modern</title>
+      <link>https://afss.tech/blog/aplikasi-booking-reservasi-online</link>
+      <guid>https://afss.tech/blog/aplikasi-booking-reservasi-online</guid>
+      <description>Telepon terus berdering untuk booking, jadwal bentrok, dan pelanggan yang tidak datang tanpa kabar — aplikasi booking online menyelesaikan seluruh masalah ini dalam satu sistem otomatis.</description>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi Mobile</category>
+      <category>Bisnis</category>
+      <category>Panduan</category>
+    </item>
     <item>
       <title>Aplikasi Manajemen Logistik &amp; Armada: Efisiensi Rantai Pasok Bisnis</title>
       <link>https://afss.tech/blog/aplikasi-logistik-manajemen-armada</link>
