@@ -11,7 +11,7 @@ import {
   BRAND, products, workflow as steps, stats,
   waLink, clients, techStack,
 } from './data.js'
-import { SITE_URL, formatDateId } from './site.js'
+import { SITE_URL, formatDateId, formatDate } from './site.js'
 import { postsMeta } from './blog-meta.js'
 import { Link, RawLink } from './i18n/link.jsx'
 import { LocaleProvider, useLocale, pick } from './i18n/context.jsx'
@@ -131,7 +131,7 @@ export function Nav() {
     { key: 'portofolio', to: '/portofolio' },
     { key: 'estimasi', to: '/estimasi' },
     { key: 'harga', to: '/harga' },
-    ...(locale === 'id' ? [{ key: 'blog', to: '/blog' }] : []),
+    { key: 'blog', to: '/blog' },
     { key: 'faq', to: '/faq' },
   ]
   const close = () => setOpen(false)
@@ -442,37 +442,36 @@ function TechStack() {
 }
 
 /* ════════════════════════════════════════════════ BLOG TEASER (internal linking from home) */
-/* Indonesian-only for now (see main.jsx buildRouteTree) — Home() only renders this when locale === 'id',
-   so the hardcoded Indonesian copy below never appears on the EN/ZH homepage. */
 function BlogTeaser() {
-  const latest = postsMeta.slice(0, 3)
+  const { locale, t } = useLocale()
+  const latest = postsMeta.slice(0, 3).map((p) => pick(p, locale))
   return (
     <section className="blog-teaser" id="blog-teaser">
       <div className="container">
         <Reveal className="sec-header center">
-          <div className="eyebrow"><Icon icon="fa-solid fa-newspaper" /> Blog</div>
-          <h2 className="sec-title">Wawasan &amp; <span className="ital">tips</span> terbaru</h2>
-          <p className="sec-sub">Panduan praktis seputar pembuatan website, aplikasi, dan strategi digital untuk bisnis Anda.</p>
+          <div className="eyebrow"><Icon icon="fa-solid fa-newspaper" /> {t('blogTeaser.eyebrow')}</div>
+          <h2 className="sec-title">{t('blogTeaser.titlePre')}<span className="ital">{t('blogTeaser.titleItal')}</span>{t('blogTeaser.titlePost')}</h2>
+          <p className="sec-sub">{t('blogTeaser.sub')}</p>
         </Reveal>
         <motion.div className="blog-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
           {latest.map((p) => (
             <motion.article key={p.slug} className="blog-card" variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }}>
               <Link to={`/blog/${p.slug}`} className="blog-card-link">
                 <div className="blog-cover" style={{ '--c': p.c, '--c2': p.c2 }}>
-                  <img src={`/blog/${p.slug}.png`} alt={`Ilustrasi artikel: ${p.title}`} width="1200" height="630" loading="lazy" onError={(e) => { e.target.style.display = 'none' }} />
+                  <img src={`/blog/${p.slug}.png`} alt={p.title} width="1200" height="630" loading="lazy" onError={(e) => { e.target.style.display = 'none' }} />
                 </div>
                 <div className="blog-card-body">
-                  <div className="blog-meta">{formatDateId(p.date)} · {p.readMinutes} menit baca</div>
+                  <div className="blog-meta">{formatDate(p.date, locale)} · {p.readMinutes} {t('blogTeaser.readMinutes')}</div>
                   <h3 className="blog-card-title">{p.title}</h3>
                   <p className="blog-card-excerpt">{p.excerpt}</p>
-                  <span className="blog-readmore">Baca selengkapnya <Icon icon="fa-solid fa-arrow-right" /></span>
+                  <span className="blog-readmore">{t('blogTeaser.readMore')} <Icon icon="fa-solid fa-arrow-right" /></span>
                 </div>
               </Link>
             </motion.article>
           ))}
         </motion.div>
         <div className="blog-teaser-all">
-          <Link to="/blog" className="btn btn-ghost btn-lg">Lihat semua artikel <Icon icon="fa-solid fa-arrow-right" /></Link>
+          <Link to="/blog" className="btn btn-ghost btn-lg">{t('blogTeaser.viewAll')} <Icon icon="fa-solid fa-arrow-right" /></Link>
         </div>
       </div>
     </section>
@@ -536,7 +535,7 @@ export function Footer({ trimmed = false }) {
             <li><Link to="/estimasi">{t('footer.estimasiBiaya')}</Link></li>
             <li><Link to="/kontak">{t('footer.kontak')}</Link></li>
             <li><Link to="/harga">{t('footer.hargaPaket')}</Link></li>
-            {locale === 'id' && <li><Link to="/blog">{t('footer.blog')}</Link></li>}
+            <li><Link to="/blog">{t('footer.blog')}</Link></li>
             <li><Link to="/faq">{t('footer.faq')}</Link></li>
             <li><Link to="/karir">{t('footer.karir')}</Link></li>
           </ul>
@@ -832,7 +831,7 @@ export function Home() {
       <Estimator />
       <Process />
       <TechStack />
-      {locale === 'id' && <BlogTeaser />}
+      <BlogTeaser />
       <CtaBand />
     </>
   )
