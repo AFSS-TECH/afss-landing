@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Sat, 04 Jul 2026 15:32:59 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2026 02:15:07 GMT</lastBuildDate>
+    <item>
+      <title>Aplikasi Manajemen Proyek &amp; Kolaborasi Tim: Kunci Bisnis yang Scale Tanpa Chaos</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-proyek-kolaborasi-tim</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-proyek-kolaborasi-tim</guid>
+      <description>Tim bertambah, proyek bertambah, tapi komunikasi masih lewat chat WhatsApp yang tenggelam — bisnis yang tumbuh tanpa sistem manajemen proyek yang jelas akhirnya kehilangan kendali atas pekerjaannya sendiri.</description>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Manajemen Proyek</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>AI Agents (Agentic AI) untuk Bisnis 2026: Dari Chatbot ke Asisten yang Bertindak Otomatis</title>
+      <link>https://afss.tech/blog/ai-agents-agentic-ai-bisnis-2026</link>
+      <guid>https://afss.tech/blog/ai-agents-agentic-ai-bisnis-2026</guid>
+      <description>Chatbot menjawab pertanyaan, tapi AI agent melangkah lebih jauh: memesan, memproses, dan menyelesaikan tugas nyata secara otomatis tanpa menunggu perintah manual di setiap langkah.</description>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>Agentic AI</category>
+      <category>Teknologi</category>
+    </item>
+    <item>
+      <title>Business Intelligence &amp; Dashboard Data: Mengubah Data Bisnis Jadi Keputusan Cerdas</title>
+      <link>https://afss.tech/blog/business-intelligence-dashboard-data-bisnis</link>
+      <guid>https://afss.tech/blog/business-intelligence-dashboard-data-bisnis</guid>
+      <description>Data penjualan ada di satu sistem, data stok di sistem lain, dan laporan keuangan di Excel terpisah — pemilik bisnis akhirnya mengambil keputusan berdasarkan tebakan, bukan gambaran utuh operasional.</description>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Business Intelligence</category>
+      <category>Data</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>Membangun Marketplace Sendiri: Panduan Lengkap Platform Multi-Vendor untuk Bisnis</title>
+      <link>https://afss.tech/blog/membangun-marketplace-sendiri</link>
+      <guid>https://afss.tech/blog/membangun-marketplace-sendiri</guid>
+      <description>Tokopedia dan Shopee membuktikan model marketplace bisa menjadi bisnis raksasa — tapi bagaimana jika Anda ingin membangun marketplace niche sendiri, bukan sekadar berjualan di platform orang lain?</description>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Marketplace</category>
+      <category>E-Commerce</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>ERP untuk Klinik, Rumah Sakit &amp; Apotek: Sistem Informasi Kesehatan Terintegrasi</title>
+      <link>https://afss.tech/blog/erp-klinik-rumah-sakit-kesehatan</link>
+      <guid>https://afss.tech/blog/erp-klinik-rumah-sakit-kesehatan</guid>
+      <description>Rekam medis di kertas, antrian yang mengular, dan stok obat yang sering tidak sinkron — fasilitas kesehatan yang masih mengandalkan cara manual kehilangan waktu dan kepercayaan pasien setiap hari.</description>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
+      <category>ERP</category>
+      <category>Kesehatan</category>
+      <category>Bisnis</category>
+    </item>
     <item>
       <title>Aplikasi Manajemen Inventory &amp; Gudang: Stok Akurat, Bisnis Efisien</title>
       <link>https://afss.tech/blog/aplikasi-inventory-manajemen-gudang</link>

@@ -4,6 +4,81 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-manajemen-proyek-kolaborasi-tim",
+    "title": "Aplikasi Manajemen Proyek & Kolaborasi Tim: Kunci Bisnis yang Scale Tanpa Chaos",
+    "description": "Aplikasi manajemen proyek & kolaborasi tim custom membantu bisnis yang berkembang menghindari miskomunikasi, deadline terlewat, dan visibilitas kerja yang buram antar divisi.",
+    "date": "2026-07-05",
+    "readMinutes": 9,
+    "tags": [
+      "Aplikasi",
+      "Manajemen Proyek",
+      "Bisnis"
+    ],
+    "c": "#065F46",
+    "c2": "#064E3B",
+    "excerpt": "Tim bertambah, proyek bertambah, tapi komunikasi masih lewat chat WhatsApp yang tenggelam — bisnis yang tumbuh tanpa sistem manajemen proyek yang jelas akhirnya kehilangan kendali atas pekerjaannya sendiri."
+  },
+  {
+    "slug": "ai-agents-agentic-ai-bisnis-2026",
+    "title": "AI Agents (Agentic AI) untuk Bisnis 2026: Dari Chatbot ke Asisten yang Bertindak Otomatis",
+    "description": "Agentic AI adalah evolusi setelah chatbot — AI yang tidak hanya menjawab, tapi bisa menjalankan tugas nyata secara otomatis. Pelajari cara kerjanya dan penerapannya untuk bisnis Indonesia di 2026.",
+    "date": "2026-07-05",
+    "readMinutes": 10,
+    "tags": [
+      "AI",
+      "Agentic AI",
+      "Teknologi"
+    ],
+    "c": "#5B21B6",
+    "c2": "#3B0764",
+    "excerpt": "Chatbot menjawab pertanyaan, tapi AI agent melangkah lebih jauh: memesan, memproses, dan menyelesaikan tugas nyata secara otomatis tanpa menunggu perintah manual di setiap langkah."
+  },
+  {
+    "slug": "business-intelligence-dashboard-data-bisnis",
+    "title": "Business Intelligence & Dashboard Data: Mengubah Data Bisnis Jadi Keputusan Cerdas",
+    "description": "Panduan lengkap Business Intelligence (BI) dan dashboard data untuk bisnis — cara mengubah data yang tersebar di berbagai sistem menjadi insight yang mendorong keputusan lebih cepat dan akurat.",
+    "date": "2026-07-05",
+    "readMinutes": 9,
+    "tags": [
+      "Business Intelligence",
+      "Data",
+      "Bisnis"
+    ],
+    "c": "#1E3A8A",
+    "c2": "#1E293B",
+    "excerpt": "Data penjualan ada di satu sistem, data stok di sistem lain, dan laporan keuangan di Excel terpisah — pemilik bisnis akhirnya mengambil keputusan berdasarkan tebakan, bukan gambaran utuh operasional."
+  },
+  {
+    "slug": "membangun-marketplace-sendiri",
+    "title": "Membangun Marketplace Sendiri: Panduan Lengkap Platform Multi-Vendor untuk Bisnis",
+    "description": "Panduan lengkap membangun marketplace multi-vendor sendiri — dari model bisnis, fitur wajib, tantangan teknis, hingga strategi menarik seller dan buyer pertama.",
+    "date": "2026-07-05",
+    "readMinutes": 10,
+    "tags": [
+      "Marketplace",
+      "E-Commerce",
+      "Bisnis"
+    ],
+    "c": "#C2410C",
+    "c2": "#7C2D12",
+    "excerpt": "Tokopedia dan Shopee membuktikan model marketplace bisa menjadi bisnis raksasa — tapi bagaimana jika Anda ingin membangun marketplace niche sendiri, bukan sekadar berjualan di platform orang lain?"
+  },
+  {
+    "slug": "erp-klinik-rumah-sakit-kesehatan",
+    "title": "ERP untuk Klinik, Rumah Sakit & Apotek: Sistem Informasi Kesehatan Terintegrasi",
+    "description": "ERP kesehatan menyatukan rekam medis, jadwal dokter, stok obat, dan klaim BPJS/asuransi dalam satu sistem. Pelajari modul, manfaat, dan cara memulainya untuk fasilitas kesehatan Anda.",
+    "date": "2026-07-05",
+    "readMinutes": 10,
+    "tags": [
+      "ERP",
+      "Kesehatan",
+      "Bisnis"
+    ],
+    "c": "#0E7490",
+    "c2": "#164E63",
+    "excerpt": "Rekam medis di kertas, antrian yang mengular, dan stok obat yang sering tidak sinkron — fasilitas kesehatan yang masih mengandalkan cara manual kehilangan waktu dan kepercayaan pasien setiap hari."
+  },
+  {
     "slug": "aplikasi-inventory-manajemen-gudang",
     "title": "Aplikasi Manajemen Inventory & Gudang: Stok Akurat, Bisnis Efisien",
     "description": "Aplikasi manajemen inventory & gudang membantu bisnis hindari stok kosong, kelebihan stok, dan selisih data — dengan pencatatan real-time berbasis barcode/QR.",
