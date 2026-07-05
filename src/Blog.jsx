@@ -11,6 +11,7 @@ import { SITE_URL, formatDate } from './site.js'
 import { postsMeta } from './blog-meta.js'
 import { incrementBlogView, fetchAllBlogViews } from './lib/supabase.js'
 import { useLocale, pick } from './i18n/context.jsx'
+import { DEFAULT_LOCALE } from './i18n/locales.js'
 import { useHreflangTags } from './i18n/HreflangTags.jsx'
 import { LOCALE_PREFIX, withLocale } from './i18n/locales.js'
 
@@ -59,6 +60,11 @@ function Article({ markdown, locale }) {
   const localized = localizeMarkdownLinks(markdown, locale)
   return <div className="article" dangerouslySetInnerHTML={{ __html: marked.parse(localized.trim(), { renderer: imgRenderer }) }} />
 }
+
+// Returns the locale-specific cover image path, e.g. /blog/en/{slug}.png.
+// Falls back to the default (Indonesian) image if the locale dir is unavailable.
+const coverPath = (slug, locale) =>
+  locale === DEFAULT_LOCALE ? `/blog/${slug}.png` : `/blog/${locale}/${slug}.png`
 
 /* ── Reading progress bar (fixed at top during article scroll) ── */
 function ReadingProgress() {
@@ -236,7 +242,7 @@ export function BlogIndex() {
                   <motion.article key={p.slug} className="blog-card" variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }}>
                     <Link to={`/blog/${p.slug}`} className="blog-card-link">
                       <div className="blog-cover" style={{ '--c': p.c, '--c2': p.c2 }}>
-                        <img src={`/blog/${p.slug}.png`} alt={p.title} width="1200" height="630" loading="lazy" onError={(e) => { e.target.style.display = 'none' }} />
+                        <img src={coverPath(p.slug, locale)} alt={p.title} width="1200" height="630" loading="lazy" onError={(e) => { e.target.style.display = 'none' }} />
                         <div className="blog-cover-tags">
                           {p.tags.map((tag) => <span key={tag}>{tag}</span>)}
                         </div>
@@ -330,7 +336,7 @@ export function BlogPost() {
   }
 
   const url = `${SITE_URL}${withLocale(locale, `/blog/${post.slug}`)}`
-  const cover = `${SITE_URL}/blog/${post.slug}.png`
+  const cover = `${SITE_URL}${coverPath(post.slug, locale)}`
 
   /* Related: prefer posts sharing a tag, fall back to any recent post */
   const localizedMeta = postsMeta.map((p) => pick(p, locale))
@@ -411,7 +417,7 @@ export function BlogPost() {
                 <Link key={tag} to={`/blog?tag=${encodeURIComponent(tag)}`} className="post-tag-chip">{tag}</Link>
               ))}
             </div>
-            <img className="post-cover" src={`/blog/${post.slug}.png`} alt={post.title} width="1200" height="630" fetchpriority="high" />
+            <img className="post-cover" src={coverPath(post.slug, locale)} alt={post.title} width="1200" height="630" fetchpriority="high" />
           </div>
         </div>
 
@@ -435,7 +441,7 @@ export function BlogPost() {
                 <article key={p.slug} className="blog-card">
                   <Link to={`/blog/${p.slug}`} className="blog-card-link">
                     <div className="blog-cover" style={{ '--c': p.c, '--c2': p.c2 }}>
-                      <img src={`/blog/${p.slug}.png`} alt={p.title} width="1200" height="630" loading="lazy" onError={(e) => { e.target.style.display = 'none' }} />
+                      <img src={coverPath(p.slug, locale)} alt={p.title} width="1200" height="630" loading="lazy" onError={(e) => { e.target.style.display = 'none' }} />
                       <div className="blog-cover-tags">
                         {p.tags.map((tag) => <span key={tag}>{tag}</span>)}
                       </div>

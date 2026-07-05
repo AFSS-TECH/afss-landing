@@ -1103,10 +1103,16 @@ function fallbackIllustration() {
   `
 }
 
-function svgFor(post) {
-  const tag = post.tags[0] || 'Artikel'
-  const chipW = tag.length * 15 + 56
-  const lines = wrap(post.title, 26, 3)
+const READ_LABEL = { id: 'menit baca', en: 'min read', zh: '分钟阅读' }
+const BLOG_LABEL = { id: '/ Blog', en: '/ Blog', zh: '/ 博客' }
+
+// locale: 'id' | 'en' | 'zh' ; localPost: post fields for that locale (title, tags, readMinutes)
+function svgFor(post, locale = 'id') {
+  const i18n = post.i18n?.[locale] || post.i18n?.id || {}
+  const tag = (i18n.tags?.[0]) || (locale === 'zh' ? '文章' : 'Article')
+  const title = i18n.title || post.title || ''
+  const chipW = Math.max(tag.length * (locale === 'zh' ? 24 : 15) + 56, 100)
+  const lines = wrap(title, 26, 3)
   const lh = 80
   const firstY = 332 + (3 - lines.length) * 30
   const titleTspans = lines
@@ -1114,6 +1120,9 @@ function svgFor(post) {
     .join('')
 
   const illus = (ILLUSTRATIONS[post.slug] || fallbackIllustration)()
+  const readMin = post.readMinutes
+  const readLabel = READ_LABEL[locale] || READ_LABEL.id
+  const blogLabel = BLOG_LABEL[locale] || '/ Blog'
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
@@ -1151,7 +1160,7 @@ function svgFor(post) {
     <path d="M29 22 L43 22" fill="none" stroke="#ffffff" stroke-width="5.8" stroke-linecap="round"/>
     <path d="M17.5 43 L24 30 L30.5 43 Z" fill="#ffffff" opacity="0.6"/>
   </g>
-  <text x="160" y="112" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800" fill="#ffffff" letter-spacing="-1">AFSS <tspan fill="#ffffff" opacity="0.65" font-weight="600">/ Blog</tspan></text>
+  <text x="160" y="112" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800" fill="#ffffff" letter-spacing="-1">AFSS <tspan fill="#ffffff" opacity="0.65" font-weight="600">${esc(blogLabel)}</tspan></text>
 
   <!-- category chip -->
   <rect x="80" y="196" width="${chipW}" height="48" rx="24" fill="#ffffff" opacity="0.18"/>
@@ -1161,14 +1170,28 @@ function svgFor(post) {
   <text font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="800" fill="#ffffff" letter-spacing="-1.5">${titleTspans}</text>
 
   <!-- footer -->
-  <text x="80" y="582" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" fill="#ffffff" opacity="0.85">${post.readMinutes} menit baca</text>
-  <text x="1120" y="582" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" fill="#ffffff" opacity="0.75">afss-landing.vercel.app</text>
+  <text x="80" y="582" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" fill="#ffffff" opacity="0.85">${readMin} ${readLabel}</text>
+  <text x="1120" y="582" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" fill="#ffffff" opacity="0.75">afss.tech</text>
 </svg>`
+}
+
+// Generate for all 3 locales
+const LOCALE_DIRS = {
+  id: outDir,
+  en: join(outDir, 'en'),
+  zh: join(outDir, 'zh'),
+}
+for (const dir of Object.values(LOCALE_DIRS)) {
+  mkdirSync(dir, { recursive: true })
 }
 
 let n = 0
 for (const post of posts) {
-  await sharp(Buffer.from(svgFor(post))).png().toFile(join(outDir, `${post.slug}.png`))
+  for (const locale of ['id', 'en', 'zh']) {
+    const dir = LOCALE_DIRS[locale]
+    await sharp(Buffer.from(svgFor(post, locale))).png().toFile(join(dir, `${post.slug}.png`))
+  }
   n++
 }
-console.log(`Generated ${n} blog cover images in public/blog/`)
+// Also regenerate the root /blog/*.png (id locale) to fix the afss-landing.vercel.app URL
+console.log(`Generated ${n} blog cover images × 3 locales in public/blog/{id,en,zh}/`)
