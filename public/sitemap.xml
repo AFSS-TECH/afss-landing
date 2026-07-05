@@ -631,6 +631,36 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://afss.tech/portofolio/skilva-digital-bootcamp" />
   </url>
   <url>
+    <loc>https://afss.tech/portofolio/premium-fashion-ecommerce</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://afss.tech/portofolio/premium-fashion-ecommerce" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://afss.tech/en/portofolio/premium-fashion-ecommerce" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://afss.tech/zh/portofolio/premium-fashion-ecommerce" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://afss.tech/portofolio/premium-fashion-ecommerce" />
+  </url>
+  <url>
+    <loc>https://afss.tech/en/portofolio/premium-fashion-ecommerce</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://afss.tech/portofolio/premium-fashion-ecommerce" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://afss.tech/en/portofolio/premium-fashion-ecommerce" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://afss.tech/zh/portofolio/premium-fashion-ecommerce" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://afss.tech/portofolio/premium-fashion-ecommerce" />
+  </url>
+  <url>
+    <loc>https://afss.tech/zh/portofolio/premium-fashion-ecommerce</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://afss.tech/portofolio/premium-fashion-ecommerce" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://afss.tech/en/portofolio/premium-fashion-ecommerce" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://afss.tech/zh/portofolio/premium-fashion-ecommerce" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://afss.tech/portofolio/premium-fashion-ecommerce" />
+  </url>
+  <url>
     <loc>https://afss.tech/blog/aplikasi-manajemen-proyek-kolaborasi-tim</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
