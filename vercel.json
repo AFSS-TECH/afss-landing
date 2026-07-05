@@ -29,6 +29,14 @@
     {
       "source": "/api/:path*",
       "destination": "https://koperasi-emas-demo.vercel.app/api/:path*"
+    },
+    {
+      "source": "/portofolio/ecommerce/luxe",
+      "destination": "https://luxe-fashion-demo.vercel.app"
+    },
+    {
+      "source": "/portofolio/ecommerce/luxe/:path*",
+      "destination": "https://luxe-fashion-demo.vercel.app/:path*"
     }
   ],
   "headers": [

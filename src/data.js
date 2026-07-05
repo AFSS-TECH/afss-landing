@@ -648,7 +648,7 @@ export const portfolioProjects = [
     tags: ['React', 'Vite', 'Tailwind CSS', 'TypeScript', 'Demo'],
     tech: 'React 18, TypeScript, Vite, Tailwind CSS 4, MUI, Radix UI',
     clientName: 'Tim AFSS',
-    visitUrl: '',
+    visitUrl: 'https://afss.tech/portofolio/ecommerce/luxe',
     image: '/portofolio/ecommerce/premium-fashion/mockup/hero.webp',
     images: [
       '/portofolio/ecommerce/premium-fashion/mockup/hero.webp',
