@@ -5,3 +5,9 @@ export const SITE_URL = 'https://afss.tech'
 
 export const formatDateId = (iso) =>
   new Date(iso).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })
+
+const DATE_LOCALE_TAG = { id: 'id-ID', en: 'en-US', zh: 'zh-CN' }
+
+// Locale-aware date formatting for blog posts (id/en/zh) — falls back to Indonesian.
+export const formatDate = (iso, locale) =>
+  new Date(iso).toLocaleDateString(DATE_LOCALE_TAG[locale] || 'id-ID', { day: 'numeric', month: 'long', year: 'numeric' })

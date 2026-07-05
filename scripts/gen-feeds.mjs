@@ -6,22 +6,27 @@ import { dirname, join } from 'node:path'
 import { posts } from '../src/blog.js'
 import { products, portfolioProjects } from '../src/data.js'
 import { SITE_URL } from '../src/site.js'
-import { LOCALES, LOCALE_PREFIX, HREFLANG } from '../src/i18n/locales.js'
+import { LOCALES, LOCALE_PREFIX, HREFLANG, DEFAULT_LOCALE } from '../src/i18n/locales.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const pub = join(__dirname, '..', 'public')
 const today = new Date().toISOString().slice(0, 10)
 const xmlEsc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
-const byDateDesc = [...posts].sort((a, b) => (a.date < b.date ? 1 : -1))
+// Blog posts are stored as { ...structural fields, i18n: { id, en, zh } } —
+// see the i18n shape convention in src/i18n/context.jsx's pick(). RSS stays
+// Indonesian-only for now (Phase 3), so it just reads the `id` locale directly.
+const pick = (entry, locale) => ({ ...entry, ...(entry.i18n[locale] || entry.i18n[DEFAULT_LOCALE]) })
+const postsId = posts.map((p) => pick(p, DEFAULT_LOCALE))
+const byDateDesc = [...postsId].sort((a, b) => (a.date < b.date ? 1 : -1))
 
 // ── sitemap.xml ──
-// Every core/service/portfolio page exists under all 3 locale trees (id/en/zh —
-// see src/main.jsx's buildRouteTree), so each gets one <url> per locale with
-// xhtml:link hreflang alternates pointing at its siblings + x-default. Blog and
-// legal pages are Indonesian-only for now (Phase 2/3 of the i18n rollout — see
-// buildRouteTree's isDefaultLocale branch), so they get a single, unprefixed
-// <url> with no alternates.
+// Every core/service/portfolio/blog page exists under all 3 locale trees
+// (id/en/zh — see src/main.jsx's buildRouteTree), so each gets one <url> per
+// locale with xhtml:link hreflang alternates pointing at its siblings +
+// x-default. Legal pages are Indonesian-only for now (Phase 3 of the i18n
+// rollout — see buildRouteTree's isDefaultLocale branch), so they get a
+// single, unprefixed <url> with no alternates.
 const withLocale = (locale, path) => {
   const prefix = LOCALE_PREFIX[locale] || ''
   if (!prefix) return path
@@ -53,20 +58,21 @@ const CORE_PATHS = [
 ]
 // Indonesian-only for now — no locale alternates to link to yet.
 const ID_ONLY_PATHS = [
-  { path: '/blog', changefreq: 'weekly', priority: '0.8' },
   { path: '/privacy', changefreq: 'yearly', priority: '0.3' },
   { path: '/terms', changefreq: 'yearly', priority: '0.3' },
 ]
 
 const urls = [
   ...CORE_PATHS.flatMap((p) => localizedEntries(p.path, p)),
+  ...localizedEntries('/blog', { changefreq: 'weekly', priority: '0.8' }),
   // Service pages (high priority — keyword-rich landing pages)
   ...products.flatMap((p) => localizedEntries(`/layanan/${p.slug}`, { changefreq: 'monthly', priority: '0.85' })),
   // Portfolio detail pages
   ...portfolioProjects.flatMap((p) => localizedEntries(`/portofolio/${p.slug}`, { changefreq: 'monthly', priority: '0.7' })),
+  // Blog posts — fully translated, available under every locale
+  ...byDateDesc.flatMap((p) => localizedEntries(`/blog/${p.slug}`, { changefreq: 'monthly', priority: '0.7', lastmod: p.date })),
   // Indonesian-only sections
   ...ID_ONLY_PATHS.map((p) => ({ loc: `${SITE_URL}${p.path}`, lastmod: today, changefreq: p.changefreq, priority: p.priority, alternates: [] })),
-  ...byDateDesc.map((p) => ({ loc: `${SITE_URL}/blog/${p.slug}`, lastmod: p.date, changefreq: 'monthly', priority: '0.7', alternates: [] })),
 ]
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">

@@ -10,9 +10,9 @@ export const OG_LOCALE = { id: 'id_ID', en: 'en_US', zh: 'zh_CN' }
 export const HREFLANG = { id: 'id', en: 'en', zh: 'zh-Hans' }
 export const HTML_LANG = { id: 'id', en: 'en', zh: 'zh-Hans' }
 
-// Locales that only have Indonesian content today (Phase 2/3 of the i18n plan) —
+// Locales that only have Indonesian content today (Phase 3 of the i18n plan) —
 // their routes are only mounted under the `id` tree until translated.
-export const ID_ONLY_SECTIONS = ['/blog', '/privacy', '/terms']
+export const ID_ONLY_SECTIONS = ['/privacy', '/terms']
 
 export function localeFromPathname(pathname) {
   const seg = pathname.split('/')[1]

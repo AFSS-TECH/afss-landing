@@ -15,8 +15,9 @@ import { LOCALES, LOCALE_PREFIX, DEFAULT_LOCALE } from './i18n/locales.js'
 // i18n: the whole route tree below is built once per supported locale (id/en/zh) via
 // `buildRouteTree(locale)`, each mounted at its own prefix ('' for id, '/en', '/zh' — see
 // src/i18n/locales.js). Adding a new language later is just one more locale in that list;
-// nothing here needs to change. Blog + legal pages are Indonesian-only for now (see
-// isDefaultLocale below) so /en/* and /zh/* never link to an untranslated page.
+// nothing here needs to change. Legal pages are Indonesian-only for now (see
+// isDefaultLocale below) so /en/* and /zh/* never link to an untranslated page. Blog posts
+// are fully translated (see src/blog.js's i18n shape) and available under every locale.
 function buildRouteTree(locale) {
   const prefix = LOCALE_PREFIX[locale]
   const abs = (path) => prefix + path // absolute path for getStaticPaths, e.g. '/en/layanan/erp'
@@ -24,6 +25,13 @@ function buildRouteTree(locale) {
 
   const children = [
     { index: true, element: <Home /> },
+    // Blog (lazy chunk — only loaded on /blog/*)
+    { path: 'blog', lazy: async () => { const m = await import('./Blog.jsx'); return { Component: m.BlogIndex } } },
+    {
+      path: 'blog/:slug',
+      lazy: async () => { const m = await import('./Blog.jsx'); return { Component: m.BlogPost } },
+      getStaticPaths: () => postsMeta.map((p) => abs(`/blog/${p.slug}`)),
+    },
     // Layanan
     { path: 'layanan', element: <LayananIndex /> },
     {
@@ -49,16 +57,9 @@ function buildRouteTree(locale) {
     { path: 'dashboard', element: <Dashboard /> },
   ]
 
-  // Blog (lazy chunk — only loaded on /blog/*) + legal pages: Indonesian-only
-  // until Phase 2/3 of the i18n rollout translate them.
+  // Legal pages: Indonesian-only until Phase 3 of the i18n rollout translates them.
   if (isDefaultLocale) {
     children.push(
-      { path: 'blog', lazy: async () => { const m = await import('./Blog.jsx'); return { Component: m.BlogIndex } } },
-      {
-        path: 'blog/:slug',
-        lazy: async () => { const m = await import('./Blog.jsx'); return { Component: m.BlogPost } },
-        getStaticPaths: () => postsMeta.map((p) => abs(`/blog/${p.slug}`)),
-      },
       { path: 'privacy', element: <Privacy /> },
       { path: 'terms', element: <Terms /> },
     )

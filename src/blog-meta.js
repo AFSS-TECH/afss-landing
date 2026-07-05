@@ -5,1326 +5,3426 @@
 export const postsMeta = [
   {
     "slug": "aplikasi-manajemen-proyek-kolaborasi-tim",
-    "title": "Aplikasi Manajemen Proyek & Kolaborasi Tim: Kunci Bisnis yang Scale Tanpa Chaos",
-    "description": "Aplikasi manajemen proyek & kolaborasi tim custom membantu bisnis yang berkembang menghindari miskomunikasi, deadline terlewat, dan visibilitas kerja yang buram antar divisi.",
     "date": "2026-07-05",
     "readMinutes": 9,
-    "tags": [
-      "Aplikasi",
-      "Manajemen Proyek",
-      "Bisnis"
-    ],
     "c": "#065F46",
     "c2": "#064E3B",
-    "excerpt": "Tim bertambah, proyek bertambah, tapi komunikasi masih lewat chat WhatsApp yang tenggelam — bisnis yang tumbuh tanpa sistem manajemen proyek yang jelas akhirnya kehilangan kendali atas pekerjaannya sendiri."
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Proyek & Kolaborasi Tim: Kunci Bisnis yang Scale Tanpa Chaos",
+        "description": "Aplikasi manajemen proyek & kolaborasi tim custom membantu bisnis yang berkembang menghindari miskomunikasi, deadline terlewat, dan visibilitas kerja yang buram antar divisi.",
+        "excerpt": "Tim bertambah, proyek bertambah, tapi komunikasi masih lewat chat WhatsApp yang tenggelam — bisnis yang tumbuh tanpa sistem manajemen proyek yang jelas akhirnya kehilangan kendali atas pekerjaannya sendiri.",
+        "tags": [
+          "Aplikasi",
+          "Manajemen Proyek",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Project Management & Team Collaboration Apps: The Key to Scaling Without Chaos",
+        "description": "Custom project management and team collaboration apps help growing businesses avoid miscommunication, missed deadlines, and murky work visibility across departments.",
+        "excerpt": "More team members, more projects, but communication still happens through WhatsApp threads that get buried — businesses that grow without a clear project management system eventually lose control of their own work.",
+        "tags": [
+          "Application",
+          "Project Management",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "项目管理与团队协作应用：实现规模化增长而不陷入混乱的关键",
+        "description": "定制化项目管理与团队协作应用，帮助成长中的企业避免沟通失误、错过截止日期，以及跨部门工作进展不透明的问题。",
+        "excerpt": "团队在增加，项目在增加，但沟通仍靠会被淹没的WhatsApp群——没有清晰项目管理系统的成长型企业，最终将失去对自身工作的掌控。",
+        "tags": [
+          "应用",
+          "项目管理",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "ai-agents-agentic-ai-bisnis-2026",
-    "title": "AI Agents (Agentic AI) untuk Bisnis 2026: Dari Chatbot ke Asisten yang Bertindak Otomatis",
-    "description": "Agentic AI adalah evolusi setelah chatbot — AI yang tidak hanya menjawab, tapi bisa menjalankan tugas nyata secara otomatis. Pelajari cara kerjanya dan penerapannya untuk bisnis Indonesia di 2026.",
     "date": "2026-07-05",
     "readMinutes": 10,
-    "tags": [
-      "AI",
-      "Agentic AI",
-      "Teknologi"
-    ],
     "c": "#5B21B6",
     "c2": "#3B0764",
-    "excerpt": "Chatbot menjawab pertanyaan, tapi AI agent melangkah lebih jauh: memesan, memproses, dan menyelesaikan tugas nyata secara otomatis tanpa menunggu perintah manual di setiap langkah."
+    "i18n": {
+      "id": {
+        "title": "AI Agents (Agentic AI) untuk Bisnis 2026: Dari Chatbot ke Asisten yang Bertindak Otomatis",
+        "description": "Agentic AI adalah evolusi setelah chatbot — AI yang tidak hanya menjawab, tapi bisa menjalankan tugas nyata secara otomatis. Pelajari cara kerjanya dan penerapannya untuk bisnis Indonesia di 2026.",
+        "excerpt": "Chatbot menjawab pertanyaan, tapi AI agent melangkah lebih jauh: memesan, memproses, dan menyelesaikan tugas nyata secara otomatis tanpa menunggu perintah manual di setiap langkah.",
+        "tags": [
+          "AI",
+          "Agentic AI",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "AI Agents (Agentic AI) for Business in 2026: From Chatbots to Assistants That Act Automatically",
+        "description": "Agentic AI is the evolution beyond chatbots — AI that doesn't just answer questions but can execute real tasks automatically. Learn how it works and how Indonesian businesses can apply it in 2026.",
+        "excerpt": "A chatbot answers questions, but an AI agent goes further: placing orders, processing requests, and completing real tasks automatically — without waiting for a manual command at every step.",
+        "tags": [
+          "AI",
+          "Agentic AI",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "2026年AI Agent（智能体AI）商业应用：从聊天机器人到自主执行任务的AI助手",
+        "description": "智能体AI是聊天机器人之后的进化形态——不只是回答问题，而是能自动执行真实任务的AI。了解其工作原理及2026年印度尼西亚企业的应用方式。",
+        "excerpt": "聊天机器人负责回答问题，而AI Agent则更进一步：自动下单、处理请求、完成真实任务——无需在每个步骤都等待人工指令。",
+        "tags": [
+          "AI",
+          "智能体AI",
+          "技术"
+        ]
+      }
+    }
   },
   {
     "slug": "business-intelligence-dashboard-data-bisnis",
-    "title": "Business Intelligence & Dashboard Data: Mengubah Data Bisnis Jadi Keputusan Cerdas",
-    "description": "Panduan lengkap Business Intelligence (BI) dan dashboard data untuk bisnis — cara mengubah data yang tersebar di berbagai sistem menjadi insight yang mendorong keputusan lebih cepat dan akurat.",
     "date": "2026-07-05",
     "readMinutes": 9,
-    "tags": [
-      "Business Intelligence",
-      "Data",
-      "Bisnis"
-    ],
     "c": "#1E3A8A",
     "c2": "#1E293B",
-    "excerpt": "Data penjualan ada di satu sistem, data stok di sistem lain, dan laporan keuangan di Excel terpisah — pemilik bisnis akhirnya mengambil keputusan berdasarkan tebakan, bukan gambaran utuh operasional."
+    "i18n": {
+      "id": {
+        "title": "Business Intelligence & Dashboard Data: Mengubah Data Bisnis Jadi Keputusan Cerdas",
+        "description": "Panduan lengkap Business Intelligence (BI) dan dashboard data untuk bisnis — cara mengubah data yang tersebar di berbagai sistem menjadi insight yang mendorong keputusan lebih cepat dan akurat.",
+        "excerpt": "Data penjualan ada di satu sistem, data stok di sistem lain, dan laporan keuangan di Excel terpisah — pemilik bisnis akhirnya mengambil keputusan berdasarkan tebakan, bukan gambaran utuh operasional.",
+        "tags": [
+          "Business Intelligence",
+          "Data",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Business Intelligence & Data Dashboards: Turning Business Data into Smart Decisions",
+        "description": "A comprehensive guide to Business Intelligence (BI) and data dashboards for businesses — how to transform data scattered across multiple systems into insights that drive faster, more accurate decisions.",
+        "excerpt": "Sales data lives in one system, inventory data in another, and financial reports in a separate Excel file — business owners end up making decisions based on guesswork rather than a complete operational picture.",
+        "tags": [
+          "Business Intelligence",
+          "Data",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "商业智能与数据看板：将业务数据转化为明智决策",
+        "description": "商业智能（BI）与数据看板完整指南——如何将散落在多个系统中的数据转化为驱动更快速、更精准决策的洞察。",
+        "excerpt": "销售数据在一个系统里，库存数据在另一个系统里，财务报告在独立的Excel里——企业主最终只能凭感觉做决策，而非基于完整的运营全貌。",
+        "tags": [
+          "商业智能",
+          "数据",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "membangun-marketplace-sendiri",
-    "title": "Membangun Marketplace Sendiri: Panduan Lengkap Platform Multi-Vendor untuk Bisnis",
-    "description": "Panduan lengkap membangun marketplace multi-vendor sendiri — dari model bisnis, fitur wajib, tantangan teknis, hingga strategi menarik seller dan buyer pertama.",
     "date": "2026-07-05",
     "readMinutes": 10,
-    "tags": [
-      "Marketplace",
-      "E-Commerce",
-      "Bisnis"
-    ],
     "c": "#C2410C",
     "c2": "#7C2D12",
-    "excerpt": "Tokopedia dan Shopee membuktikan model marketplace bisa menjadi bisnis raksasa — tapi bagaimana jika Anda ingin membangun marketplace niche sendiri, bukan sekadar berjualan di platform orang lain?"
+    "i18n": {
+      "id": {
+        "title": "Membangun Marketplace Sendiri: Panduan Lengkap Platform Multi-Vendor untuk Bisnis",
+        "description": "Panduan lengkap membangun marketplace multi-vendor sendiri — dari model bisnis, fitur wajib, tantangan teknis, hingga strategi menarik seller dan buyer pertama.",
+        "excerpt": "Tokopedia dan Shopee membuktikan model marketplace bisa menjadi bisnis raksasa — tapi bagaimana jika Anda ingin membangun marketplace niche sendiri, bukan sekadar berjualan di platform orang lain?",
+        "tags": [
+          "Marketplace",
+          "E-Commerce",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Building Your Own Marketplace: A Complete Guide to Multi-Vendor Platforms for Business",
+        "description": "A comprehensive guide to building your own multi-vendor marketplace — from business models and essential features to technical challenges and strategies for attracting your first sellers and buyers.",
+        "excerpt": "Tokopedia and Shopee proved the marketplace model can become a giant business — but what if you want to build your own niche marketplace instead of just selling on someone else's platform?",
+        "tags": [
+          "Marketplace",
+          "E-Commerce",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "自建电商平台：多商家Marketplace完整搭建指南",
+        "description": "多商家平台搭建完整指南——涵盖商业模式、必备功能、技术挑战，以及吸引首批卖家和买家的实战策略。",
+        "excerpt": "Tokopedia和Shopee证明了Marketplace模式可以成长为巨型商业——但如果您想搭建自己的垂直领域平台，而不只是在别人的平台上卖货，该怎么做？",
+        "tags": [
+          "平台电商",
+          "电子商务",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "erp-klinik-rumah-sakit-kesehatan",
-    "title": "ERP untuk Klinik, Rumah Sakit & Apotek: Sistem Informasi Kesehatan Terintegrasi",
-    "description": "ERP kesehatan menyatukan rekam medis, jadwal dokter, stok obat, dan klaim BPJS/asuransi dalam satu sistem. Pelajari modul, manfaat, dan cara memulainya untuk fasilitas kesehatan Anda.",
     "date": "2026-07-05",
     "readMinutes": 10,
-    "tags": [
-      "ERP",
-      "Kesehatan",
-      "Bisnis"
-    ],
     "c": "#0E7490",
     "c2": "#164E63",
-    "excerpt": "Rekam medis di kertas, antrian yang mengular, dan stok obat yang sering tidak sinkron — fasilitas kesehatan yang masih mengandalkan cara manual kehilangan waktu dan kepercayaan pasien setiap hari."
+    "i18n": {
+      "id": {
+        "title": "ERP untuk Klinik, Rumah Sakit & Apotek: Sistem Informasi Kesehatan Terintegrasi",
+        "description": "ERP kesehatan menyatukan rekam medis, jadwal dokter, stok obat, dan klaim BPJS/asuransi dalam satu sistem. Pelajari modul, manfaat, dan cara memulainya untuk fasilitas kesehatan Anda.",
+        "excerpt": "Rekam medis di kertas, antrian yang mengular, dan stok obat yang sering tidak sinkron — fasilitas kesehatan yang masih mengandalkan cara manual kehilangan waktu dan kepercayaan pasien setiap hari.",
+        "tags": [
+          "ERP",
+          "Kesehatan",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "ERP for Clinics, Hospitals & Pharmacies: Integrated Healthcare Information Systems",
+        "description": "A healthcare ERP unifies patient records, doctor schedules, drug inventory, and BPJS/insurance claims in one system. Learn about its modules, benefits, and how to get started for your healthcare facility.",
+        "excerpt": "Paper-based medical records, endless queues, and perpetually out-of-sync drug inventory — healthcare facilities still relying on manual processes lose time and patient trust every single day.",
+        "tags": [
+          "ERP",
+          "Healthcare",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "诊所、医院与药房ERP系统：一体化医疗信息管理平台",
+        "description": "医疗ERP将患者病历、医生排班、药品库存及BPJS/保险理赔统一整合在一个系统中。了解其功能模块、核心优势，以及如何为您的医疗机构启动实施。",
+        "excerpt": "纸质病历、蜿蜒的排队长龙、长期失同步的药品库存——仍依赖手工操作的医疗机构，每天都在损失时间和患者信任。",
+        "tags": [
+          "ERP",
+          "医疗健康",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "aplikasi-inventory-manajemen-gudang",
-    "title": "Aplikasi Manajemen Inventory & Gudang: Stok Akurat, Bisnis Efisien",
-    "description": "Aplikasi manajemen inventory & gudang membantu bisnis hindari stok kosong, kelebihan stok, dan selisih data — dengan pencatatan real-time berbasis barcode/QR.",
     "date": "2026-07-04",
     "readMinutes": 9,
-    "tags": [
-      "Aplikasi Mobile",
-      "ERP",
-      "Bisnis"
-    ],
     "c": "#0B6E69",
     "c2": "#15243B",
-    "excerpt": "Stok yang tercatat di sistem tidak pernah sama dengan stok fisik di gudang — masalah klasik ini menyebabkan kehilangan penjualan sekaligus modal yang mengendap sia-sia di rak."
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Inventory & Gudang: Stok Akurat, Bisnis Efisien",
+        "description": "Aplikasi manajemen inventory & gudang membantu bisnis hindari stok kosong, kelebihan stok, dan selisih data — dengan pencatatan real-time berbasis barcode/QR.",
+        "excerpt": "Stok yang tercatat di sistem tidak pernah sama dengan stok fisik di gudang — masalah klasik ini menyebabkan kehilangan penjualan sekaligus modal yang mengendap sia-sia di rak.",
+        "tags": [
+          "Aplikasi Mobile",
+          "ERP",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Inventory & Warehouse Management App: Accurate Stock, Efficient Business",
+        "description": "Inventory & warehouse management apps help businesses avoid stockouts, overstock, and data discrepancies — with real-time barcode/QR-based recording.",
+        "excerpt": "Stock recorded in the system never quite matches physical stock in the warehouse — this classic problem causes lost sales and capital sitting idle uselessly on the shelf.",
+        "tags": [
+          "Mobile Apps",
+          "ERP",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "库存与仓库管理应用：库存精准，运营高效",
+        "description": "库存与仓库管理应用帮助企业避免断货、库存积压和数据误差——通过基于条码/二维码的实时记录实现精准管理。",
+        "excerpt": "系统里记录的库存和仓库里的实际库存对不上——这个经典问题既导致销售损失，也让资金无谓地积压在货架上。",
+        "tags": [
+          "移动应用",
+          "ERP",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "voice-search-seo-ai-2026",
-    "title": "Voice Search & SEO Berbasis AI 2026: Cara Bisnis Tetap Ditemukan",
-    "description": "Pencarian suara dan AI Overview mengubah cara orang menemukan bisnis online. Pelajari strategi SEO 2026 agar website Anda tetap muncul di era pencarian berbasis AI.",
     "date": "2026-07-04",
     "readMinutes": 8,
-    "tags": [
-      "Teknologi",
-      "Website",
-      "Tren 2026"
-    ],
     "c": "#15243B",
     "c2": "#2BB3A3",
-    "excerpt": "Semakin banyak orang bertanya ke asisten suara dan chatbot AI ketimbang mengetik di kolom pencarian — bisnis yang tidak menyesuaikan strategi SEO-nya berisiko tidak lagi \"ditemukan\" sama sekali."
+    "i18n": {
+      "id": {
+        "title": "Voice Search & SEO Berbasis AI 2026: Cara Bisnis Tetap Ditemukan",
+        "description": "Pencarian suara dan AI Overview mengubah cara orang menemukan bisnis online. Pelajari strategi SEO 2026 agar website Anda tetap muncul di era pencarian berbasis AI.",
+        "excerpt": "Semakin banyak orang bertanya ke asisten suara dan chatbot AI ketimbang mengetik di kolom pencarian — bisnis yang tidak menyesuaikan strategi SEO-nya berisiko tidak lagi \"ditemukan\" sama sekali.",
+        "tags": [
+          "Teknologi",
+          "Website",
+          "Tren 2026"
+        ]
+      },
+      "en": {
+        "title": "Voice Search & AI-Powered SEO 2026: How Businesses Stay Discoverable",
+        "description": "Voice search and AI Overviews are changing how people find businesses online. Learn the 2026 SEO strategy to keep your website visible in the age of AI-powered search.",
+        "excerpt": "More and more people are asking voice assistants and AI chatbots questions instead of typing into a search box — businesses that don't adapt their SEO strategy risk not being \"found\" at all.",
+        "tags": [
+          "Technology",
+          "Website",
+          "2026 Trends"
+        ]
+      },
+      "zh": {
+        "title": "2026年语音搜索与AI驱动的SEO：企业如何保持可被发现",
+        "description": "语音搜索和AI摘要正在改变人们发现企业的方式。了解2026年的SEO策略，让你的网站在AI驱动的搜索时代保持可见。",
+        "excerpt": "越来越多的人向语音助手和AI聊天机器人提问，而不是在搜索框里打字——不调整SEO策略的企业，将面临完全“消失”于搜索结果之外的风险。",
+        "tags": [
+          "科技",
+          "网站",
+          "2026年趋势"
+        ]
+      }
+    }
   },
   {
     "slug": "website-multibahasa-ekspansi-bisnis-global",
-    "title": "Website Multibahasa: Kunci Ekspansi Bisnis ke Pasar Global",
-    "description": "Website multibahasa membuka jalan bisnis Indonesia menjangkau pasar internasional — pelajari strategi, teknis implementasi, dan kesalahan umum yang harus dihindari.",
     "date": "2026-07-04",
     "readMinutes": 8,
-    "tags": [
-      "Website",
-      "Bisnis",
-      "Strategi Digital"
-    ],
     "c": "#0B6E69",
     "c2": "#0E8C86",
-    "excerpt": "Bisnis yang ingin menjangkau pelanggan di luar Indonesia tidak bisa mengandalkan website berbahasa Indonesia saja — website multibahasa yang dirancang tepat membuka pintu ke pasar global."
+    "i18n": {
+      "id": {
+        "title": "Website Multibahasa: Kunci Ekspansi Bisnis ke Pasar Global",
+        "description": "Website multibahasa membuka jalan bisnis Indonesia menjangkau pasar internasional — pelajari strategi, teknis implementasi, dan kesalahan umum yang harus dihindari.",
+        "excerpt": "Bisnis yang ingin menjangkau pelanggan di luar Indonesia tidak bisa mengandalkan website berbahasa Indonesia saja — website multibahasa yang dirancang tepat membuka pintu ke pasar global.",
+        "tags": [
+          "Website",
+          "Bisnis",
+          "Strategi Digital"
+        ]
+      },
+      "en": {
+        "title": "Multilingual Websites: The Key to Global Business Expansion",
+        "description": "A multilingual website opens the door for Indonesian businesses to reach international markets — learn the strategy, technical implementation, and common mistakes to avoid.",
+        "excerpt": "Businesses looking to reach customers beyond Indonesia can't rely on an Indonesian-only website — a well-designed multilingual website opens the door to global markets.",
+        "tags": [
+          "Website",
+          "Business",
+          "Digital Strategy"
+        ]
+      },
+      "zh": {
+        "title": "多语言网站：拓展全球市场的关键",
+        "description": "多语言网站为印尼企业打开通往国际市场的大门——了解策略、技术实现方式，以及必须避免的常见错误。",
+        "excerpt": "希望触及印尼以外客户的企业，不能只依赖印尼语网站——一个设计得当的多语言网站，能为你打开通往全球市场的大门。",
+        "tags": [
+          "网站",
+          "商业",
+          "数字策略"
+        ]
+      }
+    }
   },
   {
     "slug": "erp-industri-konstruksi-properti",
-    "title": "ERP untuk Industri Konstruksi & Properti: Kelola Proyek Tanpa Kebocoran Biaya",
-    "description": "ERP konstruksi & properti membantu kontraktor dan pengembang kelola RAB, progres proyek, pengadaan material, dan keuangan dalam satu sistem terintegrasi.",
     "date": "2026-07-04",
     "readMinutes": 9,
-    "tags": [
-      "ERP",
-      "Bisnis",
-      "Panduan"
-    ],
     "c": "#0E2240",
     "c2": "#2563FF",
-    "excerpt": "Biaya proyek yang membengkak diam-diam, laporan progres yang terlambat, dan RAB versus realisasi yang tidak pernah cocok — ERP konstruksi menutup celah ini dengan data real-time."
+    "i18n": {
+      "id": {
+        "title": "ERP untuk Industri Konstruksi & Properti: Kelola Proyek Tanpa Kebocoran Biaya",
+        "description": "ERP konstruksi & properti membantu kontraktor dan pengembang kelola RAB, progres proyek, pengadaan material, dan keuangan dalam satu sistem terintegrasi.",
+        "excerpt": "Biaya proyek yang membengkak diam-diam, laporan progres yang terlambat, dan RAB versus realisasi yang tidak pernah cocok — ERP konstruksi menutup celah ini dengan data real-time.",
+        "tags": [
+          "ERP",
+          "Bisnis",
+          "Panduan"
+        ]
+      },
+      "en": {
+        "title": "ERP for the Construction & Property Industry: Manage Projects Without Cost Leakage",
+        "description": "Construction & property ERP helps contractors and developers manage budgets (RAB), project progress, material procurement, and finances in one integrated system.",
+        "excerpt": "Costs that quietly balloon, progress reports that arrive late, and a budget vs. actual spend that never matches — construction ERP closes these gaps with real-time data.",
+        "tags": [
+          "ERP",
+          "Business",
+          "Guide"
+        ]
+      },
+      "zh": {
+        "title": "面向建筑与房地产行业的 ERP：管理项目，杜绝成本流失",
+        "description": "建筑与房地产 ERP 帮助承包商和开发商在一个集成系统中管理预算（RAB）、项目进度、材料采购和财务。",
+        "excerpt": "悄悄膨胀的项目成本、迟到的进度报告，以及始终对不上的预算与实际支出——建筑 ERP 用实时数据填补了这些漏洞。",
+        "tags": [
+          "ERP",
+          "商业",
+          "指南"
+        ]
+      }
+    }
   },
   {
     "slug": "aplikasi-booking-reservasi-online",
-    "title": "Aplikasi Booking & Reservasi Online: Solusi Wajib Bisnis Jasa Modern",
-    "description": "Aplikasi booking & reservasi online membantu bisnis jasa (klinik, salon, resto, rental) kurangi no-show, isi kalender otomatis, dan tingkatkan kepuasan pelanggan.",
     "date": "2026-07-04",
     "readMinutes": 9,
-    "tags": [
-      "Aplikasi Mobile",
-      "Bisnis",
-      "Panduan"
-    ],
     "c": "#0E8C86",
     "c2": "#15243B",
-    "excerpt": "Telepon terus berdering untuk booking, jadwal bentrok, dan pelanggan yang tidak datang tanpa kabar — aplikasi booking online menyelesaikan seluruh masalah ini dalam satu sistem otomatis."
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Booking & Reservasi Online: Solusi Wajib Bisnis Jasa Modern",
+        "description": "Aplikasi booking & reservasi online membantu bisnis jasa (klinik, salon, resto, rental) kurangi no-show, isi kalender otomatis, dan tingkatkan kepuasan pelanggan.",
+        "excerpt": "Telepon terus berdering untuk booking, jadwal bentrok, dan pelanggan yang tidak datang tanpa kabar — aplikasi booking online menyelesaikan seluruh masalah ini dalam satu sistem otomatis.",
+        "tags": [
+          "Aplikasi Mobile",
+          "Bisnis",
+          "Panduan"
+        ]
+      },
+      "en": {
+        "title": "Online Booking & Reservation Apps: A Must-Have Solution for Modern Service Businesses",
+        "description": "Online booking and reservation apps help service businesses (clinics, salons, restaurants, rentals) reduce no-shows, keep calendars automatically full, and improve customer satisfaction.",
+        "excerpt": "A constantly ringing phone for bookings, clashing schedules, and customers who don't show up without notice — an online booking app solves all of these problems within a single automated system.",
+        "tags": [
+          "Mobile Apps",
+          "Business",
+          "Guide"
+        ]
+      },
+      "zh": {
+        "title": "在线预约与预订应用：现代服务型企业的必备方案",
+        "description": "在线预约与预订应用帮助服务型企业（诊所、美容院、餐厅、租赁业务）减少爽约、自动填满档期、提升客户满意度。",
+        "excerpt": "电话响个不停要来预约、档期撞车、客户爽约却毫无音讯——在线预约应用能用一套自动化系统彻底解决这些问题。",
+        "tags": [
+          "移动应用",
+          "商业",
+          "指南"
+        ]
+      }
+    }
   },
   {
     "slug": "aplikasi-logistik-manajemen-armada",
-    "title": "Aplikasi Manajemen Logistik & Armada: Efisiensi Rantai Pasok Bisnis",
-    "description": "Aplikasi manajemen logistik & armada membantu bisnis lacak pengiriman real-time, optimalkan rute, dan kurangi biaya operasional transportasi.",
     "date": "2026-07-03",
     "readMinutes": 8,
-    "tags": [
-      "Aplikasi Mobile",
-      "Logistik",
-      "Bisnis"
-    ],
     "c": "#0B6E69",
     "c2": "#15243B",
-    "excerpt": "Pengiriman telat, rute tidak efisien, dan owner tidak tahu posisi armada secara real-time — aplikasi manajemen logistik menyelesaikan masalah operasional ini secara sistematis."
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Logistik & Armada: Efisiensi Rantai Pasok Bisnis",
+        "description": "Aplikasi manajemen logistik & armada membantu bisnis lacak pengiriman real-time, optimalkan rute, dan kurangi biaya operasional transportasi.",
+        "excerpt": "Pengiriman telat, rute tidak efisien, dan owner tidak tahu posisi armada secara real-time — aplikasi manajemen logistik menyelesaikan masalah operasional ini secara sistematis.",
+        "tags": [
+          "Aplikasi Mobile",
+          "Logistik",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Logistics & Fleet Management Apps: Supply Chain Efficiency for Business",
+        "description": "Logistics & fleet management apps help businesses track shipments in real time, optimize routes, and cut transportation operating costs.",
+        "excerpt": "Late deliveries, inefficient routes, and owners with no real-time visibility into fleet position — a logistics management app systematically solves these operational problems.",
+        "tags": [
+          "Mobile Apps",
+          "Logistics",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "物流与车队管理应用：提升企业供应链效率",
+        "description": "物流与车队管理应用帮助企业实时追踪货运、优化路线，并降低运输运营成本。",
+        "excerpt": "配送延误、路线效率低下、车主无法实时掌握车队位置——物流管理应用能系统性地解决这些运营问题。",
+        "tags": [
+          "移动应用",
+          "物流",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "omnichannel-commerce-integrasi-bisnis",
-    "title": "Omnichannel Commerce: Integrasi Website, Marketplace & Aplikasi untuk Bisnis Ritel Modern",
-    "description": "Strategi omnichannel commerce menyatukan website, marketplace, dan aplikasi dalam satu data terpadu. Pelajari cara membangun pengalaman belanja tanpa batas kanal.",
     "date": "2026-07-03",
     "readMinutes": 9,
-    "tags": [
-      "E-Commerce",
-      "Omnichannel",
-      "Bisnis"
-    ],
     "c": "#15243B",
     "c2": "#1E88A8",
-    "excerpt": "Pelanggan Anda berbelanja lewat marketplace, website, dan toko fisik — tapi apakah stok dan datanya terhubung? Inilah kenapa omnichannel bukan lagi pilihan, tapi keharusan."
+    "i18n": {
+      "id": {
+        "title": "Omnichannel Commerce: Integrasi Website, Marketplace & Aplikasi untuk Bisnis Ritel Modern",
+        "description": "Strategi omnichannel commerce menyatukan website, marketplace, dan aplikasi dalam satu data terpadu. Pelajari cara membangun pengalaman belanja tanpa batas kanal.",
+        "excerpt": "Pelanggan Anda berbelanja lewat marketplace, website, dan toko fisik — tapi apakah stok dan datanya terhubung? Inilah kenapa omnichannel bukan lagi pilihan, tapi keharusan.",
+        "tags": [
+          "E-Commerce",
+          "Omnichannel",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Omnichannel Commerce: Integrating Website, Marketplace & Apps for Modern Retail Businesses",
+        "description": "An omnichannel commerce strategy unifies your website, marketplace, and app under a single set of integrated data. Learn how to build a seamless shopping experience across every channel.",
+        "excerpt": "Your customers shop through marketplaces, your website, and physical stores — but are your stock and data actually connected? Here's why omnichannel is no longer optional, but essential.",
+        "tags": [
+          "E-Commerce",
+          "Omnichannel",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "全渠道商务：为现代零售企业整合网站、电商平台与应用程序",
+        "description": "全渠道商务策略将网站、电商平台和应用程序统一到一套集成数据之中。了解如何在所有渠道间打造无缝的购物体验。",
+        "excerpt": "您的客户通过电商平台、网站和实体店购物——但库存和数据真的互通了吗？这就是为什么全渠道不再是可选项，而是必需品。",
+        "tags": [
+          "电子商务",
+          "全渠道",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "rpa-otomasi-proses-bisnis",
-    "title": "RPA (Robotic Process Automation): Otomasi Proses Bisnis untuk Efisiensi Operasional",
-    "description": "RPA mengotomasi tugas repetitif seperti input data dan rekonsiliasi laporan tanpa mengganti sistem lama. Kenali cara kerja, contoh kasus, dan cara memulainya.",
     "date": "2026-07-03",
     "readMinutes": 8,
-    "tags": [
-      "Otomasi",
-      "RPA",
-      "Teknologi"
-    ],
     "c": "#2BB3A3",
     "c2": "#0E5E78",
-    "excerpt": "Tim Anda masih copy-paste data antar sistem setiap hari? RPA bisa mengotomasi tugas repetitif itu tanpa harus mengganti sistem lama yang sudah berjalan."
+    "i18n": {
+      "id": {
+        "title": "RPA (Robotic Process Automation): Otomasi Proses Bisnis untuk Efisiensi Operasional",
+        "description": "RPA mengotomasi tugas repetitif seperti input data dan rekonsiliasi laporan tanpa mengganti sistem lama. Kenali cara kerja, contoh kasus, dan cara memulainya.",
+        "excerpt": "Tim Anda masih copy-paste data antar sistem setiap hari? RPA bisa mengotomasi tugas repetitif itu tanpa harus mengganti sistem lama yang sudah berjalan.",
+        "tags": [
+          "Otomasi",
+          "RPA",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "RPA (Robotic Process Automation): Automating Business Processes for Operational Efficiency",
+        "description": "RPA automates repetitive tasks like data entry and report reconciliation without replacing legacy systems. Learn how it works, real-world examples, and how to get started.",
+        "excerpt": "Is your team still copy-pasting data between systems every day? RPA can automate that repetitive work without having to replace the legacy systems already in place.",
+        "tags": [
+          "Automation",
+          "RPA",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "RPA（机器人流程自动化）：自动化业务流程，提升运营效率",
+        "description": "RPA 能自动化数据录入、报表核对等重复性任务，且无需替换现有系统。了解其工作原理、实际案例，以及如何开始使用。",
+        "excerpt": "你的团队还在每天于不同系统之间手动复制粘贴数据吗？RPA 能自动化这些重复性任务，而无需替换已经在运行的旧系统。",
+        "tags": [
+          "自动化",
+          "RPA",
+          "技术"
+        ]
+      }
+    }
   },
   {
     "slug": "erp-untuk-bisnis-ritel-fnb",
-    "title": "ERP untuk Bisnis Ritel & F&B: Kelola Stok, Kasir, dan Cabang dalam Satu Sistem",
-    "description": "ERP untuk ritel dan F&B menyatukan kasir (POS), stok, dan laporan multi-cabang dalam satu sistem. Ketahui fitur wajib dan cara memilih ERP yang tepat.",
     "date": "2026-07-03",
     "readMinutes": 9,
-    "tags": [
-      "ERP",
-      "Ritel",
-      "F&B"
-    ],
     "c": "#0E8C86",
     "c2": "#15243B",
-    "excerpt": "Stok tidak sinkron antar cabang, laporan penjualan telat, dan owner tidak tahu kondisi bisnis real-time — ERP ritel & F&B menyelesaikan masalah ini dari akarnya."
+    "i18n": {
+      "id": {
+        "title": "ERP untuk Bisnis Ritel & F&B: Kelola Stok, Kasir, dan Cabang dalam Satu Sistem",
+        "description": "ERP untuk ritel dan F&B menyatukan kasir (POS), stok, dan laporan multi-cabang dalam satu sistem. Ketahui fitur wajib dan cara memilih ERP yang tepat.",
+        "excerpt": "Stok tidak sinkron antar cabang, laporan penjualan telat, dan owner tidak tahu kondisi bisnis real-time — ERP ritel & F&B menyelesaikan masalah ini dari akarnya.",
+        "tags": [
+          "ERP",
+          "Ritel",
+          "F&B"
+        ]
+      },
+      "en": {
+        "title": "ERP for Retail & F&B Businesses: Manage Stock, POS, and Branches in One System",
+        "description": "ERP for retail and F&B unifies point-of-sale (POS), stock, and multi-branch reporting into one system. Learn the must-have features and how to choose the right ERP.",
+        "excerpt": "Stock out of sync across branches, delayed sales reports, and owners not knowing real-time business conditions — retail & F&B ERP solves these problems at the root.",
+        "tags": [
+          "ERP",
+          "Retail",
+          "F&B"
+        ]
+      },
+      "zh": {
+        "title": "面向零售与餐饮（F&B）企业的ERP：在一个系统中管理库存、收银与分店",
+        "description": "面向零售与餐饮的ERP将收银（POS）、库存和多分店报表整合到一个系统中。了解必备功能以及如何选择合适的ERP。",
+        "excerpt": "分店间库存不同步、销售报表滞后、老板无法实时掌握业务状况——零售与餐饮ERP从根源上解决这些问题。",
+        "tags": [
+          "ERP",
+          "零售",
+          "餐饮"
+        ]
+      }
+    }
   },
   {
     "slug": "aplikasi-hr-payroll-digital",
-    "title": "Aplikasi HR & Payroll Digital: Solusi Modern Kelola Karyawan Tanpa Ribet",
-    "description": "Aplikasi HR & payroll digital membantu bisnis kelola absensi, gaji, cuti, dan data karyawan secara otomatis. Simak fitur wajib dan cara memulainya.",
     "date": "2026-07-03",
     "readMinutes": 8,
-    "tags": [
-      "Aplikasi Mobile",
-      "HR Tech",
-      "Bisnis"
-    ],
     "c": "#1E88A8",
     "c2": "#15243B",
-    "excerpt": "Absensi kertas dan payroll manual di Excel rawan human error dan memakan waktu tim HR. Kenali fitur aplikasi HR digital yang benar-benar dibutuhkan bisnis modern."
+    "i18n": {
+      "id": {
+        "title": "Aplikasi HR & Payroll Digital: Solusi Modern Kelola Karyawan Tanpa Ribet",
+        "description": "Aplikasi HR & payroll digital membantu bisnis kelola absensi, gaji, cuti, dan data karyawan secara otomatis. Simak fitur wajib dan cara memulainya.",
+        "excerpt": "Absensi kertas dan payroll manual di Excel rawan human error dan memakan waktu tim HR. Kenali fitur aplikasi HR digital yang benar-benar dibutuhkan bisnis modern.",
+        "tags": [
+          "Aplikasi Mobile",
+          "HR Tech",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Digital HR & Payroll App: A Modern Solution for Hassle-Free Employee Management",
+        "description": "Digital HR & payroll apps help businesses automate attendance, payroll, leave, and employee data. Explore the must-have features and how to get started.",
+        "excerpt": "Paper attendance sheets and manual payroll in Excel are prone to human error and eat up HR's time. Learn about the digital HR app features modern businesses genuinely need.",
+        "tags": [
+          "Mobile Apps",
+          "HR Tech",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "数字化人力资源与薪资应用：轻松管理员工的现代解决方案",
+        "description": "数字化人力资源与薪资应用帮助企业自动管理考勤、薪资、请假和员工数据。了解必备功能以及入门方法。",
+        "excerpt": "纸质考勤和 Excel 手动算薪，容易出人为错误，还占用大量 HR 团队的时间。了解现代企业真正需要的数字化人力资源应用功能。",
+        "tags": [
+          "移动应用",
+          "人力资源科技",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "website-aplikasi-fondasi-pertumbuhan-bisnis",
-    "title": "Website & Aplikasi Custom sebagai Fondasi Pertumbuhan Bisnis di Era Digital",
-    "description": "Mengapa bisnis yang serius berinvestasi pada website dan aplikasi custom — bukan template atau tool SaaS generik — tumbuh lebih cepat dan memiliki keunggulan kompetitif yang berkelanjutan.",
     "date": "2026-07-01",
     "readMinutes": 10,
-    "tags": [
-      "Website",
-      "Aplikasi",
-      "Pertumbuhan Bisnis"
-    ],
     "c": "#B45309",
     "c2": "#78350F",
-    "excerpt": "Website dan aplikasi bukan pengeluaran IT — ini adalah investasi infrastruktur bisnis yang menentukan seberapa cepat dan seberapa jauh bisnis Anda bisa berkembang."
+    "i18n": {
+      "id": {
+        "title": "Website & Aplikasi Custom sebagai Fondasi Pertumbuhan Bisnis di Era Digital",
+        "description": "Mengapa bisnis yang serius berinvestasi pada website dan aplikasi custom — bukan template atau tool SaaS generik — tumbuh lebih cepat dan memiliki keunggulan kompetitif yang berkelanjutan.",
+        "excerpt": "Website dan aplikasi bukan pengeluaran IT — ini adalah investasi infrastruktur bisnis yang menentukan seberapa cepat dan seberapa jauh bisnis Anda bisa berkembang.",
+        "tags": [
+          "Website",
+          "Aplikasi",
+          "Pertumbuhan Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Custom Websites & Applications as the Foundation of Business Growth in the Digital Era",
+        "description": "Why businesses that seriously invest in custom websites and applications — rather than templates or generic SaaS tools — grow faster and build a sustainable competitive advantage.",
+        "excerpt": "Websites and applications aren't an IT expense — they're an investment in business infrastructure that determines how fast, and how far, your business can grow.",
+        "tags": [
+          "Website",
+          "Application",
+          "Business Growth"
+        ]
+      },
+      "zh": {
+        "title": "定制网站与应用：数字时代企业增长的基石",
+        "description": "为什么认真投资定制网站和应用——而非模板或通用SaaS工具——的企业，能够更快增长并建立可持续的竞争优势。",
+        "excerpt": "网站和应用不是IT支出，而是决定企业能增长多快、走多远的基础设施投资。",
+        "tags": [
+          "网站",
+          "应用",
+          "业务增长"
+        ]
+      }
+    }
   },
   {
     "slug": "agile-scrum-pengembangan-software",
-    "title": "Agile & Scrum dalam Pengembangan Software: Apa Artinya untuk Bisnis Anda?",
-    "description": "Panduan praktis memahami metodologi Agile dan Scrum dalam pengembangan software — bagaimana cara kerjanya, apa keuntungannya untuk bisnis, dan bagaimana berkolaborasi efektif dengan tim teknis.",
     "date": "2026-07-01",
     "readMinutes": 8,
-    "tags": [
-      "Agile",
-      "Software",
-      "Teknologi"
-    ],
     "c": "#0369A1",
     "c2": "#0C4A6E",
-    "excerpt": "Memahami Agile bukan hanya urusan developer. Pemilik bisnis yang memahami metodologi ini bisa berkolaborasi jauh lebih efektif dengan tim teknis dan menghasilkan produk yang lebih baik."
+    "i18n": {
+      "id": {
+        "title": "Agile & Scrum dalam Pengembangan Software: Apa Artinya untuk Bisnis Anda?",
+        "description": "Panduan praktis memahami metodologi Agile dan Scrum dalam pengembangan software — bagaimana cara kerjanya, apa keuntungannya untuk bisnis, dan bagaimana berkolaborasi efektif dengan tim teknis.",
+        "excerpt": "Memahami Agile bukan hanya urusan developer. Pemilik bisnis yang memahami metodologi ini bisa berkolaborasi jauh lebih efektif dengan tim teknis dan menghasilkan produk yang lebih baik.",
+        "tags": [
+          "Agile",
+          "Software",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "Agile & Scrum in Software Development: What It Means for Your Business",
+        "description": "A practical guide to understanding Agile and Scrum methodology in software development — how it works, its benefits for business, and how to collaborate effectively with a technical team.",
+        "excerpt": "Understanding Agile isn't just for developers. Business owners who understand this methodology can collaborate far more effectively with technical teams and produce better products.",
+        "tags": [
+          "Agile",
+          "Software",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "软件开发中的敏捷与 Scrum：这对你的企业意味着什么？",
+        "description": "一份实用指南，帮助你理解软件开发中的敏捷（Agile）与 Scrum 方法论——它是如何运作的、对企业有何益处，以及如何与技术团队高效协作。",
+        "excerpt": "理解敏捷不只是开发者的事。理解这套方法论的企业主，能与技术团队更高效地协作，并产出更好的产品。",
+        "tags": [
+          "敏捷",
+          "软件",
+          "技术"
+        ]
+      }
+    }
   },
   {
     "slug": "erp-untuk-bisnis-jasa",
-    "title": "ERP untuk Bisnis Jasa: Manfaat, Modul Kunci, dan Kapan Harus Mulai",
-    "description": "ERP bukan hanya untuk bisnis manufaktur atau ritel. Bisnis jasa juga bisa merasakan manfaat besar dari sistem ERP yang dirancang sesuai kebutuhan spesifik mereka.",
     "date": "2026-07-01",
     "readMinutes": 9,
-    "tags": [
-      "ERP",
-      "Bisnis Jasa",
-      "Teknologi"
-    ],
     "c": "#6D28D9",
     "c2": "#4C1D95",
-    "excerpt": "ERP bukan hanya untuk pabrik dan gudang. Bisnis jasa seperti konsultan, agensi, klinik, dan kontraktor juga butuh ERP — dan manfaatnya bisa lebih signifikan."
+    "i18n": {
+      "id": {
+        "title": "ERP untuk Bisnis Jasa: Manfaat, Modul Kunci, dan Kapan Harus Mulai",
+        "description": "ERP bukan hanya untuk bisnis manufaktur atau ritel. Bisnis jasa juga bisa merasakan manfaat besar dari sistem ERP yang dirancang sesuai kebutuhan spesifik mereka.",
+        "excerpt": "ERP bukan hanya untuk pabrik dan gudang. Bisnis jasa seperti konsultan, agensi, klinik, dan kontraktor juga butuh ERP — dan manfaatnya bisa lebih signifikan.",
+        "tags": [
+          "ERP",
+          "Bisnis Jasa",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "ERP for Service Businesses: Benefits, Key Modules, and When to Start",
+        "description": "ERP isn't just for manufacturing or retail businesses. Service businesses can also gain major benefits from an ERP system designed around their specific needs.",
+        "excerpt": "ERP isn't just for factories and warehouses. Service businesses like consultancies, agencies, clinics, and contractors need ERP too — and the benefits can be even more significant.",
+        "tags": [
+          "ERP",
+          "Service Business",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "面向服务型企业的 ERP：优势、核心模块，以及何时该开始",
+        "description": "ERP 不仅仅适用于制造业或零售业。服务型企业同样能从专为其特定需求设计的 ERP 系统中获得巨大收益。",
+        "excerpt": "ERP 不只是给工厂和仓库用的。像咨询公司、代理机构、诊所和承包商这样的服务型企业同样需要 ERP——而且获得的收益可能更显著。",
+        "tags": [
+          "ERP",
+          "服务型企业",
+          "技术"
+        ]
+      }
+    }
   },
   {
     "slug": "keamanan-data-bisnis-era-digital-2026",
-    "title": "Keamanan Data Bisnis di Era Digital 2026: Ancaman Nyata dan Cara Melindunginya",
-    "description": "Panduan keamanan data bisnis 2026: ancaman siber yang nyata, standar perlindungan data, dan langkah praktis melindungi aset digital bisnis Anda dari kebocoran dan serangan.",
     "date": "2026-07-01",
     "readMinutes": 9,
-    "tags": [
-      "Keamanan Data",
-      "Teknologi",
-      "Bisnis"
-    ],
     "c": "#B91C1C",
     "c2": "#7F1D1D",
-    "excerpt": "Data bisnis Anda adalah aset yang paling berharga sekaligus paling rentan. Berikut ancaman nyata yang perlu diwaspadai dan langkah konkret untuk melindunginya."
+    "i18n": {
+      "id": {
+        "title": "Keamanan Data Bisnis di Era Digital 2026: Ancaman Nyata dan Cara Melindunginya",
+        "description": "Panduan keamanan data bisnis 2026: ancaman siber yang nyata, standar perlindungan data, dan langkah praktis melindungi aset digital bisnis Anda dari kebocoran dan serangan.",
+        "excerpt": "Data bisnis Anda adalah aset yang paling berharga sekaligus paling rentan. Berikut ancaman nyata yang perlu diwaspadai dan langkah konkret untuk melindunginya.",
+        "tags": [
+          "Keamanan Data",
+          "Teknologi",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Business Data Security in the Digital Era 2026: Real Threats and How to Protect Against Them",
+        "description": "A 2026 business data security guide: real cyber threats, data protection standards, and practical steps to protect your business's digital assets from breaches and attacks.",
+        "excerpt": "Your business data is your most valuable asset — and also its most vulnerable one. Here are the real threats to watch for and concrete steps to protect it.",
+        "tags": [
+          "Data Security",
+          "Technology",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "2026数字时代的企业数据安全：真实威胁与防护之道",
+        "description": "2026年企业数据安全指南：真实存在的网络威胁、数据保护标准，以及保护企业数字资产免遭泄露和攻击的实用步骤。",
+        "excerpt": "企业数据是你最宝贵的资产，同时也是最脆弱的一环。以下是需要警惕的真实威胁，以及切实可行的保护措施。",
+        "tags": [
+          "数据安全",
+          "技术",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "digital-payment-website-aplikasi",
-    "title": "Cara Mengintegrasikan Digital Payment ke Website & Aplikasi Bisnis Anda",
-    "description": "Panduan lengkap integrasi digital payment ke website dan aplikasi bisnis di Indonesia: pilihan payment gateway, teknis integrasi, dan strategi meningkatkan konversi checkout.",
     "date": "2026-07-01",
     "readMinutes": 8,
-    "tags": [
-      "Digital Payment",
-      "Website",
-      "Aplikasi"
-    ],
     "c": "#1A6B4A",
     "c2": "#0E4A32",
-    "excerpt": "Payment gateway mana yang paling cocok untuk bisnis Anda, dan bagaimana cara mengintegrasikannya ke website atau aplikasi tanpa hambatan teknis?"
+    "i18n": {
+      "id": {
+        "title": "Cara Mengintegrasikan Digital Payment ke Website & Aplikasi Bisnis Anda",
+        "description": "Panduan lengkap integrasi digital payment ke website dan aplikasi bisnis di Indonesia: pilihan payment gateway, teknis integrasi, dan strategi meningkatkan konversi checkout.",
+        "excerpt": "Payment gateway mana yang paling cocok untuk bisnis Anda, dan bagaimana cara mengintegrasikannya ke website atau aplikasi tanpa hambatan teknis?",
+        "tags": [
+          "Digital Payment",
+          "Website",
+          "Aplikasi"
+        ]
+      },
+      "en": {
+        "title": "How to Integrate Digital Payments Into Your Business Website & App",
+        "description": "A complete guide to integrating digital payments into a business website and app in Indonesia: payment gateway options, technical integration, and strategies to boost checkout conversion.",
+        "excerpt": "Which payment gateway best fits your business, and how do you integrate it into your website or app without technical friction?",
+        "tags": [
+          "Digital Payment",
+          "Website",
+          "App"
+        ]
+      },
+      "zh": {
+        "title": "如何将数字支付集成到您的商业网站与应用中",
+        "description": "为印尼企业提供的数字支付集成完整指南：支付网关的选择、技术集成要点，以及提升结账转化率的策略。",
+        "excerpt": "哪种支付网关最适合您的企业？如何将其无障碍地集成到网站或应用中？",
+        "tags": [
+          "数字支付",
+          "网站",
+          "应用"
+        ]
+      }
+    }
   },
   {
     "slug": "internet-of-things-iot-untuk-bisnis-indonesia",
-    "title": "Internet of Things (IoT) untuk Bisnis Indonesia: Peluang dan Penerapan di 2026",
-    "description": "IoT bukan lagi teknologi masa depan — bisnis Indonesia di berbagai sektor sudah mulai menerapkannya. Pelajari peluang nyata dan cara memulai penerapan IoT untuk bisnis Anda.",
     "date": "2026-06-30",
-    "updatedAt": "2026-06-30",
     "readMinutes": 9,
-    "tags": [
-      "Teknologi",
-      "IoT",
-      "Inovasi"
-    ],
     "c": "#00838F",
     "c2": "#004D56",
-    "excerpt": "Dari pelacakan kendaraan hingga pemantauan suhu gudang otomatis, IoT mulai menjadi alat nyata bagi bisnis Indonesia. Berikut peluang konkret dan cara memulainya."
+    "updatedAt": "2026-06-30",
+    "i18n": {
+      "id": {
+        "title": "Internet of Things (IoT) untuk Bisnis Indonesia: Peluang dan Penerapan di 2026",
+        "description": "IoT bukan lagi teknologi masa depan — bisnis Indonesia di berbagai sektor sudah mulai menerapkannya. Pelajari peluang nyata dan cara memulai penerapan IoT untuk bisnis Anda.",
+        "excerpt": "Dari pelacakan kendaraan hingga pemantauan suhu gudang otomatis, IoT mulai menjadi alat nyata bagi bisnis Indonesia. Berikut peluang konkret dan cara memulainya.",
+        "tags": [
+          "Teknologi",
+          "IoT",
+          "Inovasi"
+        ]
+      },
+      "en": {
+        "title": "Internet of Things (IoT) for Indonesian Businesses: Opportunities and Applications in 2026",
+        "description": "IoT is no longer futuristic technology — businesses across various sectors in Indonesia are already adopting it. Learn the real opportunities and how to start implementing IoT in your business.",
+        "excerpt": "From vehicle tracking to automatic warehouse temperature monitoring, IoT is becoming a practical tool for Indonesian businesses. Here are concrete opportunities and how to get started.",
+        "tags": [
+          "Technology",
+          "IoT",
+          "Innovation"
+        ]
+      },
+      "zh": {
+        "title": "面向印尼企业的物联网（IoT）：2026 年的机遇与应用",
+        "description": "物联网早已不是未来才会出现的技术——印尼各行各业的企业已经开始应用它。了解真实的机遇，以及如何为您的企业启动物联网应用。",
+        "excerpt": "从车辆追踪到仓库温度自动监测，物联网正在成为印尼企业的实用工具。以下是具体的机遇以及入门方法。",
+        "tags": [
+          "技术",
+          "物联网",
+          "创新"
+        ]
+      }
+    }
   },
   {
     "slug": "cara-mengukur-roi-investasi-teknologi-bisnis",
-    "title": "Cara Mengukur ROI Investasi Teknologi: Website, Aplikasi, dan ERP untuk Bisnis Anda",
-    "description": "Investasi teknologi sering dianggap sebagai biaya, padahal seharusnya dipandang sebagai investasi terukur. Pelajari cara menghitung ROI website, aplikasi, dan ERP secara praktis.",
     "date": "2026-06-30",
-    "updatedAt": "2026-06-30",
     "readMinutes": 9,
-    "tags": [
-      "Bisnis",
-      "Strategi",
-      "ROI"
-    ],
     "c": "#0F4C75",
     "c2": "#0B3147",
-    "excerpt": "Banyak pemilik bisnis ragu berinvestasi di teknologi karena sulit mengukur hasilnya. Berikut cara praktis menghitung ROI website, aplikasi, dan ERP untuk pengambilan keputusan yang lebih percaya diri."
+    "updatedAt": "2026-06-30",
+    "i18n": {
+      "id": {
+        "title": "Cara Mengukur ROI Investasi Teknologi: Website, Aplikasi, dan ERP untuk Bisnis Anda",
+        "description": "Investasi teknologi sering dianggap sebagai biaya, padahal seharusnya dipandang sebagai investasi terukur. Pelajari cara menghitung ROI website, aplikasi, dan ERP secara praktis.",
+        "excerpt": "Banyak pemilik bisnis ragu berinvestasi di teknologi karena sulit mengukur hasilnya. Berikut cara praktis menghitung ROI website, aplikasi, dan ERP untuk pengambilan keputusan yang lebih percaya diri.",
+        "tags": [
+          "Bisnis",
+          "Strategi",
+          "ROI"
+        ]
+      },
+      "en": {
+        "title": "How to Measure ROI on Technology Investments: Websites, Apps, and ERP for Your Business",
+        "description": "Technology investment is often seen as a cost, when it should be viewed as a measurable investment. Learn how to calculate ROI for websites, apps, and ERP in practical terms.",
+        "excerpt": "Many business owners hesitate to invest in technology because it's hard to measure the results. Here's a practical way to calculate ROI for websites, apps, and ERP for more confident decision-making.",
+        "tags": [
+          "Business",
+          "Strategy",
+          "ROI"
+        ]
+      },
+      "zh": {
+        "title": "如何衡量技术投资的投资回报率：网站、应用与 ERP",
+        "description": "技术投资常被视为一种成本，但其实应该被看作一项可衡量的投资。学习如何实际计算网站、应用和 ERP 的投资回报率。",
+        "excerpt": "许多企业主因为难以衡量结果而犹豫是否投资技术。以下是计算网站、应用和 ERP 投资回报率的实用方法，帮助你更有信心地做出决策。",
+        "tags": [
+          "商业",
+          "策略",
+          "投资回报率"
+        ]
+      }
+    }
   },
   {
     "slug": "erp-untuk-umkm-kapan-saatnya-upgrade",
-    "title": "ERP untuk UMKM: Kapan Saatnya Upgrade dari Excel ke Sistem Terintegrasi?",
-    "description": "Banyak UMKM masih mengandalkan Excel dan catatan manual untuk operasional bisnis. Kenali tanda-tanda kapan saatnya beralih ke sistem ERP yang terintegrasi.",
     "date": "2026-06-30",
-    "updatedAt": "2026-06-30",
     "readMinutes": 8,
-    "tags": [
-      "ERP",
-      "UMKM",
-      "Bisnis"
-    ],
     "c": "#2E8B57",
     "c2": "#1B5E3F",
-    "excerpt": "Excel pernah cukup untuk mengelola bisnis kecil — tapi seiring pertumbuhan, ia mulai menjadi penghambat, bukan alat bantu. Kenali tanda-tanda UMKM Anda sudah waktunya beralih ke ERP."
+    "updatedAt": "2026-06-30",
+    "i18n": {
+      "id": {
+        "title": "ERP untuk UMKM: Kapan Saatnya Upgrade dari Excel ke Sistem Terintegrasi?",
+        "description": "Banyak UMKM masih mengandalkan Excel dan catatan manual untuk operasional bisnis. Kenali tanda-tanda kapan saatnya beralih ke sistem ERP yang terintegrasi.",
+        "excerpt": "Excel pernah cukup untuk mengelola bisnis kecil — tapi seiring pertumbuhan, ia mulai menjadi penghambat, bukan alat bantu. Kenali tanda-tanda UMKM Anda sudah waktunya beralih ke ERP.",
+        "tags": [
+          "ERP",
+          "UMKM",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "ERP for SMEs: When Is It Time to Upgrade From Excel to an Integrated System?",
+        "description": "Many SMEs still rely on Excel and manual records for business operations. Learn the signs it's time to move to an integrated ERP system.",
+        "excerpt": "Excel used to be enough to run a small business — but as it grows, it starts becoming an obstacle rather than a tool. Learn the signs your SME is ready to move to ERP.",
+        "tags": [
+          "ERP",
+          "SME",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "面向中小微企业的ERP：何时该从Excel升级到集成系统？",
+        "description": "许多中小微企业仍然依赖Excel和手工记录来管理业务运营。了解该转向集成ERP系统的信号。",
+        "excerpt": "Excel曾经足以管理一家小企业——但随着企业成长，它开始变成阻碍而非助力。了解您的中小微企业已到该转向ERP的信号。",
+        "tags": [
+          "ERP",
+          "中小微企业",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "fitur-wajib-aplikasi-mobile-2026",
-    "title": "Fitur Wajib Aplikasi Mobile Bisnis di 2026: Apa yang Diharapkan Pengguna",
-    "description": "Pengguna aplikasi mobile semakin punya ekspektasi tinggi. Inilah fitur-fitur yang wajib ada agar aplikasi bisnis Anda tidak ditinggalkan di 2026.",
     "date": "2026-06-30",
-    "updatedAt": "2026-06-30",
     "readMinutes": 9,
-    "tags": [
-      "Aplikasi Mobile",
-      "UX",
-      "Teknologi"
-    ],
     "c": "#FF6B35",
     "c2": "#C1121F",
-    "excerpt": "Pengguna aplikasi mobile makin tidak sabar dengan pengalaman yang lambat atau rumit. Berikut fitur-fitur yang wajib ada di aplikasi bisnis Anda supaya tidak ditinggalkan pengguna di 2026."
+    "updatedAt": "2026-06-30",
+    "i18n": {
+      "id": {
+        "title": "Fitur Wajib Aplikasi Mobile Bisnis di 2026: Apa yang Diharapkan Pengguna",
+        "description": "Pengguna aplikasi mobile semakin punya ekspektasi tinggi. Inilah fitur-fitur yang wajib ada agar aplikasi bisnis Anda tidak ditinggalkan di 2026.",
+        "excerpt": "Pengguna aplikasi mobile makin tidak sabar dengan pengalaman yang lambat atau rumit. Berikut fitur-fitur yang wajib ada di aplikasi bisnis Anda supaya tidak ditinggalkan pengguna di 2026.",
+        "tags": [
+          "Aplikasi Mobile",
+          "UX",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "Must-Have Business Mobile App Features in 2026: What Users Expect",
+        "description": "Mobile app users have increasingly high expectations. Here are the features your business app needs to avoid being abandoned in 2026.",
+        "excerpt": "Mobile app users are less and less patient with slow or complicated experiences. Here are the features your business app needs so users don't abandon it in 2026.",
+        "tags": [
+          "Mobile Apps",
+          "UX",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "2026 年企业移动应用必备功能：用户到底期待什么",
+        "description": "移动应用用户的期待值越来越高。以下是您的企业应用在 2026 年不被抛弃所必需的功能。",
+        "excerpt": "移动应用用户对缓慢或繁琐的体验越来越没有耐心。以下是您的企业应用为了不在 2026 年被用户抛弃所必须具备的功能。",
+        "tags": [
+          "移动应用",
+          "用户体验",
+          "技术"
+        ]
+      }
+    }
   },
   {
     "slug": "headless-cms-website-modern-2026",
-    "title": "Headless CMS: Solusi Website Modern yang Cepat, Aman, dan Fleksibel di 2026",
-    "description": "Headless CMS memisahkan konten dari tampilan sehingga website lebih cepat, aman, dan mudah didistribusikan ke berbagai platform. Pelajari kapan bisnis Anda butuh arsitektur ini di 2026.",
     "date": "2026-06-30",
-    "updatedAt": "2026-06-30",
     "readMinutes": 9,
-    "tags": [
-      "Website",
-      "CMS",
-      "Teknologi"
-    ],
     "c": "#7B2FF7",
     "c2": "#4A148C",
-    "excerpt": "Headless CMS memisahkan konten dari tampilan, menghasilkan website yang lebih cepat, aman, dan siap didistribusikan ke berbagai channel. Apakah bisnis Anda sudah waktunya beralih?"
+    "updatedAt": "2026-06-30",
+    "i18n": {
+      "id": {
+        "title": "Headless CMS: Solusi Website Modern yang Cepat, Aman, dan Fleksibel di 2026",
+        "description": "Headless CMS memisahkan konten dari tampilan sehingga website lebih cepat, aman, dan mudah didistribusikan ke berbagai platform. Pelajari kapan bisnis Anda butuh arsitektur ini di 2026.",
+        "excerpt": "Headless CMS memisahkan konten dari tampilan, menghasilkan website yang lebih cepat, aman, dan siap didistribusikan ke berbagai channel. Apakah bisnis Anda sudah waktunya beralih?",
+        "tags": [
+          "Website",
+          "CMS",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "Headless CMS: The Fast, Secure, and Flexible Website Solution for 2026",
+        "description": "Headless CMS separates content from presentation, making websites faster, safer, and easier to distribute across platforms. Learn when your business needs this architecture in 2026.",
+        "excerpt": "Headless CMS separates content from presentation, resulting in a website that's faster, safer, and ready to distribute across channels. Is it time for your business to switch?",
+        "tags": [
+          "Website",
+          "CMS",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "无头CMS：2026年快速、安全、灵活的现代网站解决方案",
+        "description": "无头CMS将内容与展示层分离，让网站更快、更安全，也更易于分发到各个平台。了解你的企业在2026年是否需要这种架构。",
+        "excerpt": "无头CMS将内容与展示层分离，带来更快、更安全、随时可分发到各渠道的网站。你的企业是否也到了该转型的时候？",
+        "tags": [
+          "网站",
+          "CMS",
+          "科技"
+        ]
+      }
+    }
   },
   {
     "slug": "tren-app-development-2027",
-    "title": "Tren Pengembangan Aplikasi 2026–2027: Teknologi yang Wajib Dipahami Bisnis Indonesia",
-    "description": "Dari AI-native apps hingga edge computing, tren pengembangan aplikasi 2026–2027 akan membentuk ulang ekspektasi pengguna dan standar kompetisi bisnis. Panduan lengkap untuk pengambil keputusan.",
     "date": "2026-06-29",
-    "updatedAt": "2026-06-29",
     "readMinutes": 9,
-    "tags": [
-      "Teknologi",
-      "Aplikasi",
-      "Tren"
-    ],
     "c": "#0D1B2A",
     "c2": "#1565C0",
-    "excerpt": "Teknologi aplikasi berkembang lebih cepat dari sebelumnya. Bisnis yang memahami tren ini lebih awal bisa membangun produk digital yang melampaui ekspektasi pengguna dan kompetitor."
+    "updatedAt": "2026-06-29",
+    "i18n": {
+      "id": {
+        "title": "Tren Pengembangan Aplikasi 2026–2027: Teknologi yang Wajib Dipahami Bisnis Indonesia",
+        "description": "Dari AI-native apps hingga edge computing, tren pengembangan aplikasi 2026–2027 akan membentuk ulang ekspektasi pengguna dan standar kompetisi bisnis. Panduan lengkap untuk pengambil keputusan.",
+        "excerpt": "Teknologi aplikasi berkembang lebih cepat dari sebelumnya. Bisnis yang memahami tren ini lebih awal bisa membangun produk digital yang melampaui ekspektasi pengguna dan kompetitor.",
+        "tags": [
+          "Teknologi",
+          "Aplikasi",
+          "Tren"
+        ]
+      },
+      "en": {
+        "title": "App Development Trends 2026–2027: Technology Indonesian Businesses Must Understand",
+        "description": "From AI-native apps to edge computing, the 2026–2027 app development trends will reshape user expectations and competitive standards. A complete guide for decision-makers.",
+        "excerpt": "Application technology is evolving faster than ever. Businesses that understand these trends early can build digital products that exceed user and competitor expectations.",
+        "tags": [
+          "Technology",
+          "Applications",
+          "Trends"
+        ]
+      },
+      "zh": {
+        "title": "2026–2027 年应用开发趋势：印尼企业必须了解的技术",
+        "description": "从 AI 原生应用到边缘计算，2026-2027 年的应用开发趋势将重塑用户期待与竞争标准。为决策者准备的完整指南。",
+        "excerpt": "应用技术的发展速度前所未有。及早理解这些趋势的企业，能够打造出超越用户期待和竞争对手的数字产品。",
+        "tags": [
+          "技术",
+          "应用",
+          "趋势"
+        ]
+      }
+    }
   },
   {
     "slug": "website-konstruksi-kontraktor",
-    "title": "Website untuk Bisnis Konstruksi & Kontraktor: Fitur Wajib dan Strategi Digital 2026",
-    "description": "Industri konstruksi adalah salah satu yang paling terlambat go-digital. Panduan lengkap membangun website kontraktor yang menghasilkan proyek, bukan sekadar kartu nama online.",
     "date": "2026-06-29",
-    "updatedAt": "2026-06-29",
     "readMinutes": 7,
-    "tags": [
-      "Website",
-      "Konstruksi",
-      "Bisnis"
-    ],
     "c": "#1B5E20",
     "c2": "#2E7D32",
-    "excerpt": "Lebih dari 80% calon klien konstruksi mencari kontraktor secara online sebelum menghubungi. Jika website Anda tidak ada atau tidak meyakinkan, mereka langsung ke kompetitor."
+    "updatedAt": "2026-06-29",
+    "i18n": {
+      "id": {
+        "title": "Website untuk Bisnis Konstruksi & Kontraktor: Fitur Wajib dan Strategi Digital 2026",
+        "description": "Industri konstruksi adalah salah satu yang paling terlambat go-digital. Panduan lengkap membangun website kontraktor yang menghasilkan proyek, bukan sekadar kartu nama online.",
+        "excerpt": "Lebih dari 80% calon klien konstruksi mencari kontraktor secara online sebelum menghubungi. Jika website Anda tidak ada atau tidak meyakinkan, mereka langsung ke kompetitor.",
+        "tags": [
+          "Website",
+          "Konstruksi",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Websites for Construction Businesses & Contractors: Must-Have Features and 2026 Digital Strategy",
+        "description": "The construction industry is one of the slowest to go digital. A complete guide to building a contractor website that generates projects, not just an online business card.",
+        "excerpt": "More than 80% of construction prospects research contractors online before reaching out. If your website doesn't exist or isn't convincing, they go straight to a competitor.",
+        "tags": [
+          "Website",
+          "Construction",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "面向建筑企业与承包商的网站：2026年必备功能与数字化战略",
+        "description": "建筑行业是数字化转型最慢的行业之一。这是一份完整指南，教您如何搭建一个真正能带来项目、而不只是线上名片的承包商网站。",
+        "excerpt": "超过80%的建筑业潜在客户会在联系之前先在网上做调查。如果您的网站不存在，或者不够有说服力，他们会直接转向竞争对手。",
+        "tags": [
+          "网站",
+          "建筑",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "aplikasi-loyalty-program",
-    "title": "Aplikasi Loyalty Program untuk Bisnis: Cara Meningkatkan Retensi Pelanggan hingga 3x Lipat",
-    "description": "Loyalty program digital bukan hanya untuk brand besar. Panduan lengkap membangun aplikasi loyalty program yang efektif untuk bisnis menengah dan UMKM Indonesia di 2026.",
     "date": "2026-06-29",
-    "updatedAt": "2026-06-29",
     "readMinutes": 8,
-    "tags": [
-      "Aplikasi",
-      "Bisnis",
-      "E-commerce"
-    ],
     "c": "#4A148C",
     "c2": "#880E4F",
-    "excerpt": "Mendapatkan pelanggan baru 5x lebih mahal dari mempertahankan yang sudah ada. Aplikasi loyalty program yang dirancang dengan benar bisa mengubah pembeli sekali menjadi pelanggan setia jangka panjang."
+    "updatedAt": "2026-06-29",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Loyalty Program untuk Bisnis: Cara Meningkatkan Retensi Pelanggan hingga 3x Lipat",
+        "description": "Loyalty program digital bukan hanya untuk brand besar. Panduan lengkap membangun aplikasi loyalty program yang efektif untuk bisnis menengah dan UMKM Indonesia di 2026.",
+        "excerpt": "Mendapatkan pelanggan baru 5x lebih mahal dari mempertahankan yang sudah ada. Aplikasi loyalty program yang dirancang dengan benar bisa mengubah pembeli sekali menjadi pelanggan setia jangka panjang.",
+        "tags": [
+          "Aplikasi",
+          "Bisnis",
+          "E-commerce"
+        ]
+      },
+      "en": {
+        "title": "Loyalty Program Apps for Business: How to Triple Customer Retention",
+        "description": "A digital loyalty program isn't just for big brands. A complete guide to building an effective loyalty program app for Indonesian mid-sized businesses and SMEs in 2026.",
+        "excerpt": "Acquiring a new customer costs 5x more than retaining an existing one. A well-designed loyalty program app can turn a one-time buyer into a long-term loyal customer.",
+        "tags": [
+          "Applications",
+          "Business",
+          "E-commerce"
+        ]
+      },
+      "zh": {
+        "title": "企业忠诚度计划应用：如何将客户留存率提升三倍",
+        "description": "数字化忠诚度计划不再是大品牌的专属。这是一份完整指南，教你在2026年为印尼中型企业和中小微企业打造行之有效的忠诚度计划应用。",
+        "excerpt": "获取一位新客户的成本是留住一位老客户的5倍。一款设计得当的忠诚度计划应用，能把一次性买家变成长期忠实客户。",
+        "tags": [
+          "应用",
+          "商业",
+          "电商"
+        ]
+      }
+    }
   },
   {
     "slug": "erp-manufaktur-indonesia",
-    "title": "ERP untuk Perusahaan Manufaktur Indonesia: Manfaat, Fitur, dan Cara Implementasinya",
-    "description": "ERP manufaktur bukan ERP generik yang dipaksakan. Pelajari modul krusial, manfaat nyata, dan cara memilih sistem ERP yang tepat untuk industri manufaktur Indonesia di 2026.",
     "date": "2026-06-29",
-    "updatedAt": "2026-06-29",
     "readMinutes": 10,
-    "tags": [
-      "ERP",
-      "Manufaktur",
-      "Bisnis"
-    ],
     "c": "#1B3A4B",
     "c2": "#00695C",
-    "excerpt": "Perusahaan manufaktur yang masih mengandalkan spreadsheet untuk produksi, stok, dan laporan kehilangan efisiensi nyata setiap hari. ERP yang tepat bisa mengubah itu secara fundamental."
+    "updatedAt": "2026-06-29",
+    "i18n": {
+      "id": {
+        "title": "ERP untuk Perusahaan Manufaktur Indonesia: Manfaat, Fitur, dan Cara Implementasinya",
+        "description": "ERP manufaktur bukan ERP generik yang dipaksakan. Pelajari modul krusial, manfaat nyata, dan cara memilih sistem ERP yang tepat untuk industri manufaktur Indonesia di 2026.",
+        "excerpt": "Perusahaan manufaktur yang masih mengandalkan spreadsheet untuk produksi, stok, dan laporan kehilangan efisiensi nyata setiap hari. ERP yang tepat bisa mengubah itu secara fundamental.",
+        "tags": [
+          "ERP",
+          "Manufaktur",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "ERP for Indonesian Manufacturing Companies: Benefits, Features, and Implementation",
+        "description": "Manufacturing ERP isn't a generic ERP forced into place. Learn about the critical modules, real benefits, and how to choose the right ERP system for the Indonesian manufacturing industry in 2026.",
+        "excerpt": "Manufacturing companies still relying on spreadsheets for production, stock, and reporting lose real efficiency every day. The right ERP can fundamentally change that.",
+        "tags": [
+          "ERP",
+          "Manufacturing",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "面向印尼制造企业的ERP：优势、功能与实施方法",
+        "description": "制造业ERP不是硬套的通用ERP。了解关键模块、实际效益，以及如何在2026年为印尼制造业选择合适的ERP系统。",
+        "excerpt": "仍依赖电子表格处理生产、库存和报表的制造企业，每天都在损失实实在在的效率。合适的ERP能从根本上改变这一切。",
+        "tags": [
+          "ERP",
+          "制造业",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "website-responsif-mobile-first",
-    "title": "Website Mobile-First: Panduan Lengkap untuk Bisnis Indonesia 2026",
-    "description": "Lebih dari 70% traffic internet Indonesia datang dari smartphone. Pelajari apa itu desain mobile-first, mengapa Google mengutamakannya, dan bagaimana membangun website yang optimal di semua perangkat.",
     "date": "2026-06-29",
-    "updatedAt": "2026-06-29",
     "readMinutes": 8,
-    "tags": [
-      "Website",
-      "Mobile",
-      "Desain"
-    ],
     "c": "#1A237E",
     "c2": "#0288D1",
-    "excerpt": "Lebih dari 70% traffic internet Indonesia datang dari perangkat mobile. Website yang tidak mobile-first bukan hanya buruk bagi pengguna — Google akan menurunkan peringkatnya secara aktif."
+    "updatedAt": "2026-06-29",
+    "i18n": {
+      "id": {
+        "title": "Website Mobile-First: Panduan Lengkap untuk Bisnis Indonesia 2026",
+        "description": "Lebih dari 70% traffic internet Indonesia datang dari smartphone. Pelajari apa itu desain mobile-first, mengapa Google mengutamakannya, dan bagaimana membangun website yang optimal di semua perangkat.",
+        "excerpt": "Lebih dari 70% traffic internet Indonesia datang dari perangkat mobile. Website yang tidak mobile-first bukan hanya buruk bagi pengguna — Google akan menurunkan peringkatnya secara aktif.",
+        "tags": [
+          "Website",
+          "Mobile",
+          "Desain"
+        ]
+      },
+      "en": {
+        "title": "Mobile-First Websites: A Complete Guide for Indonesian Businesses in 2026",
+        "description": "More than 70% of Indonesian internet traffic comes from smartphones. Learn what mobile-first design means, why Google prioritizes it, and how to build a website that performs optimally on every device.",
+        "excerpt": "More than 70% of Indonesian internet traffic comes from mobile devices. A website that isn't mobile-first isn't just bad for users — Google will actively lower its ranking.",
+        "tags": [
+          "Website",
+          "Mobile",
+          "Design"
+        ]
+      },
+      "zh": {
+        "title": "移动优先网站：2026 年印尼企业完整指南",
+        "description": "超过 70% 的印尼互联网流量来自智能手机。了解什么是移动优先设计、为什么 Google 优先考虑它，以及如何构建在所有设备上都能达到最佳表现的网站。",
+        "excerpt": "超过 70% 的印尼互联网流量来自移动设备。一个不采用移动优先设计的网站，不仅对用户体验不利——Google 还会主动降低它的排名。",
+        "tags": [
+          "网站",
+          "移动端",
+          "设计"
+        ]
+      }
+    }
   },
   {
     "slug": "umkm-indonesia-butuh-aplikasi-mobile-2026",
-    "title": "Kenapa UMKM Indonesia Wajib Punya Aplikasi Mobile di 2026: Panduan Praktis & Lengkap",
-    "description": "Data terbaru menunjukkan UMKM Indonesia yang punya aplikasi mobile tumbuh 3x lebih cepat. Pelajari mengapa, berapa biayanya, dan bagaimana memulainya tanpa risiko besar.",
     "date": "2026-06-28",
     "readMinutes": 10,
-    "tags": [
-      "Aplikasi Mobile",
-      "UMKM",
-      "Bisnis",
-      "Website"
-    ],
     "c": "#E67E22",
     "c2": "#CA6F1E",
-    "excerpt": "Di Indonesia, 185 juta pengguna smartphone memegang kunci ke pasar Anda. UMKM yang belum punya kehadiran mobile bukan hanya ketinggalan — mereka aktif kehilangan pelanggan ke kompetitor yang sudah ada."
+    "i18n": {
+      "id": {
+        "title": "Kenapa UMKM Indonesia Wajib Punya Aplikasi Mobile di 2026: Panduan Praktis & Lengkap",
+        "description": "Data terbaru menunjukkan UMKM Indonesia yang punya aplikasi mobile tumbuh 3x lebih cepat. Pelajari mengapa, berapa biayanya, dan bagaimana memulainya tanpa risiko besar.",
+        "excerpt": "Di Indonesia, 185 juta pengguna smartphone memegang kunci ke pasar Anda. UMKM yang belum punya kehadiran mobile bukan hanya ketinggalan — mereka aktif kehilangan pelanggan ke kompetitor yang sudah ada.",
+        "tags": [
+          "Aplikasi Mobile",
+          "UMKM",
+          "Bisnis",
+          "Website"
+        ]
+      },
+      "en": {
+        "title": "Why Indonesian Small Businesses Must Have a Mobile App in 2026: A Practical, Complete Guide",
+        "description": "Recent data shows Indonesian small businesses with a mobile app grow 3x faster. Learn why, how much it costs, and how to get started without major risk.",
+        "excerpt": "In Indonesia, 185 million smartphone users hold the key to your market. Small businesses without a mobile presence aren't just falling behind — they're actively losing customers to competitors who already have one.",
+        "tags": [
+          "Mobile Apps",
+          "Small Business",
+          "Business",
+          "Website"
+        ]
+      },
+      "zh": {
+        "title": "为什么印尼中小微企业在 2026 年必须拥有移动应用：实用完整指南",
+        "description": "最新数据显示，拥有移动应用的印尼中小微企业增长速度快 3 倍。了解原因、实际成本，以及如何在没有重大风险的情况下开始。",
+        "excerpt": "在印尼，1.85 亿智能手机用户掌握着通往你市场的钥匙。没有移动端布局的中小微企业不只是落后了——他们正在主动把客户拱手让给已经布局的竞争对手。",
+        "tags": [
+          "移动应用",
+          "中小微企业",
+          "商业",
+          "网站"
+        ]
+      }
+    }
   },
   {
     "slug": "ekosistem-digital-bisnis-website-aplikasi-integrasi",
-    "title": "Membangun Ekosistem Digital Bisnis: Website, Aplikasi, dan Integrasi Sistem yang Benar",
-    "description": "Panduan lengkap membangun ekosistem digital bisnis yang terpadu — dari website sebagai fondasi hingga aplikasi mobile dan integrasi sistem yang meningkatkan efisiensi operasional.",
     "date": "2026-06-28",
     "readMinutes": 10,
-    "tags": [
-      "Website",
-      "Aplikasi",
-      "Bisnis",
-      "Integrasi"
-    ],
     "c": "#C0392B",
     "c2": "#922B21",
-    "excerpt": "Website saja tidak cukup. Bisnis yang menang di era digital membangun ekosistem — website, aplikasi, dan sistem internal yang saling terhubung dan saling menguatkan."
+    "i18n": {
+      "id": {
+        "title": "Membangun Ekosistem Digital Bisnis: Website, Aplikasi, dan Integrasi Sistem yang Benar",
+        "description": "Panduan lengkap membangun ekosistem digital bisnis yang terpadu — dari website sebagai fondasi hingga aplikasi mobile dan integrasi sistem yang meningkatkan efisiensi operasional.",
+        "excerpt": "Website saja tidak cukup. Bisnis yang menang di era digital membangun ekosistem — website, aplikasi, dan sistem internal yang saling terhubung dan saling menguatkan.",
+        "tags": [
+          "Website",
+          "Aplikasi",
+          "Bisnis",
+          "Integrasi"
+        ]
+      },
+      "en": {
+        "title": "Building a Digital Business Ecosystem: Website, Apps, and the Right System Integration",
+        "description": "A complete guide to building a unified digital business ecosystem — from the website as a foundation to mobile apps and system integrations that boost operational efficiency.",
+        "excerpt": "A website alone isn't enough. Businesses that win in the digital era build an ecosystem — a website, apps, and internal systems that connect and reinforce each other.",
+        "tags": [
+          "Website",
+          "App",
+          "Business",
+          "Integration"
+        ]
+      },
+      "zh": {
+        "title": "构建数字化商业生态系统：网站、应用与正确的系统集成",
+        "description": "构建统一数字商业生态系统的完整指南——从作为基础的网站，到提升运营效率的移动应用和系统集成。",
+        "excerpt": "仅有网站还不够。在数字时代获胜的企业，构建的是一个生态系统——彼此连接、相互强化的网站、应用和内部系统。",
+        "tags": [
+          "网站",
+          "应用",
+          "商业",
+          "集成"
+        ]
+      }
+    }
   },
   {
     "slug": "tren-teknologi-bisnis-2026-2027",
-    "title": "Tren Teknologi Bisnis 2026-2027: 8 Hal yang Harus Disiapkan Perusahaan Indonesia",
-    "description": "Dari agentic AI hingga edge computing, ini adalah tren teknologi yang paling berdampak pada bisnis Indonesia di 2026-2027. Panduan strategis untuk pengambil keputusan.",
     "date": "2026-06-28",
     "readMinutes": 11,
-    "tags": [
-      "Teknologi",
-      "Bisnis",
-      "Tren",
-      "Website"
-    ],
     "c": "#1565C0",
     "c2": "#0D47A1",
-    "excerpt": "Teknologi yang akan mendefinisikan kompetisi bisnis 2027 sudah dalam fase adopsi sekarang. Bisnis yang menunggu akan terlambat — ini yang perlu Anda ketahui dan siapkan."
+    "i18n": {
+      "id": {
+        "title": "Tren Teknologi Bisnis 2026-2027: 8 Hal yang Harus Disiapkan Perusahaan Indonesia",
+        "description": "Dari agentic AI hingga edge computing, ini adalah tren teknologi yang paling berdampak pada bisnis Indonesia di 2026-2027. Panduan strategis untuk pengambil keputusan.",
+        "excerpt": "Teknologi yang akan mendefinisikan kompetisi bisnis 2027 sudah dalam fase adopsi sekarang. Bisnis yang menunggu akan terlambat — ini yang perlu Anda ketahui dan siapkan.",
+        "tags": [
+          "Teknologi",
+          "Bisnis",
+          "Tren",
+          "Website"
+        ]
+      },
+      "en": {
+        "title": "Business Technology Trends 2026-2027: 8 Things Indonesian Companies Must Prepare For",
+        "description": "From agentic AI to edge computing, these are the technology trends with the biggest impact on Indonesian business in 2026-2027. A strategic guide for decision-makers.",
+        "excerpt": "The technology that will define competition in 2027 is already in its adoption phase now. Businesses that wait will fall behind — here's what you need to know and prepare for.",
+        "tags": [
+          "Technology",
+          "Business",
+          "Trends",
+          "Website"
+        ]
+      },
+      "zh": {
+        "title": "2026-2027 商业科技趋势：印尼企业必须准备好的 8 件事",
+        "description": "从智能体 AI 到边缘计算，这些是对印尼企业影响最大的 2026-2027 科技趋势。为决策者准备的战略指南。",
+        "excerpt": "将定义 2027 年竞争格局的技术，如今已进入采用阶段。观望的企业将会落后——这是您需要了解并准备的内容。",
+        "tags": [
+          "技术",
+          "商业",
+          "趋势",
+          "网站"
+        ]
+      }
+    }
   },
   {
     "slug": "erp-vs-software-akuntansi-perbedaan",
-    "title": "ERP vs Software Akuntansi: Apa Bedanya dan Mana yang Tepat untuk Bisnis Anda?",
-    "description": "Banyak bisnis bingung memilih antara ERP dan software akuntansi. Artikel ini menguraikan perbedaan mendasar, kapan harus upgrade ke ERP, dan bagaimana memilih solusi yang tepat.",
     "date": "2026-06-28",
     "readMinutes": 9,
-    "tags": [
-      "ERP",
-      "Bisnis",
-      "Software",
-      "Akuntansi"
-    ],
     "c": "#0E7C5C",
     "c2": "#065A42",
-    "excerpt": "Software akuntansi mengelola angka — ERP mengelola seluruh bisnis. Tapi kapan Anda benar-benar perlu ERP? Panduan praktis untuk pemilik bisnis Indonesia."
+    "i18n": {
+      "id": {
+        "title": "ERP vs Software Akuntansi: Apa Bedanya dan Mana yang Tepat untuk Bisnis Anda?",
+        "description": "Banyak bisnis bingung memilih antara ERP dan software akuntansi. Artikel ini menguraikan perbedaan mendasar, kapan harus upgrade ke ERP, dan bagaimana memilih solusi yang tepat.",
+        "excerpt": "Software akuntansi mengelola angka — ERP mengelola seluruh bisnis. Tapi kapan Anda benar-benar perlu ERP? Panduan praktis untuk pemilik bisnis Indonesia.",
+        "tags": [
+          "ERP",
+          "Bisnis",
+          "Software",
+          "Akuntansi"
+        ]
+      },
+      "en": {
+        "title": "ERP vs. Accounting Software: What's the Difference, and Which Is Right for Your Business?",
+        "description": "Many businesses struggle to choose between ERP and accounting software. This article breaks down the fundamental differences, when to upgrade to ERP, and how to choose the right solution.",
+        "excerpt": "Accounting software manages numbers — ERP manages your entire business. So when do you really need ERP? A practical guide for Indonesian business owners.",
+        "tags": [
+          "ERP",
+          "Business",
+          "Software",
+          "Accounting"
+        ]
+      },
+      "zh": {
+        "title": "ERP与财务软件的区别：哪种更适合你的企业？",
+        "description": "许多企业在ERP和财务软件之间难以抉择。本文剖析两者的根本区别、何时应该升级到ERP，以及如何选择合适的解决方案。",
+        "excerpt": "财务软件管理的是数字——ERP管理的是整个企业。但你究竟什么时候才真正需要ERP？为印尼企业主提供的实用指南。",
+        "tags": [
+          "ERP",
+          "商业",
+          "软件",
+          "财务"
+        ]
+      }
+    }
   },
   {
     "slug": "generative-ai-pengembangan-aplikasi-2026",
-    "title": "Generative AI dalam Pengembangan Aplikasi: Revolusi yang Mengubah Cara Bisnis Bekerja",
-    "description": "Generative AI bukan sekadar tren — ini teknologi yang sudah mengubah cara aplikasi bisnis dibangun dan dioperasikan. Panduan lengkap untuk bisnis Indonesia di 2026.",
     "date": "2026-06-28",
     "readMinutes": 10,
-    "tags": [
-      "AI",
-      "Aplikasi",
-      "Teknologi",
-      "Bisnis"
-    ],
     "c": "#7B2FBE",
     "c2": "#4A1A8A",
-    "excerpt": "Generative AI sudah mengubah cara tim developer bekerja — dari auto-completion kode hingga fitur produk yang dulu butuh berbulan-bulan kini selesai dalam minggu. Apa artinya untuk bisnis Anda?"
+    "i18n": {
+      "id": {
+        "title": "Generative AI dalam Pengembangan Aplikasi: Revolusi yang Mengubah Cara Bisnis Bekerja",
+        "description": "Generative AI bukan sekadar tren — ini teknologi yang sudah mengubah cara aplikasi bisnis dibangun dan dioperasikan. Panduan lengkap untuk bisnis Indonesia di 2026.",
+        "excerpt": "Generative AI sudah mengubah cara tim developer bekerja — dari auto-completion kode hingga fitur produk yang dulu butuh berbulan-bulan kini selesai dalam minggu. Apa artinya untuk bisnis Anda?",
+        "tags": [
+          "AI",
+          "Aplikasi",
+          "Teknologi",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Generative AI in App Development: The Revolution Changing How Businesses Work",
+        "description": "Generative AI isn't just a trend — it's a technology that has already changed how business applications are built and operated. A complete guide for Indonesian businesses in 2026.",
+        "excerpt": "Generative AI has already changed how development teams work — from code auto-completion to product features that used to take months now finished in weeks. What does this mean for your business?",
+        "tags": [
+          "AI",
+          "Applications",
+          "Technology",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "应用开发中的生成式 AI：改变企业运作方式的革命",
+        "description": "生成式 AI 不只是一时的潮流——它已经真正改变了企业应用的构建和运营方式。为 2026 年的印尼企业提供的完整指南。",
+        "excerpt": "生成式 AI 已经改变了开发团队的工作方式——从代码自动补全，到过去需要数月才能完成的产品功能如今几周就能上线。这对你的企业意味着什么？",
+        "tags": [
+          "人工智能",
+          "应用",
+          "技术",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "website-untuk-startup-panduan-lengkap",
-    "title": "Panduan Lengkap Membangun Website untuk Startup Indonesia: Dari MVP ke Scale",
-    "description": "Panduan komprehensif membangun website startup Indonesia — dari landing page MVP, tech stack yang tepat, SEO, sampai strategi scale website bersama pertumbuhan bisnis.",
     "date": "2026-06-27",
     "readMinutes": 11,
-    "tags": [
-      "Website",
-      "Startup",
-      "Panduan"
-    ],
     "c": "#1E88A8",
     "c2": "#15243B",
-    "excerpt": "Website startup bukan hanya \"kartu nama online\" — ini alat tumbuh yang harus berevolusi bersama bisnis. Panduan ini memandu Anda dari hari pertama sampai Series A."
+    "i18n": {
+      "id": {
+        "title": "Panduan Lengkap Membangun Website untuk Startup Indonesia: Dari MVP ke Scale",
+        "description": "Panduan komprehensif membangun website startup Indonesia — dari landing page MVP, tech stack yang tepat, SEO, sampai strategi scale website bersama pertumbuhan bisnis.",
+        "excerpt": "Website startup bukan hanya \"kartu nama online\" — ini alat tumbuh yang harus berevolusi bersama bisnis. Panduan ini memandu Anda dari hari pertama sampai Series A.",
+        "tags": [
+          "Website",
+          "Startup",
+          "Panduan"
+        ]
+      },
+      "en": {
+        "title": "The Complete Guide to Building a Website for an Indonesian Startup: From MVP to Scale",
+        "description": "A comprehensive guide to building an Indonesian startup website — from the MVP landing page, the right tech stack, SEO, all the way to a website scaling strategy that grows alongside your business.",
+        "excerpt": "A startup website isn't just a \"digital business card\" — it's a growth tool that must evolve with the business. This guide takes you from day one to Series A.",
+        "tags": [
+          "Website",
+          "Startup",
+          "Guide"
+        ]
+      },
+      "zh": {
+        "title": "为印尼初创公司搭建网站的完整指南：从 MVP 到规模化",
+        "description": "一份全面的印尼初创企业网站搭建指南——从 MVP 落地页、正确的技术栈、SEO，到与业务共同成长的网站扩展策略。",
+        "excerpt": "初创企业的网站不仅仅是\"线上名片\"——它是一个必须随业务共同进化的增长工具。本指南将带您从第一天走到 Series A 融资阶段。",
+        "tags": [
+          "网站",
+          "初创企业",
+          "指南"
+        ]
+      }
+    }
   },
   {
     "slug": "super-app-model-bisnis-masa-depan",
-    "title": "Super App: Model Bisnis Masa Depan yang Mengubah Cara Perusahaan Beroperasi",
-    "description": "Memahami konsep super app, mengapa Gojek dan WeChat berhasil, dan bagaimana bisnis Indonesia bisa menerapkan model super app untuk pertumbuhan eksponensial.",
     "date": "2026-06-27",
     "readMinutes": 9,
-    "tags": [
-      "Aplikasi",
-      "Bisnis",
-      "Teknologi"
-    ],
     "c": "#0E8C86",
     "c2": "#15243B",
-    "excerpt": "Gojek membuktikan super app bisa lahir dari Indonesia. Pelajari model bisnis yang mengubah satu aplikasi menjadi platform ekosistem."
+    "i18n": {
+      "id": {
+        "title": "Super App: Model Bisnis Masa Depan yang Mengubah Cara Perusahaan Beroperasi",
+        "description": "Memahami konsep super app, mengapa Gojek dan WeChat berhasil, dan bagaimana bisnis Indonesia bisa menerapkan model super app untuk pertumbuhan eksponensial.",
+        "excerpt": "Gojek membuktikan super app bisa lahir dari Indonesia. Pelajari model bisnis yang mengubah satu aplikasi menjadi platform ekosistem.",
+        "tags": [
+          "Aplikasi",
+          "Bisnis",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "Super Apps: The Business Model of the Future That's Changing How Companies Operate",
+        "description": "Understanding the super app concept, why Gojek and WeChat succeeded, and how Indonesian businesses can apply the super app model for exponential growth.",
+        "excerpt": "Gojek proved that a super app can be born in Indonesia. Learn about the business model that turns a single app into an entire ecosystem platform.",
+        "tags": [
+          "Applications",
+          "Business",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "超级应用：改变企业运营方式的未来商业模式",
+        "description": "了解超级应用的概念，Gojek和微信为何成功，以及印尼企业如何运用超级应用模式实现指数级增长。",
+        "excerpt": "Gojek证明了超级应用也能诞生在印尼。了解如何将一款单一应用打造成一个生态系统平台。",
+        "tags": [
+          "应用",
+          "商业",
+          "技术"
+        ]
+      }
+    }
   },
   {
     "slug": "cara-memilih-tech-stack-aplikasi-web",
-    "title": "Cara Memilih Tech Stack yang Tepat untuk Aplikasi Web Bisnis Anda",
-    "description": "Panduan memilih tech stack (teknologi) yang tepat untuk aplikasi web bisnis — faktor yang perlu dipertimbangkan, perbandingan pilihan populer, dan kesalahan umum.",
     "date": "2026-06-27",
     "readMinutes": 8,
-    "tags": [
-      "Web App",
-      "Teknologi",
-      "Panduan"
-    ],
     "c": "#15243B",
     "c2": "#1E88A8",
-    "excerpt": "Salah pilih tech stack bisa berarti refactor total setahun kemudian. Panduan ini membantu Anda memilih dengan cerdas dari awal."
+    "i18n": {
+      "id": {
+        "title": "Cara Memilih Tech Stack yang Tepat untuk Aplikasi Web Bisnis Anda",
+        "description": "Panduan memilih tech stack (teknologi) yang tepat untuk aplikasi web bisnis — faktor yang perlu dipertimbangkan, perbandingan pilihan populer, dan kesalahan umum.",
+        "excerpt": "Salah pilih tech stack bisa berarti refactor total setahun kemudian. Panduan ini membantu Anda memilih dengan cerdas dari awal.",
+        "tags": [
+          "Web App",
+          "Teknologi",
+          "Panduan"
+        ]
+      },
+      "en": {
+        "title": "How to Choose the Right Tech Stack for Your Business Web App",
+        "description": "A guide to choosing the right technology stack for a business web app — factors to consider, comparisons of popular options, and common mistakes.",
+        "excerpt": "Choosing the wrong tech stack can mean a total rewrite a year later. This guide helps you choose wisely from the start.",
+        "tags": [
+          "Web App",
+          "Technology",
+          "Guide"
+        ]
+      },
+      "zh": {
+        "title": "如何为您的商业Web应用选择合适的技术栈",
+        "description": "一份为商业Web应用选择合适技术栈的指南——需要考虑的因素、热门方案对比，以及常见错误。",
+        "excerpt": "选错技术栈，可能意味着一年后要彻底重写。这份指南帮助您从一开始就做出明智的选择。",
+        "tags": [
+          "Web应用",
+          "技术",
+          "指南"
+        ]
+      }
+    }
   },
   {
     "slug": "erp-untuk-distribusi-supply-chain",
-    "title": "ERP untuk Bisnis Distribusi dan Supply Chain: Fitur yang Benar-Benar Dibutuhkan",
-    "description": "Panduan ERP khusus bisnis distribusi dan supply chain Indonesia — fitur wajib, cara memilih, dan manfaat nyata yang bisa dirasakan segera.",
     "date": "2026-06-27",
     "readMinutes": 10,
-    "tags": [
-      "ERP",
-      "Supply Chain",
-      "Bisnis"
-    ],
     "c": "#0E8C86",
     "c2": "#0B6E69",
-    "excerpt": "Bisnis distribusi yang masih mengelola stok dan pengiriman manual kehilangan ribuan jam produktivitas. ERP yang tepat bisa mengubah segalanya."
+    "i18n": {
+      "id": {
+        "title": "ERP untuk Bisnis Distribusi dan Supply Chain: Fitur yang Benar-Benar Dibutuhkan",
+        "description": "Panduan ERP khusus bisnis distribusi dan supply chain Indonesia — fitur wajib, cara memilih, dan manfaat nyata yang bisa dirasakan segera.",
+        "excerpt": "Bisnis distribusi yang masih mengelola stok dan pengiriman manual kehilangan ribuan jam produktivitas. ERP yang tepat bisa mengubah segalanya.",
+        "tags": [
+          "ERP",
+          "Supply Chain",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "ERP for Distribution and Supply Chain Businesses: The Features You Actually Need",
+        "description": "A guide to ERP built specifically for Indonesian distribution and supply chain businesses — must-have features, how to choose, and real benefits you can feel right away.",
+        "excerpt": "Distribution businesses still managing stock and shipments manually are losing thousands of hours of productivity. The right ERP can change everything.",
+        "tags": [
+          "ERP",
+          "Supply Chain",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "分销与供应链企业的 ERP：您真正需要的功能",
+        "description": "专为印尼分销与供应链企业打造的 ERP 指南——必备功能、如何选择，以及能立即感受到的实际效益。",
+        "excerpt": "仍在手动管理库存和发货的分销企业，正损失着成千上万小时的生产力。合适的 ERP 能彻底改变这一切。",
+        "tags": [
+          "ERP",
+          "供应链",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "bisnis-ritel-harus-punya-aplikasi-mobile-2026",
-    "title": "Kenapa Bisnis Ritel Indonesia Harus Punya Aplikasi Mobile di 2026",
-    "description": "Panduan lengkap kenapa bisnis ritel Indonesia wajib punya aplikasi mobile di 2026 — manfaat, fitur kunci, dan cara memulainya.",
     "date": "2026-06-27",
     "readMinutes": 9,
-    "tags": [
-      "Aplikasi Mobile",
-      "Ritel",
-      "Bisnis"
-    ],
     "c": "#1E88A8",
     "c2": "#0E5E78",
-    "excerpt": "Di era digital ini, pelanggan mengharapkan kemudahan belanja dari genggaman tangan. Ini alasan kuat bisnis ritel Indonesia harus segera punya aplikasi mobile."
+    "i18n": {
+      "id": {
+        "title": "Kenapa Bisnis Ritel Indonesia Harus Punya Aplikasi Mobile di 2026",
+        "description": "Panduan lengkap kenapa bisnis ritel Indonesia wajib punya aplikasi mobile di 2026 — manfaat, fitur kunci, dan cara memulainya.",
+        "excerpt": "Di era digital ini, pelanggan mengharapkan kemudahan belanja dari genggaman tangan. Ini alasan kuat bisnis ritel Indonesia harus segera punya aplikasi mobile.",
+        "tags": [
+          "Aplikasi Mobile",
+          "Ritel",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Why Indonesian Retail Businesses Need a Mobile App in 2026",
+        "description": "A complete guide on why Indonesian retail businesses must have a mobile app in 2026 — the benefits, key features, and how to get started.",
+        "excerpt": "In this digital era, customers expect the convenience of shopping from the palm of their hand. Here's a strong case for why Indonesian retail businesses need a mobile app now.",
+        "tags": [
+          "Mobile Apps",
+          "Retail",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "为什么印尼零售企业在 2026 年必须拥有移动应用",
+        "description": "一份完整指南，说明为什么印尼零售企业在 2026 年必须拥有移动应用——好处、关键功能，以及如何开始。",
+        "excerpt": "在这个数字时代，客户期待能随手购物的便利体验。以下是印尼零售企业应尽快拥有移动应用的有力理由。",
+        "tags": [
+          "移动应用",
+          "零售",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "ai-generatif-bisnis-indonesia",
-    "title": "AI Generatif untuk Bisnis Indonesia: Dari Hype ke Implementasi Nyata",
-    "description": "Panduan praktis implementasi AI generatif untuk bisnis Indonesia — use case yang terbukti, cara memulai, tantangan yang perlu diantisipasi, dan bagaimana memilih pendekatan yang tepat.",
     "date": "2026-06-26",
     "readMinutes": 9,
-    "tags": [
-      "AI",
-      "Teknologi",
-      "Bisnis Digital"
-    ],
     "c": "#F59E0B",
     "c2": "#D97706",
-    "excerpt": "AI generatif sudah bukan eksperimen lab — bisnis Indonesia mulai merasakannya. Tapi bagaimana memulai dengan tepat, dan apa yang benar-benar menghasilkan ROI?"
+    "i18n": {
+      "id": {
+        "title": "AI Generatif untuk Bisnis Indonesia: Dari Hype ke Implementasi Nyata",
+        "description": "Panduan praktis implementasi AI generatif untuk bisnis Indonesia — use case yang terbukti, cara memulai, tantangan yang perlu diantisipasi, dan bagaimana memilih pendekatan yang tepat.",
+        "excerpt": "AI generatif sudah bukan eksperimen lab — bisnis Indonesia mulai merasakannya. Tapi bagaimana memulai dengan tepat, dan apa yang benar-benar menghasilkan ROI?",
+        "tags": [
+          "AI",
+          "Teknologi",
+          "Bisnis Digital"
+        ]
+      },
+      "en": {
+        "title": "Generative AI for Indonesian Businesses: From Hype to Real Implementation",
+        "description": "A practical guide to implementing generative AI for Indonesian businesses — proven use cases, how to get started, challenges to anticipate, and how to choose the right approach.",
+        "excerpt": "Generative AI is no longer a lab experiment — Indonesian businesses are already feeling its impact. But how do you start the right way, and what actually delivers ROI?",
+        "tags": [
+          "AI",
+          "Technology",
+          "Digital Business"
+        ]
+      },
+      "zh": {
+        "title": "面向印尼企业的生成式AI：从炒作走向真正落地",
+        "description": "印尼企业实施生成式AI的实用指南——已被验证的应用场景、如何开始、需要预见的挑战，以及如何选择正确的方法。",
+        "excerpt": "生成式AI已不再只是实验室里的玩具——印尼企业已经开始感受到它的影响。但该如何正确起步，什么才能真正带来投资回报？",
+        "tags": [
+          "AI",
+          "技术",
+          "数字商业"
+        ]
+      }
+    }
   },
   {
     "slug": "arsitektur-website-skalabel",
-    "title": "Arsitektur Website Skalabel: Cara Bisnis Tumbuh Tanpa Website Down",
-    "description": "Pelajari prinsip arsitektur website skalabel — dari CDN dan load balancing hingga microservices dan auto-scaling — agar website bisnis Anda siap menangani lonjakan trafik tanpa error.",
     "date": "2026-06-26",
     "readMinutes": 8,
-    "tags": [
-      "Website",
-      "Infrastruktur",
-      "Skalabilitas"
-    ],
     "c": "#1E88A8",
     "c2": "#0E5E78",
-    "excerpt": "Website yang down saat viral adalah mimpi buruk bisnis. Pelajari cara membangun arsitektur yang bisa tumbuh bersama bisnis Anda — dari ratusan ke jutaan pengguna."
+    "i18n": {
+      "id": {
+        "title": "Arsitektur Website Skalabel: Cara Bisnis Tumbuh Tanpa Website Down",
+        "description": "Pelajari prinsip arsitektur website skalabel — dari CDN dan load balancing hingga microservices dan auto-scaling — agar website bisnis Anda siap menangani lonjakan trafik tanpa error.",
+        "excerpt": "Website yang down saat viral adalah mimpi buruk bisnis. Pelajari cara membangun arsitektur yang bisa tumbuh bersama bisnis Anda — dari ratusan ke jutaan pengguna.",
+        "tags": [
+          "Website",
+          "Infrastruktur",
+          "Skalabilitas"
+        ]
+      },
+      "en": {
+        "title": "Scalable Website Architecture: How Businesses Grow Without Their Website Going Down",
+        "description": "Learn the principles of scalable website architecture — from CDN and load balancing to microservices and auto-scaling — so your business website can handle traffic spikes without errors.",
+        "excerpt": "A website going down while it's going viral is every business's nightmare. Learn how to build an architecture that can grow alongside your business — from hundreds to millions of users.",
+        "tags": [
+          "Website",
+          "Infrastructure",
+          "Scalability"
+        ]
+      },
+      "zh": {
+        "title": "可扩展的网站架构：企业如何在增长中避免网站宕机",
+        "description": "了解可扩展网站架构的原则——从 CDN、负载均衡到微服务和自动扩缩容——让您的企业网站能够应对流量激增而不出错。",
+        "excerpt": "网站在爆红时宕机，是每个企业的噩梦。了解如何构建能与企业共同成长的架构——从几百用户到几百万用户。",
+        "tags": [
+          "网站",
+          "基础设施",
+          "可扩展性"
+        ]
+      }
+    }
   },
   {
     "slug": "integrasi-erp-ecommerce",
-    "title": "Integrasi ERP dengan E-Commerce: Cara Bisnis Skalakan Operasional Tanpa Chaos",
-    "description": "Integrasi sistem ERP dengan platform e-commerce memungkinkan sinkronisasi stok, pesanan, dan keuangan secara real-time. Pelajari manfaat, tantangan, dan cara implementasinya.",
     "date": "2026-06-26",
     "readMinutes": 9,
-    "tags": [
-      "ERP",
-      "E-Commerce",
-      "Integrasi Sistem"
-    ],
     "c": "#059669",
     "c2": "#047857",
-    "excerpt": "Mengelola ratusan pesanan sehari dari banyak channel tanpa integrasi ERP adalah resep chaos. Pelajari cara menghubungkan ERP dengan e-commerce untuk operasional yang lebih efisien."
+    "i18n": {
+      "id": {
+        "title": "Integrasi ERP dengan E-Commerce: Cara Bisnis Skalakan Operasional Tanpa Chaos",
+        "description": "Integrasi sistem ERP dengan platform e-commerce memungkinkan sinkronisasi stok, pesanan, dan keuangan secara real-time. Pelajari manfaat, tantangan, dan cara implementasinya.",
+        "excerpt": "Mengelola ratusan pesanan sehari dari banyak channel tanpa integrasi ERP adalah resep chaos. Pelajari cara menghubungkan ERP dengan e-commerce untuk operasional yang lebih efisien.",
+        "tags": [
+          "ERP",
+          "E-Commerce",
+          "Integrasi Sistem"
+        ]
+      },
+      "en": {
+        "title": "ERP-E-Commerce Integration: How Businesses Scale Operations Without Chaos",
+        "description": "Integrating ERP systems with e-commerce platforms enables real-time synchronization of stock, orders, and finances. Learn the benefits, challenges, and how to implement it.",
+        "excerpt": "Managing hundreds of orders a day across multiple channels without ERP integration is a recipe for chaos. Learn how to connect ERP with e-commerce for more efficient operations.",
+        "tags": [
+          "ERP",
+          "E-Commerce",
+          "System Integration"
+        ]
+      },
+      "zh": {
+        "title": "ERP与电商集成：企业如何在不陷入混乱的情况下扩展运营",
+        "description": "将ERP系统与电商平台集成，可实现库存、订单和财务的实时同步。了解其好处、挑战以及实施方法。",
+        "excerpt": "在没有ERP集成的情况下，每天从多个渠道处理数百个订单，无异于制造混乱。了解如何将ERP与电商连接，实现更高效的运营。",
+        "tags": [
+          "ERP",
+          "电商",
+          "系统集成"
+        ]
+      }
+    }
   },
   {
     "slug": "keamanan-aplikasi-mobile",
-    "title": "Keamanan Aplikasi Mobile: Panduan Lengkap Melindungi Bisnis dan Pengguna",
-    "description": "Ancaman keamanan aplikasi mobile semakin canggih. Pelajari jenis ancaman utama, praktik terbaik keamanan, dan cara memastikan aplikasi bisnis Anda aman dari serangan.",
     "date": "2026-06-26",
     "readMinutes": 8,
-    "tags": [
-      "Keamanan",
-      "Aplikasi Mobile",
-      "Cybersecurity"
-    ],
     "c": "#DC2626",
     "c2": "#B91C1C",
-    "excerpt": "Aplikasi mobile yang tidak aman bisa merusak reputasi bisnis dalam semalam. Pelajari ancaman utama dan cara melindungi aplikasi serta pengguna Anda."
+    "i18n": {
+      "id": {
+        "title": "Keamanan Aplikasi Mobile: Panduan Lengkap Melindungi Bisnis dan Pengguna",
+        "description": "Ancaman keamanan aplikasi mobile semakin canggih. Pelajari jenis ancaman utama, praktik terbaik keamanan, dan cara memastikan aplikasi bisnis Anda aman dari serangan.",
+        "excerpt": "Aplikasi mobile yang tidak aman bisa merusak reputasi bisnis dalam semalam. Pelajari ancaman utama dan cara melindungi aplikasi serta pengguna Anda.",
+        "tags": [
+          "Keamanan",
+          "Aplikasi Mobile",
+          "Cybersecurity"
+        ]
+      },
+      "en": {
+        "title": "Mobile App Security: A Complete Guide to Protecting Your Business and Users",
+        "description": "Mobile app security threats are becoming increasingly sophisticated. Learn about the main threats, security best practices, and how to keep your business app safe from attacks.",
+        "excerpt": "An insecure mobile app can destroy a business's reputation overnight. Learn about the main threats and how to protect your app and users.",
+        "tags": [
+          "Security",
+          "Mobile Apps",
+          "Cybersecurity"
+        ]
+      },
+      "zh": {
+        "title": "移动应用安全：保护企业与用户的完整指南",
+        "description": "移动应用的安全威胁正变得越来越复杂。了解主要威胁类型、最佳安全实践，以及如何确保你的企业应用免受攻击。",
+        "excerpt": "不安全的移动应用可能在一夜之间摧毁企业声誉。了解主要威胁类型，以及如何保护你的应用和用户。",
+        "tags": [
+          "安全",
+          "移动应用",
+          "网络安全"
+        ]
+      }
+    }
   },
   {
     "slug": "web3-blockchain-bisnis",
-    "title": "Web3 dan Blockchain untuk Bisnis Indonesia: Peluang Nyata di 2026",
-    "description": "Pelajari bagaimana teknologi Web3 dan blockchain membuka peluang baru bagi bisnis Indonesia — dari kontrak pintar hingga tokenisasi aset dan supply chain transparan.",
     "date": "2026-06-26",
     "readMinutes": 9,
-    "tags": [
-      "Web3",
-      "Blockchain",
-      "Teknologi"
-    ],
     "c": "#8B5CF6",
     "c2": "#6D28D9",
-    "excerpt": "Web3 dan blockchain bukan sekadar tren kripto. Pelajari aplikasi nyata yang bisa mengubah cara bisnis Indonesia beroperasi di 2026."
+    "i18n": {
+      "id": {
+        "title": "Web3 dan Blockchain untuk Bisnis Indonesia: Peluang Nyata di 2026",
+        "description": "Pelajari bagaimana teknologi Web3 dan blockchain membuka peluang baru bagi bisnis Indonesia — dari kontrak pintar hingga tokenisasi aset dan supply chain transparan.",
+        "excerpt": "Web3 dan blockchain bukan sekadar tren kripto. Pelajari aplikasi nyata yang bisa mengubah cara bisnis Indonesia beroperasi di 2026.",
+        "tags": [
+          "Web3",
+          "Blockchain",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "Web3 and Blockchain for Indonesian Businesses: Real Opportunities in 2026",
+        "description": "Learn how Web3 and blockchain technology are opening new opportunities for Indonesian businesses — from smart contracts to asset tokenization and transparent supply chains.",
+        "excerpt": "Web3 and blockchain aren't just crypto hype. Discover the real-world applications that could change how Indonesian businesses operate in 2026.",
+        "tags": [
+          "Web3",
+          "Blockchain",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "Web3 与区块链为印尼企业带来的真实机遇：展望 2026",
+        "description": "了解 Web3 和区块链技术如何为印尼企业开辟新机遇——从智能合约到资产代币化，再到透明的供应链。",
+        "excerpt": "Web3 与区块链绝不仅仅是加密货币的炒作。了解那些能在2026年改变印尼企业运营方式的真实应用。",
+        "tags": [
+          "Web3",
+          "区块链",
+          "技术"
+        ]
+      }
+    }
   },
   {
     "slug": "marketplace-vs-website-sendiri",
-    "title": "Berjualan di Marketplace vs Website Sendiri: Mana yang Lebih Menguntungkan?",
-    "description": "Perbandingan mendalam antara berjualan di marketplace (Tokopedia, Shopee, Lazada) vs memiliki website toko online sendiri — analisis biaya, kontrol, dan strategi terbaik untuk bisnis Indonesia.",
     "date": "2026-06-26",
     "readMinutes": 8,
-    "tags": [
-      "E-commerce",
-      "Website",
-      "Bisnis"
-    ],
     "c": "#1B5E20",
     "c2": "#0E8C86",
-    "excerpt": "Banyak pemilik toko di marketplace tidak sadar berapa besar biaya yang sebenarnya mereka bayar. Dan berapa besar kontrol yang mereka serahkan ke platform."
+    "i18n": {
+      "id": {
+        "title": "Berjualan di Marketplace vs Website Sendiri: Mana yang Lebih Menguntungkan?",
+        "description": "Perbandingan mendalam antara berjualan di marketplace (Tokopedia, Shopee, Lazada) vs memiliki website toko online sendiri — analisis biaya, kontrol, dan strategi terbaik untuk bisnis Indonesia.",
+        "excerpt": "Banyak pemilik toko di marketplace tidak sadar berapa besar biaya yang sebenarnya mereka bayar. Dan berapa besar kontrol yang mereka serahkan ke platform.",
+        "tags": [
+          "E-commerce",
+          "Website",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Selling on a Marketplace vs Your Own Website: Which Is More Profitable?",
+        "description": "An in-depth comparison of selling on marketplaces (Tokopedia, Shopee, Lazada) vs having your own online store website — cost, control, and the best strategy for Indonesian businesses.",
+        "excerpt": "Many marketplace store owners don't realize just how much they're actually paying — and how much control they're handing over to the platform.",
+        "tags": [
+          "E-commerce",
+          "Website",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "在电商平台开店 vs 拥有自己的网站：哪个更赚钱？",
+        "description": "深入对比在电商平台（Tokopedia、Shopee、Lazada）开店与拥有自己的在线商城网站——成本、掌控权，以及印尼企业的最佳策略分析。",
+        "excerpt": "很多在电商平台开店的商家并没有意识到，自己实际付出的成本有多高，又把多少掌控权拱手让给了平台。",
+        "tags": [
+          "电商",
+          "网站",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "manajemen-tim-remote-teknologi",
-    "title": "Manajemen Tim Remote dengan Teknologi: Tools dan Strategi untuk Bisnis Modern",
-    "description": "Panduan lengkap mengelola tim remote menggunakan teknologi — dari project management tools, komunikasi async, hingga membangun budaya produktivitas jarak jauh yang sustain untuk bisnis Indonesia.",
     "date": "2026-06-26",
     "readMinutes": 8,
-    "tags": [
-      "Teknologi",
-      "Bisnis",
-      "ERP"
-    ],
     "c": "#2C3E50",
     "c2": "#1E88A8",
-    "excerpt": "Kerja remote bukan tren sementara. Bisnis yang sudah membangun sistem manajemen tim jarak jauh yang baik hari ini punya keunggulan kompetitif besar — akses ke talent terbaik di seluruh Indonesia."
+    "i18n": {
+      "id": {
+        "title": "Manajemen Tim Remote dengan Teknologi: Tools dan Strategi untuk Bisnis Modern",
+        "description": "Panduan lengkap mengelola tim remote menggunakan teknologi — dari project management tools, komunikasi async, hingga membangun budaya produktivitas jarak jauh yang sustain untuk bisnis Indonesia.",
+        "excerpt": "Kerja remote bukan tren sementara. Bisnis yang sudah membangun sistem manajemen tim jarak jauh yang baik hari ini punya keunggulan kompetitif besar — akses ke talent terbaik di seluruh Indonesia.",
+        "tags": [
+          "Teknologi",
+          "Bisnis",
+          "ERP"
+        ]
+      },
+      "en": {
+        "title": "Managing Remote Teams With Technology: Tools and Strategies for the Modern Business",
+        "description": "A complete guide to managing remote teams using technology — from project management tools and async communication to building a sustainable culture of remote productivity for Indonesian businesses.",
+        "excerpt": "Remote work isn't a passing trend. Businesses that build a solid remote team management system today gain a major competitive advantage — access to the best talent across all of Indonesia.",
+        "tags": [
+          "Technology",
+          "Business",
+          "ERP"
+        ]
+      },
+      "zh": {
+        "title": "用技术管理远程团队：现代企业的工具与策略",
+        "description": "关于用技术管理远程团队的完整指南——从项目管理工具、异步沟通，到为印尼企业打造可持续的远程办公效率文化。",
+        "excerpt": "远程办公不是一时的潮流。如今就建立起完善远程团队管理体系的企业，将获得巨大的竞争优势——能够触及印尼全境的顶尖人才。",
+        "tags": [
+          "技术",
+          "商业",
+          "ERP"
+        ]
+      }
+    }
   },
   {
     "slug": "mvp-development-strategi",
-    "title": "MVP Development: Strategi Meluncurkan Produk Digital dengan Cepat dan Tepat",
-    "description": "Panduan strategi MVP (Minimum Viable Product) untuk startup dan bisnis yang ingin memvalidasi ide produk digital sebelum investasi besar — dari definisi fitur inti hingga iterasi berdasarkan feedback nyata.",
     "date": "2026-06-26",
     "readMinutes": 9,
-    "tags": [
-      "Aplikasi",
-      "Startup",
-      "Teknologi"
-    ],
     "c": "#1A3A4A",
     "c2": "#0E8C86",
-    "excerpt": "Jangan bangun semua fitur sebelum tahu apakah produk Anda dibutuhkan. Strategi MVP memungkinkan Anda memvalidasi pasar dengan investasi minimum."
+    "i18n": {
+      "id": {
+        "title": "MVP Development: Strategi Meluncurkan Produk Digital dengan Cepat dan Tepat",
+        "description": "Panduan strategi MVP (Minimum Viable Product) untuk startup dan bisnis yang ingin memvalidasi ide produk digital sebelum investasi besar — dari definisi fitur inti hingga iterasi berdasarkan feedback nyata.",
+        "excerpt": "Jangan bangun semua fitur sebelum tahu apakah produk Anda dibutuhkan. Strategi MVP memungkinkan Anda memvalidasi pasar dengan investasi minimum.",
+        "tags": [
+          "Aplikasi",
+          "Startup",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "MVP Development: Strategies for Launching a Digital Product Fast and Right",
+        "description": "A strategy guide to MVP (Minimum Viable Product) development for startups and businesses looking to validate a digital product idea before making a major investment — from defining core features to iterating based on real feedback.",
+        "excerpt": "Don't build every feature before knowing whether your product is actually needed. An MVP strategy lets you validate the market with minimal investment.",
+        "tags": [
+          "Apps",
+          "Startup",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "MVP 开发：快速且精准地推出数字产品的策略",
+        "description": "面向初创公司和企业的 MVP（最小可行产品）策略指南——在进行大规模投资前验证数字产品创意，从定义核心功能到基于真实反馈进行迭代。",
+        "excerpt": "在确定产品是否真正被需要之前，不要急于构建所有功能。MVP 策略让您能以最小的投入验证市场。",
+        "tags": [
+          "应用",
+          "创业",
+          "技术"
+        ]
+      }
+    }
   },
   {
     "slug": "chatbot-ai-customer-service",
-    "title": "Chatbot AI untuk Customer Service: Panduan Implementasi untuk Bisnis",
-    "description": "Cara mengimplementasikan chatbot AI di website dan aplikasi bisnis Anda — dari pilihan platform hingga skrip percakapan yang mengkonversi, plus tips integrasi dengan WhatsApp.",
     "date": "2026-06-26",
     "readMinutes": 9,
-    "tags": [
-      "AI",
-      "Website",
-      "Bisnis"
-    ],
     "c": "#1B4F72",
     "c2": "#2BB3A3",
-    "excerpt": "Chatbot AI bukan lagi teknologi mahal untuk perusahaan besar. Bisnis skala UMKM pun bisa merespons pelanggan 24/7 tanpa menambah staf — begini caranya."
+    "i18n": {
+      "id": {
+        "title": "Chatbot AI untuk Customer Service: Panduan Implementasi untuk Bisnis",
+        "description": "Cara mengimplementasikan chatbot AI di website dan aplikasi bisnis Anda — dari pilihan platform hingga skrip percakapan yang mengkonversi, plus tips integrasi dengan WhatsApp.",
+        "excerpt": "Chatbot AI bukan lagi teknologi mahal untuk perusahaan besar. Bisnis skala UMKM pun bisa merespons pelanggan 24/7 tanpa menambah staf — begini caranya.",
+        "tags": [
+          "AI",
+          "Website",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "AI Chatbots for Customer Service: An Implementation Guide for Businesses",
+        "description": "How to implement an AI chatbot on your business website and app — from platform choices to conversation scripts that convert, plus tips for WhatsApp integration.",
+        "excerpt": "AI chatbots are no longer expensive technology reserved for big companies. Even small businesses can respond to customers 24/7 without adding staff — here's how.",
+        "tags": [
+          "AI",
+          "Website",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "客服 AI 聊天机器人：企业实施指南",
+        "description": "如何在企业网站和应用中实施 AI 聊天机器人——从平台选择到能带来转化的对话话术，以及与 WhatsApp 集成的技巧。",
+        "excerpt": "AI 聊天机器人不再是大公司才用得起的昂贵技术。中小微企业也能在不增加人手的情况下实现 24/7 客户响应——方法就在这里。",
+        "tags": [
+          "AI",
+          "网站",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "website-analytics-data-bisnis",
-    "title": "Website Analytics: Cara Membaca Data untuk Mengembangkan Bisnis",
-    "description": "Panduan lengkap memanfaatkan website analytics — Google Analytics, heatmap, dan konversi funnel — untuk membuat keputusan bisnis berdasarkan data nyata, bukan asumsi.",
     "date": "2026-06-26",
     "readMinutes": 8,
-    "tags": [
-      "Website",
-      "Analytics",
-      "Bisnis"
-    ],
     "c": "#0E5E78",
     "c2": "#1E88A8",
-    "excerpt": "Data dari website Anda adalah harta yang belum dimanfaatkan. Pelajari cara membacanya dan mengubah angka menjadi keputusan bisnis yang menghasilkan."
+    "i18n": {
+      "id": {
+        "title": "Website Analytics: Cara Membaca Data untuk Mengembangkan Bisnis",
+        "description": "Panduan lengkap memanfaatkan website analytics — Google Analytics, heatmap, dan konversi funnel — untuk membuat keputusan bisnis berdasarkan data nyata, bukan asumsi.",
+        "excerpt": "Data dari website Anda adalah harta yang belum dimanfaatkan. Pelajari cara membacanya dan mengubah angka menjadi keputusan bisnis yang menghasilkan.",
+        "tags": [
+          "Website",
+          "Analytics",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Website Analytics: How to Read the Data to Grow Your Business",
+        "description": "A complete guide to using website analytics — Google Analytics, heatmaps, and conversion funnels — to make business decisions based on real data, not assumptions.",
+        "excerpt": "The data from your website is an untapped treasure. Learn how to read it and turn numbers into business decisions that actually pay off.",
+        "tags": [
+          "Website",
+          "Analytics",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "网站数据分析：如何解读数据以发展业务",
+        "description": "利用网站数据分析——Google Analytics、热力图和转化漏斗——基于真实数据而非猜测做出商业决策的完整指南。",
+        "excerpt": "您网站的数据是一座尚未被开发的宝藏。学习如何解读它，将数字转化为真正有回报的商业决策。",
+        "tags": [
+          "网站",
+          "数据分析",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "tren-erp-indonesia-2026",
-    "title": "Tren ERP di Indonesia 2026: Cloud-Native, AI-Powered, dan Mobile-First",
-    "description": "Perkembangan terbaru sistem ERP di Indonesia 2026 — cloud-native architecture, integrasi AI, antarmuka mobile-first, dan bagaimana bisnis Indonesia mengadopsi ERP modern.",
     "date": "2026-06-25",
     "readMinutes": 9,
-    "tags": [
-      "ERP",
-      "Bisnis",
-      "Teknologi"
-    ],
     "c": "#15243B",
     "c2": "#0E8C86",
-    "excerpt": "ERP 2026 sudah jauh berbeda dari sistem kaku yang Anda kenal dulu — lebih cerdas, lebih mobile, dan jauh lebih mudah diimplementasikan."
+    "i18n": {
+      "id": {
+        "title": "Tren ERP di Indonesia 2026: Cloud-Native, AI-Powered, dan Mobile-First",
+        "description": "Perkembangan terbaru sistem ERP di Indonesia 2026 — cloud-native architecture, integrasi AI, antarmuka mobile-first, dan bagaimana bisnis Indonesia mengadopsi ERP modern.",
+        "excerpt": "ERP 2026 sudah jauh berbeda dari sistem kaku yang Anda kenal dulu — lebih cerdas, lebih mobile, dan jauh lebih mudah diimplementasikan.",
+        "tags": [
+          "ERP",
+          "Bisnis",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "ERP Trends in Indonesia 2026: Cloud-Native, AI-Powered, and Mobile-First",
+        "description": "The latest developments in ERP systems in Indonesia in 2026 — cloud-native architecture, AI integration, mobile-first interfaces, and how Indonesian businesses are adopting modern ERP.",
+        "excerpt": "ERP in 2026 looks nothing like the rigid systems you used to know — smarter, more mobile, and far easier to implement.",
+        "tags": [
+          "ERP",
+          "Business",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "2026 年印尼 ERP 趋势：云原生、AI 驱动、移动优先",
+        "description": "2026 年印尼 ERP 系统的最新发展——云原生架构、AI 集成、移动优先界面，以及印尼企业如何采用现代 ERP。",
+        "excerpt": "2026 年的 ERP 早已不是您印象中那种笨重的系统——更智能、更移动化，实施起来也容易得多。",
+        "tags": [
+          "ERP",
+          "商业",
+          "技术"
+        ]
+      }
+    }
   },
   {
     "slug": "low-code-no-code-pengembangan-software",
-    "title": "Low-Code & No-Code: Revolusi Pengembangan Software tanpa Programmer",
-    "description": "Panduan lengkap low-code dan no-code development di 2026 — apa bedanya, platform terpopuler, kapan cocok digunakan, dan batasannya untuk kebutuhan bisnis yang lebih kompleks.",
     "date": "2026-06-25",
     "readMinutes": 8,
-    "tags": [
-      "Teknologi",
-      "Software",
-      "Low-Code"
-    ],
     "c": "#0E4A30",
     "c2": "#2BB3A3",
-    "excerpt": "Low-code dan no-code memungkinkan non-developer membangun aplikasi. Tapi apakah ini solusi untuk semua kebutuhan bisnis? Panduan jujur untuk Anda."
+    "i18n": {
+      "id": {
+        "title": "Low-Code & No-Code: Revolusi Pengembangan Software tanpa Programmer",
+        "description": "Panduan lengkap low-code dan no-code development di 2026 — apa bedanya, platform terpopuler, kapan cocok digunakan, dan batasannya untuk kebutuhan bisnis yang lebih kompleks.",
+        "excerpt": "Low-code dan no-code memungkinkan non-developer membangun aplikasi. Tapi apakah ini solusi untuk semua kebutuhan bisnis? Panduan jujur untuk Anda.",
+        "tags": [
+          "Teknologi",
+          "Software",
+          "Low-Code"
+        ]
+      },
+      "en": {
+        "title": "Low-Code & No-Code: The Software Development Revolution Without Programmers",
+        "description": "A complete guide to low-code and no-code development in 2026 — the differences, the most popular platforms, when they fit, and their limitations for more complex business needs.",
+        "excerpt": "Low-code and no-code let non-developers build applications. But is this a solution for every business need? An honest guide for you.",
+        "tags": [
+          "Technology",
+          "Software",
+          "Low-Code"
+        ]
+      },
+      "zh": {
+        "title": "低代码与无代码：无需程序员的软件开发革命",
+        "description": "2026年低代码与无代码开发完整指南——两者的区别、最热门的平台、适用场景，以及在更复杂业务需求下的局限性。",
+        "excerpt": "低代码和无代码让非开发人员也能构建应用。但这真能满足所有业务需求吗？为你提供一份诚实的指南。",
+        "tags": [
+          "科技",
+          "软件",
+          "低代码"
+        ]
+      }
+    }
   },
   {
     "slug": "strategi-monetisasi-aplikasi",
-    "title": "Strategi Monetisasi Aplikasi Mobile & Web App: Cara Menghasilkan Pendapatan dari App Anda",
-    "description": "Panduan lengkap strategi monetisasi aplikasi mobile dan web app di 2026 — freemium, subscription, in-app purchase, iklan, dan model hybrid untuk memaksimalkan revenue.",
     "date": "2026-06-25",
     "readMinutes": 9,
-    "tags": [
-      "Aplikasi Mobile",
-      "Bisnis",
-      "Monetisasi"
-    ],
     "c": "#0E5E78",
     "c2": "#1E88A8",
-    "excerpt": "Punya ide aplikasi yang bagus tapi bingung bagaimana menghasilkan uang darinya? Panduan ini membahas model monetisasi yang terbukti berhasil."
+    "i18n": {
+      "id": {
+        "title": "Strategi Monetisasi Aplikasi Mobile & Web App: Cara Menghasilkan Pendapatan dari App Anda",
+        "description": "Panduan lengkap strategi monetisasi aplikasi mobile dan web app di 2026 — freemium, subscription, in-app purchase, iklan, dan model hybrid untuk memaksimalkan revenue.",
+        "excerpt": "Punya ide aplikasi yang bagus tapi bingung bagaimana menghasilkan uang darinya? Panduan ini membahas model monetisasi yang terbukti berhasil.",
+        "tags": [
+          "Aplikasi Mobile",
+          "Bisnis",
+          "Monetisasi"
+        ]
+      },
+      "en": {
+        "title": "Mobile & Web App Monetization Strategy: How to Generate Revenue from Your App",
+        "description": "A complete guide to mobile and web app monetization strategies in 2026 — freemium, subscription, in-app purchases, ads, and hybrid models to maximize revenue.",
+        "excerpt": "Have a great app idea but not sure how to make money from it? This guide covers proven monetization models that actually work.",
+        "tags": [
+          "Mobile Apps",
+          "Business",
+          "Monetization"
+        ]
+      },
+      "zh": {
+        "title": "移动应用与网页应用的变现策略：如何从你的应用中创造收入",
+        "description": "2026 年移动应用与网页应用变现策略完整指南——免费增值、订阅制、应用内购买、广告以及混合模式，助你实现收入最大化。",
+        "excerpt": "有一个不错的应用创意，却不知道如何靠它赚钱？本指南将介绍经过验证、真正有效的变现模式。",
+        "tags": [
+          "移动应用",
+          "商业",
+          "变现"
+        ]
+      }
+    }
   },
   {
     "slug": "ai-untuk-website-dan-aplikasi",
-    "title": "AI untuk Website & Aplikasi: Fitur Kecerdasan Buatan yang Bisa Diterapkan Sekarang",
-    "description": "Panduan praktis mengintegrasikan AI ke website dan aplikasi bisnis — chatbot, personalisasi, analitik prediktif, pencarian semantik, dan optimasi konversi berbasis AI.",
     "date": "2026-06-25",
     "readMinutes": 10,
-    "tags": [
-      "AI",
-      "Website",
-      "Teknologi"
-    ],
     "c": "#2E1760",
     "c2": "#6C3FC5",
-    "excerpt": "AI bukan lagi teknologi masa depan — ini sudah bisa diintegrasikan ke website dan aplikasi bisnis Anda hari ini, dengan biaya yang terjangkau."
+    "i18n": {
+      "id": {
+        "title": "AI untuk Website & Aplikasi: Fitur Kecerdasan Buatan yang Bisa Diterapkan Sekarang",
+        "description": "Panduan praktis mengintegrasikan AI ke website dan aplikasi bisnis — chatbot, personalisasi, analitik prediktif, pencarian semantik, dan optimasi konversi berbasis AI.",
+        "excerpt": "AI bukan lagi teknologi masa depan — ini sudah bisa diintegrasikan ke website dan aplikasi bisnis Anda hari ini, dengan biaya yang terjangkau.",
+        "tags": [
+          "AI",
+          "Website",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "AI for Websites & Apps: Artificial Intelligence Features You Can Implement Now",
+        "description": "A practical guide to integrating AI into your business website and app — chatbots, personalization, predictive analytics, semantic search, and AI-driven conversion optimization.",
+        "excerpt": "AI is no longer a future technology — it can already be integrated into your business website and app today, at an affordable cost.",
+        "tags": [
+          "AI",
+          "Website",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "面向网站与应用的 AI：现在就能落地的人工智能功能",
+        "description": "关于将 AI 集成到企业网站和应用中的实用指南——聊天机器人、个性化推荐、预测分析、语义搜索，以及基于 AI 的转化优化。",
+        "excerpt": "AI 不再是未来才会出现的技术——如今您就可以以可承受的成本，将其集成到您的企业网站和应用中。",
+        "tags": [
+          "人工智能",
+          "网站",
+          "技术"
+        ]
+      }
+    }
   },
   {
     "slug": "microservices-vs-monolith",
-    "title": "Microservices vs Monolith: Arsitektur Aplikasi yang Tepat untuk Bisnis Anda",
-    "description": "Perbandingan mendalam microservices vs monolith — kapan harus memilih masing-masing, trade-off biaya dan kompleksitas, serta panduan migrasi bertahap untuk aplikasi bisnis.",
     "date": "2026-06-25",
     "readMinutes": 9,
-    "tags": [
-      "Arsitektur",
-      "Aplikasi",
-      "Teknologi"
-    ],
     "c": "#1E3A5F",
     "c2": "#0E8C86",
-    "excerpt": "Memilih arsitektur yang salah bisa memperlambat seluruh tim development Anda. Pelajari perbedaan microservices dan monolith sebelum memulai proyek."
+    "i18n": {
+      "id": {
+        "title": "Microservices vs Monolith: Arsitektur Aplikasi yang Tepat untuk Bisnis Anda",
+        "description": "Perbandingan mendalam microservices vs monolith — kapan harus memilih masing-masing, trade-off biaya dan kompleksitas, serta panduan migrasi bertahap untuk aplikasi bisnis.",
+        "excerpt": "Memilih arsitektur yang salah bisa memperlambat seluruh tim development Anda. Pelajari perbedaan microservices dan monolith sebelum memulai proyek.",
+        "tags": [
+          "Arsitektur",
+          "Aplikasi",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "Microservices vs Monolith: The Right Application Architecture for Your Business",
+        "description": "An in-depth comparison of microservices vs monolith — when to choose each, the cost and complexity trade-offs, and a step-by-step migration guide for business applications.",
+        "excerpt": "Choosing the wrong architecture can slow down your entire development team. Learn the difference between microservices and monolith before starting your project.",
+        "tags": [
+          "Architecture",
+          "Applications",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "微服务与单体架构对比：为你的企业选择合适的应用架构",
+        "description": "深入对比微服务与单体架构——各自适用的场景、成本与复杂度的权衡，以及企业应用循序渐进的迁移指南。",
+        "excerpt": "选错架构会拖慢你整个开发团队的进度。在启动项目之前，先了解微服务与单体架构之间的区别。",
+        "tags": [
+          "架构",
+          "应用",
+          "技术"
+        ]
+      }
+    }
   },
   {
     "slug": "saas-vs-custom-software",
-    "title": "SaaS vs Software Custom: Mana yang Tepat untuk Bisnis Anda di 2026?",
-    "description": "Perbandingan mendalam SaaS vs software custom — biaya, fleksibilitas, data ownership, integrasi, dan kapan sebaiknya memilih masing-masing untuk bisnis Anda.",
     "date": "2026-06-23",
     "readMinutes": 10,
-    "tags": [
-      "SaaS",
-      "Bisnis",
-      "Teknologi"
-    ],
     "c": "#0E2A4A",
     "c2": "#1E88A8",
-    "excerpt": "Langganan SaaS mudah dimulai, tapi biaya terus naik dan Anda tidak punya kendali. Software custom butuh investasi lebih besar, tapi jadi aset jangka panjang milik Anda."
+    "i18n": {
+      "id": {
+        "title": "SaaS vs Software Custom: Mana yang Tepat untuk Bisnis Anda di 2026?",
+        "description": "Perbandingan mendalam SaaS vs software custom — biaya, fleksibilitas, data ownership, integrasi, dan kapan sebaiknya memilih masing-masing untuk bisnis Anda.",
+        "excerpt": "Langganan SaaS mudah dimulai, tapi biaya terus naik dan Anda tidak punya kendali. Software custom butuh investasi lebih besar, tapi jadi aset jangka panjang milik Anda.",
+        "tags": [
+          "SaaS",
+          "Bisnis",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "SaaS vs Custom Software: Which Is Right for Your Business in 2026?",
+        "description": "An in-depth comparison of SaaS vs custom software — cost, flexibility, data ownership, integration, and when to choose each for your business.",
+        "excerpt": "SaaS subscriptions are easy to start, but costs keep rising and you have no control. Custom software requires a bigger upfront investment, but becomes a long-term asset you own.",
+        "tags": [
+          "SaaS",
+          "Business",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "SaaS与定制软件：2026年您的企业该如何选择？",
+        "description": "深入比较SaaS与定制软件——成本、灵活性、数据所有权、集成能力，以及您的企业该在何时选择哪一种。",
+        "excerpt": "SaaS订阅容易上手，但费用会持续攀升，且您没有掌控权。定制软件需要更大的前期投入，但能成为您长期拥有的资产。",
+        "tags": [
+          "SaaS",
+          "商业",
+          "技术"
+        ]
+      }
+    }
   },
   {
     "slug": "cara-memilih-hosting-website-bisnis",
-    "title": "Cara Memilih Hosting Website Terbaik untuk Bisnis Indonesia 2026",
-    "description": "Panduan lengkap memilih hosting website untuk bisnis di Indonesia 2026 — jenis hosting, kriteria penting, perbandingan provider, dan tips menghindari jebakan umum.",
     "date": "2026-06-23",
     "readMinutes": 8,
-    "tags": [
-      "Hosting",
-      "Website",
-      "Bisnis"
-    ],
     "c": "#15243B",
     "c2": "#2BB3A3",
-    "excerpt": "Hosting yang salah bisa membuat website bisnis Anda lambat, sering down, atau bahkan diretas. Panduan ini membantu Anda memilih hosting yang tepat."
+    "i18n": {
+      "id": {
+        "title": "Cara Memilih Hosting Website Terbaik untuk Bisnis Indonesia 2026",
+        "description": "Panduan lengkap memilih hosting website untuk bisnis di Indonesia 2026 — jenis hosting, kriteria penting, perbandingan provider, dan tips menghindari jebakan umum.",
+        "excerpt": "Hosting yang salah bisa membuat website bisnis Anda lambat, sering down, atau bahkan diretas. Panduan ini membantu Anda memilih hosting yang tepat.",
+        "tags": [
+          "Hosting",
+          "Website",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "How to Choose the Best Website Hosting for Your Indonesian Business in 2026",
+        "description": "A complete guide to choosing website hosting for businesses in Indonesia in 2026 — hosting types, key criteria, provider comparisons, and tips for avoiding common pitfalls.",
+        "excerpt": "The wrong hosting can make your business website slow, frequently down, or even hacked. This guide helps you choose the right hosting.",
+        "tags": [
+          "Hosting",
+          "Website",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "2026 年印尼企业如何选择最佳网站托管服务",
+        "description": "2026 年印尼企业选择网站托管的完整指南——托管类型、关键标准、服务商比较，以及避开常见陷阱的技巧。",
+        "excerpt": "选错托管服务可能让您的企业网站变慢、频繁宕机，甚至遭到入侵。这份指南帮助您选择合适的托管方案。",
+        "tags": [
+          "托管",
+          "网站",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "ui-ux-design-terbaik",
-    "title": "UI/UX Design: Mengapa Desain yang Baik Adalah Investasi Bisnis yang Wajib",
-    "description": "UI/UX design bukan sekadar estetika — ini strategi bisnis yang langsung berdampak pada konversi, retensi, dan pendapatan. Panduan lengkap memahami dan berinvestasi di UI/UX.",
     "date": "2026-06-23",
     "readMinutes": 9,
-    "tags": [
-      "UI/UX",
-      "Desain",
-      "Website"
-    ],
     "c": "#6C3FC5",
     "c2": "#4A2A8A",
-    "excerpt": "Setiap Rp 1 yang diinvestasikan dalam UX menghasilkan Rp 100 kembali — data ini bukan kebetulan. Pahami mengapa desain yang baik adalah aset bisnis."
+    "i18n": {
+      "id": {
+        "title": "UI/UX Design: Mengapa Desain yang Baik Adalah Investasi Bisnis yang Wajib",
+        "description": "UI/UX design bukan sekadar estetika — ini strategi bisnis yang langsung berdampak pada konversi, retensi, dan pendapatan. Panduan lengkap memahami dan berinvestasi di UI/UX.",
+        "excerpt": "Setiap Rp 1 yang diinvestasikan dalam UX menghasilkan Rp 100 kembali — data ini bukan kebetulan. Pahami mengapa desain yang baik adalah aset bisnis.",
+        "tags": [
+          "UI/UX",
+          "Desain",
+          "Website"
+        ]
+      },
+      "en": {
+        "title": "UI/UX Design: Why Good Design Is a Must-Have Business Investment",
+        "description": "UI/UX design isn't just about aesthetics — it's a business strategy that directly impacts conversion, retention, and revenue. A complete guide to understanding and investing in UI/UX.",
+        "excerpt": "Every Rp 1 invested in UX returns Rp 100 — this data isn't a coincidence. Understand why good design is a business asset.",
+        "tags": [
+          "UI/UX",
+          "Design",
+          "Website"
+        ]
+      },
+      "zh": {
+        "title": "UI/UX 设计：为什么好的设计是企业必须做的投资",
+        "description": "UI/UX 设计不只是美观问题——它是直接影响转化率、留存率和营收的商业策略。一份全面理解并投资 UI/UX 的指南。",
+        "excerpt": "每投入 1 印尼盾在 UX 上，就能带来 100 印尼盾的回报——这个数据并非巧合。了解为什么好的设计是一项商业资产。",
+        "tags": [
+          "UI/UX",
+          "设计",
+          "网站"
+        ]
+      }
+    }
   },
   {
     "slug": "cloud-computing-untuk-bisnis",
-    "title": "Cloud Computing untuk Bisnis Indonesia: Panduan Lengkap Memulai di 2026",
-    "description": "Panduan cloud computing untuk bisnis Indonesia 2026 — jenis cloud, manfaat nyata, perbandingan biaya, keamanan, dan langkah migrasi yang praktis.",
     "date": "2026-06-23",
     "readMinutes": 10,
-    "tags": [
-      "Cloud",
-      "Teknologi",
-      "Bisnis"
-    ],
     "c": "#1E88A8",
     "c2": "#0E5E78",
-    "excerpt": "Cloud bukan sekadar buzzword — ini infrastruktur yang memungkinkan bisnis kecil beroperasi dengan kemampuan setara enterprise. Panduan praktis memulainya."
+    "i18n": {
+      "id": {
+        "title": "Cloud Computing untuk Bisnis Indonesia: Panduan Lengkap Memulai di 2026",
+        "description": "Panduan cloud computing untuk bisnis Indonesia 2026 — jenis cloud, manfaat nyata, perbandingan biaya, keamanan, dan langkah migrasi yang praktis.",
+        "excerpt": "Cloud bukan sekadar buzzword — ini infrastruktur yang memungkinkan bisnis kecil beroperasi dengan kemampuan setara enterprise. Panduan praktis memulainya.",
+        "tags": [
+          "Cloud",
+          "Teknologi",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Cloud Computing for Indonesian Businesses: A Complete Guide to Getting Started in 2026",
+        "description": "A guide to cloud computing for Indonesian businesses in 2026 — types of cloud, real benefits, cost comparison, security, and practical migration steps.",
+        "excerpt": "Cloud isn't just a buzzword — it's infrastructure that lets small businesses operate with enterprise-level capability. A practical guide to getting started.",
+        "tags": [
+          "Cloud",
+          "Technology",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "面向印尼企业的云计算：2026年入门完整指南",
+        "description": "2026年印尼企业云计算指南——云的类型、实际益处、成本对比、安全性以及切实可行的迁移步骤。",
+        "excerpt": "云不只是流行词——它是让小企业也能拥有企业级能力运营的基础设施。一份实用的入门指南。",
+        "tags": [
+          "云计算",
+          "技术",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "sistem-crm-untuk-bisnis",
-    "title": "Sistem CRM: Kunci Mengelola Pelanggan dan Meningkatkan Penjualan Bisnis Anda",
-    "description": "Panduan lengkap sistem CRM untuk bisnis di Indonesia 2026 — modul utama, manfaat nyata, pilihan CRM siap pakai vs custom, dan cara implementasinya.",
     "date": "2026-06-23",
     "readMinutes": 10,
-    "tags": [
-      "CRM",
-      "Bisnis",
-      "Sistem"
-    ],
     "c": "#0E8C86",
     "c2": "#0B6E69",
-    "excerpt": "Data pelanggan tersebar di mana-mana, follow-up sering terlewat, dan forecast penjualan tidak akurat? Saatnya CRM menyelesaikan masalah itu."
+    "i18n": {
+      "id": {
+        "title": "Sistem CRM: Kunci Mengelola Pelanggan dan Meningkatkan Penjualan Bisnis Anda",
+        "description": "Panduan lengkap sistem CRM untuk bisnis di Indonesia 2026 — modul utama, manfaat nyata, pilihan CRM siap pakai vs custom, dan cara implementasinya.",
+        "excerpt": "Data pelanggan tersebar di mana-mana, follow-up sering terlewat, dan forecast penjualan tidak akurat? Saatnya CRM menyelesaikan masalah itu.",
+        "tags": [
+          "CRM",
+          "Bisnis",
+          "Sistem"
+        ]
+      },
+      "en": {
+        "title": "CRM Systems: The Key to Managing Customers and Growing Your Business's Sales",
+        "description": "A complete guide to CRM systems for businesses in Indonesia in 2026 — core modules, real benefits, off-the-shelf vs. custom CRM, and how to implement one.",
+        "excerpt": "Customer data scattered everywhere, follow-ups slipping through the cracks, and inaccurate sales forecasts? It's time for a CRM to solve that.",
+        "tags": [
+          "CRM",
+          "Business",
+          "Systems"
+        ]
+      },
+      "zh": {
+        "title": "CRM 系统：管理客户、提升企业销售业绩的关键",
+        "description": "2026 年印尼企业 CRM 系统完整指南——核心模块、实际效益、现成 CRM 与定制 CRM 的选择，以及具体实施方法。",
+        "excerpt": "客户数据散落各处，跟进经常被遗漏，销售预测总不准确？是时候用 CRM 来解决这些问题了。",
+        "tags": [
+          "CRM",
+          "商业",
+          "系统"
+        ]
+      }
+    }
   },
   {
     "slug": "revolusi-teknologi-bisnis-2026",
-    "title": "Revolusi Teknologi 2026: 8 Tren yang Wajib Dipahami Pemimpin Bisnis Indonesia",
-    "description": "Dari AI generatif hingga edge computing — delapan tren teknologi yang sedang mengubah cara bisnis beroperasi di 2026 dan bagaimana dampaknya bagi perusahaan Indonesia.",
     "date": "2026-06-22",
     "readMinutes": 12,
-    "tags": [
-      "Teknologi",
-      "Tren 2026",
-      "Bisnis Digital"
-    ],
     "c": "#6C3FC5",
     "c2": "#4A2A8A",
-    "excerpt": "Teknologi bergerak lebih cepat dari sebelumnya. Pemimpin bisnis yang memahami tren ini akan unggul; yang mengabaikannya berisiko tertinggal. Berikut 8 tren yang paling berpengaruh di 2026."
+    "i18n": {
+      "id": {
+        "title": "Revolusi Teknologi 2026: 8 Tren yang Wajib Dipahami Pemimpin Bisnis Indonesia",
+        "description": "Dari AI generatif hingga edge computing — delapan tren teknologi yang sedang mengubah cara bisnis beroperasi di 2026 dan bagaimana dampaknya bagi perusahaan Indonesia.",
+        "excerpt": "Teknologi bergerak lebih cepat dari sebelumnya. Pemimpin bisnis yang memahami tren ini akan unggul; yang mengabaikannya berisiko tertinggal. Berikut 8 tren yang paling berpengaruh di 2026.",
+        "tags": [
+          "Teknologi",
+          "Tren 2026",
+          "Bisnis Digital"
+        ]
+      },
+      "en": {
+        "title": "The 2026 Technology Revolution: 8 Trends Every Indonesian Business Leader Must Understand",
+        "description": "From generative AI to edge computing — eight technology trends reshaping how businesses operate in 2026, and what they mean for Indonesian companies.",
+        "excerpt": "Technology is moving faster than ever. Business leaders who understand these trends will pull ahead; those who ignore them risk falling behind. Here are the 8 most influential trends of 2026.",
+        "tags": [
+          "Technology",
+          "2026 Trends",
+          "Digital Business"
+        ]
+      },
+      "zh": {
+        "title": "2026年科技革命：印尼企业领导者必须了解的8大趋势",
+        "description": "从生成式AI到边缘计算——2026年正在重塑企业运营方式的八大科技趋势，及其对印尼企业的影响。",
+        "excerpt": "科技变革的速度前所未有。理解这些趋势的企业领导者将脱颖而出；忽视它们的人则面临掉队的风险。以下是2026年最具影响力的8大趋势。",
+        "tags": [
+          "科技",
+          "2026年趋势",
+          "数字商业"
+        ]
+      }
+    }
   },
   {
     "slug": "strategi-digital-marketing-b2b-2026",
-    "title": "Digital Marketing B2B yang Benar-Benar Bekerja di 2026: Strategi dan Eksekusi",
-    "description": "Panduan digital marketing untuk bisnis B2B di 2026 — strategi yang terbukti untuk meningkatkan leads berkualitas, membangun otoritas industri, dan memenangkan klien enterprise.",
     "date": "2026-06-22",
     "readMinutes": 11,
-    "tags": [
-      "Bisnis",
-      "Marketing",
-      "Strategi Digital"
-    ],
     "c": "#2563EB",
     "c2": "#1E40AF",
-    "excerpt": "Marketing B2B berbeda fundamental dari B2C. Artikel ini membahas strategi digital marketing yang efektif untuk bisnis yang menjual ke perusahaan lain — bukan ke konsumen individual."
+    "i18n": {
+      "id": {
+        "title": "Digital Marketing B2B yang Benar-Benar Bekerja di 2026: Strategi dan Eksekusi",
+        "description": "Panduan digital marketing untuk bisnis B2B di 2026 — strategi yang terbukti untuk meningkatkan leads berkualitas, membangun otoritas industri, dan memenangkan klien enterprise.",
+        "excerpt": "Marketing B2B berbeda fundamental dari B2C. Artikel ini membahas strategi digital marketing yang efektif untuk bisnis yang menjual ke perusahaan lain — bukan ke konsumen individual.",
+        "tags": [
+          "Bisnis",
+          "Marketing",
+          "Strategi Digital"
+        ]
+      },
+      "en": {
+        "title": "B2B Digital Marketing That Actually Works in 2026: Strategy and Execution",
+        "description": "A guide to digital marketing for B2B businesses in 2026 — proven strategies to increase quality leads, build industry authority, and win enterprise clients.",
+        "excerpt": "B2B marketing is fundamentally different from B2C. This article covers effective digital marketing strategies for businesses that sell to other companies — not to individual consumers.",
+        "tags": [
+          "Business",
+          "Marketing",
+          "Digital Strategy"
+        ]
+      },
+      "zh": {
+        "title": "2026 年真正有效的 B2B 数字营销：策略与执行",
+        "description": "2026 年 B2B 企业数字营销指南——经过验证能提升优质线索、建立行业权威、赢得企业级客户的策略。",
+        "excerpt": "B2B 营销与 B2C 有着根本性的不同。本文探讨了适合面向企业销售（而非面向个人消费者）的企业的有效数字营销策略。",
+        "tags": [
+          "商业",
+          "营销",
+          "数字策略"
+        ]
+      }
+    }
   },
   {
     "slug": "implementasi-erp-panduan-lengkap",
-    "title": "Panduan Implementasi ERP: Langkah Demi Langkah untuk Perusahaan Indonesia",
-    "description": "Panduan lengkap implementasi ERP untuk perusahaan yang baru pertama kali — dari persiapan, pemilihan vendor, migrasi data, training, hingga go-live yang sukses tanpa mengganggu operasional.",
     "date": "2026-06-22",
     "readMinutes": 12,
-    "tags": [
-      "ERP",
-      "Sistem",
-      "Panduan"
-    ],
     "c": "#15243B",
     "c2": "#0E8C86",
-    "excerpt": "Implementasi ERP adalah salah satu proyek teknologi paling kompleks yang dilakukan perusahaan. Panduan ini membantu Anda menghindari jebakan umum dan memastikan implementasi berjalan sukses."
+    "i18n": {
+      "id": {
+        "title": "Panduan Implementasi ERP: Langkah Demi Langkah untuk Perusahaan Indonesia",
+        "description": "Panduan lengkap implementasi ERP untuk perusahaan yang baru pertama kali — dari persiapan, pemilihan vendor, migrasi data, training, hingga go-live yang sukses tanpa mengganggu operasional.",
+        "excerpt": "Implementasi ERP adalah salah satu proyek teknologi paling kompleks yang dilakukan perusahaan. Panduan ini membantu Anda menghindari jebakan umum dan memastikan implementasi berjalan sukses.",
+        "tags": [
+          "ERP",
+          "Sistem",
+          "Panduan"
+        ]
+      },
+      "en": {
+        "title": "ERP Implementation Guide: Step by Step for Indonesian Companies",
+        "description": "A complete guide to ERP implementation for companies doing it for the first time — from preparation and vendor selection to data migration, training, and a successful go-live without disrupting operations.",
+        "excerpt": "ERP implementation is one of the most complex technology projects a company can undertake. This guide helps you avoid common pitfalls and ensures a successful rollout.",
+        "tags": [
+          "ERP",
+          "System",
+          "Guide"
+        ]
+      },
+      "zh": {
+        "title": "ERP 实施指南：印尼企业的分步操作手册",
+        "description": "为首次实施 ERP 的企业提供的完整指南——从准备工作、供应商选择、数据迁移、培训，到不影响正常运营的成功上线。",
+        "excerpt": "ERP 实施是企业所能承担的最复杂的技术项目之一。本指南帮助您避开常见陷阱，确保实施顺利成功。",
+        "tags": [
+          "ERP",
+          "系统",
+          "指南"
+        ]
+      }
+    }
   },
   {
     "slug": "pengembangan-aplikasi-cross-platform-2026",
-    "title": "React Native vs Flutter vs PWA: Memilih Platform yang Tepat untuk Aplikasi Bisnis 2026",
-    "description": "Perbandingan mendalam React Native, Flutter, dan PWA untuk pengembangan aplikasi mobile bisnis — dari performa, biaya, ekosistem, hingga kapan memilih masing-masing di 2026.",
     "date": "2026-06-22",
     "readMinutes": 11,
-    "tags": [
-      "Aplikasi Mobile",
-      "Teknologi",
-      "Pengembangan"
-    ],
     "c": "#1E88A8",
     "c2": "#0E5E78",
-    "excerpt": "Memilih platform pengembangan aplikasi mobile yang salah bisa membuang budget dan waktu. Panduan ini membantu Anda memutuskan antara React Native, Flutter, dan PWA untuk bisnis Anda."
+    "i18n": {
+      "id": {
+        "title": "React Native vs Flutter vs PWA: Memilih Platform yang Tepat untuk Aplikasi Bisnis 2026",
+        "description": "Perbandingan mendalam React Native, Flutter, dan PWA untuk pengembangan aplikasi mobile bisnis — dari performa, biaya, ekosistem, hingga kapan memilih masing-masing di 2026.",
+        "excerpt": "Memilih platform pengembangan aplikasi mobile yang salah bisa membuang budget dan waktu. Panduan ini membantu Anda memutuskan antara React Native, Flutter, dan PWA untuk bisnis Anda.",
+        "tags": [
+          "Aplikasi Mobile",
+          "Teknologi",
+          "Pengembangan"
+        ]
+      },
+      "en": {
+        "title": "React Native vs Flutter vs PWA: Choosing the Right Platform for Business Apps in 2026",
+        "description": "An in-depth comparison of React Native, Flutter, and PWA for business mobile app development — performance, cost, ecosystem, and when to choose each in 2026.",
+        "excerpt": "Choosing the wrong mobile development platform can waste budget and time. This guide helps you decide between React Native, Flutter, and PWA for your business.",
+        "tags": [
+          "Mobile Apps",
+          "Technology",
+          "Development"
+        ]
+      },
+      "zh": {
+        "title": "React Native、Flutter与PWA对比：2026年为企业应用选择合适的平台",
+        "description": "深入对比React Native、Flutter与PWA在企业移动应用开发中的表现——从性能、成本、生态系统，到2026年各自适用的场景。",
+        "excerpt": "选错移动应用开发平台，可能白白浪费预算和时间。本指南帮助你在React Native、Flutter与PWA之间为你的企业做出正确选择。",
+        "tags": [
+          "移动应用",
+          "技术",
+          "开发"
+        ]
+      }
+    }
   },
   {
     "slug": "cara-membuat-website-bisnis-yang-menghasilkan",
-    "title": "Cara Membuat Website Bisnis yang Benar-Benar Menghasilkan Leads di 2026",
-    "description": "Panduan lengkap membuat website bisnis yang tidak sekadar cantik — tapi secara aktif mendatangkan calon pelanggan, membangun kepercayaan, dan mengkonversi pengunjung jadi leads.",
     "date": "2026-06-22",
     "readMinutes": 10,
-    "tags": [
-      "Website",
-      "Bisnis",
-      "Panduan"
-    ],
     "c": "#0E8C86",
     "c2": "#0B6E69",
-    "excerpt": "Website yang indah tapi tidak menghasilkan leads adalah biaya, bukan investasi. Panduan ini membahas cara membangun website bisnis yang benar-benar mendatangkan pelanggan."
+    "i18n": {
+      "id": {
+        "title": "Cara Membuat Website Bisnis yang Benar-Benar Menghasilkan Leads di 2026",
+        "description": "Panduan lengkap membuat website bisnis yang tidak sekadar cantik — tapi secara aktif mendatangkan calon pelanggan, membangun kepercayaan, dan mengkonversi pengunjung jadi leads.",
+        "excerpt": "Website yang indah tapi tidak menghasilkan leads adalah biaya, bukan investasi. Panduan ini membahas cara membangun website bisnis yang benar-benar mendatangkan pelanggan.",
+        "tags": [
+          "Website",
+          "Bisnis",
+          "Panduan"
+        ]
+      },
+      "en": {
+        "title": "How to Build a Business Website That Actually Generates Leads in 2026",
+        "description": "A complete guide to building a business website that isn't just visually appealing — but actively attracts prospects, builds trust, and converts visitors into leads.",
+        "excerpt": "A beautiful website that generates no leads is a cost, not an investment. This guide covers how to build a business website that actually brings in customers.",
+        "tags": [
+          "Website",
+          "Business",
+          "Guide"
+        ]
+      },
+      "zh": {
+        "title": "如何打造真正能带来销售线索的商业网站（2026版）",
+        "description": "一份完整指南，教您打造一个不仅美观，还能主动吸引潜在客户、建立信任并将访客转化为销售线索的商业网站。",
+        "excerpt": "一个漂亮却带不来销售线索的网站，是成本而非投资。本指南教您如何打造真正能带来客户的商业网站。",
+        "tags": [
+          "网站",
+          "商业",
+          "指南"
+        ]
+      }
+    }
   },
   {
     "slug": "kenapa-bisnis-perlu-website",
-    "title": "10 Alasan Bisnis Anda Wajib Punya Website Profesional di 2026",
-    "description": "Masih ragu membuat website untuk bisnis? Temukan 10 alasan konkret mengapa website profesional adalah investasi terpenting untuk pertumbuhan bisnis Anda di 2026.",
     "date": "2026-06-21",
     "readMinutes": 8,
-    "tags": [
-      "Website",
-      "Bisnis",
-      "Strategi Digital"
-    ],
     "c": "#B45309",
     "c2": "#78350F",
-    "excerpt": "Di 2026, tidak punya website berarti tidak terlihat oleh sebagian besar calon pelanggan Anda. Inilah 10 alasan bisnis Anda butuh website profesional — bukan sekadar akun media sosial."
+    "i18n": {
+      "id": {
+        "title": "10 Alasan Bisnis Anda Wajib Punya Website Profesional di 2026",
+        "description": "Masih ragu membuat website untuk bisnis? Temukan 10 alasan konkret mengapa website profesional adalah investasi terpenting untuk pertumbuhan bisnis Anda di 2026.",
+        "excerpt": "Di 2026, tidak punya website berarti tidak terlihat oleh sebagian besar calon pelanggan Anda. Inilah 10 alasan bisnis Anda butuh website profesional — bukan sekadar akun media sosial.",
+        "tags": [
+          "Website",
+          "Bisnis",
+          "Strategi Digital"
+        ]
+      },
+      "en": {
+        "title": "10 Reasons Your Business Needs a Professional Website in 2026",
+        "description": "Still unsure about building a website for your business? Discover 10 concrete reasons why a professional website is the most important investment for your business growth in 2026.",
+        "excerpt": "In 2026, not having a website means being invisible to most of your potential customers. Here are 10 reasons your business needs a professional website — not just a social media account.",
+        "tags": [
+          "Website",
+          "Business",
+          "Digital Strategy"
+        ]
+      },
+      "zh": {
+        "title": "2026 年企业必须拥有专业网站的 10 个理由",
+        "description": "还在犹豫要不要为企业建网站？了解 10 个具体理由，说明为什么专业网站是 2026 年企业增长最重要的投资。",
+        "excerpt": "到了 2026 年，没有网站就意味着对大多数潜在客户\"隐形\"。以下是企业需要专业网站的 10 个理由——而不仅仅是一个社交媒体账号。",
+        "tags": [
+          "网站",
+          "商业",
+          "数字化战略"
+        ]
+      }
+    }
   },
   {
     "slug": "ai-otomasi-bisnis-2026",
-    "title": "AI dan Otomasi: Cara Teknologi Mengubah Cara Bisnis Beroperasi di 2026",
-    "description": "Bagaimana AI dan otomasi mengubah operasional bisnis di 2026 — dari customer service, analisis data, hingga proses manufaktur. Panduan praktis untuk bisnis Indonesia.",
     "date": "2026-06-21",
     "readMinutes": 10,
-    "tags": [
-      "Teknologi",
-      "AI",
-      "Bisnis Digital"
-    ],
     "c": "#0D9488",
     "c2": "#065F5A",
-    "excerpt": "AI bukan lagi milik perusahaan raksasa. Di 2026, bisnis skala menengah Indonesia sudah bisa mengadopsi AI untuk efisiensi operasional yang nyata — tanpa biaya astronomis."
+    "i18n": {
+      "id": {
+        "title": "AI dan Otomasi: Cara Teknologi Mengubah Cara Bisnis Beroperasi di 2026",
+        "description": "Bagaimana AI dan otomasi mengubah operasional bisnis di 2026 — dari customer service, analisis data, hingga proses manufaktur. Panduan praktis untuk bisnis Indonesia.",
+        "excerpt": "AI bukan lagi milik perusahaan raksasa. Di 2026, bisnis skala menengah Indonesia sudah bisa mengadopsi AI untuk efisiensi operasional yang nyata — tanpa biaya astronomis.",
+        "tags": [
+          "Teknologi",
+          "AI",
+          "Bisnis Digital"
+        ]
+      },
+      "en": {
+        "title": "AI and Automation: How Technology Is Changing the Way Businesses Operate in 2026",
+        "description": "How AI and automation are transforming business operations in 2026 — from customer service and data analysis to manufacturing processes. A practical guide for Indonesian businesses.",
+        "excerpt": "AI is no longer just for giant corporations. In 2026, mid-sized Indonesian businesses can already adopt AI for real operational efficiency — without astronomical costs.",
+        "tags": [
+          "Technology",
+          "AI",
+          "Digital Business"
+        ]
+      },
+      "zh": {
+        "title": "AI 与自动化：2026 年技术如何改变企业运营方式",
+        "description": "2026 年 AI 与自动化如何改变企业运营——从客户服务、数据分析到制造流程。写给印尼企业的实用指南。",
+        "excerpt": "AI 不再是大企业的专属。2026 年，印尼的中型企业已经能够采用 AI 实现切实的运营效率提升——而且成本并不高昂。",
+        "tags": [
+          "技术",
+          "AI",
+          "数字商业"
+        ]
+      }
+    }
   },
   {
     "slug": "erp-cloud-vs-on-premise",
-    "title": "ERP Cloud vs On-Premise: Panduan Memilih untuk Bisnis Indonesia 2026",
-    "description": "Perbandingan mendalam ERP cloud vs on-premise — biaya, keamanan, skalabilitas, dan mana yang lebih cocok untuk bisnis Anda di Indonesia tahun 2026.",
     "date": "2026-06-21",
     "readMinutes": 10,
-    "tags": [
-      "ERP",
-      "Bisnis",
-      "Teknologi"
-    ],
     "c": "#2563EB",
     "c2": "#1E40AF",
-    "excerpt": "ERP cloud atau on-premise? Keputusan ini berdampak besar pada biaya, fleksibilitas, dan keamanan data bisnis Anda. Pelajari perbandingannya sebelum memutuskan."
+    "i18n": {
+      "id": {
+        "title": "ERP Cloud vs On-Premise: Panduan Memilih untuk Bisnis Indonesia 2026",
+        "description": "Perbandingan mendalam ERP cloud vs on-premise — biaya, keamanan, skalabilitas, dan mana yang lebih cocok untuk bisnis Anda di Indonesia tahun 2026.",
+        "excerpt": "ERP cloud atau on-premise? Keputusan ini berdampak besar pada biaya, fleksibilitas, dan keamanan data bisnis Anda. Pelajari perbandingannya sebelum memutuskan.",
+        "tags": [
+          "ERP",
+          "Bisnis",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "ERP Cloud vs On-Premise: A Guide for Indonesian Businesses in 2026",
+        "description": "An in-depth comparison of cloud vs on-premise ERP — cost, security, scalability, and which one fits your business better in Indonesia in 2026.",
+        "excerpt": "Cloud ERP or on-premise? This decision has a major impact on your business's cost, flexibility, and data security. Learn the comparison before deciding.",
+        "tags": [
+          "ERP",
+          "Business",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "云端ERP与本地部署ERP对比：2026年印尼企业选择指南",
+        "description": "云端ERP与本地部署ERP的深入对比——成本、安全性、可扩展性，以及2026年哪种更适合您在印尼的企业。",
+        "excerpt": "云端ERP还是本地部署ERP？这个决定会对企业的成本、灵活性和数据安全产生重大影响。决定之前先了解两者的对比。",
+        "tags": [
+          "ERP",
+          "商业",
+          "技术"
+        ]
+      }
+    }
   },
   {
     "slug": "aplikasi-mobile-untuk-bisnis",
-    "title": "Mengapa Bisnis Anda Membutuhkan Aplikasi Mobile di 2026 — Bukan Hanya Website",
-    "description": "Perbedaan website dan aplikasi mobile, kapan bisnis Anda membutuhkan app, dan bagaimana app mobile meningkatkan loyalitas pelanggan serta efisiensi operasional.",
     "date": "2026-06-21",
     "readMinutes": 9,
-    "tags": [
-      "Aplikasi Mobile",
-      "Bisnis",
-      "Strategi Digital"
-    ],
     "c": "#E05A1E",
     "c2": "#A83C10",
-    "excerpt": "Website sudah tidak cukup untuk sebagian bisnis. Pelajari kapan waktunya berinvestasi di aplikasi mobile — dan apa manfaat konkretnya untuk bisnis Anda."
+    "i18n": {
+      "id": {
+        "title": "Mengapa Bisnis Anda Membutuhkan Aplikasi Mobile di 2026 — Bukan Hanya Website",
+        "description": "Perbedaan website dan aplikasi mobile, kapan bisnis Anda membutuhkan app, dan bagaimana app mobile meningkatkan loyalitas pelanggan serta efisiensi operasional.",
+        "excerpt": "Website sudah tidak cukup untuk sebagian bisnis. Pelajari kapan waktunya berinvestasi di aplikasi mobile — dan apa manfaat konkretnya untuk bisnis Anda.",
+        "tags": [
+          "Aplikasi Mobile",
+          "Bisnis",
+          "Strategi Digital"
+        ]
+      },
+      "en": {
+        "title": "Why Your Business Needs a Mobile App in 2026 — Not Just a Website",
+        "description": "The difference between a website and a mobile app, when your business needs one, and how a mobile app boosts customer loyalty and operational efficiency.",
+        "excerpt": "A website is no longer enough for some businesses. Learn when it's time to invest in a mobile app — and the concrete benefits it brings to your business.",
+        "tags": [
+          "Mobile Apps",
+          "Business",
+          "Digital Strategy"
+        ]
+      },
+      "zh": {
+        "title": "为什么您的企业在 2026 年需要一款移动应用——而不只是网站",
+        "description": "网站与移动应用的区别、企业何时需要一款应用，以及移动应用如何提升客户忠诚度和运营效率。",
+        "excerpt": "对一些企业来说，光有网站已经不够了。了解何时该投资移动应用——以及它能为企业带来的实实在在的好处。",
+        "tags": [
+          "移动应用",
+          "商业",
+          "数字战略"
+        ]
+      }
+    }
   },
   {
     "slug": "tren-desain-website-2026",
-    "title": "Tren Desain Website 2026 yang Wajib Anda Terapkan Sekarang",
-    "description": "Tren desain website terbaru 2026 — dari dark mode adaptif, micro-interaction, hingga AI-personalization. Panduan lengkap untuk tampil modern dan mengkonversi pengunjung.",
     "date": "2026-06-21",
     "readMinutes": 8,
-    "tags": [
-      "Website",
-      "Desain",
-      "Tren 2026"
-    ],
     "c": "#6C3FC5",
     "c2": "#4A2A8A",
-    "excerpt": "Desain website bukan sekadar estetika — ini strategi konversi. Pelajari tren 2026 yang mengubah cara pengguna berinteraksi dengan bisnis online Anda."
+    "i18n": {
+      "id": {
+        "title": "Tren Desain Website 2026 yang Wajib Anda Terapkan Sekarang",
+        "description": "Tren desain website terbaru 2026 — dari dark mode adaptif, micro-interaction, hingga AI-personalization. Panduan lengkap untuk tampil modern dan mengkonversi pengunjung.",
+        "excerpt": "Desain website bukan sekadar estetika — ini strategi konversi. Pelajari tren 2026 yang mengubah cara pengguna berinteraksi dengan bisnis online Anda.",
+        "tags": [
+          "Website",
+          "Desain",
+          "Tren 2026"
+        ]
+      },
+      "en": {
+        "title": "2026 Website Design Trends You Need to Adopt Now",
+        "description": "The latest website design trends for 2026 — from adaptive dark mode and micro-interactions to AI personalization. A complete guide to looking modern and converting visitors.",
+        "excerpt": "Website design isn't just aesthetics anymore — it's a conversion strategy. Learn the 2026 trends reshaping how users interact with your online business.",
+        "tags": [
+          "Website",
+          "Design",
+          "2026 Trends"
+        ]
+      },
+      "zh": {
+        "title": "2026年网站设计趋势：现在就该采用的变化",
+        "description": "2026年最新网站设计趋势——从自适应深色模式、微交互到AI个性化，帮助网站展现现代感并提升访客转化率的完整指南。",
+        "excerpt": "网站设计早已不只是美观问题——它是一种转化策略。了解2026年正在改变用户与你的在线业务互动方式的设计趋势。",
+        "tags": [
+          "网站",
+          "设计",
+          "2026年趋势"
+        ]
+      }
+    }
   },
   {
     "slug": "devops-continuous-deployment",
-    "title": "DevOps dan Continuous Deployment: Mempercepat Development dan Minimalisir Risk",
-    "description": "DevOps adalah praktik dan kultur yang mempercepat software development. Pelajari CI/CD, automation, dan bagaimana deployment bisa done setiap hari tanpa fear.",
     "date": "2026-06-20",
     "readMinutes": 9,
-    "tags": [
-      "DevOps",
-      "Teknologi",
-      "Deployment"
-    ],
     "c": "#15243B",
     "c2": "#2BB3A3",
-    "excerpt": "DevOps mengatasi gap antara development dan operations. Dengan CI/CD automation, Anda bisa deploy berkali-kali sehari, dengan confidence tinggi."
+    "i18n": {
+      "id": {
+        "title": "DevOps dan Continuous Deployment: Mempercepat Development dan Minimalisir Risk",
+        "description": "DevOps adalah praktik dan kultur yang mempercepat software development. Pelajari CI/CD, automation, dan bagaimana deployment bisa done setiap hari tanpa fear.",
+        "excerpt": "DevOps mengatasi gap antara development dan operations. Dengan CI/CD automation, Anda bisa deploy berkali-kali sehari, dengan confidence tinggi.",
+        "tags": [
+          "DevOps",
+          "Teknologi",
+          "Deployment"
+        ]
+      },
+      "en": {
+        "title": "DevOps and Continuous Deployment: Accelerating Development While Minimizing Risk",
+        "description": "DevOps is a practice and culture that speeds up software development. Learn about CI/CD, automation, and how deployments can happen daily without fear.",
+        "excerpt": "DevOps bridges the gap between development and operations. With CI/CD automation, you can deploy multiple times a day with high confidence.",
+        "tags": [
+          "DevOps",
+          "Technology",
+          "Deployment"
+        ]
+      },
+      "zh": {
+        "title": "DevOps 与持续部署：加速开发并降低风险",
+        "description": "DevOps 是一种加速软件开发的实践与文化。了解 CI/CD、自动化，以及如何做到每天部署也毫无顾虑。",
+        "excerpt": "DevOps 弥合了开发与运维之间的鸿沟。借助 CI/CD 自动化，你可以每天多次部署，并且高度放心。",
+        "tags": [
+          "DevOps",
+          "技术",
+          "部署"
+        ]
+      }
+    }
   },
   {
     "slug": "progressive-web-app-pwa",
-    "title": "Progressive Web App (PWA): Website yang Bekerja Seperti Aplikasi Mobile",
-    "description": "PWA menggabungkan yang terbaik dari website dan aplikasi mobile. Pelajari keuntungan PWA, cara buildnya, dan mengapa bisnis Anda perlu PWA di 2026.",
     "date": "2026-06-19",
     "readMinutes": 8,
-    "tags": [
-      "Web App",
-      "Teknologi",
-      "App"
-    ],
     "c": "#0E8C86",
     "c2": "#1E88A8",
-    "excerpt": "PWA memberikan pengalaman seperti aplikasi mobile, tapi tanpa harus di-download dari app store. Lebih cepat, lebih ekonomis, dan lebih reach."
+    "i18n": {
+      "id": {
+        "title": "Progressive Web App (PWA): Website yang Bekerja Seperti Aplikasi Mobile",
+        "description": "PWA menggabungkan yang terbaik dari website dan aplikasi mobile. Pelajari keuntungan PWA, cara buildnya, dan mengapa bisnis Anda perlu PWA di 2026.",
+        "excerpt": "PWA memberikan pengalaman seperti aplikasi mobile, tapi tanpa harus di-download dari app store. Lebih cepat, lebih ekonomis, dan lebih reach.",
+        "tags": [
+          "Web App",
+          "Teknologi",
+          "App"
+        ]
+      },
+      "en": {
+        "title": "Progressive Web App (PWA): A Website That Works Like a Mobile App",
+        "description": "PWA combines the best of websites and mobile apps. Learn the benefits of PWA, how to build one, and why your business needs a PWA in 2026.",
+        "excerpt": "A PWA delivers a mobile app-like experience without needing to be downloaded from an app store. Faster, more cost-effective, and with wider reach.",
+        "tags": [
+          "Web App",
+          "Technology",
+          "App"
+        ]
+      },
+      "zh": {
+        "title": "渐进式网页应用（PWA）：像手机应用一样运行的网站",
+        "description": "PWA 融合了网站和移动应用的优点。了解 PWA 的优势、构建方法，以及为什么您的企业在 2026 年需要一个 PWA。",
+        "excerpt": "PWA 提供类似手机应用的体验，却无需从应用商店下载。速度更快、成本更低、覆盖面更广。",
+        "tags": [
+          "Web App",
+          "技术",
+          "应用"
+        ]
+      }
+    }
   },
   {
     "slug": "api-integration-sistem-bisnis",
-    "title": "API Integration: Menghubungkan Sistem Bisnis Anda Dengan Teknologi Modern",
-    "description": "Panduan API integration untuk bisnis — apa itu API, manfaat integrasi sistem, dan bagaimana caranya agar semua tools bisnis Anda terhubung seamless.",
     "date": "2026-06-18",
     "readMinutes": 9,
-    "tags": [
-      "API",
-      "Integrasi",
-      "Sistem"
-    ],
     "c": "#1E88A8",
     "c2": "#0E5E78",
-    "excerpt": "Sistem bisnis yang terisolasi = data tidak sinkron dan operasional tidak efisien. API integration menyatukan semua tools Anda."
+    "i18n": {
+      "id": {
+        "title": "API Integration: Menghubungkan Sistem Bisnis Anda Dengan Teknologi Modern",
+        "description": "Panduan API integration untuk bisnis — apa itu API, manfaat integrasi sistem, dan bagaimana caranya agar semua tools bisnis Anda terhubung seamless.",
+        "excerpt": "Sistem bisnis yang terisolasi = data tidak sinkron dan operasional tidak efisien. API integration menyatukan semua tools Anda.",
+        "tags": [
+          "API",
+          "Integrasi",
+          "Sistem"
+        ]
+      },
+      "en": {
+        "title": "API Integration: Connecting Your Business Systems with Modern Technology",
+        "description": "A guide to API integration for businesses — what an API is, the benefits of system integration, and how to get all your business tools connected seamlessly.",
+        "excerpt": "Isolated business systems mean unsynced data and inefficient operations. API integration brings all your tools together.",
+        "tags": [
+          "API",
+          "Integration",
+          "Systems"
+        ]
+      },
+      "zh": {
+        "title": "API集成：用现代技术连接你的业务系统",
+        "description": "面向企业的API集成指南——什么是API、系统集成的好处，以及如何让你所有的业务工具无缝互联。",
+        "excerpt": "各自为政的业务系统意味着数据不同步、运营效率低下。API集成能把你所有的工具连接在一起。",
+        "tags": [
+          "API",
+          "集成",
+          "系统"
+        ]
+      }
+    }
   },
   {
     "slug": "optimasi-kecepatan-website",
-    "title": "Optimasi Kecepatan Website: Panduan Lengkap Meningkatkan Performance 2026",
-    "description": "Website lambat membunuh konversi. Pelajari teknik optimasi website, tools pengukuran, dan cara meningkatkan skor Lighthouse Anda di 2026.",
     "date": "2026-06-17",
     "readMinutes": 9,
-    "tags": [
-      "Website",
-      "Performa",
-      "Teknologi"
-    ],
     "c": "#2BB3A3",
     "c2": "#0E8C86",
-    "excerpt": "Setiap detik loading tambahan = penurunan konversi. Panduan lengkap mengoptimalkan kecepatan website supaya pengunjung tidak pergi."
+    "i18n": {
+      "id": {
+        "title": "Optimasi Kecepatan Website: Panduan Lengkap Meningkatkan Performance 2026",
+        "description": "Website lambat membunuh konversi. Pelajari teknik optimasi website, tools pengukuran, dan cara meningkatkan skor Lighthouse Anda di 2026.",
+        "excerpt": "Setiap detik loading tambahan = penurunan konversi. Panduan lengkap mengoptimalkan kecepatan website supaya pengunjung tidak pergi.",
+        "tags": [
+          "Website",
+          "Performa",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "Website Speed Optimization: The Complete Guide to Boosting Performance in 2026",
+        "description": "A slow website kills conversions. Learn optimization techniques, measurement tools, and how to improve your Lighthouse score in 2026.",
+        "excerpt": "Every extra second of loading time means fewer conversions. A complete guide to optimizing your website's speed so visitors don't leave.",
+        "tags": [
+          "Website",
+          "Performance",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "网站速度优化：2026年提升性能的完整指南",
+        "description": "网站慢会扼杀转化率。了解优化技巧、测速工具，以及如何在2026年提升Lighthouse评分。",
+        "excerpt": "每多一秒加载时间，转化率就会下降。这份完整指南教您优化网站速度，留住访客。",
+        "tags": [
+          "网站",
+          "性能",
+          "技术"
+        ]
+      }
+    }
   },
   {
     "slug": "keamanan-website-cyber-security",
-    "title": "Keamanan Website: Langkah Penting Melindungi Bisnis Online Anda",
-    "description": "Panduan keamanan website untuk bisnis — ancaman yang ada, fitur keamanan wajib, dan cara menjaga data pelanggan tetap aman.",
     "date": "2026-06-16",
     "readMinutes": 8,
-    "tags": [
-      "Keamanan",
-      "Website",
-      "Teknologi"
-    ],
     "c": "#15243B",
     "c2": "#0E5E78",
-    "excerpt": "Website yang diretas atau data pelanggan bocor bisa merusak bisnis Anda. Pahami ancaman umum dan fitur keamanan yang harus ada."
+    "i18n": {
+      "id": {
+        "title": "Keamanan Website: Langkah Penting Melindungi Bisnis Online Anda",
+        "description": "Panduan keamanan website untuk bisnis — ancaman yang ada, fitur keamanan wajib, dan cara menjaga data pelanggan tetap aman.",
+        "excerpt": "Website yang diretas atau data pelanggan bocor bisa merusak bisnis Anda. Pahami ancaman umum dan fitur keamanan yang harus ada.",
+        "tags": [
+          "Keamanan",
+          "Website",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "Website Security: Essential Steps to Protect Your Online Business",
+        "description": "A website security guide for businesses — common threats, must-have security features, and how to keep customer data safe.",
+        "excerpt": "A hacked website or leaked customer data can seriously damage your business. Understand the common threats and the security features you need in place.",
+        "tags": [
+          "Security",
+          "Website",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "网站安全：保护您在线业务的关键步骤",
+        "description": "面向企业的网站安全指南——常见威胁、必备安全功能，以及如何保障客户数据安全。",
+        "excerpt": "网站被入侵或客户数据泄露可能严重损害您的业务。了解常见威胁以及必须具备的安全功能。",
+        "tags": [
+          "安全",
+          "网站",
+          "技术"
+        ]
+      }
+    }
   },
   {
     "slug": "transformasi-digital-bisnis",
-    "title": "Transformasi Digital: Panduan Lengkap untuk Bisnis di Indonesia 2026",
-    "description": "Transformasi digital bukan sekadar tren — ini keharusan bisnis di 2026. Pelajari apa itu transformasi digital, manfaatnya, dan langkah konkret memulainya dengan website, aplikasi, dan ERP.",
     "date": "2026-06-15",
     "readMinutes": 9,
-    "tags": [
-      "Transformasi Digital",
-      "Bisnis",
-      "Teknologi"
-    ],
     "c": "#0E2A4A",
     "c2": "#0E8C86",
-    "excerpt": "Bisnis yang belum bertransformasi digital akan tertinggal. Panduan ini menjelaskan langkah nyata — dari website hingga ERP — untuk memulai transformasi Anda."
+    "i18n": {
+      "id": {
+        "title": "Transformasi Digital: Panduan Lengkap untuk Bisnis di Indonesia 2026",
+        "description": "Transformasi digital bukan sekadar tren — ini keharusan bisnis di 2026. Pelajari apa itu transformasi digital, manfaatnya, dan langkah konkret memulainya dengan website, aplikasi, dan ERP.",
+        "excerpt": "Bisnis yang belum bertransformasi digital akan tertinggal. Panduan ini menjelaskan langkah nyata — dari website hingga ERP — untuk memulai transformasi Anda.",
+        "tags": [
+          "Transformasi Digital",
+          "Bisnis",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "Digital Transformation: The Complete Guide for Businesses in Indonesia 2026",
+        "description": "Digital transformation isn't just a trend — it's a business necessity in 2026. Learn what digital transformation means, its benefits, and concrete steps to get started with websites, apps, and ERP.",
+        "excerpt": "Businesses that haven't gone through digital transformation will fall behind. This guide walks through concrete steps — from websites to ERP — to start your transformation.",
+        "tags": [
+          "Digital Transformation",
+          "Business",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "数字化转型：2026年印尼企业完整指南",
+        "description": "数字化转型不只是趋势——2026年它是企业的必然选择。了解什么是数字化转型、它的益处，以及从网站、应用到ERP的具体落地步骤。",
+        "excerpt": "还没有进行数字化转型的企业将被甩在后面。本指南讲解从网站到ERP的具体步骤，帮您启动转型。",
+        "tags": [
+          "数字化转型",
+          "商业",
+          "技术"
+        ]
+      }
+    }
   },
   {
     "slug": "jasa-toko-online",
-    "title": "Jasa Pembuatan Toko Online: Panduan Lengkap untuk Bisnis di Indonesia 2026",
-    "description": "Panduan memilih jasa pembuatan toko online di Indonesia 2026 — fitur wajib, perbandingan platform vs custom, kisaran biaya, dan tips sukses berjualan online.",
     "date": "2026-06-15",
     "readMinutes": 7,
-    "tags": [
-      "Toko Online",
-      "E-Commerce"
-    ],
     "c": "#0E5E78",
     "c2": "#0E8C86",
-    "excerpt": "Bisnis Anda siap berjualan online? Panduan ini membantu memilih jasa pembuatan toko online yang tepat — dari fitur, platform, hingga biaya."
+    "i18n": {
+      "id": {
+        "title": "Jasa Pembuatan Toko Online: Panduan Lengkap untuk Bisnis di Indonesia 2026",
+        "description": "Panduan memilih jasa pembuatan toko online di Indonesia 2026 — fitur wajib, perbandingan platform vs custom, kisaran biaya, dan tips sukses berjualan online.",
+        "excerpt": "Bisnis Anda siap berjualan online? Panduan ini membantu memilih jasa pembuatan toko online yang tepat — dari fitur, platform, hingga biaya.",
+        "tags": [
+          "Toko Online",
+          "E-Commerce"
+        ]
+      },
+      "en": {
+        "title": "Online Store Development Services: A Complete Guide for Indonesian Businesses in 2026",
+        "description": "A guide to choosing an online store development service in Indonesia in 2026 — must-have features, platform vs. custom comparison, cost ranges, and tips for selling online successfully.",
+        "excerpt": "Is your business ready to sell online? This guide helps you choose the right online store development service — covering features, platforms, and cost.",
+        "tags": [
+          "Online Store",
+          "E-Commerce"
+        ]
+      },
+      "zh": {
+        "title": "网店开发服务：2026 年印尼企业完整指南",
+        "description": "2026 年印尼网店开发服务选择指南——必备功能、平台与定制方案对比、费用区间，以及成功做好线上销售的技巧。",
+        "excerpt": "您的企业准备好开始线上销售了吗？这份指南帮您选对网店开发服务——从功能、平台到费用一一说明。",
+        "tags": [
+          "网店",
+          "电子商务"
+        ]
+      }
+    }
   },
   {
     "slug": "website-custom-vs-template",
-    "title": "Website Custom vs Template: Mana yang Tepat untuk Bisnis Anda?",
-    "description": "Perbandingan website custom vs template — biaya, kecepatan, SEO, fleksibilitas, dan kapan sebaiknya memilih masing-masing.",
     "date": "2026-06-14",
     "readMinutes": 6,
-    "tags": [
-      "Website",
-      "Perbandingan"
-    ],
     "c": "#2BB3A3",
     "c2": "#0E8C86",
-    "excerpt": "Template lebih murah dan cepat, custom lebih fleksibel dan unik. Mana yang sebaiknya Anda pilih?"
+    "i18n": {
+      "id": {
+        "title": "Website Custom vs Template: Mana yang Tepat untuk Bisnis Anda?",
+        "description": "Perbandingan website custom vs template — biaya, kecepatan, SEO, fleksibilitas, dan kapan sebaiknya memilih masing-masing.",
+        "excerpt": "Template lebih murah dan cepat, custom lebih fleksibel dan unik. Mana yang sebaiknya Anda pilih?",
+        "tags": [
+          "Website",
+          "Perbandingan"
+        ]
+      },
+      "en": {
+        "title": "Custom Website vs Template: Which One Is Right for Your Business?",
+        "description": "Custom website vs template compared — cost, speed, SEO, flexibility, and when to choose each.",
+        "excerpt": "Templates are cheaper and faster, custom sites are more flexible and unique. Which should you choose?",
+        "tags": [
+          "Website",
+          "Comparison"
+        ]
+      },
+      "zh": {
+        "title": "定制网站 vs 模板网站：哪种更适合你的企业？",
+        "description": "定制网站与模板网站对比——成本、速度、SEO、灵活性，以及各自适合的场景。",
+        "excerpt": "模板更便宜也更快，定制网站更灵活也更独特。你该选哪一种？",
+        "tags": [
+          "网站",
+          "对比"
+        ]
+      }
+    }
   },
   {
     "slug": "biaya-pembuatan-website",
-    "title": "Berapa Biaya Pembuatan Website di Indonesia? Panduan Lengkap 2026",
-    "description": "Rincian biaya pembuatan website di Indonesia 2026 — dari landing page UMKM hingga web app perusahaan, plus faktor yang memengaruhi harga.",
     "date": "2026-06-13",
     "readMinutes": 7,
-    "tags": [
-      "Website",
-      "Biaya",
-      "Panduan"
-    ],
     "c": "#0E8C86",
     "c2": "#0B6E69",
-    "excerpt": "Berapa sebenarnya biaya membuat website yang profesional? Kami uraikan kisaran harga per jenis website dan faktor yang memengaruhinya."
+    "i18n": {
+      "id": {
+        "title": "Berapa Biaya Pembuatan Website di Indonesia? Panduan Lengkap 2026",
+        "description": "Rincian biaya pembuatan website di Indonesia 2026 — dari landing page UMKM hingga web app perusahaan, plus faktor yang memengaruhi harga.",
+        "excerpt": "Berapa sebenarnya biaya membuat website yang profesional? Kami uraikan kisaran harga per jenis website dan faktor yang memengaruhinya.",
+        "tags": [
+          "Website",
+          "Biaya",
+          "Panduan"
+        ]
+      },
+      "en": {
+        "title": "How Much Does a Website Cost in Indonesia? The Complete 2026 Guide",
+        "description": "A breakdown of website development costs in Indonesia for 2026 — from small business landing pages to enterprise web apps, plus the factors that drive pricing.",
+        "excerpt": "How much does a professional website really cost? We break down price ranges by website type and the factors that influence them.",
+        "tags": [
+          "Website",
+          "Cost",
+          "Guide"
+        ]
+      },
+      "zh": {
+        "title": "在印度尼西亚建站要花多少钱？2026年完整指南",
+        "description": "2026年印尼建站费用全解析——从中小企业落地页到企业级Web应用，以及影响价格的各种因素。",
+        "excerpt": "一个专业网站到底要花多少钱？我们按网站类型拆解了价格区间，以及影响价格的关键因素。",
+        "tags": [
+          "网站",
+          "费用",
+          "指南"
+        ]
+      }
+    }
   },
   {
     "slug": "lama-pembuatan-aplikasi-mobile",
-    "title": "Berapa Lama Proses Pembuatan Aplikasi Mobile? (Android & iOS)",
-    "description": "Estimasi waktu pembuatan aplikasi mobile Android & iOS, tahap-tahap pengerjaan, dan cara mempercepatnya tanpa mengorbankan kualitas.",
     "date": "2026-06-12",
     "readMinutes": 6,
-    "tags": [
-      "Aplikasi Mobile",
-      "Timeline"
-    ],
     "c": "#1E88A8",
     "c2": "#0E5E78",
-    "excerpt": "Dari ide sampai aplikasi tayang di Play Store — berapa lama prosesnya, dan apa saja yang menentukan durasinya?"
+    "i18n": {
+      "id": {
+        "title": "Berapa Lama Proses Pembuatan Aplikasi Mobile? (Android & iOS)",
+        "description": "Estimasi waktu pembuatan aplikasi mobile Android & iOS, tahap-tahap pengerjaan, dan cara mempercepatnya tanpa mengorbankan kualitas.",
+        "excerpt": "Dari ide sampai aplikasi tayang di Play Store — berapa lama prosesnya, dan apa saja yang menentukan durasinya?",
+        "tags": [
+          "Aplikasi Mobile",
+          "Timeline"
+        ]
+      },
+      "en": {
+        "title": "How Long Does It Take to Build a Mobile App? (Android & iOS)",
+        "description": "A realistic timeline for building Android & iOS mobile apps, the stages involved, and how to speed things up without sacrificing quality.",
+        "excerpt": "From idea to launch on the Play Store — how long does it actually take, and what determines the timeline?",
+        "tags": [
+          "Mobile Apps",
+          "Timeline"
+        ]
+      },
+      "zh": {
+        "title": "开发一款移动应用要多久？(Android 与 iOS)",
+        "description": "Android 与 iOS 移动应用开发的合理时间预估、各阶段流程，以及如何在不牺牲质量的前提下加快进度。",
+        "excerpt": "从想法到应用在 Play 商店上线——到底需要多长时间，又是什么决定了这个周期？",
+        "tags": [
+          "移动应用",
+          "时间线"
+        ]
+      }
+    }
   },
   {
     "slug": "cara-memilih-software-house",
-    "title": "Cara Memilih Software House yang Tepat untuk Bisnis Anda",
-    "description": "Panduan memilih software house terpercaya: 7 hal yang wajib dicek sebelum menyerahkan proyek website atau aplikasi Anda.",
     "date": "2026-06-11",
     "readMinutes": 6,
-    "tags": [
-      "Software House",
-      "Tips"
-    ],
     "c": "#15243B",
     "c2": "#26405E",
-    "excerpt": "Salah pilih vendor bisa membuat proyek molor, mahal, dan menyusahkan. Berikut cara memilih software house yang tepat."
+    "i18n": {
+      "id": {
+        "title": "Cara Memilih Software House yang Tepat untuk Bisnis Anda",
+        "description": "Panduan memilih software house terpercaya: 7 hal yang wajib dicek sebelum menyerahkan proyek website atau aplikasi Anda.",
+        "excerpt": "Salah pilih vendor bisa membuat proyek molor, mahal, dan menyusahkan. Berikut cara memilih software house yang tepat.",
+        "tags": [
+          "Software House",
+          "Tips"
+        ]
+      },
+      "en": {
+        "title": "How to Choose the Right Software House for Your Business",
+        "description": "A guide to choosing a trustworthy software house: 7 things you must check before handing over your website or app project.",
+        "excerpt": "Picking the wrong vendor can leave your project delayed, over budget, and frustrating. Here's how to choose the right software house.",
+        "tags": [
+          "Software House",
+          "Tips"
+        ]
+      },
+      "zh": {
+        "title": "如何为您的企业选择合适的软件开发公司",
+        "description": "选择可靠软件开发公司的指南：在把网站或应用项目交出去之前，必须核实的7件事。",
+        "excerpt": "选错供应商会让项目延期、超支、麻烦不断。以下是选择合适软件开发公司的方法。",
+        "tags": [
+          "软件开发公司",
+          "小贴士"
+        ]
+      }
+    }
   },
   {
     "slug": "website-seo-friendly",
-    "title": "Kenapa Website Bisnis Harus SEO-Friendly Sejak Awal",
-    "description": "Website yang tidak SEO-friendly = tidak ditemukan di Google. Pelajari elemen website SEO-friendly dan kenapa harus dibangun sejak awal.",
     "date": "2026-06-10",
     "readMinutes": 6,
-    "tags": [
-      "SEO",
-      "Website"
-    ],
     "c": "#0E8C86",
     "c2": "#1E88A8",
-    "excerpt": "Website cantik tapi tidak muncul di Google sama saja tidak ada. Inilah kenapa SEO harus dibangun sejak awal."
+    "i18n": {
+      "id": {
+        "title": "Kenapa Website Bisnis Harus SEO-Friendly Sejak Awal",
+        "description": "Website yang tidak SEO-friendly = tidak ditemukan di Google. Pelajari elemen website SEO-friendly dan kenapa harus dibangun sejak awal.",
+        "excerpt": "Website cantik tapi tidak muncul di Google sama saja tidak ada. Inilah kenapa SEO harus dibangun sejak awal.",
+        "tags": [
+          "SEO",
+          "Website"
+        ]
+      },
+      "en": {
+        "title": "Why Your Business Website Must Be SEO-Friendly From Day One",
+        "description": "A website that isn't SEO-friendly means it won't be found on Google. Learn the key elements of an SEO-friendly website and why it must be built right from the start.",
+        "excerpt": "A beautiful website that doesn't show up on Google is as good as not existing. Here's why SEO needs to be built in from the very beginning.",
+        "tags": [
+          "SEO",
+          "Website"
+        ]
+      },
+      "zh": {
+        "title": "为什么企业网站从一开始就必须对 SEO 友好",
+        "description": "网站如果不对 SEO 友好，就等于无法在 Google 上被找到。了解 SEO 友好型网站的关键要素，以及为什么必须从一开始就做好这一点。",
+        "excerpt": "网站再漂亮，如果在 Google 上搜不到，等于不存在。这就是为什么 SEO 必须从一开始就纳入网站建设。",
+        "tags": [
+          "SEO",
+          "网站"
+        ]
+      }
+    }
   },
   {
     "slug": "apa-itu-erp",
-    "title": "Apa Itu ERP? Panduan Sistem ERP untuk Perusahaan di Indonesia",
-    "description": "Penjelasan sederhana tentang sistem ERP, modul-modulnya, tanda bisnis Anda membutuhkan ERP, dan pilihan ERP custom vs paket.",
     "date": "2026-06-09",
     "readMinutes": 7,
-    "tags": [
-      "ERP",
-      "Sistem"
-    ],
     "c": "#15243B",
     "c2": "#0E8C86",
-    "excerpt": "ERP menyatukan keuangan, inventory, dan HR dalam satu sistem. Apakah bisnis Anda sudah membutuhkannya?"
+    "i18n": {
+      "id": {
+        "title": "Apa Itu ERP? Panduan Sistem ERP untuk Perusahaan di Indonesia",
+        "description": "Penjelasan sederhana tentang sistem ERP, modul-modulnya, tanda bisnis Anda membutuhkan ERP, dan pilihan ERP custom vs paket.",
+        "excerpt": "ERP menyatukan keuangan, inventory, dan HR dalam satu sistem. Apakah bisnis Anda sudah membutuhkannya?",
+        "tags": [
+          "ERP",
+          "Sistem"
+        ]
+      },
+      "en": {
+        "title": "What Is ERP? A Guide to ERP Systems for Companies in Indonesia",
+        "description": "A simple explanation of ERP systems, their modules, the signs your business needs one, and the choice between custom vs off-the-shelf ERP.",
+        "excerpt": "ERP brings finance, inventory, and HR together in one system. Does your business already need it?",
+        "tags": [
+          "ERP",
+          "Systems"
+        ]
+      },
+      "zh": {
+        "title": "什么是ERP？印尼企业的ERP系统指南",
+        "description": "简单解释ERP系统及其模块、您的企业需要ERP的迹象，以及定制ERP与套装ERP的选择。",
+        "excerpt": "ERP将财务、库存和人力资源整合到一个系统中。您的企业已经需要它了吗？",
+        "tags": [
+          "ERP",
+          "系统"
+        ]
+      }
+    }
   },
   {
     "slug": "tips-meningkatkan-konversi-landing-page",
-    "title": "7 Tips Meningkatkan Konversi Landing Page",
-    "description": "Tujuh tips praktis meningkatkan konversi landing page — dari headline, CTA, bukti sosial, hingga kecepatan dan mobile.",
     "date": "2026-06-08",
     "readMinutes": 6,
-    "tags": [
-      "Landing Page",
-      "Konversi"
-    ],
     "c": "#1E88A8",
     "c2": "#15243B",
-    "excerpt": "Trafik banyak tapi sedikit yang menghubungi? Tujuh tips ini membantu landing page Anda mengubah pengunjung jadi pelanggan."
+    "i18n": {
+      "id": {
+        "title": "7 Tips Meningkatkan Konversi Landing Page",
+        "description": "Tujuh tips praktis meningkatkan konversi landing page — dari headline, CTA, bukti sosial, hingga kecepatan dan mobile.",
+        "excerpt": "Trafik banyak tapi sedikit yang menghubungi? Tujuh tips ini membantu landing page Anda mengubah pengunjung jadi pelanggan.",
+        "tags": [
+          "Landing Page",
+          "Konversi"
+        ]
+      },
+      "en": {
+        "title": "7 Tips to Boost Your Landing Page Conversion Rate",
+        "description": "Seven practical tips to improve landing page conversion — from headlines and CTAs to social proof, speed, and mobile experience.",
+        "excerpt": "Getting plenty of traffic but few people reaching out? These seven tips will help your landing page turn visitors into customers.",
+        "tags": [
+          "Landing Pages",
+          "Conversion"
+        ]
+      },
+      "zh": {
+        "title": "提升落地页转化率的7个技巧",
+        "description": "七个实用技巧助你提升落地页转化率——从标题、行动号召按钮、社会认同，到加载速度与移动端体验。",
+        "excerpt": "流量不少，但询盘寥寥？这七个技巧能帮助你的落地页把访客变成客户。",
+        "tags": [
+          "落地页",
+          "转化率"
+        ]
+      }
+    }
   },
   {
     "slug": "beda-website-webapp-aplikasi-mobile",
-    "title": "Beda Website, Web App, dan Aplikasi Mobile — Mana yang Anda Butuhkan?",
-    "description": "Penjelasan sederhana perbedaan website, web app, dan aplikasi mobile, beserta kapan sebaiknya bisnis memilih masing-masing.",
     "date": "2026-06-07",
     "readMinutes": 6,
-    "tags": [
-      "Website",
-      "Web App"
-    ],
     "c": "#0E8C86",
     "c2": "#15243B",
-    "excerpt": "Istilah ini sering tertukar. Pahami bedanya agar Anda tidak salah investasi membangun produk digital."
+    "i18n": {
+      "id": {
+        "title": "Beda Website, Web App, dan Aplikasi Mobile — Mana yang Anda Butuhkan?",
+        "description": "Penjelasan sederhana perbedaan website, web app, dan aplikasi mobile, beserta kapan sebaiknya bisnis memilih masing-masing.",
+        "excerpt": "Istilah ini sering tertukar. Pahami bedanya agar Anda tidak salah investasi membangun produk digital.",
+        "tags": [
+          "Website",
+          "Web App"
+        ]
+      },
+      "en": {
+        "title": "Website vs. Web App vs. Mobile App — Which One Do You Need?",
+        "description": "A simple explanation of the differences between a website, a web app, and a mobile app, plus when your business should choose each.",
+        "excerpt": "These terms get mixed up all the time. Understand the difference so you don't invest in the wrong digital product.",
+        "tags": [
+          "Website",
+          "Web App"
+        ]
+      },
+      "zh": {
+        "title": "网站、Web App 与移动应用有什么区别——您需要哪一种？",
+        "description": "简单解释网站、Web App 和移动应用之间的区别，以及企业在什么情况下应该选择哪一种。",
+        "excerpt": "这几个术语经常被混淆。了解它们的区别，避免在数字产品投资上走错方向。",
+        "tags": [
+          "网站",
+          "Web App"
+        ]
+      }
+    }
   },
   {
     "slug": "company-profile-website",
-    "title": "Apa Itu Company Profile Website dan Kenapa Bisnis Butuh?",
-    "description": "Company profile website membangun kredibilitas bisnis di mata calon klien. Pelajari isinya, manfaatnya, dan tips membuatnya efektif.",
     "date": "2026-06-06",
     "readMinutes": 5,
-    "tags": [
-      "Website",
-      "Bisnis"
-    ],
     "c": "#15243B",
     "c2": "#1E88A8",
-    "excerpt": "Di era digital, calon klien mengecek perusahaan Anda online sebelum memutuskan. Inilah peran company profile website."
+    "i18n": {
+      "id": {
+        "title": "Apa Itu Company Profile Website dan Kenapa Bisnis Butuh?",
+        "description": "Company profile website membangun kredibilitas bisnis di mata calon klien. Pelajari isinya, manfaatnya, dan tips membuatnya efektif.",
+        "excerpt": "Di era digital, calon klien mengecek perusahaan Anda online sebelum memutuskan. Inilah peran company profile website.",
+        "tags": [
+          "Website",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "What Is a Company Profile Website and Why Does Your Business Need One?",
+        "description": "A company profile website builds business credibility in the eyes of potential clients. Learn what to include, its benefits, and tips for making it effective.",
+        "excerpt": "In the digital age, potential clients check your company online before making a decision. This is where a company profile website comes in.",
+        "tags": [
+          "Website",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "什么是企业形象网站？为什么你的企业需要它？",
+        "description": "企业形象网站能在潜在客户心中建立商业信誉。了解其应包含的内容、益处，以及打造有效企业官网的技巧。",
+        "excerpt": "在数字时代，潜在客户在做决定之前几乎都会先在网上搜索你的公司。这正是企业形象网站发挥作用的地方。",
+        "tags": [
+          "网站",
+          "商业"
+        ]
+      }
+    }
   },
   {
     "slug": "pentingnya-maintenance-website",
-    "title": "Maintenance Website: Kenapa Penting dan Apa Saja yang Dikerjakan",
-    "description": "Website bukan proyek sekali jadi. Pahami kenapa maintenance website penting dan apa saja yang dikerjakan agar situs tetap aman dan cepat.",
     "date": "2026-06-05",
     "readMinutes": 5,
-    "tags": [
-      "Maintenance",
-      "Website"
-    ],
     "c": "#2BB3A3",
     "c2": "#0B6E69",
-    "excerpt": "Peluncuran bukan akhir. Tanpa maintenance, website bisa lambat, rentan diretas, dan ketinggalan zaman."
+    "i18n": {
+      "id": {
+        "title": "Maintenance Website: Kenapa Penting dan Apa Saja yang Dikerjakan",
+        "description": "Website bukan proyek sekali jadi. Pahami kenapa maintenance website penting dan apa saja yang dikerjakan agar situs tetap aman dan cepat.",
+        "excerpt": "Peluncuran bukan akhir. Tanpa maintenance, website bisa lambat, rentan diretas, dan ketinggalan zaman.",
+        "tags": [
+          "Maintenance",
+          "Website"
+        ]
+      },
+      "en": {
+        "title": "Website Maintenance: Why It Matters and What It Actually Involves",
+        "description": "A website isn't a one-and-done project. Understand why website maintenance matters and what it involves so your site stays safe and fast.",
+        "excerpt": "Launch isn't the finish line. Without maintenance, a website can slow down, become vulnerable to hacking, and fall behind.",
+        "tags": [
+          "Maintenance",
+          "Website"
+        ]
+      },
+      "zh": {
+        "title": "网站维护：为什么重要，具体都做些什么",
+        "description": "网站不是一次性项目。了解为什么网站维护至关重要，以及维护具体包含哪些工作，才能让网站保持安全与快速。",
+        "excerpt": "上线不是终点。没有维护，网站可能变慢、被黑客攻破，也可能逐渐过时。",
+        "tags": [
+          "维护",
+          "网站"
+        ]
+      }
+    }
   },
   {
     "slug": "website-untuk-umkm",
-    "title": "Kenapa UMKM Wajib Punya Website di 2026",
-    "description": "Alasan UMKM perlu punya website di 2026, manfaat konkretnya, dan cara memulai dengan budget terjangkau.",
     "date": "2026-06-04",
     "readMinutes": 5,
-    "tags": [
-      "UMKM",
-      "Website"
-    ],
     "c": "#1E88A8",
     "c2": "#0E8C86",
-    "excerpt": "Media sosial saja tidak cukup. Website memberi UMKM kredibilitas, kontrol, dan peluang ditemukan di Google."
+    "i18n": {
+      "id": {
+        "title": "Kenapa UMKM Wajib Punya Website di 2026",
+        "description": "Alasan UMKM perlu punya website di 2026, manfaat konkretnya, dan cara memulai dengan budget terjangkau.",
+        "excerpt": "Media sosial saja tidak cukup. Website memberi UMKM kredibilitas, kontrol, dan peluang ditemukan di Google.",
+        "tags": [
+          "UMKM",
+          "Website"
+        ]
+      },
+      "en": {
+        "title": "Why Every Small Business Needs a Website in 2026",
+        "description": "Why small businesses need a website in 2026, the concrete benefits, and how to get started on an affordable budget.",
+        "excerpt": "Social media alone isn't enough. A website gives small businesses credibility, control, and the chance to be found on Google.",
+        "tags": [
+          "Small Business",
+          "Website"
+        ]
+      },
+      "zh": {
+        "title": "为什么 2026 年中小微企业必须拥有一个网站",
+        "description": "2026 年中小微企业为什么需要网站、具体能带来哪些好处，以及如何用可负担的预算开始搭建。",
+        "excerpt": "只靠社交媒体是不够的。网站能为中小微企业带来可信度、自主权，以及被谷歌搜索到的机会。",
+        "tags": [
+          "中小微企业",
+          "网站"
+        ]
+      }
+    }
   }
 ]

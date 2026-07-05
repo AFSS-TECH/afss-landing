@@ -7,11 +7,17 @@ import { motion } from 'framer-motion'
 import { BRAND, waLink } from './data.js'
 import { Icon } from './Icon.jsx'
 import { getPost } from './blog.js'
-import { SITE_URL, formatDateId } from './site.js'
+import { SITE_URL, formatDate } from './site.js'
 import { postsMeta } from './blog-meta.js'
 import { incrementBlogView, fetchAllBlogViews } from './lib/supabase.js'
+import { useLocale, pick } from './i18n/context.jsx'
+import { useHreflangTags } from './i18n/HreflangTags.jsx'
+import { LOCALE_PREFIX, withLocale } from './i18n/locales.js'
 
-/* ── Format penuh: dd/mmm/yyyy HH:mm:ss ── */
+const JSON_LD_LANG = { id: 'id-ID', en: 'en-US', zh: 'zh-Hans' }
+
+/* ── Format penuh: dd/mmm/yyyy HH:mm:ss (view-tracking timestamp — kept in Indonesian
+   short month codes site-wide, this is an internal "last viewed" stat, not reader-facing copy) ── */
 const MONTHS_ID = ['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des']
 function formatLastViewed(iso) {
   if (!iso) return null
@@ -39,8 +45,19 @@ imgRenderer.image = ({ href, text }) =>
 
 const PER_PAGE = 6
 
-function Article({ markdown }) {
-  return <div className="article" dangerouslySetInnerHTML={{ __html: marked.parse(markdown.trim(), { renderer: imgRenderer }) }} />
+// Article body markdown is authored with plain internal links like `[Paket Harga](/harga)`.
+// `marked` renders these as raw <a href> tags, bypassing our locale-prefixing <Link> wrapper —
+// so on an /en or /zh post they'd silently drop the visitor back into the Indonesian site.
+// Rewrite any such internal link to include the current locale's prefix before rendering.
+function localizeMarkdownLinks(markdown, locale) {
+  const prefix = LOCALE_PREFIX[locale]
+  if (!prefix) return markdown
+  return markdown.replace(/\]\(\/(?!en\/|zh\/)/g, `](${prefix}/`)
+}
+
+function Article({ markdown, locale }) {
+  const localized = localizeMarkdownLinks(markdown, locale)
+  return <div className="article" dangerouslySetInnerHTML={{ __html: marked.parse(localized.trim(), { renderer: imgRenderer }) }} />
 }
 
 /* ── Reading progress bar (fixed at top during article scroll) ── */
@@ -61,7 +78,9 @@ function ReadingProgress() {
 
 /* ════════════════════════════════════════════════ BLOG INDEX (/blog) */
 export function BlogIndex() {
-  const all = postsMeta
+  const { locale, t } = useLocale()
+  const hreflangTags = useHreflangTags()
+  const all = postsMeta.map((p) => pick(p, locale))
   const [query, setQuery] = useState('')
   const [activeTag, setActiveTag] = useState('')
   const [page, setPage] = useState(1)
@@ -70,8 +89,8 @@ export function BlogIndex() {
   useEffect(() => { fetchAllBlogViews().then(setViews) }, [])
 
   // Hitung frekuensi tag, ambil top 15 yang paling banyak dipakai
-  const tagFreq = all.flatMap((p) => p.tags).reduce((acc, t) => { acc[t] = (acc[t] || 0) + 1; return acc; }, {})
-  const allTags = Object.entries(tagFreq).sort((a, b) => b[1] - a[1]).slice(0, 15).map(([t]) => t).sort()
+  const tagFreq = all.flatMap((p) => p.tags).reduce((acc, tag) => { acc[tag] = (acc[tag] || 0) + 1; return acc; }, {})
+  const allTags = Object.entries(tagFreq).sort((a, b) => b[1] - a[1]).slice(0, 15).map(([tag]) => tag).sort()
 
   // Posts matching the search query (used to derive available tag chips)
   const q = query.trim().toLowerCase()
@@ -79,7 +98,7 @@ export function BlogIndex() {
     ? all.filter((p) =>
         p.title.toLowerCase().includes(q) ||
         p.excerpt.toLowerCase().includes(q) ||
-        p.tags.some((t) => t.toLowerCase().includes(q))
+        p.tags.some((tag) => tag.toLowerCase().includes(q))
       )
     : all
 
@@ -94,28 +113,30 @@ export function BlogIndex() {
   const visible = filtered.slice((page - 1) * PER_PAGE, page * PER_PAGE)
 
   const handleSearch = (v) => { setQuery(v); setPage(1) }
-  const handleTag = (t) => { setActiveTag(effectiveTag === t ? '' : t); setPage(1) }
+  const handleTag = (tag) => { setActiveTag(effectiveTag === tag ? '' : tag); setPage(1) }
   const goPage = (n) => { setPage(n); window.scrollTo({ top: 0, behavior: 'smooth' }) }
 
-  const title = 'Blog AFSS — Tips Website, Aplikasi & Software House'
-  const description = 'Artikel & panduan seputar pembuatan website, aplikasi mobile, dan memilih software house yang tepat di Indonesia.'
+  const title = t('blog.seoIndexTitle')
+  const description = t('blog.seoIndexDesc')
+  const canonical = `${SITE_URL}${withLocale(locale, '/blog')}`
 
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <link rel="canonical" href={`${SITE_URL}/blog`} />
+        <link rel="canonical" href={canonical} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:url" content={`${SITE_URL}/blog`} />
+        <meta property="og:url" content={canonical} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta property="og:image" content={`${SITE_URL}/og.png`} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:image" content={`${SITE_URL}/og.png`} />
+        {hreflangTags}
       </Head>
 
       {/* Hero */}
@@ -124,27 +145,27 @@ export function BlogIndex() {
         <div className="container">
           <div className="page-hero-grid">
             <motion.div variants={fadeUp} initial="hidden" animate="show">
-              <div className="eyebrow"><Icon icon="fa-solid fa-newspaper" /> Blog</div>
-              <h1 className="page-title">Wawasan seputar <span className="ital">website &amp; aplikasi</span></h1>
-              <p className="page-sub">Panduan praktis soal biaya, timeline, teknologi, dan cara memilih partner digital yang tepat untuk bisnis Anda.</p>
+              <div className="eyebrow"><Icon icon="fa-solid fa-newspaper" /> {t('blog.eyebrow')}</div>
+              <h1 className="page-title">{t('blog.heroTitlePre')}<span className="ital">{t('blog.heroTitleItal')}</span>{t('blog.heroTitlePost')}</h1>
+              <p className="page-sub">{t('blog.heroSub')}</p>
             </motion.div>
             <motion.div className="page-hero-stat-col" variants={fadeUp} initial="hidden" animate="show" transition={{ delay: 0.12 }}>
               <div className="blog-hero-card">
                 <div className="bhs-item">
                   <span className="bhs-n">{all.length}</span>
-                  <span className="bhs-l">Artikel tersedia</span>
+                  <span className="bhs-l">{t('blog.statArticles')}</span>
                 </div>
                 <div className="bhs-item">
                   <span className="bhs-n">{allTags.length}</span>
-                  <span className="bhs-l">Topik tersedia</span>
+                  <span className="bhs-l">{t('blog.statTopics')}</span>
                 </div>
                 <div className="bhs-item">
                   <span className="bhs-n bhs-icon"><Icon icon="fa-solid fa-calendar-check" /></span>
-                  <span className="bhs-l">Update rutin</span>
+                  <span className="bhs-l">{t('blog.statUpdate')}</span>
                 </div>
                 <div className="bhs-item">
                   <span className="bhs-n bhs-icon"><Icon icon="fa-solid fa-magnifying-glass-chart" /></span>
-                  <span className="bhs-l">SEO-targeted</span>
+                  <span className="bhs-l">{t('blog.statSeo')}</span>
                 </div>
               </div>
             </motion.div>
@@ -161,34 +182,34 @@ export function BlogIndex() {
               <input
                 className="blog-search"
                 type="search"
-                placeholder="Cari artikel..."
+                placeholder={t('blog.searchPlaceholder')}
                 value={query}
                 onChange={(e) => handleSearch(e.target.value)}
-                aria-label="Cari artikel"
+                aria-label={t('blog.searchAriaLabel')}
               />
               {query && (
-                <button className="blog-search-clear" onClick={() => handleSearch('')} aria-label="Hapus pencarian">
+                <button className="blog-search-clear" onClick={() => handleSearch('')} aria-label={t('blog.searchClearAriaLabel')}>
                   <Icon icon="fa-solid fa-xmark" />
                 </button>
               )}
             </div>
             <div className="blog-tags-wrap">
-              <div className="blog-tags" role="list" aria-label="Filter topik">
+              <div className="blog-tags" role="list" aria-label={t('blog.tagsAriaLabel')}>
                 <button
                   className={`blog-tag-chip${!effectiveTag ? ' active' : ''}`}
                   onClick={() => handleTag('')}
                   aria-pressed={!effectiveTag}
                 >
-                  Semua
+                  {t('blog.tagAll')}
                 </button>
-                {availableTags.map((t) => (
+                {availableTags.map((tag) => (
                   <button
-                    key={t}
-                    className={`blog-tag-chip${effectiveTag === t ? ' active' : ''}`}
-                    onClick={() => handleTag(t)}
-                    aria-pressed={effectiveTag === t}
+                    key={tag}
+                    className={`blog-tag-chip${effectiveTag === tag ? ' active' : ''}`}
+                    onClick={() => handleTag(tag)}
+                    aria-pressed={effectiveTag === tag}
                   >
-                    {t}
+                    {tag}
                   </button>
                 ))}
               </div>
@@ -203,9 +224,9 @@ export function BlogIndex() {
           {visible.length === 0 ? (
             <div className="blog-empty">
               <Icon icon="fa-solid fa-file-circle-question" />
-              <p>Tidak ada artikel untuk <strong>{activeTag || query}</strong>.</p>
+              <p>{t('blog.emptyPre')}<strong>{activeTag || query}</strong>{t('blog.emptyPost')}</p>
               <button className="btn btn-ghost" onClick={() => { setQuery(''); setActiveTag(''); setPage(1) }}>
-                Lihat semua artikel
+                {t('blog.emptyCta')}
               </button>
             </div>
           ) : (
@@ -215,15 +236,15 @@ export function BlogIndex() {
                   <motion.article key={p.slug} className="blog-card" variants={fadeUp} whileHover={{ y: -6 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }}>
                     <Link to={`/blog/${p.slug}`} className="blog-card-link">
                       <div className="blog-cover" style={{ '--c': p.c, '--c2': p.c2 }}>
-                        <img src={`/blog/${p.slug}.png`} alt={`Ilustrasi artikel: ${p.title}`} width="1200" height="630" loading="lazy" onError={(e) => { e.target.style.display = 'none' }} />
+                        <img src={`/blog/${p.slug}.png`} alt={p.title} width="1200" height="630" loading="lazy" onError={(e) => { e.target.style.display = 'none' }} />
                         <div className="blog-cover-tags">
-                          {p.tags.map((t) => <span key={t}>{t}</span>)}
+                          {p.tags.map((tag) => <span key={tag}>{tag}</span>)}
                         </div>
                       </div>
                       <div className="blog-card-body">
                         <div className="blog-meta">
-                          <span>Terbit {formatDateId(p.date)}</span>
-                          {p.updatedAt && p.updatedAt !== p.date && <span className="blog-meta-upd"> · Diperbarui {formatDateId(p.updatedAt)}</span>}
+                          <span>{t('blog.publishedPrefix')}{formatDate(p.date, locale)}</span>
+                          {p.updatedAt && p.updatedAt !== p.date && <span className="blog-meta-upd">{t('blog.updatedPrefix')}{formatDate(p.updatedAt, locale)}</span>}
                         </div>
                         <h2 className="blog-card-title">{p.title}</h2>
                         <p className="blog-card-excerpt">{p.excerpt}</p>
@@ -233,12 +254,12 @@ export function BlogIndex() {
                           const lastIso = vs?.last_viewed_at || p.date
                           return (
                             <div className="blog-view-stat">
-                              <Icon icon="fa-solid fa-eye" /> {count.toLocaleString('id-ID')}x dibuka
-                              <span> · {count > 0 ? 'terakhir' : 'terbit'} {formatLastViewed(lastIso)}</span>
+                              <Icon icon="fa-solid fa-eye" /> {count.toLocaleString(JSON_LD_LANG[locale] === 'zh-Hans' ? 'zh-CN' : JSON_LD_LANG[locale] || 'id-ID')}{t('blog.viewsSuffix')}
+                              <span> · {count > 0 ? t('blog.lastViewedWord') : t('blog.publishedWord')} {formatLastViewed(lastIso)}</span>
                             </div>
                           )
                         })()}
-                        <span className="blog-readmore">Baca selengkapnya <Icon icon="fa-solid fa-arrow-right" /></span>
+                        <span className="blog-readmore">{t('blogTeaser.readMore')} <Icon icon="fa-solid fa-arrow-right" /></span>
                       </div>
                     </Link>
                   </motion.article>
@@ -248,16 +269,16 @@ export function BlogIndex() {
               {/* Result count when filtered */}
               {(query || effectiveTag) && (
                 <p className="blog-result-count">
-                  {filtered.length} artikel ditemukan
-                  {effectiveTag ? ` — topik "${effectiveTag}"` : ''}
-                  {query ? ` — kata kunci "${query}"` : ''}
+                  {t('blog.resultCount', { count: filtered.length })}
+                  {effectiveTag ? t('blog.resultCountTopic', { tag: effectiveTag }) : ''}
+                  {query ? t('blog.resultCountKeyword', { query }) : ''}
                 </p>
               )}
 
               {/* Pagination */}
               {totalPages > 1 && (
-                <nav className="blog-pagination" aria-label="Halaman blog">
-                  <button className="pgn-btn" disabled={page === 1} onClick={() => goPage(page - 1)} aria-label="Halaman sebelumnya">
+                <nav className="blog-pagination" aria-label={t('blog.paginationAriaLabel')}>
+                  <button className="pgn-btn" disabled={page === 1} onClick={() => goPage(page - 1)} aria-label={t('blog.prevPageAriaLabel')}>
                     <Icon icon="fa-solid fa-chevron-left" />
                   </button>
                   {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
@@ -270,7 +291,7 @@ export function BlogIndex() {
                       {n}
                     </button>
                   ))}
-                  <button className="pgn-btn" disabled={page === totalPages} onClick={() => goPage(page + 1)} aria-label="Halaman berikutnya">
+                  <button className="pgn-btn" disabled={page === totalPages} onClick={() => goPage(page + 1)} aria-label={t('blog.nextPageAriaLabel')}>
                     <Icon icon="fa-solid fa-chevron-right" />
                   </button>
                 </nav>
@@ -286,7 +307,10 @@ export function BlogIndex() {
 /* ════════════════════════════════════════════════ BLOG POST (/blog/:slug) */
 export function BlogPost() {
   const { slug } = useParams()
-  const post = getPost(slug)
+  const { locale, t } = useLocale()
+  const hreflangTags = useHreflangTags()
+  const rawPost = getPost(slug)
+  const post = rawPost ? pick(rawPost, locale) : null
   const [viewStat, setViewStat] = useState(null)
 
   useEffect(() => {
@@ -298,19 +322,20 @@ export function BlogPost() {
     return (
       <section className="page-hero">
         <div className="container">
-          <h1 className="page-title">Artikel tidak ditemukan</h1>
-          <p className="page-sub">Maaf, artikel yang Anda cari tidak ada. <Link to="/blog" className="accent-text">Kembali ke Blog</Link>.</p>
+          <h1 className="page-title">{t('blog.notFoundTitle')}</h1>
+          <p className="page-sub">{t('blog.notFoundDesc')} <Link to="/blog" className="accent-text">{t('blog.backToBlog')}</Link>.</p>
         </div>
       </section>
     )
   }
 
-  const url = `${SITE_URL}/blog/${post.slug}`
+  const url = `${SITE_URL}${withLocale(locale, `/blog/${post.slug}`)}`
   const cover = `${SITE_URL}/blog/${post.slug}.png`
 
   /* Related: prefer posts sharing a tag, fall back to any recent post */
-  const byTag = postsMeta.filter((p) => p.slug !== post.slug && p.tags.some((t) => post.tags.includes(t)))
-  const fallback = postsMeta.filter((p) => p.slug !== post.slug && !byTag.find((r) => r.slug === p.slug))
+  const localizedMeta = postsMeta.map((p) => pick(p, locale))
+  const byTag = localizedMeta.filter((p) => p.slug !== post.slug && p.tags.some((tag) => post.tags.includes(tag)))
+  const fallback = localizedMeta.filter((p) => p.slug !== post.slug && !byTag.find((r) => r.slug === p.slug))
   const related = [...byTag, ...fallback].slice(0, 3)
 
   const wordCount = post.body.trim().split(/\s+/).length
@@ -321,7 +346,7 @@ export function BlogPost() {
     description: post.description,
     datePublished: post.date,
     dateModified: post.date,
-    inLanguage: 'id-ID',
+    inLanguage: JSON_LD_LANG[locale] || 'id-ID',
     mainEntityOfPage: url,
     image: cover,
     keywords: post.tags.join(', '),
@@ -334,8 +359,8 @@ export function BlogPost() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Beranda', item: `${SITE_URL}/` },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog` },
+      { '@type': 'ListItem', position: 1, name: t('blog.breadcrumbHome'), item: `${SITE_URL}${withLocale(locale, '/')}` },
+      { '@type': 'ListItem', position: 2, name: t('blog.breadcrumbBlog'), item: `${SITE_URL}${withLocale(locale, '/blog')}` },
       { '@type': 'ListItem', position: 3, name: post.title, item: url },
     ],
   }
@@ -356,7 +381,8 @@ export function BlogPost() {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:image" content={cover} />
-        {post.tags.map((t) => <meta key={t} property="article:tag" content={t} />)}
+        {post.tags.map((tag) => <meta key={tag} property="article:tag" content={tag} />)}
+        {hreflangTags}
       </Head>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
@@ -368,56 +394,56 @@ export function BlogPost() {
           <div className="hero-glow" />
           <div className="container container-narrow">
             <nav className="breadcrumb" aria-label="Breadcrumb">
-              <Link to="/">Beranda</Link> <span>/</span> <Link to="/blog">Blog</Link> <span>/</span> <span className="bc-current">{post.tags[0]}</span>
+              <Link to="/">{t('blog.breadcrumbHome')}</Link> <span>/</span> <Link to="/blog">{t('blog.breadcrumbBlog')}</Link> <span>/</span> <span className="bc-current">{post.tags[0]}</span>
             </nav>
             <h1 className="post-title">{post.title}</h1>
             <div className="post-meta">
-              Terbit {formatDateId(post.date)}
-              {post.updatedAt && post.updatedAt !== post.date && <span className="blog-meta-upd"> · Diperbarui {formatDateId(post.updatedAt)}</span>}
+              {t('blog.publishedPrefix')}{formatDate(post.date, locale)}
+              {post.updatedAt && post.updatedAt !== post.date && <span className="blog-meta-upd">{t('blog.updatedPrefix')}{formatDate(post.updatedAt, locale)}</span>}
               {viewStat && (
                 <span className="blog-meta-upd">
-                  {' · '}<Icon icon="fa-solid fa-eye" /> {viewStat.view_count.toLocaleString('id-ID')}x dibuka · terakhir {formatLastViewed(viewStat.last_viewed_at)}
+                  {' · '}<Icon icon="fa-solid fa-eye" /> {viewStat.view_count.toLocaleString(JSON_LD_LANG[locale] === 'zh-Hans' ? 'zh-CN' : JSON_LD_LANG[locale] || 'id-ID')}{t('blog.viewsSuffix')} · {t('blog.lastViewedWord')} {formatLastViewed(viewStat.last_viewed_at)}
                 </span>
               )}
             </div>
             <div className="post-tag-row">
-              {post.tags.map((t) => (
-                <Link key={t} to={`/blog?tag=${encodeURIComponent(t)}`} className="post-tag-chip">{t}</Link>
+              {post.tags.map((tag) => (
+                <Link key={tag} to={`/blog?tag=${encodeURIComponent(tag)}`} className="post-tag-chip">{tag}</Link>
               ))}
             </div>
-            <img className="post-cover" src={`/blog/${post.slug}.png`} alt={`Ilustrasi artikel: ${post.title}`} width="1200" height="630" fetchpriority="high" />
+            <img className="post-cover" src={`/blog/${post.slug}.png`} alt={post.title} width="1200" height="630" fetchpriority="high" />
           </div>
         </div>
 
         <div className="container container-narrow">
-          <Article markdown={post.body} />
+          <Article markdown={post.body} locale={locale} />
 
           <div className="post-cta">
-            <h3>Punya proyek serupa?</h3>
-            <p>Konsultasi gratis, tanpa komitmen. Ceritakan kebutuhan Anda — kami bantu temukan solusi terbaik.</p>
-            <a className="btn btn-pri btn-lg" href={waLink(`Halo ${BRAND.short}, saya baru membaca artikel "${post.title}" dan ingin konsultasi.`)} target="_blank" rel="noreferrer">
-              <Icon icon="fa-brands fa-whatsapp" /> Konsultasi Gratis
+            <h3>{t('blog.ctaTitle')}</h3>
+            <p>{t('blog.ctaDesc')}</p>
+            <a className="btn btn-pri btn-lg" href={waLink(t('blog.waMessage', { brand: BRAND.short, title: post.title }))} target="_blank" rel="noreferrer">
+              <Icon icon="fa-brands fa-whatsapp" /> {t('blog.ctaButton')}
             </a>
           </div>
         </div>
 
         {related.length > 0 && (
           <div className="container">
-            <div className="related-head">Artikel terkait</div>
+            <div className="related-head">{t('blog.relatedHead')}</div>
             <div className="blog-grid blog-grid-3">
               {related.map((p) => (
                 <article key={p.slug} className="blog-card">
                   <Link to={`/blog/${p.slug}`} className="blog-card-link">
                     <div className="blog-cover" style={{ '--c': p.c, '--c2': p.c2 }}>
-                      <img src={`/blog/${p.slug}.png`} alt={`Ilustrasi artikel: ${p.title}`} width="1200" height="630" loading="lazy" onError={(e) => { e.target.style.display = 'none' }} />
+                      <img src={`/blog/${p.slug}.png`} alt={p.title} width="1200" height="630" loading="lazy" onError={(e) => { e.target.style.display = 'none' }} />
                       <div className="blog-cover-tags">
-                        {p.tags.map((t) => <span key={t}>{t}</span>)}
+                        {p.tags.map((tag) => <span key={tag}>{tag}</span>)}
                       </div>
                     </div>
                     <div className="blog-card-body">
-                      <div className="blog-meta">Terbit {formatDateId(p.date)}</div>
+                      <div className="blog-meta">{t('blog.publishedPrefix')}{formatDate(p.date, locale)}</div>
                       <h2 className="blog-card-title">{p.title}</h2>
-                      <span className="blog-readmore">Baca selengkapnya <Icon icon="fa-solid fa-arrow-right" /></span>
+                      <span className="blog-readmore">{t('blogTeaser.readMore')} <Icon icon="fa-solid fa-arrow-right" /></span>
                     </div>
                   </Link>
                 </article>
