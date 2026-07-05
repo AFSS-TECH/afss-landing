@@ -656,7 +656,6 @@ export const portfolioProjects = [
       '/portofolio/ecommerce/premium-fashion/mockup/product-detail.webp',
       '/portofolio/ecommerce/premium-fashion/mockup/mobile.webp',
     ],
-    imageCaptions: null,
     imagePortrait: [false, false, false, true],
     i18n: {
       id: {
