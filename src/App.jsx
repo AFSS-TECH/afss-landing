@@ -86,13 +86,10 @@ const Reveal = ({ children, className = '', ...rest }) => (
 const Logo = ({ footer }) => (
   <div className={footer ? 'ft-logo' : 'logo'}>
     <img
-      src={footer ? '/logo-mark-light.png' : '/logo-mark.png'}
-      alt="AFSS"
-      className="af-mark"
-      width="40"
-      height="25"
+      src={footer ? '/logo-full-light.png' : '/logo-full.png'}
+      alt="AFSS — PT Advanced Future Software Solutions"
+      className="logo-img"
     />
-    <span className="logo-word">AFSS</span>
   </div>
 )
 
