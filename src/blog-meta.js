@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "sistem-antrian-digital-queue-management",
+    "date": "2026-07-06",
+    "readMinutes": 7,
+    "c": "#DC2626",
+    "c2": "#7F1D1D",
+    "i18n": {
+      "id": {
+        "title": "Sistem Antrian Digital: Solusi Modern untuk Klinik & Bank",
+        "description": "Sistem antrian digital menghapus antrean fisik yang melelahkan. Pelajari fitur, manfaat, dan cara implementasinya untuk klinik, bank, dan layanan publik.",
+        "excerpt": "Antrean fisik yang panjang membuat pelanggan frustrasi dan staf kehilangan waktu produktif. Ketahui bagaimana sistem antrian digital mengubah pengalaman layanan Anda.",
+        "tags": [
+          "Aplikasi",
+          "Layanan Publik",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Digital Queue Management System: A Modern Fix for Long Lines",
+        "description": "Digital queue management systems eliminate physical waiting lines. Learn the key features, benefits, and implementation steps for clinics, banks, and public offices.",
+        "excerpt": "Long physical queues cost you more than time — they cost customers, staff productivity, and first impressions. Here's how digital queue systems fix that.",
+        "tags": [
+          "Application",
+          "Public Service",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "数字排队叫号系统：诊所与银行的现代化解决方案",
+        "description": "数字排队叫号系统彻底告别现场排队。了解其核心功能、优势，以及如何为诊所、银行和公共服务机构实施落地。",
+        "excerpt": "漫长的现场排队消耗的不只是时间，还有顾客、员工效率和第一印象。看看数字排队系统如何从根本上改变这一切。",
+        "tags": [
+          "应用",
+          "公共服务",
+          "商业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "edge-computing-5g-bisnis-2026",
+    "date": "2026-07-06",
+    "readMinutes": 7,
+    "c": "#0891B2",
+    "c2": "#164E63",
+    "i18n": {
+      "id": {
+        "title": "Edge Computing & 5G untuk Bisnis: Infrastruktur Real-Time 2026",
+        "description": "Edge computing dan 5G membentuk infrastruktur bisnis real-time di 2026. Pelajari cara kerjanya, manfaatnya, dan langkah adopsi untuk bisnis Anda.",
+        "excerpt": "Ketika kecepatan cloud biasa tidak lagi cukup, edge computing dan 5G hadir sebagai fondasi baru bagi aplikasi bisnis yang butuh respons dalam hitungan milidetik.",
+        "tags": [
+          "Teknologi",
+          "Infrastruktur",
+          "IoT"
+        ]
+      },
+      "en": {
+        "title": "Edge Computing & 5G for Business: Real-Time Infrastructure 2026",
+        "description": "Edge computing and 5G are reshaping real-time business infrastructure in 2026. Learn how they work, why they matter, and how to start adopting them.",
+        "excerpt": "When ordinary cloud speed isn't enough anymore, edge computing and 5G become the new foundation for business applications that need millisecond-level responses.",
+        "tags": [
+          "Technology",
+          "Infrastructure",
+          "IoT"
+        ]
+      },
+      "zh": {
+        "title": "边缘计算与5G如何为2026年企业打造实时基础设施",
+        "description": "边缘计算与5G正在重塑2026年企业的实时基础设施。了解其原理、重要性以及企业应如何着手采用这项技术。",
+        "excerpt": "当普通云计算的速度已经不够用时,边缘计算与5G成为支撑毫秒级响应型企业应用的新基础设施。",
+        "tags": [
+          "技术",
+          "基础设施",
+          "物联网"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "predictive-analytics-machine-learning-bisnis",
+    "date": "2026-07-06",
+    "readMinutes": 7,
+    "c": "#1D4ED8",
+    "c2": "#1E3A8A",
+    "i18n": {
+      "id": {
+        "title": "Predictive Analytics & Machine Learning untuk Bisnis Modern",
+        "description": "Pelajari cara predictive analytics dan machine learning membantu bisnis meramalkan permintaan, cegah churn, dan ambil keputusan berbasis data secara akurat.",
+        "excerpt": "Dashboard BI menunjukkan apa yang terjadi. Predictive analytics memberi tahu apa yang akan terjadi — dan itu bisa mengubah cara bisnis Anda mengambil keputusan.",
+        "tags": [
+          "AI",
+          "Data Bisnis",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "Predictive Analytics & Machine Learning for Modern Business",
+        "description": "Discover how predictive analytics and machine learning help businesses forecast demand, prevent churn, and make accurate, data-driven decisions.",
+        "excerpt": "BI dashboards tell you what happened. Predictive analytics tells you what's about to happen — and that difference can reshape how your business makes decisions.",
+        "tags": [
+          "AI",
+          "Business Data",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "预测性分析与机器学习：企业数据决策新引擎",
+        "description": "了解预测性分析与机器学习如何帮助企业预测需求趋势、防止客户流失，并做出更精准的数据驱动决策，提升长期竞争力。",
+        "excerpt": "BI仪表盘告诉你发生了什么，预测性分析告诉你接下来会发生什么——这个差别，足以改变企业的决策方式。",
+        "tags": [
+          "人工智能",
+          "商业数据",
+          "技术"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-manajemen-dokumen-digital",
+    "date": "2026-07-06",
+    "readMinutes": 7,
+    "c": "#4B5563",
+    "c2": "#1F2937",
+    "i18n": {
+      "id": {
+        "title": "Sistem Manajemen Dokumen Digital: Panduan Bisnis Go Paperless",
+        "description": "Pelajari cara sistem manajemen dokumen digital (DMS) membantu bisnis mengurangi kertas, mempercepat pencarian arsip, dan menjaga kepatuhan data.",
+        "excerpt": "Arsip kertas menua di lemari, dokumen penting hilang, dan pencarian file memakan waktu berjam-jam. Ada solusi yang jauh lebih rapi dari itu.",
+        "tags": [
+          "Manajemen Dokumen",
+          "Keamanan Data",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Digital Document Management Systems: A Guide to Going Paperless",
+        "description": "Discover how a digital document management system (DMS) helps businesses cut paper clutter, speed up retrieval, and stay compliant with regulations.",
+        "excerpt": "Filing cabinets grow heavier every year, key documents go missing, and finding one file can eat an entire afternoon. There's a far better way to run this.",
+        "tags": [
+          "Document Management",
+          "Data Security",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "数字文档管理系统：企业无纸化转型完整指南",
+        "description": "了解数字文档管理系统（DMS）如何帮助企业减少纸质文件、加快检索速度，并满足合规与数据安全要求。",
+        "excerpt": "档案柜越堆越满，重要文件说丢就丢，找一份合同要翻半天——其实有更聪明的管理方式。",
+        "tags": [
+          "文档管理",
+          "数据安全",
+          "商业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-lms-elearning-korporat",
+    "date": "2026-07-06",
+    "readMinutes": 7,
+    "c": "#B45309",
+    "c2": "#92400E",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi LMS: Solusi E-Learning Korporat & Institusi Pendidikan",
+        "description": "Pelajari cara aplikasi LMS membantu perusahaan dan institusi pendidikan mengelola pelatihan, sertifikasi, dan pembelajaran secara efisien di 2026.",
+        "excerpt": "Pelatihan karyawan dan pembelajaran siswa kini bisa dikelola dalam satu platform digital. Ini panduan lengkap memilih dan membangun aplikasi LMS yang tepat untuk organisasi Anda.",
+        "tags": [
+          "Aplikasi",
+          "Pendidikan",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "LMS Application Development: Corporate & Education E-Learning",
+        "description": "Discover how a custom LMS application streamlines corporate training and education, covering features, costs, and custom vs off-the-shelf tradeoffs.",
+        "excerpt": "Managing employee training or student learning through scattered files and spreadsheets doesn't scale. Here's a practical guide to building or choosing the right LMS for your organization.",
+        "tags": [
+          "Application",
+          "Education",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "LMS学习管理系统开发：企业培训与教育数字化方案",
+        "description": "了解定制化LMS学习管理系统如何优化企业员工培训与教育机构教学，涵盖核心功能、成本估算及定制与现成方案的取舍。",
+        "excerpt": "员工培训和学生学习如果还靠零散文件和表格管理，规模一大就撑不住。这篇文章教你如何为企业或教育机构选对或建对一套LMS系统。",
+        "tags": [
+          "应用",
+          "教育",
+          "商业"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-manajemen-proyek-kolaborasi-tim",
     "date": "2026-07-05",
     "readMinutes": 9,
