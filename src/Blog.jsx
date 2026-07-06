@@ -150,12 +150,12 @@ export function BlogIndex() {
         <div className="hero-glow" />
         <div className="container">
           <div className="page-hero-grid">
-            <motion.div variants={fadeUp} initial="hidden" animate="show">
+            <motion.div variants={fadeUp} initial={false} animate="show">
               <div className="eyebrow"><Icon icon="fa-solid fa-newspaper" /> {t('blog.eyebrow')}</div>
               <h1 className="page-title">{t('blog.heroTitlePre')}<span className="ital">{t('blog.heroTitleItal')}</span>{t('blog.heroTitlePost')}</h1>
               <p className="page-sub">{t('blog.heroSub')}</p>
             </motion.div>
-            <motion.div className="page-hero-stat-col" variants={fadeUp} initial="hidden" animate="show" transition={{ delay: 0.12 }}>
+            <motion.div className="page-hero-stat-col" variants={fadeUp} initial={false} animate="show" transition={{ delay: 0.12 }}>
               <div className="blog-hero-card">
                 <div className="bhs-item">
                   <span className="bhs-n">{all.length}</span>

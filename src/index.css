@@ -267,7 +267,7 @@ section { padding: 80px 28px; position: relative; }
 .svc-time { text-align: right; font-size: .74rem; color: var(--muted); }
 .svc-time b { display: block; color: var(--ink-2); font-size: .86rem; font-weight: 600; }
 .svc-card .btn { width: 100%; justify-content: center; }
-.svc-card.hot .btn { background: var(--blue); color: #fff; box-shadow: 0 8px 20px rgba(169,113,31,.26); }
+.svc-card.hot .btn { background: var(--ink); color: #fff; }
 .svc-card:not(.hot) .btn { background: var(--ink); color: #fff; }
 
 /* ════════ MOTION GRAPH / IMPACT ════════ */
