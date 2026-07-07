@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "digital-twin-simulasi-bisnis-manufaktur",
+    "date": "2026-07-07",
+    "readMinutes": 9,
+    "c": "#0284C7",
+    "c2": "#0C4A6E",
+    "i18n": {
+      "id": {
+        "title": "Digital Twin: Simulasi Digital untuk Optimasi Bisnis & Manufaktur 2026",
+        "description": "Digital twin memungkinkan bisnis menguji perubahan proses, jadwal produksi, atau tata letak gudang secara virtual sebelum diterapkan di dunia nyata. Pelajari cara kerja, manfaat, dan penerapannya untuk bisnis Indonesia di 2026.",
+        "excerpt": "Mengubah tata letak lini produksi di dunia nyata bisa memakan biaya besar jika ternyata keliru. Digital twin memungkinkan bisnis menguji perubahan itu dulu secara virtual, tanpa risiko dan tanpa menghentikan operasional.",
+        "tags": [
+          "Teknologi",
+          "Manufaktur",
+          "Inovasi"
+        ]
+      },
+      "en": {
+        "title": "Digital Twin: Digital Simulation for Business & Manufacturing Optimization in 2026",
+        "description": "Digital twin technology lets businesses test process changes, production schedules, or warehouse layouts virtually before applying them in the real world. Learn how it works, its benefits, and how Indonesian businesses can apply it in 2026.",
+        "excerpt": "Changing a production line layout in the real world can be costly if it turns out wrong. A digital twin lets businesses test that change virtually first, with no risk and no operational downtime.",
+        "tags": [
+          "Technology",
+          "Manufacturing",
+          "Innovation"
+        ]
+      },
+      "zh": {
+        "title": "数字孪生：2026年优化企业与制造业运营的数字化模拟技术",
+        "description": "数字孪生技术让企业能够在实际应用之前，先在虚拟环境中测试流程变更、生产排期或仓库布局。了解其工作原理、优势，以及2026年印尼企业如何应用这一技术。",
+        "excerpt": "在现实中改动生产线布局，一旦判断失误代价高昂。数字孪生让企业先在虚拟环境中测试这些变更，既无风险，也不影响正常运营。",
+        "tags": [
+          "技术",
+          "制造业",
+          "创新"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "kepatuhan-uu-pdp-aplikasi-bisnis-digital",
+    "date": "2026-07-07",
+    "readMinutes": 9,
+    "c": "#EA580C",
+    "c2": "#7C2D12",
+    "i18n": {
+      "id": {
+        "title": "Kepatuhan UU PDP untuk Aplikasi & Website Bisnis: Panduan Praktis 2026",
+        "description": "UU Pelindungan Data Pribadi (PDP) mewajibkan bisnis mengelola data pelanggan secara bertanggung jawab. Pelajari langkah praktis membuat website dan aplikasi Anda patuh UU PDP tanpa menghambat operasional bisnis.",
+        "excerpt": "Denda dan sanksi UU PDP nyata, tapi kepatuhan tidak harus menjadi proyek besar yang menakutkan — dengan pendekatan yang tepat, ia bisa dibangun langsung ke dalam arsitektur aplikasi sejak awal.",
+        "tags": [
+          "Keamanan Data",
+          "Bisnis",
+          "Panduan"
+        ]
+      },
+      "en": {
+        "title": "Data Privacy Law Compliance for Business Apps & Websites: A 2026 Practical Guide",
+        "description": "Data privacy regulations require businesses to handle customer data responsibly. Learn the practical steps to make your website and app compliant without slowing down business operations.",
+        "excerpt": "Data privacy penalties are real, but compliance doesn’t have to be a daunting mega-project — with the right approach, it can be built directly into your app’s architecture from day one.",
+        "tags": [
+          "Data Security",
+          "Business",
+          "Guide"
+        ]
+      },
+      "zh": {
+        "title": "企业应用与网站的数据隐私合规：2026年实用指南",
+        "description": "数据隐私保护法规要求企业负责任地处理客户数据。了解让您的网站和应用合规的实用步骤，同时不影响业务运营效率。",
+        "excerpt": "数据隐私违规的处罚是真实存在的，但合规不必是一个令人望而生畏的庞大项目——只要方法得当，它完全可以从一开始就融入应用架构之中。",
+        "tags": [
+          "数据安全",
+          "商业",
+          "指南"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "ai-coding-assistant-masa-depan-pengembangan-software",
+    "date": "2026-07-07",
+    "readMinutes": 9,
+    "c": "#9333EA",
+    "c2": "#581C87",
+    "i18n": {
+      "id": {
+        "title": "AI Coding Assistant: Masa Depan Pengembangan Software & Aplikasi Bisnis",
+        "description": "AI coding assistant mengubah cara developer membangun website, aplikasi, dan sistem bisnis — mempercepat development tanpa mengorbankan kualitas. Pelajari cara kerjanya dan dampaknya bagi bisnis yang ingin membangun software di 2026.",
+        "excerpt": "Developer kini menulis kode berdampingan dengan AI yang menyarankan baris berikutnya, menemukan bug sebelum production, dan bahkan menulis seluruh fungsi dari deskripsi sederhana — mengubah ekonomi pengembangan software secara fundamental.",
+        "tags": [
+          "AI",
+          "Software",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "AI Coding Assistants: The Future of Software & Business App Development",
+        "description": "AI coding assistants are changing how developers build websites, apps, and business systems — speeding up development without sacrificing quality. Learn how it works and what it means for businesses building software in 2026.",
+        "excerpt": "Developers now write code alongside AI that suggests the next line, catches bugs before production, and even writes entire functions from a plain description — fundamentally changing the economics of software development.",
+        "tags": [
+          "AI",
+          "Software",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "AI编程助手：软件与企业应用开发的未来",
+        "description": "AI编程助手正在改变开发者构建网站、应用和企业系统的方式——在不牺牲质量的前提下加快开发速度。了解其工作原理，以及2026年对希望构建软件的企业意味着什么。",
+        "excerpt": "开发者如今与AI并肩编写代码——AI能实时建议下一行代码、在上线前发现漏洞，甚至根据简单描述编写整个函数——从根本上改变了软件开发的经济模式。",
+        "tags": [
+          "人工智能",
+          "软件",
+          "技术"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "composable-commerce-headless-architecture-2026",
+    "date": "2026-07-07",
+    "readMinutes": 9,
+    "c": "#4F46E5",
+    "c2": "#312E81",
+    "i18n": {
+      "id": {
+        "title": "Composable Commerce & Headless Architecture: Bisnis Digital Modular di 2026",
+        "description": "Composable commerce dan headless architecture memungkinkan bisnis menyusun platform digital dari komponen modular yang bisa diganti kapan saja. Pelajari cara kerja, manfaat, dan kapan waktu tepat mengadopsinya di 2026.",
+        "excerpt": "Platform e-commerce monolitik memaksa bisnis mengikuti batasan satu vendor. Composable commerce membalik logika itu — bisnis yang memilih komponen mana yang dipakai, bukan sebaliknya.",
+        "tags": [
+          "E-Commerce",
+          "Teknologi",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Composable Commerce & Headless Architecture: Modular Digital Business in 2026",
+        "description": "Composable commerce and headless architecture let businesses assemble their digital platform from modular components that can be swapped out anytime. Learn how it works, its benefits, and when to adopt it in 2026.",
+        "excerpt": "Monolithic e-commerce platforms force businesses to work within one vendor’s limits. Composable commerce flips that logic — businesses choose which components to use, not the other way around.",
+        "tags": [
+          "E-Commerce",
+          "Technology",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "可组合商务与无头架构：2026年模块化数字商业",
+        "description": "可组合商务与无头（Headless）架构让企业能够用可随时替换的模块化组件搭建自己的数字平台。了解其工作原理、优势，以及2026年何时该采用这一方案。",
+        "excerpt": "单体电商平台迫使企业只能在单一供应商设定的框架内运作。可组合商务颠覆了这个逻辑——由企业决定使用哪些组件，而不是反过来。",
+        "tags": [
+          "电子商务",
+          "技术",
+          "商业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-pos-kasir-digital-retail-2026",
+    "date": "2026-07-07",
+    "readMinutes": 9,
+    "c": "#0D9488",
+    "c2": "#134E4A",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi POS (Kasir Digital) 2026: Solusi Modern untuk Retail & F&B",
+        "description": "Aplikasi POS digital menggantikan mesin kasir konvensional dengan sistem cloud yang terhubung real-time. Pelajari fitur wajib, jenis, biaya, dan cara memilih POS yang tepat untuk bisnis retail atau F&B Anda di 2026.",
+        "excerpt": "Mesin kasir lama mencatat transaksi, tapi tidak bisa menjawab pertanyaan paling penting pemilik bisnis: produk apa yang paling laku, cabang mana yang paling untung, dan kapan harus restock.",
+        "tags": [
+          "Aplikasi Mobile",
+          "Retail",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "POS (Digital Cashier) Apps 2026: A Modern Solution for Retail & F&B",
+        "description": "Digital POS apps replace conventional cash registers with cloud systems synced in real time. Learn the must-have features, types, costs, and how to choose the right POS for your retail or F&B business in 2026.",
+        "excerpt": "An old cash register records transactions, but it can’t answer the questions business owners actually need answered: which product sells best, which branch is most profitable, and when to restock.",
+        "tags": [
+          "Mobile Apps",
+          "Retail",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "2026年POS收银系统应用：零售与餐饮行业的现代化解决方案",
+        "description": "数字化POS收银应用正在取代传统收银机，通过云端系统实现实时同步。了解2026年零售与餐饮企业必备的功能、类型、成本，以及如何选择合适的POS系统。",
+        "excerpt": "传统收银机只会记录交易，却无法回答企业主最关心的问题：哪款产品卖得最好、哪家分店最赚钱、什么时候该补货。",
+        "tags": [
+          "移动应用",
+          "零售",
+          "商业"
+        ]
+      }
+    }
+  },
+  {
     "slug": "sistem-antrian-digital-queue-management",
     "date": "2026-07-06",
     "readMinutes": 7,
