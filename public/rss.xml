@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Tue, 07 Jul 2026 02:27:43 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 02:15:09 GMT</lastBuildDate>
+    <item>
+      <title>ERP AI Copilot 2026: Otomasi Cerdas di Dalam Sistem Bisnis</title>
+      <link>https://afss.tech/blog/erp-ai-copilot-otomasi-cerdas-2026</link>
+      <guid>https://afss.tech/blog/erp-ai-copilot-otomasi-cerdas-2026</guid>
+      <description>AI copilot yang tertanam langsung di dalam ERP kini bisa menjawab pertanyaan bisnis, membaca faktur, dan memberi peringatan dini stok habis dalam hitungan detik.</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <category>ERP</category>
+      <category>AI</category>
+      <category>Otomasi</category>
+    </item>
+    <item>
+      <title>AR/VR &amp; Spatial Computing: Teknologi Interaksi Bisnis 2026</title>
+      <link>https://afss.tech/blog/ar-vr-spatial-computing-bisnis-2026</link>
+      <guid>https://afss.tech/blog/ar-vr-spatial-computing-bisnis-2026</guid>
+      <description>AR/VR bukan lagi gimmick pameran. Pelajari cara bisnis memakai spatial computing untuk showroom virtual, dukungan teknis jarak jauh, dan pelatihan staf, lengkap dengan kisaran biaya.</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <category>AR/VR</category>
+      <category>Teknologi</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Aset &amp; Maintenance (CMMS) untuk Bisnis</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-aset-maintenance-bisnis</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-aset-maintenance-bisnis</guid>
+      <description>Downtime mesin yang tidak terjadwal bisa menggerus jutaan rupiah dalam hitungan jam. Begini cara aplikasi CMMS custom membantu pabrik dan pengelola gedung mencegahnya.</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Manufaktur</category>
+      <category>Maintenance</category>
+    </item>
+    <item>
+      <title>Aplikasi Fintech Pembiayaan Digital untuk UMKM: Panduan Build</title>
+      <link>https://afss.tech/blog/aplikasi-fintech-pembiayaan-digital-umkm</link>
+      <guid>https://afss.tech/blog/aplikasi-fintech-pembiayaan-digital-umkm</guid>
+      <description>UMKM sering ditolak bank karena tidak punya agunan atau riwayat kredit formal. Aplikasi fintech pembiayaan digital bisa menutup celah itu — begini cara membangunnya dengan benar.</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Fintech</category>
+      <category>Aplikasi</category>
+      <category>UMKM</category>
+    </item>
+    <item>
+      <title>Sistem ERP Multi-Cabang: Kelola Semua Lokasi dari Satu Dashboard</title>
+      <link>https://afss.tech/blog/sistem-erp-multi-cabang-bisnis-nasional</link>
+      <guid>https://afss.tech/blog/sistem-erp-multi-cabang-bisnis-nasional</guid>
+      <description>Bisnis dengan banyak cabang sering terjebak spreadsheet terpisah dan laporan yang telat. Begini cara ERP multi-cabang menyatukan stok, keuangan, dan tim jadi satu sistem yang bisa dipantau real-time.</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <category>ERP</category>
+      <category>Bisnis</category>
+      <category>Multi-Cabang</category>
+    </item>
     <item>
       <title>Digital Twin: Simulasi Digital untuk Optimasi Bisnis &amp; Manufaktur 2026</title>
       <link>https://afss.tech/blog/digital-twin-simulasi-bisnis-manufaktur</link>

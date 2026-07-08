@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "erp-ai-copilot-otomasi-cerdas-2026",
+    "date": "2026-07-08",
+    "readMinutes": 8,
+    "c": "#2563EB",
+    "c2": "#1E3A8A",
+    "i18n": {
+      "id": {
+        "title": "ERP AI Copilot 2026: Otomasi Cerdas di Dalam Sistem Bisnis",
+        "description": "ERP AI copilot mengubah cara tim finance dan gudang bekerja tahun 2026. Kenali fitur, arsitektur, risiko, dan estimasi biaya membangunnya di Indonesia.",
+        "excerpt": "AI copilot yang tertanam langsung di dalam ERP kini bisa menjawab pertanyaan bisnis, membaca faktur, dan memberi peringatan dini stok habis dalam hitungan detik.",
+        "tags": [
+          "ERP",
+          "AI",
+          "Otomasi"
+        ]
+      },
+      "en": {
+        "title": "ERP AI Copilot 2026: Smart Automation Inside Business Systems",
+        "description": "ERP AI copilots are changing how finance and warehouse teams work in 2026. Learn the features, architecture, risks, and build costs for Indonesian firms.",
+        "excerpt": "An AI copilot embedded inside your ERP can now answer business questions, read supplier invoices, and flag stockout risk in seconds instead of days.",
+        "tags": [
+          "ERP",
+          "AI",
+          "Automation"
+        ]
+      },
+      "zh": {
+        "title": "2026年ERP AI副驾驶：企业系统内的智能自动化",
+        "description": "2026年，嵌入ERP系统的AI副驾驶正在改变财务和仓库团队的工作方式。了解其功能、架构、风险以及在印尼建设的大致成本。",
+        "excerpt": "直接嵌入ERP系统内部的AI副驾驶如今能在几秒钟内回答业务问题、读取供应商发票、并预警缺货风险。",
+        "tags": [
+          "ERP",
+          "人工智能",
+          "自动化"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "ar-vr-spatial-computing-bisnis-2026",
+    "date": "2026-07-08",
+    "readMinutes": 8,
+    "c": "#DB2777",
+    "c2": "#831843",
+    "i18n": {
+      "id": {
+        "title": "AR/VR & Spatial Computing: Teknologi Interaksi Bisnis 2026",
+        "description": "AR, VR, dan spatial computing kini jadi alat bisnis nyata: showroom virtual, WebAR e-commerce, pelatihan VR, hingga estimasi biaya di Indonesia.",
+        "excerpt": "AR/VR bukan lagi gimmick pameran. Pelajari cara bisnis memakai spatial computing untuk showroom virtual, dukungan teknis jarak jauh, dan pelatihan staf, lengkap dengan kisaran biaya.",
+        "tags": [
+          "AR/VR",
+          "Teknologi",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "AR/VR & Spatial Computing: The New Business Toolkit 2026",
+        "description": "AR, VR, and spatial computing are now practical business tools: virtual showrooms, WebAR for e-commerce, VR training, and real cost benchmarks for 2026.",
+        "excerpt": "AR/VR has moved past trade-show gimmicks. See how businesses use spatial computing for virtual showrooms, remote support, and staff training, with realistic cost ranges.",
+        "tags": [
+          "AR/VR",
+          "Technology",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "AR/VR 与空间计算：2026商业互动新利器",
+        "description": "AR、VR与空间计算正成为实用商业工具：虚拟展厅、WebAR电商应用、VR培训，附印尼盾成本参考区间。",
+        "excerpt": "AR/VR不再只是展会噱头。了解企业如何利用空间计算打造虚拟展厅、远程技术支持与员工培训，并附上真实成本区间。",
+        "tags": [
+          "AR/VR",
+          "科技",
+          "商业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-aset-maintenance-bisnis",
+    "date": "2026-07-08",
+    "readMinutes": 8,
+    "c": "#7C3AED",
+    "c2": "#4C1D95",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Aset & Maintenance (CMMS) untuk Bisnis",
+        "description": "Kenali cara kerja aplikasi CMMS dan manajemen aset untuk menekan downtime mesin, mengatur preventive maintenance, dan menghemat biaya operasional pabrik.",
+        "excerpt": "Downtime mesin yang tidak terjadwal bisa menggerus jutaan rupiah dalam hitungan jam. Begini cara aplikasi CMMS custom membantu pabrik dan pengelola gedung mencegahnya.",
+        "tags": [
+          "Aplikasi",
+          "Manufaktur",
+          "Maintenance"
+        ]
+      },
+      "en": {
+        "title": "Asset Management & CMMS Apps to Cut Machine Downtime",
+        "description": "See how CMMS and asset management apps track equipment, schedule preventive maintenance, and cut unplanned downtime for factories, fleets, and buildings.",
+        "excerpt": "One unplanned breakdown can cost a plant tens of millions of rupiah in a single afternoon. Here's how a custom CMMS app helps operations teams catch problems before they happen.",
+        "tags": [
+          "Application",
+          "Manufacturing",
+          "Maintenance"
+        ]
+      },
+      "zh": {
+        "title": "资产管理与CMMS维护系统：减少设备停机时间",
+        "description": "了解CMMS资产管理系统如何追踪设备、安排预防性维护，帮助工厂、物业和车队大幅降低非计划停机损失。",
+        "excerpt": "一次突发故障就可能让工厂一下午损失数千万印尼盾。看看定制CMMS系统如何帮助运营团队在问题发生前就发现隐患。",
+        "tags": [
+          "应用",
+          "制造业",
+          "维护管理"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-fintech-pembiayaan-digital-umkm",
+    "date": "2026-07-08",
+    "readMinutes": 8,
+    "c": "#166534",
+    "c2": "#14532D",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Fintech Pembiayaan Digital untuk UMKM: Panduan Build",
+        "description": "Panduan membangun aplikasi fintech lending untuk UMKM: KYC, credit scoring, alur pencairan, kepatuhan OJK, biaya, dan studi kasus nyata.",
+        "excerpt": "UMKM sering ditolak bank karena tidak punya agunan atau riwayat kredit formal. Aplikasi fintech pembiayaan digital bisa menutup celah itu — begini cara membangunnya dengan benar.",
+        "tags": [
+          "Fintech",
+          "Aplikasi",
+          "UMKM"
+        ]
+      },
+      "en": {
+        "title": "Fintech Lending Apps for SMEs: A Practical Build Guide",
+        "description": "How to build a fintech lending app for SMEs: KYC, credit scoring, disbursement, compliance, realistic costs, and a working case study.",
+        "excerpt": "Traditional banks reject most small businesses over collateral and credit history. Custom fintech lending apps close that gap — here's what it actually takes to build one.",
+        "tags": [
+          "Fintech",
+          "Application",
+          "SME"
+        ]
+      },
+      "zh": {
+        "title": "中小企业金融科技借贷应用开发实用指南",
+        "description": "如何搭建面向中小企业的金融科技借贷应用：KYC、信用评分、放款集成、合规要点、成本预估与真实案例解析。",
+        "excerpt": "传统银行常因缺乏抵押品和信用记录而拒绝中小企业贷款申请。定制化金融科技借贷应用正在填补这一空白，本文讲清楚具体该怎么做。",
+        "tags": [
+          "金融科技",
+          "应用",
+          "中小企业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-erp-multi-cabang-bisnis-nasional",
+    "date": "2026-07-08",
+    "readMinutes": 8,
+    "c": "#0F766E",
+    "c2": "#134E4A",
+    "i18n": {
+      "id": {
+        "title": "Sistem ERP Multi-Cabang: Kelola Semua Lokasi dari Satu Dashboard",
+        "description": "Panduan lengkap ERP multi-cabang untuk retail, F&B, dan klinik: fitur wajib, kisaran biaya di Indonesia, dan studi kasus ekspansi 3 ke 15 cabang.",
+        "excerpt": "Bisnis dengan banyak cabang sering terjebak spreadsheet terpisah dan laporan yang telat. Begini cara ERP multi-cabang menyatukan stok, keuangan, dan tim jadi satu sistem yang bisa dipantau real-time.",
+        "tags": [
+          "ERP",
+          "Bisnis",
+          "Multi-Cabang"
+        ]
+      },
+      "en": {
+        "title": "Multi-Branch ERP: One Dashboard for Every Location",
+        "description": "A practical guide to multi-branch ERP for retail, F&B, and clinics: must-have features, Indonesian cost ranges, and a 3-to-15-branch case study.",
+        "excerpt": "Running multiple locations on separate spreadsheets breeds stock errors and stale reports. Here's how multi-branch ERP unifies inventory, finance, and HR into one real-time system.",
+        "tags": [
+          "ERP",
+          "Business",
+          "Multi-Branch"
+        ]
+      },
+      "zh": {
+        "title": "多分店ERP系统：一个后台管理所有门店",
+        "description": "零售、餐饮和诊所连锁的多分店ERP实用指南：必备功能、印尼市场报价区间，以及从3家到15家分店的真实案例。",
+        "excerpt": "多家门店各自为政的Excel表格，往往意味着库存对不上、报表总是慢半拍。看看多分店ERP如何把库存、财务和人事整合进一个实时系统。",
+        "tags": [
+          "ERP",
+          "商业",
+          "多分店"
+        ]
+      }
+    }
+  },
+  {
     "slug": "digital-twin-simulasi-bisnis-manufaktur",
     "date": "2026-07-07",
     "readMinutes": 9,
