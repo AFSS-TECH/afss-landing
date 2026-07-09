@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Wed, 08 Jul 2026 02:15:09 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 02:31:55 GMT</lastBuildDate>
+    <item>
+      <title>Aplikasi PMS Hotel &amp; Booking Pariwisata: Kelola Kamar, Harga, dan Tamu dalam Satu Sistem</title>
+      <link>https://afss.tech/blog/aplikasi-pariwisata-hotel-property-management-system</link>
+      <guid>https://afss.tech/blog/aplikasi-pariwisata-hotel-property-management-system</guid>
+      <description>Resepsionis hotel masih mencatat reservasi manual di buku, sementara kamar yang sama bisa double-booking dari OTA berbeda di waktu bersamaan. Aplikasi PMS menyatukan booking, harga, dan operasional hotel dalam satu sistem real-time.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Pariwisata</category>
+      <category>Hospitality</category>
+    </item>
+    <item>
+      <title>Autentikasi Passwordless: Kenapa Aplikasi Bisnis Harus Tinggalkan Password di 2026</title>
+      <link>https://afss.tech/blog/autentikasi-passwordless-keamanan-aplikasi-2026</link>
+      <guid>https://afss.tech/blog/autentikasi-passwordless-keamanan-aplikasi-2026</guid>
+      <description>Password adalah celah keamanan nomor satu di hampir semua kebocoran data besar. Autentikasi passwordless — dari passkey hingga biometrik — menutup celah itu sekaligus membuat proses login lebih cepat bagi pengguna.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Keamanan</category>
+      <category>Aplikasi</category>
+      <category>Autentikasi</category>
+    </item>
+    <item>
+      <title>GEO (Generative Engine Optimization): Cara Website Muncul di Jawaban ChatGPT &amp; AI Overview</title>
+      <link>https://afss.tech/blog/optimasi-mesin-pencari-ai-generative-engine-optimization-2026</link>
+      <guid>https://afss.tech/blog/optimasi-mesin-pencari-ai-generative-engine-optimization-2026</guid>
+      <description>SEO klasik mengejar peringkat #1 di Google. GEO mengejar sesuatu yang lebih penting sekarang: disebut sebagai sumber jawaban oleh ChatGPT, Perplexity, dan AI Overview — sebelum pengunjung sempat klik link mana pun.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <category>SEO</category>
+      <category>AI</category>
+      <category>Digital Marketing</category>
+    </item>
+    <item>
+      <title>Aplikasi ESG &amp; Laporan Keberlanjutan: Kenapa Bisnis Butuh Sistem Ini di 2026</title>
+      <link>https://afss.tech/blog/aplikasi-esg-sustainability-reporting-bisnis</link>
+      <guid>https://afss.tech/blog/aplikasi-esg-sustainability-reporting-bisnis</guid>
+      <description>Investor dan buyer ekspor kini minta laporan emisi karbon dan skor keberlanjutan, bukan cuma laporan keuangan. Begini cara aplikasi ESG mengotomasi pengumpulan data yang selama ini tersebar di puluhan spreadsheet berbeda.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <category>ESG</category>
+      <category>Sustainability</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>ERP Sekolah &amp; Kampus: Satu Sistem untuk Akademik, SPP, dan Data Siswa</title>
+      <link>https://afss.tech/blog/erp-sistem-informasi-akademik-sekolah-kampus</link>
+      <guid>https://afss.tech/blog/erp-sistem-informasi-akademik-sekolah-kampus</guid>
+      <description>Guru sibuk input nilai manual di kertas, bendahara kejar-kejaran menagih SPP lewat WhatsApp, dan orang tua tidak tahu perkembangan anaknya di sekolah. ERP sekolah menyatukan akademik, keuangan, dan komunikasi orang tua dalam satu sistem.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <category>ERP</category>
+      <category>Pendidikan</category>
+      <category>Sekolah</category>
+    </item>
     <item>
       <title>ERP AI Copilot 2026: Otomasi Cerdas di Dalam Sistem Bisnis</title>
       <link>https://afss.tech/blog/erp-ai-copilot-otomasi-cerdas-2026</link>

@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-pariwisata-hotel-property-management-system",
+    "date": "2026-07-09",
+    "readMinutes": 9,
+    "c": "#D97706",
+    "c2": "#78350F",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi PMS Hotel & Booking Pariwisata: Kelola Kamar, Harga, dan Tamu dalam Satu Sistem",
+        "description": "Panduan lengkap Property Management System (PMS) dan aplikasi booking untuk hotel, villa, dan bisnis pariwisata: fitur wajib, integrasi OTA, dynamic pricing, kisaran biaya, dan studi kasus peningkatan okupansi.",
+        "excerpt": "Resepsionis hotel masih mencatat reservasi manual di buku, sementara kamar yang sama bisa double-booking dari OTA berbeda di waktu bersamaan. Aplikasi PMS menyatukan booking, harga, dan operasional hotel dalam satu sistem real-time.",
+        "tags": [
+          "Aplikasi",
+          "Pariwisata",
+          "Hospitality"
+        ]
+      },
+      "en": {
+        "title": "Hotel PMS & Travel Booking App: Manage Rooms, Rates, and Guests in One System",
+        "description": "A complete guide to Property Management Systems (PMS) and booking apps for hotels, villas, and travel businesses: must-have features, OTA integration, dynamic pricing, cost ranges, and a case study on rising occupancy.",
+        "excerpt": "A hotel receptionist is still logging reservations by hand while the same room gets double-booked across different OTAs at the same time. A PMS app brings booking, pricing, and hotel operations into one real-time system.",
+        "tags": [
+          "Application",
+          "Travel",
+          "Hospitality"
+        ]
+      },
+      "zh": {
+        "title": "酒店PMS与旅游预订应用：一套系统管理客房、房价与客人",
+        "description": "全面指南：面向酒店、别墅与旅游企业的物业管理系统（PMS）与预订应用——必备功能、OTA平台对接、动态定价、费用参考，以及入住率提升的真实案例。",
+        "excerpt": "酒店前台仍在手工登记预订，而同一间房却可能在不同OTA平台上被同时重复预订。PMS应用能把预订、房价与酒店运营整合进一套实时系统。",
+        "tags": [
+          "应用",
+          "旅游",
+          "酒店业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "autentikasi-passwordless-keamanan-aplikasi-2026",
+    "date": "2026-07-09",
+    "readMinutes": 9,
+    "c": "#DC2626",
+    "c2": "#7F1D1D",
+    "i18n": {
+      "id": {
+        "title": "Autentikasi Passwordless: Kenapa Aplikasi Bisnis Harus Tinggalkan Password di 2026",
+        "description": "Panduan lengkap autentikasi passwordless (passkey, biometrik, magic link) untuk aplikasi bisnis: kenapa password makin berbahaya, cara kerja passkey, kisaran biaya implementasi, dan studi kasus penurunan kebocoran akun.",
+        "excerpt": "Password adalah celah keamanan nomor satu di hampir semua kebocoran data besar. Autentikasi passwordless — dari passkey hingga biometrik — menutup celah itu sekaligus membuat proses login lebih cepat bagi pengguna.",
+        "tags": [
+          "Keamanan",
+          "Aplikasi",
+          "Autentikasi"
+        ]
+      },
+      "en": {
+        "title": "Passwordless Authentication: Why Business Apps Must Ditch Passwords in 2026",
+        "description": "A complete guide to passwordless authentication (passkeys, biometrics, magic links) for business apps: why passwords keep getting more dangerous, how passkeys work, implementation cost ranges, and a case study on cutting account takeovers.",
+        "excerpt": "Passwords are the number-one weakness behind nearly every major data breach. Passwordless authentication — from passkeys to biometrics — closes that gap while making login faster for users.",
+        "tags": [
+          "Security",
+          "Application",
+          "Authentication"
+        ]
+      },
+      "zh": {
+        "title": "无密码身份验证：2026年商业应用为何必须告别密码",
+        "description": "全面指南：面向商业应用的无密码身份验证（密钥、生物识别、魔法链接）——密码为何日益危险、密钥的工作原理、实施费用参考，以及降低账户被盗案例的真实研究。",
+        "excerpt": "在几乎所有重大数据泄露事件中，密码都是头号安全弱点。无密码身份验证——从密钥到生物识别——能弥补这一漏洞，同时让用户登录更快捷。",
+        "tags": [
+          "安全",
+          "应用",
+          "身份验证"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "optimasi-mesin-pencari-ai-generative-engine-optimization-2026",
+    "date": "2026-07-09",
+    "readMinutes": 9,
+    "c": "#C026D3",
+    "c2": "#701A75",
+    "i18n": {
+      "id": {
+        "title": "GEO (Generative Engine Optimization): Cara Website Muncul di Jawaban ChatGPT & AI Overview",
+        "description": "Panduan GEO/AEO 2026: cara mengoptimalkan website agar dikutip oleh ChatGPT, Perplexity, dan Google AI Overview, lengkap dengan structured data, llms.txt, dan strategi konten yang disukai AI.",
+        "excerpt": "SEO klasik mengejar peringkat #1 di Google. GEO mengejar sesuatu yang lebih penting sekarang: disebut sebagai sumber jawaban oleh ChatGPT, Perplexity, dan AI Overview — sebelum pengunjung sempat klik link mana pun.",
+        "tags": [
+          "SEO",
+          "AI",
+          "Digital Marketing"
+        ]
+      },
+      "en": {
+        "title": "GEO (Generative Engine Optimization): Getting Your Website Into ChatGPT & AI Overview Answers",
+        "description": "A 2026 guide to GEO/AEO: how to optimize your website so it gets cited by ChatGPT, Perplexity, and Google AI Overview, covering structured data, llms.txt, and content strategies AI models prefer.",
+        "excerpt": "Classic SEO chases the #1 spot on Google. GEO chases something more important now: being named as the source in ChatGPT, Perplexity, and AI Overview answers — before a visitor ever clicks a link.",
+        "tags": [
+          "SEO",
+          "AI",
+          "Digital Marketing"
+        ]
+      },
+      "zh": {
+        "title": "GEO（生成式引擎优化）：让您的网站出现在ChatGPT与AI概览的回答中",
+        "description": "2026年GEO/AEO指南：如何优化网站，使其被ChatGPT、Perplexity和Google AI概览引用，涵盖结构化数据、llms.txt文件以及AI模型偏好的内容策略。",
+        "excerpt": "传统SEO追求的是Google排名第一。而GEO追求的是当下更重要的事：在用户点击任何链接之前，先被ChatGPT、Perplexity和AI概览指名为答案来源。",
+        "tags": [
+          "SEO",
+          "AI",
+          "数字营销"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-esg-sustainability-reporting-bisnis",
+    "date": "2026-07-09",
+    "readMinutes": 9,
+    "c": "#16A34A",
+    "c2": "#052E16",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi ESG & Laporan Keberlanjutan: Kenapa Bisnis Butuh Sistem Ini di 2026",
+        "description": "Panduan lengkap software ESG dan pelaporan keberlanjutan untuk bisnis Indonesia: regulasi OJK, tekanan supply chain global, fitur wajib, kisaran biaya, dan cara memulai tanpa tim sustainability besar.",
+        "excerpt": "Investor dan buyer ekspor kini minta laporan emisi karbon dan skor keberlanjutan, bukan cuma laporan keuangan. Begini cara aplikasi ESG mengotomasi pengumpulan data yang selama ini tersebar di puluhan spreadsheet berbeda.",
+        "tags": [
+          "ESG",
+          "Sustainability",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "ESG & Sustainability Reporting Software: Why Business Needs It in 2026",
+        "description": "A complete guide to ESG and sustainability reporting software for Indonesian business: OJK regulation, global supply chain pressure, must-have features, cost ranges, and how to start without a large sustainability team.",
+        "excerpt": "Investors and export buyers now demand carbon emission and sustainability scores, not just financial statements. Here's how ESG software automates data collection that used to be scattered across dozens of spreadsheets.",
+        "tags": [
+          "ESG",
+          "Sustainability",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "ESG与可持续发展报告软件：2026年企业为何离不开它",
+        "description": "全面指南：面向印尼企业的ESG与可持续发展报告软件——OJK监管要求、全球供应链压力、必备功能、费用参考，以及在没有大型可持续发展团队的情况下如何起步。",
+        "excerpt": "投资者和出口买家如今要求提供碳排放和可持续发展评分，而不只是财务报表。以下是ESG软件如何自动化收集那些曾经分散在数十张表格中的数据。",
+        "tags": [
+          "ESG",
+          "可持续发展",
+          "商业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "erp-sistem-informasi-akademik-sekolah-kampus",
+    "date": "2026-07-09",
+    "readMinutes": 9,
+    "c": "#0891B2",
+    "c2": "#164E63",
+    "i18n": {
+      "id": {
+        "title": "ERP Sekolah & Kampus: Satu Sistem untuk Akademik, SPP, dan Data Siswa",
+        "description": "Panduan lengkap sistem informasi akademik (ERP sekolah) untuk yayasan pendidikan, sekolah, dan kampus: modul wajib, integrasi Dapodik/PDDikti, kisaran biaya, dan studi kasus digitalisasi 1 ke 6 unit sekolah.",
+        "excerpt": "Guru sibuk input nilai manual di kertas, bendahara kejar-kejaran menagih SPP lewat WhatsApp, dan orang tua tidak tahu perkembangan anaknya di sekolah. ERP sekolah menyatukan akademik, keuangan, dan komunikasi orang tua dalam satu sistem.",
+        "tags": [
+          "ERP",
+          "Pendidikan",
+          "Sekolah"
+        ]
+      },
+      "en": {
+        "title": "School & Campus ERP: One System for Academics, Tuition Billing, and Student Data",
+        "description": "A complete guide to school information systems (school ERP) for education foundations, schools, and campuses: must-have modules, government reporting integration, cost ranges, and a case study of digitizing from 1 to 6 school units.",
+        "excerpt": "Teachers stuck writing report cards by hand, treasurers chasing tuition payments over chat, and parents left in the dark about their child's progress. A school ERP brings academics, finance, and parent communication into one system.",
+        "tags": [
+          "ERP",
+          "Education",
+          "School"
+        ]
+      },
+      "zh": {
+        "title": "校园ERP系统：一套系统统管教务、学费与学生数据",
+        "description": "全面指南：面向教育基金会、学校与高校的校务信息系统（校园ERP）——必备模块、政府报送系统对接、费用参考，以及从1所到6所学校数字化转型的真实案例。",
+        "excerpt": "老师忙于手写成绩单，财务人员在聊天群里追缴学费，家长却对孩子的学习进展一无所知。校园ERP系统能把教务、财务和家校沟通整合进同一套系统。",
+        "tags": [
+          "ERP",
+          "教育",
+          "学校"
+        ]
+      }
+    }
+  },
+  {
     "slug": "erp-ai-copilot-otomasi-cerdas-2026",
     "date": "2026-07-08",
     "readMinutes": 8,
