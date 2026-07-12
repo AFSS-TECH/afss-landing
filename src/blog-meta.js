@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-ats-rekrutmen-talent-acquisition",
+    "date": "2026-07-13",
+    "readMinutes": 10,
+    "c": "#B45309",
+    "c2": "#451A03",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi ATS: Membangun Sistem Rekrutmen dan Talent Acquisition yang Efisien",
+        "description": "Panduan membangun Applicant Tracking System (ATS) untuk bisnis Indonesia — fitur wajib, biaya, timeline, dan studi kasus nyata rekrutmen lebih cepat.",
+        "excerpt": "Rekrutmen manual lewat spreadsheet dan grup WhatsApp membuat kandidat terbaik kabur ke kompetitor. Begini cara membangun ATS yang benar-benar mempercepat proses hiring.",
+        "tags": [
+          "Aplikasi",
+          "HR",
+          "Rekrutmen"
+        ]
+      },
+      "en": {
+        "title": "Applicant Tracking System (ATS): Building Recruitment Software That Actually Works",
+        "description": "A practical guide to building an Applicant Tracking System for growing businesses — must-have features, costs, timelines, and a real case study.",
+        "excerpt": "Manual hiring through spreadsheets and WhatsApp groups costs you your best candidates. Here's how to build an ATS that actually speeds up hiring.",
+        "tags": [
+          "Application",
+          "HR",
+          "Recruitment"
+        ]
+      },
+      "zh": {
+        "title": "招聘管理系统（ATS）：为企业打造真正高效的人才招聘软件",
+        "description": "面向成长型企业的招聘管理系统（ATS）搭建指南——必备功能、成本与周期估算，以及真实案例分析。",
+        "excerpt": "用表格和微信群手动招聘，正在让你错失最优秀的候选人。这篇文章讲清楚如何搭建一套真正提速招聘的ATS系统。",
+        "tags": [
+          "应用",
+          "人力资源",
+          "招聘"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "arsitektur-keamanan-zero-trust-bisnis",
+    "date": "2026-07-13",
+    "readMinutes": 10,
+    "c": "#0F4C5C",
+    "c2": "#082B33",
+    "i18n": {
+      "id": {
+        "title": "Arsitektur Keamanan Zero Trust: Never Trust, Always Verify untuk Aplikasi Bisnis Modern",
+        "description": "Panduan implementasi arsitektur Zero Trust untuk ERP dan aplikasi bisnis — komponen wajib, build vs adopsi platform, biaya, timeline, dan studi kasus nyata di Indonesia.",
+        "excerpt": "Model keamanan perimeter lama runtuh begitu karyawan bekerja dari mana saja dan data tersebar di banyak cloud. Zero Trust mengubah cara bisnis melindungi sistem intinya — dari 'percaya karena di dalam jaringan' menjadi 'verifikasi setiap saat, tanpa kecuali'.",
+        "tags": [
+          "Keamanan",
+          "Arsitektur",
+          "Zero Trust"
+        ]
+      },
+      "en": {
+        "title": "Zero Trust Security Architecture for Business Applications: Never Trust, Always Verify",
+        "description": "A practical guide to implementing Zero Trust architecture for ERP and business apps — core components, build vs. platform, cost, timeline, and a real Indonesian case study.",
+        "excerpt": "Perimeter security collapses once employees work from anywhere and data lives across multiple clouds. Zero Trust rebuilds how businesses protect their core systems — from 'trust because you're inside the network' to 'verify continuously, no exceptions.'",
+        "tags": [
+          "Security",
+          "Architecture",
+          "Zero Trust"
+        ]
+      },
+      "zh": {
+        "title": "企业应用的零信任安全架构：永不信任，始终验证",
+        "description": "面向ERP和企业应用的零信任架构实施指南——核心组件、自建与平台选型、成本与周期，以及印尼真实案例。",
+        "excerpt": "当员工可以随时随地办公、数据分散在多个云端时，传统的边界安全模型已经失效。零信任重塑了企业保护核心系统的方式——从'因为在网络内部所以信任'转变为'持续验证，毫无例外'。",
+        "tags": [
+          "安全",
+          "架构",
+          "零信任"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "customer-data-platform-cdp-marketing-automation",
+    "date": "2026-07-13",
+    "readMinutes": 10,
+    "c": "#7E22CE",
+    "c2": "#3B0764",
+    "i18n": {
+      "id": {
+        "title": "Customer Data Platform (CDP): Menyatukan Data Pelanggan untuk Marketing Automation yang Benar-Benar Personal",
+        "description": "Panduan lengkap CDP untuk bisnis Indonesia: cara menyatukan data pelanggan dari web, app, POS, CRM, dan media sosial, plus estimasi biaya, timeline, dan studi kasus nyata.",
+        "excerpt": "Tim marketing Anda mungkin sedang mengirim promo ke pelanggan yang baru saja churn, atau tidak mengenali pelanggan setia yang berbelanja offline. Inilah kenapa Customer Data Platform menjadi kebutuhan, bukan kemewahan.",
+        "tags": [
+          "Marketing",
+          "CDP",
+          "Data"
+        ]
+      },
+      "en": {
+        "title": "Customer Data Platform (CDP): Unifying Customer Data for Marketing Automation That Actually Feels Personal",
+        "description": "A complete guide to CDPs for growing businesses: how to unify customer data across web, app, POS, CRM, and social, plus realistic cost, timeline, and case study.",
+        "excerpt": "Your marketing team might be sending a win-back promo to a customer who just churned, or failing to recognize a loyal offline shopper online. Here's why a Customer Data Platform has become a necessity, not a luxury.",
+        "tags": [
+          "Marketing",
+          "Data",
+          "CDP"
+        ]
+      },
+      "zh": {
+        "title": "客户数据平台（CDP）：整合客户数据，让营销自动化真正实现个性化",
+        "description": "面向成长型企业的CDP完整指南：如何整合网站、应用、POS、CRM和社交媒体的客户数据，附真实成本、周期和案例研究。",
+        "excerpt": "你的营销团队可能正在给刚刚流失的客户发送挽回优惠，或者认不出线上线下都活跃的忠实顾客。这就是为什么客户数据平台已从奢侈品变成必需品。",
+        "tags": [
+          "营销",
+          "数据",
+          "客户数据平台"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "tanda-tangan-digital-e-meterai-kepatuhan-bisnis",
+    "date": "2026-07-13",
+    "readMinutes": 12,
+    "c": "#4338CA",
+    "c2": "#1E1B4B",
+    "i18n": {
+      "id": {
+        "title": "Tanda Tangan Digital & E-Meterai: Panduan Kepatuhan untuk Bisnis",
+        "description": "Panduan lengkap integrasi tanda tangan digital dan e-meterai Peruri untuk kontrak, HR, dan penjualan — fitur wajib, biaya, timeline, dan studi kasus nyata.",
+        "excerpt": "Tanda tangan basah dan meterai tempel masih jadi penyumbat leher botol terbesar dalam proses kontrak bisnis Indonesia. Begini cara mengintegrasikan tanda tangan digital dan e-meterai secara legal dan efisien.",
+        "tags": [
+          "Aplikasi",
+          "Keamanan",
+          "Tanda Tangan Digital"
+        ]
+      },
+      "en": {
+        "title": "Digital Signatures & E-Stamp Duty: A Compliance Guide for Businesses",
+        "description": "A practical guide to integrating digital signatures and Indonesia's e-meterai stamp duty into contracts, HR, and sales — features, costs, timeline, and a real case study.",
+        "excerpt": "Wet-ink signatures and physical stamp duty are still the biggest bottleneck in Indonesian business contracts. Here is how to integrate digital signatures and e-stamp duty legally and efficiently.",
+        "tags": [
+          "Application",
+          "Security",
+          "Digital Signature"
+        ]
+      },
+      "zh": {
+        "title": "电子签名与电子印花税合规指南:企业契约数字化实践",
+        "description": "面向企业的电子签名与印尼电子印花税(e-meterai)整合指南——必备功能、成本预算、实施周期与真实案例分析。",
+        "excerpt": "湿墨签名与实体印花税仍是印尼企业合同流程中最大的瓶颈。本文讲解如何合法、高效地将电子签名与电子印花税整合进合同、人力资源与销售流程。",
+        "tags": [
+          "应用",
+          "安全",
+          "电子签名"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "software-e-invoicing-kepatuhan-pajak-digital-2026",
+    "date": "2026-07-13",
+    "readMinutes": 10,
+    "c": "#0F766E",
+    "c2": "#042F2E",
+    "i18n": {
+      "id": {
+        "title": "Software E-Invoicing & Kepatuhan Pajak Digital: Panduan Integrasi Coretax untuk Bisnis Indonesia",
+        "description": "Panduan lengkap membangun atau mengintegrasikan software e-invoicing dan kepatuhan pajak digital dengan Coretax DJP, lengkap dengan estimasi biaya, timeline, dan studi kasus nyata.",
+        "excerpt": "Faktur ditolak sistem Coretax menjelang deadline pelaporan bukan lagi kejadian langka. Berikut cara bisnis Indonesia membangun sistem e-invoicing yang benar-benar patuh dan tahan audit.",
+        "tags": [
+          "ERP",
+          "Pajak",
+          "E-Invoicing"
+        ]
+      },
+      "en": {
+        "title": "E-Invoicing & Digital Tax Compliance Software: The Coretax Integration Playbook for Indonesian Businesses",
+        "description": "A practical guide to building or integrating e-invoicing and digital tax compliance software with Indonesia's Coretax, with cost estimates, timelines, and a real case study.",
+        "excerpt": "A rejected batch of e-Faktur invoices the night before a filing deadline is becoming a familiar nightmare. Here's how Indonesian businesses are building tax systems that actually hold up under audit.",
+        "tags": [
+          "ERP",
+          "Tax",
+          "E-Invoicing"
+        ]
+      },
+      "zh": {
+        "title": "电子发票与数字税务合规软件：印尼企业对接 Coretax 系统实战指南",
+        "description": "电子发票与数字税务合规软件实战指南:如何与印尼 Coretax 系统对接,涵盖成本估算、实施周期与真实案例。",
+        "excerpt": "报税截止日前一晚,一批电子发票被系统打回——这已成为许多企业财务人员的噩梦。看看印尼企业如何搭建真正经得起稽查的数字税务系统。",
+        "tags": [
+          "ERP系统",
+          "税务",
+          "电子发票"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-asuransi-digital-klaim-online-insurtech",
     "date": "2026-07-12",
     "readMinutes": 11,

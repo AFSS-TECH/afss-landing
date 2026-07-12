@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Sun, 12 Jul 2026 13:13:39 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2026 18:37:11 GMT</lastBuildDate>
+    <item>
+      <title>Aplikasi ATS: Membangun Sistem Rekrutmen dan Talent Acquisition yang Efisien</title>
+      <link>https://afss.tech/blog/aplikasi-ats-rekrutmen-talent-acquisition</link>
+      <guid>https://afss.tech/blog/aplikasi-ats-rekrutmen-talent-acquisition</guid>
+      <description>Rekrutmen manual lewat spreadsheet dan grup WhatsApp membuat kandidat terbaik kabur ke kompetitor. Begini cara membangun ATS yang benar-benar mempercepat proses hiring.</description>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>HR</category>
+      <category>Rekrutmen</category>
+    </item>
+    <item>
+      <title>Arsitektur Keamanan Zero Trust: Never Trust, Always Verify untuk Aplikasi Bisnis Modern</title>
+      <link>https://afss.tech/blog/arsitektur-keamanan-zero-trust-bisnis</link>
+      <guid>https://afss.tech/blog/arsitektur-keamanan-zero-trust-bisnis</guid>
+      <description>Model keamanan perimeter lama runtuh begitu karyawan bekerja dari mana saja dan data tersebar di banyak cloud. Zero Trust mengubah cara bisnis melindungi sistem intinya — dari 'percaya karena di dalam jaringan' menjadi 'verifikasi setiap saat, tanpa kecuali'.</description>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Keamanan</category>
+      <category>Arsitektur</category>
+      <category>Zero Trust</category>
+    </item>
+    <item>
+      <title>Customer Data Platform (CDP): Menyatukan Data Pelanggan untuk Marketing Automation yang Benar-Benar Personal</title>
+      <link>https://afss.tech/blog/customer-data-platform-cdp-marketing-automation</link>
+      <guid>https://afss.tech/blog/customer-data-platform-cdp-marketing-automation</guid>
+      <description>Tim marketing Anda mungkin sedang mengirim promo ke pelanggan yang baru saja churn, atau tidak mengenali pelanggan setia yang berbelanja offline. Inilah kenapa Customer Data Platform menjadi kebutuhan, bukan kemewahan.</description>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Marketing</category>
+      <category>CDP</category>
+      <category>Data</category>
+    </item>
+    <item>
+      <title>Tanda Tangan Digital &amp; E-Meterai: Panduan Kepatuhan untuk Bisnis</title>
+      <link>https://afss.tech/blog/tanda-tangan-digital-e-meterai-kepatuhan-bisnis</link>
+      <guid>https://afss.tech/blog/tanda-tangan-digital-e-meterai-kepatuhan-bisnis</guid>
+      <description>Tanda tangan basah dan meterai tempel masih jadi penyumbat leher botol terbesar dalam proses kontrak bisnis Indonesia. Begini cara mengintegrasikan tanda tangan digital dan e-meterai secara legal dan efisien.</description>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Keamanan</category>
+      <category>Tanda Tangan Digital</category>
+    </item>
+    <item>
+      <title>Software E-Invoicing &amp; Kepatuhan Pajak Digital: Panduan Integrasi Coretax untuk Bisnis Indonesia</title>
+      <link>https://afss.tech/blog/software-e-invoicing-kepatuhan-pajak-digital-2026</link>
+      <guid>https://afss.tech/blog/software-e-invoicing-kepatuhan-pajak-digital-2026</guid>
+      <description>Faktur ditolak sistem Coretax menjelang deadline pelaporan bukan lagi kejadian langka. Berikut cara bisnis Indonesia membangun sistem e-invoicing yang benar-benar patuh dan tahan audit.</description>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
+      <category>ERP</category>
+      <category>Pajak</category>
+      <category>E-Invoicing</category>
+    </item>
     <item>
       <title>Aplikasi Asuransi Digital &amp; Klaim Online: Panduan InsurTech untuk Perusahaan Asuransi</title>
       <link>https://afss.tech/blog/aplikasi-asuransi-digital-klaim-online-insurtech</link>
