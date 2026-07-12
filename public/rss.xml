@@ -6,7 +6,58 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Thu, 09 Jul 2026 02:31:55 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2026 13:13:39 GMT</lastBuildDate>
+    <item>
+      <title>Aplikasi Asuransi Digital &amp; Klaim Online: Panduan InsurTech untuk Perusahaan Asuransi</title>
+      <link>https://afss.tech/blog/aplikasi-asuransi-digital-klaim-online-insurtech</link>
+      <guid>https://afss.tech/blog/aplikasi-asuransi-digital-klaim-online-insurtech</guid>
+      <description>Nasabah menunggu berminggu-minggu untuk klaim cair, sementara kompetitor sudah menyelesaikannya dalam hitungan jam. Ketahui cara aplikasi InsurTech mengubah bisnis asuransi Anda.</description>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Asuransi</category>
+      <category>InsurTech</category>
+    </item>
+    <item>
+      <title>Aplikasi AgriTech: Smart Farming &amp; Rantai Pasok Pertanian Digital untuk Koperasi Tani</title>
+      <link>https://afss.tech/blog/aplikasi-agritech-smart-farming-rantai-pasok-pertanian</link>
+      <guid>https://afss.tech/blog/aplikasi-agritech-smart-farming-rantai-pasok-pertanian</guid>
+      <description>Koperasi tani masih andalkan telepon dan catatan manual? Pelajari cara aplikasi agritech custom untuk smart farming, rantai pasok, dan marketplace petani-pembeli menekan susut panen dan menaikkan pendapatan petani.</description>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Pertanian</category>
+      <category>AgriTech</category>
+      <category>Rantai Pasok</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Teknisi Lapangan: Solusi Field Service untuk Bisnis Servis di Indonesia</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-teknisi-lapangan-field-service</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-teknisi-lapangan-field-service</guid>
+      <description>Tim teknisi lapangan Anda masih diatur lewat telepon dan WhatsApp? Kenali aplikasi field service management: fitur wajib, biaya pengembangan, dan studi kasus perusahaan servis AC yang produktivitasnya naik 59%.</description>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Operasional</category>
+      <category>Field Service</category>
+    </item>
+    <item>
+      <title>Website &amp; Aplikasi CRM Properti: Kunci Agensi Real Estate Menang Persaingan</title>
+      <link>https://afss.tech/blog/website-aplikasi-crm-properti-real-estate</link>
+      <guid>https://afss.tech/blog/website-aplikasi-crm-properti-real-estate</guid>
+      <description>Tanpa CRM properti, lead menguap dalam hitungan menit dan unit bisa dijanjikan ke dua klien sekaligus. Simak fitur wajib, kisaran biaya, dan studi kasus agensi penggandaan closing.</description>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Properti</category>
+      <category>PropTech</category>
+    </item>
+    <item>
+      <title>Aplikasi Telemedicine &amp; Kesehatan Digital: Panduan Membangun Sistem untuk Klinik dan Rumah Sakit di Indonesia</title>
+      <link>https://afss.tech/blog/aplikasi-telemedicine-kesehatan-digital</link>
+      <guid>https://afss.tech/blog/aplikasi-telemedicine-kesehatan-digital</guid>
+      <description>Dari booking pasien hingga integrasi BPJS dan SATUSEHAT — pelajari fitur wajib, estimasi biaya dalam Rupiah, dan studi kasus nyata membangun aplikasi telemedicine untuk klinik di Indonesia.</description>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Kesehatan</category>
+      <category>Healthtech</category>
+    </item>
     <item>
       <title>Aplikasi PMS Hotel &amp; Booking Pariwisata: Kelola Kamar, Harga, dan Tamu dalam Satu Sistem</title>
       <link>https://afss.tech/blog/aplikasi-pariwisata-hotel-property-management-system</link>

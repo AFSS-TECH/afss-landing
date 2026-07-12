@@ -4,6 +4,204 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-asuransi-digital-klaim-online-insurtech",
+    "date": "2026-07-12",
+    "readMinutes": 11,
+    "c": "#7C2D12",
+    "c2": "#431407",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Asuransi Digital & Klaim Online: Panduan InsurTech untuk Perusahaan Asuransi",
+        "description": "Aplikasi asuransi digital dengan klaim online, underwriting berbasis AI, dan portal agen mempercepat proses bisnis. Simak fitur, biaya, dan studi kasus lengkapnya.",
+        "excerpt": "Nasabah menunggu berminggu-minggu untuk klaim cair, sementara kompetitor sudah menyelesaikannya dalam hitungan jam. Ketahui cara aplikasi InsurTech mengubah bisnis asuransi Anda.",
+        "tags": [
+          "Aplikasi",
+          "Asuransi",
+          "InsurTech"
+        ]
+      },
+      "en": {
+        "title": "Digital Insurance & Online Claims App: An InsurTech Guide for Insurers",
+        "description": "A digital insurance app with online claims, AI-driven underwriting, and an agent portal speeds up every core process. See the features, costs, and a real case study.",
+        "excerpt": "Customers wait weeks for a claim to be settled while competitors resolve theirs in hours. Learn how an InsurTech app can transform your insurance business.",
+        "tags": [
+          "Application",
+          "Insurance",
+          "InsurTech"
+        ]
+      },
+      "zh": {
+        "title": "数字保险与在线理赔应用：印尼保险科技(InsurTech)开发指南",
+        "description": "数字保险应用集在线理赔、AI智能核保与代理人门户于一体，大幅提升业务效率。了解核心功能、开发成本与真实案例分析。",
+        "excerpt": "客户等待数周才能拿到理赔款,而竞争对手几小时内就能完成结案。了解保险科技应用如何彻底改变您的保险业务运营方式。",
+        "tags": [
+          "应用",
+          "保险",
+          "保险科技"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-agritech-smart-farming-rantai-pasok-pertanian",
+    "date": "2026-07-12",
+    "readMinutes": 13,
+    "c": "#15803D",
+    "c2": "#14532D",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi AgriTech: Smart Farming & Rantai Pasok Pertanian Digital untuk Koperasi Tani",
+        "description": "Bangun aplikasi agritech custom untuk smart farming, rantai pasok pertanian digital, dan marketplace petani-pembeli. Kurangi susut panen, percepat pembayaran ke petani.",
+        "excerpt": "Koperasi tani masih andalkan telepon dan catatan manual? Pelajari cara aplikasi agritech custom untuk smart farming, rantai pasok, dan marketplace petani-pembeli menekan susut panen dan menaikkan pendapatan petani.",
+        "tags": [
+          "Aplikasi",
+          "Pertanian",
+          "AgriTech",
+          "Rantai Pasok"
+        ]
+      },
+      "en": {
+        "title": "AgriTech App Development: Smart Farming & Digital Agriculture Supply Chain Software",
+        "description": "Build a custom agritech app for smart farming, digital agriculture supply chains, and farmer-buyer marketplaces. Cut harvest losses and speed up farmer payments.",
+        "excerpt": "Still running your cooperative on phone calls and paper ledgers? See how a custom agritech app for smart farming, supply chain management, and farmer marketplaces cuts harvest losses and raises farmer income.",
+        "tags": [
+          "Application",
+          "Agriculture",
+          "AgriTech",
+          "Supply Chain"
+        ]
+      },
+      "zh": {
+        "title": "农业科技应用开发:智慧农业与数字化农业供应链软件解决方案",
+        "description": "为智慧农业、数字化农业供应链和农户买家交易市场打造定制agritech应用,减少收成损耗,加快农户货款结算,提升农户收入。",
+        "excerpt": "合作社还在靠电话和纸质账本运作?了解定制agritech应用如何通过智慧农业、供应链管理和农户交易市场,显著降低收成损耗并提升农户收入。",
+        "tags": [
+          "应用",
+          "农业",
+          "农业科技",
+          "供应链"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-teknisi-lapangan-field-service",
+    "date": "2026-07-12",
+    "readMinutes": 12,
+    "c": "#0369A1",
+    "c2": "#0C4A6E",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Teknisi Lapangan: Solusi Field Service untuk Bisnis Servis di Indonesia",
+        "description": "Panduan lengkap aplikasi manajemen teknisi lapangan (field service management) untuk bisnis servis AC, internet, lift, hingga perbaikan alat — fitur, biaya, dan studi kasus nyata.",
+        "excerpt": "Tim teknisi lapangan Anda masih diatur lewat telepon dan WhatsApp? Kenali aplikasi field service management: fitur wajib, biaya pengembangan, dan studi kasus perusahaan servis AC yang produktivitasnya naik 59%.",
+        "tags": [
+          "Aplikasi",
+          "Operasional",
+          "Field Service"
+        ]
+      },
+      "en": {
+        "title": "Field Service Management App: The Complete Guide for Indonesian Service Businesses",
+        "description": "A complete guide to field service management apps for AC service, internet, elevator, and repair businesses — must-have features, costs, and a real case study.",
+        "excerpt": "Still coordinating field technicians by phone and WhatsApp? Discover how a field service management app cuts response times, tracks spare parts, and lifted one AC service company's productivity by 59%.",
+        "tags": [
+          "Application",
+          "Operations",
+          "Field Service"
+        ]
+      },
+      "zh": {
+        "title": "现场服务管理应用完整指南:印尼服务企业的技师调度与运营利器",
+        "description": "面向空调、宽带、电梯、家电维修等企业的现场服务管理应用完整指南,涵盖必备功能、开发成本区间与真实案例分析。",
+        "excerpt": "还在用电话和微信群调度外勤技师?了解现场服务管理应用如何缩短响应时间、追踪备件库存,并让一家空调服务企业的生产力提升59%。",
+        "tags": [
+          "应用",
+          "运营",
+          "现场服务"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "website-aplikasi-crm-properti-real-estate",
+    "date": "2026-07-12",
+    "readMinutes": 12,
+    "c": "#B45309",
+    "c2": "#78350F",
+    "i18n": {
+      "id": {
+        "title": "Website & Aplikasi CRM Properti: Kunci Agensi Real Estate Menang Persaingan",
+        "description": "Panduan lengkap membangun website & CRM properti custom untuk agen dan developer real estate di Indonesia — fitur wajib, biaya, timeline, dan studi kasus nyata.",
+        "excerpt": "Tanpa CRM properti, lead menguap dalam hitungan menit dan unit bisa dijanjikan ke dua klien sekaligus. Simak fitur wajib, kisaran biaya, dan studi kasus agensi penggandaan closing.",
+        "tags": [
+          "Aplikasi",
+          "Properti",
+          "PropTech"
+        ]
+      },
+      "en": {
+        "title": "Real Estate Website & CRM: The System Property Agencies Need to Compete",
+        "description": "A guide to building a custom real estate website & CRM for agencies and developers in Indonesia — features, costs, timelines, and a real case study.",
+        "excerpt": "Without a property CRM, leads vanish within minutes and the same unit can get promised to two buyers at once. See the must-have features, cost ranges, and a case study of doubled monthly closings.",
+        "tags": [
+          "Application",
+          "Real Estate",
+          "PropTech"
+        ]
+      },
+      "zh": {
+        "title": "房产网站与CRM系统：房产中介赢得市场竞争的关键武器",
+        "description": "面向印尼房产中介与开发商的定制网站与CRM系统完整指南——必备功能、开发成本、项目周期与真实案例分析。",
+        "excerpt": "没有房产CRM系统,线索会在几分钟内流失,同一套房甚至可能被承诺给两位买家。了解必备功能、合理的开发成本区间,以及一家中介公司把月成交量翻倍的真实案例。",
+        "tags": [
+          "应用",
+          "房地产",
+          "地产科技"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-telemedicine-kesehatan-digital",
+    "date": "2026-07-12",
+    "readMinutes": 12,
+    "c": "#1D4ED8",
+    "c2": "#1E3A8A",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Telemedicine & Kesehatan Digital: Panduan Membangun Sistem untuk Klinik dan Rumah Sakit di Indonesia",
+        "description": "Panduan membangun aplikasi telemedicine untuk klinik, rumah sakit, dan startup kesehatan di Indonesia — fitur wajib, biaya, timeline, dan studi kasus nyata.",
+        "excerpt": "Dari booking pasien hingga integrasi BPJS dan SATUSEHAT — pelajari fitur wajib, estimasi biaya dalam Rupiah, dan studi kasus nyata membangun aplikasi telemedicine untuk klinik di Indonesia.",
+        "tags": [
+          "Aplikasi",
+          "Kesehatan",
+          "Healthtech"
+        ]
+      },
+      "en": {
+        "title": "Telemedicine & Digital Health Apps: A Guide to Building Systems for Clinics and Hospitals in Indonesia",
+        "description": "A guide to building a telemedicine app for clinics, hospitals, and health startups in Indonesia — must-have features, costs, timeline, and a real case study.",
+        "excerpt": "From patient booking to BPJS and SATUSEHAT integration — learn the must-have features, Rupiah cost estimates, and a real case study for building a telemedicine app in Indonesia.",
+        "tags": [
+          "Application",
+          "Healthcare",
+          "Healthtech"
+        ]
+      },
+      "zh": {
+        "title": "远程医疗与数字健康应用：印尼诊所与医院系统搭建指南",
+        "description": "面向印尼诊所、医院与医疗健康创业公司的远程医疗应用搭建完整指南——必备功能、开发成本、周期规划与真实案例分析。",
+        "excerpt": "从病人预约挂号到BPJS与SATUSEHAT系统对接——了解在印尼搭建远程医疗应用所需的必备功能、印尼盾成本区间与真实案例。",
+        "tags": [
+          "应用",
+          "医疗",
+          "健康科技"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-pariwisata-hotel-property-management-system",
     "date": "2026-07-09",
     "readMinutes": 9,
