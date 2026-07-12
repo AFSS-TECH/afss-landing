@@ -8,8 +8,8 @@ import { Head } from 'vite-react-ssg'
 import { Icon } from './Icon.jsx'
 import { ProductFinder } from './ProductFinder.jsx'
 import {
-  BRAND, products, workflow as steps, stats,
-  waLink, clients, techStack,
+  BRAND, WA, products, workflow as steps, stats,
+  clients, techStack,
 } from './data.js'
 import { SITE_URL, formatDateId, formatDate } from './site.js'
 import { postsMeta } from './blog-meta.js'
@@ -17,6 +17,14 @@ import { Link, RawLink } from './i18n/link.jsx'
 import { LocaleProvider, useLocale, pick } from './i18n/context.jsx'
 import { LOCALES, LOCALE_SHORT, withLocale, safeLocalePath, setLocaleCookie } from './i18n/locales.js'
 import { useHreflangTags } from './i18n/HreflangTags.jsx'
+import { useSectionOverride } from './lib/content.js'
+import { STRINGS } from './i18n/strings.js'
+
+// Dashboard-editable brand/contact info — falls back to data.js's BRAND/WA
+// until the admin dashboard's Supabase-stored override loads client-side.
+const BRAND_FALLBACK = { ...BRAND, wa: WA }
+const useBrand = () => useSectionOverride('brand', BRAND_FALLBACK)
+const buildWaLink = (wa, msg) => `https://wa.me/${wa}?text=${encodeURIComponent(msg)}`
 
 /* ── Motion presets — enter recipe: opacity + y, smooth easing (GPU-cheap, no filter) ── */
 const fadeUp = {
@@ -118,6 +126,7 @@ export function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const { locale, t } = useLocale()
+  const brand = useBrand()
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30)
     window.addEventListener('scroll', onScroll)
@@ -142,7 +151,7 @@ export function Nav() {
           ))}
           <li><Link to="/ajukan-proyek" className="nav-cta-link">{t('nav.ajukanProyek')}</Link></li>
           <li><LangSwitcher /></li>
-          <li><a href={waLink(t('wa.navConsult', { brand: BRAND.short }))} className="btn btn-pri" target="_blank" rel="noreferrer">{t('nav.konsultasiGratis')}</a></li>
+          <li><a href={buildWaLink(brand.wa, t('wa.navConsult', { brand: brand.short }))} className="btn btn-pri" target="_blank" rel="noreferrer">{t('nav.konsultasiGratis')}</a></li>
         </ul>
         <button className="hamburger" aria-label={t('nav.menu')} onClick={() => setOpen((o) => !o)}><span /><span /><span /></button>
       </div>
@@ -154,7 +163,7 @@ export function Nav() {
             ))}
             <Link to="/ajukan-proyek" onClick={close}>{t('nav.ajukanProyek')}</Link>
             <LangSwitcher mobile onNavigate={close} />
-            <a href={waLink(t('wa.navConsult', { brand: BRAND.short }))} className="btn btn-pri" target="_blank" rel="noreferrer" onClick={close}>{t('nav.konsultasiGratis')}</a>
+            <a href={buildWaLink(brand.wa, t('wa.navConsult', { brand: brand.short }))} className="btn btn-pri" target="_blank" rel="noreferrer" onClick={close}>{t('nav.konsultasiGratis')}</a>
           </motion.div>
         )}
       </AnimatePresence>
@@ -163,8 +172,14 @@ export function Nav() {
 }
 
 /* ════════════════════════════════════════════════ HERO */
+const pickHero = (s) => ({ badge: s.hero.badge, h1Pre: s.hero.h1Pre, h1Ital: s.hero.h1Ital, h1Post: s.hero.h1Post, lead: s.hero.lead })
+const HERO_FALLBACK = { id: pickHero(STRINGS.id), en: pickHero(STRINGS.en), zh: pickHero(STRINGS.zh) }
+
 function Hero() {
-  const { t } = useLocale()
+  const { locale, t } = useLocale()
+  const brand = useBrand()
+  const hero = useSectionOverride('hero', HERO_FALLBACK)
+  const h = hero[locale] || hero.id
   return (
     <section className="hero" id="home">
       <div className="hero-glow" />
@@ -172,16 +187,16 @@ function Hero() {
         <motion.div variants={container} initial="hidden" animate="show">
           <motion.div className="hero-badge" variants={fadeUp}>
             <span className="pulse-dot" />
-            {t('hero.badge')}
+            {h.badge}
           </motion.div>
           <motion.h1 variants={fadeUp}>
-            {t('hero.h1Pre')}<span className="ital">{t('hero.h1Ital')}</span>{t('hero.h1Post')}
+            {h.h1Pre}<span className="ital">{h.h1Ital}</span>{h.h1Post}
           </motion.h1>
           <motion.p className="lead" variants={fadeUp}>
-            {t('hero.lead')}
+            {h.lead}
           </motion.p>
           <motion.div className="hero-cta" variants={fadeUp}>
-            <Magnetic href={waLink(t('wa.heroConsult', { brand: BRAND.short }))} className="btn btn-wa btn-lg" target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('hero.ctaWa')}</Magnetic>
+            <Magnetic href={buildWaLink(brand.wa, t('wa.heroConsult', { brand: brand.short }))} className="btn btn-wa btn-lg" target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('hero.ctaWa')}</Magnetic>
             <Link to="/portofolio" className="btn btn-ghost btn-lg">{t('hero.ctaPortfolio')} <Icon icon="fa-solid fa-arrow-right" /></Link>
           </motion.div>
           <motion.div className="hero-trust" variants={fadeUp}>
@@ -238,7 +253,8 @@ function Hero() {
 /* ════════════════════════════════════════════════ STATS BAND */
 function StatsBand() {
   const { locale } = useLocale()
-  const items = stats.map((s) => pick(s, locale))
+  const statsOverride = useSectionOverride('stats', stats)
+  const items = statsOverride.map((s) => pick(s, locale))
   return (
     <div className="stats-band">
       <motion.div className="stats-card" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
@@ -263,9 +279,14 @@ const WHY_US_VISUAL = [
   { icon: 'fa-solid fa-chart-line', color: '#10C7B2', bg: 'rgba(16,199,178,.1)' },
 ]
 
+const WHY_US_FALLBACK = STRINGS.id.whyUs.items.map((idItem, i) => ({
+  i18n: { id: idItem, en: STRINGS.en.whyUs.items[i], zh: STRINGS.zh.whyUs.items[i] },
+}))
+
 function WhyUs() {
-  const { t } = useLocale()
-  const items = t('whyUs.items')
+  const { locale, t } = useLocale()
+  const whyUsOverride = useSectionOverride('why_us', WHY_US_FALLBACK)
+  const items = whyUsOverride.map((it) => pick(it, locale))
   return (
     <section className="whyus-home">
       <div className="container">
@@ -290,7 +311,8 @@ function WhyUs() {
 /* ════════════════════════════════════════════════ TRUST BAR — client / industry strip */
 function TrustBar() {
   const { locale, t } = useLocale()
-  const localized = clients.map((c) => pick(c, locale))
+  const clientsOverride = useSectionOverride('clients', clients)
+  const localized = clientsOverride.map((c) => pick(c, locale))
   const doubled = [...localized, ...localized]
   return (
     <div className="trustbar">
@@ -348,7 +370,8 @@ function Services() {
 /* ════════════════════════════════════════════════ PROCESS — 6 langkah */
 function Process() {
   const { locale, t } = useLocale()
-  const items = steps.map((s) => pick(s, locale))
+  const stepsOverride = useSectionOverride('workflow', steps)
+  const items = stepsOverride.map((s) => pick(s, locale))
   return (
     <section className="process" id="process">
       <div className="container">
@@ -383,9 +406,15 @@ const ADDON_VISUAL = [
   { icon: 'fa-solid fa-pen-ruler', color: '#2563FF', bg: 'rgba(37,99,255,.09)' },
 ]
 
+const ADDONS_FALLBACK = STRINGS.id.addons.items.map((idItem, i) => ({
+  i18n: { id: idItem, en: STRINGS.en.addons.items[i], zh: STRINGS.zh.addons.items[i] },
+}))
+
 function AddOns() {
-  const { t } = useLocale()
-  const items = t('addons.items')
+  const { locale, t } = useLocale()
+  const brand = useBrand()
+  const addonsOverride = useSectionOverride('addons', ADDONS_FALLBACK)
+  const items = addonsOverride.map((a) => pick(a, locale))
   return (
     <section className="addons-sec">
       <div className="container">
@@ -408,7 +437,7 @@ function AddOns() {
         </motion.div>
         <Reveal className="addons-note">
           {t('addons.notePre')}<b>{t('addons.noteBold')}</b>{t('addons.notePost')}{' '}
-          <a href={waLink(t('wa.addonAsk', { brand: BRAND.short }))} target="_blank" rel="noreferrer" className="accent-link">{t('addons.askWa')}</a>
+          <a href={buildWaLink(brand.wa, t('wa.addonAsk', { brand: brand.short }))} target="_blank" rel="noreferrer" className="accent-link">{t('addons.askWa')}</a>
         </Reveal>
       </div>
     </section>
@@ -418,6 +447,7 @@ function AddOns() {
 /* ════════════════════════════════════════════════ TECH STACK / TEKNOLOGI */
 function TechStack() {
   const { t } = useLocale()
+  const techStackOverride = useSectionOverride('tech_stack', techStack)
   return (
     <section className="tech" id="tech">
       <div className="container">
@@ -427,7 +457,7 @@ function TechStack() {
           <p className="sec-sub">{t('techStack.sub')}</p>
         </Reveal>
         <motion.div className="tech-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
-          {techStack.map((tech) => (
+          {techStackOverride.map((tech) => (
             <motion.div className="tech-chip" key={tech.name} variants={fadeUp} whileHover={{ y: -4 }} transition={{ type: 'spring', stiffness: 320, damping: 22 }}>
               <Icon icon={tech.icon} /> <span>{tech.name}</span>
             </motion.div>
@@ -478,13 +508,14 @@ function BlogTeaser() {
 /* ════════════════════════════════════════════════ CTA BAND */
 function CtaBand() {
   const { t } = useLocale()
+  const brand = useBrand()
   return (
     <section className="cta-band">
       <Reveal className="cta-card">
         <h2>{t('cta.titlePre')}<span className="ital">{t('cta.titleItal')}</span>{t('cta.titlePost')}</h2>
         <p>{t('cta.desc')}</p>
         <div className="btns">
-          <Magnetic href={waLink(t('wa.ctaStart', { brand: BRAND.short }))} className="btn btn-pri btn-lg" target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('cta.start')}</Magnetic>
+          <Magnetic href={buildWaLink(brand.wa, t('wa.ctaStart', { brand: brand.short }))} className="btn btn-pri btn-lg" target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('cta.start')}</Magnetic>
           <Link to="/harga" className="btn btn-ghost btn-lg">{t('cta.viewPricing')}</Link>
         </div>
       </Reveal>
@@ -495,20 +526,21 @@ function CtaBand() {
 /* ════════════════════════════════════════════════ FOOTER */
 export function Footer({ trimmed = false }) {
   const { locale, t } = useLocale()
+  const brand = useBrand()
   return (
     <footer>
       <div className="footer-grid" style={trimmed ? { gridTemplateColumns: '2fr 1.2fr' } : undefined}>
         <div>
           <Logo footer />
-          <p className="ft-legal">{BRAND.legal}</p>
-          <p className="ft-desc">{t('footer.descPre')} {BRAND.tagline}.</p>
+          <p className="ft-legal">{brand.legal}</p>
+          <p className="ft-desc">{t('footer.descPre')} {brand.tagline}.</p>
           <div className="ft-social">
-            {BRAND.social.filter((s) => s.url).map((s) => (
+            {brand.social.filter((s) => s.url).map((s) => (
               <a key={s.name} href={s.url} className="soc" aria-label={s.name} target="_blank" rel="noreferrer">
                 <Icon icon={s.icon} />
               </a>
             ))}
-            <a href={waLink(t('wa.greetShort', { brand: BRAND.short }))} target="_blank" rel="noreferrer" className="soc" aria-label="WhatsApp"><Icon icon="fa-brands fa-whatsapp" /></a>
+            <a href={buildWaLink(brand.wa, t('wa.greetShort', { brand: brand.short }))} target="_blank" rel="noreferrer" className="soc" aria-label="WhatsApp"><Icon icon="fa-brands fa-whatsapp" /></a>
           </div>
         </div>
         {!trimmed && (<>
@@ -541,14 +573,14 @@ export function Footer({ trimmed = false }) {
         <div>
           <div className="ft-head">{t('footer.kontakHead')}</div>
           <ul className="ft-links">
-            <li><a href={waLink(t('wa.greetShort', { brand: BRAND.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" />{BRAND.phone}</a></li>
-            <li><a href={`mailto:${BRAND.email}`}><Icon icon="fa-solid fa-envelope" />{BRAND.email}</a></li>
-            <li><span><Icon icon="fa-solid fa-location-dot" />{BRAND.address}</span></li>
+            <li><a href={buildWaLink(brand.wa, t('wa.greetShort', { brand: brand.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" />{brand.phone}</a></li>
+            <li><a href={`mailto:${brand.email}`}><Icon icon="fa-solid fa-envelope" />{brand.email}</a></li>
+            <li><span><Icon icon="fa-solid fa-location-dot" />{brand.address}</span></li>
           </ul>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} {BRAND.legal}. {t('footer.rights')}</p>
+        <p>© {new Date().getFullYear()} {brand.legal}. {t('footer.rights')}</p>
         {/* Privacy/Terms are Indonesian-only for now (see main.jsx) — always link to the
             unprefixed page directly rather than through the locale-prefixing Link wrapper. */}
         <div className="legal"><RawLink to="/privacy">{t('footer.privacy')}</RawLink><RawLink to="/terms">{t('footer.terms')}</RawLink></div>
@@ -577,6 +609,7 @@ function fmtPrice(val, unitSmall, unitBig) {
 
 function Estimator() {
   const { t } = useLocale()
+  const brand = useBrand()
   const [prodId, setProdId] = useState('profile')
   const [units, setUnits] = useState(5)
   const [addons, setAddons] = useState({})
@@ -596,7 +629,7 @@ function Estimator() {
 
   const waMsg = encodeURIComponent(
     t('estimator.waIntro', {
-      brand: BRAND.short, jenis: label, units, unit,
+      brand: brand.short, jenis: label, units, unit,
       estLow: fmtPrice(low, unitSmall, unitBig), estHigh: fmtPrice(high, unitSmall, unitBig),
     })
   )
@@ -684,7 +717,7 @@ function Estimator() {
 
               <div className="est-divider" />
               <p className="est-note">{t('estimator.note')}</p>
-              <a href={`https://wa.me/628139694307?text=${waMsg}`} target="_blank" rel="noreferrer" className="btn btn-wa" style={{ width: '100%', justifyContent: 'center', marginTop: 8 }}>
+              <a href={`https://wa.me/${brand.wa}?text=${waMsg}`} target="_blank" rel="noreferrer" className="btn btn-wa" style={{ width: '100%', justifyContent: 'center', marginTop: 8 }}>
                 <Icon icon="fa-brands fa-whatsapp" /> {t('estimator.ctaConsult')}
               </a>
               <Link to="/ajukan-proyek" className="btn btn-ghost" style={{ width: '100%', justifyContent: 'center', marginTop: 10 }}>
@@ -701,6 +734,7 @@ function Estimator() {
 /* ════════════════════════════════════════════════ SMART WA FLOAT */
 function SmartWA({ reduce }) {
   const { path, t } = useLocale()
+  const brand = useBrand()
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -714,13 +748,13 @@ function SmartWA({ reduce }) {
     ['/blog', 'blog'], ['/faq', 'faq'],
   ]
   const hit = PATH_KEYS.find(([prefix]) => path.startsWith(prefix))
-  const msg = t(`smartWa.messages.${hit ? hit[1] : 'default'}`, { brand: BRAND.short })
+  const msg = t(`smartWa.messages.${hit ? hit[1] : 'default'}`, { brand: brand.short })
 
   if (!visible) return null
   return (
     <motion.a
       className="float-wa"
-      href={waLink(msg)}
+      href={buildWaLink(brand.wa, msg)}
       target="_blank" rel="noreferrer"
       title={t('smartWa.title')}
       initial={{ scale: 0, opacity: 0 }}

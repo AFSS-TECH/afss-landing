@@ -4,11 +4,18 @@ import { useParams } from 'react-router-dom'
 import { Head } from 'vite-react-ssg'
 import { Icon } from './Icon.jsx'
 import emailjs from '@emailjs/browser'
-import { BRAND, products, why, stats, waLink, getProductBySlug, pricing, pricingBundles, faqs, portfolioProjects } from './data.js'
+import { BRAND, WA, products, why, stats, waLink, getProductBySlug, pricing, pricingBundles, faqs, portfolioProjects } from './data.js'
 import { Link, RawLink } from './i18n/link.jsx'
 import { useLocale, pick } from './i18n/context.jsx'
 import { useHreflangTags } from './i18n/HreflangTags.jsx'
 import { withLocale } from './i18n/locales.js'
+import { useSectionOverride } from './lib/content.js'
+import { supabase } from './lib/supabase.js'
+
+// Dashboard-editable brand/contact info — see src/App.jsx for the matching hook.
+const BRAND_FALLBACK = { ...BRAND, wa: WA }
+const useBrand = () => useSectionOverride('brand', BRAND_FALLBACK)
+const buildWaLink = (wa, msg) => `https://wa.me/${wa}?text=${encodeURIComponent(msg)}`
 
 const SITE_URL = 'https://afss.tech'
 
@@ -609,6 +616,7 @@ const SVC_CATS = [
 
 export function LayananIndex() {
   const { locale, t } = useLocale()
+  const brand = useBrand()
   const hreflangTags = useHreflangTags()
   const canonical = `${SITE_URL}${withLocale(locale, '/layanan')}`
   const title = t('layananIndex.seoTitle')
@@ -642,7 +650,7 @@ export function LayananIndex() {
               <h1 className="page-title">{t('layananIndex.titlePre')}<span className="ital">{t('layananIndex.titleItal')}</span>{t('layananIndex.titlePost')}</h1>
               <p className="page-sub">{t('layananIndex.sub')}</p>
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
-                <a className="btn btn-pri btn-lg" href={waLink(t('keunggulan.waConsult', { brand: BRAND.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('layananIndex.ctaConsult')}</a>
+                <a className="btn btn-pri btn-lg" href={buildWaLink(brand.wa, t('keunggulan.waConsult', { brand: brand.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('layananIndex.ctaConsult')}</a>
                 <Link className="btn btn-ghost btn-lg" to="/portofolio">{t('layananIndex.ctaPortfolio')}</Link>
               </div>
             </Reveal>
@@ -701,7 +709,7 @@ export function LayananIndex() {
           <h2>{t('layananIndex.ctaTitlePre')}<span className="ital">{t('layananIndex.ctaTitleItal')}</span>{t('layananIndex.ctaTitlePost')}</h2>
           <p>{t('layananIndex.ctaDesc')}</p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center' }}>
-            <a className="btn btn-pri btn-lg" href={waLink(t('keunggulan.waConsult', { brand: BRAND.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('layananIndex.ctaConsult')}</a>
+            <a className="btn btn-pri btn-lg" href={buildWaLink(brand.wa, t('keunggulan.waConsult', { brand: brand.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('layananIndex.ctaConsult')}</a>
             <Link className="btn btn-ghost btn-lg" to="/ajukan-proyek"><Icon icon="fa-solid fa-rocket" /> {t('layananIndex.ctaAjukan')}</Link>
           </div>
         </Reveal>
@@ -715,6 +723,7 @@ export function LayananDetail() {
   const { slug } = useParams()
   const [openFaq, setOpenFaq] = useState(-1)
   const { locale, t } = useLocale()
+  const brand = useBrand()
   const hreflangTags = useHreflangTags()
 
   const productRaw = getProductBySlug(slug)
@@ -752,7 +761,7 @@ export function LayananDetail() {
     '@type': 'Service',
     name: product.name,
     description: content.longDesc,
-    provider: { '@type': 'Organization', name: BRAND.legal, url: `${SITE_URL}/` },
+    provider: { '@type': 'Organization', name: brand.legal, url: `${SITE_URL}/` },
     url,
     areaServed: 'ID',
   }
@@ -800,7 +809,7 @@ export function LayananDetail() {
             <h1 className="page-title">{content.headline.split(' ').slice(0, 4).join(' ')} <span className="ital">{content.headline.split(' ').slice(4).join(' ')}</span></h1>
             <p className="page-sub">{content.subline}</p>
             <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 32 }}>
-              <a className="btn btn-pri btn-lg" href={waLink(t('layananDetail.waConsult', { brand: BRAND.short, name: product.name }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('layananDetail.ctaConsult')}</a>
+              <a className="btn btn-pri btn-lg" href={buildWaLink(brand.wa, t('layananDetail.waConsult', { brand: brand.short, name: product.name }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('layananDetail.ctaConsult')}</a>
               <Link className="btn btn-ghost btn-lg" to="/layanan"><Icon icon="fa-solid fa-layer-group" /> {t('layananDetail.ctaMore')}</Link>
             </div>
           </Reveal>
@@ -911,7 +920,7 @@ export function LayananDetail() {
         <Reveal className="cta-card">
           <h2>{t('layananDetail.ctaTitlePre')}<span className="ital">{product.name.toLowerCase()}</span>{t('layananDetail.ctaTitlePost')}</h2>
           <p>{t('layananDetail.ctaDesc')}</p>
-          <a className="btn btn-pri btn-lg" href={waLink(t('layananDetail.waStart', { brand: BRAND.short, name: product.name }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('layananDetail.ctaStart')}</a>
+          <a className="btn btn-pri btn-lg" href={buildWaLink(brand.wa, t('layananDetail.waStart', { brand: brand.short, name: product.name }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('layananDetail.ctaStart')}</a>
         </Reveal>
       </section>
     </>
@@ -921,13 +930,16 @@ export function LayananDetail() {
 /* ══════════════════════════════════════════════════ ABOUT (/tentang) */
 export function About() {
   const { locale, t } = useLocale()
+  const brand = useBrand()
   const hreflangTags = useHreflangTags()
   const canonical = `${SITE_URL}${withLocale(locale, '/tentang')}`
   const title = t('about.seoTitle')
   const desc = t('about.seoDesc')
   const milestones = t('about.milestones')
-  const whyItems = why.map((w) => pick(w, locale))
-  const statsItems = stats.map((s) => pick(s, locale))
+  const whyOverride = useSectionOverride('why', why)
+  const statsOverride = useSectionOverride('stats', stats)
+  const whyItems = whyOverride.map((w) => pick(w, locale))
+  const statsItems = statsOverride.map((s) => pick(s, locale))
   return (
     <>
       <Head>
@@ -955,7 +967,7 @@ export function About() {
               <h1 className="page-title">{t('about.titlePre')}<span className="ital">{t('about.titleItal')}</span>{t('about.titlePost')}</h1>
               <p className="page-sub">{t('about.sub')}</p>
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
-                <a className="btn btn-pri btn-lg" href={waLink(t('about.waIntro', { brand: BRAND.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('about.ctaConsult')}</a>
+                <a className="btn btn-pri btn-lg" href={buildWaLink(brand.wa, t('about.waIntro', { brand: brand.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('about.ctaConsult')}</a>
                 <Link className="btn btn-ghost btn-lg" to="/kontak">{t('about.ctaContact')}</Link>
               </div>
             </Reveal>
@@ -1053,7 +1065,7 @@ export function About() {
           <h2>{t('about.ctaTitlePre')}<span className="ital">{t('about.ctaTitleItal')}</span>{t('about.ctaTitlePost')}</h2>
           <p>{t('about.ctaDesc')}</p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center' }}>
-            <a className="btn btn-pri btn-lg" href={waLink(t('about.waCta', { brand: BRAND.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('about.ctaContact2')}</a>
+            <a className="btn btn-pri btn-lg" href={buildWaLink(brand.wa, t('about.waCta', { brand: brand.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('about.ctaContact2')}</a>
             <Link className="btn btn-ghost btn-lg" to="/kontak">{t('about.ctaContactInfo')}</Link>
           </div>
         </Reveal>
@@ -1070,6 +1082,7 @@ const EMAILJS_KEY      = 'ig9sNOB9hNjTymRoP'
 
 export function Contact() {
   const { locale, t } = useLocale()
+  const brand = useBrand()
   const hreflangTags = useHreflangTags()
   const canonical = `${SITE_URL}${withLocale(locale, '/kontak')}`
   const title = t('contact.seoTitle')
@@ -1102,21 +1115,21 @@ export function Contact() {
         from_contact: form.wa,
         jenis_proyek: form.jenis,
         message: form.pesan,
-        to_email: BRAND.email,
+        to_email: brand.email,
       }, EMAILJS_KEY)
       setStatus('sent')
     } catch {
       // Fallback: redirect ke WA dengan data form
-      const msg = `Halo ${BRAND.short},%0Anama: ${form.nama}%0AKontak: ${form.wa}%0AKebutuhan: ${form.jenis}%0APesan: ${form.pesan}`
-      window.open(`https://wa.me/628139694307?text=${msg}`, '_blank')
+      const msg = `Halo ${brand.short},%0Anama: ${form.nama}%0AKontak: ${form.wa}%0AKebutuhan: ${form.jenis}%0APesan: ${form.pesan}`
+      window.open(`https://wa.me/${brand.wa}?text=${msg}`, '_blank')
       setStatus('sent')
     }
   }
 
   const methods = [
-    { icon: 'fa-brands fa-whatsapp', title: 'WhatsApp', value: BRAND.phone, sub: t('contact.methods.wa.sub'), href: waLink(t('contact.waConsult', { brand: BRAND.short })), cta: t('contact.methods.wa.cta'), color: 'var(--wa)' },
-    { icon: 'fa-solid fa-envelope', title: t('contact.methods.email.title'), value: BRAND.email, sub: t('contact.methods.email.sub'), href: `mailto:${BRAND.email}`, cta: t('contact.methods.email.cta'), color: 'var(--blue)' },
-    { icon: 'fa-solid fa-location-dot', title: t('contact.methods.location.title'), value: BRAND.address, sub: t('contact.methods.location.sub'), href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(BRAND.address)}`, cta: t('contact.methods.location.cta'), color: 'var(--accent)' },
+    { icon: 'fa-brands fa-whatsapp', title: 'WhatsApp', value: brand.phone, sub: t('contact.methods.wa.sub'), href: buildWaLink(brand.wa, t('contact.waConsult', { brand: brand.short })), cta: t('contact.methods.wa.cta'), color: 'var(--wa)' },
+    { icon: 'fa-solid fa-envelope', title: t('contact.methods.email.title'), value: brand.email, sub: t('contact.methods.email.sub'), href: `mailto:${brand.email}`, cta: t('contact.methods.email.cta'), color: 'var(--blue)' },
+    { icon: 'fa-solid fa-location-dot', title: t('contact.methods.location.title'), value: brand.address, sub: t('contact.methods.location.sub'), href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(brand.address)}`, cta: t('contact.methods.location.cta'), color: 'var(--accent)' },
   ]
 
   return (
@@ -1146,7 +1159,7 @@ export function Contact() {
               <h1 className="page-title">{t('contact.titlePre')}<span className="ital">{t('contact.titleItal')}</span>{t('contact.titlePost')}</h1>
               <p className="page-sub">{t('contact.sub')}</p>
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
-                <a className="btn btn-wa btn-lg" href={waLink(t('contact.waConsult', { brand: BRAND.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('contact.ctaChat')}</a>
+                <a className="btn btn-wa btn-lg" href={buildWaLink(brand.wa, t('contact.waConsult', { brand: brand.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('contact.ctaChat')}</a>
                 <a className="btn btn-ghost btn-lg" href="#contact-form">{t('contact.ctaForm')} <Icon icon="fa-solid fa-arrow-down" /></a>
               </div>
             </Reveal>
@@ -1185,7 +1198,7 @@ export function Contact() {
               <div className="success-ico"><Icon icon="fa-solid fa-circle-check" /></div>
               <h3>{t('contact.successTitle')}</h3>
               <p>{t('contact.successPre')}<strong>{form.nama}</strong>{t('contact.successMid')}<strong>{form.wa}</strong>{t('contact.successPost')}</p>
-              <a href={waLink(t('contact.waFollowUp', { brand: BRAND.short, nama: form.nama }))} target="_blank" rel="noreferrer" className="btn btn-wa btn-lg" style={{ marginTop: 24 }}>
+              <a href={buildWaLink(brand.wa, t('contact.waFollowUp', { brand: brand.short, nama: form.nama }))} target="_blank" rel="noreferrer" className="btn btn-wa btn-lg" style={{ marginTop: 24 }}>
                 <Icon icon="fa-brands fa-whatsapp" /> {t('contact.successFollowUp')}
               </a>
             </Reveal>
@@ -1220,7 +1233,7 @@ export function Contact() {
                 {status === 'sending' ? <><Icon icon="fa-solid fa-spinner fa-spin" /> {t('contact.submitting')}</> : <><Icon icon="fa-solid fa-paper-plane" /> {t('contact.submit')}</>}
               </button>
               <p style={{ textAlign: 'center', fontSize: '.8rem', color: 'var(--muted)', marginTop: 12 }}>
-                {t('contact.noForm')}<a href={waLink(t('contact.waDirect', { brand: BRAND.short }))} target="_blank" rel="noreferrer" className="accent-link">{t('contact.noFormLink')}</a>
+                {t('contact.noForm')}<a href={buildWaLink(brand.wa, t('contact.waDirect', { brand: brand.short }))} target="_blank" rel="noreferrer" className="accent-link">{t('contact.noFormLink')}</a>
               </p>
             </form>
           )}
@@ -1295,6 +1308,7 @@ const PORTO_TAB_KEYS = { semua: 'semua', 'landing-page': 'landingPage', 'softwar
 
 export function Portfolio() {
   const { locale, t } = useLocale()
+  const brand = useBrand()
   const hreflangTags = useHreflangTags()
   const canonical = `${SITE_URL}${withLocale(locale, '/portofolio')}`
   const title = t('portfolio.seoTitle')
@@ -1334,7 +1348,7 @@ export function Portfolio() {
               <h1 className="page-title">{t('portfolio.titlePre')}<span className="ital">{t('portfolio.titleItal')}</span>{t('portfolio.titlePost')}</h1>
               <p className="page-sub">{t('portfolio.sub', { count: portfolioProjects.length })}</p>
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
-                <a className="btn btn-wa btn-lg" href={waLink(t('portfolio.waDiscuss', { brand: BRAND.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('portfolio.ctaDiscuss')}</a>
+                <a className="btn btn-wa btn-lg" href={buildWaLink(brand.wa, t('portfolio.waDiscuss', { brand: brand.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('portfolio.ctaDiscuss')}</a>
                 <Link className="btn btn-ghost btn-lg" to="/estimasi"><Icon icon="fa-solid fa-calculator" /> {t('portfolio.ctaEstimate')}</Link>
               </div>
             </Reveal>
@@ -1400,7 +1414,7 @@ export function Portfolio() {
           <h2>{t('portfolio.ctaTitlePre')}<span className="ital">{t('portfolio.ctaTitleItal')}</span>{t('portfolio.ctaTitlePost')}</h2>
           <p>{t('portfolio.ctaDesc')}</p>
           <div className="btns">
-            <a className="btn btn-wa btn-lg" href={waLink(t('portfolio.waDiscuss', { brand: BRAND.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('portfolio.ctaDiscuss')}</a>
+            <a className="btn btn-wa btn-lg" href={buildWaLink(brand.wa, t('portfolio.waDiscuss', { brand: brand.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('portfolio.ctaDiscuss')}</a>
             <Link className="btn btn-ghost btn-lg" to="/estimasi">{t('portfolio.ctaEstimate')} <Icon icon="fa-solid fa-calculator" /></Link>
           </div>
         </Reveal>
@@ -1413,6 +1427,7 @@ export function Portfolio() {
 export function PortfolioDetail() {
   const { slug } = useParams()
   const { locale, t } = useLocale()
+  const brand = useBrand()
   const hreflangTags = useHreflangTags()
   const pRaw = portfolioProjects.find(x => x.slug === slug)
   const p = pRaw ? pick(pRaw, locale) : null
@@ -1607,7 +1622,7 @@ export function PortfolioDetail() {
             <h2 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: 12, color: 'var(--ink)', letterSpacing: '-.03em' }}>{t('portfolio.finalCtaTitle')}</h2>
             <p style={{ color: 'var(--muted)', marginBottom: 28 }}>{t('portfolio.finalCtaDesc')}</p>
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a className="btn btn-wa btn-lg" href={waLink(t('portfolio.waSimilar', { brand: BRAND.short, title: p.title }))} target="_blank" rel="noreferrer">
+              <a className="btn btn-wa btn-lg" href={buildWaLink(brand.wa, t('portfolio.waSimilar', { brand: brand.short, title: p.title }))} target="_blank" rel="noreferrer">
                 <Icon icon="fa-brands fa-whatsapp" /> {t('portfolio.finalCtaDiscuss')}
               </a>
               <Link className="btn btn-ghost btn-lg" to="/portofolio">
@@ -1643,6 +1658,7 @@ function fmtPriceEst(val, unitSmall, unitBig) {
 
 export function Estimasi() {
   const { locale, t } = useLocale()
+  const brand = useBrand()
   const hreflangTags = useHreflangTags()
   const canonical = `${SITE_URL}${withLocale(locale, '/estimasi')}`
   const title = t('estimasi.seoTitle')
@@ -1668,7 +1684,7 @@ export function Estimasi() {
 
   const waMsg = encodeURIComponent(
     t('estimator.waIntro', {
-      brand: BRAND.short, jenis: label, units, unit,
+      brand: brand.short, jenis: label, units, unit,
       estLow: fmtPriceEst(low, unitSmall, unitBig), estHigh: fmtPriceEst(high, unitSmall, unitBig),
     })
   )
@@ -1747,7 +1763,7 @@ export function Estimasi() {
                 </div>
                 <div className="est-divider" />
                 <p className="est-note">{t('estimator.note')}</p>
-                <a href={`https://wa.me/628139694307?text=${waMsg}`} target="_blank" rel="noreferrer" className="btn btn-wa" style={{ width:'100%', justifyContent:'center', marginTop: 8 }}>
+                <a href={`https://wa.me/${brand.wa}?text=${waMsg}`} target="_blank" rel="noreferrer" className="btn btn-wa" style={{ width:'100%', justifyContent:'center', marginTop: 8 }}>
                   <Icon icon="fa-brands fa-whatsapp" /> {t('estimator.ctaConsult')}
                 </a>
                 <Link to="/ajukan-proyek" className="btn btn-ghost" style={{ width:'100%', justifyContent:'center', marginTop: 10 }}>
@@ -1764,7 +1780,7 @@ export function Estimasi() {
           <h2>{t('estimasi.ctaTitlePre')}<span className="ital">{t('estimasi.ctaTitleItal')}</span>{t('estimasi.ctaTitlePost')}</h2>
           <p>{t('estimasi.ctaDesc')}</p>
           <div className="btns">
-            <a className="btn btn-wa btn-lg" href={waLink(t('estimasi.waConsult', { brand: BRAND.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('estimasi.ctaConsult')}</a>
+            <a className="btn btn-wa btn-lg" href={buildWaLink(brand.wa, t('estimasi.waConsult', { brand: brand.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('estimasi.ctaConsult')}</a>
             <Link className="btn btn-ghost btn-lg" to="/portofolio"><Icon icon="fa-solid fa-images" /> {t('estimasi.ctaPortfolio')}</Link>
           </div>
         </Reveal>
@@ -1943,13 +1959,16 @@ export function Terms() {
 /* ══════════════════════════════════════════════════ KEUNGGULAN (/keunggulan) */
 export function Keunggulan() {
   const { locale, t } = useLocale()
+  const brand = useBrand()
   const hreflangTags = useHreflangTags()
   const canonical = `${SITE_URL}${withLocale(locale, '/keunggulan')}`
   const title = t('keunggulan.seoTitle')
   const desc = t('keunggulan.seoDesc')
   const guarantees = t('keunggulan.guarantees')
-  const whyItems = why.map((w) => pick(w, locale))
-  const statsItems = stats.map((s) => pick(s, locale))
+  const whyOverride = useSectionOverride('why', why)
+  const statsOverride = useSectionOverride('stats', stats)
+  const whyItems = whyOverride.map((w) => pick(w, locale))
+  const statsItems = statsOverride.map((s) => pick(s, locale))
   return (
     <>
       <Head>
@@ -1977,7 +1996,7 @@ export function Keunggulan() {
               <h1 className="page-title">{t('keunggulan.titlePre')}<span className="ital">{t('keunggulan.titleItal')}</span>{t('keunggulan.titlePost')}</h1>
               <p className="page-sub">{t('keunggulan.sub')}</p>
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
-                <a className="btn btn-pri btn-lg" href={waLink(t('keunggulan.waConsult', { brand: BRAND.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('keunggulan.ctaConsult')}</a>
+                <a className="btn btn-pri btn-lg" href={buildWaLink(brand.wa, t('keunggulan.waConsult', { brand: brand.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('keunggulan.ctaConsult')}</a>
                 <Link className="btn btn-ghost btn-lg" to="/layanan">{t('keunggulan.ctaServices')}</Link>
               </div>
             </Reveal>
@@ -2034,7 +2053,7 @@ export function Keunggulan() {
           <h2>{t('keunggulan.ctaTitlePre')}<span className="ital">{t('keunggulan.ctaTitleItal')}</span>{t('keunggulan.ctaTitlePost')}</h2>
           <p>{t('keunggulan.ctaDesc')}</p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center' }}>
-            <a className="btn btn-pri btn-lg" href={waLink(t('keunggulan.waConsult2', { brand: BRAND.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('keunggulan.ctaConsult')}</a>
+            <a className="btn btn-pri btn-lg" href={buildWaLink(brand.wa, t('keunggulan.waConsult2', { brand: brand.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('keunggulan.ctaConsult')}</a>
             <Link className="btn btn-ghost btn-lg" to="/layanan">{t('keunggulan.ctaServices2')}</Link>
           </div>
         </Reveal>
@@ -2054,12 +2073,15 @@ const PRICE_SLUG_COLOR = {
 
 export function Harga() {
   const { locale, t } = useLocale()
+  const brand = useBrand()
   const hreflangTags = useHreflangTags()
   const canonical = `${SITE_URL}${withLocale(locale, '/harga')}`
   const title = t('harga.seoTitle')
   const desc = t('harga.seoDesc')
-  const pricingItems = pricing.map((p) => pick(p, locale))
-  const bundleItems = pricingBundles.map((b) => pick(b, locale))
+  const pricingOverride = useSectionOverride('pricing', pricing)
+  const bundlesOverride = useSectionOverride('pricing_bundles', pricingBundles)
+  const pricingItems = pricingOverride.map((p) => pick(p, locale))
+  const bundleItems = bundlesOverride.map((b) => pick(b, locale))
 
   return (
     <>
@@ -2089,7 +2111,7 @@ export function Harga() {
               <h1 className="page-title">{t('harga.titlePre')}<span className="ital">{t('harga.titleItal')}</span>{t('harga.titlePost')}</h1>
               <p className="page-sub">{t('harga.sub')}</p>
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
-                <a className="btn btn-pri btn-lg" href={waLink(t('harga.waAskPrice', { brand: BRAND.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('harga.ctaAskPrice')}</a>
+                <a className="btn btn-pri btn-lg" href={buildWaLink(brand.wa, t('harga.waAskPrice', { brand: brand.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('harga.ctaAskPrice')}</a>
                 <Link className="btn btn-ghost btn-lg" to="/ajukan-proyek"><Icon icon="fa-solid fa-rocket" /> {t('harga.ctaAjukan')}</Link>
               </div>
             </Reveal>
@@ -2127,7 +2149,7 @@ export function Harga() {
                 <ul className="price-prod-feats">
                   {p.feats.map((f) => <li key={f}><Icon icon="fa-solid fa-check" /> {f}</li>)}
                 </ul>
-                <a className="btn btn-pri" href={waLink(t('harga.waProdInterest', { brand: BRAND.short, name: p.name, price: p.price }))} target="_blank" rel="noreferrer">
+                <a className="btn btn-pri" href={buildWaLink(brand.wa, t('harga.waProdInterest', { brand: brand.short, name: p.name, price: p.price }))} target="_blank" rel="noreferrer">
                   {t('harga.ctaConsult')} <Icon icon="fa-solid fa-arrow-right" />
                 </a>
               </motion.div>
@@ -2165,7 +2187,7 @@ export function Harga() {
                   </div>
                   <span className="price-bundle-save">{b.save}</span>
                 </div>
-                <a className="btn" href={waLink(t('harga.waBundleInterest', { brand: BRAND.short, name: b.name, price: b.price }))} target="_blank" rel="noreferrer">
+                <a className="btn" href={buildWaLink(brand.wa, t('harga.waBundleInterest', { brand: brand.short, name: b.name, price: b.price }))} target="_blank" rel="noreferrer">
                   {t('harga.ctaStartConsult')} <Icon icon="fa-solid fa-arrow-right" />
                 </a>
               </motion.div>
@@ -2180,7 +2202,7 @@ export function Harga() {
           <h2>{t('harga.ctaTitlePre')}<span className="ital">{t('harga.ctaTitleItal')}</span>{t('harga.ctaTitlePost')}</h2>
           <p>{t('harga.ctaDesc')}</p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center' }}>
-            <a className="btn btn-pri btn-lg" href={waLink(t('harga.waConsultChoice', { brand: BRAND.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('harga.ctaAskPrice')}</a>
+            <a className="btn btn-pri btn-lg" href={buildWaLink(brand.wa, t('harga.waConsultChoice', { brand: brand.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('harga.ctaAskPrice')}</a>
             <Link className="btn btn-ghost btn-lg" to="/ajukan-proyek"><Icon icon="fa-solid fa-rocket" /> {t('harga.ctaAjukan')}</Link>
           </div>
         </Reveal>
@@ -2193,11 +2215,13 @@ export function Harga() {
 export function Faq() {
   const [open, setOpen] = useState(-1)
   const { locale, t } = useLocale()
+  const brand = useBrand()
   const hreflangTags = useHreflangTags()
   const canonical = `${SITE_URL}${withLocale(locale, '/faq')}`
   const title = t('faqPage.seoTitle')
   const desc = t('faqPage.seoDesc')
-  const faqItems = faqs.map((f) => pick(f, locale))
+  const faqsOverride = useSectionOverride('faqs', faqs)
+  const faqItems = faqsOverride.map((f) => pick(f, locale))
   return (
     <>
       <Head>
@@ -2225,7 +2249,7 @@ export function Faq() {
               <h1 className="page-title">{t('faqPage.titlePre')}<span className="ital">{t('faqPage.titleItal')}</span>{t('faqPage.titlePost')}</h1>
               <p className="page-sub">{t('faqPage.sub')}</p>
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
-                <a className="btn btn-pri btn-lg" href={waLink(t('faqPage.waAsk', { brand: BRAND.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('faqPage.ctaAsk')}</a>
+                <a className="btn btn-pri btn-lg" href={buildWaLink(brand.wa, t('faqPage.waAsk', { brand: brand.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('faqPage.ctaAsk')}</a>
                 <Link className="btn btn-ghost btn-lg" to="/kontak">{t('faqPage.ctaContact')}</Link>
               </div>
             </Reveal>
@@ -2265,7 +2289,7 @@ export function Faq() {
         <Reveal className="cta-card">
           <h2>{t('faqPage.ctaTitlePre')}<span className="ital">{t('faqPage.ctaTitleItal')}</span>{t('faqPage.ctaTitlePost')}</h2>
           <p>{t('faqPage.ctaDesc')}</p>
-          <a className="btn btn-pri btn-lg" href={waLink(t('faqPage.waAsk', { brand: BRAND.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('faqPage.ctaAsk')}</a>
+          <a className="btn btn-pri btn-lg" href={buildWaLink(brand.wa, t('faqPage.waAsk', { brand: brand.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('faqPage.ctaAsk')}</a>
         </Reveal>
       </section>
     </>
@@ -2423,6 +2447,7 @@ const JOBS = [
 
 export function Karir() {
   const { locale, t } = useLocale()
+  const brand = useBrand()
   const hreflangTags = useHreflangTags()
   const canonical = `${SITE_URL}${withLocale(locale, '/karir')}`
   const title = t('karir.seoTitle')
@@ -2460,7 +2485,7 @@ export function Karir() {
               <p className="page-sub">{t('karir.sub')}</p>
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 36 }}>
                 <a className="btn btn-pri btn-lg" href="#lowongan">{t('karir.ctaViewJobs')} <Icon icon="fa-solid fa-arrow-down" /></a>
-                <a className="btn btn-ghost btn-lg" href={`mailto:${BRAND.email}`}><Icon icon="fa-solid fa-envelope" /> {t('karir.ctaSendCv')}</a>
+                <a className="btn btn-ghost btn-lg" href={`mailto:${brand.email}`}><Icon icon="fa-solid fa-envelope" /> {t('karir.ctaSendCv')}</a>
               </div>
             </Reveal>
             <Reveal className="page-hero-stat-col"><HeroStatCard /></Reveal>
@@ -2510,7 +2535,7 @@ export function Karir() {
                 <div className="job-skills">
                   {j.skills.map((s) => <span key={s}><Icon icon="fa-solid fa-check" /> {s}</span>)}
                 </div>
-                <a className="btn btn-pri" href={waLink(t('karir.waApply', { brand: BRAND.short, pos: j.pos }))} target="_blank" rel="noreferrer">
+                <a className="btn btn-pri" href={buildWaLink(brand.wa, t('karir.waApply', { brand: brand.short, pos: j.pos }))} target="_blank" rel="noreferrer">
                   <Icon icon="fa-brands fa-whatsapp" /> {t('karir.applyBtn')}
                 </a>
               </motion.div>
@@ -2524,8 +2549,8 @@ export function Karir() {
           <h2>{t('karir.ctaTitlePre')}<span className="ital">{t('karir.ctaTitleItal')}</span>{t('karir.ctaTitlePost')}</h2>
           <p>{t('karir.ctaDesc')}</p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center' }}>
-            <a className="btn btn-pri btn-lg" href={`mailto:${BRAND.email}?subject=${t('karir.cvSubjectMailto')}`}><Icon icon="fa-solid fa-envelope" /> {t('karir.ctaSendCvEmail')}</a>
-            <a className="btn btn-ghost btn-lg" href={waLink(t('karir.waSpontaneous', { brand: BRAND.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('karir.ctaChatFirst')}</a>
+            <a className="btn btn-pri btn-lg" href={`mailto:${brand.email}?subject=${t('karir.cvSubjectMailto')}`}><Icon icon="fa-solid fa-envelope" /> {t('karir.ctaSendCvEmail')}</a>
+            <a className="btn btn-ghost btn-lg" href={buildWaLink(brand.wa, t('karir.waSpontaneous', { brand: brand.short }))} target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('karir.ctaChatFirst')}</a>
           </div>
         </Reveal>
       </section>
@@ -2536,6 +2561,7 @@ export function Karir() {
 /* ══════════════════════════════════════════════════ AJUKAN PROYEK (/ajukan-proyek) */
 export function AjukanProyek() {
   const { locale, t } = useLocale()
+  const brand = useBrand()
   const hreflangTags = useHreflangTags()
   const canonical = `${SITE_URL}${withLocale(locale, '/ajukan-proyek')}`
   const jenisOpts = t('forms.ajukanProyek.jenisOpts2')
@@ -2578,15 +2604,17 @@ export function AjukanProyek() {
         from_contact: form.kontak,
         jenis_proyek: `[BRIEF PROYEK] ${form.jenis}`,
         message: pesan,
-        to_email: BRAND.email,
+        to_email: brand.email,
       }, 'ig9sNOB9hNjTymRoP')
     } catch {
-      // Fallback to localStorage only
+      // Email delivery failing shouldn't block the submission from being recorded.
     }
-    if (typeof window !== 'undefined') {
-      const all = JSON.parse(localStorage.getItem('afss_submissions') || '[]')
-      all.push({ id: Date.now(), ...form, status: 'Baru', tanggal: new Date().toISOString() })
-      localStorage.setItem('afss_submissions', JSON.stringify(all))
+    if (supabase) {
+      await supabase.from('submissions').insert({
+        nama: form.nama, kontak: form.kontak, perusahaan: form.perusahaan || null,
+        jenis: form.jenis, anggaran: form.anggaran || null, timeline: form.timeline || null,
+        deskripsi: form.deskripsi,
+      })
     }
     setSending(false)
     setSubmitted(true)
@@ -2612,7 +2640,7 @@ export function AjukanProyek() {
                 <h1 className="page-title">{t('forms.ajukanProyek.successTitlePre')}<span className="ital">{t('forms.ajukanProyek.successTitleItal')}</span></h1>
                 <p className="page-sub">{t('forms.ajukanProyek.successPre')}<strong>{form.nama}</strong>{t('forms.ajukanProyek.successMid')}<strong>{form.kontak}</strong>{t('forms.ajukanProyek.successPost')}</p>
                 <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center', marginTop: 32 }}>
-                  <a className="btn btn-pri btn-lg" href={waLink(t('forms.ajukanProyek.waSubmitted', { brand: BRAND.short, jenis: form.jenis, nama: form.nama }))} target="_blank" rel="noreferrer">
+                  <a className="btn btn-pri btn-lg" href={buildWaLink(brand.wa, t('forms.ajukanProyek.waSubmitted', { brand: brand.short, jenis: form.jenis, nama: form.nama }))} target="_blank" rel="noreferrer">
                     <Icon icon="fa-brands fa-whatsapp" /> {t('forms.ajukanProyek.successChat')}
                   </a>
                   <Link className="btn btn-ghost btn-lg" to="/">{t('forms.ajukanProyek.successHome')}</Link>
@@ -2725,7 +2753,7 @@ export function AjukanProyek() {
               </button>
               <p className="form-note">
                 {t('forms.ajukanProyek.noForm')}
-                <a href={waLink(t('forms.ajukanProyek.waDirect', { brand: BRAND.short }))} target="_blank" rel="noreferrer">
+                <a href={buildWaLink(brand.wa, t('forms.ajukanProyek.waDirect', { brand: brand.short }))} target="_blank" rel="noreferrer">
                   <Icon icon="fa-brands fa-whatsapp" /> {t('forms.ajukanProyek.noFormLink')}
                 </a>
               </p>
@@ -2738,224 +2766,34 @@ export function AjukanProyek() {
 }
 
 /* ══════════════════════════════════════════════════ DASHBOARD ADMIN (/dashboard) */
-const STATUS_LIST = ['Baru', 'Dihubungi', 'Proses', 'Selesai', 'Ditolak']
-const ADMIN_PIN = 'afss2026'
-
+// The old PIN-gated /dashboard (client-side PIN, localStorage submissions) has
+// been replaced by the standalone admin-dashboard app at dashboard.afss.tech,
+// which uses real Supabase Auth and reads/writes the `submissions` table
+// directly. This route now just points admins to the new app.
 export function Dashboard() {
   const [isClient, setIsClient] = useState(false)
-  const [unlocked, setUnlocked] = useState(false)
-  const [pin, setPin] = useState('')
-  const [pinError, setPinError] = useState(false)
-  const [submissions, setSubmissions] = useState([])
-  const [filter, setFilter] = useState('Semua')
-
-  useEffect(() => {
-    setIsClient(true)
-    if (typeof window !== 'undefined' && sessionStorage.getItem('afss_admin') === ADMIN_PIN) {
-      setUnlocked(true)
-      loadSubs()
-    }
-  }, [])
-
-  const loadSubs = () => {
-    const raw = typeof window !== 'undefined' ? localStorage.getItem('afss_submissions') : null
-    setSubmissions(raw ? [...JSON.parse(raw)].reverse() : [])
-  }
-
-  const login = (e) => {
-    e.preventDefault()
-    if (pin === ADMIN_PIN) {
-      sessionStorage.setItem('afss_admin', ADMIN_PIN)
-      setUnlocked(true)
-      setPinError(false)
-      loadSubs()
-    } else {
-      setPinError(true)
-    }
-  }
-
-  const updateStatus = (id, status) => {
-    const all = JSON.parse(localStorage.getItem('afss_submissions') || '[]')
-    localStorage.setItem('afss_submissions', JSON.stringify(all.map((s) => (s.id === id ? { ...s, status } : s))))
-    loadSubs()
-  }
-
-  const del = (id) => {
-    if (!window.confirm('Hapus pengajuan ini?')) return
-    const all = JSON.parse(localStorage.getItem('afss_submissions') || '[]')
-    localStorage.setItem('afss_submissions', JSON.stringify(all.filter((s) => s.id !== id)))
-    loadSubs()
-  }
-
-  /* SSG — return nothing until client hydrates */
+  useEffect(() => { setIsClient(true) }, [])
   if (!isClient) return null
-
-  if (!unlocked) {
-    return (
-      <>
-        <Head>
-          <title>Admin Dashboard | AFSS</title>
-          <meta name="robots" content="noindex,nofollow" />
-        </Head>
-        <section className="page-hero" style={{ minHeight: '70vh', display: 'flex', alignItems: 'center' }}>
-          <div className="hero-glow" />
-          <div className="container">
-            <Reveal>
-              <div className="eyebrow"><Icon icon="fa-solid fa-lock" /> Admin Area</div>
-              <h1 className="page-title">Dashboard <span className="ital">Admin</span></h1>
-              <p className="page-sub" style={{ marginBottom: 32 }}>Masukkan PIN untuk mengakses dashboard pengajuan proyek.</p>
-              <form className="pin-form" onSubmit={login}>
-                <input
-                  type="password"
-                  className={`form-ctrl${pinError ? ' err' : ''}`}
-                  placeholder="PIN Admin"
-                  value={pin}
-                  onChange={(e) => { setPin(e.target.value); setPinError(false) }}
-                  autoFocus
-                  style={{ maxWidth: 280 }}
-                />
-                {pinError && <p className="form-err-msg">PIN salah. Silakan coba lagi.</p>}
-                <button className="btn btn-pri" type="submit" style={{ width: 'fit-content' }}>
-                  Masuk <Icon icon="fa-solid fa-arrow-right" />
-                </button>
-              </form>
-            </Reveal>
-          </div>
-        </section>
-      </>
-    )
-  }
-
-  const tabs = ['Semua', ...STATUS_LIST]
-  const filtered = filter === 'Semua' ? submissions : submissions.filter((s) => s.status === filter)
-  const countOf = (st) => submissions.filter((s) => s.status === st).length
 
   return (
     <>
       <Head>
-        <title>Dashboard Pengajuan | AFSS Admin</title>
+        <title>Admin Dashboard | AFSS</title>
         <meta name="robots" content="noindex,nofollow" />
       </Head>
-
-      {/* Header */}
-      <section className="page-hero" style={{ paddingBottom: 40 }}>
+      <section className="page-hero" style={{ minHeight: '60vh', display: 'flex', alignItems: 'center' }}>
         <div className="hero-glow" />
         <div className="container">
           <Reveal>
-            <div className="eyebrow"><Icon icon="fa-solid fa-gauge-high" /> Admin</div>
-            <h1 className="page-title">Dashboard <span className="ital">Pengajuan</span></h1>
-            <p className="page-sub">Kelola semua pengajuan proyek yang masuk dari calon klien.</p>
+            <div className="eyebrow"><Icon icon="fa-solid fa-gauge-high" /> Admin Area</div>
+            <h1 className="page-title">Dashboard <span className="ital">Pindah Lokasi</span></h1>
+            <p className="page-sub" style={{ marginBottom: 32 }}>
+              Pengelolaan pengajuan proyek dan konten landing page sekarang ada di dashboard.afss.tech, dengan login akun (bukan PIN).
+            </p>
+            <a className="btn btn-pri btn-lg" href="https://dashboard.afss.tech" target="_blank" rel="noreferrer">
+              Buka Dashboard <Icon icon="fa-solid fa-arrow-right" />
+            </a>
           </Reveal>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section style={{ paddingTop: 0, paddingBottom: 32 }}>
-        <div className="container">
-          <div className="dash-stats">
-            <div className="dash-stat-card">
-              <div className="dash-stat-n">{submissions.length}</div>
-              <div className="dash-stat-l">Total Pengajuan</div>
-            </div>
-            <div className="dash-stat-card baru">
-              <div className="dash-stat-n">{countOf('Baru')}</div>
-              <div className="dash-stat-l">Belum Ditangani</div>
-            </div>
-            <div className="dash-stat-card proses">
-              <div className="dash-stat-n">{countOf('Proses')}</div>
-              <div className="dash-stat-l">Sedang Proses</div>
-            </div>
-            <div className="dash-stat-card selesai">
-              <div className="dash-stat-n">{countOf('Selesai')}</div>
-              <div className="dash-stat-l">Selesai</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Filter tabs */}
-      <div className="dash-filter-bar">
-        <div className="container">
-          <div className="dash-tabs">
-            {tabs.map((t) => (
-              <button key={t} className={`dash-tab${filter === t ? ' active' : ''}`} onClick={() => setFilter(t)}>
-                {t}
-                {t !== 'Semua' && countOf(t) > 0 && <span className="dash-tab-count">{countOf(t)}</span>}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Submissions list */}
-      <section style={{ paddingTop: 24, paddingBottom: 80 }}>
-        <div className="container">
-          {filtered.length === 0 ? (
-            <div className="blog-empty">
-              <Icon icon="fa-solid fa-inbox" />
-              <p>Belum ada pengajuan{filter !== 'Semua' ? ` berstatus "${filter}"` : ''}.</p>
-              {filter !== 'Semua' && (
-                <button className="btn btn-ghost" onClick={() => setFilter('Semua')}>Lihat semua</button>
-              )}
-            </div>
-          ) : (
-            <div className="submission-list">
-              {filtered.map((s) => (
-                <div key={s.id} className={`submission-card status-border-${s.status.toLowerCase()}`}>
-                  <div className="sub-head">
-                    <div>
-                      <div className="sub-name">{s.nama}</div>
-                      <div className="sub-date">
-                        <Icon icon="fa-solid fa-clock" />{' '}
-                        {new Date(s.tanggal).toLocaleString('id-ID', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' })}
-                      </div>
-                    </div>
-                    <span className={`status-badge status-${s.status.toLowerCase()}`}>{s.status}</span>
-                  </div>
-
-                  <div className="sub-body">
-                    {s.perusahaan && <div className="sub-row"><Icon icon="fa-solid fa-building" /> {s.perusahaan}</div>}
-                    <div className="sub-row"><Icon icon="fa-solid fa-phone" /> {s.kontak}</div>
-                    <div className="sub-row"><Icon icon="fa-solid fa-layer-group" /> {s.jenis}</div>
-                    {s.anggaran && <div className="sub-row"><Icon icon="fa-solid fa-coins" /> {s.anggaran}</div>}
-                    {s.timeline && <div className="sub-row"><Icon icon="fa-solid fa-calendar" /> {s.timeline}</div>}
-                  </div>
-
-                  {s.deskripsi && (
-                    <div className="sub-desc">{s.deskripsi}</div>
-                  )}
-
-                  <div className="sub-actions">
-                    <div className="status-btns">
-                      {STATUS_LIST.map((st) => (
-                        <button
-                          key={st}
-                          className={`status-btn${s.status === st ? ' active' : ''}`}
-                          data-status={st.toLowerCase()}
-                          onClick={() => updateStatus(s.id, st)}
-                        >
-                          {st}
-                        </button>
-                      ))}
-                    </div>
-                    <div className="sub-act-right">
-                      <a
-                        className="btn btn-ghost"
-                        href={`https://wa.me/${s.kontak.replace(/\D/g, '')}`}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <Icon icon="fa-brands fa-whatsapp" /> Hubungi
-                      </a>
-                      <button className="btn-del" onClick={() => del(s.id)} aria-label="Hapus">
-                        <Icon icon="fa-solid fa-trash" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
         </div>
       </section>
     </>

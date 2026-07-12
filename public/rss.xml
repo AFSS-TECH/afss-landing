@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 06 Jul 2026 01:55:27 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2026 03:23:22 GMT</lastBuildDate>
+    <item>
+      <title>Sistem Antrian Digital: Solusi Modern untuk Klinik &amp; Bank</title>
+      <link>https://afss.tech/blog/sistem-antrian-digital-queue-management</link>
+      <guid>https://afss.tech/blog/sistem-antrian-digital-queue-management</guid>
+      <description>Antrean fisik yang panjang membuat pelanggan frustrasi dan staf kehilangan waktu produktif. Ketahui bagaimana sistem antrian digital mengubah pengalaman layanan Anda.</description>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Layanan Publik</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>Edge Computing &amp; 5G untuk Bisnis: Infrastruktur Real-Time 2026</title>
+      <link>https://afss.tech/blog/edge-computing-5g-bisnis-2026</link>
+      <guid>https://afss.tech/blog/edge-computing-5g-bisnis-2026</guid>
+      <description>Ketika kecepatan cloud biasa tidak lagi cukup, edge computing dan 5G hadir sebagai fondasi baru bagi aplikasi bisnis yang butuh respons dalam hitungan milidetik.</description>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Teknologi</category>
+      <category>Infrastruktur</category>
+      <category>IoT</category>
+    </item>
+    <item>
+      <title>Predictive Analytics &amp; Machine Learning untuk Bisnis Modern</title>
+      <link>https://afss.tech/blog/predictive-analytics-machine-learning-bisnis</link>
+      <guid>https://afss.tech/blog/predictive-analytics-machine-learning-bisnis</guid>
+      <description>Dashboard BI menunjukkan apa yang terjadi. Predictive analytics memberi tahu apa yang akan terjadi — dan itu bisa mengubah cara bisnis Anda mengambil keputusan.</description>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>Data Bisnis</category>
+      <category>Teknologi</category>
+    </item>
+    <item>
+      <title>Sistem Manajemen Dokumen Digital: Panduan Bisnis Go Paperless</title>
+      <link>https://afss.tech/blog/sistem-manajemen-dokumen-digital</link>
+      <guid>https://afss.tech/blog/sistem-manajemen-dokumen-digital</guid>
+      <description>Arsip kertas menua di lemari, dokumen penting hilang, dan pencarian file memakan waktu berjam-jam. Ada solusi yang jauh lebih rapi dari itu.</description>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Manajemen Dokumen</category>
+      <category>Keamanan Data</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>Aplikasi LMS: Solusi E-Learning Korporat &amp; Institusi Pendidikan</title>
+      <link>https://afss.tech/blog/aplikasi-lms-elearning-korporat</link>
+      <guid>https://afss.tech/blog/aplikasi-lms-elearning-korporat</guid>
+      <description>Pelatihan karyawan dan pembelajaran siswa kini bisa dikelola dalam satu platform digital. Ini panduan lengkap memilih dan membangun aplikasi LMS yang tepat untuk organisasi Anda.</description>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Pendidikan</category>
+      <category>Bisnis</category>
+    </item>
     <item>
       <title>Aplikasi Manajemen Proyek &amp; Kolaborasi Tim: Kunci Bisnis yang Scale Tanpa Chaos</title>
       <link>https://afss.tech/blog/aplikasi-manajemen-proyek-kolaborasi-tim</link>
