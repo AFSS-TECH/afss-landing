@@ -6,7 +6,258 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 06 Jul 2026 03:23:22 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jul 2026 18:37:11 GMT</lastBuildDate>
+    <item>
+      <title>Aplikasi ATS: Membangun Sistem Rekrutmen dan Talent Acquisition yang Efisien</title>
+      <link>https://afss.tech/blog/aplikasi-ats-rekrutmen-talent-acquisition</link>
+      <guid>https://afss.tech/blog/aplikasi-ats-rekrutmen-talent-acquisition</guid>
+      <description>Rekrutmen manual lewat spreadsheet dan grup WhatsApp membuat kandidat terbaik kabur ke kompetitor. Begini cara membangun ATS yang benar-benar mempercepat proses hiring.</description>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>HR</category>
+      <category>Rekrutmen</category>
+    </item>
+    <item>
+      <title>Arsitektur Keamanan Zero Trust: Never Trust, Always Verify untuk Aplikasi Bisnis Modern</title>
+      <link>https://afss.tech/blog/arsitektur-keamanan-zero-trust-bisnis</link>
+      <guid>https://afss.tech/blog/arsitektur-keamanan-zero-trust-bisnis</guid>
+      <description>Model keamanan perimeter lama runtuh begitu karyawan bekerja dari mana saja dan data tersebar di banyak cloud. Zero Trust mengubah cara bisnis melindungi sistem intinya — dari 'percaya karena di dalam jaringan' menjadi 'verifikasi setiap saat, tanpa kecuali'.</description>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Keamanan</category>
+      <category>Arsitektur</category>
+      <category>Zero Trust</category>
+    </item>
+    <item>
+      <title>Customer Data Platform (CDP): Menyatukan Data Pelanggan untuk Marketing Automation yang Benar-Benar Personal</title>
+      <link>https://afss.tech/blog/customer-data-platform-cdp-marketing-automation</link>
+      <guid>https://afss.tech/blog/customer-data-platform-cdp-marketing-automation</guid>
+      <description>Tim marketing Anda mungkin sedang mengirim promo ke pelanggan yang baru saja churn, atau tidak mengenali pelanggan setia yang berbelanja offline. Inilah kenapa Customer Data Platform menjadi kebutuhan, bukan kemewahan.</description>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Marketing</category>
+      <category>CDP</category>
+      <category>Data</category>
+    </item>
+    <item>
+      <title>Tanda Tangan Digital &amp; E-Meterai: Panduan Kepatuhan untuk Bisnis</title>
+      <link>https://afss.tech/blog/tanda-tangan-digital-e-meterai-kepatuhan-bisnis</link>
+      <guid>https://afss.tech/blog/tanda-tangan-digital-e-meterai-kepatuhan-bisnis</guid>
+      <description>Tanda tangan basah dan meterai tempel masih jadi penyumbat leher botol terbesar dalam proses kontrak bisnis Indonesia. Begini cara mengintegrasikan tanda tangan digital dan e-meterai secara legal dan efisien.</description>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Keamanan</category>
+      <category>Tanda Tangan Digital</category>
+    </item>
+    <item>
+      <title>Software E-Invoicing &amp; Kepatuhan Pajak Digital: Panduan Integrasi Coretax untuk Bisnis Indonesia</title>
+      <link>https://afss.tech/blog/software-e-invoicing-kepatuhan-pajak-digital-2026</link>
+      <guid>https://afss.tech/blog/software-e-invoicing-kepatuhan-pajak-digital-2026</guid>
+      <description>Faktur ditolak sistem Coretax menjelang deadline pelaporan bukan lagi kejadian langka. Berikut cara bisnis Indonesia membangun sistem e-invoicing yang benar-benar patuh dan tahan audit.</description>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
+      <category>ERP</category>
+      <category>Pajak</category>
+      <category>E-Invoicing</category>
+    </item>
+    <item>
+      <title>Aplikasi Asuransi Digital &amp; Klaim Online: Panduan InsurTech untuk Perusahaan Asuransi</title>
+      <link>https://afss.tech/blog/aplikasi-asuransi-digital-klaim-online-insurtech</link>
+      <guid>https://afss.tech/blog/aplikasi-asuransi-digital-klaim-online-insurtech</guid>
+      <description>Nasabah menunggu berminggu-minggu untuk klaim cair, sementara kompetitor sudah menyelesaikannya dalam hitungan jam. Ketahui cara aplikasi InsurTech mengubah bisnis asuransi Anda.</description>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Asuransi</category>
+      <category>InsurTech</category>
+    </item>
+    <item>
+      <title>Aplikasi AgriTech: Smart Farming &amp; Rantai Pasok Pertanian Digital untuk Koperasi Tani</title>
+      <link>https://afss.tech/blog/aplikasi-agritech-smart-farming-rantai-pasok-pertanian</link>
+      <guid>https://afss.tech/blog/aplikasi-agritech-smart-farming-rantai-pasok-pertanian</guid>
+      <description>Koperasi tani masih andalkan telepon dan catatan manual? Pelajari cara aplikasi agritech custom untuk smart farming, rantai pasok, dan marketplace petani-pembeli menekan susut panen dan menaikkan pendapatan petani.</description>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Pertanian</category>
+      <category>AgriTech</category>
+      <category>Rantai Pasok</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Teknisi Lapangan: Solusi Field Service untuk Bisnis Servis di Indonesia</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-teknisi-lapangan-field-service</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-teknisi-lapangan-field-service</guid>
+      <description>Tim teknisi lapangan Anda masih diatur lewat telepon dan WhatsApp? Kenali aplikasi field service management: fitur wajib, biaya pengembangan, dan studi kasus perusahaan servis AC yang produktivitasnya naik 59%.</description>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Operasional</category>
+      <category>Field Service</category>
+    </item>
+    <item>
+      <title>Website &amp; Aplikasi CRM Properti: Kunci Agensi Real Estate Menang Persaingan</title>
+      <link>https://afss.tech/blog/website-aplikasi-crm-properti-real-estate</link>
+      <guid>https://afss.tech/blog/website-aplikasi-crm-properti-real-estate</guid>
+      <description>Tanpa CRM properti, lead menguap dalam hitungan menit dan unit bisa dijanjikan ke dua klien sekaligus. Simak fitur wajib, kisaran biaya, dan studi kasus agensi penggandaan closing.</description>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Properti</category>
+      <category>PropTech</category>
+    </item>
+    <item>
+      <title>Aplikasi Telemedicine &amp; Kesehatan Digital: Panduan Membangun Sistem untuk Klinik dan Rumah Sakit di Indonesia</title>
+      <link>https://afss.tech/blog/aplikasi-telemedicine-kesehatan-digital</link>
+      <guid>https://afss.tech/blog/aplikasi-telemedicine-kesehatan-digital</guid>
+      <description>Dari booking pasien hingga integrasi BPJS dan SATUSEHAT — pelajari fitur wajib, estimasi biaya dalam Rupiah, dan studi kasus nyata membangun aplikasi telemedicine untuk klinik di Indonesia.</description>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Kesehatan</category>
+      <category>Healthtech</category>
+    </item>
+    <item>
+      <title>Aplikasi PMS Hotel &amp; Booking Pariwisata: Kelola Kamar, Harga, dan Tamu dalam Satu Sistem</title>
+      <link>https://afss.tech/blog/aplikasi-pariwisata-hotel-property-management-system</link>
+      <guid>https://afss.tech/blog/aplikasi-pariwisata-hotel-property-management-system</guid>
+      <description>Resepsionis hotel masih mencatat reservasi manual di buku, sementara kamar yang sama bisa double-booking dari OTA berbeda di waktu bersamaan. Aplikasi PMS menyatukan booking, harga, dan operasional hotel dalam satu sistem real-time.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Pariwisata</category>
+      <category>Hospitality</category>
+    </item>
+    <item>
+      <title>Autentikasi Passwordless: Kenapa Aplikasi Bisnis Harus Tinggalkan Password di 2026</title>
+      <link>https://afss.tech/blog/autentikasi-passwordless-keamanan-aplikasi-2026</link>
+      <guid>https://afss.tech/blog/autentikasi-passwordless-keamanan-aplikasi-2026</guid>
+      <description>Password adalah celah keamanan nomor satu di hampir semua kebocoran data besar. Autentikasi passwordless — dari passkey hingga biometrik — menutup celah itu sekaligus membuat proses login lebih cepat bagi pengguna.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Keamanan</category>
+      <category>Aplikasi</category>
+      <category>Autentikasi</category>
+    </item>
+    <item>
+      <title>GEO (Generative Engine Optimization): Cara Website Muncul di Jawaban ChatGPT &amp; AI Overview</title>
+      <link>https://afss.tech/blog/optimasi-mesin-pencari-ai-generative-engine-optimization-2026</link>
+      <guid>https://afss.tech/blog/optimasi-mesin-pencari-ai-generative-engine-optimization-2026</guid>
+      <description>SEO klasik mengejar peringkat #1 di Google. GEO mengejar sesuatu yang lebih penting sekarang: disebut sebagai sumber jawaban oleh ChatGPT, Perplexity, dan AI Overview — sebelum pengunjung sempat klik link mana pun.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <category>SEO</category>
+      <category>AI</category>
+      <category>Digital Marketing</category>
+    </item>
+    <item>
+      <title>Aplikasi ESG &amp; Laporan Keberlanjutan: Kenapa Bisnis Butuh Sistem Ini di 2026</title>
+      <link>https://afss.tech/blog/aplikasi-esg-sustainability-reporting-bisnis</link>
+      <guid>https://afss.tech/blog/aplikasi-esg-sustainability-reporting-bisnis</guid>
+      <description>Investor dan buyer ekspor kini minta laporan emisi karbon dan skor keberlanjutan, bukan cuma laporan keuangan. Begini cara aplikasi ESG mengotomasi pengumpulan data yang selama ini tersebar di puluhan spreadsheet berbeda.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <category>ESG</category>
+      <category>Sustainability</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>ERP Sekolah &amp; Kampus: Satu Sistem untuk Akademik, SPP, dan Data Siswa</title>
+      <link>https://afss.tech/blog/erp-sistem-informasi-akademik-sekolah-kampus</link>
+      <guid>https://afss.tech/blog/erp-sistem-informasi-akademik-sekolah-kampus</guid>
+      <description>Guru sibuk input nilai manual di kertas, bendahara kejar-kejaran menagih SPP lewat WhatsApp, dan orang tua tidak tahu perkembangan anaknya di sekolah. ERP sekolah menyatukan akademik, keuangan, dan komunikasi orang tua dalam satu sistem.</description>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <category>ERP</category>
+      <category>Pendidikan</category>
+      <category>Sekolah</category>
+    </item>
+    <item>
+      <title>ERP AI Copilot 2026: Otomasi Cerdas di Dalam Sistem Bisnis</title>
+      <link>https://afss.tech/blog/erp-ai-copilot-otomasi-cerdas-2026</link>
+      <guid>https://afss.tech/blog/erp-ai-copilot-otomasi-cerdas-2026</guid>
+      <description>AI copilot yang tertanam langsung di dalam ERP kini bisa menjawab pertanyaan bisnis, membaca faktur, dan memberi peringatan dini stok habis dalam hitungan detik.</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <category>ERP</category>
+      <category>AI</category>
+      <category>Otomasi</category>
+    </item>
+    <item>
+      <title>AR/VR &amp; Spatial Computing: Teknologi Interaksi Bisnis 2026</title>
+      <link>https://afss.tech/blog/ar-vr-spatial-computing-bisnis-2026</link>
+      <guid>https://afss.tech/blog/ar-vr-spatial-computing-bisnis-2026</guid>
+      <description>AR/VR bukan lagi gimmick pameran. Pelajari cara bisnis memakai spatial computing untuk showroom virtual, dukungan teknis jarak jauh, dan pelatihan staf, lengkap dengan kisaran biaya.</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <category>AR/VR</category>
+      <category>Teknologi</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Aset &amp; Maintenance (CMMS) untuk Bisnis</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-aset-maintenance-bisnis</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-aset-maintenance-bisnis</guid>
+      <description>Downtime mesin yang tidak terjadwal bisa menggerus jutaan rupiah dalam hitungan jam. Begini cara aplikasi CMMS custom membantu pabrik dan pengelola gedung mencegahnya.</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Manufaktur</category>
+      <category>Maintenance</category>
+    </item>
+    <item>
+      <title>Aplikasi Fintech Pembiayaan Digital untuk UMKM: Panduan Build</title>
+      <link>https://afss.tech/blog/aplikasi-fintech-pembiayaan-digital-umkm</link>
+      <guid>https://afss.tech/blog/aplikasi-fintech-pembiayaan-digital-umkm</guid>
+      <description>UMKM sering ditolak bank karena tidak punya agunan atau riwayat kredit formal. Aplikasi fintech pembiayaan digital bisa menutup celah itu — begini cara membangunnya dengan benar.</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Fintech</category>
+      <category>Aplikasi</category>
+      <category>UMKM</category>
+    </item>
+    <item>
+      <title>Sistem ERP Multi-Cabang: Kelola Semua Lokasi dari Satu Dashboard</title>
+      <link>https://afss.tech/blog/sistem-erp-multi-cabang-bisnis-nasional</link>
+      <guid>https://afss.tech/blog/sistem-erp-multi-cabang-bisnis-nasional</guid>
+      <description>Bisnis dengan banyak cabang sering terjebak spreadsheet terpisah dan laporan yang telat. Begini cara ERP multi-cabang menyatukan stok, keuangan, dan tim jadi satu sistem yang bisa dipantau real-time.</description>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <category>ERP</category>
+      <category>Bisnis</category>
+      <category>Multi-Cabang</category>
+    </item>
+    <item>
+      <title>Digital Twin: Simulasi Digital untuk Optimasi Bisnis &amp; Manufaktur 2026</title>
+      <link>https://afss.tech/blog/digital-twin-simulasi-bisnis-manufaktur</link>
+      <guid>https://afss.tech/blog/digital-twin-simulasi-bisnis-manufaktur</guid>
+      <description>Mengubah tata letak lini produksi di dunia nyata bisa memakan biaya besar jika ternyata keliru. Digital twin memungkinkan bisnis menguji perubahan itu dulu secara virtual, tanpa risiko dan tanpa menghentikan operasional.</description>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Teknologi</category>
+      <category>Manufaktur</category>
+      <category>Inovasi</category>
+    </item>
+    <item>
+      <title>Kepatuhan UU PDP untuk Aplikasi &amp; Website Bisnis: Panduan Praktis 2026</title>
+      <link>https://afss.tech/blog/kepatuhan-uu-pdp-aplikasi-bisnis-digital</link>
+      <guid>https://afss.tech/blog/kepatuhan-uu-pdp-aplikasi-bisnis-digital</guid>
+      <description>Denda dan sanksi UU PDP nyata, tapi kepatuhan tidak harus menjadi proyek besar yang menakutkan — dengan pendekatan yang tepat, ia bisa dibangun langsung ke dalam arsitektur aplikasi sejak awal.</description>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Keamanan Data</category>
+      <category>Bisnis</category>
+      <category>Panduan</category>
+    </item>
+    <item>
+      <title>AI Coding Assistant: Masa Depan Pengembangan Software &amp; Aplikasi Bisnis</title>
+      <link>https://afss.tech/blog/ai-coding-assistant-masa-depan-pengembangan-software</link>
+      <guid>https://afss.tech/blog/ai-coding-assistant-masa-depan-pengembangan-software</guid>
+      <description>Developer kini menulis kode berdampingan dengan AI yang menyarankan baris berikutnya, menemukan bug sebelum production, dan bahkan menulis seluruh fungsi dari deskripsi sederhana — mengubah ekonomi pengembangan software secara fundamental.</description>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>Software</category>
+      <category>Teknologi</category>
+    </item>
+    <item>
+      <title>Composable Commerce &amp; Headless Architecture: Bisnis Digital Modular di 2026</title>
+      <link>https://afss.tech/blog/composable-commerce-headless-architecture-2026</link>
+      <guid>https://afss.tech/blog/composable-commerce-headless-architecture-2026</guid>
+      <description>Platform e-commerce monolitik memaksa bisnis mengikuti batasan satu vendor. Composable commerce membalik logika itu — bisnis yang memilih komponen mana yang dipakai, bukan sebaliknya.</description>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+      <category>E-Commerce</category>
+      <category>Teknologi</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>Aplikasi POS (Kasir Digital) 2026: Solusi Modern untuk Retail &amp; F&amp;B</title>
+      <link>https://afss.tech/blog/aplikasi-pos-kasir-digital-retail-2026</link>
+      <guid>https://afss.tech/blog/aplikasi-pos-kasir-digital-retail-2026</guid>
+      <description>Mesin kasir lama mencatat transaksi, tapi tidak bisa menjawab pertanyaan paling penting pemilik bisnis: produk apa yang paling laku, cabang mana yang paling untung, dan kapan harus restock.</description>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi Mobile</category>
+      <category>Retail</category>
+      <category>Bisnis</category>
+    </item>
     <item>
       <title>Sistem Antrian Digital: Solusi Modern untuk Klinik &amp; Bank</title>
       <link>https://afss.tech/blog/sistem-antrian-digital-queue-management</link>

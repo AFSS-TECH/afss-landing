@@ -4,6 +4,984 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-ats-rekrutmen-talent-acquisition",
+    "date": "2026-07-13",
+    "readMinutes": 10,
+    "c": "#B45309",
+    "c2": "#451A03",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi ATS: Membangun Sistem Rekrutmen dan Talent Acquisition yang Efisien",
+        "description": "Panduan membangun Applicant Tracking System (ATS) untuk bisnis Indonesia — fitur wajib, biaya, timeline, dan studi kasus nyata rekrutmen lebih cepat.",
+        "excerpt": "Rekrutmen manual lewat spreadsheet dan grup WhatsApp membuat kandidat terbaik kabur ke kompetitor. Begini cara membangun ATS yang benar-benar mempercepat proses hiring.",
+        "tags": [
+          "Aplikasi",
+          "HR",
+          "Rekrutmen"
+        ]
+      },
+      "en": {
+        "title": "Applicant Tracking System (ATS): Building Recruitment Software That Actually Works",
+        "description": "A practical guide to building an Applicant Tracking System for growing businesses — must-have features, costs, timelines, and a real case study.",
+        "excerpt": "Manual hiring through spreadsheets and WhatsApp groups costs you your best candidates. Here's how to build an ATS that actually speeds up hiring.",
+        "tags": [
+          "Application",
+          "HR",
+          "Recruitment"
+        ]
+      },
+      "zh": {
+        "title": "招聘管理系统（ATS）：为企业打造真正高效的人才招聘软件",
+        "description": "面向成长型企业的招聘管理系统（ATS）搭建指南——必备功能、成本与周期估算，以及真实案例分析。",
+        "excerpt": "用表格和微信群手动招聘，正在让你错失最优秀的候选人。这篇文章讲清楚如何搭建一套真正提速招聘的ATS系统。",
+        "tags": [
+          "应用",
+          "人力资源",
+          "招聘"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "arsitektur-keamanan-zero-trust-bisnis",
+    "date": "2026-07-13",
+    "readMinutes": 10,
+    "c": "#0F4C5C",
+    "c2": "#082B33",
+    "i18n": {
+      "id": {
+        "title": "Arsitektur Keamanan Zero Trust: Never Trust, Always Verify untuk Aplikasi Bisnis Modern",
+        "description": "Panduan implementasi arsitektur Zero Trust untuk ERP dan aplikasi bisnis — komponen wajib, build vs adopsi platform, biaya, timeline, dan studi kasus nyata di Indonesia.",
+        "excerpt": "Model keamanan perimeter lama runtuh begitu karyawan bekerja dari mana saja dan data tersebar di banyak cloud. Zero Trust mengubah cara bisnis melindungi sistem intinya — dari 'percaya karena di dalam jaringan' menjadi 'verifikasi setiap saat, tanpa kecuali'.",
+        "tags": [
+          "Keamanan",
+          "Arsitektur",
+          "Zero Trust"
+        ]
+      },
+      "en": {
+        "title": "Zero Trust Security Architecture for Business Applications: Never Trust, Always Verify",
+        "description": "A practical guide to implementing Zero Trust architecture for ERP and business apps — core components, build vs. platform, cost, timeline, and a real Indonesian case study.",
+        "excerpt": "Perimeter security collapses once employees work from anywhere and data lives across multiple clouds. Zero Trust rebuilds how businesses protect their core systems — from 'trust because you're inside the network' to 'verify continuously, no exceptions.'",
+        "tags": [
+          "Security",
+          "Architecture",
+          "Zero Trust"
+        ]
+      },
+      "zh": {
+        "title": "企业应用的零信任安全架构：永不信任，始终验证",
+        "description": "面向ERP和企业应用的零信任架构实施指南——核心组件、自建与平台选型、成本与周期，以及印尼真实案例。",
+        "excerpt": "当员工可以随时随地办公、数据分散在多个云端时，传统的边界安全模型已经失效。零信任重塑了企业保护核心系统的方式——从'因为在网络内部所以信任'转变为'持续验证，毫无例外'。",
+        "tags": [
+          "安全",
+          "架构",
+          "零信任"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "customer-data-platform-cdp-marketing-automation",
+    "date": "2026-07-13",
+    "readMinutes": 10,
+    "c": "#7E22CE",
+    "c2": "#3B0764",
+    "i18n": {
+      "id": {
+        "title": "Customer Data Platform (CDP): Menyatukan Data Pelanggan untuk Marketing Automation yang Benar-Benar Personal",
+        "description": "Panduan lengkap CDP untuk bisnis Indonesia: cara menyatukan data pelanggan dari web, app, POS, CRM, dan media sosial, plus estimasi biaya, timeline, dan studi kasus nyata.",
+        "excerpt": "Tim marketing Anda mungkin sedang mengirim promo ke pelanggan yang baru saja churn, atau tidak mengenali pelanggan setia yang berbelanja offline. Inilah kenapa Customer Data Platform menjadi kebutuhan, bukan kemewahan.",
+        "tags": [
+          "Marketing",
+          "CDP",
+          "Data"
+        ]
+      },
+      "en": {
+        "title": "Customer Data Platform (CDP): Unifying Customer Data for Marketing Automation That Actually Feels Personal",
+        "description": "A complete guide to CDPs for growing businesses: how to unify customer data across web, app, POS, CRM, and social, plus realistic cost, timeline, and case study.",
+        "excerpt": "Your marketing team might be sending a win-back promo to a customer who just churned, or failing to recognize a loyal offline shopper online. Here's why a Customer Data Platform has become a necessity, not a luxury.",
+        "tags": [
+          "Marketing",
+          "Data",
+          "CDP"
+        ]
+      },
+      "zh": {
+        "title": "客户数据平台（CDP）：整合客户数据，让营销自动化真正实现个性化",
+        "description": "面向成长型企业的CDP完整指南：如何整合网站、应用、POS、CRM和社交媒体的客户数据，附真实成本、周期和案例研究。",
+        "excerpt": "你的营销团队可能正在给刚刚流失的客户发送挽回优惠，或者认不出线上线下都活跃的忠实顾客。这就是为什么客户数据平台已从奢侈品变成必需品。",
+        "tags": [
+          "营销",
+          "数据",
+          "客户数据平台"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "tanda-tangan-digital-e-meterai-kepatuhan-bisnis",
+    "date": "2026-07-13",
+    "readMinutes": 12,
+    "c": "#4338CA",
+    "c2": "#1E1B4B",
+    "i18n": {
+      "id": {
+        "title": "Tanda Tangan Digital & E-Meterai: Panduan Kepatuhan untuk Bisnis",
+        "description": "Panduan lengkap integrasi tanda tangan digital dan e-meterai Peruri untuk kontrak, HR, dan penjualan — fitur wajib, biaya, timeline, dan studi kasus nyata.",
+        "excerpt": "Tanda tangan basah dan meterai tempel masih jadi penyumbat leher botol terbesar dalam proses kontrak bisnis Indonesia. Begini cara mengintegrasikan tanda tangan digital dan e-meterai secara legal dan efisien.",
+        "tags": [
+          "Aplikasi",
+          "Keamanan",
+          "Tanda Tangan Digital"
+        ]
+      },
+      "en": {
+        "title": "Digital Signatures & E-Stamp Duty: A Compliance Guide for Businesses",
+        "description": "A practical guide to integrating digital signatures and Indonesia's e-meterai stamp duty into contracts, HR, and sales — features, costs, timeline, and a real case study.",
+        "excerpt": "Wet-ink signatures and physical stamp duty are still the biggest bottleneck in Indonesian business contracts. Here is how to integrate digital signatures and e-stamp duty legally and efficiently.",
+        "tags": [
+          "Application",
+          "Security",
+          "Digital Signature"
+        ]
+      },
+      "zh": {
+        "title": "电子签名与电子印花税合规指南:企业契约数字化实践",
+        "description": "面向企业的电子签名与印尼电子印花税(e-meterai)整合指南——必备功能、成本预算、实施周期与真实案例分析。",
+        "excerpt": "湿墨签名与实体印花税仍是印尼企业合同流程中最大的瓶颈。本文讲解如何合法、高效地将电子签名与电子印花税整合进合同、人力资源与销售流程。",
+        "tags": [
+          "应用",
+          "安全",
+          "电子签名"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "software-e-invoicing-kepatuhan-pajak-digital-2026",
+    "date": "2026-07-13",
+    "readMinutes": 10,
+    "c": "#0F766E",
+    "c2": "#042F2E",
+    "i18n": {
+      "id": {
+        "title": "Software E-Invoicing & Kepatuhan Pajak Digital: Panduan Integrasi Coretax untuk Bisnis Indonesia",
+        "description": "Panduan lengkap membangun atau mengintegrasikan software e-invoicing dan kepatuhan pajak digital dengan Coretax DJP, lengkap dengan estimasi biaya, timeline, dan studi kasus nyata.",
+        "excerpt": "Faktur ditolak sistem Coretax menjelang deadline pelaporan bukan lagi kejadian langka. Berikut cara bisnis Indonesia membangun sistem e-invoicing yang benar-benar patuh dan tahan audit.",
+        "tags": [
+          "ERP",
+          "Pajak",
+          "E-Invoicing"
+        ]
+      },
+      "en": {
+        "title": "E-Invoicing & Digital Tax Compliance Software: The Coretax Integration Playbook for Indonesian Businesses",
+        "description": "A practical guide to building or integrating e-invoicing and digital tax compliance software with Indonesia's Coretax, with cost estimates, timelines, and a real case study.",
+        "excerpt": "A rejected batch of e-Faktur invoices the night before a filing deadline is becoming a familiar nightmare. Here's how Indonesian businesses are building tax systems that actually hold up under audit.",
+        "tags": [
+          "ERP",
+          "Tax",
+          "E-Invoicing"
+        ]
+      },
+      "zh": {
+        "title": "电子发票与数字税务合规软件：印尼企业对接 Coretax 系统实战指南",
+        "description": "电子发票与数字税务合规软件实战指南:如何与印尼 Coretax 系统对接,涵盖成本估算、实施周期与真实案例。",
+        "excerpt": "报税截止日前一晚,一批电子发票被系统打回——这已成为许多企业财务人员的噩梦。看看印尼企业如何搭建真正经得起稽查的数字税务系统。",
+        "tags": [
+          "ERP系统",
+          "税务",
+          "电子发票"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-asuransi-digital-klaim-online-insurtech",
+    "date": "2026-07-12",
+    "readMinutes": 11,
+    "c": "#7C2D12",
+    "c2": "#431407",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Asuransi Digital & Klaim Online: Panduan InsurTech untuk Perusahaan Asuransi",
+        "description": "Aplikasi asuransi digital dengan klaim online, underwriting berbasis AI, dan portal agen mempercepat proses bisnis. Simak fitur, biaya, dan studi kasus lengkapnya.",
+        "excerpt": "Nasabah menunggu berminggu-minggu untuk klaim cair, sementara kompetitor sudah menyelesaikannya dalam hitungan jam. Ketahui cara aplikasi InsurTech mengubah bisnis asuransi Anda.",
+        "tags": [
+          "Aplikasi",
+          "Asuransi",
+          "InsurTech"
+        ]
+      },
+      "en": {
+        "title": "Digital Insurance & Online Claims App: An InsurTech Guide for Insurers",
+        "description": "A digital insurance app with online claims, AI-driven underwriting, and an agent portal speeds up every core process. See the features, costs, and a real case study.",
+        "excerpt": "Customers wait weeks for a claim to be settled while competitors resolve theirs in hours. Learn how an InsurTech app can transform your insurance business.",
+        "tags": [
+          "Application",
+          "Insurance",
+          "InsurTech"
+        ]
+      },
+      "zh": {
+        "title": "数字保险与在线理赔应用：印尼保险科技(InsurTech)开发指南",
+        "description": "数字保险应用集在线理赔、AI智能核保与代理人门户于一体，大幅提升业务效率。了解核心功能、开发成本与真实案例分析。",
+        "excerpt": "客户等待数周才能拿到理赔款,而竞争对手几小时内就能完成结案。了解保险科技应用如何彻底改变您的保险业务运营方式。",
+        "tags": [
+          "应用",
+          "保险",
+          "保险科技"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-agritech-smart-farming-rantai-pasok-pertanian",
+    "date": "2026-07-12",
+    "readMinutes": 13,
+    "c": "#15803D",
+    "c2": "#14532D",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi AgriTech: Smart Farming & Rantai Pasok Pertanian Digital untuk Koperasi Tani",
+        "description": "Bangun aplikasi agritech custom untuk smart farming, rantai pasok pertanian digital, dan marketplace petani-pembeli. Kurangi susut panen, percepat pembayaran ke petani.",
+        "excerpt": "Koperasi tani masih andalkan telepon dan catatan manual? Pelajari cara aplikasi agritech custom untuk smart farming, rantai pasok, dan marketplace petani-pembeli menekan susut panen dan menaikkan pendapatan petani.",
+        "tags": [
+          "Aplikasi",
+          "Pertanian",
+          "AgriTech",
+          "Rantai Pasok"
+        ]
+      },
+      "en": {
+        "title": "AgriTech App Development: Smart Farming & Digital Agriculture Supply Chain Software",
+        "description": "Build a custom agritech app for smart farming, digital agriculture supply chains, and farmer-buyer marketplaces. Cut harvest losses and speed up farmer payments.",
+        "excerpt": "Still running your cooperative on phone calls and paper ledgers? See how a custom agritech app for smart farming, supply chain management, and farmer marketplaces cuts harvest losses and raises farmer income.",
+        "tags": [
+          "Application",
+          "Agriculture",
+          "AgriTech",
+          "Supply Chain"
+        ]
+      },
+      "zh": {
+        "title": "农业科技应用开发:智慧农业与数字化农业供应链软件解决方案",
+        "description": "为智慧农业、数字化农业供应链和农户买家交易市场打造定制agritech应用,减少收成损耗,加快农户货款结算,提升农户收入。",
+        "excerpt": "合作社还在靠电话和纸质账本运作?了解定制agritech应用如何通过智慧农业、供应链管理和农户交易市场,显著降低收成损耗并提升农户收入。",
+        "tags": [
+          "应用",
+          "农业",
+          "农业科技",
+          "供应链"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-teknisi-lapangan-field-service",
+    "date": "2026-07-12",
+    "readMinutes": 12,
+    "c": "#0369A1",
+    "c2": "#0C4A6E",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Teknisi Lapangan: Solusi Field Service untuk Bisnis Servis di Indonesia",
+        "description": "Panduan lengkap aplikasi manajemen teknisi lapangan (field service management) untuk bisnis servis AC, internet, lift, hingga perbaikan alat — fitur, biaya, dan studi kasus nyata.",
+        "excerpt": "Tim teknisi lapangan Anda masih diatur lewat telepon dan WhatsApp? Kenali aplikasi field service management: fitur wajib, biaya pengembangan, dan studi kasus perusahaan servis AC yang produktivitasnya naik 59%.",
+        "tags": [
+          "Aplikasi",
+          "Operasional",
+          "Field Service"
+        ]
+      },
+      "en": {
+        "title": "Field Service Management App: The Complete Guide for Indonesian Service Businesses",
+        "description": "A complete guide to field service management apps for AC service, internet, elevator, and repair businesses — must-have features, costs, and a real case study.",
+        "excerpt": "Still coordinating field technicians by phone and WhatsApp? Discover how a field service management app cuts response times, tracks spare parts, and lifted one AC service company's productivity by 59%.",
+        "tags": [
+          "Application",
+          "Operations",
+          "Field Service"
+        ]
+      },
+      "zh": {
+        "title": "现场服务管理应用完整指南:印尼服务企业的技师调度与运营利器",
+        "description": "面向空调、宽带、电梯、家电维修等企业的现场服务管理应用完整指南,涵盖必备功能、开发成本区间与真实案例分析。",
+        "excerpt": "还在用电话和微信群调度外勤技师?了解现场服务管理应用如何缩短响应时间、追踪备件库存,并让一家空调服务企业的生产力提升59%。",
+        "tags": [
+          "应用",
+          "运营",
+          "现场服务"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "website-aplikasi-crm-properti-real-estate",
+    "date": "2026-07-12",
+    "readMinutes": 12,
+    "c": "#B45309",
+    "c2": "#78350F",
+    "i18n": {
+      "id": {
+        "title": "Website & Aplikasi CRM Properti: Kunci Agensi Real Estate Menang Persaingan",
+        "description": "Panduan lengkap membangun website & CRM properti custom untuk agen dan developer real estate di Indonesia — fitur wajib, biaya, timeline, dan studi kasus nyata.",
+        "excerpt": "Tanpa CRM properti, lead menguap dalam hitungan menit dan unit bisa dijanjikan ke dua klien sekaligus. Simak fitur wajib, kisaran biaya, dan studi kasus agensi penggandaan closing.",
+        "tags": [
+          "Aplikasi",
+          "Properti",
+          "PropTech"
+        ]
+      },
+      "en": {
+        "title": "Real Estate Website & CRM: The System Property Agencies Need to Compete",
+        "description": "A guide to building a custom real estate website & CRM for agencies and developers in Indonesia — features, costs, timelines, and a real case study.",
+        "excerpt": "Without a property CRM, leads vanish within minutes and the same unit can get promised to two buyers at once. See the must-have features, cost ranges, and a case study of doubled monthly closings.",
+        "tags": [
+          "Application",
+          "Real Estate",
+          "PropTech"
+        ]
+      },
+      "zh": {
+        "title": "房产网站与CRM系统：房产中介赢得市场竞争的关键武器",
+        "description": "面向印尼房产中介与开发商的定制网站与CRM系统完整指南——必备功能、开发成本、项目周期与真实案例分析。",
+        "excerpt": "没有房产CRM系统,线索会在几分钟内流失,同一套房甚至可能被承诺给两位买家。了解必备功能、合理的开发成本区间,以及一家中介公司把月成交量翻倍的真实案例。",
+        "tags": [
+          "应用",
+          "房地产",
+          "地产科技"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-telemedicine-kesehatan-digital",
+    "date": "2026-07-12",
+    "readMinutes": 12,
+    "c": "#1D4ED8",
+    "c2": "#1E3A8A",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Telemedicine & Kesehatan Digital: Panduan Membangun Sistem untuk Klinik dan Rumah Sakit di Indonesia",
+        "description": "Panduan membangun aplikasi telemedicine untuk klinik, rumah sakit, dan startup kesehatan di Indonesia — fitur wajib, biaya, timeline, dan studi kasus nyata.",
+        "excerpt": "Dari booking pasien hingga integrasi BPJS dan SATUSEHAT — pelajari fitur wajib, estimasi biaya dalam Rupiah, dan studi kasus nyata membangun aplikasi telemedicine untuk klinik di Indonesia.",
+        "tags": [
+          "Aplikasi",
+          "Kesehatan",
+          "Healthtech"
+        ]
+      },
+      "en": {
+        "title": "Telemedicine & Digital Health Apps: A Guide to Building Systems for Clinics and Hospitals in Indonesia",
+        "description": "A guide to building a telemedicine app for clinics, hospitals, and health startups in Indonesia — must-have features, costs, timeline, and a real case study.",
+        "excerpt": "From patient booking to BPJS and SATUSEHAT integration — learn the must-have features, Rupiah cost estimates, and a real case study for building a telemedicine app in Indonesia.",
+        "tags": [
+          "Application",
+          "Healthcare",
+          "Healthtech"
+        ]
+      },
+      "zh": {
+        "title": "远程医疗与数字健康应用：印尼诊所与医院系统搭建指南",
+        "description": "面向印尼诊所、医院与医疗健康创业公司的远程医疗应用搭建完整指南——必备功能、开发成本、周期规划与真实案例分析。",
+        "excerpt": "从病人预约挂号到BPJS与SATUSEHAT系统对接——了解在印尼搭建远程医疗应用所需的必备功能、印尼盾成本区间与真实案例。",
+        "tags": [
+          "应用",
+          "医疗",
+          "健康科技"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-pariwisata-hotel-property-management-system",
+    "date": "2026-07-09",
+    "readMinutes": 9,
+    "c": "#D97706",
+    "c2": "#78350F",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi PMS Hotel & Booking Pariwisata: Kelola Kamar, Harga, dan Tamu dalam Satu Sistem",
+        "description": "Panduan lengkap Property Management System (PMS) dan aplikasi booking untuk hotel, villa, dan bisnis pariwisata: fitur wajib, integrasi OTA, dynamic pricing, kisaran biaya, dan studi kasus peningkatan okupansi.",
+        "excerpt": "Resepsionis hotel masih mencatat reservasi manual di buku, sementara kamar yang sama bisa double-booking dari OTA berbeda di waktu bersamaan. Aplikasi PMS menyatukan booking, harga, dan operasional hotel dalam satu sistem real-time.",
+        "tags": [
+          "Aplikasi",
+          "Pariwisata",
+          "Hospitality"
+        ]
+      },
+      "en": {
+        "title": "Hotel PMS & Travel Booking App: Manage Rooms, Rates, and Guests in One System",
+        "description": "A complete guide to Property Management Systems (PMS) and booking apps for hotels, villas, and travel businesses: must-have features, OTA integration, dynamic pricing, cost ranges, and a case study on rising occupancy.",
+        "excerpt": "A hotel receptionist is still logging reservations by hand while the same room gets double-booked across different OTAs at the same time. A PMS app brings booking, pricing, and hotel operations into one real-time system.",
+        "tags": [
+          "Application",
+          "Travel",
+          "Hospitality"
+        ]
+      },
+      "zh": {
+        "title": "酒店PMS与旅游预订应用：一套系统管理客房、房价与客人",
+        "description": "全面指南：面向酒店、别墅与旅游企业的物业管理系统（PMS）与预订应用——必备功能、OTA平台对接、动态定价、费用参考，以及入住率提升的真实案例。",
+        "excerpt": "酒店前台仍在手工登记预订，而同一间房却可能在不同OTA平台上被同时重复预订。PMS应用能把预订、房价与酒店运营整合进一套实时系统。",
+        "tags": [
+          "应用",
+          "旅游",
+          "酒店业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "autentikasi-passwordless-keamanan-aplikasi-2026",
+    "date": "2026-07-09",
+    "readMinutes": 9,
+    "c": "#DC2626",
+    "c2": "#7F1D1D",
+    "i18n": {
+      "id": {
+        "title": "Autentikasi Passwordless: Kenapa Aplikasi Bisnis Harus Tinggalkan Password di 2026",
+        "description": "Panduan lengkap autentikasi passwordless (passkey, biometrik, magic link) untuk aplikasi bisnis: kenapa password makin berbahaya, cara kerja passkey, kisaran biaya implementasi, dan studi kasus penurunan kebocoran akun.",
+        "excerpt": "Password adalah celah keamanan nomor satu di hampir semua kebocoran data besar. Autentikasi passwordless — dari passkey hingga biometrik — menutup celah itu sekaligus membuat proses login lebih cepat bagi pengguna.",
+        "tags": [
+          "Keamanan",
+          "Aplikasi",
+          "Autentikasi"
+        ]
+      },
+      "en": {
+        "title": "Passwordless Authentication: Why Business Apps Must Ditch Passwords in 2026",
+        "description": "A complete guide to passwordless authentication (passkeys, biometrics, magic links) for business apps: why passwords keep getting more dangerous, how passkeys work, implementation cost ranges, and a case study on cutting account takeovers.",
+        "excerpt": "Passwords are the number-one weakness behind nearly every major data breach. Passwordless authentication — from passkeys to biometrics — closes that gap while making login faster for users.",
+        "tags": [
+          "Security",
+          "Application",
+          "Authentication"
+        ]
+      },
+      "zh": {
+        "title": "无密码身份验证：2026年商业应用为何必须告别密码",
+        "description": "全面指南：面向商业应用的无密码身份验证（密钥、生物识别、魔法链接）——密码为何日益危险、密钥的工作原理、实施费用参考，以及降低账户被盗案例的真实研究。",
+        "excerpt": "在几乎所有重大数据泄露事件中，密码都是头号安全弱点。无密码身份验证——从密钥到生物识别——能弥补这一漏洞，同时让用户登录更快捷。",
+        "tags": [
+          "安全",
+          "应用",
+          "身份验证"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "optimasi-mesin-pencari-ai-generative-engine-optimization-2026",
+    "date": "2026-07-09",
+    "readMinutes": 9,
+    "c": "#C026D3",
+    "c2": "#701A75",
+    "i18n": {
+      "id": {
+        "title": "GEO (Generative Engine Optimization): Cara Website Muncul di Jawaban ChatGPT & AI Overview",
+        "description": "Panduan GEO/AEO 2026: cara mengoptimalkan website agar dikutip oleh ChatGPT, Perplexity, dan Google AI Overview, lengkap dengan structured data, llms.txt, dan strategi konten yang disukai AI.",
+        "excerpt": "SEO klasik mengejar peringkat #1 di Google. GEO mengejar sesuatu yang lebih penting sekarang: disebut sebagai sumber jawaban oleh ChatGPT, Perplexity, dan AI Overview — sebelum pengunjung sempat klik link mana pun.",
+        "tags": [
+          "SEO",
+          "AI",
+          "Digital Marketing"
+        ]
+      },
+      "en": {
+        "title": "GEO (Generative Engine Optimization): Getting Your Website Into ChatGPT & AI Overview Answers",
+        "description": "A 2026 guide to GEO/AEO: how to optimize your website so it gets cited by ChatGPT, Perplexity, and Google AI Overview, covering structured data, llms.txt, and content strategies AI models prefer.",
+        "excerpt": "Classic SEO chases the #1 spot on Google. GEO chases something more important now: being named as the source in ChatGPT, Perplexity, and AI Overview answers — before a visitor ever clicks a link.",
+        "tags": [
+          "SEO",
+          "AI",
+          "Digital Marketing"
+        ]
+      },
+      "zh": {
+        "title": "GEO（生成式引擎优化）：让您的网站出现在ChatGPT与AI概览的回答中",
+        "description": "2026年GEO/AEO指南：如何优化网站，使其被ChatGPT、Perplexity和Google AI概览引用，涵盖结构化数据、llms.txt文件以及AI模型偏好的内容策略。",
+        "excerpt": "传统SEO追求的是Google排名第一。而GEO追求的是当下更重要的事：在用户点击任何链接之前，先被ChatGPT、Perplexity和AI概览指名为答案来源。",
+        "tags": [
+          "SEO",
+          "AI",
+          "数字营销"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-esg-sustainability-reporting-bisnis",
+    "date": "2026-07-09",
+    "readMinutes": 9,
+    "c": "#16A34A",
+    "c2": "#052E16",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi ESG & Laporan Keberlanjutan: Kenapa Bisnis Butuh Sistem Ini di 2026",
+        "description": "Panduan lengkap software ESG dan pelaporan keberlanjutan untuk bisnis Indonesia: regulasi OJK, tekanan supply chain global, fitur wajib, kisaran biaya, dan cara memulai tanpa tim sustainability besar.",
+        "excerpt": "Investor dan buyer ekspor kini minta laporan emisi karbon dan skor keberlanjutan, bukan cuma laporan keuangan. Begini cara aplikasi ESG mengotomasi pengumpulan data yang selama ini tersebar di puluhan spreadsheet berbeda.",
+        "tags": [
+          "ESG",
+          "Sustainability",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "ESG & Sustainability Reporting Software: Why Business Needs It in 2026",
+        "description": "A complete guide to ESG and sustainability reporting software for Indonesian business: OJK regulation, global supply chain pressure, must-have features, cost ranges, and how to start without a large sustainability team.",
+        "excerpt": "Investors and export buyers now demand carbon emission and sustainability scores, not just financial statements. Here's how ESG software automates data collection that used to be scattered across dozens of spreadsheets.",
+        "tags": [
+          "ESG",
+          "Sustainability",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "ESG与可持续发展报告软件：2026年企业为何离不开它",
+        "description": "全面指南：面向印尼企业的ESG与可持续发展报告软件——OJK监管要求、全球供应链压力、必备功能、费用参考，以及在没有大型可持续发展团队的情况下如何起步。",
+        "excerpt": "投资者和出口买家如今要求提供碳排放和可持续发展评分，而不只是财务报表。以下是ESG软件如何自动化收集那些曾经分散在数十张表格中的数据。",
+        "tags": [
+          "ESG",
+          "可持续发展",
+          "商业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "erp-sistem-informasi-akademik-sekolah-kampus",
+    "date": "2026-07-09",
+    "readMinutes": 9,
+    "c": "#0891B2",
+    "c2": "#164E63",
+    "i18n": {
+      "id": {
+        "title": "ERP Sekolah & Kampus: Satu Sistem untuk Akademik, SPP, dan Data Siswa",
+        "description": "Panduan lengkap sistem informasi akademik (ERP sekolah) untuk yayasan pendidikan, sekolah, dan kampus: modul wajib, integrasi Dapodik/PDDikti, kisaran biaya, dan studi kasus digitalisasi 1 ke 6 unit sekolah.",
+        "excerpt": "Guru sibuk input nilai manual di kertas, bendahara kejar-kejaran menagih SPP lewat WhatsApp, dan orang tua tidak tahu perkembangan anaknya di sekolah. ERP sekolah menyatukan akademik, keuangan, dan komunikasi orang tua dalam satu sistem.",
+        "tags": [
+          "ERP",
+          "Pendidikan",
+          "Sekolah"
+        ]
+      },
+      "en": {
+        "title": "School & Campus ERP: One System for Academics, Tuition Billing, and Student Data",
+        "description": "A complete guide to school information systems (school ERP) for education foundations, schools, and campuses: must-have modules, government reporting integration, cost ranges, and a case study of digitizing from 1 to 6 school units.",
+        "excerpt": "Teachers stuck writing report cards by hand, treasurers chasing tuition payments over chat, and parents left in the dark about their child's progress. A school ERP brings academics, finance, and parent communication into one system.",
+        "tags": [
+          "ERP",
+          "Education",
+          "School"
+        ]
+      },
+      "zh": {
+        "title": "校园ERP系统：一套系统统管教务、学费与学生数据",
+        "description": "全面指南：面向教育基金会、学校与高校的校务信息系统（校园ERP）——必备模块、政府报送系统对接、费用参考，以及从1所到6所学校数字化转型的真实案例。",
+        "excerpt": "老师忙于手写成绩单，财务人员在聊天群里追缴学费，家长却对孩子的学习进展一无所知。校园ERP系统能把教务、财务和家校沟通整合进同一套系统。",
+        "tags": [
+          "ERP",
+          "教育",
+          "学校"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "erp-ai-copilot-otomasi-cerdas-2026",
+    "date": "2026-07-08",
+    "readMinutes": 8,
+    "c": "#2563EB",
+    "c2": "#1E3A8A",
+    "i18n": {
+      "id": {
+        "title": "ERP AI Copilot 2026: Otomasi Cerdas di Dalam Sistem Bisnis",
+        "description": "ERP AI copilot mengubah cara tim finance dan gudang bekerja tahun 2026. Kenali fitur, arsitektur, risiko, dan estimasi biaya membangunnya di Indonesia.",
+        "excerpt": "AI copilot yang tertanam langsung di dalam ERP kini bisa menjawab pertanyaan bisnis, membaca faktur, dan memberi peringatan dini stok habis dalam hitungan detik.",
+        "tags": [
+          "ERP",
+          "AI",
+          "Otomasi"
+        ]
+      },
+      "en": {
+        "title": "ERP AI Copilot 2026: Smart Automation Inside Business Systems",
+        "description": "ERP AI copilots are changing how finance and warehouse teams work in 2026. Learn the features, architecture, risks, and build costs for Indonesian firms.",
+        "excerpt": "An AI copilot embedded inside your ERP can now answer business questions, read supplier invoices, and flag stockout risk in seconds instead of days.",
+        "tags": [
+          "ERP",
+          "AI",
+          "Automation"
+        ]
+      },
+      "zh": {
+        "title": "2026年ERP AI副驾驶：企业系统内的智能自动化",
+        "description": "2026年，嵌入ERP系统的AI副驾驶正在改变财务和仓库团队的工作方式。了解其功能、架构、风险以及在印尼建设的大致成本。",
+        "excerpt": "直接嵌入ERP系统内部的AI副驾驶如今能在几秒钟内回答业务问题、读取供应商发票、并预警缺货风险。",
+        "tags": [
+          "ERP",
+          "人工智能",
+          "自动化"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "ar-vr-spatial-computing-bisnis-2026",
+    "date": "2026-07-08",
+    "readMinutes": 8,
+    "c": "#DB2777",
+    "c2": "#831843",
+    "i18n": {
+      "id": {
+        "title": "AR/VR & Spatial Computing: Teknologi Interaksi Bisnis 2026",
+        "description": "AR, VR, dan spatial computing kini jadi alat bisnis nyata: showroom virtual, WebAR e-commerce, pelatihan VR, hingga estimasi biaya di Indonesia.",
+        "excerpt": "AR/VR bukan lagi gimmick pameran. Pelajari cara bisnis memakai spatial computing untuk showroom virtual, dukungan teknis jarak jauh, dan pelatihan staf, lengkap dengan kisaran biaya.",
+        "tags": [
+          "AR/VR",
+          "Teknologi",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "AR/VR & Spatial Computing: The New Business Toolkit 2026",
+        "description": "AR, VR, and spatial computing are now practical business tools: virtual showrooms, WebAR for e-commerce, VR training, and real cost benchmarks for 2026.",
+        "excerpt": "AR/VR has moved past trade-show gimmicks. See how businesses use spatial computing for virtual showrooms, remote support, and staff training, with realistic cost ranges.",
+        "tags": [
+          "AR/VR",
+          "Technology",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "AR/VR 与空间计算：2026商业互动新利器",
+        "description": "AR、VR与空间计算正成为实用商业工具：虚拟展厅、WebAR电商应用、VR培训，附印尼盾成本参考区间。",
+        "excerpt": "AR/VR不再只是展会噱头。了解企业如何利用空间计算打造虚拟展厅、远程技术支持与员工培训，并附上真实成本区间。",
+        "tags": [
+          "AR/VR",
+          "科技",
+          "商业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-aset-maintenance-bisnis",
+    "date": "2026-07-08",
+    "readMinutes": 8,
+    "c": "#7C3AED",
+    "c2": "#4C1D95",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Aset & Maintenance (CMMS) untuk Bisnis",
+        "description": "Kenali cara kerja aplikasi CMMS dan manajemen aset untuk menekan downtime mesin, mengatur preventive maintenance, dan menghemat biaya operasional pabrik.",
+        "excerpt": "Downtime mesin yang tidak terjadwal bisa menggerus jutaan rupiah dalam hitungan jam. Begini cara aplikasi CMMS custom membantu pabrik dan pengelola gedung mencegahnya.",
+        "tags": [
+          "Aplikasi",
+          "Manufaktur",
+          "Maintenance"
+        ]
+      },
+      "en": {
+        "title": "Asset Management & CMMS Apps to Cut Machine Downtime",
+        "description": "See how CMMS and asset management apps track equipment, schedule preventive maintenance, and cut unplanned downtime for factories, fleets, and buildings.",
+        "excerpt": "One unplanned breakdown can cost a plant tens of millions of rupiah in a single afternoon. Here's how a custom CMMS app helps operations teams catch problems before they happen.",
+        "tags": [
+          "Application",
+          "Manufacturing",
+          "Maintenance"
+        ]
+      },
+      "zh": {
+        "title": "资产管理与CMMS维护系统：减少设备停机时间",
+        "description": "了解CMMS资产管理系统如何追踪设备、安排预防性维护，帮助工厂、物业和车队大幅降低非计划停机损失。",
+        "excerpt": "一次突发故障就可能让工厂一下午损失数千万印尼盾。看看定制CMMS系统如何帮助运营团队在问题发生前就发现隐患。",
+        "tags": [
+          "应用",
+          "制造业",
+          "维护管理"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-fintech-pembiayaan-digital-umkm",
+    "date": "2026-07-08",
+    "readMinutes": 8,
+    "c": "#166534",
+    "c2": "#14532D",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Fintech Pembiayaan Digital untuk UMKM: Panduan Build",
+        "description": "Panduan membangun aplikasi fintech lending untuk UMKM: KYC, credit scoring, alur pencairan, kepatuhan OJK, biaya, dan studi kasus nyata.",
+        "excerpt": "UMKM sering ditolak bank karena tidak punya agunan atau riwayat kredit formal. Aplikasi fintech pembiayaan digital bisa menutup celah itu — begini cara membangunnya dengan benar.",
+        "tags": [
+          "Fintech",
+          "Aplikasi",
+          "UMKM"
+        ]
+      },
+      "en": {
+        "title": "Fintech Lending Apps for SMEs: A Practical Build Guide",
+        "description": "How to build a fintech lending app for SMEs: KYC, credit scoring, disbursement, compliance, realistic costs, and a working case study.",
+        "excerpt": "Traditional banks reject most small businesses over collateral and credit history. Custom fintech lending apps close that gap — here's what it actually takes to build one.",
+        "tags": [
+          "Fintech",
+          "Application",
+          "SME"
+        ]
+      },
+      "zh": {
+        "title": "中小企业金融科技借贷应用开发实用指南",
+        "description": "如何搭建面向中小企业的金融科技借贷应用：KYC、信用评分、放款集成、合规要点、成本预估与真实案例解析。",
+        "excerpt": "传统银行常因缺乏抵押品和信用记录而拒绝中小企业贷款申请。定制化金融科技借贷应用正在填补这一空白，本文讲清楚具体该怎么做。",
+        "tags": [
+          "金融科技",
+          "应用",
+          "中小企业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-erp-multi-cabang-bisnis-nasional",
+    "date": "2026-07-08",
+    "readMinutes": 8,
+    "c": "#0F766E",
+    "c2": "#134E4A",
+    "i18n": {
+      "id": {
+        "title": "Sistem ERP Multi-Cabang: Kelola Semua Lokasi dari Satu Dashboard",
+        "description": "Panduan lengkap ERP multi-cabang untuk retail, F&B, dan klinik: fitur wajib, kisaran biaya di Indonesia, dan studi kasus ekspansi 3 ke 15 cabang.",
+        "excerpt": "Bisnis dengan banyak cabang sering terjebak spreadsheet terpisah dan laporan yang telat. Begini cara ERP multi-cabang menyatukan stok, keuangan, dan tim jadi satu sistem yang bisa dipantau real-time.",
+        "tags": [
+          "ERP",
+          "Bisnis",
+          "Multi-Cabang"
+        ]
+      },
+      "en": {
+        "title": "Multi-Branch ERP: One Dashboard for Every Location",
+        "description": "A practical guide to multi-branch ERP for retail, F&B, and clinics: must-have features, Indonesian cost ranges, and a 3-to-15-branch case study.",
+        "excerpt": "Running multiple locations on separate spreadsheets breeds stock errors and stale reports. Here's how multi-branch ERP unifies inventory, finance, and HR into one real-time system.",
+        "tags": [
+          "ERP",
+          "Business",
+          "Multi-Branch"
+        ]
+      },
+      "zh": {
+        "title": "多分店ERP系统：一个后台管理所有门店",
+        "description": "零售、餐饮和诊所连锁的多分店ERP实用指南：必备功能、印尼市场报价区间，以及从3家到15家分店的真实案例。",
+        "excerpt": "多家门店各自为政的Excel表格，往往意味着库存对不上、报表总是慢半拍。看看多分店ERP如何把库存、财务和人事整合进一个实时系统。",
+        "tags": [
+          "ERP",
+          "商业",
+          "多分店"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "digital-twin-simulasi-bisnis-manufaktur",
+    "date": "2026-07-07",
+    "readMinutes": 9,
+    "c": "#0284C7",
+    "c2": "#0C4A6E",
+    "i18n": {
+      "id": {
+        "title": "Digital Twin: Simulasi Digital untuk Optimasi Bisnis & Manufaktur 2026",
+        "description": "Digital twin memungkinkan bisnis menguji perubahan proses, jadwal produksi, atau tata letak gudang secara virtual sebelum diterapkan di dunia nyata. Pelajari cara kerja, manfaat, dan penerapannya untuk bisnis Indonesia di 2026.",
+        "excerpt": "Mengubah tata letak lini produksi di dunia nyata bisa memakan biaya besar jika ternyata keliru. Digital twin memungkinkan bisnis menguji perubahan itu dulu secara virtual, tanpa risiko dan tanpa menghentikan operasional.",
+        "tags": [
+          "Teknologi",
+          "Manufaktur",
+          "Inovasi"
+        ]
+      },
+      "en": {
+        "title": "Digital Twin: Digital Simulation for Business & Manufacturing Optimization in 2026",
+        "description": "Digital twin technology lets businesses test process changes, production schedules, or warehouse layouts virtually before applying them in the real world. Learn how it works, its benefits, and how Indonesian businesses can apply it in 2026.",
+        "excerpt": "Changing a production line layout in the real world can be costly if it turns out wrong. A digital twin lets businesses test that change virtually first, with no risk and no operational downtime.",
+        "tags": [
+          "Technology",
+          "Manufacturing",
+          "Innovation"
+        ]
+      },
+      "zh": {
+        "title": "数字孪生：2026年优化企业与制造业运营的数字化模拟技术",
+        "description": "数字孪生技术让企业能够在实际应用之前，先在虚拟环境中测试流程变更、生产排期或仓库布局。了解其工作原理、优势，以及2026年印尼企业如何应用这一技术。",
+        "excerpt": "在现实中改动生产线布局，一旦判断失误代价高昂。数字孪生让企业先在虚拟环境中测试这些变更，既无风险，也不影响正常运营。",
+        "tags": [
+          "技术",
+          "制造业",
+          "创新"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "kepatuhan-uu-pdp-aplikasi-bisnis-digital",
+    "date": "2026-07-07",
+    "readMinutes": 9,
+    "c": "#EA580C",
+    "c2": "#7C2D12",
+    "i18n": {
+      "id": {
+        "title": "Kepatuhan UU PDP untuk Aplikasi & Website Bisnis: Panduan Praktis 2026",
+        "description": "UU Pelindungan Data Pribadi (PDP) mewajibkan bisnis mengelola data pelanggan secara bertanggung jawab. Pelajari langkah praktis membuat website dan aplikasi Anda patuh UU PDP tanpa menghambat operasional bisnis.",
+        "excerpt": "Denda dan sanksi UU PDP nyata, tapi kepatuhan tidak harus menjadi proyek besar yang menakutkan — dengan pendekatan yang tepat, ia bisa dibangun langsung ke dalam arsitektur aplikasi sejak awal.",
+        "tags": [
+          "Keamanan Data",
+          "Bisnis",
+          "Panduan"
+        ]
+      },
+      "en": {
+        "title": "Data Privacy Law Compliance for Business Apps & Websites: A 2026 Practical Guide",
+        "description": "Data privacy regulations require businesses to handle customer data responsibly. Learn the practical steps to make your website and app compliant without slowing down business operations.",
+        "excerpt": "Data privacy penalties are real, but compliance doesn’t have to be a daunting mega-project — with the right approach, it can be built directly into your app’s architecture from day one.",
+        "tags": [
+          "Data Security",
+          "Business",
+          "Guide"
+        ]
+      },
+      "zh": {
+        "title": "企业应用与网站的数据隐私合规：2026年实用指南",
+        "description": "数据隐私保护法规要求企业负责任地处理客户数据。了解让您的网站和应用合规的实用步骤，同时不影响业务运营效率。",
+        "excerpt": "数据隐私违规的处罚是真实存在的，但合规不必是一个令人望而生畏的庞大项目——只要方法得当，它完全可以从一开始就融入应用架构之中。",
+        "tags": [
+          "数据安全",
+          "商业",
+          "指南"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "ai-coding-assistant-masa-depan-pengembangan-software",
+    "date": "2026-07-07",
+    "readMinutes": 9,
+    "c": "#9333EA",
+    "c2": "#581C87",
+    "i18n": {
+      "id": {
+        "title": "AI Coding Assistant: Masa Depan Pengembangan Software & Aplikasi Bisnis",
+        "description": "AI coding assistant mengubah cara developer membangun website, aplikasi, dan sistem bisnis — mempercepat development tanpa mengorbankan kualitas. Pelajari cara kerjanya dan dampaknya bagi bisnis yang ingin membangun software di 2026.",
+        "excerpt": "Developer kini menulis kode berdampingan dengan AI yang menyarankan baris berikutnya, menemukan bug sebelum production, dan bahkan menulis seluruh fungsi dari deskripsi sederhana — mengubah ekonomi pengembangan software secara fundamental.",
+        "tags": [
+          "AI",
+          "Software",
+          "Teknologi"
+        ]
+      },
+      "en": {
+        "title": "AI Coding Assistants: The Future of Software & Business App Development",
+        "description": "AI coding assistants are changing how developers build websites, apps, and business systems — speeding up development without sacrificing quality. Learn how it works and what it means for businesses building software in 2026.",
+        "excerpt": "Developers now write code alongside AI that suggests the next line, catches bugs before production, and even writes entire functions from a plain description — fundamentally changing the economics of software development.",
+        "tags": [
+          "AI",
+          "Software",
+          "Technology"
+        ]
+      },
+      "zh": {
+        "title": "AI编程助手：软件与企业应用开发的未来",
+        "description": "AI编程助手正在改变开发者构建网站、应用和企业系统的方式——在不牺牲质量的前提下加快开发速度。了解其工作原理，以及2026年对希望构建软件的企业意味着什么。",
+        "excerpt": "开发者如今与AI并肩编写代码——AI能实时建议下一行代码、在上线前发现漏洞，甚至根据简单描述编写整个函数——从根本上改变了软件开发的经济模式。",
+        "tags": [
+          "人工智能",
+          "软件",
+          "技术"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "composable-commerce-headless-architecture-2026",
+    "date": "2026-07-07",
+    "readMinutes": 9,
+    "c": "#4F46E5",
+    "c2": "#312E81",
+    "i18n": {
+      "id": {
+        "title": "Composable Commerce & Headless Architecture: Bisnis Digital Modular di 2026",
+        "description": "Composable commerce dan headless architecture memungkinkan bisnis menyusun platform digital dari komponen modular yang bisa diganti kapan saja. Pelajari cara kerja, manfaat, dan kapan waktu tepat mengadopsinya di 2026.",
+        "excerpt": "Platform e-commerce monolitik memaksa bisnis mengikuti batasan satu vendor. Composable commerce membalik logika itu — bisnis yang memilih komponen mana yang dipakai, bukan sebaliknya.",
+        "tags": [
+          "E-Commerce",
+          "Teknologi",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Composable Commerce & Headless Architecture: Modular Digital Business in 2026",
+        "description": "Composable commerce and headless architecture let businesses assemble their digital platform from modular components that can be swapped out anytime. Learn how it works, its benefits, and when to adopt it in 2026.",
+        "excerpt": "Monolithic e-commerce platforms force businesses to work within one vendor’s limits. Composable commerce flips that logic — businesses choose which components to use, not the other way around.",
+        "tags": [
+          "E-Commerce",
+          "Technology",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "可组合商务与无头架构：2026年模块化数字商业",
+        "description": "可组合商务与无头（Headless）架构让企业能够用可随时替换的模块化组件搭建自己的数字平台。了解其工作原理、优势，以及2026年何时该采用这一方案。",
+        "excerpt": "单体电商平台迫使企业只能在单一供应商设定的框架内运作。可组合商务颠覆了这个逻辑——由企业决定使用哪些组件，而不是反过来。",
+        "tags": [
+          "电子商务",
+          "技术",
+          "商业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-pos-kasir-digital-retail-2026",
+    "date": "2026-07-07",
+    "readMinutes": 9,
+    "c": "#0D9488",
+    "c2": "#134E4A",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi POS (Kasir Digital) 2026: Solusi Modern untuk Retail & F&B",
+        "description": "Aplikasi POS digital menggantikan mesin kasir konvensional dengan sistem cloud yang terhubung real-time. Pelajari fitur wajib, jenis, biaya, dan cara memilih POS yang tepat untuk bisnis retail atau F&B Anda di 2026.",
+        "excerpt": "Mesin kasir lama mencatat transaksi, tapi tidak bisa menjawab pertanyaan paling penting pemilik bisnis: produk apa yang paling laku, cabang mana yang paling untung, dan kapan harus restock.",
+        "tags": [
+          "Aplikasi Mobile",
+          "Retail",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "POS (Digital Cashier) Apps 2026: A Modern Solution for Retail & F&B",
+        "description": "Digital POS apps replace conventional cash registers with cloud systems synced in real time. Learn the must-have features, types, costs, and how to choose the right POS for your retail or F&B business in 2026.",
+        "excerpt": "An old cash register records transactions, but it can’t answer the questions business owners actually need answered: which product sells best, which branch is most profitable, and when to restock.",
+        "tags": [
+          "Mobile Apps",
+          "Retail",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "2026年POS收银系统应用：零售与餐饮行业的现代化解决方案",
+        "description": "数字化POS收银应用正在取代传统收银机，通过云端系统实现实时同步。了解2026年零售与餐饮企业必备的功能、类型、成本，以及如何选择合适的POS系统。",
+        "excerpt": "传统收银机只会记录交易，却无法回答企业主最关心的问题：哪款产品卖得最好、哪家分店最赚钱、什么时候该补货。",
+        "tags": [
+          "移动应用",
+          "零售",
+          "商业"
+        ]
+      }
+    }
+  },
+  {
     "slug": "sistem-antrian-digital-queue-management",
     "date": "2026-07-06",
     "readMinutes": 7,
