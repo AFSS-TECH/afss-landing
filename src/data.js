@@ -854,6 +854,28 @@ export const pricing = [
     },
   },
   {
+    icon: 'fa-solid fa-mobile-screen',
+    hot: false,
+    slug: 'aplikasi-mobile',
+    i18n: {
+      id: {
+        name: 'Aplikasi Mobile', category: 'Mobile', price: 'Rp 15 Jt', note: 'mulai dari',
+        desc: 'Aplikasi Android & iOS cross-platform yang ringan, cepat, dan nyaman — siap dipublikasikan ke Play Store & App Store.',
+        feats: ['Android & iOS (Flutter cross-platform)', 'UI/UX desain custom', 'Integrasi API & notifikasi push', 'Siap publish Play Store & App Store'],
+      },
+      en: {
+        name: 'Mobile App', category: 'Mobile', price: 'Rp 15M', note: 'starting from',
+        desc: 'A lightweight, fast, and comfortable Android & iOS cross-platform app — ready to publish on Play Store & App Store.',
+        feats: ['Android & iOS (Flutter cross-platform)', 'Custom UI/UX design', 'API integration & push notifications', 'Ready to publish on Play Store & App Store'],
+      },
+      zh: {
+        name: '移动应用', category: '移动端', price: 'Rp 15M', note: '起',
+        desc: '轻量、快速、舒适的Android与iOS跨平台应用——随时可发布至Play Store与App Store。',
+        feats: ['Android与iOS（Flutter跨平台）', '定制UI/UX设计', 'API集成与推送通知', '可发布至Play Store与App Store'],
+      },
+    },
+  },
+  {
     icon: 'fa-solid fa-circle-nodes',
     hot: true,
     slug: 'erp',
@@ -1074,9 +1096,9 @@ export const faqs = [
   {
     id: 'biaya',
     i18n: {
-      id: { q: 'Berapa biaya jasa AFSS?', a: 'Landing page mulai Rp 1,5 juta, company profile mulai Rp 4,5 juta, software custom mulai Rp 8 juta, e-commerce mulai Rp 18 juta, ERP mulai Rp 28 juta, dan marketplace mulai Rp 65 juta. Semua harga adalah estimasi awal — final disesuaikan ruang lingkup dan kompleksitas setelah konsultasi gratis.' },
-      en: { q: 'How much do AFSS services cost?', a: 'Landing pages start from Rp 1.5 million, company profiles from Rp 4.5 million, custom software from Rp 8 million, e-commerce from Rp 18 million, ERP from Rp 28 million, and marketplaces from Rp 65 million. All prices are initial estimates — the final figure is adjusted for scope and complexity after a free consultation.' },
-      zh: { q: 'AFSS的服务费用是多少？', a: '落地页起价150万印尼盾，企业官网起价450万印尼盾，定制软件起价800万印尼盾，电商平台起价1800万印尼盾，ERP系统起价2800万印尼盾，多商户平台起价6500万印尼盾。以上均为初步估算——最终报价将在免费咨询后根据项目范围与复杂度确定。' },
+      id: { q: 'Berapa biaya jasa AFSS?', a: 'Landing page mulai Rp 1,5 juta, company profile mulai Rp 4,5 juta, software custom mulai Rp 8 juta, aplikasi mobile mulai Rp 15 juta, e-commerce mulai Rp 18 juta, ERP mulai Rp 28 juta, dan marketplace mulai Rp 65 juta. Semua harga adalah estimasi awal — final disesuaikan ruang lingkup dan kompleksitas setelah konsultasi gratis.' },
+      en: { q: 'How much do AFSS services cost?', a: 'Landing pages start from Rp 1.5 million, company profiles from Rp 4.5 million, custom software from Rp 8 million, mobile apps from Rp 15 million, e-commerce from Rp 18 million, ERP from Rp 28 million, and marketplaces from Rp 65 million. All prices are initial estimates — the final figure is adjusted for scope and complexity after a free consultation.' },
+      zh: { q: 'AFSS的服务费用是多少？', a: '落地页起价150万印尼盾，企业官网起价450万印尼盾，定制软件起价800万印尼盾，移动应用起价1500万印尼盾，电商平台起价1800万印尼盾，ERP系统起价2800万印尼盾，多商户平台起价6500万印尼盾。以上均为初步估算——最终报价将在免费咨询后根据项目范围与复杂度确定。' },
     },
   },
   {

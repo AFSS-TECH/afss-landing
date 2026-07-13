@@ -57,7 +57,7 @@ export const SECTIONS = [
     fields: [{ key: 'name', label: 'Nama teknologi' }, { key: 'icon', label: 'Icon (fa-solid / fa-brands fa-...)' }],
   },
   {
-    key: 'pricing', label: 'Harga — 6 Produk Utama', kind: 'array-i18n',
+    key: 'pricing', label: 'Harga — 7 Produk Utama', kind: 'array-i18n',
     extraFields: [
       { key: 'slug', label: 'Slug (harus cocok dengan /layanan/:slug)' },
       { key: 'icon', label: 'Icon' },
