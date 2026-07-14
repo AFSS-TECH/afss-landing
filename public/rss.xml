@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Sun, 12 Jul 2026 18:37:11 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 02:19:50 GMT</lastBuildDate>
+    <item>
+      <title>Aplikasi eKYC: Verifikasi Identitas Digital agar Onboarding Tidak Kehilangan Pelanggan</title>
+      <link>https://afss.tech/blog/aplikasi-ekyc-verifikasi-identitas-digital</link>
+      <guid>https://afss.tech/blog/aplikasi-ekyc-verifikasi-identitas-digital</guid>
+      <description>Berapa banyak calon pelanggan yang hilang karena verifikasi identitas masih manual? Kenali eKYC, fitur wajibnya, dan kisaran biaya membangunnya di Indonesia.</description>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Keamanan</category>
+      <category>Fintech</category>
+    </item>
+    <item>
+      <title>Software Manajemen Franchise: Kendalikan Puluhan Outlet Tanpa Kehilangan Kendali</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-franchise-bisnis</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-franchise-bisnis</guid>
+      <description>Spreadsheet dan grup WhatsApp cukup untuk 3 outlet, tapi hancur di outlet ke-30. Ini cara brand owner Indonesia menstandardisasi operasional dan menutup kebocoran royalti.</description>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Franchise</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>AI Voice Agent 2026: Solusi Call Center Otomatis untuk Bisnis Indonesia</title>
+      <link>https://afss.tech/blog/ai-voice-agent-call-center-otomatis-2026</link>
+      <guid>https://afss.tech/blog/ai-voice-agent-call-center-otomatis-2026</guid>
+      <description>Antrean telepon panjang dan panggilan malam yang tak terjawab bikin pelanggan kabur? Kenali AI voice agent, teknologi call center otomatis yang mulai diadopsi bisnis Indonesia di 2026.</description>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>Customer Service</category>
+      <category>Call Center</category>
+    </item>
+    <item>
+      <title>Aplikasi WMS: Kenapa Gudang Anda Butuh Lebih dari Sekadar Software Stok</title>
+      <link>https://afss.tech/blog/aplikasi-wms-warehouse-management-system-gudang</link>
+      <guid>https://afss.tech/blog/aplikasi-wms-warehouse-management-system-gudang</guid>
+      <description>Picker salah ambil barang, SLA pengiriman meleset, dan gudang makin sesak — tanda-tanda Anda butuh WMS sungguhan, bukan sekadar aplikasi pencatat stok.</description>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Logistik</category>
+      <category>Gudang</category>
+    </item>
+    <item>
+      <title>Sistem CLM: Manajemen Kontrak Digital Sebelum Bisnis Anda Kehilangan Kontrak Penting</title>
+      <link>https://afss.tech/blog/sistem-clm-manajemen-kontrak-legal-digital</link>
+      <guid>https://afss.tech/blog/sistem-clm-manajemen-kontrak-legal-digital</guid>
+      <description>Kontrak yang tercecer di email dan folder bisa bikin bisnis rugi ratusan juta tanpa disadari. Kenali sistem CLM, fitur pentingnya, dan berapa biaya membangunnya di Indonesia.</description>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>Legal</category>
+      <category>Bisnis</category>
+    </item>
     <item>
       <title>Aplikasi ATS: Membangun Sistem Rekrutmen dan Talent Acquisition yang Efisien</title>
       <link>https://afss.tech/blog/aplikasi-ats-rekrutmen-talent-acquisition</link>

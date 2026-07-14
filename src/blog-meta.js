@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-ekyc-verifikasi-identitas-digital",
+    "date": "2026-07-14",
+    "readMinutes": 9,
+    "c": "#0369A1",
+    "c2": "#082F49",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi eKYC: Verifikasi Identitas Digital agar Onboarding Tidak Kehilangan Pelanggan",
+        "description": "Panduan lengkap eKYC untuk bisnis Indonesia: cara kerja OCR KTP, liveness detection, integrasi Dukcapil, biaya build vs API, dan studi kasus fintech.",
+        "excerpt": "Berapa banyak calon pelanggan yang hilang karena verifikasi identitas masih manual? Kenali eKYC, fitur wajibnya, dan kisaran biaya membangunnya di Indonesia.",
+        "tags": [
+          "Aplikasi",
+          "Keamanan",
+          "Fintech"
+        ]
+      },
+      "en": {
+        "title": "eKYC Applications: Digital Identity Verification That Stops Onboarding Drop-Off",
+        "description": "A complete guide to eKYC for Indonesian businesses: ID OCR, liveness detection, Dukcapil integration, build-vs-buy costs, and a fintech case study.",
+        "excerpt": "How many prospects are you losing to manual identity checks? Learn what eKYC really is, the features it needs, and what it costs to build in Indonesia.",
+        "tags": [
+          "Applications",
+          "Security",
+          "Fintech"
+        ]
+      },
+      "zh": {
+        "title": "eKYC电子身份验证系统:如何用数字化身份核验留住注册用户",
+        "description": "面向印尼企业的eKYC完整指南:身份证OCR、活体检测、Dukcapil数据库对接、自建与采购成本对比,附金融科技案例研究。",
+        "excerpt": "还在用人工方式核验客户身份?了解eKYC的真正原理、必备功能,以及在印尼搭建这套系统的成本区间。",
+        "tags": [
+          "应用系统",
+          "安全",
+          "金融科技"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-franchise-bisnis",
+    "date": "2026-07-14",
+    "readMinutes": 9,
+    "c": "#BE123C",
+    "c2": "#4C0519",
+    "i18n": {
+      "id": {
+        "title": "Software Manajemen Franchise: Kendalikan Puluhan Outlet Tanpa Kehilangan Kendali",
+        "description": "Panduan lengkap aplikasi manajemen franchise untuk brand owner di Indonesia: royalti otomatis, audit SOP, biaya, timeline, dan studi kasus nyata.",
+        "excerpt": "Spreadsheet dan grup WhatsApp cukup untuk 3 outlet, tapi hancur di outlet ke-30. Ini cara brand owner Indonesia menstandardisasi operasional dan menutup kebocoran royalti.",
+        "tags": [
+          "Aplikasi",
+          "Franchise",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Franchise Management Software: How Indonesian Brand Owners Keep Control Across Dozens of Outlets",
+        "description": "A practical guide to franchise management software for Indonesian brand owners: royalty automation, SOP audits, costs, and a real case study.",
+        "excerpt": "Spreadsheets and WhatsApp groups work fine for three outlets. By outlet thirty, they collapse. Here's how Indonesian franchise owners protect royalty revenue and brand consistency at scale.",
+        "tags": [
+          "Software",
+          "Franchise",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "加盟连锁管理软件:印尼品牌方如何在数十家门店中保持统一掌控",
+        "description": "面向印尼加盟品牌方的连锁管理软件实用指南:自动化权利金结算、SOP合规稽核、统一门店标准,附成本区间与真实案例分析。",
+        "excerpt": "三家门店时,Excel表格和WhatsApp群组还够用。到第三十家门店时,系统彻底崩溃。看印尼加盟品牌方如何用软件堵住权利金流失、统一品牌标准。",
+        "tags": [
+          "软件",
+          "加盟连锁",
+          "商业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "ai-voice-agent-call-center-otomatis-2026",
+    "date": "2026-07-14",
+    "readMinutes": 9,
+    "c": "#6D28D9",
+    "c2": "#2E1065",
+    "i18n": {
+      "id": {
+        "title": "AI Voice Agent 2026: Solusi Call Center Otomatis untuk Bisnis Indonesia",
+        "description": "AI voice agent kini menjawab telepon pelanggan 24 jam, cek status pesanan lewat CRM/ERP, dan eskalasi ke agen manusia. Simak biaya, fitur, dan studi kasusnya.",
+        "excerpt": "Antrean telepon panjang dan panggilan malam yang tak terjawab bikin pelanggan kabur? Kenali AI voice agent, teknologi call center otomatis yang mulai diadopsi bisnis Indonesia di 2026.",
+        "tags": [
+          "AI",
+          "Customer Service",
+          "Call Center"
+        ]
+      },
+      "en": {
+        "title": "AI Voice Agents in 2026: Automating Your Call Center for Indonesian Businesses",
+        "description": "AI voice agents now answer customer calls 24/7, pull order status from CRM/ERP, and escalate to humans. Costs, features, and a real case study inside.",
+        "excerpt": "Long hold times and missed after-hours calls are driving customers away. Meet the AI voice agent, the call-center automation technology Indonesian businesses are adopting in 2026.",
+        "tags": [
+          "AI",
+          "Customer Service",
+          "Call Center"
+        ]
+      },
+      "zh": {
+        "title": "2026年AI语音客服:印尼企业呼叫中心自动化新趋势",
+        "description": "AI语音客服正在取代传统呼叫中心,可全天候接听客户电话、实时对接CRM/ERP系统查询订单状态,并在必要时无缝转接人工客服。本文详解核心功能、印尼市场开发成本区间与真实企业案例。",
+        "excerpt": "高峰时段等待时间过长、下班后无人接听电话,正在让顾客悄悄流失并转向竞争对手。了解AI语音客服——2026年越来越多印尼企业开始采用的呼叫中心自动化新技术,及其真实投入回报。",
+        "tags": [
+          "人工智能",
+          "客户服务",
+          "呼叫中心"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-wms-warehouse-management-system-gudang",
+    "date": "2026-07-14",
+    "readMinutes": 9,
+    "c": "#1D4ED8",
+    "c2": "#0B1F4D",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi WMS: Kenapa Gudang Anda Butuh Lebih dari Sekadar Software Stok",
+        "description": "WMS berbeda dari aplikasi stok biasa. Pelajari fitur wajib WMS, kisaran biaya custom di Indonesia, studi kasus nyata, dan metrik pasca-implementasi.",
+        "excerpt": "Picker salah ambil barang, SLA pengiriman meleset, dan gudang makin sesak — tanda-tanda Anda butuh WMS sungguhan, bukan sekadar aplikasi pencatat stok.",
+        "tags": [
+          "Aplikasi",
+          "Logistik",
+          "Gudang"
+        ]
+      },
+      "en": {
+        "title": "Warehouse Management System (WMS) Software: Beyond Basic Stock Tracking",
+        "description": "A WMS is not the same as an inventory app. Learn the must-have WMS features, real Indonesian cost ranges, a case study, and post-launch metrics.",
+        "excerpt": "Mis-picks, blown SLAs, and pickers wandering the aisles are signs your warehouse needs a real WMS, not just a stock-counting app.",
+        "tags": [
+          "Application",
+          "Logistics",
+          "Warehouse"
+        ]
+      },
+      "zh": {
+        "title": "仓库管理系统(WMS)软件:为什么仓库需要的不只是库存记录工具",
+        "description": "WMS与普通库存软件完全不同。了解真正WMS必备功能、印尼定制开发成本区间、真实案例与上线后应追踪的关键指标。",
+        "excerpt": "拣错货、履约超时、拣货员到处找货——这些都是仓库需要一套真正WMS而非库存记录软件的信号。",
+        "tags": [
+          "应用",
+          "物流",
+          "仓库"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-clm-manajemen-kontrak-legal-digital",
+    "date": "2026-07-14",
+    "readMinutes": 9,
+    "c": "#7C2D12",
+    "c2": "#431407",
+    "i18n": {
+      "id": {
+        "title": "Sistem CLM: Manajemen Kontrak Digital Sebelum Bisnis Anda Kehilangan Kontrak Penting",
+        "description": "Kelola kontrak bisnis tanpa drama: kenali sistem CLM, fitur wajib, biaya pengembangan custom di Indonesia, dan studi kasus nyata transformasi digital kontrak.",
+        "excerpt": "Kontrak yang tercecer di email dan folder bisa bikin bisnis rugi ratusan juta tanpa disadari. Kenali sistem CLM, fitur pentingnya, dan berapa biaya membangunnya di Indonesia.",
+        "tags": [
+          "Aplikasi",
+          "Legal",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Contract Lifecycle Management Software: Digital CLM Before You Lose a Critical Contract",
+        "description": "Manual contract handling breaks down as companies grow. Learn what CLM software does, must-have features, Indonesian build costs, and a real case study.",
+        "excerpt": "Contracts scattered across email and shared folders can quietly cost a business millions. Here's what CLM software actually does, what it costs to build in Indonesia, and how it pays off.",
+        "tags": [
+          "Application",
+          "Legal Tech",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "合同生命周期管理(CLM)系统:企业如何避免合同管理失控",
+        "description": "手动管理合同的企业规模扩大后风险剧增。了解CLM系统的核心功能、印尼定制开发成本区间,以及真实案例的前后对比数据。",
+        "excerpt": "合同散落在邮件和文件夹里,企业可能在不知不觉中损失巨额资金。了解CLM系统究竟是什么、必备功能有哪些,以及在印尼定制开发的合理成本。",
+        "tags": [
+          "应用系统",
+          "法务科技",
+          "企业管理"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-ats-rekrutmen-talent-acquisition",
     "date": "2026-07-13",
     "readMinutes": 10,
