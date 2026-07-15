@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Tue, 14 Jul 2026 02:19:50 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 02:13:38 GMT</lastBuildDate>
+    <item>
+      <title>Aplikasi Employee Monitoring untuk Produktivitas Karyawan: Panduan Lengkap Bisnis Indonesia</title>
+      <link>https://afss.tech/blog/aplikasi-employee-monitoring-produktivitas-karyawan</link>
+      <guid>https://afss.tech/blog/aplikasi-employee-monitoring-produktivitas-karyawan</guid>
+      <description>Tim remote dan lapangan sulit dipantau secara adil tanpa data yang tepat. Ini panduan memilih software monitoring produktivitas yang transparan, sesuai UU PDP, dan benar-benar dipercaya karyawan.</description>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
+      <category>HR</category>
+      <category>Produktivitas</category>
+      <category>Remote Work</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Laundry &amp; Dry Cleaning: Panduan Lengkap untuk Bisnis Multi-Outlet</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-laundry-dry-cleaning-bisnis</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-laundry-dry-cleaning-bisnis</guid>
+      <description>Barang pelanggan hilang, kas selisih tanpa penjelasan, dan pelanggan menunggu lama — begini cara aplikasi manajemen laundry menyelesaikan tiga masalah terbesar bisnis laundry multi-outlet di Indonesia.</description>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi</category>
+      <category>UMKM</category>
+      <category>Laundry</category>
+    </item>
+    <item>
+      <title>Sistem QMS Digital: Panduan Lolos Audit ISO 9001 untuk Manufaktur</title>
+      <link>https://afss.tech/blog/sistem-qms-quality-management-iso-manufaktur</link>
+      <guid>https://afss.tech/blog/sistem-qms-quality-management-iso-manufaktur</guid>
+      <description>Auditor ISO 9001 datang dan CAPA Anda hilang di tumpukan Excel? Begini cara QMS digital membuat audit manufaktur jadi lebih cepat, rapi, dan bebas drama.</description>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Manufaktur</category>
+      <category>ERP</category>
+      <category>Kualitas</category>
+    </item>
+    <item>
+      <title>Aplikasi Subscription &amp; Recurring Billing: Panduan Lengkap untuk Bisnis Langganan</title>
+      <link>https://afss.tech/blog/aplikasi-subscription-recurring-billing-bisnis</link>
+      <guid>https://afss.tech/blog/aplikasi-subscription-recurring-billing-bisnis</guid>
+      <description>Ratusan member membayar setiap bulan, tapi penagihannya masih manual lewat WhatsApp dan Excel? Berikut cara sistem recurring billing menghentikan kebocoran pendapatan dan membebaskan waktu tim finance.</description>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Fintech</category>
+      <category>SaaS</category>
+      <category>Billing</category>
+    </item>
+    <item>
+      <title>Sistem E-Procurement: Panduan Lengkap Pengadaan Digital untuk Bisnis di Indonesia</title>
+      <link>https://afss.tech/blog/sistem-e-procurement-pengadaan-digital-bisnis</link>
+      <guid>https://afss.tech/blog/sistem-e-procurement-pengadaan-digital-bisnis</guid>
+      <description>Berapa banyak uang perusahaan Anda bocor lewat proses pengadaan manual yang berbelit dan sulit dilacak? Simak panduan lengkap membangun sistem e-procurement untuk bisnis di Indonesia.</description>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
+      <category>ERP</category>
+      <category>Bisnis</category>
+      <category>Procurement</category>
+    </item>
     <item>
       <title>Aplikasi eKYC: Verifikasi Identitas Digital agar Onboarding Tidak Kehilangan Pelanggan</title>
       <link>https://afss.tech/blog/aplikasi-ekyc-verifikasi-identitas-digital</link>

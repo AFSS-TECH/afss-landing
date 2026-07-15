@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-employee-monitoring-produktivitas-karyawan",
+    "date": "2026-07-15",
+    "readMinutes": 9,
+    "c": "#DB2777",
+    "c2": "#831843",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Employee Monitoring untuk Produktivitas Karyawan: Panduan Lengkap Bisnis Indonesia",
+        "description": "Panduan lengkap memilih & membangun software employee monitoring di Indonesia: absensi GPS, task tracking, dashboard produktivitas, kepatuhan UU PDP, dan estimasi biaya.",
+        "excerpt": "Tim remote dan lapangan sulit dipantau secara adil tanpa data yang tepat. Ini panduan memilih software monitoring produktivitas yang transparan, sesuai UU PDP, dan benar-benar dipercaya karyawan.",
+        "tags": [
+          "HR",
+          "Produktivitas",
+          "Remote Work"
+        ]
+      },
+      "en": {
+        "title": "Employee Monitoring & Productivity Analytics Software: A Guide for Indonesian Businesses",
+        "description": "A complete guide to choosing and building employee monitoring software in Indonesia: GPS attendance, task tracking, productivity dashboards, UU PDP compliance, and cost estimates.",
+        "excerpt": "Managing remote and field teams fairly is hard without the right visibility. Here is how to choose productivity monitoring software that is transparent, UU PDP compliant, and actually trusted by employees.",
+        "tags": [
+          "HR",
+          "Productivity",
+          "Remote Work"
+        ]
+      },
+      "zh": {
+        "title": "员工监控与生产力分析软件:印尼企业实用指南",
+        "description": "印尼企业如何选择和构建员工监控软件:GPS考勤打卡、任务追踪、生产力仪表盘、个人数据保护法(UU PDP)合规与成本估算完整指南。",
+        "excerpt": "没有合适的数据支撑,很难公平管理远程和外勤团队。本文介绍如何选择透明、符合印尼个人数据保护法且真正获得员工信任的生产力监控软件。",
+        "tags": [
+          "人力资源",
+          "生产力",
+          "远程办公"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-laundry-dry-cleaning-bisnis",
+    "date": "2026-07-15",
+    "readMinutes": 8,
+    "c": "#0891B2",
+    "c2": "#164E63",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Laundry & Dry Cleaning: Panduan Lengkap untuk Bisnis Multi-Outlet",
+        "description": "Panduan lengkap memilih atau membangun aplikasi manajemen laundry: barcode order, pickup-delivery, notifikasi WhatsApp, rekonsiliasi kas multi-outlet, dan estimasi biaya di Indonesia.",
+        "excerpt": "Barang pelanggan hilang, kas selisih tanpa penjelasan, dan pelanggan menunggu lama — begini cara aplikasi manajemen laundry menyelesaikan tiga masalah terbesar bisnis laundry multi-outlet di Indonesia.",
+        "tags": [
+          "Aplikasi",
+          "UMKM",
+          "Laundry"
+        ]
+      },
+      "en": {
+        "title": "Laundry & Dry Cleaning Management App: The Complete Guide for Multi-Outlet Chains",
+        "description": "A complete guide to choosing or building a laundry management app: barcode order tagging, pickup-delivery scheduling, WhatsApp notifications, multi-outlet cash reconciliation, and Indonesia cost estimates.",
+        "excerpt": "Lost customer items, unexplained cash discrepancies, and slow service — here's how a laundry management app solves the three biggest problems facing multi-outlet laundry chains in Indonesia.",
+        "tags": [
+          "Applications",
+          "SMB",
+          "Laundry"
+        ]
+      },
+      "zh": {
+        "title": "洗衣与干洗管理软件完整指南:多门店连锁企业数字化转型手册",
+        "description": "洗衣管理软件完整指南:条码订单标签、上门取送排程、WhatsApp通知、多门店现金对账,以及印尼市场开发成本估算。",
+        "excerpt": "顾客衣物丢失、现金差额查不出原因、服务速度慢——洗衣管理软件如何解决印尼多门店洗衣连锁企业最大的三个难题。",
+        "tags": [
+          "应用系统",
+          "中小企业",
+          "洗衣业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-qms-quality-management-iso-manufaktur",
+    "date": "2026-07-15",
+    "readMinutes": 9,
+    "c": "#B45309",
+    "c2": "#78350F",
+    "i18n": {
+      "id": {
+        "title": "Sistem QMS Digital: Panduan Lolos Audit ISO 9001 untuk Manufaktur",
+        "description": "Panduan lengkap software Quality Management System (QMS) digital untuk pabrik Indonesia: fitur wajib, biaya, dan cara mempercepat audit ISO 9001, ISO 13485, dan HACCP.",
+        "excerpt": "Auditor ISO 9001 datang dan CAPA Anda hilang di tumpukan Excel? Begini cara QMS digital membuat audit manufaktur jadi lebih cepat, rapi, dan bebas drama.",
+        "tags": [
+          "Manufaktur",
+          "ERP",
+          "Kualitas"
+        ]
+      },
+      "en": {
+        "title": "Digital QMS Software: The ISO 9001 Compliance Guide for Manufacturers",
+        "description": "A practical guide to digital Quality Management System (QMS) platforms for Indonesian manufacturers: must-have features, realistic costs, and faster ISO 9001, ISO 13485, and HACCP audits.",
+        "excerpt": "When the ISO 9001 auditor asks for CAPA evidence buried in a lost spreadsheet, everything stalls. Here's how a digital QMS makes manufacturing audits faster and painless.",
+        "tags": [
+          "Manufacturing",
+          "ERP",
+          "Quality"
+        ]
+      },
+      "zh": {
+        "title": "数字化QMS质量管理系统:印尼制造业ISO 9001合规实战指南",
+        "description": "面向印尼制造企业的数字化质量管理系统(QMS)指南:必备功能、合理成本区间,以及如何加快ISO 9001、ISO 13485与HACCP审核进程。",
+        "excerpt": "审核员要CAPA证据,记录却丢在被覆盖的表格里?看数字化QMS如何让制造业审核变得更快、更从容。",
+        "tags": [
+          "制造业",
+          "企业系统",
+          "质量管理"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-subscription-recurring-billing-bisnis",
+    "date": "2026-07-15",
+    "readMinutes": 9,
+    "c": "#7C3AED",
+    "c2": "#4C1D95",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Subscription & Recurring Billing: Panduan Lengkap untuk Bisnis Langganan",
+        "description": "Panduan lengkap sistem subscription dan recurring billing untuk SaaS, gym, dan bisnis membership: invoice otomatis, dunning, proration, integrasi Midtrans/Xendit, dan kisaran biaya di Indonesia.",
+        "excerpt": "Ratusan member membayar setiap bulan, tapi penagihannya masih manual lewat WhatsApp dan Excel? Berikut cara sistem recurring billing menghentikan kebocoran pendapatan dan membebaskan waktu tim finance.",
+        "tags": [
+          "Fintech",
+          "SaaS",
+          "Billing"
+        ]
+      },
+      "en": {
+        "title": "Subscription & Recurring Billing Software: The Complete Guide for Membership Businesses",
+        "description": "Complete guide to subscription and recurring billing systems for SaaS, gyms, and membership businesses: automated invoicing, dunning, proration, Midtrans/Xendit/Stripe integration, and Indonesia cost ranges.",
+        "excerpt": "Hundreds of members paying every month, yet billing still runs on WhatsApp reminders and Excel spreadsheets? Here is how a recurring billing system stops the revenue leaks and frees up your finance team.",
+        "tags": [
+          "Fintech",
+          "SaaS",
+          "Billing"
+        ]
+      },
+      "zh": {
+        "title": "订阅与循环计费系统完整指南：为会员制企业打造自动化收款方案",
+        "description": "面向SaaS、健身房、会员制企业的订阅与循环计费系统完整指南：自动开票、催收挽回、按比例调整、Midtrans/Xendit/Stripe对接及印尼市场成本区间。",
+        "excerpt": "数百名会员每月付费,账单却还靠WhatsApp提醒和Excel表格手工处理?本文讲解循环计费系统如何堵住收入漏洞,解放财务团队的时间。",
+        "tags": [
+          "金融科技",
+          "SaaS",
+          "计费系统"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-e-procurement-pengadaan-digital-bisnis",
+    "date": "2026-07-15",
+    "readMinutes": 9,
+    "c": "#1D4ED8",
+    "c2": "#1E3A8A",
+    "i18n": {
+      "id": {
+        "title": "Sistem E-Procurement: Panduan Lengkap Pengadaan Digital untuk Bisnis di Indonesia",
+        "description": "Panduan praktis membangun sistem e-procurement untuk bisnis Indonesia: RFQ otomatis, workflow approval, vendor scorecard, integrasi ERP, dan estimasi biaya pengembangan.",
+        "excerpt": "Berapa banyak uang perusahaan Anda bocor lewat proses pengadaan manual yang berbelit dan sulit dilacak? Simak panduan lengkap membangun sistem e-procurement untuk bisnis di Indonesia.",
+        "tags": [
+          "ERP",
+          "Bisnis",
+          "Procurement"
+        ]
+      },
+      "en": {
+        "title": "E-Procurement Systems: The Complete Guide to Digital Purchasing for Indonesian Businesses",
+        "description": "A practical guide to building an e-procurement system for Indonesian businesses: automated RFQs, approval workflows, vendor scorecards, ERP integration, and real cost estimates.",
+        "excerpt": "How much money is leaking out of your business through slow, paper-based purchasing? Here is a complete guide to building an e-procurement system for Indonesian companies.",
+        "tags": [
+          "ERP",
+          "Business",
+          "Procurement"
+        ]
+      },
+      "zh": {
+        "title": "电子采购系统完全指南：印尼企业数字化采购管理",
+        "description": "面向印尼企业的电子采购系统实操指南：自动询价、多级审批流程、供应商评分、ERP对接与真实成本区间一次讲清楚。",
+        "excerpt": "纸质采购流程每年悄悄吞掉多少利润？这篇指南讲清楚印尼企业如何搭建电子采购系统,从询价自动化到与ERP对接的完整路径。",
+        "tags": [
+          "企业系统",
+          "商业",
+          "采购"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-ekyc-verifikasi-identitas-digital",
     "date": "2026-07-14",
     "readMinutes": 9,
