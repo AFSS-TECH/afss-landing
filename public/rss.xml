@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Wed, 15 Jul 2026 02:13:38 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 18:27:46 GMT</lastBuildDate>
+    <item>
+      <title>Sistem Manajemen Apotek Digital: Resep, Stok, dan POS</title>
+      <link>https://afss.tech/blog/sistem-manajemen-apotek-farmasi-digital</link>
+      <guid>https://afss.tech/blog/sistem-manajemen-apotek-farmasi-digital</guid>
+      <description>Kartu stok manual dan buku resep kertas bikin apotek rugi jutaan rupiah dari obat kedaluwarsa dan stockout. Ini cara sistem manajemen apotek digital menutup celah itu.</description>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Manajemen Apotek</category>
+      <category>Farmasi</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Gym &amp; Membership untuk Studio Fitness Modern</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-gym-fitness-membership</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-gym-fitness-membership</guid>
+      <description>Masih pakai buku catatan dan grup WhatsApp untuk kelola member gym? Saatnya beralih ke platform digital yang bikin bisnis fitness Anda lebih rapi dan menguntungkan.</description>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Manajemen Gym</category>
+      <category>Fitness</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Event &amp; Tiket Online untuk EO Profesional</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-event-tiket-online</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-event-tiket-online</guid>
+      <description>Dari antrean check-in yang mengular sampai tiket yang dipakai dua kali, cara manual mengelola event sudah tidak lagi sepadan — begini platform digital mengubahnya.</description>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Event Management</category>
+      <category>Tiket Online</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>Sistem ITSM &amp; Helpdesk Tiket IT: Solusi Ganti WhatsApp Chaos</title>
+      <link>https://afss.tech/blog/sistem-itsm-helpdesk-tiket-layanan-it</link>
+      <guid>https://afss.tech/blog/sistem-itsm-helpdesk-tiket-layanan-it</guid>
+      <description>Tiket IT hilang di WhatsApp, SLA tidak jelas, laporan ke manajemen cuma tebakan. Ini alasan perusahaan yang sedang tumbuh butuh sistem ITSM/helpdesk terpusat.</description>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+      <category>ITSM</category>
+      <category>IT Support</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Bengkel: Sistem Digital Service Kendaraan</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-bengkel-service-kendaraan</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-bengkel-service-kendaraan</guid>
+      <description>Kartu job kertas hilang, stok sparepart tak terpantau, pelanggan menunggu tanpa kejelasan. Begini cara aplikasi manajemen bengkel menyatukan servis, stok, dan mekanik jadi satu sistem digital.</description>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Manajemen Bengkel</category>
+      <category>Otomotif</category>
+      <category>Bisnis</category>
+    </item>
     <item>
       <title>Aplikasi Employee Monitoring untuk Produktivitas Karyawan: Panduan Lengkap Bisnis Indonesia</title>
       <link>https://afss.tech/blog/aplikasi-employee-monitoring-produktivitas-karyawan</link>

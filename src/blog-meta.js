@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "sistem-manajemen-apotek-farmasi-digital",
+    "date": "2026-07-16",
+    "readMinutes": 9,
+    "c": "#059669",
+    "c2": "#064E3B",
+    "i18n": {
+      "id": {
+        "title": "Sistem Manajemen Apotek Digital: Resep, Stok, dan POS",
+        "description": "Kelola resep, stok obat kedaluwarsa, POS, dan purchase order apotek dalam satu sistem manajemen apotek digital. Kurangi kerugian, jaga kepercayaan pasien.",
+        "excerpt": "Kartu stok manual dan buku resep kertas bikin apotek rugi jutaan rupiah dari obat kedaluwarsa dan stockout. Ini cara sistem manajemen apotek digital menutup celah itu.",
+        "tags": [
+          "Manajemen Apotek",
+          "Farmasi",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Pharmacy Management Software: Prescriptions, Stock & POS",
+        "description": "Manage prescriptions, expiring drug stock, POS, and supplier purchase orders in one pharmacy management software. Cut losses, keep patient trust intact.",
+        "excerpt": "Handwritten stock cards and paper prescription logs quietly cost pharmacies millions in expired stock and stockouts. Here's how pharmacy management software closes that gap.",
+        "tags": [
+          "Pharmacy Management",
+          "Pharma",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "药房管理系统:处方、库存与POS一体化数字方案",
+        "description": "在一套药房管理系统中处理处方、药品有效期库存、POS收银与供应商采购单,降低损耗,维护患者信任,适合印尼药房与连锁药房。",
+        "excerpt": "手写库存卡和纸质处方账本正让药房悄悄损失数百万印尼盾,过期药品与断货接连发生。药房管理系统正是弥补这一缺口的方案。",
+        "tags": [
+          "药房管理",
+          "医药",
+          "企业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-gym-fitness-membership",
+    "date": "2026-07-16",
+    "readMinutes": 8,
+    "c": "#65A30D",
+    "c2": "#365314",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Gym & Membership untuk Studio Fitness Modern",
+        "description": "Kelola membership, booking kelas, dan check-in gym secara digital. Ganti logbook manual dan grup WhatsApp dengan sistem manajemen fitness yang terpadu.",
+        "excerpt": "Masih pakai buku catatan dan grup WhatsApp untuk kelola member gym? Saatnya beralih ke platform digital yang bikin bisnis fitness Anda lebih rapi dan menguntungkan.",
+        "tags": [
+          "Manajemen Gym",
+          "Fitness",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Gym & Fitness Management Software for Modern Studios",
+        "description": "Manage memberships, class bookings, and gym check-ins digitally. Learn why Indonesian gyms and fitness studios need dedicated management software.",
+        "excerpt": "Still tracking members with a paper logbook and a WhatsApp group? It's time for a digital platform that keeps your fitness business organized and profitable.",
+        "tags": [
+          "Gym Management",
+          "Fitness",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "健身房与工作室管理软件:数字化会员与约课系统",
+        "description": "用数字化系统管理会籍、约课预约、打卡签到、教练排班与周期账单收费,彻底告别纸质登记簿、Excel表格与聊天群管理会员的老办法,有效减少收入流失与人工出错。了解印尼健身房和瑜伽普拉提工作室为何需要一套真正贴合自身业务模式的专属会员管理软件,提升会员续费率并改善整体运营效率与前台体验。",
+        "excerpt": "还在用纸质登记簿和聊天群管理会员吗?是时候换成能让健身业务更规范、更赚钱的数字化管理平台了。",
+        "tags": [
+          "健身房管理",
+          "健身",
+          "企业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-event-tiket-online",
+    "date": "2026-07-16",
+    "readMinutes": 9,
+    "c": "#EA580C",
+    "c2": "#7C2D12",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Event & Tiket Online untuk EO Profesional",
+        "description": "Panduan lengkap aplikasi manajemen event dan tiket online: cara EO Indonesia mencegah tiket duplikat, mempercepat check-in, dan menaikkan penjualan tiket.",
+        "excerpt": "Dari antrean check-in yang mengular sampai tiket yang dipakai dua kali, cara manual mengelola event sudah tidak lagi sepadan — begini platform digital mengubahnya.",
+        "tags": [
+          "Event Management",
+          "Tiket Online",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Event Management & Online Ticketing Platform Software",
+        "description": "How an event management and online ticketing platform helps Indonesian organizers stop duplicate tickets, speed up check-in, and boost ticket sales.",
+        "excerpt": "From queues snaking out the lobby to tickets used twice by different people, manual event management no longer pencils out — here is how a digital platform fixes it.",
+        "tags": [
+          "Event Management",
+          "Online Ticketing",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "活动管理与在线票务平台软件:EO活动票务系统指南",
+        "description": "活动管理与在线票务平台软件如何帮助印尼活动策划公司(EO)、企业会议主办方、婚礼策划团队和展会组织者杜绝门票重复使用与欺诈、大幅缩短现场签到排队时间、实时掌握售票数据与出席率,文中还给出印尼市场定制开发的费用区间、开发周期以及真实客户案例参考,帮助主办方切实提升门票销售转化率与整体运营效率。",
+        "excerpt": "从排到大堂外的签到长队,到被重复使用的门票,人工管理活动的方式早已入不敷出——看数字化票务平台如何改变这一切。",
+        "tags": [
+          "活动管理",
+          "在线票务",
+          "企业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-itsm-helpdesk-tiket-layanan-it",
+    "date": "2026-07-16",
+    "readMinutes": 9,
+    "c": "#4F46E5",
+    "c2": "#1E1B4B",
+    "i18n": {
+      "id": {
+        "title": "Sistem ITSM & Helpdesk Tiket IT: Solusi Ganti WhatsApp Chaos",
+        "description": "Kelola permintaan IT dengan sistem ITSM dan tiket helpdesk terpusat, lengkap dengan SLA, pelacakan aset, dan laporan—bukan lagi WhatsApp yang berantakan.",
+        "excerpt": "Tiket IT hilang di WhatsApp, SLA tidak jelas, laporan ke manajemen cuma tebakan. Ini alasan perusahaan yang sedang tumbuh butuh sistem ITSM/helpdesk terpusat.",
+        "tags": [
+          "ITSM",
+          "IT Support",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "ITSM & IT Helpdesk Ticketing System: Ditch the WhatsApp Chaos",
+        "description": "Manage IT requests with a centralized ITSM and helpdesk ticketing system—complete with SLAs, asset tracking, and reporting—instead of scattered WhatsApp chats.",
+        "excerpt": "Tickets lost in WhatsApp, no SLA accountability, no data for management. Here's why growing companies need a centralized ITSM/helpdesk platform.",
+        "tags": [
+          "ITSM",
+          "IT Support",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "ITSM服务台工单系统:告别混乱的WhatsApp IT支持",
+        "description": "通过集中式ITSM与服务台工单系统管理IT请求,内置SLA、资产追踪与报表功能,彻底告别WhatsApp群聊的混乱局面。",
+        "excerpt": "工单在WhatsApp里石沉大海,SLA形同虚设,管理层拿不到真实数据。这就是成长型企业需要集中式ITSM服务台平台的原因。",
+        "tags": [
+          "ITSM",
+          "IT支持",
+          "企业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-bengkel-service-kendaraan",
+    "date": "2026-07-16",
+    "readMinutes": 9,
+    "c": "#0EA5E9",
+    "c2": "#0C4A6E",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Bengkel: Sistem Digital Service Kendaraan",
+        "description": "Panduan lengkap aplikasi manajemen bengkel service kendaraan: fitur wajib, kisaran biaya di Indonesia, dan studi kasus bengkel multi-cabang.",
+        "excerpt": "Kartu job kertas hilang, stok sparepart tak terpantau, pelanggan menunggu tanpa kejelasan. Begini cara aplikasi manajemen bengkel menyatukan servis, stok, dan mekanik jadi satu sistem digital.",
+        "tags": [
+          "Manajemen Bengkel",
+          "Otomotif",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Workshop Management Software for Auto & Motorcycle Repair Shops",
+        "description": "A complete guide to workshop management software for auto repair shops: must-have features, Indonesian cost ranges, and a multi-branch workshop case study.",
+        "excerpt": "Lost paper job cards, untracked spare parts, and customers left guessing about repair status. Here's how workshop management software brings service, inventory, and mechanics into one digital system.",
+        "tags": [
+          "Workshop Management",
+          "Automotive",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "汽修厂管理软件:车辆维修服务数字化管理系统",
+        "description": "汽修厂管理软件完整指南:必备功能、印尼市场报价区间,以及多分店连锁维修厂真实案例分析。",
+        "excerpt": "纸质工单丢失、配件库存失控、客户对维修进度一无所知。看看汽修厂管理软件如何把工单、库存和技师整合进一个数字系统。",
+        "tags": [
+          "汽修管理",
+          "汽车服务",
+          "企业"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-employee-monitoring-produktivitas-karyawan",
     "date": "2026-07-15",
     "readMinutes": 9,
