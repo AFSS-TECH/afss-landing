@@ -2805,38 +2805,3 @@ export function AjukanProyek() {
     </>
   )
 }
-
-/* ══════════════════════════════════════════════════ DASHBOARD ADMIN (/dashboard) */
-// The old PIN-gated /dashboard (client-side PIN, localStorage submissions) has
-// been replaced by the standalone admin-dashboard app at dashboard.afss.tech,
-// which uses real Supabase Auth and reads/writes the `submissions` table
-// directly. This route now just points admins to the new app.
-export function Dashboard() {
-  const [isClient, setIsClient] = useState(false)
-  useEffect(() => { setIsClient(true) }, [])
-  if (!isClient) return null
-
-  return (
-    <>
-      <Head>
-        <title>Admin Dashboard | AFSS</title>
-        <meta name="robots" content="noindex,nofollow" />
-      </Head>
-      <section className="page-hero" style={{ minHeight: '60vh', display: 'flex', alignItems: 'center' }}>
-        <div className="hero-glow" />
-        <div className="container">
-          <Reveal>
-            <div className="eyebrow"><Icon icon="fa-solid fa-gauge-high" /> Admin Area</div>
-            <h1 className="page-title">Dashboard <span className="ital">Pindah Lokasi</span></h1>
-            <p className="page-sub" style={{ marginBottom: 32 }}>
-              Pengelolaan pengajuan proyek dan konten landing page sekarang ada di dashboard.afss.tech, dengan login akun (bukan PIN).
-            </p>
-            <a className="btn btn-pri btn-lg" href="https://dashboard.afss.tech" target="_blank" rel="noreferrer">
-              Buka Dashboard <Icon icon="fa-solid fa-arrow-right" />
-            </a>
-          </Reveal>
-        </div>
-      </section>
-    </>
-  )
-}

@@ -1,7 +1,7 @@
 import './index.css'
 import { ViteReactSSG } from 'vite-react-ssg'
 import { Layout, Home, NotFound } from './App.jsx'
-import { LayananIndex, LayananDetail, About, Contact, Portfolio, PortfolioDetail, Estimasi, Privacy, Terms, Keunggulan, Harga, Faq, Karir, AjukanProyek, Dashboard } from './Pages.jsx'
+import { LayananIndex, LayananDetail, About, Contact, Portfolio, PortfolioDetail, Estimasi, Privacy, Terms, Keunggulan, Harga, Faq, Karir, AjukanProyek } from './Pages.jsx'
 import { postsMeta } from './blog-meta.js'
 import { products, portfolioProjects } from './data.js'
 import { LOCALES, LOCALE_PREFIX, DEFAULT_LOCALE } from './i18n/locales.js'
@@ -54,7 +54,6 @@ function buildRouteTree(locale) {
     { path: 'faq', element: <Faq /> },
     { path: 'karir', element: <Karir /> },
     { path: 'ajukan-proyek', element: <AjukanProyek /> },
-    { path: 'dashboard', element: <Dashboard /> },
   ]
 
   // Legal pages: Indonesian-only until Phase 3 of the i18n rollout translates them.
