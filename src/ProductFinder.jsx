@@ -25,9 +25,14 @@ const KEYWORDS = {
   ],
   'software-custom': [
     'sistem internal', 'aplikasi khusus', 'aplikasi custom', 'manajemen data',
-    'sistem manajemen', 'operasional internal', 'aplikasi mobile', 'app mobile',
+    'sistem manajemen', 'operasional internal',
     'dashboard', 'custom', 'otomasi', 'crm', 'laporan', 'internal', 'workflow',
-    'aplikasi', 'mobile',
+    'aplikasi',
+  ],
+  'aplikasi-mobile': [
+    'aplikasi mobile', 'app mobile', 'aplikasi android', 'aplikasi ios',
+    'app android', 'app ios', 'aplikasi hp', 'play store', 'app store',
+    'mobile', 'android', 'ios', 'flutter', 'apk', 'smartphone',
   ],
   'erp': [
     'keuangan dan inventory', 'stok gudang', 'multi departemen', 'kelola stok',

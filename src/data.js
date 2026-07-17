@@ -189,6 +189,31 @@ export const products = [
     },
   },
   {
+    slug: 'aplikasi-mobile',
+    icon: 'fa-solid fa-mobile-screen',
+    hot: false,
+    i18n: {
+      id: {
+        name: 'Aplikasi Mobile',
+        desc: 'Aplikasi Android & iOS cross-platform yang ringan, cepat, dan nyaman digunakan — siap dipublikasikan ke Play Store & App Store.',
+        metric: 'Android & iOS',
+        feats: ['Flutter cross-platform (1 codebase)', 'UI/UX desain custom', 'Integrasi API & notifikasi push', 'Siap publish Play Store & App Store'],
+      },
+      en: {
+        name: 'Mobile App',
+        desc: 'A lightweight, fast, and comfortable cross-platform Android & iOS app — ready to publish on the Play Store & App Store.',
+        metric: 'Android & iOS',
+        feats: ['Flutter cross-platform (1 codebase)', 'Custom UI/UX design', 'API integration & push notifications', 'Ready for Play Store & App Store'],
+      },
+      zh: {
+        name: '移动应用',
+        desc: '轻量、快速、体验舒适的Android与iOS跨平台应用——随时可发布至Play Store与App Store。',
+        metric: 'Android与iOS',
+        feats: ['Flutter跨平台（单一代码库）', '定制UI/UX设计', 'API集成与推送通知', '可发布至Play Store与App Store'],
+      },
+    },
+  },
+  {
     slug: 'erp',
     icon: 'fa-solid fa-circle-nodes',
     hot: true,

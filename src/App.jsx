@@ -333,7 +333,7 @@ function TrustBar() {
 /* ════════════════════════════════════════════════ SERVICES / LAYANAN */
 function Services() {
   const { locale, t } = useLocale()
-  const items = products.slice(0, 6).map((p) => pick(p, locale))
+  const items = products.map((p) => pick(p, locale))
   return (
     <section id="services">
       <div className="container">
@@ -550,6 +550,7 @@ export function Footer({ trimmed = false }) {
             <li><Link to="/layanan/landing-page">{t('footer.svc.landingPage')}</Link></li>
             <li><Link to="/layanan/company-profile">{t('footer.svc.companyProfile')}</Link></li>
             <li><Link to="/layanan/software-custom">{t('footer.svc.softwareCustom')}</Link></li>
+            <li><Link to="/layanan/aplikasi-mobile">{t('footer.svc.aplikasiMobile')}</Link></li>
             <li><Link to="/layanan/erp">{t('footer.svc.erp')}</Link></li>
             <li><Link to="/layanan/ecommerce">{t('footer.svc.ecommerce')}</Link></li>
             <li><Link to="/layanan/marketplace">{t('footer.svc.marketplace')}</Link></li>
@@ -590,11 +591,12 @@ export function Footer({ trimmed = false }) {
 }
 
 /* ════════════════════════════════════════════════ PROJECT ESTIMATOR */
-const EST_PRODUCT_IDS = ['landing', 'profile', 'software', 'erp', 'ecommerce', 'marketplace']
+const EST_PRODUCT_IDS = ['landing', 'profile', 'software', 'mobile', 'erp', 'ecommerce', 'marketplace']
 const EST_PRODUCT_META = {
   landing:     { base: [1.5, 5],   perUnit: 0.4, unitKey: 'halaman', icon: 'fa-solid fa-rectangle-ad' },
   profile:     { base: [4.5, 12],  perUnit: 0.6, unitKey: 'halaman', icon: 'fa-solid fa-briefcase' },
   software:    { base: [8, 30],    perUnit: 2,   unitKey: 'modul',   icon: 'fa-solid fa-code' },
+  mobile:      { base: [15, 60],   perUnit: 3,   unitKey: 'fitur',   icon: 'fa-solid fa-mobile-screen' },
   erp:         { base: [28, 100],  perUnit: 5,   unitKey: 'modul',   icon: 'fa-solid fa-circle-nodes' },
   ecommerce:   { base: [18, 50],   perUnit: 2.5, unitKey: 'modul',   icon: 'fa-solid fa-cart-shopping' },
   marketplace: { base: [65, 150],  perUnit: 8,   unitKey: 'modul',   icon: 'fa-solid fa-store' },

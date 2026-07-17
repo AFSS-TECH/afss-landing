@@ -426,22 +426,60 @@ const SERVICE_CONTENT = {
     relatedSlugs: ['web-app', 'maintenance'],
   },
   'aplikasi-mobile': {
-    headline: 'Jasa Pembuatan Aplikasi Mobile Android & iOS',
-    subline: 'Aplikasi native dan cross-platform yang ringan, cepat, dan nyaman dipakai — siap publish ke Play Store & App Store.',
-    longDesc: 'Aplikasi mobile yang baik bukan hanya tentang tampilan — tapi tentang pengalaman yang membuat pengguna kembali. AFSS membangun aplikasi Android & iOS dengan Flutter maupun native, dilengkapi backend & API yang solid, siap dipublikasikan ke toko aplikasi.',
-    benefits: [
-      { icon: 'fa-solid fa-mobile-screen-button', title: 'Android & iOS Sekaligus', desc: 'Satu codebase Flutter untuk dua platform — efisiensi biaya tanpa mengorbankan tampilan dan performa native.' },
-      { icon: 'fa-solid fa-rocket', title: 'Publish ke Toko Aplikasi', desc: 'Kami bantu proses pendaftaran, review, dan publikasi ke Google Play Store maupun Apple App Store.' },
-      { icon: 'fa-solid fa-microchip', title: 'Backend & API Terintegrasi', desc: 'Sistem backend robust dengan REST API untuk autentikasi, notifikasi push, dan sinkronisasi data real-time.' },
-      { icon: 'fa-solid fa-code', title: 'Kode Bersih & Terdokumentasi', desc: 'Arsitektur yang skalabel sehingga fitur baru bisa ditambahkan dengan mudah seiring pertumbuhan bisnis Anda.' },
-    ],
-    serviceFaq: [
-      { q: 'Flutter atau native (Kotlin/Swift)?', a: 'Flutter untuk sebagian besar kasus: satu tim, satu codebase, dua platform. Native kami rekomendasikan hanya untuk kasus khusus yang memerlukan akses hardware sangat dalam.' },
-      { q: 'Berapa estimasi biaya aplikasi mobile?', a: 'Mulai dari Rp 15 juta untuk aplikasi sederhana. Aplikasi dengan fitur kompleks (marketplace, fintech, IoT) bisa lebih — estimasi pasti diberikan setelah konsultasi.' },
-      { q: 'Berapa lama proses review App Store?', a: 'Google Play biasanya 1–3 hari kerja. Apple App Store 1–7 hari. Kami sudah berpengalaman menyiapkan submission agar lolos review pertama kali.' },
-      { q: 'Apakah ada maintenance setelah launching?', a: 'Ya. Kami menyediakan paket maintenance untuk update OS, perbaikan bug, dan penambahan fitur baru setelah aplikasi live.' },
-    ],
-    relatedSlugs: ['web-app', 'maintenance'],
+    relatedSlugs: ['software-custom', 'marketplace'],
+    i18n: {
+      id: {
+        headline: 'Jasa Pembuatan Aplikasi Mobile Android & iOS',
+        subline: 'Aplikasi native dan cross-platform yang ringan, cepat, dan nyaman dipakai — siap publish ke Play Store & App Store.',
+        longDesc: 'Aplikasi mobile yang baik bukan hanya tentang tampilan — tapi tentang pengalaman yang membuat pengguna kembali. AFSS membangun aplikasi Android & iOS dengan Flutter maupun native, dilengkapi backend & API yang solid, siap dipublikasikan ke toko aplikasi.',
+        benefits: [
+          { icon: 'fa-solid fa-mobile-screen-button', title: 'Android & iOS Sekaligus', desc: 'Satu codebase Flutter untuk dua platform — efisiensi biaya tanpa mengorbankan tampilan dan performa native.' },
+          { icon: 'fa-solid fa-rocket', title: 'Publish ke Toko Aplikasi', desc: 'Kami bantu proses pendaftaran, review, dan publikasi ke Google Play Store maupun Apple App Store.' },
+          { icon: 'fa-solid fa-microchip', title: 'Backend & API Terintegrasi', desc: 'Sistem backend robust dengan REST API untuk autentikasi, notifikasi push, dan sinkronisasi data real-time.' },
+          { icon: 'fa-solid fa-code', title: 'Kode Bersih & Terdokumentasi', desc: 'Arsitektur yang skalabel sehingga fitur baru bisa ditambahkan dengan mudah seiring pertumbuhan bisnis Anda.' },
+        ],
+        serviceFaq: [
+          { q: 'Flutter atau native (Kotlin/Swift)?', a: 'Flutter untuk sebagian besar kasus: satu tim, satu codebase, dua platform. Native kami rekomendasikan hanya untuk kasus khusus yang memerlukan akses hardware sangat dalam.' },
+          { q: 'Berapa estimasi biaya aplikasi mobile?', a: 'Mulai dari Rp 15 juta untuk aplikasi sederhana. Aplikasi dengan fitur kompleks (marketplace, fintech, IoT) bisa lebih — estimasi pasti diberikan setelah konsultasi.' },
+          { q: 'Berapa lama proses review App Store?', a: 'Google Play biasanya 1–3 hari kerja. Apple App Store 1–7 hari. Kami sudah berpengalaman menyiapkan submission agar lolos review pertama kali.' },
+          { q: 'Apakah ada maintenance setelah launching?', a: 'Ya. Kami menyediakan paket maintenance untuk update OS, perbaikan bug, dan penambahan fitur baru setelah aplikasi live.' },
+        ],
+      },
+      en: {
+        headline: 'Android & iOS Mobile App Development',
+        subline: 'Lightweight, fast, and comfortable native or cross-platform apps — ready to publish on the Play Store & App Store.',
+        longDesc: 'A great mobile app is not just about looks — it is about an experience that keeps users coming back. AFSS builds Android & iOS apps with Flutter or native stacks, backed by a solid backend & API, ready to publish to the app stores.',
+        benefits: [
+          { icon: 'fa-solid fa-mobile-screen-button', title: 'Android & iOS at Once', desc: 'One Flutter codebase for both platforms — cost-efficient without sacrificing native look and performance.' },
+          { icon: 'fa-solid fa-rocket', title: 'App Store Publishing', desc: 'We assist with registration, review, and publication to both the Google Play Store and Apple App Store.' },
+          { icon: 'fa-solid fa-microchip', title: 'Integrated Backend & API', desc: 'A robust backend with REST APIs for authentication, push notifications, and real-time data sync.' },
+          { icon: 'fa-solid fa-code', title: 'Clean, Documented Code', desc: 'A scalable architecture so new features can be added easily as your business grows.' },
+        ],
+        serviceFaq: [
+          { q: 'Flutter or native (Kotlin/Swift)?', a: 'Flutter for most cases: one team, one codebase, two platforms. We recommend native only for special cases that need very deep hardware access.' },
+          { q: 'How much does a mobile app cost?', a: 'Starting from Rp 15M for a simple app. Apps with complex features (marketplace, fintech, IoT) can cost more — we provide a firm estimate after consultation.' },
+          { q: 'How long does app store review take?', a: 'Google Play usually takes 1–3 business days, the Apple App Store 1–7 days. We are experienced in preparing submissions that pass review the first time.' },
+          { q: 'Is there maintenance after launch?', a: 'Yes. We offer maintenance packages for OS updates, bug fixes, and new features after the app goes live.' },
+        ],
+      },
+      zh: {
+        headline: 'Android与iOS移动应用开发服务',
+        subline: '轻量、快速、体验舒适的原生与跨平台应用——随时可发布至Play Store与App Store。',
+        longDesc: '优秀的移动应用不只在于外观，更在于让用户不断回访的体验。AFSS使用Flutter或原生技术栈构建Android与iOS应用，配备稳固的后端与API，随时可发布至应用商店。',
+        benefits: [
+          { icon: 'fa-solid fa-mobile-screen-button', title: 'Android与iOS一次搞定', desc: '一套Flutter代码库覆盖两个平台——节省成本，同时不牺牲原生外观与性能。' },
+          { icon: 'fa-solid fa-rocket', title: '应用商店发布', desc: '我们协助完成Google Play Store与Apple App Store的注册、审核与发布流程。' },
+          { icon: 'fa-solid fa-microchip', title: '集成后端与API', desc: '稳固的后端系统，提供REST API，支持身份验证、推送通知与实时数据同步。' },
+          { icon: 'fa-solid fa-code', title: '整洁且有文档的代码', desc: '可扩展的架构，随着业务增长可轻松添加新功能。' },
+        ],
+        serviceFaq: [
+          { q: '选Flutter还是原生（Kotlin/Swift）？', a: '大多数情况推荐Flutter：一个团队、一套代码库、两个平台。仅在需要深度硬件访问的特殊场景下我们才推荐原生开发。' },
+          { q: '移动应用的费用是多少？', a: '简单应用起价1500万印尼盾。功能复杂的应用（多商户平台、金融科技、物联网）费用更高——咨询后我们会提供准确报价。' },
+          { q: '应用商店审核需要多久？', a: 'Google Play通常1–3个工作日，Apple App Store为1–7天。我们经验丰富，能让应用一次性通过审核。' },
+          { q: '上线后有维护服务吗？', a: '有。我们提供维护套餐，涵盖系统更新、Bug修复以及上线后的新功能开发。' },
+        ],
+      },
+    },
   },
   'web-app': {
     headline: 'Jasa Pembuatan Web App, Dashboard & Sistem Internal',
@@ -611,6 +649,7 @@ const SERVICE_CONTENT = {
 const SVC_CATS = [
   { id: 'web', icon: 'fa-solid fa-globe', slugs: ['landing-page', 'company-profile'] },
   { id: 'software', icon: 'fa-solid fa-code', slugs: ['software-custom', 'erp'] },
+  { id: 'mobile', icon: 'fa-solid fa-mobile-screen', slugs: ['aplikasi-mobile'] },
   { id: 'commerce', icon: 'fa-solid fa-cart-shopping', slugs: ['ecommerce', 'marketplace'] },
 ]
 
@@ -1639,11 +1678,12 @@ export function PortfolioDetail() {
 /* ══════════════════════════════════════════════════ ESTIMASI (/estimasi) */
 // Mirrors App.jsx's Estimator component exactly (same products/addons) — structural
 // data only, labels are locale-keyed via t('estimator.*') (see src/i18n/strings.js).
-const EST_PRODUCT_IDS = ['landing', 'profile', 'software', 'erp', 'ecommerce', 'marketplace']
+const EST_PRODUCT_IDS = ['landing', 'profile', 'software', 'mobile', 'erp', 'ecommerce', 'marketplace']
 const EST_PRODUCT_META = {
   landing:     { base: [1.5, 5],   perUnit: 0.4, unitKey: 'halaman', icon: 'fa-solid fa-rectangle-ad' },
   profile:     { base: [4.5, 12],  perUnit: 0.6, unitKey: 'halaman', icon: 'fa-solid fa-briefcase' },
   software:    { base: [8, 30],    perUnit: 2,   unitKey: 'modul',   icon: 'fa-solid fa-code' },
+  mobile:      { base: [15, 60],   perUnit: 3,   unitKey: 'fitur',   icon: 'fa-solid fa-mobile-screen' },
   erp:         { base: [28, 100],  perUnit: 5,   unitKey: 'modul',   icon: 'fa-solid fa-circle-nodes' },
   ecommerce:   { base: [18, 50],   perUnit: 2.5, unitKey: 'modul',   icon: 'fa-solid fa-cart-shopping' },
   marketplace: { base: [65, 150],  perUnit: 8,   unitKey: 'modul',   icon: 'fa-solid fa-store' },
@@ -2068,6 +2108,7 @@ export function Keunggulan() {
 const PRICE_SLUG_COLOR = {
   'landing-page': 'var(--accent)', 'company-profile': 'var(--accent)',
   'software-custom': '#1E88A8', erp: '#1E88A8',
+  'aplikasi-mobile': '#7C3AED',
   ecommerce: '#D97706', marketplace: '#D97706',
 }
 
