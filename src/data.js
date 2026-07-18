@@ -803,7 +803,6 @@ export const techStack = [
   { name: 'Node.js',     icon: 'fa-brands fa-node-js' },
   { name: 'Flutter',     icon: 'fa-solid fa-mobile-screen' },
   { name: 'PostgreSQL',  icon: 'fa-solid fa-database' },
-  { name: 'Laravel',     icon: 'fa-brands fa-laravel' },
   { name: 'AWS',         icon: 'fa-brands fa-aws' },
   { name: 'Vercel',      icon: 'fa-solid fa-triangle-exclamation' },
   { name: 'Figma',       icon: 'fa-brands fa-figma' },
