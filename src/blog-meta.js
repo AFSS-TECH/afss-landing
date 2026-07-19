@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-presensi-face-recognition-karyawan",
+    "date": "2026-07-19",
+    "readMinutes": 10,
+    "c": "#0D9488",
+    "c2": "#134E4A",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Presensi Face Recognition Karyawan | AFSS",
+        "description": "Hentikan titip absen & data lembur kacau. Aplikasi presensi face recognition + GPS geofencing beri visibilitas real-time dan integrasi payroll otomatis.",
+        "excerpt": "Mesin fingerprint rusak, titip absen, dan rekonsiliasi payroll manual berjam-jam setiap bulan bisa dihentikan dengan satu sistem presensi digital.",
+        "tags": [
+          "Presensi Digital",
+          "Face Recognition",
+          "HR Tech"
+        ]
+      },
+      "en": {
+        "title": "Face Recognition Employee Attendance App | AFSS",
+        "description": "Stop buddy punching and messy overtime data. A face recognition attendance app with GPS geofencing gives real-time visibility and automatic payroll sync.",
+        "excerpt": "Broken fingerprint machines, buddy punching, and hours of manual payroll reconciliation every month can be solved with one digital attendance system.",
+        "tags": [
+          "Digital Attendance",
+          "Face Recognition",
+          "HR Tech"
+        ]
+      },
+      "zh": {
+        "title": "人脸识别员工考勤应用 | AFSS",
+        "description": "杜绝代打卡与混乱的加班数据。人脸识别加GPS地理围栏考勤应用可实现活体检测防作弊、外勤实时定位打卡、实时出勤仪表盘,并自动同步薪资系统,大幅减少人力资源部门每月花在人工核对考勤与加班记录上的工时,降低薪资纠纷与舞弊风险,让制造工厂、零售连锁与外勤服务团队的考勤管理更加透明、准确且高效。",
+        "excerpt": "指纹机故障、代打卡舞弊,以及每月耗费数十小时的人工薪资核对,都能通过一套数字化考勤系统解决。",
+        "tags": [
+          "数字化考勤",
+          "人脸识别",
+          "HR科技"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-pos-kitchen-display-system-restoran",
+    "date": "2026-07-19",
+    "readMinutes": 10,
+    "c": "#DC2626",
+    "c2": "#7F1D1D",
+    "i18n": {
+      "id": {
+        "title": "Sistem POS dan Kitchen Display System (KDS) untuk Restoran",
+        "description": "Bon kertas bikin pesanan restoran Anda sering salah dan lambat? Kenali cara kerja sistem POS dan KDS yang mempercepat dapur dan menekan food cost.",
+        "excerpt": "Bon kertas yang hilang dan pesanan yang salah baca bisa menelan puluhan juta rupiah per bulan — begini cara sistem POS dan KDS membenahi alur dapur restoran Anda.",
+        "tags": [
+          "POS Restoran",
+          "Kitchen Display System",
+          "Sistem Restoran"
+        ]
+      },
+      "en": {
+        "title": "POS and Kitchen Display System (KDS) for Restaurants",
+        "description": "Paper order slips cause lost orders and slow service. See how a POS and Kitchen Display System speeds up kitchens and cuts food cost leakage.",
+        "excerpt": "Lost tickets and misread orders can cost a restaurant tens of millions of rupiah a month — here's how a POS and KDS system fixes the order-to-plate pipeline.",
+        "tags": [
+          "Restaurant POS",
+          "Kitchen Display System",
+          "Restaurant Technology"
+        ]
+      },
+      "zh": {
+        "title": "餐厅POS收银与厨房显示系统(KDS)完整指南",
+        "description": "纸质点菜单导致订单出错、出餐缓慢?了解POS与厨房显示系统(KDS)如何加快出餐速度并减少食材成本流失。",
+        "excerpt": "丢失的点菜单和看错的订单,每月可能让餐厅损失数千万印尼盾——了解POS与KDS系统如何重塑餐厅的出餐流程。",
+        "tags": [
+          "餐厅POS系统",
+          "厨房显示系统",
+          "印尼软件开发"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-parkir-digital-smart-parking-bisnis",
+    "date": "2026-07-19",
+    "readMinutes": 11,
+    "c": "#EA580C",
+    "c2": "#9A3412",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Parkir Digital untuk Bisnis: Panduan Smart Parking",
+        "description": "Sistem parkir digital ANPR & QRIS untuk mal, kantor, apartemen, dan rumah sakit. Cegah kebocoran pendapatan, percepat antrean, dan pantau okupansi real-time.",
+        "excerpt": "Tiket kertas dan petugas gerbang manual diam-diam menggerogoti pendapatan parkir Anda. Kenali bagaimana sistem parkir digital menutup kebocoran itu dalam hitungan bulan.",
+        "tags": [
+          "Smart Parking",
+          "Sistem Parkir Digital",
+          "Manajemen Properti"
+        ]
+      },
+      "en": {
+        "title": "Digital Parking App for Business: Smart Parking Guide",
+        "description": "Digital parking systems with ANPR & QRIS for malls, offices, apartments, and hospitals. Stop revenue leakage, cut queues, and track occupancy in real time.",
+        "excerpt": "Paper tickets and manual gate staff are quietly draining your parking revenue. See how a digital parking system closes that leak within months.",
+        "tags": [
+          "Smart Parking",
+          "Digital Parking App",
+          "Property Management"
+        ]
+      },
+      "zh": {
+        "title": "智慧停车系统:企业数字化停车应用指南",
+        "description": "面向商场、写字楼、公寓与医院的ANPR与QRIS智慧停车系统,杜绝收入流失,缩短排队时间,实时掌握车位占用情况。",
+        "excerpt": "纸质停车票和人工闸门保安正在悄悄侵蚀你的停车收入。了解数字化停车系统如何在几个月内堵住这个漏洞。",
+        "tags": [
+          "智慧停车",
+          "数字化停车应用",
+          "物业管理"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "rekam-medis-elektronik-satusehat-klinik",
+    "date": "2026-07-19",
+    "readMinutes": 10,
+    "c": "#0891B2",
+    "c2": "#155E75",
+    "i18n": {
+      "id": {
+        "title": "Rekam Medis Elektronik & Integrasi SATUSEHAT untuk Klinik",
+        "description": "Klinik masih pakai rekam medis kertas? Pelajari cara sistem RME terintegrasi SATUSEHAT mengurangi tes duplikat, percepat konsultasi, dan patuhi Kemenkes.",
+        "excerpt": "Map pasien hilang, tes lab diulang, dan tenggat SATUSEHAT yang mengancam klaim BPJS -- begini cara klinik kecil hingga jaringan besar bertransformasi ke rekam medis elektronik.",
+        "tags": [
+          "Rekam Medis Elektronik",
+          "SATUSEHAT",
+          "Klinik Digital"
+        ]
+      },
+      "en": {
+        "title": "Electronic Medical Records & SATUSEHAT Integration for Clinics",
+        "description": "Still running your clinic on paper records? See how a SATUSEHAT-integrated EMR system cuts duplicate tests, speeds up consultations, and keeps you compliant.",
+        "excerpt": "A missing patient folder, a repeated lab test, and a SATUSEHAT deadline threatening BPJS claims -- here is how clinics of every size are moving to electronic medical records.",
+        "tags": [
+          "Electronic Medical Records",
+          "SATUSEHAT",
+          "Digital Clinic"
+        ]
+      },
+      "zh": {
+        "title": "电子病历系统与SATUSEHAT诊所对接指南",
+        "description": "诊所还在用纸质病历?了解与印尼卫生部SATUSEHAT平台对接的电子病历系统如何减少重复检验、加快就诊速度、支持电子处方并确保合规,避免BPJS理赔与营业许可证受阻的风险。",
+        "excerpt": "病历丢失、检验重做、SATUSEHAT对接期限逼近医保理赔——看各类规模的诊所如何转向电子病历系统。",
+        "tags": [
+          "电子病历系统",
+          "SATUSEHAT",
+          "数字化诊所"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-koperasi-simpan-pinjam-digital",
+    "date": "2026-07-19",
+    "readMinutes": 9,
+    "c": "#7C3AED",
+    "c2": "#4C1D95",
+    "i18n": {
+      "id": {
+        "title": "Sistem Koperasi Simpan Pinjam Digital: Solusi SHU & Angsuran",
+        "description": "Sistem koperasi simpan pinjam digital otomatiskan simpanan, pinjaman, SHU & pelaporan OJK—kurangi kesalahan, percepat persetujuan, cegah tunggakan angsuran.",
+        "excerpt": "Masih hitung SHU pakai Excel? Satu rumus tertimpa bisa bikin selisih ratusan juta rupiah dan RAT molor berminggu-minggu—begini cara sistem digital mencegahnya.",
+        "tags": [
+          "Koperasi Digital",
+          "Simpan Pinjam",
+          "SHU & Kepatuhan OJK"
+        ]
+      },
+      "en": {
+        "title": "Digital Savings & Loan Cooperative System for Koperasi",
+        "description": "A digital savings & loan cooperative system automates member savings, loans, SHU, and OJK reporting—fewer errors, faster approvals, less arrears.",
+        "excerpt": "Still calculating SHU in Excel? One overwritten formula can create a nine-figure discrepancy and stall your annual meeting for weeks—here's how a digital system prevents it.",
+        "tags": [
+          "Digital Cooperative",
+          "Savings & Loans",
+          "SHU & OJK Compliance"
+        ]
+      },
+      "zh": {
+        "title": "数字化储蓄信贷合作社系统:SHU计算与OJK合规",
+        "description": "数字化储蓄信贷合作社系统自动处理社员储蓄、贷款审批、SHU计算与OJK监管报告,减少错误、加快审批、杜绝分期还款拖欠。",
+        "excerpt": "还在用Excel计算SHU?一个被覆盖的公式就可能造成上亿印尼盾的差额,还让年度大会拖延数周——数字系统如何从根本上解决这一问题。",
+        "tags": [
+          "数字化合作社",
+          "储蓄信贷系统",
+          "SHU与OJK合规"
+        ]
+      }
+    }
+  },
+  {
     "slug": "sistem-manajemen-apotek-farmasi-digital",
     "date": "2026-07-16",
     "readMinutes": 9,

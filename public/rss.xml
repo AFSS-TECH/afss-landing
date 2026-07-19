@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Sun, 19 Jul 2026 13:22:46 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 14:15:50 GMT</lastBuildDate>
+    <item>
+      <title>Aplikasi Presensi Face Recognition Karyawan | AFSS</title>
+      <link>https://afss.tech/blog/aplikasi-presensi-face-recognition-karyawan</link>
+      <guid>https://afss.tech/blog/aplikasi-presensi-face-recognition-karyawan</guid>
+      <description>Mesin fingerprint rusak, titip absen, dan rekonsiliasi payroll manual berjam-jam setiap bulan bisa dihentikan dengan satu sistem presensi digital.</description>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Presensi Digital</category>
+      <category>Face Recognition</category>
+      <category>HR Tech</category>
+    </item>
+    <item>
+      <title>Sistem POS dan Kitchen Display System (KDS) untuk Restoran</title>
+      <link>https://afss.tech/blog/sistem-pos-kitchen-display-system-restoran</link>
+      <guid>https://afss.tech/blog/sistem-pos-kitchen-display-system-restoran</guid>
+      <description>Bon kertas yang hilang dan pesanan yang salah baca bisa menelan puluhan juta rupiah per bulan — begini cara sistem POS dan KDS membenahi alur dapur restoran Anda.</description>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 GMT</pubDate>
+      <category>POS Restoran</category>
+      <category>Kitchen Display System</category>
+      <category>Sistem Restoran</category>
+    </item>
+    <item>
+      <title>Aplikasi Parkir Digital untuk Bisnis: Panduan Smart Parking</title>
+      <link>https://afss.tech/blog/aplikasi-parkir-digital-smart-parking-bisnis</link>
+      <guid>https://afss.tech/blog/aplikasi-parkir-digital-smart-parking-bisnis</guid>
+      <description>Tiket kertas dan petugas gerbang manual diam-diam menggerogoti pendapatan parkir Anda. Kenali bagaimana sistem parkir digital menutup kebocoran itu dalam hitungan bulan.</description>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Smart Parking</category>
+      <category>Sistem Parkir Digital</category>
+      <category>Manajemen Properti</category>
+    </item>
+    <item>
+      <title>Rekam Medis Elektronik &amp; Integrasi SATUSEHAT untuk Klinik</title>
+      <link>https://afss.tech/blog/rekam-medis-elektronik-satusehat-klinik</link>
+      <guid>https://afss.tech/blog/rekam-medis-elektronik-satusehat-klinik</guid>
+      <description>Map pasien hilang, tes lab diulang, dan tenggat SATUSEHAT yang mengancam klaim BPJS -- begini cara klinik kecil hingga jaringan besar bertransformasi ke rekam medis elektronik.</description>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Rekam Medis Elektronik</category>
+      <category>SATUSEHAT</category>
+      <category>Klinik Digital</category>
+    </item>
+    <item>
+      <title>Sistem Koperasi Simpan Pinjam Digital: Solusi SHU &amp; Angsuran</title>
+      <link>https://afss.tech/blog/sistem-koperasi-simpan-pinjam-digital</link>
+      <guid>https://afss.tech/blog/sistem-koperasi-simpan-pinjam-digital</guid>
+      <description>Masih hitung SHU pakai Excel? Satu rumus tertimpa bisa bikin selisih ratusan juta rupiah dan RAT molor berminggu-minggu—begini cara sistem digital mencegahnya.</description>
+      <pubDate>Sun, 19 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Koperasi Digital</category>
+      <category>Simpan Pinjam</category>
+      <category>SHU &amp; Kepatuhan OJK</category>
+    </item>
     <item>
       <title>Sistem Manajemen Apotek Digital: Resep, Stok, dan POS</title>
       <link>https://afss.tech/blog/sistem-manajemen-apotek-farmasi-digital</link>
