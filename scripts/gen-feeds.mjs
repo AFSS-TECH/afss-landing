@@ -4,7 +4,7 @@ import { writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import { posts } from '../src/blog.js'
-import { products, portfolioProjects } from '../src/data.js'
+import { products, portfolioProjects, serviceAreas } from '../src/data.js'
 import { SITE_URL } from '../src/site.js'
 import { LOCALES, LOCALE_PREFIX, HREFLANG, DEFAULT_LOCALE } from '../src/i18n/locales.js'
 
@@ -60,6 +60,8 @@ const CORE_PATHS = [
 const ID_ONLY_PATHS = [
   { path: '/privacy', changefreq: 'yearly', priority: '0.3' },
   { path: '/terms', changefreq: 'yearly', priority: '0.3' },
+  // Local-SEO city pages (see src/main.jsx / data.js serviceAreas)
+  ...serviceAreas.map((a) => ({ path: `/jasa-pembuatan-website-${a.slug}`, changefreq: 'monthly', priority: '0.8' })),
 ]
 
 const urls = [

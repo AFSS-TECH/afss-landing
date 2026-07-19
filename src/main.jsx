@@ -1,9 +1,9 @@
 import './index.css'
 import { ViteReactSSG } from 'vite-react-ssg'
 import { Layout, Home, NotFound } from './App.jsx'
-import { LayananIndex, LayananDetail, About, Contact, Portfolio, PortfolioDetail, Estimasi, Privacy, Terms, Keunggulan, Harga, Faq, Karir, AjukanProyek } from './Pages.jsx'
+import { LayananIndex, LayananDetail, About, Contact, Portfolio, PortfolioDetail, Estimasi, Privacy, Terms, Keunggulan, Harga, Faq, Karir, AjukanProyek, AreaLayanan } from './Pages.jsx'
 import { postsMeta } from './blog-meta.js'
-import { products, portfolioProjects } from './data.js'
+import { products, portfolioProjects, serviceAreas } from './data.js'
 import { LOCALES, LOCALE_PREFIX, DEFAULT_LOCALE } from './i18n/locales.js'
 
 // Multi-route SSG: every route is prerendered to its own static HTML file for full crawlability.
@@ -61,6 +61,9 @@ function buildRouteTree(locale) {
     children.push(
       { path: 'privacy', element: <Privacy /> },
       { path: 'terms', element: <Terms /> },
+      // Local-SEO city pages ("jasa pembuatan website <kota>") — Indonesian-only,
+      // one static route per city so each prerenders to its own HTML file.
+      ...serviceAreas.map((a) => ({ path: `jasa-pembuatan-website-${a.slug}`, element: <AreaLayanan area={a} /> })),
     )
   }
 

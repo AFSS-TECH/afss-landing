@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import {
-  motion, AnimatePresence, useScroll, useSpring,
+  motion, AnimatePresence, useScroll,
   useInView, animate, useReducedMotion,
 } from 'framer-motion'
 import { Outlet, useLocation } from 'react-router-dom'
@@ -9,7 +9,7 @@ import { Icon } from './Icon.jsx'
 import { ProductFinder } from './ProductFinder.jsx'
 import {
   BRAND, WA, products, workflow as steps, stats,
-  clients, techStack,
+  clients, techStack, pricing, portfolioProjects, faqs, serviceAreas,
 } from './data.js'
 import { SITE_URL, formatDateId, formatDate } from './site.js'
 import { postsMeta } from './blog-meta.js'
@@ -19,6 +19,9 @@ import { LOCALES, LOCALE_SHORT, withLocale, safeLocalePath, setLocaleCookie } fr
 import { useHreflangTags } from './i18n/HreflangTags.jsx'
 import { useSectionOverride } from './lib/content.js'
 import { STRINGS } from './i18n/strings.js'
+import { supabase } from './lib/supabase.js'
+import { track } from './lib/track.js'
+import emailjs from '@emailjs/browser'
 
 // Dashboard-editable brand/contact info — falls back to data.js's BRAND/WA
 // until the admin dashboard's Supabase-stored override loads client-side.
@@ -55,26 +58,6 @@ const onSpot = (e) => {
   const r = e.currentTarget.getBoundingClientRect()
   e.currentTarget.style.setProperty('--mx', `${e.clientX - r.left}px`)
   e.currentTarget.style.setProperty('--my', `${e.clientY - r.top}px`)
-}
-
-/* ── Magnetic button — subtle pull toward cursor (rare, high-value CTA only) ── */
-function Magnetic({ href, className, children, ...rest }) {
-  const reduce = useReducedMotion()
-  const ref = useRef(null)
-  const x = useSpring(0, { stiffness: 240, damping: 16 })
-  const y = useSpring(0, { stiffness: 240, damping: 16 })
-  const onMove = (e) => {
-    if (reduce || !ref.current) return
-    const r = ref.current.getBoundingClientRect()
-    x.set((e.clientX - (r.left + r.width / 2)) * 0.28)
-    y.set((e.clientY - (r.top + r.height / 2)) * 0.45)
-  }
-  const reset = () => { x.set(0); y.set(0) }
-  return (
-    <motion.a ref={ref} href={href} className={className} style={{ x, y }} onMouseMove={onMove} onMouseLeave={reset} {...rest}>
-      {children}
-    </motion.a>
-  )
 }
 
 /* ── Scroll to top on every route change ── */
@@ -196,7 +179,7 @@ function Hero() {
             {h.lead}
           </motion.p>
           <motion.div className="hero-cta" variants={fadeUp}>
-            <Magnetic href={buildWaLink(brand.wa, t('wa.heroConsult', { brand: brand.short }))} className="btn btn-wa btn-lg" target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('hero.ctaWa')}</Magnetic>
+            <a href={buildWaLink(brand.wa, t('wa.heroConsult', { brand: brand.short }))} className="btn btn-wa btn-lg" target="_blank" rel="noreferrer" onClick={() => track('wa_click', { source: 'hero' })}><Icon icon="fa-brands fa-whatsapp" /> {t('hero.ctaWa')}</a>
             <Link to="/portofolio" className="btn btn-ghost btn-lg">{t('hero.ctaPortfolio')} <Icon icon="fa-solid fa-arrow-right" /></Link>
           </motion.div>
           <motion.div className="hero-trust" variants={fadeUp}>
@@ -207,7 +190,6 @@ function Hero() {
         {/* Blueprint spec plate — a build manifest for what AFSS actually ships, not a fake SaaS dashboard */}
         <motion.div className="hero-visual" initial={{ opacity: 0, y: 26 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}>
           <div className="bp-plate">
-            <i className="corner tl" /><i className="corner tr" /><i className="corner bl" /><i className="corner br" />
             <div className="bp-head">
               <span className="bp-tag">{t('hero.buildTag')}</span>
               <span className="bp-status"><span className="dot" /> {t('hero.buildStatus')}</span>
@@ -246,7 +228,47 @@ function Hero() {
           </div>
         </motion.div>
       </div>
+
+      {/* Journey bar — "sekali lihat paham": produk → demo → harga → pesan */}
+      <JourneyBar />
     </section>
+  )
+}
+
+/* ════════════════════════════════════════════════ JOURNEY BAR — 4-step visitor path */
+function JourneyBar() {
+  const { t } = useLocale()
+  const brand = useBrand()
+  const items = t('journey.items')
+  const hrefs = [
+    { href: '#services' },
+    { href: '#demo' },
+    { to: '/harga' },
+    { href: buildWaLink(brand.wa, t('wa.heroConsult', { brand: brand.short })), external: true },
+  ]
+  return (
+    <motion.nav
+      className="journey" aria-label={t('journey.aria')}
+      initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.35 }}
+    >
+      {items.map((it, i) => {
+        const body = (
+          <>
+            <span className={`journey-num${i === 3 ? ' wa' : ''}`}>{i + 1}</span>
+            <span className="journey-txt">
+              <span className="journey-label">{it.label} <Icon icon="fa-solid fa-arrow-right" /></span>
+              <span className="journey-desc">{it.desc}</span>
+            </span>
+          </>
+        )
+        const meta = hrefs[i]
+        const onClick = () => track('journey_click', { step: i + 1, label: it.label })
+        return meta.to
+          ? <Link key={i} to={meta.to} className="journey-card" onClick={onClick}>{body}</Link>
+          : <a key={i} href={meta.href} className="journey-card" onClick={onClick} {...(meta.external ? { target: '_blank', rel: 'noreferrer' } : {})}>{body}</a>
+      })}
+    </motion.nav>
   )
 }
 
@@ -313,13 +335,12 @@ function TrustBar() {
   const { locale, t } = useLocale()
   const clientsOverride = useSectionOverride('clients', clients)
   const localized = clientsOverride.map((c) => pick(c, locale))
-  const doubled = [...localized, ...localized]
   return (
     <div className="trustbar">
       <div className="trust-label">{t('trustBar.label')}</div>
       <div className="trust-marquee-wrap">
         <div className="trust-logos">
-          {doubled.map((c, i) => (
+          {localized.map((c, i) => (
             <span className="trust-logo" key={i}>
               <Icon icon="fa-solid fa-circle-nodes" /> {c.label}
             </span>
@@ -334,6 +355,8 @@ function TrustBar() {
 function Services() {
   const { locale, t } = useLocale()
   const items = products.map((p) => pick(p, locale))
+  // Harga "mulai dari" per layanan — diambil dari data pricing (sumber yang sama dengan /harga)
+  const priceBySlug = Object.fromEntries(pricing.map((pr) => [pr.slug, pick(pr, locale)]))
   return (
     <section id="services">
       <div className="container">
@@ -353,6 +376,14 @@ function Services() {
               <div className="svc-name">{p.name}</div>
               <p className="svc-desc">{p.desc}</p>
               <ul className="svc-feats">{p.feats.map((f) => <li key={f}><Icon icon="fa-solid fa-check" /> {f}</li>)}</ul>
+              {priceBySlug[p.slug] && (
+                <div className="svc-price-row">
+                  <div className="svc-price">
+                    <span className="lbl">{priceBySlug[p.slug].note}</span>
+                    <span className="amt">{priceBySlug[p.slug].price}</span>
+                  </div>
+                </div>
+              )}
               <div className="svc-foot">
                 <Link className="btn" to={`/layanan/${p.slug}`}>{t('services.more')} <Icon icon="fa-solid fa-arrow-right" /></Link>
               </div>
@@ -361,6 +392,91 @@ function Services() {
         </motion.div>
         <div style={{ textAlign: 'center', marginTop: 40 }}>
           <Link to="/layanan" className="btn btn-ghost btn-lg">{t('services.viewAll')} <Icon icon="fa-solid fa-arrow-right" /></Link>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ════════════════════════════════════════════════ DEMO TEASER — portofolio + demo live di beranda */
+function DemoTeaser() {
+  const { locale, t } = useLocale()
+  const featured = portfolioProjects.filter((p) => p.image && p.visitUrl).slice(0, 3)
+  return (
+    <section className="demo-sec" id="demo">
+      <div className="container">
+        <Reveal className="sec-header center">
+          <div className="eyebrow"><Icon icon="fa-solid fa-hand-pointer" /> {t('demoTeaser.eyebrow')}</div>
+          <h2 className="sec-title">{t('demoTeaser.titlePre')}<span className="ital">{t('demoTeaser.titleItal')}</span>{t('demoTeaser.titlePost')}</h2>
+          <p className="sec-sub">{t('demoTeaser.sub')}</p>
+        </Reveal>
+        <motion.div className="demo-grid" variants={container} initial="hidden" whileInView="show" viewport={viewport}>
+          {featured.map((p) => {
+            const l = pick(p, locale)
+            return (
+              <motion.article key={p.slug} className="demo-card" variants={fadeUp} whileHover={{ y: -4 }} transition={{ type: 'spring', stiffness: 280, damping: 22 }}>
+                <Link to={`/portofolio/${p.slug}`} className="demo-shot" aria-label={p.title}>
+                  <img src={p.image} alt={`${p.title} — ${l.tagline}`} loading="lazy" width="800" height="500" />
+                </Link>
+                <div className="demo-body">
+                  <div className="demo-meta">
+                    <span className="demo-cat">{l.cat}</span>
+                    <span className="demo-result"><Icon icon="fa-solid fa-arrow-trend-up" /> {l.result}</span>
+                  </div>
+                  <h3 className="demo-title">{p.title}</h3>
+                  <p className="demo-tagline">{l.tagline}</p>
+                  <div className="demo-actions">
+                    <a href={p.visitUrl} target="_blank" rel="noreferrer" className="btn btn-pri" onClick={() => track('demo_open', { project: p.slug })}><Icon icon="fa-solid fa-arrow-up-right-from-square" /> {t('demoTeaser.liveDemo')}</a>
+                    <Link to={`/portofolio/${p.slug}`} className="btn btn-ghost">{t('demoTeaser.caseStudy')}</Link>
+                  </div>
+                </div>
+              </motion.article>
+            )
+          })}
+        </motion.div>
+        <div style={{ textAlign: 'center', marginTop: 40 }}>
+          <Link to="/portofolio" className="btn btn-ghost btn-lg">{t('demoTeaser.viewAll')} <Icon icon="fa-solid fa-arrow-right" /></Link>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/* ════════════════════════════════════════════════ FAQ TEASER — jawaban keberatan umum di beranda */
+function FaqTeaser() {
+  const { locale, t } = useLocale()
+  const [open, setOpen] = useState(0)
+  const items = faqs.map((f) => pick(f, locale))
+  return (
+    <section className="faq" id="faq">
+      <div className="container container-narrow">
+        <Reveal className="sec-header center">
+          <div className="eyebrow"><Icon icon="fa-solid fa-circle-question" /> {t('faqTeaser.eyebrow')}</div>
+          <h2 className="sec-title">{t('faqTeaser.titlePre')}<span className="ital">{t('faqTeaser.titleItal')}</span>{t('faqTeaser.titlePost')}</h2>
+          <p className="sec-sub">{t('faqTeaser.sub')}</p>
+        </Reveal>
+        <div className="faq-list">
+          {items.map((f, i) => {
+            const isOpen = open === i
+            return (
+              <div key={f.id || i} className={`faq-item ${isOpen ? 'open' : ''}`}>
+                <button className="faq-q" onClick={() => setOpen(isOpen ? -1 : i)} aria-expanded={isOpen}>
+                  <span>{f.q}</span>
+                  <Icon icon={`fa-solid ${isOpen ? 'fa-minus' : 'fa-plus'}`} />
+                </button>
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div className="faq-a" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}>
+                      <p>{f.a}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            )
+          })}
+        </div>
+        <div style={{ textAlign: 'center', marginTop: 36 }}>
+          <Link to="/faq" className="btn btn-ghost">{t('faqTeaser.viewAll')} <Icon icon="fa-solid fa-arrow-right" /></Link>
         </div>
       </div>
     </section>
@@ -505,19 +621,104 @@ function BlogTeaser() {
   )
 }
 
+/* ════════════════════════════════════════════════ LEAD FORM — pesan cepat (3 kolom isian) */
+function LeadForm() {
+  const { t } = useLocale()
+  const brand = useBrand()
+  const [form, setForm] = useState({ nama: '', kontak: '', kebutuhan: '' })
+  const [errors, setErrors] = useState({})
+  const [sending, setSending] = useState(false)
+  const [sent, setSent] = useState(false)
+
+  const set = (k) => (e) => { setForm((f) => ({ ...f, [k]: e.target.value })); setErrors((er) => ({ ...er, [k]: '' })) }
+
+  const submit = async (e) => {
+    e.preventDefault()
+    const errs = {}
+    if (!form.nama.trim()) errs.nama = t('leadForm.errNama')
+    if (!form.kontak.trim()) errs.kontak = t('leadForm.errKontak')
+    if (!form.kebutuhan.trim()) errs.kebutuhan = t('leadForm.errKebutuhan')
+    if (Object.keys(errs).length) { setErrors(errs); return }
+    setSending(true)
+    try {
+      await emailjs.send('service_7w4dccc', 'template_0ogubg3', {
+        from_name: form.nama,
+        from_contact: form.kontak,
+        jenis_proyek: '[QUICK LEAD — Beranda]',
+        message: form.kebutuhan,
+        to_email: brand.email,
+      }, 'ig9sNOB9hNjTymRoP')
+    } catch {
+      // email gagal tidak boleh memblokir pencatatan lead
+    }
+    if (supabase) {
+      try {
+        await supabase.from('submissions').insert({
+          nama: form.nama, kontak: form.kontak, jenis: 'Quick Lead — Beranda', deskripsi: form.kebutuhan,
+        })
+      } catch { /* backup channel — jangan blokir UX */ }
+    }
+    track('lead_submit', { source: 'home_cta' })
+    setSending(false)
+    setSent(true)
+  }
+
+  if (sent) {
+    return (
+      <div className="lead-form lead-success">
+        <div className="lead-success-ico"><Icon icon="fa-solid fa-circle-check" /></div>
+        <h3>{t('leadForm.successTitle')}</h3>
+        <p>{t('leadForm.successDesc', { nama: form.nama, kontak: form.kontak })}</p>
+        <a href={buildWaLink(brand.wa, t('leadForm.waFollow', { brand: brand.short, nama: form.nama }))} target="_blank" rel="noreferrer" className="btn btn-wa" onClick={() => track('wa_click', { source: 'lead_success' })}>
+          <Icon icon="fa-brands fa-whatsapp" /> {t('leadForm.successWa')}
+        </a>
+      </div>
+    )
+  }
+
+  return (
+    <form className="lead-form" onSubmit={submit} noValidate>
+      <h3>{t('leadForm.title')}</h3>
+      <p className="lead-sub">{t('leadForm.sub')}</p>
+      <div className="lead-field">
+        <label htmlFor="lead-nama">{t('leadForm.nama')}</label>
+        <input id="lead-nama" className={`form-ctrl${errors.nama ? ' err' : ''}`} value={form.nama} onChange={set('nama')} placeholder={t('leadForm.phNama')} autoComplete="name" />
+        {errors.nama && <span className="form-err-msg">{errors.nama}</span>}
+      </div>
+      <div className="lead-field">
+        <label htmlFor="lead-kontak">{t('leadForm.kontak')}</label>
+        <input id="lead-kontak" className={`form-ctrl${errors.kontak ? ' err' : ''}`} value={form.kontak} onChange={set('kontak')} placeholder={t('leadForm.phKontak')} autoComplete="tel" inputMode="text" />
+        {errors.kontak && <span className="form-err-msg">{errors.kontak}</span>}
+      </div>
+      <div className="lead-field">
+        <label htmlFor="lead-kebutuhan">{t('leadForm.kebutuhan')}</label>
+        <textarea id="lead-kebutuhan" rows="3" className={`form-ctrl form-ta${errors.kebutuhan ? ' err' : ''}`} value={form.kebutuhan} onChange={set('kebutuhan')} placeholder={t('leadForm.phKebutuhan')} style={{ minHeight: 84 }} />
+        {errors.kebutuhan && <span className="form-err-msg">{errors.kebutuhan}</span>}
+      </div>
+      <button type="submit" className="btn btn-pri" disabled={sending} style={{ width: '100%', justifyContent: 'center' }}>
+        {sending ? t('leadForm.sending') : <><Icon icon="fa-solid fa-paper-plane" /> {t('leadForm.submit')}</>}
+      </button>
+      <p className="lead-note">{t('leadForm.note')}</p>
+    </form>
+  )
+}
+
 /* ════════════════════════════════════════════════ CTA BAND */
 function CtaBand() {
   const { t } = useLocale()
   const brand = useBrand()
   return (
     <section className="cta-band">
-      <Reveal className="cta-card">
-        <h2>{t('cta.titlePre')}<span className="ital">{t('cta.titleItal')}</span>{t('cta.titlePost')}</h2>
-        <p>{t('cta.desc')}</p>
-        <div className="btns">
-          <Magnetic href={buildWaLink(brand.wa, t('wa.ctaStart', { brand: brand.short }))} className="btn btn-pri btn-lg" target="_blank" rel="noreferrer"><Icon icon="fa-brands fa-whatsapp" /> {t('cta.start')}</Magnetic>
-          <Link to="/harga" className="btn btn-ghost btn-lg">{t('cta.viewPricing')}</Link>
+      <Reveal className="cta-card cta-split">
+        <div className="cta-copy">
+          <h2>{t('cta.titlePre')}<span className="ital">{t('cta.titleItal')}</span>{t('cta.titlePost')}</h2>
+          <p>{t('cta.desc')}</p>
+          <div className="btns">
+            <a href={buildWaLink(brand.wa, t('wa.ctaStart', { brand: brand.short }))} className="btn btn-wa btn-lg" target="_blank" rel="noreferrer" onClick={() => track('wa_click', { source: 'cta_band' })}><Icon icon="fa-brands fa-whatsapp" /> {t('cta.start')}</a>
+            <Link to="/harga" className="btn btn-ghost btn-lg">{t('cta.viewPricing')}</Link>
+          </div>
         </div>
+        <LeadForm />
       </Reveal>
     </section>
   )
@@ -568,6 +769,15 @@ export function Footer({ trimmed = false }) {
             <li><Link to="/blog">{t('footer.blog')}</Link></li>
             <li><Link to="/faq">{t('footer.faq')}</Link></li>
             <li><Link to="/karir">{t('footer.karir')}</Link></li>
+          </ul>
+        </div>
+        <div>
+          <div className="ft-head">{t('footer.area')}</div>
+          <ul className="ft-links">
+            {/* City pages are Indonesian-only — RawLink keeps them unprefixed under /en & /zh */}
+            {serviceAreas.map((a) => (
+              <li key={a.slug}><RawLink to={`/jasa-pembuatan-website-${a.slug}`}>{a.name}</RawLink></li>
+            ))}
           </ul>
         </div>
         </>)}
@@ -760,13 +970,38 @@ function SmartWA({ reduce }) {
       target="_blank" rel="noreferrer"
       title={t('smartWa.title')}
       initial={{ scale: 0, opacity: 0 }}
-      animate={reduce ? { scale: 1, opacity: 1 } : { scale: 1, opacity: 1, y: [0, -7, 0] }}
-      transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut' }}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.92 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+      whileHover={{ scale: 1.08 }}
+      whileTap={{ scale: 0.94 }}
     >
       <Icon icon="fa-brands fa-whatsapp" />
     </motion.a>
+  )
+}
+
+/* ════════════════════════════════════════════════ MOBILE ACTION BAR — bottom quick-nav (≤768px) */
+function MobileBar() {
+  const { path, t } = useLocale()
+  const brand = useBrand()
+  const items = [
+    { to: '/layanan', icon: 'fa-solid fa-layer-group', label: t('mobileBar.produk') },
+    { to: '/portofolio', icon: 'fa-solid fa-eye', label: t('mobileBar.demo') },
+    { to: '/harga', icon: 'fa-solid fa-tag', label: t('mobileBar.harga') },
+  ]
+  return (
+    <nav className="mobile-bar" aria-label={t('journey.aria')}>
+      {items.map((it) => (
+        <Link key={it.to} to={it.to} className={path.startsWith(it.to) ? 'active' : ''}>
+          <Icon icon={it.icon} />
+          <span>{it.label}</span>
+        </Link>
+      ))}
+      <a href={buildWaLink(brand.wa, t('smartWa.messages.default', { brand: brand.short }))} target="_blank" rel="noreferrer" className="mb-wa" onClick={() => track('wa_click', { source: 'mobile_bar' })}>
+        <Icon icon="fa-brands fa-whatsapp" />
+        <span>{t('mobileBar.chat')}</span>
+      </a>
+    </nav>
   )
 }
 
@@ -793,6 +1028,7 @@ function LayoutInner() {
       <Footer />
       <SmartWA reduce={reduce} />
       <ProductFinder />
+      <MobileBar />
     </>
   )
 }
@@ -858,12 +1094,14 @@ export function Home() {
       <Hero />
       <StatsBand />
       <TrustBar />
-      <WhyUs />
       <Services />
-      <AddOns />
-      <Estimator />
+      <DemoTeaser />
+      <WhyUs />
       <Process />
+      <Estimator />
+      <AddOns />
       <TechStack />
+      <FaqTeaser />
       <BlogTeaser />
       <CtaBand />
     </>
