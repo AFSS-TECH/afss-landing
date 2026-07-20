@@ -881,6 +881,11 @@ function openStageGallery(stageId) {
   navigate('stage-gallery');
 }
 
+function openProjectReport(projId) {
+  window.currentProjId = projId;
+  navigate('project-report');
+}
+
 // ── Stage Modal (new + edit) ──────────────────────────
 function openStageModal(stageId) {
   const proj   = DB.projects.find(p => p.id === window.currentProjId);

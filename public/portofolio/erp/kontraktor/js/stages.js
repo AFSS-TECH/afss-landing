@@ -20,7 +20,9 @@ function docPlaceholder(type, idx) {
 }
 
 function docThumbUrl(doc, idx) {
-  return doc.drive_id ? gdriveThumb(doc.drive_id) : docPlaceholder(doc.type, idx);
+  if (doc.drive_id) return gdriveThumb(doc.drive_id);
+  if (doc.thumb_url) return doc.thumb_url;
+  return docPlaceholder(doc.type, idx);
 }
 
 function stageBadge(status) {

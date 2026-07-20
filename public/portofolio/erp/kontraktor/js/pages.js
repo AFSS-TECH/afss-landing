@@ -1236,7 +1236,7 @@ function renderProjectDetail(){
 ${ph(proj.name, proj.id+' · '+proj.client,
   `<button class="btn btn-outline-secondary btn-sm" onclick="navigate('projects')"><i class="ti ti-arrow-left me-1"></i>Kembali</button>
    <button class="btn btn-outline-secondary btn-sm" onclick="navigate('hpp')"><i class="ti ti-chart-pie me-1"></i>HPP & Profit</button>
-   <button class="btn btn-primary btn-sm" onclick="exportPDF()"><i class="ti ti-download me-1"></i>Laporan Proyek</button>`)}
+   <button class="btn btn-primary btn-sm" onclick="openProjectReport('${proj.id}')"><i class="ti ti-file-report me-1"></i>Laporan Proyek</button>`)}
 
 <div class="row g-3 mb-4">
   <div class="col-6 col-md-3">${sc('Nilai Kontrak',fmt(proj.kontrak),'','','ti-contract')}</div>
@@ -1396,7 +1396,8 @@ const PAGES={
   'purchase-request':renderPurchaseRequest, 'purchase-order':renderPurchaseOrder,
   finance:renderFinance, gl:renderGL, reports:renderReports,
   master:renderMaster, settings:renderSettings,
-  'project-stages': renderProjectStages,
-  'stage-gallery':  renderStageGallery,
-  'doc-gallery':    renderAllDocs,
+  'project-stages':  renderProjectStages,
+  'stage-gallery':   renderStageGallery,
+  'doc-gallery':     renderAllDocs,
+  'project-report':  renderProjectReport,
 };
