@@ -40,8 +40,6 @@ function stageColor(status) {
 }
 
 function docCardHTML(d, i, allDocs, showProject) {
-  const stage = (DB.stages || []).find(s => s.id === d.stage_id);
-  const proj  = DB.projects.find(p => p.id === d.project_id);
   const isVideo = d.type === 'video';
   const thumb   = docThumbUrl(d, i);
   const idsJson = JSON.stringify(allDocs.map(x => x.id)).replace(/"/g, '&quot;');
@@ -54,20 +52,12 @@ function docCardHTML(d, i, allDocs, showProject) {
     <span class="doc-type-badge ${isVideo ? 'video' : 'image'}">
       <i class="ti ${isVideo ? 'ti-video' : 'ti-camera'}"></i>${isVideo ? 'Video' : 'Foto'}
     </span>
-    <div class="doc-hover-overlay">
-      <div class="doc-hover-title">${d.title}</div>
-      <div class="doc-hover-cap">${(d.caption || '').substring(0, 90)}${(d.caption || '').length > 90 ? '…' : ''}</div>
+    <div class="doc-overlay">
+      <div class="doc-overlay-title">${d.title}</div>
+      <button class="doc-overlay-arrow" aria-label="Lihat detail" onclick="event.stopPropagation();openLightbox('${d.id}','${idsJson}')">
+        <i class="ti ti-arrow-up-right"></i>
+      </button>
     </div>
-  </div>
-  <div class="doc-card-body">
-    <div class="doc-card-title">${d.title}</div>
-    ${showProject ? `<div class="doc-card-stage"><i class="ti ti-folder-open me-1 text-primary"></i>${(proj?.name || '—').substring(0, 24)}</div>` : ''}
-    <div class="doc-card-stage"><i class="ti ti-list-check me-1 text-muted"></i>${stage ? `${stage.order}. ${stage.name.substring(0, 28)}` : '—'}</div>
-    <div class="doc-card-meta">
-      <span><i class="ti ti-user me-1"></i>${d.uploaded_by}</span>
-      <span>${d.uploaded_at}</span>
-    </div>
-    ${d.kinerja_note ? `<div class="doc-kinerja-note"><i class="ti ti-notes me-1"></i>${d.kinerja_note}</div>` : ''}
   </div>
 </div>`;
 }

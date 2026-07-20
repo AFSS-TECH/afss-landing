@@ -14,3 +14,6 @@ npm-debug.log*
 DAILY_REPORT_*.md
 BLOG_DEPLOYMENT_REPORT_*.md
 SCHEDULED_TASK_SUMMARY.md
+
+
+supabase/.temp/
