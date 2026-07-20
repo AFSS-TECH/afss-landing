@@ -200,6 +200,16 @@ create table if not exists erp_demo_doc_uploads (
   primary key (visitor_id, id)
 );
 
+-- App settings (Integrasi & Profil Perusahaan) — also DB-backed, one row per
+-- visitor, no localStorage involved.
+create table if not exists erp_demo_settings (
+  visitor_id   text not null primary key,
+  integrations jsonb not null default '{}'::jsonb,
+  company      jsonb not null default '{}'::jsonb,
+  created_at   timestamptz not null default now(),
+  updated_at   timestamptz not null default now()
+);
+
 -- RLS is enabled for hygiene but permissive (no Supabase Auth identity to check
 -- against — see header note). Isolation between visitors is enforced by the
 -- app always filtering/writing with visitor_id, not by this policy.
@@ -210,7 +220,7 @@ begin
   foreach t in array array[
     'erp_demo_projects','erp_demo_employees','erp_demo_attendance','erp_demo_payroll',
     'erp_demo_stock','erp_demo_equipment','erp_demo_purchase_requests','erp_demo_purchase_orders',
-    'erp_demo_gl','erp_demo_cashflow','erp_demo_stages','erp_demo_doc_uploads'
+    'erp_demo_gl','erp_demo_cashflow','erp_demo_stages','erp_demo_doc_uploads','erp_demo_settings'
   ]
   loop
     execute format('alter table %I enable row level security', t);

@@ -12,10 +12,9 @@ let sidebarCollapsed = false;
 let bsModal     = null;
 let bsConfirm   = null;
 
-// Integration on/off state (persisted)
-const INTEGRATIONS = JSON.parse(localStorage.getItem('afss_integrations') || JSON.stringify({
-  whatsapp: true, email: true, gdrive: false, accounting: false
-}));
+// Integration on/off state — populated from SETTINGS (DB-backed) once dbReadyPromise
+// resolves in doLogin(); this placeholder only covers the brief pre-login window.
+let INTEGRATIONS = DEFAULT_SETTINGS.integrations;
 
 // Role permissions matrix
 const ROLE_PERMS = {
@@ -38,11 +37,8 @@ const MODULE_NAMES = {
   master:'Master Data', settings:'Pengaturan',
 };
 
-// Company settings
-let COMPANY = JSON.parse(localStorage.getItem('afss_company') || JSON.stringify({
-  name: 'PT AFSS Contractor Indonesia', npwp: '12.345.678.9-012.000',
-  address: 'Jl. Raya Depok No.88, Depok, Jawa Barat', overhead: 8, retensi: 5
-}));
+// Company settings — same DB-backed pattern as INTEGRATIONS above.
+let COMPANY = DEFAULT_SETTINGS.company;
 
 // Invoice state
 const INVOICES = [
@@ -91,6 +87,8 @@ async function doLogin() {
   if (btn) btn.disabled = true;
   await dbReadyPromise;
   if (btn) btn.disabled = false;
+  INTEGRATIONS = SETTINGS.integrations;
+  COMPANY = SETTINGS.company;
 
   const names = { Owner:'Budi Owner', Admin:'Admin Sistem', Finance:'Tim Finance', PM:'Rudi PM', Mandor:'Hasan Mandor', Warehouse:'Gudang Staff' };
   const inits = { Owner:'BO', Admin:'AS', Finance:'TF', PM:'RP', Mandor:'HM', Warehouse:'GS' };
@@ -102,7 +100,11 @@ async function doLogin() {
   document.getElementById('page-login').style.display = 'none';
   document.getElementById('app').classList.remove('d-none');
   navigate('dashboard');
-  showToast(`Selamat datang, ${name}! 👋`, 'success');
+  if (DB_INIT_ERROR) {
+    showToast('Tidak bisa terhubung ke database — coba muat ulang halaman. (' + DB_INIT_ERROR + ')', 'danger');
+  } else {
+    showToast(`Selamat datang, ${name}! 👋`, 'success');
+  }
 }
 
 function doLogout() {
@@ -661,7 +663,7 @@ const INT_KEY_MAP = { 'WhatsApp':'whatsapp', 'Email SMTP':'email', 'Google Drive
 function toggleIntegration(name) {
   const key = INT_KEY_MAP[name] || name.toLowerCase();
   INTEGRATIONS[key] = !INTEGRATIONS[key];
-  localStorage.setItem('afss_integrations', JSON.stringify(INTEGRATIONS));
+  saveSettings();
   navigate('settings');
   showToast(`${name} ${INTEGRATIONS[key]?'diaktifkan ✓':'dinonaktifkan'}`, INTEGRATIONS[key]?'success':'warning');
 }
@@ -673,7 +675,7 @@ function saveCompanySettings() {
   COMPANY.address = document.getElementById('s-address')?.value || COMPANY.address;
   COMPANY.overhead = parseFloat(document.getElementById('s-overhead')?.value) || COMPANY.overhead;
   COMPANY.retensi = parseFloat(document.getElementById('s-retensi')?.value) || COMPANY.retensi;
-  localStorage.setItem('afss_company', JSON.stringify(COMPANY));
+  saveSettings();
   showToast('Pengaturan perusahaan disimpan ✓', 'success');
 }
 

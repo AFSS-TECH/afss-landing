@@ -171,11 +171,44 @@ function fromDbRow(table, row) {
   return out;
 }
 
+// ===== SETTINGS (Integrasi & Profil Perusahaan) — also DB-backed, no localStorage =====
+const DEFAULT_SETTINGS = {
+  integrations: { whatsapp: true, email: true, gdrive: false, accounting: false },
+  company: { name: 'PT AFSS Contractor Indonesia', npwp: '12.345.678.9-012.000', address: 'Jl. Raya Depok No.88, Depok, Jawa Barat', overhead: 8, retensi: 5 },
+};
+let SETTINGS = null;
+
+async function loadOrSeedSettings() {
+  const { data, error } = await supa.from('erp_demo_settings').select('*').eq('visitor_id', VISITOR_ID).maybeSingle();
+  if (error) throw error;
+  if (data) {
+    SETTINGS = { integrations: data.integrations, company: data.company };
+  } else {
+    SETTINGS = JSON.parse(JSON.stringify(DEFAULT_SETTINGS));
+    const { error: insErr } = await supa.from('erp_demo_settings')
+      .insert({ visitor_id: VISITOR_ID, integrations: SETTINGS.integrations, company: SETTINGS.company });
+    if (insErr) throw insErr;
+  }
+}
+
+function saveSettings() {
+  supa.from('erp_demo_settings')
+    .update({ integrations: SETTINGS.integrations, company: SETTINGS.company, updated_at: new Date().toISOString() })
+    .eq('visitor_id', VISITOR_ID)
+    .then(({ error }) => {
+      if (error) { console.error(error); showToast('Gagal simpan pengaturan: ' + error.message, 'danger'); }
+    });
+}
+
 let _dbReadyResolve;
 const dbReadyPromise = new Promise(r => { _dbReadyResolve = r; });
+// Set if initDB couldn't reach Supabase — the app no longer falls back to fake
+// local data, so callers should surface this rather than pretend it's fine.
+let DB_INIT_ERROR = null;
 
 async function initDB() {
   try {
+    await loadOrSeedSettings();
     const keys = Object.keys(TABLE_MAP);
     const results = await Promise.all(keys.map(k => supa.from(TABLE_MAP[k]).select('*').eq('visitor_id', VISITOR_ID)));
     let hasAnyData = false;
@@ -187,8 +220,10 @@ async function initDB() {
     });
     if (!hasAnyData) await seedDefaults();
   } catch (e) {
-    console.error('initDB gagal, memakai data lokal sementara (Supabase tidak terjangkau):', e);
-    resetToDefaults();
+    console.error('initDB gagal:', e);
+    DB_INIT_ERROR = e?.message || String(e);
+    Object.keys(TABLE_MAP).forEach(k => { if (!DB[k]) DB[k] = []; });
+    if (!SETTINGS) SETTINGS = JSON.parse(JSON.stringify(DEFAULT_SETTINGS));
   } finally {
     _dbReadyResolve();
   }
@@ -218,6 +253,11 @@ function resetDB() {
       const { error } = await supa.from(TABLE_MAP[k]).delete().eq('visitor_id', VISITOR_ID);
       if (error) console.error(`Reset ${k} gagal:`, error);
     }));
+    SETTINGS = JSON.parse(JSON.stringify(DEFAULT_SETTINGS));
+    const { error: settingsErr } = await supa.from('erp_demo_settings')
+      .update({ integrations: SETTINGS.integrations, company: SETTINGS.company, updated_at: new Date().toISOString() })
+      .eq('visitor_id', VISITOR_ID);
+    if (settingsErr) console.error('Reset settings gagal:', settingsErr);
     await seedDefaults();
     location.reload();
   });
