@@ -1250,6 +1250,7 @@ ${ph(proj.name, proj.id+' · '+proj.client,
   <li><button class="nav-link tab-btn" onclick="switchProjTab('team',this)">👷 Tim Karyawan (${employees.length})</button></li>
   <li><button class="nav-link tab-btn" onclick="switchProjTab('absensi',this)">⏱ Absensi (${attendance.length})</button></li>
   <li><button class="nav-link tab-btn" onclick="switchProjTab('pembelian',this)">🛒 Pembelian (${purchases.length})</button></li>
+  <li><button class="nav-link tab-btn" style="background:#fff0f0" onclick="openProjectStages('${proj.id}')">📸 Tahapan & Dok. (${(DB.stages||[]).filter(s=>s.project_id===proj.id).length})</button></li>
 </ul>
 
 <!-- INFO -->
@@ -1395,4 +1396,7 @@ const PAGES={
   'purchase-request':renderPurchaseRequest, 'purchase-order':renderPurchaseOrder,
   finance:renderFinance, gl:renderGL, reports:renderReports,
   master:renderMaster, settings:renderSettings,
+  'project-stages': renderProjectStages,
+  'stage-gallery':  renderStageGallery,
+  'doc-gallery':    renderAllDocs,
 };

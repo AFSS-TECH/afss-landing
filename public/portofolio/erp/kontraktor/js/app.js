@@ -4,8 +4,9 @@
 
 // ── Global State ──────────────────────────────────────
 let currentRole = 'Owner';
-window.currentEmpId  = null;
-window.currentProjId = null;
+window.currentEmpId   = null;
+window.currentProjId  = null;
+window.currentStageId = null;
 let confirmCb   = null;
 let sidebarCollapsed = false;
 let bsModal     = null;
@@ -865,6 +866,304 @@ function deleteEmployee(id) {
     navigate('employees');
     showToast('Karyawan dihapus', 'success');
   });
+}
+
+// ── Stages Navigation ─────────────────────────────────
+function openProjectStages(projId) {
+  window.currentProjId = projId;
+  navigate('project-stages');
+}
+
+function openStageGallery(stageId) {
+  const stage = (DB.stages || []).find(s => s.id === stageId);
+  if (stage) window.currentProjId = stage.project_id;
+  window.currentStageId = stageId;
+  navigate('stage-gallery');
+}
+
+// ── Stage Modal (new + edit) ──────────────────────────
+function openStageModal(stageId) {
+  const proj   = DB.projects.find(p => p.id === window.currentProjId);
+  const stage  = stageId ? (DB.stages || []).find(s => s.id === stageId) : null;
+  const isEdit = !!stage;
+  const stages = (DB.stages || []).filter(s => s.project_id === window.currentProjId);
+  const nextOrder = stages.length > 0 ? Math.max(...stages.map(s => s.order)) + 1 : 1;
+
+  document.getElementById('modal-title').textContent = isEdit ? 'Edit Tahapan' : 'Tambah Tahapan Baru';
+  document.getElementById('modal-body').innerHTML = `
+    <div class="row g-3">
+      <div class="col-12"><div class="alert alert-info py-2 small"><i class="ti ti-folder-open me-1"></i><strong>${proj?.name || 'Proyek'}</strong></div></div>
+      <div class="col-3">
+        <label class="form-label">No. Urut</label>
+        <input class="form-control" id="ms-order" type="number" min="1" value="${stage?.order ?? nextOrder}">
+      </div>
+      <div class="col-9">
+        <label class="form-label">Nama Tahapan *</label>
+        <input class="form-control" id="ms-name" placeholder="Pekerjaan Pondasi, Struktur Lt.1, dll..." value="${stage?.name || ''}">
+      </div>
+      <div class="col-12">
+        <label class="form-label">Deskripsi Pekerjaan</label>
+        <input class="form-control" id="ms-desc" placeholder="Uraian singkat lingkup pekerjaan..." value="${stage?.desc || ''}">
+      </div>
+      <div class="col-6 col-md-3">
+        <label class="form-label">Target (% bobot)</label>
+        <input class="form-control" id="ms-tgt" type="number" min="0" max="100" placeholder="0" value="${stage?.target_pct ?? ''}">
+      </div>
+      <div class="col-6 col-md-3">
+        <label class="form-label">Realisasi (%)</label>
+        <input class="form-control" id="ms-act" type="number" min="0" max="100" placeholder="0" value="${stage?.actual_pct ?? ''}">
+      </div>
+      <div class="col-6 col-md-3">
+        <label class="form-label">Mulai</label>
+        <input class="form-control" id="ms-start" type="date" value="${stage?.start || today()}">
+      </div>
+      <div class="col-6 col-md-3">
+        <label class="form-label">Target Selesai</label>
+        <input class="form-control" id="ms-end" type="date" value="${stage?.deadline || ''}">
+      </div>
+      <div class="col-12">
+        <label class="form-label">Status</label>
+        <div class="d-flex gap-2">
+          ${['pending','in-progress','done'].map(s => `
+            <label class="flex-grow-1" style="cursor:pointer">
+              <input type="radio" name="ms-status" value="${s}" ${(stage?.status||'pending')===s?'checked':''} class="d-none">
+              <div class="status-radio-card ${(stage?.status||'pending')===s?'active':''}" onclick="this.closest('label').querySelector('input').checked=true;document.querySelectorAll('.status-radio-card').forEach(c=>c.classList.remove('active'));this.classList.add('active')">
+                ${{pending:'⏳ Belum Mulai','in-progress':'🔵 Sedang Berjalan',done:'✅ Selesai'}[s]}
+              </div>
+            </label>`).join('')}
+        </div>
+      </div>
+      ${isEdit ? `<input type="hidden" id="ms-id" value="${stageId}">` : ''}
+    </div>`;
+
+  document.getElementById('modal-save-btn').textContent = isEdit ? 'Simpan Perubahan' : 'Tambah Tahapan';
+  document.getElementById('modal-save-btn').onclick = () => {
+    const name = document.getElementById('ms-name')?.value.trim();
+    if (!name) { showToast('Nama tahapan wajib diisi', 'danger'); return; }
+    const statusEl = document.querySelector('input[name="ms-status"]:checked');
+    const data = {
+      project_id:  window.currentProjId,
+      name,
+      desc:        document.getElementById('ms-desc')?.value.trim() || '',
+      order:       parseInt(document.getElementById('ms-order')?.value) || nextOrder,
+      target_pct:  parseInt(document.getElementById('ms-tgt')?.value)  || 0,
+      actual_pct:  parseInt(document.getElementById('ms-act')?.value)  || 0,
+      start:       document.getElementById('ms-start')?.value || today(),
+      deadline:    document.getElementById('ms-end')?.value   || '',
+      status:      statusEl?.value || 'pending',
+    };
+    if (isEdit) {
+      dbUpdate('stages', stageId, data);
+      closeModal(); navigate('project-stages');
+      showToast(`Tahapan "${name}" diperbarui ✓`, 'success');
+    } else {
+      dbAdd('stages', { id: nextId('STG-', DB.stages), ...data });
+      closeModal(); navigate('project-stages');
+      showToast(`Tahapan "${name}" berhasil ditambahkan ✓`, 'success');
+    }
+  };
+  bsModal.show();
+}
+
+// ── Delete Stage ──────────────────────────────────────
+function deleteStage(id) {
+  const s = (DB.stages || []).find(r => r.id === id);
+  const docCount = (DB.docUploads || []).filter(d => d.stage_id === id).length;
+  showConfirm(
+    'Hapus Tahapan?',
+    `"${s?.name || id}" beserta ${docCount} dokumentasi akan dihapus dari sistem.`,
+    () => {
+      dbDelete('stages', id);
+      DB.docUploads = (DB.docUploads || []).filter(d => d.stage_id !== id);
+      saveDB();
+      navigate('project-stages');
+      showToast('Tahapan dihapus', 'success');
+    }
+  );
+}
+
+// ── Delete Doc ────────────────────────────────────────
+function deleteDoc(id) {
+  const d = (DB.docUploads || []).find(r => r.id === id);
+  showConfirm('Hapus Dokumentasi?', `"${d?.title || id}" akan dihapus dari sistem (file di Drive tidak ikut terhapus).`, () => {
+    dbDelete('docUploads', id);
+    navigate('stage-gallery');
+    showToast('Dokumentasi dihapus ✓', 'success');
+  });
+}
+
+// ── Upload Doc Modal ──────────────────────────────────
+function openUploadDoc(stageId) {
+  window.currentStageId = stageId;
+  const stage = (DB.stages || []).find(s => s.id === stageId);
+  const proj  = DB.projects.find(p => p.id === stage?.project_id);
+  const names = { Owner:'Budi Owner', Admin:'Admin Sistem', Finance:'Tim Finance', PM:'Rudi PM', Mandor:'Hasan Mandor', Warehouse:'Gudang Staff' };
+  const uploader = names[currentRole] || 'Tim Lapangan';
+
+  document.getElementById('modal-title').textContent = 'Upload Dokumentasi';
+  document.getElementById('modal-body').innerHTML = `
+    <div class="row g-3">
+      <div class="col-12">
+        <div class="alert alert-info py-2 small d-flex gap-2 align-items-center">
+          <i class="ti ti-list-check flex-shrink-0"></i>
+          <span><strong>${proj?.name || '—'}</strong> › ${stage?.name || '—'}</span>
+        </div>
+      </div>
+      <div class="col-12">
+        <label class="form-label">Judul Dokumentasi *</label>
+        <input class="form-control" id="ud-title" placeholder="Foto pengecoran, video progress, dll...">
+      </div>
+      <div class="col-12">
+        <label class="form-label">Caption / Keterangan</label>
+        <textarea class="form-control" id="ud-caption" rows="2" placeholder="Deskripsi kondisi, volume, material yang digunakan, dll..."></textarea>
+      </div>
+      <div class="col-12">
+        <label class="form-label">Catatan Kinerja</label>
+        <input class="form-control" id="ud-kinerja" placeholder="Sesuai/tidak sesuai target, kendala, dll...">
+      </div>
+      <div class="col-6">
+        <label class="form-label">Diunggah Oleh</label>
+        <input class="form-control" id="ud-uploader" value="${uploader}">
+      </div>
+      <div class="col-6">
+        <label class="form-label">Tanggal</label>
+        <input class="form-control" id="ud-date" type="date" value="${today()}">
+      </div>
+      <div class="col-12">
+        <label class="form-label">File (Foto / Video)</label>
+        <div class="upload-drop-zone" id="upload-drop" onclick="document.getElementById('ud-file').click()" ondragover="event.preventDefault();this.classList.add('dragover')" ondragleave="this.classList.remove('dragover')" ondrop="handleFileDrop(event)">
+          <i class="ti ti-cloud-upload" style="font-size:36px;color:#94a3b8"></i>
+          <div class="fw-semibold mt-2" style="font-size:13px">Klik atau drag & drop file di sini</div>
+          <div class="small text-muted mt-1">JPG, PNG, MP4, MOV — maks. 100MB</div>
+          <div id="ud-file-preview" class="mt-2"></div>
+        </div>
+        <input type="file" id="ud-file" accept="image/*,video/*" class="d-none" onchange="previewUploadFile(this)">
+      </div>
+      <div id="ud-progress-wrap" class="col-12 d-none">
+        <div class="d-flex justify-content-between mb-1 small">
+          <span id="ud-progress-label">Mengunggah ke Google Drive…</span>
+          <span id="ud-progress-pct">0%</span>
+        </div>
+        <div class="prg" style="height:8px"><div class="prg-fill prg-blue" id="ud-progress-bar" style="width:0%;height:8px;transition:width .3s"></div></div>
+      </div>
+    </div>`;
+
+  document.getElementById('modal-save-btn').innerHTML = '<i class="ti ti-cloud-upload me-1"></i>Upload ke Google Drive';
+  document.getElementById('modal-save-btn').onclick = handleDocUpload;
+  bsModal.show();
+}
+
+function previewUploadFile(input) {
+  const file = input.files[0];
+  if (!file) return;
+  const preview = document.getElementById('ud-file-preview');
+  const drop    = document.getElementById('upload-drop');
+  if (!file) return;
+  const isVideo = file.type.startsWith('video/');
+  const sizeStr = file.size > 1024 * 1024 ? (file.size / 1024 / 1024).toFixed(1) + ' MB' : (file.size / 1024).toFixed(0) + ' KB';
+  if (isVideo) {
+    preview.innerHTML = `<div class="d-flex align-items-center gap-2 mt-1">
+      <i class="ti ti-video text-primary fs-5"></i>
+      <div class="text-start"><div class="fw-semibold small text-truncate" style="max-width:240px">${file.name}</div><div class="small text-muted">${sizeStr}</div></div>
+      <i class="ti ti-check-circle text-success ms-auto"></i>
+    </div>`;
+  } else {
+    const url = URL.createObjectURL(file);
+    preview.innerHTML = `<div class="d-flex align-items-center gap-2 mt-2">
+      <img src="${url}" style="width:60px;height:42px;object-fit:cover;border-radius:6px;border:1px solid #e2e8f0">
+      <div class="text-start"><div class="fw-semibold small text-truncate" style="max-width:200px">${file.name}</div><div class="small text-muted">${sizeStr}</div></div>
+      <i class="ti ti-check-circle text-success ms-auto"></i>
+    </div>`;
+  }
+  drop.style.background = '#f0fdf4';
+  drop.style.borderColor = '#16a34a';
+}
+
+function handleFileDrop(e) {
+  e.preventDefault();
+  document.getElementById('upload-drop').classList.remove('dragover');
+  const file = e.dataTransfer.files[0];
+  if (!file) return;
+  const input = document.getElementById('ud-file');
+  const dt = new DataTransfer();
+  dt.items.add(file);
+  input.files = dt.files;
+  previewUploadFile(input);
+}
+
+async function handleDocUpload() {
+  const title    = document.getElementById('ud-title')?.value.trim();
+  const caption  = document.getElementById('ud-caption')?.value.trim();
+  const kinerja  = document.getElementById('ud-kinerja')?.value.trim();
+  const uploader = document.getElementById('ud-uploader')?.value.trim() || currentRole;
+  const dateVal  = document.getElementById('ud-date')?.value || today();
+  const fileInput = document.getElementById('ud-file');
+  const file      = fileInput?.files[0];
+
+  if (!title) { showToast('Judul wajib diisi', 'danger'); return; }
+
+  const stage = (DB.stages || []).find(s => s.id === window.currentStageId);
+  const proj  = DB.projects.find(p => p.id === stage?.project_id);
+
+  const docData = {
+    id:          nextId('DOC-', DB.docUploads),
+    stage_id:    window.currentStageId,
+    project_id:  stage?.project_id || '',
+    title,
+    caption:     caption || '',
+    kinerja_note: kinerja || '',
+    uploaded_by: uploader,
+    uploaded_at: dateVal,
+    type:        file ? (file.type.startsWith('video/') ? 'video' : 'image') : 'image',
+    drive_id:    '',
+  };
+
+  const saveBtn = document.getElementById('modal-save-btn');
+  saveBtn.disabled = true;
+  saveBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Menyimpan…';
+
+  if (!file) {
+    dbAdd('docUploads', docData);
+    closeModal();
+    navigate('stage-gallery');
+    showToast(`Dokumentasi "${title}" disimpan (tanpa file) ✓`, 'success');
+    return;
+  }
+
+  // Show progress
+  const wrap  = document.getElementById('ud-progress-wrap');
+  const bar   = document.getElementById('ud-progress-bar');
+  const label = document.getElementById('ud-progress-label');
+  const pct   = document.getElementById('ud-progress-pct');
+  if (wrap) wrap.classList.remove('d-none');
+
+  const setProgress = (v, msg) => {
+    if (bar)   bar.style.width   = v + '%';
+    if (pct)   pct.textContent   = v + '%';
+    if (label) label.textContent = msg || 'Mengunggah…';
+  };
+
+  try {
+    setProgress(10, 'Menghubungkan ke Google Drive…');
+    const fileData = await gdriveUpload(file, stage, proj, setProgress);
+    docData.drive_id = fileData.id;
+    setProgress(100, 'Upload selesai!');
+    dbAdd('docUploads', docData);
+    await new Promise(r => setTimeout(r, 500));
+    closeModal();
+    navigate('stage-gallery');
+    showToast(`"${title}" berhasil diunggah ke Google Drive ✓`, 'success');
+  } catch (err) {
+    console.error(err);
+    // Simpan tanpa drive_id, user bisa upload ulang
+    dbAdd('docUploads', docData);
+    if (wrap) wrap.classList.add('d-none');
+    saveBtn.disabled = false;
+    saveBtn.innerHTML = '<i class="ti ti-cloud-upload me-1"></i>Upload ke Google Drive';
+    showToast('Gagal upload ke Drive — data disimpan lokal. ' + (err.message || ''), 'warning');
+    closeModal();
+    navigate('stage-gallery');
+  }
 }
 
 // ── Global helpers used by both pages.js and app.js ──

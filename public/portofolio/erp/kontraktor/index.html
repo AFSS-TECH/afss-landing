@@ -132,6 +132,7 @@
         <a class="sb-link" data-page="projects"><i class="ti ti-folder-open"></i><span>Daftar Proyek</span></a>
         <a class="sb-link" data-page="rab"><i class="ti ti-file-description"></i><span>RAB / BOQ</span></a>
         <a class="sb-link" data-page="hpp"><i class="ti ti-chart-pie"></i><span>HPP &amp; Profit</span></a>
+        <a class="sb-link" data-page="doc-gallery"><i class="ti ti-photo-album"></i><span>Galeri Dokumentasi</span></a>
 
         <div class="sb-section-label">SDM &amp; GAJI</div>
         <a class="sb-link" data-page="employees"><i class="ti ti-users"></i><span>Karyawan</span></a>
@@ -205,8 +206,33 @@
 <!-- TOAST CONTAINER (Bootstrap toasts) -->
 <div id="toast-container" class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index:9999"></div>
 
+<!-- LIGHTBOX -->
+<div id="lightbox" class="d-none" style="position:fixed;inset:0;z-index:2000" onclick="if(event.target===this)closeLightbox()">
+  <div class="lb-backdrop"></div>
+  <div class="lb-layout">
+    <!-- Media area -->
+    <div class="lb-media-col">
+      <div class="lb-topbar">
+        <span id="lb-counter" class="lb-counter">1 / 1</span>
+        <div class="d-flex gap-2">
+          <button id="lb-prev" class="lb-nav-btn" onclick="lbPrev()"><i class="ti ti-chevron-left"></i></button>
+          <button id="lb-next" class="lb-nav-btn" onclick="lbNext()"><i class="ti ti-chevron-right"></i></button>
+          <button class="lb-close-btn" onclick="closeLightbox()"><i class="ti ti-x"></i></button>
+        </div>
+      </div>
+      <div id="lb-media" class="lb-media"></div>
+    </div>
+    <!-- Info panel -->
+    <div class="lb-info-col">
+      <div id="lb-info" class="lb-info-panel"></div>
+    </div>
+  </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/data.js"></script>
+<script src="js/gdrive.js"></script>
+<script src="js/stages.js"></script>
 <script src="js/pages.js"></script>
 <script src="js/app.js"></script>
 </body>
