@@ -1,17 +1,18 @@
 // Proxies Google Drive uploads for the ERP Kontraktor portfolio demo.
-// Authenticates as a Google service account (JWT bearer flow) so no OAuth
-// client secret / refresh token ever exists — the private key is a
-// server-side secret that never ships to the browser. Supabase verifies the
-// caller's JWT before this runs (function deployed without --no-verify-jwt),
-// so only signed-in demo sessions (anonymous or not) can reach it.
+// Holds the Drive OAuth refresh token as a server-side secret so it never
+// ships to the browser (unlike the original client-side implementation).
+// Supabase verifies the caller's JWT before this runs (function deployed
+// without --no-verify-jwt), so only signed-in demo sessions (anonymous or
+// not) can reach it.
 //
-// NOTE: service accounts have no personal Drive storage quota. GDRIVE_FOLDER_ID
-// must live inside a Shared Drive that the service account (GDRIVE_SERVICE_ACCOUNT_EMAIL)
-// has been added to as a member — a plain "My Drive" folder will fail with a
-// storage quota error on upload.
+// NOTE: GDRIVE_CLIENT_ID/SECRET/REFRESH_TOKEN below are the same credentials
+// that were previously hardcoded in public client JS. Moving them server-side
+// stops new leakage, but the token itself was exposed in git/CDN history and
+// has not been rotated — rotate it in Google Cloud Console when practical.
 
-const SA_EMAIL = Deno.env.get('GDRIVE_SERVICE_ACCOUNT_EMAIL')!;
-const SA_PRIVATE_KEY = Deno.env.get('GDRIVE_SERVICE_ACCOUNT_PRIVATE_KEY')!.replace(/\\n/g, '\n');
+const CLIENT_ID     = Deno.env.get('GDRIVE_CLIENT_ID')!;
+const CLIENT_SECRET = Deno.env.get('GDRIVE_CLIENT_SECRET')!;
+const REFRESH_TOKEN = Deno.env.get('GDRIVE_REFRESH_TOKEN')!;
 const ROOT_FOLDER_ID = Deno.env.get('GDRIVE_FOLDER_ID')!;
 
 const corsHeaders = {
@@ -21,56 +22,18 @@ const corsHeaders = {
 
 const DRIVE_SHARED_PARAMS = 'supportsAllDrives=true&includeItemsFromAllDrives=true';
 
-function base64url(bytes: ArrayBuffer | Uint8Array): string {
-  const b = bytes instanceof Uint8Array ? bytes : new Uint8Array(bytes);
-  let str = '';
-  for (const byte of b) str += String.fromCharCode(byte);
-  return btoa(str).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
-}
-
-async function importPrivateKey(pem: string): Promise<CryptoKey> {
-  const der = pem
-    .replace('-----BEGIN PRIVATE KEY-----', '')
-    .replace('-----END PRIVATE KEY-----', '')
-    .replace(/\s+/g, '');
-  const bin = atob(der);
-  const bytes = new Uint8Array(bin.length);
-  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
-  return crypto.subtle.importKey(
-    'pkcs8',
-    bytes,
-    { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' },
-    false,
-    ['sign']
-  );
-}
-
 let cachedToken: { token: string; expiry: number } | null = null;
 
 async function getAccessToken(): Promise<string> {
   if (cachedToken && Date.now() < cachedToken.expiry - 60_000) return cachedToken.token;
-
-  const now = Math.floor(Date.now() / 1000);
-  const header = { alg: 'RS256', typ: 'JWT' };
-  const claims = {
-    iss: SA_EMAIL,
-    scope: 'https://www.googleapis.com/auth/drive',
-    aud: 'https://oauth2.googleapis.com/token',
-    iat: now,
-    exp: now + 3600,
-  };
-  const unsigned = `${base64url(new TextEncoder().encode(JSON.stringify(header)))}.${base64url(new TextEncoder().encode(JSON.stringify(claims)))}`;
-
-  const key = await importPrivateKey(SA_PRIVATE_KEY);
-  const signature = await crypto.subtle.sign('RSASSA-PKCS1-v1_5', key, new TextEncoder().encode(unsigned));
-  const jwt = `${unsigned}.${base64url(signature)}`;
-
   const r = await fetch('https://oauth2.googleapis.com/token', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: new URLSearchParams({
-      grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer',
-      assertion: jwt,
+      client_id: CLIENT_ID,
+      client_secret: CLIENT_SECRET,
+      refresh_token: REFRESH_TOKEN,
+      grant_type: 'refresh_token',
     }),
   });
   if (!r.ok) throw new Error('Gagal autentikasi Google Drive: ' + (await r.text()));
