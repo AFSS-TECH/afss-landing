@@ -7,8 +7,6 @@
    =================================================== */
 
 async function gdriveUpload(file, stage, project, onProgress) {
-  const session = await supaEnsureSession();
-
   const form = new FormData();
   form.append('file', file);
   form.append('projectLabel', `${project.id} — ${project.name}`);
@@ -18,7 +16,7 @@ async function gdriveUpload(file, stage, project, onProgress) {
 
   const r = await fetch(`${SUPA_URL}/functions/v1/drive-upload`, {
     method: 'POST',
-    headers: { Authorization: `Bearer ${session.access_token}` },
+    headers: { Authorization: `Bearer ${SUPA_ANON_KEY}` },
     body: form,
   });
 

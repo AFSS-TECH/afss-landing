@@ -165,7 +165,7 @@ function fromDbRow(table, row) {
   const inv = Object.fromEntries(Object.entries(map).map(([a, b]) => [b, a]));
   const out = {};
   for (const [k, v] of Object.entries(row)) {
-    if (k === 'owner_id' || k === 'created_at') continue;
+    if (k === 'visitor_id' || k === 'created_at') continue;
     out[inv[k] || k] = v;
   }
   return out;
@@ -176,9 +176,8 @@ const dbReadyPromise = new Promise(r => { _dbReadyResolve = r; });
 
 async function initDB() {
   try {
-    await supaEnsureSession();
     const keys = Object.keys(TABLE_MAP);
-    const results = await Promise.all(keys.map(k => supa.from(TABLE_MAP[k]).select('*')));
+    const results = await Promise.all(keys.map(k => supa.from(TABLE_MAP[k]).select('*').eq('visitor_id', VISITOR_ID)));
     let hasAnyData = false;
     keys.forEach((k, i) => {
       const { data, error } = results[i];
@@ -199,7 +198,7 @@ async function seedDefaults() {
   resetToDefaults();
   const keys = Object.keys(TABLE_MAP);
   await Promise.all(keys.map(async k => {
-    const rows = DB[k].map(item => toDbRow(k, item));
+    const rows = DB[k].map(item => ({ ...toDbRow(k, item), visitor_id: VISITOR_ID }));
     if (!rows.length) return;
     const { error } = await supa.from(TABLE_MAP[k]).insert(rows);
     if (error) console.error(`Seed ${k} gagal:`, error);
@@ -216,7 +215,7 @@ function resetDB() {
   showConfirm('Reset Data Demo?', 'Semua perubahan dan input akan dikembalikan ke data awal. Lanjutkan?', async () => {
     const keys = Object.keys(TABLE_MAP);
     await Promise.all(keys.map(async k => {
-      const { error } = await supa.from(TABLE_MAP[k]).delete().not('id', 'is', null);
+      const { error } = await supa.from(TABLE_MAP[k]).delete().eq('visitor_id', VISITOR_ID);
       if (error) console.error(`Reset ${k} gagal:`, error);
     }));
     await seedDefaults();
@@ -226,10 +225,12 @@ function resetDB() {
 
 // ===== CRUD =====
 // Local cache (DB[table]) updates synchronously so existing call sites keep working;
-// the Supabase write happens async in the background.
+// the Supabase write happens async in the background. ids are only unique per
+// visitor_id (each visitor's sandbox reuses the same seed ids), so every
+// update/delete must filter on both.
 function dbAdd(table, item) {
   DB[table].push(item);
-  supa.from(TABLE_MAP[table]).insert(toDbRow(table, item)).then(({ error }) => {
+  supa.from(TABLE_MAP[table]).insert({ ...toDbRow(table, item), visitor_id: VISITOR_ID }).then(({ error }) => {
     if (error) { console.error(error); showToast('Gagal simpan ke database: ' + error.message, 'danger'); }
   });
 }
@@ -237,14 +238,14 @@ function dbAdd(table, item) {
 function dbUpdate(table, id, updates) {
   const idx = DB[table].findIndex(r => r.id === id);
   if (idx >= 0) Object.assign(DB[table][idx], updates);
-  supa.from(TABLE_MAP[table]).update(toDbRow(table, updates)).eq('id', id).then(({ error }) => {
+  supa.from(TABLE_MAP[table]).update(toDbRow(table, updates)).eq('id', id).eq('visitor_id', VISITOR_ID).then(({ error }) => {
     if (error) { console.error(error); showToast('Gagal update database: ' + error.message, 'danger'); }
   });
 }
 
 function dbDelete(table, id) {
   DB[table] = DB[table].filter(r => r.id !== id);
-  supa.from(TABLE_MAP[table]).delete().eq('id', id).then(({ error }) => {
+  supa.from(TABLE_MAP[table]).delete().eq('id', id).eq('visitor_id', VISITOR_ID).then(({ error }) => {
     if (error) { console.error(error); showToast('Gagal hapus dari database: ' + error.message, 'danger'); }
   });
 }
