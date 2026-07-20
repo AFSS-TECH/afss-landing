@@ -83,9 +83,15 @@ function setupRoleChips() {
   });
 }
 
-function doLogin() {
+async function doLogin() {
   const email = document.getElementById('login-email').value.trim();
   if (!email) { showToast('Masukkan email atau username', 'danger'); return; }
+
+  const btn = document.querySelector('.btn-login');
+  if (btn) btn.disabled = true;
+  await dbReadyPromise;
+  if (btn) btn.disabled = false;
+
   const names = { Owner:'Budi Owner', Admin:'Admin Sistem', Finance:'Tim Finance', PM:'Rudi PM', Mandor:'Hasan Mandor', Warehouse:'Gudang Staff' };
   const inits = { Owner:'BO', Admin:'AS', Finance:'TF', PM:'RP', Mandor:'HM', Warehouse:'GS' };
   const name = names[currentRole] || 'User';
@@ -979,8 +985,7 @@ function deleteStage(id) {
     `"${s?.name || id}" beserta ${docCount} dokumentasi akan dihapus dari sistem.`,
     () => {
       dbDelete('stages', id);
-      DB.docUploads = (DB.docUploads || []).filter(d => d.stage_id !== id);
-      saveDB();
+      (DB.docUploads || []).filter(d => d.stage_id === id).forEach(d => dbDelete('docUploads', d.id));
       navigate('project-stages');
       showToast('Tahapan dihapus', 'success');
     }

@@ -133,25 +133,77 @@ const DEFAULT_DATA = {
   ],
 };
 
-// ===== DB (live, mutable) =====
+// ===== DB (live, mutable — backed by Supabase, one isolated sandbox per visitor) =====
 const DB = {};
-const LS_KEY = 'afss_erp_v25';
 
-function initDB() {
-  try {
-    const saved = localStorage.getItem(LS_KEY);
-    if (saved) {
-      const parsed = JSON.parse(saved);
-      // Merge: use saved data but fill any missing keys from defaults
-      Object.keys(DEFAULT_DATA).forEach(k => {
-        DB[k] = parsed[k] !== undefined ? parsed[k] : JSON.parse(JSON.stringify(DEFAULT_DATA[k]));
-      });
-    } else {
-      resetToDefaults();
-    }
-  } catch (e) {
-    resetToDefaults();
+const TABLE_MAP = {
+  projects: 'erp_demo_projects',
+  employees: 'erp_demo_employees',
+  attendance: 'erp_demo_attendance',
+  payroll: 'erp_demo_payroll',
+  stock: 'erp_demo_stock',
+  equipment: 'erp_demo_equipment',
+  purchaseRequests: 'erp_demo_purchase_requests',
+  purchaseOrders: 'erp_demo_purchase_orders',
+  gl: 'erp_demo_gl',
+  cashflow: 'erp_demo_cashflow',
+  stages: 'erp_demo_stages',
+  docUploads: 'erp_demo_doc_uploads',
+};
+
+// Field renames between the app's JS shape and DB column names (SQL reserved words etc).
+const FIELD_MAP = { stages: { desc: 'description' } };
+
+function toDbRow(table, obj) {
+  const map = FIELD_MAP[table] || {};
+  const out = {};
+  for (const [k, v] of Object.entries(obj)) out[map[k] || k] = v;
+  return out;
+}
+function fromDbRow(table, row) {
+  const map = FIELD_MAP[table] || {};
+  const inv = Object.fromEntries(Object.entries(map).map(([a, b]) => [b, a]));
+  const out = {};
+  for (const [k, v] of Object.entries(row)) {
+    if (k === 'owner_id' || k === 'created_at') continue;
+    out[inv[k] || k] = v;
   }
+  return out;
+}
+
+let _dbReadyResolve;
+const dbReadyPromise = new Promise(r => { _dbReadyResolve = r; });
+
+async function initDB() {
+  try {
+    await supaEnsureSession();
+    const keys = Object.keys(TABLE_MAP);
+    const results = await Promise.all(keys.map(k => supa.from(TABLE_MAP[k]).select('*')));
+    let hasAnyData = false;
+    keys.forEach((k, i) => {
+      const { data, error } = results[i];
+      if (error) { console.error(`Load ${k} gagal:`, error); DB[k] = []; return; }
+      DB[k] = (data || []).map(row => fromDbRow(k, row));
+      if (DB[k].length) hasAnyData = true;
+    });
+    if (!hasAnyData) await seedDefaults();
+  } catch (e) {
+    console.error('initDB gagal, memakai data lokal sementara (Supabase tidak terjangkau):', e);
+    resetToDefaults();
+  } finally {
+    _dbReadyResolve();
+  }
+}
+
+async function seedDefaults() {
+  resetToDefaults();
+  const keys = Object.keys(TABLE_MAP);
+  await Promise.all(keys.map(async k => {
+    const rows = DB[k].map(item => toDbRow(k, item));
+    if (!rows.length) return;
+    const { error } = await supa.from(TABLE_MAP[k]).insert(rows);
+    if (error) console.error(`Seed ${k} gagal:`, error);
+  }));
 }
 
 function resetToDefaults() {
@@ -160,28 +212,41 @@ function resetToDefaults() {
   });
 }
 
-function saveDB() {
-  try { localStorage.setItem(LS_KEY, JSON.stringify(DB)); } catch(e) {}
-}
-
 function resetDB() {
-  showConfirm('Reset Data Demo?', 'Semua perubahan dan input akan dikembalikan ke data awal. Lanjutkan?', () => {
-    localStorage.removeItem(LS_KEY);
+  showConfirm('Reset Data Demo?', 'Semua perubahan dan input akan dikembalikan ke data awal. Lanjutkan?', async () => {
+    const keys = Object.keys(TABLE_MAP);
+    await Promise.all(keys.map(async k => {
+      const { error } = await supa.from(TABLE_MAP[k]).delete().not('id', 'is', null);
+      if (error) console.error(`Reset ${k} gagal:`, error);
+    }));
+    await seedDefaults();
     location.reload();
   });
 }
 
 // ===== CRUD =====
-function dbAdd(table, item) { DB[table].push(item); saveDB(); }
+// Local cache (DB[table]) updates synchronously so existing call sites keep working;
+// the Supabase write happens async in the background.
+function dbAdd(table, item) {
+  DB[table].push(item);
+  supa.from(TABLE_MAP[table]).insert(toDbRow(table, item)).then(({ error }) => {
+    if (error) { console.error(error); showToast('Gagal simpan ke database: ' + error.message, 'danger'); }
+  });
+}
 
 function dbUpdate(table, id, updates) {
   const idx = DB[table].findIndex(r => r.id === id);
-  if (idx >= 0) { Object.assign(DB[table][idx], updates); saveDB(); }
+  if (idx >= 0) Object.assign(DB[table][idx], updates);
+  supa.from(TABLE_MAP[table]).update(toDbRow(table, updates)).eq('id', id).then(({ error }) => {
+    if (error) { console.error(error); showToast('Gagal update database: ' + error.message, 'danger'); }
+  });
 }
 
 function dbDelete(table, id) {
   DB[table] = DB[table].filter(r => r.id !== id);
-  saveDB();
+  supa.from(TABLE_MAP[table]).delete().eq('id', id).then(({ error }) => {
+    if (error) { console.error(error); showToast('Gagal hapus dari database: ' + error.message, 'danger'); }
+  });
 }
 
 // Generate IDs
