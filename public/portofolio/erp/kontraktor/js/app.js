@@ -1049,7 +1049,7 @@ function openUploadDoc(stageId) {
           <div class="small text-muted mt-1">JPG, PNG, MP4, MOV — maks. 100MB</div>
           <div id="ud-file-preview" class="mt-2"></div>
         </div>
-        <input type="file" id="ud-file" accept="image/*,video/*" class="d-none" onchange="previewUploadFile(this)">
+        <input type="file" id="ud-file" accept="image/*,video/*" multiple class="d-none" onchange="previewUploadFile(this)">
       </div>
       <div id="ud-progress-wrap" class="col-12 d-none">
         <div class="d-flex justify-content-between mb-1 small">
@@ -1065,26 +1065,40 @@ function openUploadDoc(stageId) {
   bsModal.show();
 }
 
+function fmtFileSize(size) {
+  return size > 1024 * 1024 ? (size / 1024 / 1024).toFixed(1) + ' MB' : (size / 1024).toFixed(0) + ' KB';
+}
+
 function previewUploadFile(input) {
-  const file = input.files[0];
-  if (!file) return;
+  const files = Array.from(input.files || []);
+  if (!files.length) return;
   const preview = document.getElementById('ud-file-preview');
   const drop    = document.getElementById('upload-drop');
-  if (!file) return;
-  const isVideo = file.type.startsWith('video/');
-  const sizeStr = file.size > 1024 * 1024 ? (file.size / 1024 / 1024).toFixed(1) + ' MB' : (file.size / 1024).toFixed(0) + ' KB';
-  if (isVideo) {
-    preview.innerHTML = `<div class="d-flex align-items-center gap-2 mt-1">
-      <i class="ti ti-video text-primary fs-5"></i>
-      <div class="text-start"><div class="fw-semibold small text-truncate" style="max-width:240px">${file.name}</div><div class="small text-muted">${sizeStr}</div></div>
-      <i class="ti ti-check-circle text-success ms-auto"></i>
-    </div>`;
+
+  if (files.length === 1) {
+    const file = files[0];
+    const isVideo = file.type.startsWith('video/');
+    const sizeStr = fmtFileSize(file.size);
+    if (isVideo) {
+      preview.innerHTML = `<div class="d-flex align-items-center gap-2 mt-1">
+        <i class="ti ti-video text-primary fs-5"></i>
+        <div class="text-start"><div class="fw-semibold small text-truncate" style="max-width:240px">${file.name}</div><div class="small text-muted">${sizeStr}</div></div>
+        <i class="ti ti-check-circle text-success ms-auto"></i>
+      </div>`;
+    } else {
+      const url = URL.createObjectURL(file);
+      preview.innerHTML = `<div class="d-flex align-items-center gap-2 mt-2">
+        <img src="${url}" style="width:60px;height:42px;object-fit:cover;border-radius:6px;border:1px solid #e2e8f0">
+        <div class="text-start"><div class="fw-semibold small text-truncate" style="max-width:200px">${file.name}</div><div class="small text-muted">${sizeStr}</div></div>
+        <i class="ti ti-check-circle text-success ms-auto"></i>
+      </div>`;
+    }
   } else {
-    const url = URL.createObjectURL(file);
-    preview.innerHTML = `<div class="d-flex align-items-center gap-2 mt-2">
-      <img src="${url}" style="width:60px;height:42px;object-fit:cover;border-radius:6px;border:1px solid #e2e8f0">
-      <div class="text-start"><div class="fw-semibold small text-truncate" style="max-width:200px">${file.name}</div><div class="small text-muted">${sizeStr}</div></div>
-      <i class="ti ti-check-circle text-success ms-auto"></i>
+    const totalSize = files.reduce((s, f) => s + f.size, 0);
+    const list = files.map(f => `<div class="small text-truncate">${f.type.startsWith('video/') ? '<i class="ti ti-video me-1"></i>' : '<i class="ti ti-photo me-1"></i>'}${f.name} <span class="text-muted">(${fmtFileSize(f.size)})</span></div>`).join('');
+    preview.innerHTML = `<div class="text-start mt-2">
+      <div class="fw-semibold small mb-1"><i class="ti ti-check-circle text-success me-1"></i>${files.length} file dipilih (${fmtFileSize(totalSize)})</div>
+      <div style="max-height:120px;overflow-y:auto">${list}</div>
     </div>`;
   }
   drop.style.background = '#f0fdf4';
@@ -1094,12 +1108,10 @@ function previewUploadFile(input) {
 function handleFileDrop(e) {
   e.preventDefault();
   document.getElementById('upload-drop').classList.remove('dragover');
-  const file = e.dataTransfer.files[0];
-  if (!file) return;
+  const files = e.dataTransfer.files;
+  if (!files || !files.length) return;
   const input = document.getElementById('ud-file');
-  const dt = new DataTransfer();
-  dt.items.add(file);
-  input.files = dt.files;
+  input.files = files;
   previewUploadFile(input);
 }
 
@@ -1110,32 +1122,32 @@ async function handleDocUpload() {
   const uploader = document.getElementById('ud-uploader')?.value.trim() || currentRole;
   const dateVal  = document.getElementById('ud-date')?.value || today();
   const fileInput = document.getElementById('ud-file');
-  const file      = fileInput?.files[0];
+  const files     = Array.from(fileInput?.files || []);
 
   if (!title) { showToast('Judul wajib diisi', 'danger'); return; }
 
   const stage = (DB.stages || []).find(s => s.id === window.currentStageId);
   const proj  = DB.projects.find(p => p.id === stage?.project_id);
 
-  const docData = {
+  const makeDocData = (file, idx) => ({
     id:          nextId('DOC-', DB.docUploads),
     stage_id:    window.currentStageId,
     project_id:  stage?.project_id || '',
-    title,
+    title:       files.length > 1 ? `${title} (${idx + 1}/${files.length})` : title,
     caption:     caption || '',
     kinerja_note: kinerja || '',
     uploaded_by: uploader,
     uploaded_at: dateVal,
     type:        file ? (file.type.startsWith('video/') ? 'video' : 'image') : 'image',
     drive_id:    '',
-  };
+  });
 
   const saveBtn = document.getElementById('modal-save-btn');
   saveBtn.disabled = true;
   saveBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Menyimpan…';
 
-  if (!file) {
-    dbAdd('docUploads', docData);
+  if (!files.length) {
+    dbAdd('docUploads', makeDocData(null, 0));
     closeModal();
     navigate('stage-gallery');
     showToast(`Dokumentasi "${title}" disimpan (tanpa file) ✓`, 'success');
@@ -1155,26 +1167,35 @@ async function handleDocUpload() {
     if (label) label.textContent = msg || 'Mengunggah…';
   };
 
-  try {
-    setProgress(10, 'Menghubungkan ke Google Drive…');
-    const fileData = await gdriveUpload(file, stage, proj, setProgress);
-    docData.drive_id = fileData.id;
-    setProgress(100, 'Upload selesai!');
+  let okCount = 0, failCount = 0;
+
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
+    const docData = makeDocData(file, i);
+    const base = Math.round((i / files.length) * 100);
+    const perFile = (v) => setProgress(base + Math.round(v / files.length), `Mengunggah ${i + 1}/${files.length}: ${file.name}`);
+    try {
+      perFile(10);
+      const fileData = await gdriveUpload(file, stage, proj, perFile);
+      docData.drive_id = fileData.id;
+      okCount++;
+    } catch (err) {
+      console.error(err);
+      failCount++;
+    }
     dbAdd('docUploads', docData);
-    await new Promise(r => setTimeout(r, 500));
-    closeModal();
-    navigate('stage-gallery');
-    showToast(`"${title}" berhasil diunggah ke Google Drive ✓`, 'success');
-  } catch (err) {
-    console.error(err);
-    // Simpan tanpa drive_id, user bisa upload ulang
-    dbAdd('docUploads', docData);
-    if (wrap) wrap.classList.add('d-none');
-    saveBtn.disabled = false;
-    saveBtn.innerHTML = '<i class="ti ti-cloud-upload me-1"></i>Upload ke Google Drive';
-    showToast('Gagal upload ke Drive — data disimpan lokal. ' + (err.message || ''), 'warning');
-    closeModal();
-    navigate('stage-gallery');
+  }
+  setProgress(100, 'Selesai!');
+  await new Promise(r => setTimeout(r, 400));
+
+  closeModal();
+  navigate('stage-gallery');
+  if (failCount === 0) {
+    showToast(`${okCount} file berhasil diunggah ke Google Drive ✓`, 'success');
+  } else if (okCount === 0) {
+    showToast(`Gagal upload ${failCount} file ke Drive — data disimpan tanpa file`, 'danger');
+  } else {
+    showToast(`${okCount} file berhasil, ${failCount} file gagal diunggah ke Drive`, 'warning');
   }
 }
 
