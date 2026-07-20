@@ -249,9 +249,9 @@ function dbDelete(table, id) {
   });
 }
 
-// Generate IDs
-function nextId(prefix, table) {
-  const nums = DB[table].map(r => parseInt((r.id || '0').replace(/\D+/g,''))).filter(n => !isNaN(n));
+// Generate IDs — callers pass the row array directly (e.g. nextId('DOC-', DB.docUploads))
+function nextId(prefix, rows) {
+  const nums = (rows || []).map(r => parseInt((r.id || '0').replace(/\D+/g,''))).filter(n => !isNaN(n));
   const next = nums.length ? Math.max(...nums) + 1 : 1;
   return prefix + String(next).padStart(3, '0');
 }
