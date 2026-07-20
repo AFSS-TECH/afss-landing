@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Sun, 19 Jul 2026 14:15:50 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 02:18:50 GMT</lastBuildDate>
+    <item>
+      <title>Aplikasi Manajemen Coworking Space: Booking, Membership, dan Akses Terintegrasi</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-coworking-space</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-coworking-space</guid>
+      <description>Grup WhatsApp dan spreadsheet tidak akan menyelamatkan Anda dari double-booking ruang meeting dan member yang menunggak diam-diam. Ini cara operator coworking modern mengonsolidasikan operasional lintas cabang.</description>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Coworking Space</category>
+      <category>Manajemen Membership</category>
+      <category>Sistem Booking</category>
+    </item>
+    <item>
+      <title>Sistem SFA (Sales Force Automation) untuk Distributor FMCG: Panduan Lengkap</title>
+      <link>https://afss.tech/blog/sistem-sfa-sales-force-automation-distributor</link>
+      <guid>https://afss.tech/blog/sistem-sfa-sales-force-automation-distributor</guid>
+      <description>Sales masih pakai nota kertas, stok toko sering meleset dari janji, dan tidak ada yang tahu toko mana yang sudah berminggu-minggu tidak dikunjungi. Begini cara sistem SFA membenahi semuanya.</description>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Sales Force Automation</category>
+      <category>Distribusi FMCG</category>
+      <category>Aplikasi Sales Lapangan</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Kos &amp; Properti Sewa Digital: Panduan Lengkap untuk Pemilik Multi-Cabang</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-kos-properti-sewa</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-kos-properti-sewa</guid>
+      <description>Spreadsheet dan grup WhatsApp cukup untuk satu kos dengan 10 kamar. Begitu portofolio bertambah jadi puluhan bahkan ratusan unit di beberapa cabang, cara manual itu mulai membuat uang bocor tanpa disadari.</description>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Manajemen Properti</category>
+      <category>Aplikasi Kos</category>
+      <category>Software ERP Properti</category>
+    </item>
+    <item>
+      <title>MES (Manufacturing Execution System): Digitalisasi Lantai Produksi Pabrik</title>
+      <link>https://afss.tech/blog/mes-manufacturing-execution-system-pabrik</link>
+      <guid>https://afss.tech/blog/mes-manufacturing-execution-system-pabrik</guid>
+      <description>OEE cuma 51% dan reject baru ketahuan tiga minggu kemudian? Kenali MES, lapisan sistem yang menangkap data lantai produksi secara real-time — bukan sekadar ERP versi lain.</description>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
+      <category>MES manufaktur</category>
+      <category>OEE pabrik</category>
+      <category>digitalisasi produksi</category>
+    </item>
+    <item>
+      <title>Sistem Manajemen SPBU Digital: Integrasi ATG, Stok, dan Kepatuhan</title>
+      <link>https://afss.tech/blog/spbu-digital-manajemen-bahan-bakar</link>
+      <guid>https://afss.tech/blog/spbu-digital-manajemen-bahan-bakar</guid>
+      <description>Selisih stok BBM yang tidak terpantau bisa menggerus puluhan juta rupiah per bulan tanpa disadari. Begini cara sistem manajemen SPBU digital menutup celah itu.</description>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Sistem SPBU</category>
+      <category>Manajemen Bahan Bakar</category>
+      <category>Software ERP Indonesia</category>
+    </item>
     <item>
       <title>Aplikasi Presensi Face Recognition Karyawan | AFSS</title>
       <link>https://afss.tech/blog/aplikasi-presensi-face-recognition-karyawan</link>

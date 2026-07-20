@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-manajemen-coworking-space",
+    "date": "2026-07-20",
+    "readMinutes": 9,
+    "c": "#DB2777",
+    "c2": "#9D174D",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Coworking Space: Booking, Membership, dan Akses Terintegrasi",
+        "description": "Aplikasi manajemen coworking space mengotomatisasi booking, membership, akses RFID/QR, dan okupansi real-time untuk operator ruang kerja bersama di Indonesia.",
+        "excerpt": "Grup WhatsApp dan spreadsheet tidak akan menyelamatkan Anda dari double-booking ruang meeting dan member yang menunggak diam-diam. Ini cara operator coworking modern mengonsolidasikan operasional lintas cabang.",
+        "tags": [
+          "Coworking Space",
+          "Manajemen Membership",
+          "Sistem Booking"
+        ]
+      },
+      "en": {
+        "title": "Coworking Space Management Application: Booking, Membership, and Integrated Access",
+        "description": "A coworking space management app automates booking, membership billing, RFID/QR access, and real-time occupancy for Indonesian shared workspace operators.",
+        "excerpt": "WhatsApp groups and spreadsheets won't save you from double-booked meeting rooms or members who quietly stop paying. Here's how modern coworking operators consolidate operations across branches.",
+        "tags": [
+          "Coworking Space",
+          "Membership Management",
+          "Booking System"
+        ]
+      },
+      "zh": {
+        "title": "共享办公空间管理系统：预订、会员与一体化门禁",
+        "description": "共享办公空间管理系统实现预订、会员计费、RFID/二维码门禁与实时入座率自动化，助力印尼共享办公运营商。",
+        "excerpt": "WhatsApp群组和表格救不了重复预订的会议室，也发现不了悄悄停止付费的会员。看看现代共享办公运营商如何跨分店整合运营。",
+        "tags": [
+          "共享办公空间",
+          "会员管理",
+          "预订系统"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-sfa-sales-force-automation-distributor",
+    "date": "2026-07-20",
+    "readMinutes": 9,
+    "c": "#4F46E5",
+    "c2": "#3730A3",
+    "i18n": {
+      "id": {
+        "title": "Sistem SFA (Sales Force Automation) untuk Distributor FMCG: Panduan Lengkap",
+        "description": "Panduan lengkap sistem SFA (Sales Force Automation) untuk distributor FMCG: fitur kunci, kisaran biaya pengembangan, dan studi kasus penerapan di Indonesia.",
+        "excerpt": "Sales masih pakai nota kertas, stok toko sering meleset dari janji, dan tidak ada yang tahu toko mana yang sudah berminggu-minggu tidak dikunjungi. Begini cara sistem SFA membenahi semuanya.",
+        "tags": [
+          "Sales Force Automation",
+          "Distribusi FMCG",
+          "Aplikasi Sales Lapangan"
+        ]
+      },
+      "en": {
+        "title": "SFA (Sales Force Automation) System for FMCG Distributors: A Complete Guide",
+        "description": "A complete guide to Sales Force Automation (SFA) systems for FMCG distributors, covering features, costs, and real implementation case studies.",
+        "excerpt": "Reps still scribbling paper orders, stock promises that don't match the truck, and no one knowing which stores haven't been visited in weeks. Here's how an SFA system fixes all of it.",
+        "tags": [
+          "Sales Force Automation",
+          "FMCG Distribution",
+          "Field Sales App"
+        ]
+      },
+      "zh": {
+        "title": "快消品经销商销售自动化(SFA)系统完全指南",
+        "description": "快消品经销商销售自动化(SFA)系统完全指南：核心功能、开发成本与印尼本地实施案例解析。",
+        "excerpt": "销售代表还在手写纸质订单，库存承诺常常对不上仓库实际情况，也没人说得清哪些门店已经数周无人拜访——SFA系统正是为解决这些问题而生。",
+        "tags": [
+          "销售自动化",
+          "快消品分销",
+          "外勤销售应用"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-kos-properti-sewa",
+    "date": "2026-07-20",
+    "readMinutes": 9,
+    "c": "#059669",
+    "c2": "#065F46",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Kos & Properti Sewa Digital: Panduan Lengkap untuk Pemilik Multi-Cabang",
+        "description": "Cara aplikasi manajemen kos dan properti sewa digital menekan tunggakan, otomatisasi tagihan, dan memudahkan pemilik memantau banyak cabang dari satu dashboard.",
+        "excerpt": "Spreadsheet dan grup WhatsApp cukup untuk satu kos dengan 10 kamar. Begitu portofolio bertambah jadi puluhan bahkan ratusan unit di beberapa cabang, cara manual itu mulai membuat uang bocor tanpa disadari.",
+        "tags": [
+          "Manajemen Properti",
+          "Aplikasi Kos",
+          "Software ERP Properti"
+        ]
+      },
+      "en": {
+        "title": "Boarding House & Rental Property Management Software: A Complete Guide for Multi-Branch Owners",
+        "description": "How a digital boarding house and rental property management app cuts overdue rent, automates billing, and gives owners a single dashboard across branches.",
+        "excerpt": "A spreadsheet and a WhatsApp group are enough for one boarding house with 10 rooms. Once a portfolio grows to dozens or hundreds of units across branches, manual methods start quietly leaking money.",
+        "tags": [
+          "Property Management",
+          "Rental Software",
+          "Property ERP System"
+        ]
+      },
+      "zh": {
+        "title": "公寓式出租房产管理系统完整指南:多分店业主必读",
+        "description": "数字化公寓式出租房产管理系统如何降低逾期租金、自动化账单流程,并让业主在一个仪表盘上掌控多个分店的运营状况。",
+        "excerpt": "对于只有十个房间的单一出租房产,Excel表格和微信群足够应付。但当资产规模扩大到跨多个分店、数十甚至上百个房间时,人工管理方式往往在不知不觉中侵蚀利润。",
+        "tags": [
+          "房产管理系统",
+          "出租房管理软件",
+          "物业ERP系统"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "mes-manufacturing-execution-system-pabrik",
+    "date": "2026-07-20",
+    "readMinutes": 10,
+    "c": "#475569",
+    "c2": "#1E293B",
+    "i18n": {
+      "id": {
+        "title": "MES (Manufacturing Execution System): Digitalisasi Lantai Produksi Pabrik",
+        "description": "Panduan MES (Manufacturing Execution System) untuk pabrik di Indonesia: bedanya dengan ERP, fitur kunci, kisaran biaya, dan studi kasus peningkatan OEE.",
+        "excerpt": "OEE cuma 51% dan reject baru ketahuan tiga minggu kemudian? Kenali MES, lapisan sistem yang menangkap data lantai produksi secara real-time — bukan sekadar ERP versi lain.",
+        "tags": [
+          "MES manufaktur",
+          "OEE pabrik",
+          "digitalisasi produksi"
+        ]
+      },
+      "en": {
+        "title": "MES (Manufacturing Execution System): Digitizing the Factory Shop Floor",
+        "description": "A practical MES (Manufacturing Execution System) guide for Indonesian factories: ERP differences, key features, cost ranges, and a real OEE case study.",
+        "excerpt": "OEE stuck at 51% and rejects only discovered three weeks later? Meet MES, the layer that captures shop-floor data in real time — not just another name for ERP.",
+        "tags": [
+          "Manufacturing MES",
+          "Factory OEE",
+          "Shop floor digitization"
+        ]
+      },
+      "zh": {
+        "title": "MES制造执行系统:实现工厂生产车间数字化",
+        "description": "面向印尼工厂的MES(制造执行系统)实用指南:详解其与ERP的核心区别、关键功能模块、开发成本区间,以及一个真实的车间OEE提升案例研究。",
+        "excerpt": "OEE只有51%,不良品三周后才被发现?了解MES——实时捕捉车间数据的系统层,而不只是另一个ERP。",
+        "tags": [
+          "制造执行系统",
+          "工厂OEE",
+          "车间数字化"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "spbu-digital-manajemen-bahan-bakar",
+    "date": "2026-07-20",
+    "readMinutes": 10,
+    "c": "#D97706",
+    "c2": "#92400E",
+    "i18n": {
+      "id": {
+        "title": "Sistem Manajemen SPBU Digital: Integrasi ATG, Stok, dan Kepatuhan",
+        "description": "Sistem manajemen SPBU digital mengintegrasikan ATG, dispenser, POS, dan pelaporan Pertamina/BPH Migas untuk menekan selisih stok BBM.",
+        "excerpt": "Selisih stok BBM yang tidak terpantau bisa menggerus puluhan juta rupiah per bulan tanpa disadari. Begini cara sistem manajemen SPBU digital menutup celah itu.",
+        "tags": [
+          "Sistem SPBU",
+          "Manajemen Bahan Bakar",
+          "Software ERP Indonesia"
+        ]
+      },
+      "en": {
+        "title": "Digital Fuel Station Management System: ATG, Stock and Compliance Integration",
+        "description": "A digital fuel station management system integrates ATG, dispensers, POS, and Pertamina/BPH Migas reporting to cut fuel stock variance.",
+        "excerpt": "Unmonitored fuel stock variance can quietly drain tens of millions of Rupiah a month. Here's how a digital fuel station management system closes that gap.",
+        "tags": [
+          "Fuel Station Systems",
+          "Fuel Management Software",
+          "Indonesia ERP Software"
+        ]
+      },
+      "zh": {
+        "title": "数字化加油站管理系统:ATG、库存与合规一体化整合",
+        "description": "数字化加油站管理系统整合ATG油罐计量、加油机、POS与Pertamina/BPH Migas合规报送,有效降低燃油库存差异。",
+        "excerpt": "未被实时监控的燃油库存差异,每月可能悄悄吞掉数千万印尼盾利润。数字化加油站管理系统正是为堵住这个漏洞而生。",
+        "tags": [
+          "加油站管理系统",
+          "燃油库存管理",
+          "印尼企业软件开发"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-presensi-face-recognition-karyawan",
     "date": "2026-07-19",
     "readMinutes": 10,
