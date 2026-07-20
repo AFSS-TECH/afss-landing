@@ -72,6 +72,12 @@
       ]
     },
     {
+      "source": "/portofolio/erp/kontraktor/(.*)\\.(js|css)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" }
+      ]
+    },
+    {
       "source": "/blog/(.*)\\.png",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
