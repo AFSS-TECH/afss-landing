@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-desa-digital-govtech-pelayanan-publik",
+    "date": "2026-07-21",
+    "readMinutes": 10,
+    "c": "#0F172A",
+    "c2": "#B91C1C",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Desa Digital: GovTech Pelayanan Publik Desa",
+        "description": "Aplikasi desa digital mempercepat surat-menyurat, transparansi Dana Desa, dan pengaduan warga. Simak fitur, biaya, dan cara membangunnya bersama AFSS.",
+        "excerpt": "Antre berjam-jam demi selembar surat domisili bisa jadi cerita masa lalu. Berikut cara kepala desa dan lurah membangun layanan publik yang cepat, transparan, dan minim celah pungli.",
+        "tags": [
+          "Desa Digital",
+          "GovTech",
+          "Pelayanan Publik"
+        ]
+      },
+      "en": {
+        "title": "Village Digital Application: GovTech for Public Services",
+        "description": "A village digital application speeds up letter services, Village Fund transparency, and resident complaints online. See features, costs, and how AFSS builds it.",
+        "excerpt": "Hours-long queues for a single domicile letter can become a thing of the past. Here is how village and ward leaders are building public services that are fast, transparent, and harder to game.",
+        "tags": [
+          "Village GovTech",
+          "Digital Government",
+          "Public Services"
+        ]
+      },
+      "zh": {
+        "title": "乡村数字政务:公共服务应用开发指南",
+        "description": "乡村数字政务应用加快信函办理、村庄基金预算透明和居民投诉处理。了解功能、成本及AFSS如何为您定制开发。",
+        "excerpt": "排队数小时只为一张居住证明,如今可以成为过去式。了解村长和街道办如何打造快速、透明、更难滋生腐败的公共服务系统。",
+        "tags": [
+          "乡村数字政务",
+          "GovTech",
+          "公共服务"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-carwash-detailing-otomotif",
+    "date": "2026-07-21",
+    "readMinutes": 10,
+    "c": "#2563EB",
+    "c2": "#1E3A8A",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Carwash & Detailing Otomotif",
+        "description": "Aplikasi manajemen carwash & detailing: booking online, antrian digital, payroll kapster otomatis, dan dashboard omzet multi-cabang untuk pemilik bisnis cuci mobil.",
+        "excerpt": "Buku antrian kertas dan hitungan payroll manual bikin carwash Anda kehilangan omzet dari no-show, bentrok jadwal bay, dan sengketa gaji kapster setiap bulan.",
+        "tags": [
+          "Aplikasi Carwash",
+          "Software Detailing Mobil",
+          "Manajemen Bisnis Otomotif"
+        ]
+      },
+      "en": {
+        "title": "Car Wash & Auto Detailing Management Software",
+        "description": "Car wash & auto detailing management software: online booking, digital queueing, automated detailer payroll, and multi-outlet revenue dashboards.",
+        "excerpt": "A paper queue book and manual payroll math are quietly draining your car wash's revenue through no-shows, bay conflicts, and staff pay disputes.",
+        "tags": [
+          "Car Wash Software",
+          "Auto Detailing App",
+          "Business Management Software"
+        ]
+      },
+      "zh": {
+        "title": "洗车汽车美容管理软件:预约、排队与工资系统",
+        "description": "洗车美容管理软件:在线预约、数字排队、技师工资自动核算、多门店营收看板,帮助洗车店老板告别纸质排队本和人工对账。",
+        "excerpt": "纸质排队本和人工核算工资,正在悄悄让你的洗车店在顾客爽约、工位冲突和工资纠纷中流失营收。",
+        "tags": [
+          "洗车管理软件",
+          "汽车美容系统",
+          "门店管理软件"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-bank-sampah-daur-ulang-digital",
+    "date": "2026-07-21",
+    "readMinutes": 10,
+    "c": "#16A34A",
+    "c2": "#14532D",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Bank Sampah Digital: Ganti Buku Tabungan Manual",
+        "description": "Aplikasi bank sampah digital menggantikan buku tabungan manual dengan saldo real-time, harga sampah per kategori, dan laporan ESG siap audit untuk sponsor.",
+        "excerpt": "Buku tabungan hilang, selisih catatan, dan laporan yang tidak bisa diaudit membuat bank sampah kehilangan kepercayaan nasabah dan dana CSR. Digitalisasi mengubah semua itu jadi data yang bisa dibuktikan.",
+        "tags": [
+          "Bank Sampah Digital",
+          "Aplikasi Daur Ulang",
+          "Laporan ESG"
+        ]
+      },
+      "en": {
+        "title": "Digital Waste Bank App: Replace Manual Passbooks",
+        "description": "A digital waste bank app replaces paper passbooks with real-time balances, market-linked pricing per waste category, and audit-ready ESG reports for sponsors.",
+        "excerpt": "Lost passbooks, mismatched ledgers, and reports nobody can audit are costing waste banks customer trust and CSR funding. Digitizing turns all of that into provable, exportable data.",
+        "tags": [
+          "Digital Waste Bank",
+          "Recycling App",
+          "ESG Reporting"
+        ]
+      },
+      "zh": {
+        "title": "数字化垃圾银行系统：告别纸质存折台账",
+        "description": "数字化垃圾银行应用用实时余额、按类别联动市场价的回收定价和可审计的ESG报告，取代纸质存折与手工台账。",
+        "excerpt": "存折丢失、账目对不上、报告无法核实,正在让垃圾银行流失居民信任和企业CSR资金。数字化能把这一切变成可核实、可导出的数据。",
+        "tags": [
+          "数字垃圾银行",
+          "回收管理系统",
+          "ESG报告"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-bimbel-lms-manajemen-lembaga-kursus",
+    "date": "2026-07-21",
+    "readMinutes": 10,
+    "c": "#7C3AED",
+    "c2": "#4C1D95",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Bimbel & Lembaga Kursus",
+        "description": "Aplikasi manajemen bimbel untuk penjadwalan kelas, presensi QR, billing SPP otomatis, dan payroll tutor. Hentikan kebocoran SPP dan churn siswa.",
+        "excerpt": "Bimbel dan kursus yang masih pakai grup WhatsApp dan Excel kehilangan jutaan rupiah tiap bulan dari SPP nunggak dan siswa yang diam-diam churn.",
+        "tags": [
+          "aplikasi bimbel",
+          "manajemen lembaga kursus",
+          "billing SPP otomatis"
+        ]
+      },
+      "en": {
+        "title": "Tutoring Center Management App That Stops Unpaid Fees",
+        "description": "A tutoring center management app for scheduling, QR attendance, automated tuition billing, and tutor payroll. Stop losing revenue to unpaid fees and churn.",
+        "excerpt": "Tutoring centers still running on WhatsApp groups and Excel are quietly losing revenue to unpaid tuition and student churn they never see coming.",
+        "tags": [
+          "tutoring center app",
+          "course management software",
+          "automated tuition billing"
+        ]
+      },
+      "zh": {
+        "title": "补习班管理系统:告别学费拖欠与生源流失",
+        "description": "补习班管理系统覆盖排课、二维码签到、学费自动催缴与老师工资核算,帮助培训机构告别学费拖欠、代签到作弊与学生流失,提升运营效率。",
+        "excerpt": "还在用 WhatsApp 群和 Excel 管理补习班?你可能正在悄悄流失学费收入和学生,却毫无察觉。",
+        "tags": [
+          "补习班管理系统",
+          "培训机构管理软件",
+          "学费自动催缴"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-ppob-payment-point-online-bank-agen-loket-digital",
+    "date": "2026-07-21",
+    "readMinutes": 10,
+    "c": "#0D9488",
+    "c2": "#065F46",
+    "i18n": {
+      "id": {
+        "title": "Sistem PPOB Digital: Software Agen & Loket Pembayaran",
+        "description": "Bangun sistem PPOB digital untuk jaringan agen dan loket pembayaran: deposit saldo, switching multi-biller, rekonsiliasi otomatis, tiering komisi, hingga kontrol fraud.",
+        "excerpt": "WhatsApp order dan spreadsheet rekonsiliasi cukup untuk lima agen. Untuk lima puluh agen dengan ribuan transaksi harian, itu jadi sumber kebocoran uang yang tidak kelihatan sampai sudah terlambat.",
+        "tags": [
+          "PPOB",
+          "Software Agen Pembayaran",
+          "Sistem Loket Digital"
+        ]
+      },
+      "en": {
+        "title": "PPOB Digital Payment System for Agent Networks",
+        "description": "Build a PPOB digital payment system for agent and loket networks: agent deposits, multi-supplier switching, automatic reconciliation, tiered commissions, and fraud controls.",
+        "excerpt": "A WhatsApp group and a spreadsheet are fine for five agents. At fifty agents and thousands of daily transactions, that same setup quietly bleeds money until the losses are too big to ignore.",
+        "tags": [
+          "PPOB System",
+          "Payment Agent Software",
+          "Bill Payment Platform"
+        ]
+      },
+      "zh": {
+        "title": "PPOB数字支付系统:代理网点管理软件",
+        "description": "为代理商与缴费网点搭建PPOB数字支付系统:代理余额充值、多供应商切换、自动对账、多级代理佣金分级与欺诈风控一站解决。",
+        "excerpt": "五个代理商用微信群加Excel对账还能应付,可一旦扩展到五十个代理商、每天上千笔交易,同样的做法会在不知不觉中侵蚀利润,等发现时往往为时已晚。",
+        "tags": [
+          "PPOB系统",
+          "代理支付软件",
+          "缴费网点平台"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-manajemen-coworking-space",
     "date": "2026-07-20",
     "readMinutes": 9,

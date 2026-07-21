@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 20 Jul 2026 02:18:50 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 02:18:27 GMT</lastBuildDate>
+    <item>
+      <title>Aplikasi Desa Digital: GovTech Pelayanan Publik Desa</title>
+      <link>https://afss.tech/blog/aplikasi-desa-digital-govtech-pelayanan-publik</link>
+      <guid>https://afss.tech/blog/aplikasi-desa-digital-govtech-pelayanan-publik</guid>
+      <description>Antre berjam-jam demi selembar surat domisili bisa jadi cerita masa lalu. Berikut cara kepala desa dan lurah membangun layanan publik yang cepat, transparan, dan minim celah pungli.</description>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Desa Digital</category>
+      <category>GovTech</category>
+      <category>Pelayanan Publik</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Carwash &amp; Detailing Otomotif</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-carwash-detailing-otomotif</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-carwash-detailing-otomotif</guid>
+      <description>Buku antrian kertas dan hitungan payroll manual bikin carwash Anda kehilangan omzet dari no-show, bentrok jadwal bay, dan sengketa gaji kapster setiap bulan.</description>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi Carwash</category>
+      <category>Software Detailing Mobil</category>
+      <category>Manajemen Bisnis Otomotif</category>
+    </item>
+    <item>
+      <title>Aplikasi Bank Sampah Digital: Ganti Buku Tabungan Manual</title>
+      <link>https://afss.tech/blog/aplikasi-bank-sampah-daur-ulang-digital</link>
+      <guid>https://afss.tech/blog/aplikasi-bank-sampah-daur-ulang-digital</guid>
+      <description>Buku tabungan hilang, selisih catatan, dan laporan yang tidak bisa diaudit membuat bank sampah kehilangan kepercayaan nasabah dan dana CSR. Digitalisasi mengubah semua itu jadi data yang bisa dibuktikan.</description>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Bank Sampah Digital</category>
+      <category>Aplikasi Daur Ulang</category>
+      <category>Laporan ESG</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Bimbel &amp; Lembaga Kursus</title>
+      <link>https://afss.tech/blog/aplikasi-bimbel-lms-manajemen-lembaga-kursus</link>
+      <guid>https://afss.tech/blog/aplikasi-bimbel-lms-manajemen-lembaga-kursus</guid>
+      <description>Bimbel dan kursus yang masih pakai grup WhatsApp dan Excel kehilangan jutaan rupiah tiap bulan dari SPP nunggak dan siswa yang diam-diam churn.</description>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+      <category>aplikasi bimbel</category>
+      <category>manajemen lembaga kursus</category>
+      <category>billing SPP otomatis</category>
+    </item>
+    <item>
+      <title>Sistem PPOB Digital: Software Agen &amp; Loket Pembayaran</title>
+      <link>https://afss.tech/blog/sistem-ppob-payment-point-online-bank-agen-loket-digital</link>
+      <guid>https://afss.tech/blog/sistem-ppob-payment-point-online-bank-agen-loket-digital</guid>
+      <description>WhatsApp order dan spreadsheet rekonsiliasi cukup untuk lima agen. Untuk lima puluh agen dengan ribuan transaksi harian, itu jadi sumber kebocoran uang yang tidak kelihatan sampai sudah terlambat.</description>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+      <category>PPOB</category>
+      <category>Software Agen Pembayaran</category>
+      <category>Sistem Loket Digital</category>
+    </item>
     <item>
       <title>Aplikasi Manajemen Coworking Space: Booking, Membership, dan Akses Terintegrasi</title>
       <link>https://afss.tech/blog/aplikasi-manajemen-coworking-space</link>
