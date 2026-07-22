@@ -11,6 +11,7 @@ import { useHreflangTags } from './i18n/HreflangTags.jsx'
 import { withLocale } from './i18n/locales.js'
 import { useSectionOverride } from './lib/content.js'
 import { supabase } from './lib/supabase.js'
+import { track } from './lib/track.js'
 
 // Dashboard-editable brand/contact info — see src/App.jsx for the matching hook.
 const BRAND_FALLBACK = { ...BRAND, wa: WA }
@@ -1430,11 +1431,17 @@ export function Portfolio() {
                       <div className="porto-card-result"><Icon icon="fa-solid fa-arrow-trend-up" /> {p.result} <span>— {p.result2}</span></div>
                       <div className="porto-card-tags">{p.tags.slice(0,3).map(tag => <span key={tag}>{tag}</span>)}</div>
                     </div>
-                    <div className="porto-card-footer">
-                      <span>{t('portfolio.viewDetail')}</span>
-                      <Icon icon="fa-solid fa-arrow-right" />
-                    </div>
                   </Link>
+                  <div className="porto-card-footer">
+                    {p.visitUrl && (
+                      <a href={p.visitUrl} target="_blank" rel="noreferrer" className="porto-card-demo-btn" onClick={() => track('demo_open', { project: p.slug })}>
+                        <Icon icon="fa-solid fa-arrow-up-right-from-square" /> {t('demoTeaser.liveDemo')}
+                      </a>
+                    )}
+                    <Link to={`/portofolio/${p.slug}`} className="porto-card-detail-link">
+                      {t('portfolio.viewDetail')} <Icon icon="fa-solid fa-arrow-right" />
+                    </Link>
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
@@ -1511,6 +1518,11 @@ export function PortfolioDetail() {
               <div className="pd-stat-div" />
               <div className="pd-stat"><Icon icon="fa-solid fa-chart-line" /><span className="pd-stat-label">{t('portfolio.detailLabel')}</span><span className="pd-stat-val">{p.result2}</span></div>
             </div>
+            {p.visitUrl && (
+              <a className="btn btn-lg pd-hero-demo-btn" href={p.visitUrl} target="_blank" rel="noreferrer" onClick={() => track('demo_open', { project: p.slug })}>
+                <Icon icon="fa-solid fa-arrow-up-right-from-square" /> {t('demoTeaser.liveDemo')}
+              </a>
+            )}
           </Reveal>
         </div>
       </section>
@@ -2185,7 +2197,13 @@ export function Harga() {
                 <p className="price-prod-desc">{p.desc}</p>
                 <div className="price-prod-price-wrap">
                   <div className="price-prod-note">{p.note}</div>
-                  <div className="price-prod-price">{p.price}</div>
+                  <div className="price-prod-price-row">
+                    <div>
+                      {p.normalPrice && <div className="price-prod-normal">{p.normalPrice}</div>}
+                      <div className="price-prod-price">{p.price}</div>
+                    </div>
+                    {p.save && <span className="price-prod-save">{p.save}</span>}
+                  </div>
                 </div>
                 <ul className="price-prod-feats">
                   {p.feats.map((f) => <li key={f}><Icon icon="fa-solid fa-check" /> {f}</li>)}
