@@ -49,6 +49,10 @@ export const STRINGS = {
       ],
     },
     trustBar: { label: 'Dipercaya beragam bisnis di Indonesia' },
+    testimonials: {
+      eyebrow: 'Kata Klien Kami',
+      titlePre: 'Dipercaya oleh bisnis yang ', titleItal: 'benar-benar memakainya', titlePost: '',
+    },
     journey: {
       aria: 'Mulai dari sini — 4 langkah sederhana',
       items: [
@@ -528,6 +532,10 @@ export const STRINGS = {
       ],
     },
     trustBar: { label: 'Trusted by businesses across Indonesia' },
+    testimonials: {
+      eyebrow: 'What Our Clients Say',
+      titlePre: 'Trusted by businesses that ', titleItal: 'actually use it', titlePost: '',
+    },
     journey: {
       aria: 'Start here — 4 simple steps',
       items: [
@@ -1007,6 +1015,10 @@ export const STRINGS = {
       ],
     },
     trustBar: { label: '深受印尼各行业企业信赖' },
+    testimonials: {
+      eyebrow: '客户评价',
+      titlePre: '深受', titleItal: '真正在使用我们服务', titlePost: '的企业信赖',
+    },
     journey: {
       aria: '从这里开始——简单四步',
       items: [

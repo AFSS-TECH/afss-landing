@@ -5,7 +5,7 @@ import sharp from 'sharp'
 import { mkdirSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
-import { showcase } from '../src/data.js'
+import { showcase } from '../src/data/index.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const outDir = join(__dirname, '..', 'public', 'portfolio')

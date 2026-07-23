@@ -1,9 +1,9 @@
 import './index.css'
 import { ViteReactSSG } from 'vite-react-ssg'
 import { Layout, Home, NotFound } from './App.jsx'
-import { LayananIndex, LayananDetail, About, Contact, Portfolio, PortfolioDetail, Estimasi, Privacy, Terms, Keunggulan, Harga, Faq, Karir, AjukanProyek, AreaLayanan } from './Pages.jsx'
+import { LayananIndex, LayananDetail, About, Contact, Portfolio, PortfolioDetail, Estimasi, Privacy, Terms, Keunggulan, Harga, Faq, Karir, AjukanProyek, AreaLayanan } from './pages/index.js'
 import { postsMeta } from './blog-meta.js'
-import { products, portfolioProjects, serviceAreas } from './data.js'
+import { products, portfolioProjects, serviceAreas } from './data/index.js'
 import { LOCALES, LOCALE_PREFIX, DEFAULT_LOCALE } from './i18n/locales.js'
 
 // Multi-route SSG: every route is prerendered to its own static HTML file for full crawlability.

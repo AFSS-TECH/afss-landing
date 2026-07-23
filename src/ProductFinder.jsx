@@ -6,7 +6,7 @@ import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from './i18n/link.jsx'
 import { Icon } from './Icon.jsx'
-import { products, waLink, BRAND } from './data.js'
+import { products, waLink, BRAND } from './data/index.js'
 import { useLocale, pick } from './i18n/context.jsx'
 
 // keyword → product slug, used to score free-text input against each product.

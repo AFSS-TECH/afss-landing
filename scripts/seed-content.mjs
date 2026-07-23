@@ -13,7 +13,7 @@
 import { createClient } from '@supabase/supabase-js'
 import {
   BRAND, WA, stats, clients, workflow, techStack, pricing, pricingBundles, faqs, why,
-} from '../src/data.js'
+} from '../src/data/index.js'
 import { STRINGS } from '../src/i18n/strings.js'
 
 const url = process.env.VITE_SUPABASE_URL

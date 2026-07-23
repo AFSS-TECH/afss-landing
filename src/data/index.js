@@ -1,0 +1,15 @@
+// Barrel re-export — keeps `import { X } from './data/index.js'` call sites
+// unchanged while the underlying data lives in one topic-scoped file per section.
+export * from './brand.js'
+export * from './stats.js'
+export * from './clients.js'
+export * from './testimonials.js'
+export * from './products.js'
+export * from './why.js'
+export * from './workflow.js'
+export * from './portfolio.js'
+export * from './tech-stack.js'
+export * from './pricing.js'
+export * from './pricing-bundles.js'
+export * from './service-areas.js'
+export * from './faqs.js'

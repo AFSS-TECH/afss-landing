@@ -1,0 +1,17 @@
+// Barrel re-export — one file per page component, split out of the former
+// monolithic src/Pages.jsx so each route's code lives in its own file.
+export { LayananIndex } from './LayananIndex.jsx'
+export { LayananDetail } from './LayananDetail.jsx'
+export { About } from './About.jsx'
+export { Contact } from './Contact.jsx'
+export { Portfolio } from './Portfolio.jsx'
+export { PortfolioDetail } from './PortfolioDetail.jsx'
+export { Estimasi } from './Estimasi.jsx'
+export { Privacy } from './Privacy.jsx'
+export { Terms } from './Terms.jsx'
+export { Keunggulan } from './Keunggulan.jsx'
+export { Harga } from './Harga.jsx'
+export { Faq } from './Faq.jsx'
+export { Karir } from './Karir.jsx'
+export { AjukanProyek } from './AjukanProyek.jsx'
+export { AreaLayanan } from './AreaLayanan.jsx'
