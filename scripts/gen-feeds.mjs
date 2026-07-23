@@ -4,7 +4,7 @@ import { writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import { posts } from '../src/blog.js'
-import { products, portfolioProjects, serviceAreas } from '../src/data.js'
+import { products, portfolioProjects, serviceAreas } from '../src/data/index.js'
 import { SITE_URL } from '../src/site.js'
 import { LOCALES, LOCALE_PREFIX, HREFLANG, DEFAULT_LOCALE } from '../src/i18n/locales.js'
 

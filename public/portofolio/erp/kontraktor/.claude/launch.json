@@ -4,7 +4,7 @@
     {
       "name": "afss-erp",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "3030"],
+      "runtimeArgs": ["-m", "http.server", "3030", "--directory", "D:/coding/a fss/public"],
       "port": 3030
     }
   ]
