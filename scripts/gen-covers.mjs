@@ -3,7 +3,7 @@
 // Right half: topic-specific illustration (SVG shapes keyed by slug).
 // Run with `npm run gen:covers`; output public/blog/<slug>.png is committed as static assets.
 import sharp from 'sharp'
-import { mkdirSync } from 'node:fs'
+import { mkdirSync, readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import { posts } from '../src/blog.js'
@@ -11,6 +11,10 @@ import { posts } from '../src/blog.js'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const outDir = join(__dirname, '..', 'public', 'blog')
 mkdirSync(outDir, { recursive: true })
+
+// Real AF brand mark (white/teal, for colored backgrounds) — embedded as-is so
+// every cover uses the exact same logo file as the rest of the site, not a redrawn approximation.
+const LOGO_MARK_B64 = readFileSync(join(__dirname, '..', 'public', 'logo-mark-light.png')).toString('base64')
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
@@ -1153,13 +1157,8 @@ function svgFor(post, locale = 'id') {
   <!-- Top accent bar -->
   <rect width="1200" height="8" fill="#ffffff" opacity="0.28"/>
 
-  <!-- AF mark -->
-  <g transform="translate(80,60) scale(1.4)">
-    <path d="M6 43 L24 8 L33 43" fill="none" stroke="#ffffff" stroke-width="6.6" stroke-linejoin="round" stroke-linecap="round"/>
-    <path d="M24 8 L45 8" fill="none" stroke="#ffffff" stroke-width="6.6" stroke-linecap="round"/>
-    <path d="M29 22 L43 22" fill="none" stroke="#ffffff" stroke-width="5.8" stroke-linecap="round"/>
-    <path d="M17.5 43 L24 30 L30.5 43 Z" fill="#ffffff" opacity="0.6"/>
-  </g>
+  <!-- AF mark (real logo file, not redrawn) -->
+  <image x="80" y="71" width="79" height="49" href="data:image/png;base64,${LOGO_MARK_B64}"/>
   <text x="160" y="112" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800" fill="#ffffff" letter-spacing="-1">AFSS <tspan fill="#ffffff" opacity="0.65" font-weight="600">${esc(blogLabel)}</tspan></text>
 
   <!-- category chip -->
