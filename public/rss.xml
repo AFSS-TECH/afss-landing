@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Thu, 23 Jul 2026 18:43:02 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2026 18:29:46 GMT</lastBuildDate>
+    <item>
+      <title>Software Kepatuhan Sertifikasi Halal untuk Produsen</title>
+      <link>https://afss.tech/blog/software-kepatuhan-sertifikasi-halal</link>
+      <guid>https://afss.tech/blog/software-kepatuhan-sertifikasi-halal</guid>
+      <description>Satu perubahan bahan baku yang tak terdeteksi bisa membekukan sertifikat halal Anda dalam semalam — begini cara sistem kepatuhan custom mencegahnya.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Software Sertifikasi Halal</category>
+      <category>Sistem Kepatuhan Halal</category>
+      <category>Traceability Rantai Pasok Halal</category>
+    </item>
+    <item>
+      <title>Sistem Cold Chain Logistics: Software Rantai Dingin Custom</title>
+      <link>https://afss.tech/blog/sistem-cold-chain-logistik-rantai-dingin</link>
+      <guid>https://afss.tech/blog/sistem-cold-chain-logistik-rantai-dingin</guid>
+      <description>Satu pengiriman udang beku yang mencair di jalan bisa membuat kontrak klien terbesar Anda hilang dalam semalam. Begini cara sistem cold chain custom mencegahnya.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Software Cold Chain</category>
+      <category>Sistem Logistik Rantai Dingin</category>
+      <category>Manajemen Gudang Berpendingin</category>
+    </item>
+    <item>
+      <title>Aplikasi Rental Kendaraan: Sistem Manajemen Armada Custom</title>
+      <link>https://afss.tech/blog/aplikasi-rental-kendaraan-manajemen-armada</link>
+      <guid>https://afss.tech/blog/aplikasi-rental-kendaraan-manajemen-armada</guid>
+      <description>Satu unit Alphard dengan STNK kedaluwarsa dihentikan polisi saat membawa rombongan pengantin, dan tagihan kerugiannya tembus Rp 34 juta hanya dari satu insiden. Begini cara sistem manajemen armada mencegahnya.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Software Rental Mobil</category>
+      <category>Aplikasi Manajemen Armada</category>
+      <category>Sistem Rental Kendaraan</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Bisnis Katering: Panduan Lengkap 2026</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-bisnis-katering</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-bisnis-katering</guid>
+      <description>Satu WhatsApp group yang tidak sinkron bisa membuat dapur katering salah kirim 250 porsi di hari-H. Ini kenapa bisnis katering yang tumbuh butuh sistem, bukan sekadar spreadsheet.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Software Katering</category>
+      <category>Aplikasi Manajemen Bisnis Katering</category>
+      <category>Sistem HPP Katering</category>
+    </item>
+    <item>
+      <title>Software Manajemen Klinik Hewan Custom untuk Dokter Hewan</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-klinik-hewan-veteriner</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-klinik-hewan-veteriner</guid>
+      <description>Satu ekor anjing menerima vaksin rabies dua kali dalam dua minggu karena kartu rekam medisnya hilang. Begini cara software klinik hewan mencegah kesalahan seperti ini terjadi lagi.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Software Klinik Hewan</category>
+      <category>Aplikasi Dokter Hewan</category>
+      <category>Rekam Medis Pasien Hewan</category>
+    </item>
     <item>
       <title>Aplikasi Desa Digital: GovTech Pelayanan Publik Desa</title>
       <link>https://afss.tech/blog/aplikasi-desa-digital-govtech-pelayanan-publik</link>

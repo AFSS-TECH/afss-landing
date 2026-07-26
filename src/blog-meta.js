@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "software-kepatuhan-sertifikasi-halal",
+    "date": "2026-07-27",
+    "readMinutes": 10,
+    "c": "#16A34A",
+    "c2": "#14532D",
+    "i18n": {
+      "id": {
+        "title": "Software Kepatuhan Sertifikasi Halal untuk Produsen",
+        "description": "Bagaimana sistem kepatuhan sertifikasi halal custom membantu produsen makanan, minuman, kosmetik, dan farmasi menjaga traceability, sertifikat, dan audit BPJPH tetap aman.",
+        "excerpt": "Satu perubahan bahan baku yang tak terdeteksi bisa membekukan sertifikat halal Anda dalam semalam — begini cara sistem kepatuhan custom mencegahnya.",
+        "tags": [
+          "Software Sertifikasi Halal",
+          "Sistem Kepatuhan Halal",
+          "Traceability Rantai Pasok Halal"
+        ]
+      },
+      "en": {
+        "title": "Halal Certification Compliance Software for Manufacturers",
+        "description": "How custom halal compliance software helps food, beverage, cosmetics, and pharma manufacturers protect traceability, certificates, and BPJPH audits.",
+        "excerpt": "One undetected ingredient swap can freeze your halal certificate overnight — here's how custom compliance software prevents it.",
+        "tags": [
+          "Halal Certification Software",
+          "Halal Compliance System",
+          "Halal Supply Chain Traceability"
+        ]
+      },
+      "zh": {
+        "title": "清真认证合规管理软件:印尼生产商指南",
+        "description": "定制清真合规软件如何帮助食品、饮料、化妆品和制药生产商管理原料追溯、证书续期与BPJPH审计。",
+        "excerpt": "一次未被发现的原料变更,足以让您的清真证书一夜之间被冻结——定制合规系统正是为此而生。",
+        "tags": [
+          "清真认证软件",
+          "清真合规管理系统",
+          "清真供应链追溯"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-cold-chain-logistik-rantai-dingin",
+    "date": "2026-07-27",
+    "readMinutes": 10,
+    "c": "#0891B2",
+    "c2": "#164E63",
+    "i18n": {
+      "id": {
+        "title": "Sistem Cold Chain Logistics: Software Rantai Dingin Custom",
+        "description": "Bisnis cold chain rentan rugi besar akibat suhu tak terpantau dan gagal audit. Ini cara sistem custom melindungi produk beku, seafood, dan farmasi Anda.",
+        "excerpt": "Satu pengiriman udang beku yang mencair di jalan bisa membuat kontrak klien terbesar Anda hilang dalam semalam. Begini cara sistem cold chain custom mencegahnya.",
+        "tags": [
+          "Software Cold Chain",
+          "Sistem Logistik Rantai Dingin",
+          "Manajemen Gudang Berpendingin"
+        ]
+      },
+      "en": {
+        "title": "Cold Chain Logistics Software: Custom Systems for Indonesia",
+        "description": "Cold chain operators lose millions to unmonitored temperature excursions and failed audits. Here is how custom software protects frozen, seafood, and pharma cargo.",
+        "excerpt": "One thawed shipment of frozen shrimp can cost you your biggest client overnight. Here is how custom cold chain software prevents it before it happens.",
+        "tags": [
+          "Cold Chain Software",
+          "Cold Chain Logistics System",
+          "Refrigerated Warehouse Management"
+        ]
+      },
+      "zh": {
+        "title": "冷链物流管理软件:印尼定制冷链系统解决方案",
+        "description": "温度失控和审计失败让冷链企业损失惨重。了解定制软件如何保护您的冷冻、海鲜与医药货物,实现全程可追溯。",
+        "excerpt": "一批解冻的冷冻虾,足以在一夜之间让您失去最大的客户。定制冷链系统如何在问题发生前就阻止它。",
+        "tags": [
+          "冷链管理软件",
+          "冷链物流系统",
+          "冷藏仓库管理"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-rental-kendaraan-manajemen-armada",
+    "date": "2026-07-27",
+    "readMinutes": 10,
+    "c": "#2563EB",
+    "c2": "#1E3A8A",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Rental Kendaraan: Sistem Manajemen Armada Custom",
+        "description": "Pelajari cara sistem manajemen armada custom membantu bisnis rental mobil dan motor di Indonesia menekan kerugian dari double booking, telat servis, dan sengketa kerusakan.",
+        "excerpt": "Satu unit Alphard dengan STNK kedaluwarsa dihentikan polisi saat membawa rombongan pengantin, dan tagihan kerugiannya tembus Rp 34 juta hanya dari satu insiden. Begini cara sistem manajemen armada mencegahnya.",
+        "tags": [
+          "Software Rental Mobil",
+          "Aplikasi Manajemen Armada",
+          "Sistem Rental Kendaraan"
+        ]
+      },
+      "en": {
+        "title": "Vehicle Rental Software: Custom Fleet Management System",
+        "description": "See how a custom fleet management system helps Indonesian car and motorbike rental businesses stop losing money to double bookings, missed maintenance, and damage disputes.",
+        "excerpt": "One Alphard with an expired vehicle registration got pulled over by police while carrying a wedding convoy, and the damage from that single incident topped Rp 34 million. Here is how fleet management software prevents it.",
+        "tags": [
+          "Car Rental Software",
+          "Fleet Management App",
+          "Vehicle Rental System"
+        ]
+      },
+      "zh": {
+        "title": "车辆租赁车队管理软件：印尼定制解决方案",
+        "description": "了解定制车队管理系统如何帮助印尼汽车与摩托车租赁企业避免重复预订、保养逾期和车损纠纷造成的损失。",
+        "excerpt": "一辆行驶证已过期的商务车在载送婚礼车队时被警察拦下，仅这一起事件造成的损失就超过3400万印尼盾。车队管理系统正是为了防止这种情况而生。",
+        "tags": [
+          "汽车租赁软件",
+          "车队管理系统",
+          "车辆租赁管理平台"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-bisnis-katering",
+    "date": "2026-07-27",
+    "readMinutes": 10,
+    "c": "#EA580C",
+    "c2": "#9A3412",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Bisnis Katering: Panduan Lengkap 2026",
+        "description": "Bisnis katering rugi karena salah hitung porsi dan HPP meleset? Pelajari fitur, biaya, dan ROI software manajemen katering custom untuk skala UKM hingga enterprise.",
+        "excerpt": "Satu WhatsApp group yang tidak sinkron bisa membuat dapur katering salah kirim 250 porsi di hari-H. Ini kenapa bisnis katering yang tumbuh butuh sistem, bukan sekadar spreadsheet.",
+        "tags": [
+          "Software Katering",
+          "Aplikasi Manajemen Bisnis Katering",
+          "Sistem HPP Katering"
+        ]
+      },
+      "en": {
+        "title": "Custom Catering Business Management Software: 2026 Guide",
+        "description": "Losing money from miscounted portions and inaccurate HPP? Learn the features, costs, and ROI of custom catering management software, from small operators to enterprise chains.",
+        "excerpt": "One unsynced WhatsApp group can make a catering kitchen ship 250 portions short on event day. Here is why growing catering businesses need a real system, not just spreadsheets.",
+        "tags": [
+          "Catering Software",
+          "Catering Business Management App",
+          "Catering Costing System"
+        ]
+      },
+      "zh": {
+        "title": "定制餐饮企业管理软件:2026年完整指南",
+        "description": "份数算错、HPP核算失准导致亏损?了解定制餐饮管理系统的核心功能、开发成本与投资回报,适用于中小型餐饮到大型连锁企业。",
+        "excerpt": "一个未同步的WhatsApp群,足以让餐饮厨房在活动当天少送250份餐食。这就是为什么持续增长的餐饮企业需要真正的系统,而不只是表格。",
+        "tags": [
+          "餐饮管理软件",
+          "餐饮企业管理系统",
+          "餐饮成本核算系统"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-klinik-hewan-veteriner",
+    "date": "2026-07-27",
+    "readMinutes": 10,
+    "c": "#0EA5E9",
+    "c2": "#0369A1",
+    "i18n": {
+      "id": {
+        "title": "Software Manajemen Klinik Hewan Custom untuk Dokter Hewan",
+        "description": "Panduan lengkap membangun software manajemen klinik hewan custom: rekam medis pasien, jadwal vaksin otomatis, inventori obat, dan kisaran biaya pengembangan di Indonesia.",
+        "excerpt": "Satu ekor anjing menerima vaksin rabies dua kali dalam dua minggu karena kartu rekam medisnya hilang. Begini cara software klinik hewan mencegah kesalahan seperti ini terjadi lagi.",
+        "tags": [
+          "Software Klinik Hewan",
+          "Aplikasi Dokter Hewan",
+          "Rekam Medis Pasien Hewan"
+        ]
+      },
+      "en": {
+        "title": "Custom Veterinary Clinic Management Software for Vet Practices",
+        "description": "A complete guide to custom veterinary clinic software: pet medical records, automated vaccine reminders, medicine inventory, and Indonesian development costs.",
+        "excerpt": "One dog received a rabies shot twice in two weeks because his paper record card went missing. Here is how veterinary clinic software prevents mistakes like this.",
+        "tags": [
+          "Veterinary Clinic Software",
+          "Vet Practice Management",
+          "Pet Medical Records"
+        ]
+      },
+      "zh": {
+        "title": "定制宠物诊所管理软件:兽医诊所的病历与预约系统",
+        "description": "为兽医诊所打造的定制管理软件完整指南:宠物病历、疫苗提醒、药品库存与印尼开发成本一览。",
+        "excerpt": "一只狗因纸质病历卡丢失,两周内被注射了两次狂犬疫苗。宠物诊所管理软件正是为了避免这类错误而生。",
+        "tags": [
+          "宠物诊所管理软件",
+          "兽医诊所系统",
+          "宠物病历管理"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-desa-digital-govtech-pelayanan-publik",
     "date": "2026-07-21",
     "readMinutes": 10,
