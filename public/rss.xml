@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 27 Jul 2026 02:18:57 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 04:08:21 GMT</lastBuildDate>
+    <item>
+      <title>Sistem TPM: Trade Promotion Management untuk Distributor FMCG</title>
+      <link>https://afss.tech/blog/sistem-tpm-trade-promotion-management-distributor-fmcg</link>
+      <guid>https://afss.tech/blog/sistem-tpm-trade-promotion-management-distributor-fmcg</guid>
+      <description>Anggaran promosi yang habis tanpa jejak jelas bikin distributor FMCG sulit tahu program mana yang benar-benar mendongkrak penjualan. Ini cara sistem TPM menutup celah itu.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Trade Promotion Management</category>
+      <category>Distributor FMCG</category>
+      <category>Manajemen Promosi</category>
+    </item>
+    <item>
+      <title>Sistem PIM: Product Information Management untuk Retail Omnichannel</title>
+      <link>https://afss.tech/blog/sistem-pim-product-information-management-retail</link>
+      <guid>https://afss.tech/blog/sistem-pim-product-information-management-retail</guid>
+      <description>Deskripsi dan harga produk yang beda-beda di setiap marketplace bikin pelanggan bingung dan komplain. Ini cara sistem PIM menyatukan data produk ke semua kanal penjualan.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Product Information Management</category>
+      <category>Sistem PIM</category>
+      <category>Retail Omnichannel</category>
+    </item>
+    <item>
+      <title>Software Manajemen Proyek Konstruksi: Jadwal, Biaya, dan Progres</title>
+      <link>https://afss.tech/blog/software-manajemen-proyek-konstruksi-digital</link>
+      <guid>https://afss.tech/blog/software-manajemen-proyek-konstruksi-digital</guid>
+      <description>Laporan progres proyek yang telat sehari bisa berarti keputusan yang telat seminggu. Ini cara software manajemen proyek konstruksi menutup celah itu.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Manajemen Proyek Konstruksi</category>
+      <category>Software Konstruksi</category>
+      <category>Kontraktor</category>
+    </item>
+    <item>
+      <title>Sistem MDM: Master Data Management untuk Bisnis Multi-Cabang</title>
+      <link>https://afss.tech/blog/sistem-mdm-master-data-management-bisnis</link>
+      <guid>https://afss.tech/blog/sistem-mdm-master-data-management-bisnis</guid>
+      <description>Nama pelanggan yang sama tercatat berbeda di lima sistem berbeda bikin laporan manajemen saling bertentangan. Ini cara sistem MDM menyatukan semuanya jadi satu sumber kebenaran.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Master Data Management</category>
+      <category>Sistem MDM</category>
+      <category>Data Bisnis</category>
+    </item>
+    <item>
+      <title>Sistem VMS: Manajemen Vendor dan Pemasok Digital untuk Bisnis</title>
+      <link>https://afss.tech/blog/sistem-vms-manajemen-vendor-pemasok-digital</link>
+      <guid>https://afss.tech/blog/sistem-vms-manajemen-vendor-pemasok-digital</guid>
+      <description>Ratusan vendor tersebar di spreadsheet berbeda-beda bikin bisnis telat sadar ada pemasok bermasalah. Ini cara sistem VMS digital menutup celah itu.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Vendor Management System</category>
+      <category>Manajemen Pemasok</category>
+      <category>Procurement</category>
+    </item>
     <item>
       <title>Software Kepatuhan Sertifikasi Halal untuk Produsen</title>
       <link>https://afss.tech/blog/software-kepatuhan-sertifikasi-halal</link>

@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "sistem-tpm-trade-promotion-management-distributor-fmcg",
+    "date": "2026-07-27",
+    "readMinutes": 10,
+    "c": "#65A30D",
+    "c2": "#365314",
+    "i18n": {
+      "id": {
+        "title": "Sistem TPM: Trade Promotion Management untuk Distributor FMCG",
+        "description": "Sistem TPM (Trade Promotion Management) melacak anggaran promosi, klaim retur, dan ROI tiap program diskon distributor FMCG secara real-time. Cegah kebocoran anggaran promosi yang tak terlihat.",
+        "excerpt": "Anggaran promosi yang habis tanpa jejak jelas bikin distributor FMCG sulit tahu program mana yang benar-benar mendongkrak penjualan. Ini cara sistem TPM menutup celah itu.",
+        "tags": [
+          "Trade Promotion Management",
+          "Distributor FMCG",
+          "Manajemen Promosi"
+        ]
+      },
+      "en": {
+        "title": "TPM Software: Trade Promotion Management for FMCG Distributors",
+        "description": "A TPM (Trade Promotion Management) system tracks promotion budgets, claim reconciliation, and ROI for every FMCG distributor discount program in real time. Stop invisible promotion-budget leakage.",
+        "excerpt": "A promotion budget that disappears without a clear trail makes it hard for an FMCG distributor to know which programs actually move sales. Here is how a TPM system closes that gap.",
+        "tags": [
+          "Trade Promotion Management",
+          "FMCG Distributor",
+          "Promotion Management"
+        ]
+      },
+      "zh": {
+        "title": "TPM贸易促销管理系统:印尼快消品分销商解决方案",
+        "description": "TPM(贸易促销管理)系统实时追踪促销预算、理赔核对与每个折扣项目的投资回报率,帮助印尼快消品分销商杜绝隐性促销预算流失。",
+        "excerpt": "促销预算不知不觉花光,却没有清晰的追踪记录,让快消品分销商难以判断哪些促销活动真正拉动了销售。TPM系统正是弥补这一缺口的方案。",
+        "tags": [
+          "贸易促销管理",
+          "快消品分销商",
+          "促销管理系统"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-pim-product-information-management-retail",
+    "date": "2026-07-27",
+    "readMinutes": 9,
+    "c": "#0EA5E9",
+    "c2": "#0C4A6E",
+    "i18n": {
+      "id": {
+        "title": "Sistem PIM: Product Information Management untuk Retail Omnichannel",
+        "description": "Sistem PIM (Product Information Management) menyatukan data produk, deskripsi, foto, dan harga untuk didistribusikan konsisten ke website, marketplace, dan toko fisik. Cegah data produk berantakan di banyak kanal.",
+        "excerpt": "Deskripsi dan harga produk yang beda-beda di setiap marketplace bikin pelanggan bingung dan komplain. Ini cara sistem PIM menyatukan data produk ke semua kanal penjualan.",
+        "tags": [
+          "Product Information Management",
+          "Sistem PIM",
+          "Retail Omnichannel"
+        ]
+      },
+      "en": {
+        "title": "PIM Software: Product Information Management for Omnichannel Retail",
+        "description": "A PIM (Product Information Management) system unifies product data, descriptions, photos, and pricing for consistent distribution to your website, marketplaces, and physical stores. Stop scattered product data across channels.",
+        "excerpt": "Different product descriptions and prices on every marketplace confuse customers and trigger complaints. Here is how a PIM system unifies product data across every sales channel.",
+        "tags": [
+          "Product Information Management",
+          "PIM System",
+          "Omnichannel Retail"
+        ]
+      },
+      "zh": {
+        "title": "PIM产品信息管理系统:全渠道零售的产品数据整合方案",
+        "description": "PIM(产品信息管理)系统整合产品数据、描述、图片与价格,统一分发至网站、电商平台与实体门店,避免产品信息在多渠道间混乱不一致,适合印尼全渠道零售品牌。",
+        "excerpt": "同一款产品在不同电商平台上描述和价格各不相同,让顾客困惑并引发投诉。PIM系统正是将产品数据统一分发到所有销售渠道的方案。",
+        "tags": [
+          "产品信息管理",
+          "PIM系统",
+          "全渠道零售"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "software-manajemen-proyek-konstruksi-digital",
+    "date": "2026-07-27",
+    "readMinutes": 10,
+    "c": "#CA8A04",
+    "c2": "#713F12",
+    "i18n": {
+      "id": {
+        "title": "Software Manajemen Proyek Konstruksi: Jadwal, Biaya, dan Progres",
+        "description": "Software manajemen proyek konstruksi menyatukan jadwal, RAB, laporan progres lapangan, dan koordinasi subkontraktor dalam satu sistem digital. Cegah keterlambatan dan pembengkakan biaya proyek.",
+        "excerpt": "Laporan progres proyek yang telat sehari bisa berarti keputusan yang telat seminggu. Ini cara software manajemen proyek konstruksi menutup celah itu.",
+        "tags": [
+          "Manajemen Proyek Konstruksi",
+          "Software Konstruksi",
+          "Kontraktor"
+        ]
+      },
+      "en": {
+        "title": "Construction Project Management Software: Schedule, Cost & Progress",
+        "description": "Construction project management software unifies schedules, budgets, field progress reports, and subcontractor coordination in one digital system. Prevent delays and cost overruns.",
+        "excerpt": "A progress report that is a day late can mean a decision that is a week late. Here is how construction project management software closes that gap.",
+        "tags": [
+          "Construction Project Management",
+          "Construction Software",
+          "Contractor"
+        ]
+      },
+      "zh": {
+        "title": "建筑工程项目管理软件:进度、预算与现场进展一体化",
+        "description": "建筑工程项目管理软件将进度计划、预算与实际成本、现场进展报告及分包商协调整合在一套数字系统中,帮助印尼承包商避免工期延误与成本超支。",
+        "excerpt": "进度报告晚一天,决策可能就晚了一周。建筑工程项目管理软件正是弥补这一缺口的方案。",
+        "tags": [
+          "建筑项目管理",
+          "建筑管理软件",
+          "承包商"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-mdm-master-data-management-bisnis",
+    "date": "2026-07-27",
+    "readMinutes": 10,
+    "c": "#4F46E5",
+    "c2": "#312E81",
+    "i18n": {
+      "id": {
+        "title": "Sistem MDM: Master Data Management untuk Bisnis Multi-Cabang",
+        "description": "Sistem MDM (Master Data Management) menyatukan data pelanggan, produk, dan vendor yang tersebar di banyak aplikasi menjadi satu sumber kebenaran. Hindari data ganda dan laporan yang saling bertentangan.",
+        "excerpt": "Nama pelanggan yang sama tercatat berbeda di lima sistem berbeda bikin laporan manajemen saling bertentangan. Ini cara sistem MDM menyatukan semuanya jadi satu sumber kebenaran.",
+        "tags": [
+          "Master Data Management",
+          "Sistem MDM",
+          "Data Bisnis"
+        ]
+      },
+      "en": {
+        "title": "MDM Software: Master Data Management for Multi-Branch Business",
+        "description": "A Master Data Management (MDM) system unifies customer, product, and vendor data scattered across many apps into one source of truth. Avoid duplicate data and conflicting reports.",
+        "excerpt": "The same customer name recorded differently in five separate systems makes management reports contradict each other. Here is how an MDM system unifies everything into one source of truth.",
+        "tags": [
+          "Master Data Management",
+          "MDM System",
+          "Business Data"
+        ]
+      },
+      "zh": {
+        "title": "MDM主数据管理系统:多门店企业的数据整合方案",
+        "description": "主数据管理(MDM)系统将分散在多个应用中的客户、产品与供应商数据整合为统一的真实数据源,避免数据重复与报表相互矛盾,适合印尼多门店企业。",
+        "excerpt": "同一位客户的姓名在五个不同系统中记录各异,导致管理报表相互矛盾。MDM系统正是将一切整合为统一真实数据源的方案。",
+        "tags": [
+          "主数据管理",
+          "MDM系统",
+          "企业数据"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-vms-manajemen-vendor-pemasok-digital",
+    "date": "2026-07-27",
+    "readMinutes": 10,
+    "c": "#0D9488",
+    "c2": "#134E4A",
+    "i18n": {
+      "id": {
+        "title": "Sistem VMS: Manajemen Vendor dan Pemasok Digital untuk Bisnis",
+        "description": "Sistem VMS (Vendor Management System) menyatukan onboarding, evaluasi kinerja, kontrak, dan pembayaran vendor dalam satu platform. Kurangi risiko pemasok bermasalah dan mempercepat proses procurement.",
+        "excerpt": "Ratusan vendor tersebar di spreadsheet berbeda-beda bikin bisnis telat sadar ada pemasok bermasalah. Ini cara sistem VMS digital menutup celah itu.",
+        "tags": [
+          "Vendor Management System",
+          "Manajemen Pemasok",
+          "Procurement"
+        ]
+      },
+      "en": {
+        "title": "VMS Software: Digital Vendor Management System for Business",
+        "description": "A VMS (Vendor Management System) unifies onboarding, performance scoring, contracts, and vendor payments in one platform. Cut supplier risk and speed up procurement.",
+        "excerpt": "Hundreds of vendors scattered across different spreadsheets means a business finds out about a problem supplier too late. Here is how a digital VMS closes that gap.",
+        "tags": [
+          "Vendor Management System",
+          "Vendor Management",
+          "Procurement"
+        ]
+      },
+      "zh": {
+        "title": "VMS供应商管理系统:印尼企业数字化采购解决方案",
+        "description": "供应商管理系统(VMS)将供应商入驻、绩效评分、合同管理与付款整合在一个平台中,降低供应商风险,加快采购流程,适合印尼中大型企业。",
+        "excerpt": "数百家供应商分散在不同的表格里,让企业总是太晚才发现问题供应商。数字化VMS系统正是弥补这一缺口的方案。",
+        "tags": [
+          "供应商管理系统",
+          "VMS",
+          "采购管理"
+        ]
+      }
+    }
+  },
+  {
     "slug": "software-kepatuhan-sertifikasi-halal",
     "date": "2026-07-27",
     "readMinutes": 10,
