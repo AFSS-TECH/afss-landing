@@ -199,6 +199,201 @@ export const postsMeta = [
     }
   },
   {
+    "slug": "aplikasi-manajemen-firma-arsitek-konsultan-desain-interior",
+    "date": "2026-07-27",
+    "readMinutes": 10,
+    "c": "#7C2D12",
+    "c2": "#292524",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Firma Arsitek & Konsultan Desain Interior: Solusi Digital untuk Studio yang Makin Sibuk",
+        "description": "Firma arsitek & desain interior di Indonesia rugi karena revisi tak tersinkron dan RAB meleset. Kenali sistem manajemen proyek custom yang menjawabnya.",
+        "excerpt": "Dari revisi desain yang tercecer sampai termin pembayaran yang telat karena approval tak terlacak — begini cara firma arsitek dan desain interior di Indonesia mulai beralih ke sistem manajemen proyek digital.",
+        "tags": [
+          "manajemen firma arsitek",
+          "software desain interior",
+          "manajemen proyek konstruksi"
+        ]
+      },
+      "en": {
+        "title": "Practice Management Software for Architecture Firms & Interior Design Consultancies in Indonesia",
+        "description": "Design firms in Indonesia lose money to unsynced revisions and inaccurate RAB estimates. Here's how custom practice management software fixes it.",
+        "excerpt": "From design revisions that get mixed up to payment milestones that stall because approvals were never tracked — here's how Indonesian architecture and interior design firms are moving to digital practice management systems.",
+        "tags": [
+          "architecture firm management",
+          "interior design software",
+          "construction project management"
+        ]
+      },
+      "zh": {
+        "title": "建筑事务所与室内设计顾问公司管理系统:印尼设计公司的数字化转型方案",
+        "description": "印尼设计公司常因设计版本混乱、预算估算失准而蒙受损失。了解量身定制的项目管理系统如何解决这些问题。",
+        "excerpt": "从设计修改版本混淆到因审批未被记录而延迟的付款节点——这是印尼建筑与室内设计事务所转向数字化项目管理系统的真实故事。",
+        "tags": [
+          "建筑事务所管理系统",
+          "室内设计软件",
+          "工程项目管理"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-smart-retail-vending-machine-otomatis-2026",
+    "date": "2026-07-27",
+    "readMinutes": 10,
+    "c": "#D97706",
+    "c2": "#78350F",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Smart Retail & Vending Machine Otomatis 2026: Sistem di Balik Ritel Tanpa Kasir",
+        "description": "Mesin vending dan smart fridge makin menjamur di kota besar Indonesia. Ini cara sistem digital mencegah stockout, kerugian produk basi, dan transaksi cashless gagal.",
+        "excerpt": "Ritel tanpa penjaga sedang meledak di Jakarta, BSD, hingga Bandung — tapi tanpa sistem digital yang tepat, pertumbuhan itu justru menguras stok, bensin, dan kepercayaan pelanggan.",
+        "tags": [
+          "smart retail",
+          "vending machine",
+          "IoT retail"
+        ]
+      },
+      "en": {
+        "title": "Smart Retail & Automated Vending Machine Software in 2026: The System Behind Unattended Retail",
+        "description": "Vending machines and smart fridges are multiplying across Indonesian cities. Here's how digital systems prevent stockouts, spoiled inventory, and failed cashless payments.",
+        "excerpt": "Unattended retail is booming from Jakarta to BSD to Bandung — but without the right digital system, that growth quietly drains stock, fuel, and customer trust.",
+        "tags": [
+          "smart retail",
+          "vending machine",
+          "IoT retail"
+        ]
+      },
+      "zh": {
+        "title": "2026年智能零售与自动售货机软件：无人零售背后的系统支撑",
+        "description": "智能售货机与智能冰柜正在印尼各大城市快速铺开。看数字系统如何防止缺货、货品变质与无人零售移动支付失败问题。",
+        "excerpt": "从雅加达到BSD再到万隆，无人零售正在爆发式增长——但如果没有合适的数字系统,这种增长其实在悄悄消耗库存、油费与顾客信任。",
+        "tags": [
+          "智能零售",
+          "自动售货机",
+          "物联网零售"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-e-office-approval-workflow-digital-perusahaan",
+    "date": "2026-07-27",
+    "readMinutes": 10,
+    "c": "#334155",
+    "c2": "#0F172A",
+    "i18n": {
+      "id": {
+        "title": "Sistem E-Office & Approval Workflow: Setop Bolak-Balik Kertas dari Meja ke Meja",
+        "description": "Approval berjenjang manual bikin proses bisnis macet. Ini cara sistem e-office & workflow digital mempercepat persetujuan sekaligus menjaga audit trail perusahaan.",
+        "excerpt": "Formulir cuti dan PR yang nyangkut di meja kosong karena direktur sedang dinas luar bukan cerita langka — ini pola yang berulang di perusahaan Indonesia yang sedang tumbuh. Sistem approval digital adalah jawabannya.",
+        "tags": [
+          "e-office",
+          "approval workflow",
+          "sistem internal perusahaan"
+        ]
+      },
+      "en": {
+        "title": "Digital E-Office & Approval Workflow Systems: Ending the Desk-to-Desk Paper Chase",
+        "description": "Manual multi-level approvals stall business processes for weeks. See how digital e-office workflow systems speed up approvals while keeping a full audit trail.",
+        "excerpt": "A purchase request stuck on an empty desk because the director was traveling isn't a one-off story — it's a recurring pattern in growing Indonesian companies. Digital approval workflows fix it.",
+        "tags": [
+          "e-office system",
+          "approval workflow",
+          "internal business systems"
+        ]
+      },
+      "zh": {
+        "title": "数字化电子公文与审批流程系统:告别纸质表格逐桌传签",
+        "description": "人工多级审批常常让业务流程卡壳数周。了解数字化电子公文审批系统如何加快审批速度,同时保留完整的审计记录。",
+        "excerpt": "采购申请单因董事出差而滞留在空荡荡的办公桌上,这不是个例,而是印尼成长型企业中反复出现的模式。数字化审批流程正是解决之道。",
+        "tags": [
+          "电子公文系统",
+          "审批流程",
+          "企业内部系统"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "erp-perkebunan-agribisnis-skala-besar",
+    "date": "2026-07-27",
+    "readMinutes": 11,
+    "c": "#15803D",
+    "c2": "#052E16",
+    "i18n": {
+      "id": {
+        "title": "ERP Perkebunan: Menutup Celah Antara Kebun dan Pabrik di Industri Sawit, Karet, dan Tebu",
+        "description": "ERP perkebunan mengatasi selisih tonase, payroll buruh panen, dan audit ISPO/RSPO. Simak biaya, fitur, dan studi kasus implementasi di Indonesia.",
+        "excerpt": "Dari mandor yang mencatat panen di kertas basah sampai selisih timbangan yang tak pernah ketemu ujungnya — begini cara ERP perkebunan menutup celah operasional yang selama ini dianggap wajar.",
+        "tags": [
+          "ERP Perkebunan",
+          "Kelapa Sawit",
+          "ISPO RSPO"
+        ]
+      },
+      "en": {
+        "title": "Plantation ERP: Closing the Gap Between Field and Mill in Indonesia's Palm Oil, Rubber, and Sugarcane Industries",
+        "description": "Plantation ERP fixes weighbridge discrepancies, daily-labor payroll errors, and ISPO/RSPO audit chaos. See costs, features, and a real-world Indonesian case.",
+        "excerpt": "From mandors logging harvests on rain-soaked paper to weighbridge discrepancies that never quite add up — here's how plantation ERP closes operational gaps the industry has learned to live with.",
+        "tags": [
+          "Plantation ERP",
+          "Palm Oil",
+          "ISPO RSPO Compliance"
+        ]
+      },
+      "zh": {
+        "title": "种植园ERP系统:如何弥合印尼棕榈油、橡胶与甘蔗产业中田间与工厂之间的数据鸿沟",
+        "description": "种植园ERP系统解决过磅差异、日薪工人工资核算错误及ISPO/RSPO认证审计难题。了解成本、核心功能及印尼真实案例分析。",
+        "excerpt": "从监工在湿透的纸张上记录收成，到过磅数据始终对不上账——种植园ERP系统正在弥合这个行业早已习以为常的运营漏洞。",
+        "tags": [
+          "种植园ERP",
+          "棕榈油管理",
+          "ISPO RSPO认证"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-salon-spa-klinik-kecantikan",
+    "date": "2026-07-27",
+    "readMinutes": 10,
+    "c": "#EC4899",
+    "c2": "#701A75",
+    "i18n": {
+      "id": {
+        "title": "Sistem Manajemen Salon, Spa & Klinik Kecantikan: Solusi Bisnis Digital",
+        "description": "Booking bentrok, stok skincare hilang, komisi terapis ribet dihitung manual? Ini cara sistem digital menyelamatkan bisnis kecantikan Anda.",
+        "excerpt": "Dari buku antrian kertas ke sistem booking digital: bagaimana salon, spa, dan klinik kecantikan di Indonesia menghentikan kebocoran omzet lewat aplikasi manajemen yang tepat.",
+        "tags": [
+          "manajemen salon",
+          "klinik kecantikan",
+          "sistem booking"
+        ]
+      },
+      "en": {
+        "title": "Salon, Spa & Aesthetic Clinic Management Software: A Business Case",
+        "description": "Clashing bookings, vanishing skincare stock, messy therapist commissions? Here's how digital systems fix beauty business operations in Indonesia.",
+        "excerpt": "From paper appointment books to real-time booking systems: how Indonesian salons, spas, and aesthetic clinics stop leaking revenue with the right management software.",
+        "tags": [
+          "salon management",
+          "aesthetic clinic software",
+          "booking system"
+        ]
+      },
+      "zh": {
+        "title": "美容院、水疗与医美诊所管理系统:数字化解决方案",
+        "description": "预约冲突、护肤品库存不明、治疗师提成算不清?了解数字化系统如何解决印尼美容行业的运营难题。",
+        "excerpt": "从纸质预约本到实时预约系统:印尼的美容院、水疗中心与医美诊所如何借助合适的管理软件堵住营收漏洞。",
+        "tags": [
+          "美容院管理系统",
+          "医美诊所软件",
+          "预约管理系统"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-desa-digital-govtech-pelayanan-publik",
     "date": "2026-07-21",
     "readMinutes": 10,

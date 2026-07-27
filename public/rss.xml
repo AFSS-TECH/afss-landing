@@ -6,7 +6,7 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Sun, 26 Jul 2026 18:29:46 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 00:36:18 GMT</lastBuildDate>
     <item>
       <title>Software Kepatuhan Sertifikasi Halal untuk Produsen</title>
       <link>https://afss.tech/blog/software-kepatuhan-sertifikasi-halal</link>
@@ -56,6 +56,56 @@
       <category>Software Klinik Hewan</category>
       <category>Aplikasi Dokter Hewan</category>
       <category>Rekam Medis Pasien Hewan</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Firma Arsitek &amp; Konsultan Desain Interior: Solusi Digital untuk Studio yang Makin Sibuk</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-firma-arsitek-konsultan-desain-interior</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-firma-arsitek-konsultan-desain-interior</guid>
+      <description>Dari revisi desain yang tercecer sampai termin pembayaran yang telat karena approval tak terlacak — begini cara firma arsitek dan desain interior di Indonesia mulai beralih ke sistem manajemen proyek digital.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>manajemen firma arsitek</category>
+      <category>software desain interior</category>
+      <category>manajemen proyek konstruksi</category>
+    </item>
+    <item>
+      <title>Aplikasi Smart Retail &amp; Vending Machine Otomatis 2026: Sistem di Balik Ritel Tanpa Kasir</title>
+      <link>https://afss.tech/blog/aplikasi-smart-retail-vending-machine-otomatis-2026</link>
+      <guid>https://afss.tech/blog/aplikasi-smart-retail-vending-machine-otomatis-2026</guid>
+      <description>Ritel tanpa penjaga sedang meledak di Jakarta, BSD, hingga Bandung — tapi tanpa sistem digital yang tepat, pertumbuhan itu justru menguras stok, bensin, dan kepercayaan pelanggan.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>smart retail</category>
+      <category>vending machine</category>
+      <category>IoT retail</category>
+    </item>
+    <item>
+      <title>Sistem E-Office &amp; Approval Workflow: Setop Bolak-Balik Kertas dari Meja ke Meja</title>
+      <link>https://afss.tech/blog/sistem-e-office-approval-workflow-digital-perusahaan</link>
+      <guid>https://afss.tech/blog/sistem-e-office-approval-workflow-digital-perusahaan</guid>
+      <description>Formulir cuti dan PR yang nyangkut di meja kosong karena direktur sedang dinas luar bukan cerita langka — ini pola yang berulang di perusahaan Indonesia yang sedang tumbuh. Sistem approval digital adalah jawabannya.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>e-office</category>
+      <category>approval workflow</category>
+      <category>sistem internal perusahaan</category>
+    </item>
+    <item>
+      <title>ERP Perkebunan: Menutup Celah Antara Kebun dan Pabrik di Industri Sawit, Karet, dan Tebu</title>
+      <link>https://afss.tech/blog/erp-perkebunan-agribisnis-skala-besar</link>
+      <guid>https://afss.tech/blog/erp-perkebunan-agribisnis-skala-besar</guid>
+      <description>Dari mandor yang mencatat panen di kertas basah sampai selisih timbangan yang tak pernah ketemu ujungnya — begini cara ERP perkebunan menutup celah operasional yang selama ini dianggap wajar.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>ERP Perkebunan</category>
+      <category>Kelapa Sawit</category>
+      <category>ISPO RSPO</category>
+    </item>
+    <item>
+      <title>Sistem Manajemen Salon, Spa &amp; Klinik Kecantikan: Solusi Bisnis Digital</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-salon-spa-klinik-kecantikan</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-salon-spa-klinik-kecantikan</guid>
+      <description>Dari buku antrian kertas ke sistem booking digital: bagaimana salon, spa, dan klinik kecantikan di Indonesia menghentikan kebocoran omzet lewat aplikasi manajemen yang tepat.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>manajemen salon</category>
+      <category>klinik kecantikan</category>
+      <category>sistem booking</category>
     </item>
     <item>
       <title>Aplikasi Desa Digital: GovTech Pelayanan Publik Desa</title>
