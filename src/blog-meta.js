@@ -394,6 +394,201 @@ export const postsMeta = [
     }
   },
   {
+    "slug": "aplikasi-membership-asosiasi-organisasi-profesi",
+    "date": "2026-07-27",
+    "readMinutes": 10,
+    "c": "#7C3AED",
+    "c2": "#4C1D95",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Membership Asosiasi & Organisasi Profesi: Panduan Lengkap 2026",
+        "description": "Iuran macet, sertifikasi anggota kedaluwarsa tak terpantau, pendaftaran kongres kacau di spreadsheet? Ini cara aplikasi keanggotaan digital menyelesaikannya.",
+        "excerpt": "Dari kebocoran iuran sampai risiko kepatuhan lisensi anggota, spreadsheet dan grup WhatsApp punya batas. Berikut cara asosiasi profesi beralih ke sistem membership digital.",
+        "tags": [
+          "aplikasi keanggotaan",
+          "asosiasi profesi",
+          "manajemen organisasi"
+        ]
+      },
+      "en": {
+        "title": "Membership Management Software for Professional Associations (2026 Guide)",
+        "description": "Late dues, expired certifications nobody caught, chaotic congress sign-ups on spreadsheets? Here is how digital membership software fixes all of it.",
+        "excerpt": "From dues revenue leakage to certification compliance risk, spreadsheets and WhatsApp groups only stretch so far. Here is how associations move to a digital membership system.",
+        "tags": [
+          "membership software",
+          "professional associations",
+          "organization management"
+        ]
+      },
+      "zh": {
+        "title": "专业协会与社团会员管理系统:2026年完整指南",
+        "description": "会费拖欠、证书过期没人发现、大会报名在Excel表格里一团乱?本文讲清楚数字化会员管理系统如何解决续费、活动报名与合规追踪等核心痛点。",
+        "excerpt": "从会费流失到会员执照合规风险,表格和WhatsApp群组终究有极限。本文介绍协会如何转向数字化会员管理系统。",
+        "tags": [
+          "会员管理系统",
+          "专业协会",
+          "组织管理"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-billing-air-pdam-utility",
+    "date": "2026-07-27",
+    "readMinutes": 10,
+    "c": "#0EA5E9",
+    "c2": "#0C4A6E",
+    "i18n": {
+      "id": {
+        "title": "Sistem Billing Air PDAM & Utility: Digitalisasi Pencatatan Meter dan Tagihan",
+        "description": "PDAM cabang & koperasi HIPPAM masih catat meter manual dan cocokkan setoran loket pakai kalkulator? Sistem billing air digital memangkas tunggakan dan NRW.",
+        "excerpt": "Dari kartu meter kusut sampai selisih setoran loket yang tak pernah ketemu — begini sistem billing air digital menyatukan pencatatan meter, tarif progresif, dan penagihan untuk PDAM cabang maupun koperasi air desa.",
+        "tags": [
+          "billing air PDAM",
+          "sistem HIPPAM",
+          "software utility air"
+        ]
+      },
+      "en": {
+        "title": "Water Utility Billing Software for PDAM Branches & Rural Water Cooperatives",
+        "description": "Still tracking meters on paper and reconciling cash counters by hand? Digital water billing software cuts overdue revenue leakage and non-revenue water losses.",
+        "excerpt": "From smudged meter cards to cash-counter discrepancies nobody can trace — here's how digital billing software unifies meter reading, tiered tariffs, and collections for PDAM branches and village water cooperatives.",
+        "tags": [
+          "water utility billing",
+          "PDAM software",
+          "HIPPAM system"
+        ]
+      },
+      "zh": {
+        "title": "PDAM与乡村合作社水费账单系统：抄表、阶梯水价与催缴数字化",
+        "description": "还在用纸质抄表本和计算器核对柜台现金？数字水费账单系统帮PDAM分公司与HIPPAM合作社降低欠费流失与产销差水量。",
+        "excerpt": "从模糊难辨的抄表卡，到怎么也对不上的柜台现金差额——数字账单系统如何为PDAM分公司与乡村用水合作社统一抄表、阶梯水价与催缴流程。",
+        "tags": [
+          "水费账单系统",
+          "PDAM软件",
+          "HIPPAM系统"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-distribusi-gas-lpg-agen",
+    "date": "2026-07-27",
+    "readMinutes": 10,
+    "c": "#DC2626",
+    "c2": "#7F1D1D",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Distribusi Gas LPG: Kelola Agen, Sub-Agen & Pangkalan dari Satu Sistem",
+        "description": "Stok tabung 3 kg habis di satu pangkalan, menumpuk di pangkalan lain, kas COD sopir tidak pas. Ini cara aplikasi distribusi gas LPG menutup semua celah itu.",
+        "excerpt": "Dari buku catatan dan grup WhatsApp menuju satu dashboard yang menampilkan stok tabung, rute sopir, dan kas COD secara real-time — begini cara agen LPG modern menjaga distribusinya tetap tepat sasaran dan tetap untung.",
+        "tags": [
+          "distribusi gas LPG",
+          "aplikasi agen LPG",
+          "sistem pangkalan 3kg"
+        ]
+      },
+      "en": {
+        "title": "LPG Gas Cylinder Distribution Software: Manage Agents, Sub-Agents & Retail Depots in One System",
+        "description": "Subsidized 3kg cylinders run out at one depot while another sits on surplus, and driver cash reconciliation never adds up. Here's the software fix.",
+        "excerpt": "From phone calls and WhatsApp threads to one live dashboard tracking cylinder stock, driver routes, and cash-on-delivery — here's how modern LPG distributors keep supply fair and compliant while protecting their margins.",
+        "tags": [
+          "LPG distribution software",
+          "gas cylinder tracking",
+          "subsidized gas compliance"
+        ]
+      },
+      "zh": {
+        "title": "LPG液化气瓶配送管理系统：代理商、二级代理与零售网点一体化管理",
+        "description": "有的网点3公斤补贴气瓶售罄排长队,有的网点却囤积过剩;司机货到付款现金总对不上账,补贴合规稽查也让人头疼。一套LPG配送管理系统如何一次性解决这些问题。",
+        "excerpt": "从电话和微信群协调,到一个能实时显示气瓶库存、司机路线和现金对账的系统看板——这就是现代LPG气瓶配送网络如何在保证补贴精准发放的同时守住利润。",
+        "tags": [
+          "LPG配送系统",
+          "气瓶库存管理",
+          "补贴气合规核查"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "erp-percetakan-digital-printing-bisnis",
+    "date": "2026-07-27",
+    "readMinutes": 10,
+    "c": "#F97316",
+    "c2": "#7C2D12",
+    "i18n": {
+      "id": {
+        "title": "ERP Percetakan: Software Manajemen Order, Produksi & Stok Bahan Digital Printing",
+        "description": "Percetakan rugi jutaan rupiah tiap bulan karena salah hitung biaya bahan dan jadwal mesin bentrok. ERP percetakan menyatukan quotation, produksi, dan approval.",
+        "excerpt": "Dari salah hitung harga job sampai mesin menganggur karena jadwal bentrok, percetakan tanpa sistem digital kehilangan puluhan juta rupiah tiap bulan. ERP percetakan menyatukan quotation, antrian produksi, stok bahan, dan approval pelanggan dalam satu layar.",
+        "tags": [
+          "ERP percetakan",
+          "software digital printing",
+          "manajemen order cetak"
+        ]
+      },
+      "en": {
+        "title": "Print Shop ERP Software: Order, Production & Material Management for Printing Businesses",
+        "description": "Print shops lose money every month to mispriced jobs and machine scheduling clashes. Print ERP software unifies quotes, production, and proof approval.",
+        "excerpt": "From mispriced jobs to idle presses caused by scheduling clashes, print shops without a digital system bleed tens of millions of rupiah every month. Print ERP software unifies quotation, production scheduling, material inventory, and customer proof approval on one screen.",
+        "tags": [
+          "print shop ERP",
+          "print management software",
+          "printing business software"
+        ]
+      },
+      "zh": {
+        "title": "印刷厂ERP软件:数字印刷企业的订单、生产与物料管理系统",
+        "description": "印刷厂常因报价出错和机器排期冲突每月损失惨重。印刷ERP系统统一报价、生产排期、物料库存与客户打样审批。",
+        "excerpt": "从报价出错到排期冲突导致机器闲置,没有数字系统的印刷厂每月都在损失真金白银。印刷ERP系统将报价、生产排期、物料库存与客户打样审批整合到同一屏幕。",
+        "tags": [
+          "印刷ERP系统",
+          "印刷厂管理软件",
+          "数码印刷订单管理"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-apartemen-perumahan-hoa",
+    "date": "2026-07-27",
+    "readMinutes": 10,
+    "c": "#2563EB",
+    "c2": "#1E3A8A",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Apartemen & Perumahan: IPL, Booking Fasilitas, dan Keamanan Terpadu",
+        "description": "Iuran IPL macet, jadwal aula bentrok, komplain hilang di WhatsApp? Aplikasi manajemen apartemen & perumahan menyatukan billing, booking, dan keamanan.",
+        "excerpt": "Dari tunggakan IPL yang tak tertagih sampai buku tamu keamanan yang basah kena kopi, inilah kenapa apartemen dan perumahan butuh sistem digital, bukan lagi spreadsheet dan grup WhatsApp.",
+        "tags": [
+          "manajemen apartemen",
+          "aplikasi IPL",
+          "software perumahan"
+        ]
+      },
+      "en": {
+        "title": "Apartment & Housing Complex Management Software: Unifying IPL Billing, Booking & Security",
+        "description": "Maintenance fees unpaid, function halls double-booked, complaints lost in WhatsApp? Apartment management software unifies billing, booking, and security.",
+        "excerpt": "From uncollected maintenance fees to a security logbook ruined by spilled coffee, here's why apartment towers and housing complexes need real software, not spreadsheets and WhatsApp groups.",
+        "tags": [
+          "apartment management software",
+          "IPL billing",
+          "HOA software"
+        ]
+      },
+      "zh": {
+        "title": "公寓与住宅小区管理系统：整合物业费收缴、设施预约与安保记录",
+        "description": "物业费收不齐、多功能厅撞期、报修淹没在微信群？公寓与小区管理系统把收费、预约和安保整合到一个平台。",
+        "excerpt": "从收不上来的物业费到被咖啡泡坏的安保登记本，这就是为什么公寓楼和住宅小区需要真正的管理系统，而不是电子表格和微信群。",
+        "tags": [
+          "公寓管理系统",
+          "物业费收缴",
+          "小区管理软件"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-desa-digital-govtech-pelayanan-publik",
     "date": "2026-07-21",
     "readMinutes": 10,

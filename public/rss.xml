@@ -6,7 +6,7 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 27 Jul 2026 00:36:18 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2026 02:18:57 GMT</lastBuildDate>
     <item>
       <title>Software Kepatuhan Sertifikasi Halal untuk Produsen</title>
       <link>https://afss.tech/blog/software-kepatuhan-sertifikasi-halal</link>
@@ -106,6 +106,56 @@
       <category>manajemen salon</category>
       <category>klinik kecantikan</category>
       <category>sistem booking</category>
+    </item>
+    <item>
+      <title>Aplikasi Membership Asosiasi &amp; Organisasi Profesi: Panduan Lengkap 2026</title>
+      <link>https://afss.tech/blog/aplikasi-membership-asosiasi-organisasi-profesi</link>
+      <guid>https://afss.tech/blog/aplikasi-membership-asosiasi-organisasi-profesi</guid>
+      <description>Dari kebocoran iuran sampai risiko kepatuhan lisensi anggota, spreadsheet dan grup WhatsApp punya batas. Berikut cara asosiasi profesi beralih ke sistem membership digital.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>aplikasi keanggotaan</category>
+      <category>asosiasi profesi</category>
+      <category>manajemen organisasi</category>
+    </item>
+    <item>
+      <title>Sistem Billing Air PDAM &amp; Utility: Digitalisasi Pencatatan Meter dan Tagihan</title>
+      <link>https://afss.tech/blog/sistem-billing-air-pdam-utility</link>
+      <guid>https://afss.tech/blog/sistem-billing-air-pdam-utility</guid>
+      <description>Dari kartu meter kusut sampai selisih setoran loket yang tak pernah ketemu — begini sistem billing air digital menyatukan pencatatan meter, tarif progresif, dan penagihan untuk PDAM cabang maupun koperasi air desa.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>billing air PDAM</category>
+      <category>sistem HIPPAM</category>
+      <category>software utility air</category>
+    </item>
+    <item>
+      <title>Aplikasi Distribusi Gas LPG: Kelola Agen, Sub-Agen &amp; Pangkalan dari Satu Sistem</title>
+      <link>https://afss.tech/blog/aplikasi-distribusi-gas-lpg-agen</link>
+      <guid>https://afss.tech/blog/aplikasi-distribusi-gas-lpg-agen</guid>
+      <description>Dari buku catatan dan grup WhatsApp menuju satu dashboard yang menampilkan stok tabung, rute sopir, dan kas COD secara real-time — begini cara agen LPG modern menjaga distribusinya tetap tepat sasaran dan tetap untung.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>distribusi gas LPG</category>
+      <category>aplikasi agen LPG</category>
+      <category>sistem pangkalan 3kg</category>
+    </item>
+    <item>
+      <title>ERP Percetakan: Software Manajemen Order, Produksi &amp; Stok Bahan Digital Printing</title>
+      <link>https://afss.tech/blog/erp-percetakan-digital-printing-bisnis</link>
+      <guid>https://afss.tech/blog/erp-percetakan-digital-printing-bisnis</guid>
+      <description>Dari salah hitung harga job sampai mesin menganggur karena jadwal bentrok, percetakan tanpa sistem digital kehilangan puluhan juta rupiah tiap bulan. ERP percetakan menyatukan quotation, antrian produksi, stok bahan, dan approval pelanggan dalam satu layar.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>ERP percetakan</category>
+      <category>software digital printing</category>
+      <category>manajemen order cetak</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Apartemen &amp; Perumahan: IPL, Booking Fasilitas, dan Keamanan Terpadu</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-apartemen-perumahan-hoa</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-apartemen-perumahan-hoa</guid>
+      <description>Dari tunggakan IPL yang tak tertagih sampai buku tamu keamanan yang basah kena kopi, inilah kenapa apartemen dan perumahan butuh sistem digital, bukan lagi spreadsheet dan grup WhatsApp.</description>
+      <pubDate>Mon, 27 Jul 2026 00:00:00 GMT</pubDate>
+      <category>manajemen apartemen</category>
+      <category>aplikasi IPL</category>
+      <category>software perumahan</category>
     </item>
     <item>
       <title>Aplikasi Desa Digital: GovTech Pelayanan Publik Desa</title>
