@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 27 Jul 2026 04:08:21 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 05:47:01 GMT</lastBuildDate>
+    <item>
+      <title>Software Studio Fotografi dan Videografi: Stop Dobel Booking dan DP Hilang</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-studio-fotografi-videografi</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-studio-fotografi-videografi</guid>
+      <description>Dari dobel booking fotografer sampai bukti DP yang hilang di chat WhatsApp — begini cara software manajemen studio fotografi dan videografi menyelamatkan bisnis Anda.</description>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Studio Foto</category>
+      <category>Videografi</category>
+      <category>Booking System</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen TPA: Software Penitipan Anak untuk Daycare Modern</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-tpa-daycare-penitipan-anak</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-tpa-daycare-penitipan-anak</guid>
+      <description>Dari buku tamu kertas basah susu sampai telepon yang tak pernah berhenti berdering—begini cara aplikasi manajemen TPA mengubah operasional daycare dan menenangkan orang tua.</description>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Daycare</category>
+      <category>Penitipan Anak</category>
+      <category>EdTech</category>
+    </item>
+    <item>
+      <title>Sistem Freight Forwarding dan Kepabeanan: Solusi Digital untuk Ekspedisi dan PPJK</title>
+      <link>https://afss.tech/blog/sistem-freight-forwarding-kepabeanan-ppjk-ekspedisi</link>
+      <guid>https://afss.tech/blog/sistem-freight-forwarding-kepabeanan-ppjk-ekspedisi</guid>
+      <description>Dari lacak kontainer sampai hitung bea masuk otomatis — begini cara perusahaan ekspedisi dan PPJK berhenti bergantung pada WhatsApp dan folder dokumen yang gampang hilang.</description>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Freight Forwarding</category>
+      <category>Kepabeanan</category>
+      <category>PPJK</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Jaringan SPKLU: Software untuk Operator EV Charging</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-jaringan-spklu-ev-charging</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-jaringan-spklu-ev-charging</guid>
+      <description>Banyak pemilik SPBU dan mall memasang EV charger lalu kecewa karena unitnya sering offline tanpa ada yang tahu. Berikut cara software manajemen jaringan SPKLU menyelamatkan investasi itu.</description>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
+      <category>EV Charging</category>
+      <category>SPKLU</category>
+      <category>Smart Energy</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Kantor Notaris &amp; PPAT: Solusi Digital Anti Ribet</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-kantor-notaris-ppat</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-kantor-notaris-ppat</guid>
+      <description>Dari jadwal klien yang bentrok sampai nyaris telat lapor BPHTB, begini cara sistem manajemen digital menyelamatkan kantor notaris dari kekacauan berkas kertas.</description>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Notaris Digital</category>
+      <category>PPAT</category>
+      <category>Legal Tech</category>
+    </item>
     <item>
       <title>Sistem TPM: Trade Promotion Management untuk Distributor FMCG</title>
       <link>https://afss.tech/blog/sistem-tpm-trade-promotion-management-distributor-fmcg</link>

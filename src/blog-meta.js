@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-manajemen-studio-fotografi-videografi",
+    "date": "2026-07-29",
+    "readMinutes": 9,
+    "c": "#7C3AED",
+    "c2": "#4C1D95",
+    "i18n": {
+      "id": {
+        "title": "Software Studio Fotografi dan Videografi: Stop Dobel Booking dan DP Hilang",
+        "description": "Studio foto masih pakai WhatsApp dan Excel? Kenali software manajemen studio fotografi dan videografi untuk booking, kontrak, dan galeri klien.",
+        "excerpt": "Dari dobel booking fotografer sampai bukti DP yang hilang di chat WhatsApp — begini cara software manajemen studio fotografi dan videografi menyelamatkan bisnis Anda.",
+        "tags": [
+          "Studio Foto",
+          "Videografi",
+          "Booking System"
+        ]
+      },
+      "en": {
+        "title": "Photography Studio Management Software: End Double Bookings and Lost Deposits",
+        "description": "Still juggling shoots on WhatsApp and Excel? See how photography studio management software fixes booking, contracts, and client galleries.",
+        "excerpt": "From double-booked photographers to deposit payments lost in a chat thread — here's how studio management software keeps a photography business running smoothly.",
+        "tags": [
+          "Photo Studio",
+          "Videography",
+          "Booking System"
+        ]
+      },
+      "zh": {
+        "title": "摄影摄像工作室管理系统：告别重复预约与订金丢失",
+        "description": "还在用WhatsApp群聊和Excel表格管理婚礼跟拍与摄影预约？了解摄影摄像工作室管理系统如何解决重复预约、订金追踪与客户画廊交付难题。",
+        "excerpt": "从摄影师重复预约到订金截图在聊天记录里彻底消失——看看摄影摄像工作室管理系统如何让业务重新步入正轨。",
+        "tags": [
+          "摄影工作室",
+          "摄像服务",
+          "预约系统"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-tpa-daycare-penitipan-anak",
+    "date": "2026-07-29",
+    "readMinutes": 9,
+    "c": "#DB2777",
+    "c2": "#9D174D",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen TPA: Software Penitipan Anak untuk Daycare Modern",
+        "description": "TPA masih pakai buku tamu kertas dan telepon manual? Kenali fitur, biaya, dan cara membangun aplikasi manajemen daycare yang bikin orang tua tenang.",
+        "excerpt": "Dari buku tamu kertas basah susu sampai telepon yang tak pernah berhenti berdering—begini cara aplikasi manajemen TPA mengubah operasional daycare dan menenangkan orang tua.",
+        "tags": [
+          "Daycare",
+          "Penitipan Anak",
+          "EdTech"
+        ]
+      },
+      "en": {
+        "title": "Daycare Management Software: Building a Childcare App That Parents Trust",
+        "description": "Tired of paper sign-in sheets and endless parent calls? Learn the features, cost, and timeline for building a daycare management app in Indonesia.",
+        "excerpt": "One spilled bottle of formula on a paper sign-in book was the last straw—here's how a daycare management system replaces chaos with real-time trust.",
+        "tags": [
+          "Daycare",
+          "Childcare",
+          "EdTech"
+        ]
+      },
+      "zh": {
+        "title": "日托中心管理系统：打造让家长安心的儿童看护应用",
+        "description": "还在用纸质签到表、电话响个不停？了解印尼日托中心管理系统的功能、成本与开发周期,让家长真正安心。",
+        "excerpt": "一本被奶渍浸湿的纸质签到簿,成了压垮骆驼的最后一根稻草——看数字化系统如何把混乱的日托运营变成家长信赖的透明日常。",
+        "tags": [
+          "日托中心",
+          "儿童看护",
+          "教育科技"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-freight-forwarding-kepabeanan-ppjk-ekspedisi",
+    "date": "2026-07-29",
+    "readMinutes": 10,
+    "c": "#0369A1",
+    "c2": "#0C4A6E",
+    "i18n": {
+      "id": {
+        "title": "Sistem Freight Forwarding dan Kepabeanan: Solusi Digital untuk Ekspedisi dan PPJK",
+        "description": "WhatsApp berantakan, dokumen PIB tercecer, tagihan disengketakan klien? Kenali sistem digital freight forwarding & kepabeanan untuk PPJK Indonesia.",
+        "excerpt": "Dari lacak kontainer sampai hitung bea masuk otomatis — begini cara perusahaan ekspedisi dan PPJK berhenti bergantung pada WhatsApp dan folder dokumen yang gampang hilang.",
+        "tags": [
+          "Freight Forwarding",
+          "Kepabeanan",
+          "PPJK"
+        ]
+      },
+      "en": {
+        "title": "Freight Forwarding & Customs Brokerage Software: A Digital System for Indonesian PPJK Companies",
+        "description": "Lost shipping documents, WhatsApp chaos, disputed invoices? See how a custom freight forwarding and customs system fixes it for Indonesian PPJK firms.",
+        "excerpt": "From live cargo tracking to automated duty estimates — how freight forwarders and customs brokers can finally quit chasing paperwork across a dozen WhatsApp groups.",
+        "tags": [
+          "Freight Forwarding",
+          "Customs Brokerage",
+          "Logistics Software"
+        ]
+      },
+      "zh": {
+        "title": "货运代理与报关系统：印尼PPJK企业的数字化解决方案",
+        "description": "单证丢失、WhatsApp群混乱、账单被客户质疑？了解货运代理与报关管理系统如何帮印尼货代企业解决这些痛点。",
+        "excerpt": "从实时货物追踪到自动核算进口税——货运代理与报关企业如何摆脱对WhatsApp群和纸质文件夹的依赖。",
+        "tags": [
+          "货运代理",
+          "报关系统",
+          "物流软件"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-jaringan-spklu-ev-charging",
+    "date": "2026-07-29",
+    "readMinutes": 10,
+    "c": "#059669",
+    "c2": "#065F46",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Jaringan SPKLU: Software untuk Operator EV Charging",
+        "description": "Punya SPKLU tapi charger sering rusak dan pendapatan tidak jelas? Ini panduan lengkap software manajemen jaringan pengisian kendaraan listrik untuk operator di Indonesia.",
+        "excerpt": "Banyak pemilik SPBU dan mall memasang EV charger lalu kecewa karena unitnya sering offline tanpa ada yang tahu. Berikut cara software manajemen jaringan SPKLU menyelamatkan investasi itu.",
+        "tags": [
+          "EV Charging",
+          "SPKLU",
+          "Smart Energy"
+        ]
+      },
+      "en": {
+        "title": "EV Charging Network Management Software: A Guide for SPKLU Operators",
+        "description": "Installed EV chargers but stations keep going offline with no clear revenue tracking? Here's a complete guide to charging network management software in Indonesia.",
+        "excerpt": "Plenty of gas station and mall owners install EV chargers only to watch them sit broken with nobody noticing. Here is how network management software rescues that investment.",
+        "tags": [
+          "EV Charging",
+          "SPKLU",
+          "Smart Energy"
+        ]
+      },
+      "zh": {
+        "title": "电动车充电站网络管理软件:印尼SPKLU运营商指南",
+        "description": "装了电动车充电桩却经常离线、收入也说不清楚？这是一份关于印尼电动车充电网络管理软件的完整指南。",
+        "excerpt": "许多加油站和商场业主装了电动车充电桩,结果设备经常故障却没人发现。以下是网络管理软件如何挽救这笔投资。",
+        "tags": [
+          "EV Charging",
+          "SPKLU",
+          "Smart Energy"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-kantor-notaris-ppat",
+    "date": "2026-07-29",
+    "readMinutes": 10,
+    "c": "#1E3A8A",
+    "c2": "#0F172A",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Kantor Notaris & PPAT: Solusi Digital Anti Ribet",
+        "description": "Kantor notaris masih andalkan buku agenda dan lemari arsip? Kenali sistem manajemen digital untuk notaris & PPAT, fitur kunci, biaya, dan studi kasusnya.",
+        "excerpt": "Dari jadwal klien yang bentrok sampai nyaris telat lapor BPHTB, begini cara sistem manajemen digital menyelamatkan kantor notaris dari kekacauan berkas kertas.",
+        "tags": [
+          "Notaris Digital",
+          "PPAT",
+          "Legal Tech"
+        ]
+      },
+      "en": {
+        "title": "Notary & PPAT Practice Management Software: Ditching the Paper Trail",
+        "description": "Still running your notary office on agenda books and filing cabinets? See how a digital practice management system fixes deadlines, billing, and archives.",
+        "excerpt": "From double-booked signings to a near-missed tax deadline, here's how a digital system rescues notary offices from paper-file chaos.",
+        "tags": [
+          "Notary Software",
+          "PPAT",
+          "Legal Tech"
+        ]
+      },
+      "zh": {
+        "title": "公证与PPAT事务所管理系统：告别纸质档案的数字化方案",
+        "description": "公证事务所还在用登记簿和档案柜？了解公证与PPAT数字化管理系统的功能、费用与真实案例，告别错过期限的风险。",
+        "excerpt": "从预约撞期到险些错过BPHTB申报期限，一套数字化管理系统如何拯救深陷纸质档案的公证事务所。",
+        "tags": [
+          "公证数字化",
+          "PPAT",
+          "法律科技"
+        ]
+      }
+    }
+  },
+  {
     "slug": "sistem-tpm-trade-promotion-management-distributor-fmcg",
     "date": "2026-07-27",
     "readMinutes": 10,
