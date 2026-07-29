@@ -652,11 +652,12 @@ footer { background: var(--ink); color: #AAB6C4; padding: 72px 28px 32px; }
 .blog-tag-chip.active { background: var(--blue); border-color: var(--blue); color: #fff; }
 
 /* ── Pagination ── */
-.blog-pagination { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 52px; }
+.blog-pagination { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; margin-top: 52px; }
 .pgn-btn { min-width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: var(--r); border: 1.5px solid var(--line); background: var(--surface); color: var(--ink-2); cursor: pointer; font-size: .88rem; font-weight: 600; transition: all .18s; font-family: inherit; padding: 0 10px; }
 .pgn-btn:hover:not(:disabled) { border-color: var(--blue); color: var(--blue); }
 .pgn-btn.active { background: var(--blue); border-color: var(--blue); color: #fff; }
 .pgn-btn:disabled { opacity: .35; cursor: not-allowed; }
+.pgn-ellipsis { display: flex; align-items: center; justify-content: center; min-width: 24px; height: 38px; color: var(--muted); user-select: none; }
 
 /* ── Empty state + result count ── */
 .blog-empty { text-align: center; padding: 80px 20px; color: var(--muted); }

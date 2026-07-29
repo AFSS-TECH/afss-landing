@@ -46,6 +46,22 @@ imgRenderer.image = ({ href, text }) =>
 
 const PER_PAGE = 6
 
+// Windowed page list so pagination stays compact even with dozens of pages —
+// e.g. [1, '…', 14, 15, 16, '…', 29] instead of 29 buttons in a single row.
+function getPageNumbers(current, total) {
+  if (total <= 1) return [1]
+  const delta = 1
+  const range = []
+  for (let i = Math.max(2, current - delta); i <= Math.min(total - 1, current + delta); i++) {
+    range.push(i)
+  }
+  if (current - delta > 2) range.unshift('…')
+  if (current + delta < total - 1) range.push('…')
+  range.unshift(1)
+  range.push(total)
+  return range
+}
+
 // Article body markdown is authored with plain internal links like `[Paket Harga](/harga)`.
 // `marked` renders these as raw <a href> tags, bypassing our locale-prefixing <Link> wrapper —
 // so on an /en or /zh post they'd silently drop the visitor back into the Indonesian site.
@@ -287,16 +303,20 @@ export function BlogIndex() {
                   <button className="pgn-btn" disabled={page === 1} onClick={() => goPage(page - 1)} aria-label={t('blog.prevPageAriaLabel')}>
                     <Icon icon="fa-solid fa-chevron-left" />
                   </button>
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
-                    <button
-                      key={n}
-                      className={`pgn-btn${n === page ? ' active' : ''}`}
-                      onClick={() => goPage(n)}
-                      aria-current={n === page ? 'page' : undefined}
-                    >
-                      {n}
-                    </button>
-                  ))}
+                  {getPageNumbers(page, totalPages).map((n, i) =>
+                    n === '…' ? (
+                      <span key={`ellipsis-${i}`} className="pgn-ellipsis" aria-hidden="true">…</span>
+                    ) : (
+                      <button
+                        key={n}
+                        className={`pgn-btn${n === page ? ' active' : ''}`}
+                        onClick={() => goPage(n)}
+                        aria-current={n === page ? 'page' : undefined}
+                      >
+                        {n}
+                      </button>
+                    )
+                  )}
                   <button className="pgn-btn" disabled={page === totalPages} onClick={() => goPage(page + 1)} aria-label={t('blog.nextPageAriaLabel')}>
                     <Icon icon="fa-solid fa-chevron-right" />
                   </button>
