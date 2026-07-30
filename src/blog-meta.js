@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-manajemen-toko-emas-perhiasan",
+    "date": "2026-07-30",
+    "readMinutes": 10,
+    "c": "#B45309",
+    "c2": "#78350F",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Toko Emas dan Perhiasan: Stok Berat, Kadar, dan Harga Real-Time",
+        "description": "Aplikasi manajemen toko emas menyatukan stok berbasis berat dan kadar, update harga emas real-time, dan kalkulator tukar tambah otomatis. Cegah kesalahan hitung yang merugikan kas toko secara langsung.",
+        "excerpt": "Kesalahan baca kadar di buku besar bikin toko rugi ratusan ribu dalam satu transaksi tukar tambah, dan papan harga telat diperbarui saat harga emas melonjak. Ini cara aplikasi manajemen toko emas menutup celah itu.",
+        "tags": [
+          "Toko Emas",
+          "Manajemen Perhiasan",
+          "Sistem Kasir Emas"
+        ]
+      },
+      "en": {
+        "title": "Gold and Jewelry Store Management Software: Real-Time Weight, Purity, and Price",
+        "description": "Gold store management software unifies weight- and purity-based stock, real-time gold price updates, and an automatic trade-in calculator. Prevent calculation errors that directly cost your store cash.",
+        "excerpt": "A purity misreading in the ledger costs a store hundreds of thousands in one trade-in transaction, and the price board lags behind a sudden gold price spike. Here's how gold store management software closes that gap.",
+        "tags": [
+          "Gold Store",
+          "Jewelry Management",
+          "Gold POS System"
+        ]
+      },
+      "zh": {
+        "title": "金店与珠宝店管理系统:重量、成色与价格实时掌控",
+        "description": "金店管理系统整合基于重量和成色的库存、实时金价更新和自动换购计算器,防止直接损害店铺现金的计算错误。",
+        "excerpt": "账簿上的成色误读让店铺在一笔换购交易中损失数十万印尼盾,价格黑板又跟不上金价的骤然上涨。这就是金店管理系统如何补上这一缺口。",
+        "tags": [
+          "金店",
+          "珠宝管理",
+          "黄金收银系统"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-event-organizer-wedding-planner",
+    "date": "2026-07-30",
+    "readMinutes": 9,
+    "c": "#DB2777",
+    "c2": "#831843",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Event Organizer dan Wedding Planner: Vendor dan Anggaran dalam Satu Layar",
+        "description": "Aplikasi manajemen event organizer menyatukan koordinasi vendor, pelacakan anggaran real-time, dan timeline acara terpusat. Cegah miskomunikasi vendor dan laporan anggaran yang lambat ke klien.",
+        "excerpt": "Dua vendor dekorasi sama-sama merasa dikonfirmasi untuk acara yang sama, dan laporan sisa anggaran butuh dua hari untuk disusun. Ini cara aplikasi manajemen event organizer menutup celah itu.",
+        "tags": [
+          "Event Organizer",
+          "Wedding Planner",
+          "Manajemen Vendor Acara"
+        ]
+      },
+      "en": {
+        "title": "Event Organizer and Wedding Planner Software: Vendors and Budget in One Screen",
+        "description": "Event organizer management software unifies vendor coordination, real-time budget tracking, and a centralized event timeline. Prevent vendor miscommunication and slow budget reports to clients.",
+        "excerpt": "Two decoration vendors both believe they're confirmed for the same event, and a remaining-budget report takes two days to compile. Here's how event organizer management software closes that gap.",
+        "tags": [
+          "Event Organizer",
+          "Wedding Planner",
+          "Event Vendor Management"
+        ]
+      },
+      "zh": {
+        "title": "活动策划与婚礼策划管理系统:供应商与预算尽在一屏掌握",
+        "description": "活动策划管理系统整合供应商协调、实时预算追踪和集中式活动流程表,防止供应商沟通失误和向客户汇报预算的延迟。",
+        "excerpt": "两家装饰供应商都以为自己被确认负责同一场活动,剩余预算报告却要花两天才能整理出来。这就是活动策划管理系统如何补上这一缺口。",
+        "tags": [
+          "活动策划",
+          "婚礼策划",
+          "活动供应商管理"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-manajemen-praktik-psikolog-konseling",
+    "date": "2026-07-30",
+    "readMinutes": 10,
+    "c": "#0D9488",
+    "c2": "#134E4A",
+    "i18n": {
+      "id": {
+        "title": "Sistem Manajemen Praktik Psikolog dan Konseling: Jadwal Tak Bentrok, Data Klien Aman",
+        "description": "Sistem manajemen praktik psikolog menyatukan kalender booking, rekam catatan progres klien terenkripsi, dan pengingat sesi otomatis. Jaga kerahasiaan data klien sekaligus operasional praktik yang lebih rapi.",
+        "excerpt": "Dua klien terjadwal di jam yang sama, dan catatan progres klien hilang tercampur di buku kertas. Ini cara sistem manajemen praktik psikolog menutup celah itu tanpa mengorbankan kerahasiaan data.",
+        "tags": [
+          "Praktik Psikolog",
+          "Manajemen Klinik Konseling",
+          "Rekam Klien Digital"
+        ]
+      },
+      "en": {
+        "title": "Psychologist and Counseling Practice Software: No More Scheduling Conflicts, Secure Client Data",
+        "description": "Psychology practice management software unifies a booking calendar, encrypted client progress notes, and automatic session reminders. Protect client confidentiality while running a tighter practice.",
+        "excerpt": "Two clients booked for the same time slot, and progress notes lost in a mixed-up paper notebook. Here's how psychology practice management software closes that gap without compromising data confidentiality.",
+        "tags": [
+          "Psychology Practice",
+          "Counseling Clinic Management",
+          "Digital Client Records"
+        ]
+      },
+      "zh": {
+        "title": "心理咨询诊所管理系统:告别日程冲突,守护客户数据安全",
+        "description": "心理咨询诊所管理系统整合预约日历、加密的客户进展记录和自动咨询提醒,在提升诊所运营效率的同时保护客户隐私。",
+        "excerpt": "两位客户被安排在同一时段,客户的进展记录又在纸质笔记本中混乱丢失。这就是心理咨询诊所管理系统如何在不牺牲数据保密性的前提下补上这一缺口。",
+        "tags": [
+          "心理咨询诊所",
+          "诊所管理系统",
+          "数字化客户记录"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-rental-alat-berat-manajemen-armada",
+    "date": "2026-07-30",
+    "readMinutes": 9,
+    "c": "#CA8A04",
+    "c2": "#422006",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Rental Alat Berat: Cegah Dobel Booking dan Unit Mogok karena Servis Terlewat",
+        "description": "Aplikasi rental alat berat menyatukan kalender booking, pencatatan jam operasional, dan peringatan servis preventif otomatis. Cegah dobel booking dan kerusakan unit mendadak yang merugikan klien proyek Anda.",
+        "excerpt": "Unit excavator yang sama dijanjikan ke dua klien berbeda, dan alat mogok mendadak karena servis rutin terlewat ratusan jam. Ini cara aplikasi rental alat berat menutup celah operasional itu.",
+        "tags": [
+          "Rental Alat Berat",
+          "Manajemen Armada",
+          "Jadwal Servis Preventif"
+        ]
+      },
+      "en": {
+        "title": "Heavy Equipment Rental Software: Prevent Double Bookings and Missed-Service Breakdowns",
+        "description": "Heavy equipment rental software unifies a booking calendar, operating-hour tracking, and automatic preventive service alerts. Prevent double bookings and sudden breakdowns that hurt your project clients.",
+        "excerpt": "The same excavator gets promised to two different clients, and a unit suddenly breaks down after missing service by hundreds of hours. Here's how heavy equipment rental software closes that operational gap.",
+        "tags": [
+          "Heavy Equipment Rental",
+          "Fleet Management",
+          "Preventive Service Scheduling"
+        ]
+      },
+      "zh": {
+        "title": "重型设备租赁管理系统:杜绝重复预订与因错过保养导致的故障",
+        "description": "重型设备租赁管理系统整合预订日历、运行小时追踪和自动预防性保养预警,防止重复预订和突发故障损害您的项目客户关系。",
+        "excerpt": "同一台挖掘机被承诺给两位不同客户,设备又因错过数百小时的常规保养而突然抛锚。这就是重型设备租赁管理系统如何补上这一运营缺口。",
+        "tags": [
+          "重型设备租赁",
+          "车队管理",
+          "预防性保养计划"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-toko-bahan-bangunan-material",
+    "date": "2026-07-30",
+    "readMinutes": 10,
+    "c": "#EA580C",
+    "c2": "#7C2D12",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Toko Bahan Bangunan: Stop Stok Ngambang dan Piutang Bon Macet",
+        "description": "Aplikasi manajemen toko bahan bangunan menyatukan stok multi-satuan, kasir digital, dan piutang bon dengan pengingat otomatis. Cegah selisih stok dan piutang macet yang bikin cash flow toko material seret.",
+        "excerpt": "Semen yang tercatat ada di kartu stok ternyata sudah habis di gudang, dan piutang bon pelanggan lama menumpuk tanpa pengingat. Ini cara aplikasi manajemen toko bahan bangunan menutup celah itu.",
+        "tags": [
+          "Toko Bahan Bangunan",
+          "Manajemen Stok Material",
+          "Sistem POS Toko"
+        ]
+      },
+      "en": {
+        "title": "Building Materials Store Management Software: End Floating Stock and Bad Credit Debt",
+        "description": "Building materials store management software unifies multi-unit stock, digital POS, and credit receivables with automatic reminders. Prevent stock discrepancies and overdue credit that choke a materials store's cash flow.",
+        "excerpt": "Cement shown as in stock turns out to be sold out in the warehouse, while old customer credit balances pile up with no reminder. Here's how building materials store software closes that gap.",
+        "tags": [
+          "Building Materials Store",
+          "Material Stock Management",
+          "Store POS System"
+        ]
+      },
+      "zh": {
+        "title": "建材店管理系统:告别虚假库存和赊账坏账",
+        "description": "建材店管理系统整合多单位库存、数字收银和带自动提醒的赊账应收,防止库存差异和逾期赊账拖垮建材店的现金流。",
+        "excerpt": "库存卡上显示还有水泥,仓库里却早已售罄,老客户的赊账也在无提醒的情况下持续累积。这就是建材店管理系统如何补上这一缺口。",
+        "tags": [
+          "建材店",
+          "材料库存管理",
+          "门店收银系统"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-manajemen-studio-fotografi-videografi",
     "date": "2026-07-29",
     "readMinutes": 9,

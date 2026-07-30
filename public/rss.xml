@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Wed, 29 Jul 2026 05:47:01 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 04:34:18 GMT</lastBuildDate>
+    <item>
+      <title>Aplikasi Manajemen Toko Emas dan Perhiasan: Stok Berat, Kadar, dan Harga Real-Time</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-toko-emas-perhiasan</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-toko-emas-perhiasan</guid>
+      <description>Kesalahan baca kadar di buku besar bikin toko rugi ratusan ribu dalam satu transaksi tukar tambah, dan papan harga telat diperbarui saat harga emas melonjak. Ini cara aplikasi manajemen toko emas menutup celah itu.</description>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Toko Emas</category>
+      <category>Manajemen Perhiasan</category>
+      <category>Sistem Kasir Emas</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Event Organizer dan Wedding Planner: Vendor dan Anggaran dalam Satu Layar</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-event-organizer-wedding-planner</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-event-organizer-wedding-planner</guid>
+      <description>Dua vendor dekorasi sama-sama merasa dikonfirmasi untuk acara yang sama, dan laporan sisa anggaran butuh dua hari untuk disusun. Ini cara aplikasi manajemen event organizer menutup celah itu.</description>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Event Organizer</category>
+      <category>Wedding Planner</category>
+      <category>Manajemen Vendor Acara</category>
+    </item>
+    <item>
+      <title>Sistem Manajemen Praktik Psikolog dan Konseling: Jadwal Tak Bentrok, Data Klien Aman</title>
+      <link>https://afss.tech/blog/sistem-manajemen-praktik-psikolog-konseling</link>
+      <guid>https://afss.tech/blog/sistem-manajemen-praktik-psikolog-konseling</guid>
+      <description>Dua klien terjadwal di jam yang sama, dan catatan progres klien hilang tercampur di buku kertas. Ini cara sistem manajemen praktik psikolog menutup celah itu tanpa mengorbankan kerahasiaan data.</description>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Praktik Psikolog</category>
+      <category>Manajemen Klinik Konseling</category>
+      <category>Rekam Klien Digital</category>
+    </item>
+    <item>
+      <title>Aplikasi Rental Alat Berat: Cegah Dobel Booking dan Unit Mogok karena Servis Terlewat</title>
+      <link>https://afss.tech/blog/aplikasi-rental-alat-berat-manajemen-armada</link>
+      <guid>https://afss.tech/blog/aplikasi-rental-alat-berat-manajemen-armada</guid>
+      <description>Unit excavator yang sama dijanjikan ke dua klien berbeda, dan alat mogok mendadak karena servis rutin terlewat ratusan jam. Ini cara aplikasi rental alat berat menutup celah operasional itu.</description>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Rental Alat Berat</category>
+      <category>Manajemen Armada</category>
+      <category>Jadwal Servis Preventif</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Toko Bahan Bangunan: Stop Stok Ngambang dan Piutang Bon Macet</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-toko-bahan-bangunan-material</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-toko-bahan-bangunan-material</guid>
+      <description>Semen yang tercatat ada di kartu stok ternyata sudah habis di gudang, dan piutang bon pelanggan lama menumpuk tanpa pengingat. Ini cara aplikasi manajemen toko bahan bangunan menutup celah itu.</description>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Toko Bahan Bangunan</category>
+      <category>Manajemen Stok Material</category>
+      <category>Sistem POS Toko</category>
+    </item>
     <item>
       <title>Software Studio Fotografi dan Videografi: Stop Dobel Booking dan DP Hilang</title>
       <link>https://afss.tech/blog/aplikasi-manajemen-studio-fotografi-videografi</link>
