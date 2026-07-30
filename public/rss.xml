@@ -6,7 +6,7 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Thu, 30 Jul 2026 04:34:18 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 16:43:32 GMT</lastBuildDate>
     <item>
       <title>Aplikasi Manajemen Toko Emas dan Perhiasan: Stok Berat, Kadar, dan Harga Real-Time</title>
       <link>https://afss.tech/blog/aplikasi-manajemen-toko-emas-perhiasan</link>
@@ -56,6 +56,61 @@
       <category>Toko Bahan Bangunan</category>
       <category>Manajemen Stok Material</category>
       <category>Sistem POS Toko</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Bisnis Mebel dan Furniture Custom: Panduan Lengkap untuk Workshop</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-bisnis-mebel-furniture-custom</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-bisnis-mebel-furniture-custom</guid>
+      <description>Dari nota tulisan tangan yang tertukar sampai piutang pelunasan yang menumpuk -- ini cara sistem manajemen digital menyelamatkan workshop mebel custom dari kerugian material dan kepercayaan klien.</description>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Software Bisnis Mebel</category>
+      <category>Manajemen Workshop Furniture</category>
+      <category>Sistem ERP UKM</category>
+      <category>Custom Furniture</category>
+      <category>Software House Indonesia</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Sekolah Musik dan Studio: Kenapa Bisnis Anda Butuh Sistem Digital</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-sekolah-musik-studio</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-sekolah-musik-studio</guid>
+      <description>Sekolah musik dengan banyak instruktur dan ruang studio rentan jadwal bentrok dan SPP yang telat tertagih -- inilah cara sistem digital custom menyelesaikannya.</description>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Sekolah Musik</category>
+      <category>Manajemen Studio Musik</category>
+      <category>Software Kustom</category>
+      <category>Bisnis Musik</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Jasa Cleaning Service dan Outsourcing Tenaga Kerja: Panduan Lengkap</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-jasa-cleaning-service-outsourcing</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-jasa-cleaning-service-outsourcing</guid>
+      <description>Ratusan petugas tersebar di puluhan lokasi klien tanpa sistem yang tepat sama dengan gaji bocor dan kontrak terancam. Ini cara perusahaan cleaning service dan outsourcing mengelolanya dengan sistem digital.</description>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Cleaning Service</category>
+      <category>Outsourcing</category>
+      <category>Software Bisnis</category>
+    </item>
+    <item>
+      <title>Kenapa Bisnis Vila dan Homestay Anda Butuh Aplikasi Manajemen Properti</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-vila-homestay-penginapan</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-vila-homestay-penginapan</guid>
+      <description>Dari double booking OTA sampai laporan revenue share yang telat, kenali kebutuhan aplikasi manajemen vila dan homestay sebelum reputasi bisnis Anda kena imbasnya.</description>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Manajemen Vila</category>
+      <category>Aplikasi Homestay</category>
+      <category>Software Perhotelan</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Toko Optik dan Kacamata: Kenapa Bisnis Anda Butuh Sistem Custom</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-toko-optik-kacamata</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-toko-optik-kacamata</guid>
+      <description>Resep pelanggan hilang, stok lensa tidak sinkron antar cabang, pesanan lensa custom telat tanpa kabar -- ini alasan toko optik butuh sistem manajemen yang dirancang khusus untuk industrinya.</description>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <category>Toko Optik</category>
+      <category>Software Custom</category>
+      <category>Manajemen Inventori</category>
+      <category>POS</category>
+      <category>Bisnis Retail</category>
     </item>
     <item>
       <title>Software Studio Fotografi dan Videografi: Stop Dobel Booking dan DP Hilang</title>

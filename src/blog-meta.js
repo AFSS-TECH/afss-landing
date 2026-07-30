@@ -199,6 +199,216 @@ export const postsMeta = [
     }
   },
   {
+    "slug": "aplikasi-manajemen-bisnis-mebel-furniture-custom",
+    "date": "2026-07-30",
+    "readMinutes": 10,
+    "c": "#B5651D",
+    "c2": "#292524",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Bisnis Mebel dan Furniture Custom: Panduan Lengkap untuk Workshop",
+        "description": "Panduan lengkap sistem manajemen bisnis mebel custom: fitur wajib, estimasi biaya Rp 15-90 juta, studi kasus, dan cara mulai digitalisasi workshop Anda.",
+        "excerpt": "Dari nota tulisan tangan yang tertukar sampai piutang pelunasan yang menumpuk -- ini cara sistem manajemen digital menyelamatkan workshop mebel custom dari kerugian material dan kepercayaan klien.",
+        "tags": [
+          "Software Bisnis Mebel",
+          "Manajemen Workshop Furniture",
+          "Sistem ERP UKM",
+          "Custom Furniture",
+          "Software House Indonesia"
+        ]
+      },
+      "en": {
+        "title": "Custom Furniture Business Management Software: A Complete Guide for Workshops",
+        "description": "A complete guide to custom furniture management systems: must-have features, realistic Rp 15-90 million cost ranges, a case study, and where to start.",
+        "excerpt": "From mixed-up handwritten order slips to piling unpaid balances -- here is how a digital management system saves custom furniture workshops from material losses and lost client trust.",
+        "tags": [
+          "Furniture Business Software",
+          "Workshop Management System",
+          "SMB ERP Software",
+          "Custom Furniture",
+          "Indonesian Software House"
+        ]
+      },
+      "zh": {
+        "title": "定制家具业务管理系统完整指南：让工坊告别混乱订单",
+        "description": "定制家具管理系统完整指南：必备功能、1500万至9000万印尼盾的合理开发费用区间、真实案例，以及工坊数字化转型的第一步。",
+        "excerpt": "从被弄混的手写订单到堆积如山的未结尾款——数字化管理系统如何帮定制家具工坊避免材料损失与客户信任危机。",
+        "tags": [
+          "家具业务软件",
+          "工坊管理系统",
+          "中小企业ERP",
+          "定制家具",
+          "印尼软件开发商"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-sekolah-musik-studio",
+    "date": "2026-07-30",
+    "readMinutes": 10,
+    "c": "#9333EA",
+    "c2": "#1E1B4B",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Sekolah Musik dan Studio: Kenapa Bisnis Anda Butuh Sistem Digital",
+        "description": "Panduan lengkap membangun sistem manajemen sekolah musik dan studio: penjadwalan kelas, tracking progres murid, billing SPP, hingga sewa ruang rekaman.",
+        "excerpt": "Sekolah musik dengan banyak instruktur dan ruang studio rentan jadwal bentrok dan SPP yang telat tertagih -- inilah cara sistem digital custom menyelesaikannya.",
+        "tags": [
+          "Sekolah Musik",
+          "Manajemen Studio Musik",
+          "Software Kustom",
+          "Bisnis Musik"
+        ]
+      },
+      "en": {
+        "title": "Music School and Studio Management Software: Why Your Business Needs a Custom System",
+        "description": "A complete guide to building music school and studio management software: class scheduling, student progress tracking, monthly billing, and room rentals.",
+        "excerpt": "Music schools juggling multiple instructors and studio rooms are prone to scheduling clashes and late tuition payments -- here's how a custom digital system fixes that.",
+        "tags": [
+          "Music School",
+          "Studio Management",
+          "Custom Software",
+          "Music Business"
+        ]
+      },
+      "zh": {
+        "title": "音乐学校与琴行管理系统：为什么您的生意需要一套定制系统",
+        "description": "音乐学校与琴行管理系统完整指南：课程排程、学生进度追踪、月费账单与录音室租赁，全面提升运营效率。",
+        "excerpt": "拥有多名教师和多间琴房的音乐学校很容易遇到排课冲突和月费拖欠问题——定制系统如何从根本上解决这些痛点。",
+        "tags": [
+          "音乐学校",
+          "琴行管理",
+          "定制软件",
+          "音乐产业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-jasa-cleaning-service-outsourcing",
+    "date": "2026-07-30",
+    "readMinutes": 11,
+    "c": "#0EA5A4",
+    "c2": "#0F172A",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Jasa Cleaning Service dan Outsourcing Tenaga Kerja: Panduan Lengkap",
+        "description": "Panduan lengkap membangun aplikasi manajemen cleaning service dan outsourcing tenaga kerja: absensi GPS, checklist foto, payroll, SLA, dan biaya pengembangan di Indonesia.",
+        "excerpt": "Ratusan petugas tersebar di puluhan lokasi klien tanpa sistem yang tepat sama dengan gaji bocor dan kontrak terancam. Ini cara perusahaan cleaning service dan outsourcing mengelolanya dengan sistem digital.",
+        "tags": [
+          "Cleaning Service",
+          "Outsourcing",
+          "Software Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Cleaning Service and Manpower Outsourcing Management App: A Complete Guide",
+        "description": "A complete guide to building a cleaning service and manpower outsourcing management app: GPS attendance, photo checklists, payroll, SLA tracking, and Indonesian development costs.",
+        "excerpt": "Hundreds of staff spread across dozens of client sites without the right system means leaking payroll and contracts at risk. Here is how cleaning service and outsourcing companies fix it with a digital system.",
+        "tags": [
+          "Cleaning Service",
+          "Outsourcing",
+          "Business Software"
+        ]
+      },
+      "zh": {
+        "title": "清洁服务与劳务外包管理应用完整指南",
+        "description": "清洁服务与劳务外包管理应用完整指南：GPS考勤、照片任务清单、工资系统、SLA跟踪，以及印尼开发费用参考。",
+        "excerpt": "数百名员工分散在数十个客户场地，若没有合适的系统，工资流失和合同违约风险随之而来。看清洁服务与外包公司如何用数字系统解决这一难题。",
+        "tags": [
+          "清洁服务",
+          "劳务外包",
+          "商业软件"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-vila-homestay-penginapan",
+    "date": "2026-07-30",
+    "readMinutes": 10,
+    "c": "#0F8B8D",
+    "c2": "#1C2B33",
+    "i18n": {
+      "id": {
+        "title": "Kenapa Bisnis Vila dan Homestay Anda Butuh Aplikasi Manajemen Properti",
+        "description": "Vila dan homestay Anda rawan double booking dan laporan owner berantakan? Simak kebutuhan sistem manajemen vila custom dan kisaran biayanya di Indonesia.",
+        "excerpt": "Dari double booking OTA sampai laporan revenue share yang telat, kenali kebutuhan aplikasi manajemen vila dan homestay sebelum reputasi bisnis Anda kena imbasnya.",
+        "tags": [
+          "Manajemen Vila",
+          "Aplikasi Homestay",
+          "Software Perhotelan"
+        ]
+      },
+      "en": {
+        "title": "Why Your Villa and Homestay Business Needs Property Management Software",
+        "description": "Villa or homestay plagued by double bookings and messy owner reports? Here is what a custom villa management system needs, and what it costs in Indonesia.",
+        "excerpt": "From OTA double bookings to late revenue-share reports, here is what villa and homestay management software actually needs to cover before it hurts your reputation.",
+        "tags": [
+          "Villa Management",
+          "Homestay Software",
+          "Hospitality Tech"
+        ]
+      },
+      "zh": {
+        "title": "为什么您的别墅与民宿业务需要一套物业管理软件",
+        "description": "别墅或民宿经常重复预订、业主报告一团糟？了解定制别墅管理系统的必备功能，以及在印尼开发这类系统的费用区间。",
+        "excerpt": "从OTA重复预订到迟交的业主分成报告，在声誉受损之前，先了解别墅与民宿管理软件真正需要具备哪些功能。",
+        "tags": [
+          "别墅管理",
+          "民宿软件",
+          "酒店科技"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-toko-optik-kacamata",
+    "date": "2026-07-30",
+    "readMinutes": 11,
+    "c": "#0E7490",
+    "c2": "#0F172A",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Toko Optik dan Kacamata: Kenapa Bisnis Anda Butuh Sistem Custom",
+        "description": "Toko optik masih pakai kartu resep kertas dan stok manual? Kenali fitur wajib aplikasi manajemen optik custom, kisaran biaya, dan studi kasus nyata.",
+        "excerpt": "Resep pelanggan hilang, stok lensa tidak sinkron antar cabang, pesanan lensa custom telat tanpa kabar -- ini alasan toko optik butuh sistem manajemen yang dirancang khusus untuk industrinya.",
+        "tags": [
+          "Toko Optik",
+          "Software Custom",
+          "Manajemen Inventori",
+          "POS",
+          "Bisnis Retail"
+        ]
+      },
+      "en": {
+        "title": "Optical Shop Management Software: Why Your Eyewear Business Needs a Custom System",
+        "description": "Still running your optical shop on paper prescription cards and manual stock counts? Here are the must-have features, realistic costs, and a real case study.",
+        "excerpt": "Lost prescriptions, out-of-sync lens stock across branches, custom lens orders running late without warning -- here is why optical shops need a management system built for the industry.",
+        "tags": [
+          "Optical Shop",
+          "Custom Software",
+          "Inventory Management",
+          "POS",
+          "Retail Business"
+        ]
+      },
+      "zh": {
+        "title": "眼镜店管理软件：为什么你的眼镜生意需要一套定制系统",
+        "description": "还在用纸质处方卡和人工盘点管理眼镜店？了解定制眼镜店管理系统的必备功能、真实开发费用与实际案例。",
+        "excerpt": "处方丢失、镜片库存跨门店不同步、定制镜片订单延误却无人告知——这就是眼镜店需要一套专为行业打造的管理系统的原因。",
+        "tags": [
+          "眼镜店",
+          "定制软件",
+          "库存管理",
+          "收银系统",
+          "零售业务"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-manajemen-studio-fotografi-videografi",
     "date": "2026-07-29",
     "readMinutes": 9,
