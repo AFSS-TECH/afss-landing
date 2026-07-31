@@ -4,6 +4,225 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-manajemen-persewaan-alat-pesta-event",
+    "date": "2026-07-31",
+    "readMinutes": 9,
+    "c": "#C026D3",
+    "c2": "#701A75",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Persewaan Alat Pesta: Stop Double-Booking",
+        "description": "Kursi dan tenda yang sama tersewa untuk dua acara berbeda di tanggal sama? Kenali cara aplikasi manajemen rental alat pesta mencegah kerugian ini.",
+        "excerpt": "Dari whiteboard ke sistem digital: bagaimana aplikasi rental alat pesta menghentikan double-booking, sengketa deposit, dan kru yang salah lokasi.",
+        "tags": [
+          "rental alat pesta",
+          "manajemen event",
+          "software persewaan",
+          "booking calendar",
+          "deposit kerusakan"
+        ]
+      },
+      "en": {
+        "title": "Party Rental Software Indonesia: End Double-Booking for Good",
+        "description": "Same tent and chairs booked for two weddings on the same date? See how custom rental management software fixes this for Indonesian event businesses.",
+        "excerpt": "How a Bandung party rental business went from spreadsheet chaos and double-bookings to a zero-conflict, unit-level tracking system in ten weeks.",
+        "tags": [
+          "party rental software",
+          "event equipment management",
+          "booking system",
+          "inventory tracking",
+          "Indonesia SMB software"
+        ]
+      },
+      "zh": {
+        "title": "印尼派对与活动用品租赁管理软件:告别重复预订与押金纠纷",
+        "description": "同一批帐篷椅子被重复预订给两场婚礼?了解定制租赁管理软件如何帮印尼派对用品租赁企业杜绝这类损失。",
+        "excerpt": "从Excel表格到单元级可用性系统:万隆一家派对用品租赁企业如何在十周内实现零重复预订、零押金纠纷。",
+        "tags": [
+          "派对用品租赁软件",
+          "活动设备管理",
+          "预订系统",
+          "库存追踪",
+          "印尼中小企业软件"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-jasa-pest-control-fumigasi",
+    "date": "2026-07-31",
+    "readMinutes": 10,
+    "c": "#16A34A",
+    "c2": "#14532D",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Jasa Pest Control & Fumigasi untuk Bisnis Anda",
+        "description": "Kontrak berlangganan terlewat, sengketa treatment tanpa bukti? Aplikasi manajemen pest control custom bisa hentikan kebocoran pendapatan bisnis Anda.",
+        "excerpt": "Kontrak triwulanan hilang, teknisi salah alamat, sengketa treatment tanpa bukti foto. Begini cara sistem custom menghentikan kebocoran pendapatan seperti ini.",
+        "tags": [
+          "pest control",
+          "manajemen jasa lapangan",
+          "software custom",
+          "fumigasi"
+        ]
+      },
+      "en": {
+        "title": "Pest Control & Fumigation Business Management Software in Indonesia",
+        "description": "Losing renewal contracts and facing photo-less treatment disputes? Custom pest control management software fixes these revenue leaks for Indonesian operators.",
+        "excerpt": "A missed quarterly renewal, a technician sent to the wrong address, a dispute with no photo proof — here's how custom software fixes each of these leaks.",
+        "tags": [
+          "pest control software",
+          "field service management",
+          "custom software Indonesia",
+          "fumigation business"
+        ]
+      },
+      "zh": {
+        "title": "印尼害虫防治与消杀企业管理软件：合同、派工与合规一站解决",
+        "description": "季度合同续约漏掉、处理纠纷没有照片证据？定制害虫防治管理软件帮印尼消杀企业堵住收入漏洞，提升续约率与派工效率。",
+        "excerpt": "合同到期没人跟进、技术员走错地址、纠纷没有照片证据——看定制系统如何为印尼害虫防治企业堵住这些漏洞。",
+        "tags": [
+          "害虫防治软件",
+          "现场服务管理",
+          "印尼定制软件",
+          "消杀企业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-sekolah-mengemudi-kursus-setir",
+    "date": "2026-07-31",
+    "readMinutes": 9,
+    "c": "#0284C7",
+    "c2": "#0C4A6E",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Sekolah Mengemudi: Stop Jadwal Bentrok & Sengketa Jam",
+        "description": "Instruktur dan mobil sering bentrok jadwal? Sengketa jam paket bikin pusing? Ini cara aplikasi manajemen sekolah mengemudi custom menyelesaikannya, lengkap kisaran biaya di Indonesia.",
+        "excerpt": "Dari buku catatan dan grup WhatsApp yang bikin dua murid berebut satu mobil, sampai sistem yang menghitung sisa jam otomatis — begini cara sekolah mengemudi naik kelas.",
+        "tags": [
+          "sekolah mengemudi",
+          "software kursus setir",
+          "manajemen instruktur",
+          "aplikasi bisnis otomotif",
+          "WhatsApp bisnis"
+        ]
+      },
+      "en": {
+        "title": "Driving School Software: Fix Double-Booked Cars & Hour Disputes",
+        "description": "Instructors and cars double-booked? Students disputing lesson hours? Here's how custom driving school management software fixes it, with Indonesia pricing tiers.",
+        "excerpt": "Two students, one car, the same nine o'clock slot — here's how one Bandung driving school replaced notebooks and WhatsApp chaos with a system that never double-books.",
+        "tags": [
+          "driving school software",
+          "instructor scheduling",
+          "student management app",
+          "Indonesia SMB software",
+          "WhatsApp automation"
+        ]
+      },
+      "zh": {
+        "title": "驾校管理系统开发:告别排班冲突与课时纠纷",
+        "description": "教练和车辆经常撞期?学员课时说不清谁对谁错?了解定制驾校管理软件如何解决这些问题,附印尼市场报价区间。",
+        "excerpt": "两名学员、一辆车、同一个九点档期——万隆一家驾校如何用定制系统终结笔记本与WhatsApp群组的混乱管理。",
+        "tags": [
+          "驾校管理系统",
+          "教练排班软件",
+          "学员管理应用",
+          "印尼中小企业软件",
+          "WhatsApp自动化"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-petshop-grooming-hewan",
+    "date": "2026-07-31",
+    "readMinutes": 9,
+    "c": "#7C3AED",
+    "c2": "#4C1D95",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Petshop & Grooming: Booking sampai POS",
+        "description": "Booking dobel dan riwayat vaksin hilang bikin pelanggan kabur? Kenali fitur wajib aplikasi manajemen petshop dan grooming, biaya, dan studi kasus di Bandung.",
+        "excerpt": "Dari booking dobel di akhir pekan sampai vaksin kucing yang nyaris terlewat — begini cara sistem custom menyelamatkan operasional petshop dan grooming Anda.",
+        "tags": [
+          "aplikasi petshop",
+          "software grooming hewan",
+          "sistem booking grooming",
+          "POS toko hewan"
+        ]
+      },
+      "en": {
+        "title": "Pet Shop & Grooming Management Software: Booking to POS",
+        "description": "Double-booked grooming slots and lost vaccination records driving customers away? Learn the must-have features, Indonesia pricing, and a Bandung case study.",
+        "excerpt": "From a double-booked Saturday to a cat's nearly-missed rabies shot — how a custom system saved one Bandung pet business from losing loyal customers.",
+        "tags": [
+          "pet shop software",
+          "grooming management app",
+          "veterinary records system",
+          "pet business POS"
+        ]
+      },
+      "zh": {
+        "title": "宠物店与美容管理软件:预约、病历与收银系统全解析",
+        "description": "预约撞车、疫苗记录丢失导致顾客流失?了解宠物店与美容店管理软件的必备功能、印尼定制开发价格区间,以及万隆真实案例。",
+        "excerpt": "从周六预约撞车到猫咪疫苗几乎错过——万隆一家宠物店如何靠定制系统留住顾客,提升寄养入住率。",
+        "tags": [
+          "宠物店管理软件",
+          "宠物美容预约系统",
+          "宠物病历管理",
+          "印尼定制软件"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-jasa-pindahan-relokasi",
+    "date": "2026-07-31",
+    "readMinutes": 10,
+    "c": "#DC2626",
+    "c2": "#7F1D1D",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Jasa Pindahan Rumah dan Kantor di Indonesia",
+        "description": "Sering rugi karena klaim rusak atau jadwal truk bentrok? Simak cara aplikasi manajemen jasa pindahan mengatasi dispatch, manifest, dan tracking pelanggan.",
+        "excerpt": "Dari sengketa klaim kerusakan sampai truk yang bentrok jadwal — begini aplikasi custom menghentikan kebocoran biaya di bisnis jasa pindahan Anda.",
+        "tags": [
+          "jasa pindahan",
+          "software logistik",
+          "aplikasi dispatch",
+          "sistem custom",
+          "UMKM Indonesia"
+        ]
+      },
+      "en": {
+        "title": "Moving Company Management Software for the Indonesian Market",
+        "description": "Losing money to damage disputes or double-booked trucks? See how moving company management software fixes dispatch, manifests, and customer tracking.",
+        "excerpt": "From damage claim disputes to double-booked trucks — here is how custom software stops the cost leaks inside a moving and relocation business.",
+        "tags": [
+          "moving company software",
+          "relocation logistics",
+          "dispatch app",
+          "custom software",
+          "Indonesia SMB"
+        ]
+      },
+      "zh": {
+        "title": "搬家服务管理软件：印尼搬迁企业的调度与追踪方案",
+        "description": "还在为损坏理赔纠纷和卡车排班冲突头疼吗？了解搬家服务管理软件如何解决调度、库存清单与客户追踪问题，降低运营损失。",
+        "excerpt": "从损坏理赔纠纷到卡车排班撞车——这套定制系统如何帮搬家企业堵住运营中的隐性成本漏洞。",
+        "tags": [
+          "搬家服务软件",
+          "物流调度系统",
+          "定制软件开发",
+          "印尼中小企业",
+          "客户追踪系统"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-manajemen-toko-emas-perhiasan",
     "date": "2026-07-30",
     "readMinutes": 10,

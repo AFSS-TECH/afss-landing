@@ -6,7 +6,65 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Thu, 30 Jul 2026 16:43:32 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2026 17:56:28 GMT</lastBuildDate>
+    <item>
+      <title>Aplikasi Manajemen Persewaan Alat Pesta: Stop Double-Booking</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-persewaan-alat-pesta-event</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-persewaan-alat-pesta-event</guid>
+      <description>Dari whiteboard ke sistem digital: bagaimana aplikasi rental alat pesta menghentikan double-booking, sengketa deposit, dan kru yang salah lokasi.</description>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 GMT</pubDate>
+      <category>rental alat pesta</category>
+      <category>manajemen event</category>
+      <category>software persewaan</category>
+      <category>booking calendar</category>
+      <category>deposit kerusakan</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Jasa Pest Control &amp; Fumigasi untuk Bisnis Anda</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-jasa-pest-control-fumigasi</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-jasa-pest-control-fumigasi</guid>
+      <description>Kontrak triwulanan hilang, teknisi salah alamat, sengketa treatment tanpa bukti foto. Begini cara sistem custom menghentikan kebocoran pendapatan seperti ini.</description>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 GMT</pubDate>
+      <category>pest control</category>
+      <category>manajemen jasa lapangan</category>
+      <category>software custom</category>
+      <category>fumigasi</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Sekolah Mengemudi: Stop Jadwal Bentrok &amp; Sengketa Jam</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-sekolah-mengemudi-kursus-setir</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-sekolah-mengemudi-kursus-setir</guid>
+      <description>Dari buku catatan dan grup WhatsApp yang bikin dua murid berebut satu mobil, sampai sistem yang menghitung sisa jam otomatis — begini cara sekolah mengemudi naik kelas.</description>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 GMT</pubDate>
+      <category>sekolah mengemudi</category>
+      <category>software kursus setir</category>
+      <category>manajemen instruktur</category>
+      <category>aplikasi bisnis otomotif</category>
+      <category>WhatsApp bisnis</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Petshop &amp; Grooming: Booking sampai POS</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-petshop-grooming-hewan</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-petshop-grooming-hewan</guid>
+      <description>Dari booking dobel di akhir pekan sampai vaksin kucing yang nyaris terlewat — begini cara sistem custom menyelamatkan operasional petshop dan grooming Anda.</description>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 GMT</pubDate>
+      <category>aplikasi petshop</category>
+      <category>software grooming hewan</category>
+      <category>sistem booking grooming</category>
+      <category>POS toko hewan</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Jasa Pindahan Rumah dan Kantor di Indonesia</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-jasa-pindahan-relokasi</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-jasa-pindahan-relokasi</guid>
+      <description>Dari sengketa klaim kerusakan sampai truk yang bentrok jadwal — begini aplikasi custom menghentikan kebocoran biaya di bisnis jasa pindahan Anda.</description>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 GMT</pubDate>
+      <category>jasa pindahan</category>
+      <category>software logistik</category>
+      <category>aplikasi dispatch</category>
+      <category>sistem custom</category>
+      <category>UMKM Indonesia</category>
+    </item>
     <item>
       <title>Aplikasi Manajemen Toko Emas dan Perhiasan: Stok Berat, Kadar, dan Harga Real-Time</title>
       <link>https://afss.tech/blog/aplikasi-manajemen-toko-emas-perhiasan</link>
