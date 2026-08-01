@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Fri, 31 Jul 2026 17:56:28 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 02:21:21 GMT</lastBuildDate>
+    <item>
+      <title>Aplikasi Manajemen Depot Air Minum Isi Ulang: Solusi Galon Titipan, Langganan, dan Rute Antar</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-depot-air-minum-isi-ulang</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-depot-air-minum-isi-ulang</guid>
+      <description>Delapan galon titipan seorang pelanggan hilang tak terlacak dan memicu sengketa yang membuat depot kehilangan satu RT langganan. Begini cara sistem terpusat mencegahnya.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Depot Air Minum</category>
+      <category>Isi Ulang Galon</category>
+      <category>Manajemen Langganan Air</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Panti Jompo: Jadwal Obat, Perawatan, dan Komunikasi Keluarga</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-panti-jompo-senior-care</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-panti-jompo-senior-care</guid>
+      <description>Sebuah dosis obat yang terlewat karena kartu kertas salah baca saat pergantian shift nyaris berakibat fatal bagi seorang lansia, dan keluarganya baru tahu dari tetangga, bukan dari panti.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Panti Jompo</category>
+      <category>Senior Care</category>
+      <category>Manajemen Perawatan Lansia</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Konveksi: Sistem Produksi Garment dari Potong sampai Quality Control</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-konveksi-garment-produksi-pakaian</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-konveksi-garment-produksi-pakaian</guid>
+      <description>Order 5.000 kemeja telat 8 hari karena bottleneck di line jahit tak terdeteksi di papan tulis produksi, memicu denda keterlambatan yang menggerus habis margin. Begini sistem yang mencegahnya.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Konveksi</category>
+      <category>Produksi Garment</category>
+      <category>Manajemen Produksi Pakaian</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Travel Agent dan Tour Operator: Itinerary, Manifest, hingga Margin per Trip</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-travel-agent-tour-wisata</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-travel-agent-tour-wisata</guid>
+      <description>Dua keluarga ditempatkan di kamar hotel yang sama saat keberangkatan grup 42 peserta ke Bali karena manifest tercecer di WhatsApp — begini cara aplikasi travel agent mencegahnya.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Travel Agent</category>
+      <category>Biro Perjalanan Wisata</category>
+      <category>Manajemen Tur</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Showroom dan Dealer Mobil Bekas: Solusi Inventaris, Dokumen, dan Komisi</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-showroom-dealer-mobil-bekas</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-showroom-dealer-mobil-bekas</guid>
+      <description>Sebuah mobil konsinyasi terjual tanpa diketahui BPKB-nya masih ditahan leasing, memaksa showroom menombok puluhan juta rupiah. Begini cara aplikasi manajemen showroom mencegah insiden seperti ini.</description>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Showroom Mobil</category>
+      <category>Dealer Mobil Bekas</category>
+      <category>Manajemen Inventaris Kendaraan</category>
+    </item>
     <item>
       <title>Aplikasi Manajemen Persewaan Alat Pesta: Stop Double-Booking</title>
       <link>https://afss.tech/blog/aplikasi-manajemen-persewaan-alat-pesta-event</link>

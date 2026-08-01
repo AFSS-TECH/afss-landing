@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-manajemen-depot-air-minum-isi-ulang",
+    "date": "2026-08-01",
+    "readMinutes": 10,
+    "c": "#0284C7",
+    "c2": "#075985",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Depot Air Minum Isi Ulang: Solusi Galon Titipan, Langganan, dan Rute Antar",
+        "description": "Depot air minum isi ulang rawan rugi karena galon titipan tercampur, jadwal langganan meleset, dan kas kurir tidak balance. Simak solusi sistem terpusatnya.",
+        "excerpt": "Delapan galon titipan seorang pelanggan hilang tak terlacak dan memicu sengketa yang membuat depot kehilangan satu RT langganan. Begini cara sistem terpusat mencegahnya.",
+        "tags": [
+          "Depot Air Minum",
+          "Isi Ulang Galon",
+          "Manajemen Langganan Air"
+        ]
+      },
+      "en": {
+        "title": "Refillable Water Depot Management Software: Solving Deposit Gallons, Subscriptions, and Delivery Routes",
+        "description": "Refill water depots lose money when customer-owned deposit gallons get mixed up, subscription schedules slip, and courier cash never balances. Here is the fix.",
+        "excerpt": "Eight of a customer's deposit gallons went untraceable and sparked a dispute that cost the depot an entire neighborhood of subscribers. Here is how a centralized system prevents it.",
+        "tags": [
+          "Water Refill Depot",
+          "Gallon Refill Business",
+          "Water Subscription Management"
+        ]
+      },
+      "zh": {
+        "title": "桶装纯净水补充站管理软件:解决寄存水桶、订阅配送与路线管理难题",
+        "description": "纯净水补充站常因寄存水桶混淆、订阅客户配送延误、多名配送员现金对不上账而蒙受损失。了解集中化管理系统如何解决这些问题。",
+        "excerpt": "一位客户寄存的八个空桶下落不明,引发纠纷,最终让补充站失去了整整一条街的订阅客户。集中化系统如何从根本上避免这种情况。",
+        "tags": [
+          "纯净水补充站",
+          "桶装水业务",
+          "水站订阅管理"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-panti-jompo-senior-care",
+    "date": "2026-08-01",
+    "readMinutes": 10,
+    "c": "#0D9488",
+    "c2": "#134E4A",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Panti Jompo: Jadwal Obat, Perawatan, dan Komunikasi Keluarga",
+        "description": "Aplikasi manajemen panti jompo: jadwal perawatan harian, rekam pemberian obat, portal komunikasi keluarga, jadwal shift perawat, dan tagihan bulanan per resident.",
+        "excerpt": "Sebuah dosis obat yang terlewat karena kartu kertas salah baca saat pergantian shift nyaris berakibat fatal bagi seorang lansia, dan keluarganya baru tahu dari tetangga, bukan dari panti.",
+        "tags": [
+          "Panti Jompo",
+          "Senior Care",
+          "Manajemen Perawatan Lansia"
+        ]
+      },
+      "en": {
+        "title": "Senior Care Facility Management App: Medication Schedules, Care Plans, and Family Communication",
+        "description": "Senior care facility app: daily care schedules, medication tracking, family communication portal, staff shift scheduling, and per-resident monthly billing.",
+        "excerpt": "A missed medication dose caused by a misread paper chart at shift change nearly turned fatal for an elderly resident, and his family only found out from a neighbor, not from the facility.",
+        "tags": [
+          "Senior Care Facility",
+          "Elderly Care Management",
+          "Nursing Home Software"
+        ]
+      },
+      "zh": {
+        "title": "养老院管理应用：给药时间表、日常照护与家属沟通",
+        "description": "印尼养老院管理应用指南：每日照护时间表、给药记录、家属沟通门户、员工排班与按住户的每月账单明细。",
+        "excerpt": "交班时纸质给药卡被误读，导致一剂药物被漏服，几乎酿成大祸，而家属竟是从邻居那里才得知此事，而非养老院本身。",
+        "tags": [
+          "养老院管理",
+          "老年照护",
+          "养老院信息系统"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-konveksi-garment-produksi-pakaian",
+    "date": "2026-08-01",
+    "readMinutes": 10,
+    "c": "#7C3AED",
+    "c2": "#4C1D95",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Konveksi: Sistem Produksi Garment dari Potong sampai Quality Control",
+        "description": "Aplikasi manajemen konveksi untuk melacak produksi per tahap, stok kain dan bahan baku, upah borongan pekerja, deadline buyer, dan tingkat reject secara real-time.",
+        "excerpt": "Order 5.000 kemeja telat 8 hari karena bottleneck di line jahit tak terdeteksi di papan tulis produksi, memicu denda keterlambatan yang menggerus habis margin. Begini sistem yang mencegahnya.",
+        "tags": [
+          "Konveksi",
+          "Produksi Garment",
+          "Manajemen Produksi Pakaian"
+        ]
+      },
+      "en": {
+        "title": "Garment Production Management App: Tracking Konveksi Output from Cutting to Quality Control",
+        "description": "A garment production management app to track production per stage, fabric and raw material stock, worker piece-rate payroll, buyer deadlines, and reject rates in real time.",
+        "excerpt": "A 5,000-shirt order shipped 8 days late because a sewing-line bottleneck went unnoticed on a paper whiteboard, triggering a penalty that wiped out the entire margin. Here is the system that prevents it.",
+        "tags": [
+          "Garment Manufacturing",
+          "Apparel Production",
+          "Production Management Software"
+        ]
+      },
+      "zh": {
+        "title": "制衣厂生产管理应用:从裁剪到质检的服装生产追踪系统",
+        "description": "制衣厂生产管理应用,实时追踪各生产阶段进度、布料与原材料库存、工人计件工资、买家订单交期与不良品率。",
+        "excerpt": "一笔5000件衬衫订单因缝制线瓶颈未被白板及时发现而延迟8天交货,违约金几乎吃掉全部利润。这是能够避免此类事故的系统。",
+        "tags": [
+          "制衣厂",
+          "服装生产",
+          "生产管理系统"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-travel-agent-tour-wisata",
+    "date": "2026-08-01",
+    "readMinutes": 10,
+    "c": "#0369A1",
+    "c2": "#0C4A6E",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Travel Agent dan Tour Operator: Itinerary, Manifest, hingga Margin per Trip",
+        "description": "Sistem manajemen biro perjalanan wisata untuk itinerary tur, manifest peserta, DP dan cicilan, booking vendor multi-supplier, hingga margin keuntungan per trip.",
+        "excerpt": "Dua keluarga ditempatkan di kamar hotel yang sama saat keberangkatan grup 42 peserta ke Bali karena manifest tercecer di WhatsApp — begini cara aplikasi travel agent mencegahnya.",
+        "tags": [
+          "Travel Agent",
+          "Biro Perjalanan Wisata",
+          "Manajemen Tur"
+        ]
+      },
+      "en": {
+        "title": "Travel Agent and Tour Operator Management App: Itinerary, Manifest, and Per-Trip Margin",
+        "description": "Travel agency management system for tour itineraries, participant manifests, deposits and installments, multi-vendor booking coordination, and per-trip profit margin.",
+        "excerpt": "Two families were assigned the same hotel room during a 42-person Bali tour because the manifest was scattered across WhatsApp — here's how a travel agent app prevents it.",
+        "tags": [
+          "Travel Agency",
+          "Tour Operator",
+          "Tour Management"
+        ]
+      },
+      "zh": {
+        "title": "旅行社与旅游运营商管理应用:行程、名单到单团利润率",
+        "description": "旅行社管理系统,涵盖旅游行程规划、参团名单、定金与分期付款、多供应商预订协调,以及单团利润率计算。",
+        "excerpt": "42人巴厘岛旅行团出发时,两个家庭被分到同一间酒店房——名单散落在WhatsApp导致的失误,旅行社管理应用如何避免此类事故。",
+        "tags": [
+          "旅行社",
+          "旅游运营商",
+          "旅游管理"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-showroom-dealer-mobil-bekas",
+    "date": "2026-08-01",
+    "readMinutes": 10,
+    "c": "#1E3A8A",
+    "c2": "#1E293B",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Showroom dan Dealer Mobil Bekas: Solusi Inventaris, Dokumen, dan Komisi",
+        "description": "Panduan lengkap aplikasi manajemen showroom mobil bekas: pelacakan STNK/BPKB, mobil konsinyasi, pengajuan leasing, komisi sales, biaya reconditioning, dan jadwal test drive.",
+        "excerpt": "Sebuah mobil konsinyasi terjual tanpa diketahui BPKB-nya masih ditahan leasing, memaksa showroom menombok puluhan juta rupiah. Begini cara aplikasi manajemen showroom mencegah insiden seperti ini.",
+        "tags": [
+          "Showroom Mobil",
+          "Dealer Mobil Bekas",
+          "Manajemen Inventaris Kendaraan"
+        ]
+      },
+      "en": {
+        "title": "Used Car Dealership and Showroom Management App: Inventory, Documents, and Commission Solutions",
+        "description": "Complete guide to used car showroom management apps: STNK/BPKB document tracking, consignment vehicles, leasing partner applications, sales commission, and reconditioning costs.",
+        "excerpt": "A consignment car was sold without anyone knowing its ownership document was still held by a leasing company, forcing the dealership to pay tens of millions of rupiah out of pocket. Here is how a showroom management app prevents incidents like this.",
+        "tags": [
+          "Car Showroom Software",
+          "Used Car Dealer",
+          "Vehicle Inventory Management"
+        ]
+      },
+      "zh": {
+        "title": "二手车展厅与经销商管理软件:库存、证件与佣金一体化解决方案",
+        "description": "二手车展厅管理软件完整指南:STNK/BPKB证件追踪、寄售车辆管理、租赁伙伴申请追踪、销售佣金计算与车辆整备成本管理。",
+        "excerpt": "一辆寄售车在无人知晓其所有权证件仍被租赁公司扣押的情况下被卖出,迫使展厅自掏腰包赔付数千万印尼盾。看看展厅管理软件如何防止此类事件发生。",
+        "tags": [
+          "二手车展厅软件",
+          "二手车经销商",
+          "车辆库存管理"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-manajemen-persewaan-alat-pesta-event",
     "date": "2026-07-31",
     "readMinutes": 9,
