@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Sat, 01 Aug 2026 02:21:21 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 16:22:19 GMT</lastBuildDate>
+    <item>
+      <title>Aplikasi Manajemen Distributor ATK &amp; Alat Tulis Kantor: Kontrak Harga, Rute Kirim, dan Piutang dalam Satu Sistem</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-distributor-atk-alat-tulis-kantor</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-distributor-atk-alat-tulis-kantor</guid>
+      <description>Harga kontrak yang tercatat di file pribadi sales, rute pengiriman yang direncanakan dari ingatan, dan piutang yang baru ketahuan menumpuk setelah cash flow seret—ini biaya nyata distribusi ATK tanpa sistem terpusat, dan bagaimana aplikasi khusus mengatasinya.</description>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Distributor ATK</category>
+      <category>Alat Tulis Kantor</category>
+      <category>Manajemen B2B</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Pet Hotel &amp; Penitipan Hewan: Booking, Rekam Medis, dan Billing dalam Satu Sistem</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-pet-hotel-penitipan-hewan</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-pet-hotel-penitipan-hewan</guid>
+      <description>Papan tulis dan buku catatan rentan bikin jadwal obat terlewat dan kandang bentrok. Ini cara aplikasi manajemen pet hotel terpusat menutup celah operasional bisnis penitipan hewan.</description>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Pet Hotel</category>
+      <category>Penitipan Hewan</category>
+      <category>Manajemen Boarding</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Money Changer &amp; Remittance Digital: Kurs Real-Time dan Kepatuhan KYC/AML</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-money-changer-remittance-digital</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-money-changer-remittance-digital</guid>
+      <description>Kurs yang telat sampai ke counter dan pencatatan KYC yang bolong bisa merugikan money changer puluhan juta rupiah dalam satu transaksi. Ini cara aplikasi manajemen terpusat mengatasinya.</description>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Money Changer</category>
+      <category>Remittance Digital</category>
+      <category>Kepatuhan KYC/AML</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Penerbitan Buku &amp; Self-Publishing: Dari Naskah sampai Royalti</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-penerbitan-buku-self-publishing</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-penerbitan-buku-self-publishing</guid>
+      <description>Royalti dihitung dari basis harga yang salah, cetak ulang yang ternyata berlebih, dan rekonsiliasi konsinyasi yang memakan berhari-hari — begini cara aplikasi manajemen penerbitan buku terpusat menutup celah-celah itu.</description>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Penerbitan Buku</category>
+      <category>Self-Publishing</category>
+      <category>Manajemen Royalti</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Jasa Keamanan &amp; Outsourcing Satpam: Panduan Lengkap untuk Perusahaan Security</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-jasa-keamanan-satpam-outsourcing</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-jasa-keamanan-satpam-outsourcing</guid>
+      <description>Satu pos kosong akibat miskomunikasi jadwal WhatsApp bisa memicu penalti kontrak puluhan juta rupiah. Ini cara aplikasi manajemen jasa keamanan mengatasi masalah penjadwalan, patroli, insiden, dan payroll satpam outsourcing.</description>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Jasa Keamanan</category>
+      <category>Manajemen Satpam</category>
+      <category>Outsourcing Security</category>
+    </item>
     <item>
       <title>Aplikasi Manajemen Depot Air Minum Isi Ulang: Solusi Galon Titipan, Langganan, dan Rute Antar</title>
       <link>https://afss.tech/blog/aplikasi-manajemen-depot-air-minum-isi-ulang</link>

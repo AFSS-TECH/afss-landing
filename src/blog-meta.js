@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-manajemen-distributor-atk-alat-tulis-kantor",
+    "date": "2026-08-09",
+    "readMinutes": 10,
+    "c": "#1D4ED8",
+    "c2": "#1E3A8A",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Distributor ATK & Alat Tulis Kantor: Kontrak Harga, Rute Kirim, dan Piutang dalam Satu Sistem",
+        "description": "Distributor ATK dan office supplies B2B menghadapi masalah harga kontrak per klien, rute pengiriman ke puluhan titik, piutang menumpuk, dan ratusan SKU kecil. Ini cara aplikasi manajemen distributor menyelesaikannya, lengkap dengan kisaran biaya di Indonesia.",
+        "excerpt": "Harga kontrak yang tercatat di file pribadi sales, rute pengiriman yang direncanakan dari ingatan, dan piutang yang baru ketahuan menumpuk setelah cash flow seret—ini biaya nyata distribusi ATK tanpa sistem terpusat, dan bagaimana aplikasi khusus mengatasinya.",
+        "tags": [
+          "Distributor ATK",
+          "Alat Tulis Kantor",
+          "Manajemen B2B"
+        ]
+      },
+      "en": {
+        "title": "Office Supplies Distributor Management Software: Contract Pricing, Delivery Routes, and Receivables in One System",
+        "description": "B2B office supplies distributors struggle with per-client contract pricing, delivery scheduling across dozens of drop-off points, mounting receivables, and hundreds of small SKUs. Here is how dedicated distributor management software solves it, with cost ranges in Indonesia.",
+        "excerpt": "Contract prices tracked in a salesperson's personal spreadsheet, delivery routes planned from memory, and receivables that only surface once cash flow tightens—this is the real cost of running an office supplies distribution business without a centralized system.",
+        "tags": [
+          "Office Supplies Distribution",
+          "B2B Order Management",
+          "Distributor Software"
+        ]
+      },
+      "zh": {
+        "title": "办公文具经销商管理系统:合同定价、配送路线与应收账款一体化管理",
+        "description": "B2B办公文具经销商常常面临客户合同定价混乱、几十个配送点难以排线、应收账款失控以及数百个小额SKU库存难管的问题。本文介绍专属经销商管理系统如何解决这些痛点,并附印尼尼当地的开发成本区间。",
+        "excerpt": "合同价格记在业务员自己的表格里,配送路线全凭司机记忆规划,应收账款直到现金流吃紧才被发现——这就是没有集中系统的办公文具经销商每天承担的真实成本。",
+        "tags": [
+          "办公文具经销",
+          "B2B订单管理",
+          "经销商管理系统"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-pet-hotel-penitipan-hewan",
+    "date": "2026-08-09",
+    "readMinutes": 10,
+    "c": "#C2410C",
+    "c2": "#7C2D12",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Pet Hotel & Penitipan Hewan: Booking, Rekam Medis, dan Billing dalam Satu Sistem",
+        "description": "Panduan lengkap membangun aplikasi manajemen pet hotel dan penitipan hewan: kalender okupansi kandang, rekam medis, jadwal obat, billing per malam, dan update foto harian, lengkap dengan kisaran biaya di Indonesia.",
+        "excerpt": "Papan tulis dan buku catatan rentan bikin jadwal obat terlewat dan kandang bentrok. Ini cara aplikasi manajemen pet hotel terpusat menutup celah operasional bisnis penitipan hewan.",
+        "tags": [
+          "Pet Hotel",
+          "Penitipan Hewan",
+          "Manajemen Boarding"
+        ]
+      },
+      "en": {
+        "title": "Pet Hotel & Boarding Management Software: Bookings, Medical Records, and Billing in One System",
+        "description": "A complete guide to building pet hotel and boarding management software: kennel occupancy calendars, medical records, medication scheduling, per-night billing, and daily photo updates, plus real cost ranges in Indonesia.",
+        "excerpt": "Whiteboards and notebooks make missed medication doses and double-booked kennels almost inevitable. Here's how centralized pet hotel management software closes the operational gaps in a boarding business.",
+        "tags": [
+          "Pet Hotel Software",
+          "Pet Boarding Management",
+          "Kennel Booking System"
+        ]
+      },
+      "zh": {
+        "title": "宠物旅馆与寄养管理系统:预订、病历与账单一体化管理",
+        "description": "全面解析宠物旅馆与寄养管理系统的搭建方式:犬舍入住日历、健康与疫苗记录、每日用药安排、按夜自动计费与每日照片更新,并附印尼市场费用区间。",
+        "excerpt": "白板和笔记本很容易导致用药遗漏和犬舍冲突。看看集中式宠物旅馆管理系统如何补上寄养业务运营中的这些漏洞。",
+        "tags": [
+          "宠物旅馆系统",
+          "宠物寄养管理",
+          "犬舍预订系统"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-money-changer-remittance-digital",
+    "date": "2026-08-09",
+    "readMinutes": 10,
+    "c": "#166534",
+    "c2": "#052E16",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Money Changer & Remittance Digital: Kurs Real-Time dan Kepatuhan KYC/AML",
+        "description": "Cara aplikasi manajemen money changer dan remittance digital menyinkronkan kurs real-time, mencatat kepatuhan KYC/AML, memantau limit transaksi, dan melacak status pengiriman uang.",
+        "excerpt": "Kurs yang telat sampai ke counter dan pencatatan KYC yang bolong bisa merugikan money changer puluhan juta rupiah dalam satu transaksi. Ini cara aplikasi manajemen terpusat mengatasinya.",
+        "tags": [
+          "Money Changer",
+          "Remittance Digital",
+          "Kepatuhan KYC/AML"
+        ]
+      },
+      "en": {
+        "title": "Money Changer & Digital Remittance Management Software: Real-Time Rates and KYC/AML Compliance",
+        "description": "How money changer and digital remittance management software synchronizes real-time exchange rates, logs KYC/AML compliance, monitors transaction limits, and tracks remittance status.",
+        "excerpt": "A rate that arrives late at the counter and gaps in KYC logging can cost a money changer tens of millions of rupiah in a single transaction. Here's how a centralized system fixes that.",
+        "tags": [
+          "Money Changer",
+          "Digital Remittance",
+          "KYC/AML Compliance"
+        ]
+      },
+      "zh": {
+        "title": "货币兑换与数字汇款管理系统:实时汇率同步与KYC/反洗钱合规",
+        "description": "货币兑换与数字汇款管理系统如何实现实时汇率同步、KYC/反洗钱合规记录、交易限额监控与汇款状态追踪。",
+        "excerpt": "汇率更新延迟传到柜台、KYC记录出现漏洞,可能让货币兑换店在一笔交易中损失数千万印尼盾。集中式系统正是为解决这些问题而生。",
+        "tags": [
+          "货币兑换",
+          "数字汇款",
+          "KYC反洗钱合规"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-penerbitan-buku-self-publishing",
+    "date": "2026-08-09",
+    "readMinutes": 10,
+    "c": "#92400E",
+    "c2": "#451A03",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Penerbitan Buku & Self-Publishing: Dari Naskah sampai Royalti",
+        "description": "Bagaimana sistem terpusat menyatukan alur naskah, royalti multi-skema, stok per ISBN, dan distribusi penerbit buku di Indonesia — lengkap dengan kisaran biaya dan studi kasus.",
+        "excerpt": "Royalti dihitung dari basis harga yang salah, cetak ulang yang ternyata berlebih, dan rekonsiliasi konsinyasi yang memakan berhari-hari — begini cara aplikasi manajemen penerbitan buku terpusat menutup celah-celah itu.",
+        "tags": [
+          "Penerbitan Buku",
+          "Self-Publishing",
+          "Manajemen Royalti"
+        ]
+      },
+      "en": {
+        "title": "Book Publishing & Self-Publishing Management Software: From Manuscript to Royalties",
+        "description": "How a centralized system unifies manuscript workflow, multi-scheme royalty calculation, per-ISBN stock, and distribution for Indonesian publishing houses — with cost ranges and a case study.",
+        "excerpt": "Royalties calculated off the wrong price base, reprints that turn out oversized, and consignment reconciliation that eats up days — here's how centralized publishing management software closes those gaps.",
+        "tags": [
+          "Book Publishing",
+          "Self-Publishing",
+          "Royalty Management"
+        ]
+      },
+      "zh": {
+        "title": "图书出版与自出版管理软件:从手稿到版税的全流程数字化",
+        "description": "集中化系统如何整合印尼出版社的手稿流程、多方案版税计算、按ISBN库存管理与分销追踪——附费用区间与案例研究。",
+        "excerpt": "版税按错误价格基准计算、加印结果远超实际需求、寄售对账耗费数天——图书出版管理软件如何从根本上堵住这些漏洞。",
+        "tags": [
+          "图书出版",
+          "自出版",
+          "版税管理"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-jasa-keamanan-satpam-outsourcing",
+    "date": "2026-08-09",
+    "readMinutes": 10,
+    "c": "#334155",
+    "c2": "#0F172A",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Jasa Keamanan & Outsourcing Satpam: Panduan Lengkap untuk Perusahaan Security",
+        "description": "Panduan lengkap membangun aplikasi manajemen jasa keamanan dan outsourcing satpam: penjadwalan shift per klien, checkpoint patroli, pelaporan insiden real-time, hingga payroll dan biaya pengembangan di Indonesia.",
+        "excerpt": "Satu pos kosong akibat miskomunikasi jadwal WhatsApp bisa memicu penalti kontrak puluhan juta rupiah. Ini cara aplikasi manajemen jasa keamanan mengatasi masalah penjadwalan, patroli, insiden, dan payroll satpam outsourcing.",
+        "tags": [
+          "Jasa Keamanan",
+          "Manajemen Satpam",
+          "Outsourcing Security"
+        ]
+      },
+      "en": {
+        "title": "Security Guard Services & Outsourcing Management Software: A Complete Guide",
+        "description": "A complete guide to building security guard services and outsourcing management software: per-site shift scheduling, patrol checkpoints, real-time incident reporting, payroll, and development costs in Indonesia.",
+        "excerpt": "One unstaffed post caused by a WhatsApp scheduling mix-up can trigger a contract penalty worth tens of millions of rupiah. Here's how security management software fixes scheduling, patrols, incident reporting, and guard payroll.",
+        "tags": [
+          "Security Services",
+          "Guard Management",
+          "Security Outsourcing"
+        ]
+      },
+      "zh": {
+        "title": "保安服务与外包管理软件完整指南",
+        "description": "保安服务与保安外包管理软件完整指南:按客户点位排班、巡更点验证、实时事故上报、工资核算,以及在印尼开发此类系统的成本与工期。",
+        "excerpt": "一次WhatsApp排班沟通失误导致的岗位空缺,就可能引发高达数千万印尼盾的合同违约金。了解保安服务管理软件如何解决排班、巡逻、事故上报和工资核算等问题。",
+        "tags": [
+          "保安服务",
+          "保安管理",
+          "安保外包"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-manajemen-depot-air-minum-isi-ulang",
     "date": "2026-08-01",
     "readMinutes": 10,
