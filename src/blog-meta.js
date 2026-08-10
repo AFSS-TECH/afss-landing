@@ -199,6 +199,201 @@ export const postsMeta = [
     }
   },
   {
+    "slug": "aplikasi-manajemen-warnet-rental-ps-gaming-center",
+    "date": "2026-08-10",
+    "readMinutes": 10,
+    "c": "#059669",
+    "c2": "#064E3B",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Warnet dan Rental PS: Billing Per Jam Otomatis, Saldo Member, dan Booking Jam Ramai",
+        "description": "Aplikasi manajemen warnet dan rental PS/gaming center menyatukan timer billing per unit real-time, saldo top-up member, POS cafe, dan booking jam ramai dalam satu sistem terpusat.",
+        "excerpt": "Satu bilik PS lupa dicatat waktu mulainya saat weekend ramai, pelanggan main enam jam hanya tertagih dua jam. Ini cara aplikasi manajemen warnet dan rental PS menutup kebocoran seperti itu.",
+        "tags": [
+          "Manajemen Warnet",
+          "Rental PS",
+          "Software Gaming Center"
+        ]
+      },
+      "en": {
+        "title": "Internet Café and PS Rental Management Software: Automated Hourly Billing, Member Balances, and Peak-Hour Booking",
+        "description": "Internet café and PlayStation/gaming rental management software unifies real-time per-unit timer billing, prepaid member balances, café POS, and peak-hour booking in one system.",
+        "excerpt": "One PS booth's start time never got logged during a packed weekend, so a six-hour session was billed for two. Here's how gaming rental management software closes gaps like that.",
+        "tags": [
+          "Gaming Center Software",
+          "PS Rental Management",
+          "Internet Café POS"
+        ]
+      },
+      "zh": {
+        "title": "网吧与PS/游戏中心管理软件：自动按小时计费、会员余额与高峰时段预订",
+        "description": "网吧与PlayStation/游戏出租中心管理软件将实时按台计时计费、会员预付余额、餐饮POS与高峰时段预订整合到一个系统中。",
+        "excerpt": "周末爆满时,一个PS包间的开始时间没被记录,顾客玩了六个小时却只被收了两小时的钱。这就是游戏出租中心管理软件要堵住的漏洞。",
+        "tags": [
+          "网吧管理系统",
+          "PS出租管理",
+          "游戏中心软件"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-usaha-sablon-percetakan-kaos",
+    "date": "2026-08-10",
+    "readMinutes": 10,
+    "c": "#7C3AED",
+    "c2": "#4C1D95",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Usaha Sablon dan Percetakan Kaos Custom",
+        "description": "Kelola order sablon kaos custom dengan breakdown ukuran, tahapan produksi, stok kain-tinta, dan deadline event dalam satu sistem terpusat—bukan lagi WhatsApp dan buku catatan.",
+        "excerpt": "Order 200 kaos event bisa berantakan hanya karena breakdown ukuran nyasar di chat WhatsApp. Begini cara sistem manajemen sablon custom mencegahnya.",
+        "tags": [
+          "Aplikasi Sablon",
+          "Manajemen Produksi",
+          "Software Konveksi"
+        ]
+      },
+      "en": {
+        "title": "Screen Printing and Custom Apparel Management Software",
+        "description": "Manage custom screen-printing orders with size-breakdown tracking, production stages, fabric-ink stock, and event deadlines in one centralized system instead of WhatsApp and notebooks.",
+        "excerpt": "A 200-shirt event order can unravel just because a size breakdown got lost in WhatsApp chat. Here's how custom screen-printing management software prevents it.",
+        "tags": [
+          "Screen Printing Software",
+          "Production Management",
+          "Apparel Business Tech"
+        ]
+      },
+      "zh": {
+        "title": "丝网印刷与定制服装管理软件",
+        "description": "通过一套集中系统管理定制丝网印刷订单的尺码明细、生产阶段、面料油墨库存和活动交期，告别WhatsApp和纸质账本管理方式。",
+        "excerpt": "一份200件的活动T恤订单，可能仅因WhatsApp聊天中丢失的尺码明细而全盘出错。丝网印刷管理软件正是为避免这种情况而生。",
+        "tags": [
+          "丝网印刷软件",
+          "生产管理系统",
+          "服装业务科技"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-bengkel-las-fabrikasi-logam",
+    "date": "2026-08-10",
+    "readMinutes": 10,
+    "c": "#C2410C",
+    "c2": "#7C2D12",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Bengkel Las dan Fabrikasi Logam Custom",
+        "description": "Panduan lengkap aplikasi manajemen bengkel las dan fabrikasi logam: job order custom, tracking material dan jam kerja, job costing, kisaran biaya di Indonesia.",
+        "excerpt": "Estimasi meleset, sisa besi menumpuk tanpa catatan, jam lembur tukang las tak terhitung — begini aplikasi manajemen bengkel fabrikasi menyatukan job order, stok, dan biaya jadi satu sistem.",
+        "tags": [
+          "Manajemen Bengkel",
+          "Fabrikasi Logam",
+          "Bisnis"
+        ]
+      },
+      "en": {
+        "title": "Welding & Metal Fabrication Workshop Management Software",
+        "description": "A complete guide to welding and metal fabrication workshop management software: custom job orders, material and labor tracking, job costing, and Indonesian pricing.",
+        "excerpt": "Missed estimates, uncounted scrap steel, and unlogged welder overtime — here's how fabrication workshop management software brings job orders, stock, and costing into one system.",
+        "tags": [
+          "Workshop Management",
+          "Metal Fabrication",
+          "Business"
+        ]
+      },
+      "zh": {
+        "title": "焊接与金属加工车间管理软件",
+        "description": "焊接与金属加工车间管理软件完整指南：定制工单追踪、材料与工时记录、项目核算，以及印尼市场的价格区间。",
+        "excerpt": "报价严重失准、边角料无人记录、焊工加班没有台账——加工车间管理软件如何把工单、库存与成本整合进一套系统。",
+        "tags": [
+          "车间管理",
+          "金属加工",
+          "商业"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-budidaya-ikan-tambak-perikanan",
+    "date": "2026-08-10",
+    "readMinutes": 10,
+    "c": "#0369A1",
+    "c2": "#0C4A6E",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Budidaya Ikan dan Tambak: Panduan Lengkap 2026",
+        "description": "Aplikasi manajemen budidaya ikan dan tambak untuk pencatatan kualitas air, pakan, FCR, dan hasil panen per kolam. Kisaran biaya, fitur, dan studi kasus di Indonesia.",
+        "excerpt": "Dari kematian massal akibat oksigen anjlok semalam hingga FCR yang tak pernah dihitung — begini aplikasi tambak digital mengubah cara tambak udang dan ikan dikelola.",
+        "tags": [
+          "aplikasi tambak",
+          "manajemen budidaya ikan",
+          "software perikanan"
+        ]
+      },
+      "en": {
+        "title": "Aquaculture and Fish Pond Management Software: A Complete 2026 Guide",
+        "description": "Fish and shrimp pond management software for per-pond water quality logging, feed tracking, FCR, and harvest reports. Features, costs, and a real case study.",
+        "excerpt": "From an overnight oxygen crash that wiped out a pond to a feed ratio nobody ever tracked — here's how digital pond management software changes aquaculture operations.",
+        "tags": [
+          "aquaculture software",
+          "fish farm management",
+          "pond management app"
+        ]
+      },
+      "zh": {
+        "title": "水产养殖池塘管理软件完整指南(2026版)",
+        "description": "水产养殖池塘管理软件,支持按池塘记录水质、饲料、FCR和收获报表。涵盖核心功能、印尼开发费用区间与真实案例研究。",
+        "excerpt": "从一夜溶氧骤降导致的大规模死亡,到从未被计算过的饲料转化率——数字化池塘管理系统正在改变鱼虾养殖场的运营方式。",
+        "tags": [
+          "水产养殖软件",
+          "池塘管理系统",
+          "渔业管理软件"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-klinik-gigi-dental",
+    "date": "2026-08-10",
+    "readMinutes": 10,
+    "c": "#0E7490",
+    "c2": "#164E63",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Klinik Gigi: Odontogram Digital sampai Klaim BPJS",
+        "description": "Panduan aplikasi manajemen klinik gigi: odontogram digital, jadwal per dental chair, rencana perawatan multi-sesi, hingga klaim BPJS — lengkap kisaran biaya di Indonesia.",
+        "excerpt": "Kartu status kertas hilang, jadwal dental chair bentrok, klaim BPJS ditolak berulang — begini cara aplikasi manajemen klinik gigi menutup celah itu.",
+        "tags": [
+          "klinik gigi",
+          "software kesehatan",
+          "manajemen klinik"
+        ]
+      },
+      "en": {
+        "title": "Dental Clinic Management Software: Digital Odontograms to BPJS Claims",
+        "description": "A practical guide to dental clinic management software — digital odontograms, per-chair scheduling, multi-session treatment plans, and insurance claims, with real Indonesia pricing.",
+        "excerpt": "A lost paper chart, a double-booked chair, a rejected BPJS claim — here's how dental clinic management software closes those gaps for good.",
+        "tags": [
+          "dental clinic software",
+          "healthcare technology",
+          "clinic management"
+        ]
+      },
+      "zh": {
+        "title": "牙科诊所管理系统:数字牙位图到BPJS理赔全流程",
+        "description": "牙科诊所管理软件指南:数字牙位图、诊椅排班、多次复诊治疗计划追踪与保险理赔单据管理,附印尼本地真实报价区间。",
+        "excerpt": "纸质病历卡丢失、诊椅排班冲突、BPJS理赔屡遭拒——牙科诊所管理系统正是为解决这些问题而生。",
+        "tags": [
+          "牙科诊所软件",
+          "医疗信息系统",
+          "诊所管理"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-manajemen-distributor-atk-alat-tulis-kantor",
     "date": "2026-08-09",
     "readMinutes": 10,

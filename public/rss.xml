@@ -6,7 +6,7 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 10 Aug 2026 02:16:25 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 14:46:52 GMT</lastBuildDate>
     <item>
       <title>Aplikasi Manajemen Jasa Service AC dan Elektronik Rumah Tangga: Dari Booking Online sampai Laporan Digital</title>
       <link>https://afss.tech/blog/aplikasi-manajemen-jasa-service-ac-elektronik</link>
@@ -56,6 +56,56 @@
       <category>Manajemen Peternakan</category>
       <category>Aplikasi Ternak Digital</category>
       <category>Software Agribisnis</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Warnet dan Rental PS: Billing Per Jam Otomatis, Saldo Member, dan Booking Jam Ramai</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-warnet-rental-ps-gaming-center</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-warnet-rental-ps-gaming-center</guid>
+      <description>Satu bilik PS lupa dicatat waktu mulainya saat weekend ramai, pelanggan main enam jam hanya tertagih dua jam. Ini cara aplikasi manajemen warnet dan rental PS menutup kebocoran seperti itu.</description>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Manajemen Warnet</category>
+      <category>Rental PS</category>
+      <category>Software Gaming Center</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Usaha Sablon dan Percetakan Kaos Custom</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-usaha-sablon-percetakan-kaos</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-usaha-sablon-percetakan-kaos</guid>
+      <description>Order 200 kaos event bisa berantakan hanya karena breakdown ukuran nyasar di chat WhatsApp. Begini cara sistem manajemen sablon custom mencegahnya.</description>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi Sablon</category>
+      <category>Manajemen Produksi</category>
+      <category>Software Konveksi</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Bengkel Las dan Fabrikasi Logam Custom</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-bengkel-las-fabrikasi-logam</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-bengkel-las-fabrikasi-logam</guid>
+      <description>Estimasi meleset, sisa besi menumpuk tanpa catatan, jam lembur tukang las tak terhitung — begini aplikasi manajemen bengkel fabrikasi menyatukan job order, stok, dan biaya jadi satu sistem.</description>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Manajemen Bengkel</category>
+      <category>Fabrikasi Logam</category>
+      <category>Bisnis</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Budidaya Ikan dan Tambak: Panduan Lengkap 2026</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-budidaya-ikan-tambak-perikanan</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-budidaya-ikan-tambak-perikanan</guid>
+      <description>Dari kematian massal akibat oksigen anjlok semalam hingga FCR yang tak pernah dihitung — begini aplikasi tambak digital mengubah cara tambak udang dan ikan dikelola.</description>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+      <category>aplikasi tambak</category>
+      <category>manajemen budidaya ikan</category>
+      <category>software perikanan</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Klinik Gigi: Odontogram Digital sampai Klaim BPJS</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-klinik-gigi-dental</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-klinik-gigi-dental</guid>
+      <description>Kartu status kertas hilang, jadwal dental chair bentrok, klaim BPJS ditolak berulang — begini cara aplikasi manajemen klinik gigi menutup celah itu.</description>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+      <category>klinik gigi</category>
+      <category>software kesehatan</category>
+      <category>manajemen klinik</category>
     </item>
     <item>
       <title>Aplikasi Manajemen Distributor ATK &amp; Alat Tulis Kantor: Kontrak Harga, Rute Kirim, dan Piutang dalam Satu Sistem</title>
