@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-manajemen-jasa-service-ac-elektronik",
+    "date": "2026-08-10",
+    "readMinutes": 10,
+    "c": "#0369A1",
+    "c2": "#0C4A6E",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Jasa Service AC dan Elektronik Rumah Tangga: Dari Booking Online sampai Laporan Digital",
+        "description": "Bagaimana aplikasi manajemen jasa service AC dan elektronik rumah tangga membantu usaha service mengelola booking online, dispatch teknisi, sparepart, garansi, dan kontrak maintenance dalam satu sistem.",
+        "excerpt": "Dari jadwal bentrok sampai sengketa garansi, ini biaya nyata menjalankan usaha jasa service AC dan elektronik tanpa sistem terpusat, dan fitur kunci yang menyelesaikannya.",
+        "tags": [
+          "jasa service AC",
+          "aplikasi maintenance",
+          "manajemen teknisi lapangan"
+        ]
+      },
+      "en": {
+        "title": "AC and Home Appliance Repair Service Management App: From Online Booking to Digital Reports",
+        "description": "How an AC and home appliance repair service management application helps repair businesses manage online booking, technician dispatch, spare parts, warranties, and maintenance contracts in one system.",
+        "excerpt": "From double-booked schedules to costly warranty disputes, here is the real cost of running an AC and appliance repair business without a centralized system, and the key features that fix it.",
+        "tags": [
+          "AC repair service",
+          "maintenance app",
+          "field technician management"
+        ]
+      },
+      "zh": {
+        "title": "空调和家电维修服务管理应用：从在线预约到数字化报告",
+        "description": "空调和家电维修服务管理应用如何帮助维修企业在一个系统中管理在线预约、技术人员调度、配件、保修和维护合约。",
+        "excerpt": "从排期冲突到代价高昂的保修纠纷，这是没有集中系统时经营空调和家电维修业务的真实代价，以及解决这些问题的关键功能。",
+        "tags": [
+          "空调维修服务",
+          "维护管理应用",
+          "外勤技术人员管理"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-travel-haji-umroh",
+    "date": "2026-08-10",
+    "readMinutes": 10,
+    "c": "#0F766E",
+    "c2": "#134E4A",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Travel Haji dan Umroh: Solusi Digital untuk PIHK-PPIU",
+        "description": "Bagaimana aplikasi manajemen travel haji dan umroh membantu PIHK-PPIU mengelola pendaftaran jamaah, cicilan pembayaran, kuota keberangkatan, dan kepatuhan Kemenag secara terpusat.",
+        "excerpt": "Dari buku besar cicilan yang tercecer sampai kuota keberangkatan yang bentrok, travel haji dan umroh skala menengah punya masalah operasional yang unik. Ini panduan lengkap membangun sistem manajemen khusus PIHK-PPIU.",
+        "tags": [
+          "Aplikasi Travel Haji",
+          "Manajemen Umroh",
+          "Sistem PIHK PPIU"
+        ]
+      },
+      "en": {
+        "title": "Hajj and Umrah Travel Management Software: A Digital Solution for PIHK-PPIU Agencies",
+        "description": "How Hajj and Umrah travel management software helps PIHK-PPIU agencies centralize pilgrim registration, installment payment tracking, departure quotas, and Kemenag compliance.",
+        "excerpt": "From scattered installment ledgers to clashing departure quotas, mid-sized Hajj and Umrah travel agencies face operational problems that generic travel software was never built for. Here is a full guide to building a management system for PIHK-PPIU agencies.",
+        "tags": [
+          "Hajj Travel Software",
+          "Umrah Management System",
+          "PIHK PPIU Application"
+        ]
+      },
+      "zh": {
+        "title": "朝觐与副朝旅行社管理系统：面向印尼PIHK-PPIU机构的数字化解决方案",
+        "description": "朝觐与副朝旅行社管理系统如何帮助中型PIHK-PPIU机构集中管理朝觐者登记、分期付款、出发批次配额与宗教事务部合规要求。",
+        "excerpt": "从散落各处的分期付款账本，到相互冲突的出发配额，中型朝觐与副朝旅行社面临着通用旅游软件从未真正解决过的运营难题。这是一份为PIHK-PPIU机构量身定制管理系统的完整指南。",
+        "tags": [
+          "朝觐旅行软件",
+          "副朝管理系统",
+          "PIHK PPIU应用"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-jasa-translasi-interpretasi",
+    "date": "2026-08-10",
+    "readMinutes": 10,
+    "c": "#4338CA",
+    "c2": "#312E81",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Jasa Translasi dan Interpretasi untuk Agensi Penerjemah Tersumpah",
+        "description": "Bagaimana agensi translasi dan interpretasi skala menengah di Indonesia bisa berhenti mengandalkan spreadsheet dan grup WhatsApp, lalu beralih ke sistem manajemen proyek penerjemahan yang terintegrasi dengan roster freelancer, tracking sertifikasi penerjemah tersumpah, dan profitabilitas per proyek.",
+        "excerpt": "Agensi penerjemah tersumpah sering kehilangan klien besar bukan karena kualitas terjemahan buruk, tapi karena deadline dan status dokumen tercecer di WhatsApp dan spreadsheet. Ini cara sistem manajemen khusus jasa translasi memperbaikinya.",
+        "tags": [
+          "aplikasi penerjemah tersumpah",
+          "manajemen agensi translasi",
+          "software jasa interpretasi"
+        ]
+      },
+      "en": {
+        "title": "Translation and Interpretation Agency Management Software for Sworn Translator Firms",
+        "description": "How mid-sized translation and interpretation agencies in Indonesia can move beyond spreadsheets and WhatsApp groups into an integrated system covering per-document project tracking, freelance translator rosters, sworn-translator certification, and per-project profitability.",
+        "excerpt": "Sworn translation agencies often lose major clients not because of poor translation quality, but because document status gets scattered across WhatsApp threads and spreadsheets. Here is how a dedicated management system fixes that.",
+        "tags": [
+          "sworn translator software",
+          "translation agency management",
+          "interpretation agency system"
+        ]
+      },
+      "zh": {
+        "title": "翻译与口译机构管理系统:面向宣誓译员事务所的定制软件",
+        "description": "印尼中型翻译与口译机构如何摆脱表格和微信群式管理,转向集项目跟踪、自由译员名录、宣誓译员认证与单项目盈利分析于一体的系统。",
+        "excerpt": "翻译机构失去大客户,往往不是因为翻译质量差,而是文件状态散落在聊天群和表格里。专属管理系统正是为解决这一问题而生。",
+        "tags": [
+          "宣誓译员软件",
+          "翻译机构管理系统",
+          "口译机构软件"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-toko-sparepart-otomotif",
+    "date": "2026-08-10",
+    "readMinutes": 10,
+    "c": "#C2410C",
+    "c2": "#7C2D12",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Toko Sparepart Otomotif: Stok, Cross-Reference, dan Piutang Bengkel",
+        "description": "Kelola ribuan SKU sparepart, cross-reference part number lintas merek, piutang bengkel, dan purchase order supplier dalam satu sistem terintegrasi untuk toko sparepart otomotif skala menengah.",
+        "excerpt": "Toko sparepart dengan ribuan SKU dan puluhan bengkel langganan butuh lebih dari nota manual. Ini fitur, biaya, dan studi kasus aplikasi manajemen toko sparepart otomotif custom.",
+        "tags": [
+          "manajemen toko sparepart",
+          "software otomotif",
+          "sistem inventori bengkel"
+        ]
+      },
+      "en": {
+        "title": "Auto Parts Store Management App: Inventory, Cross-Reference, and Workshop Credit",
+        "description": "Manage thousands of SKUs, cross-reference part numbers across brands, track workshop customer credit, and handle supplier purchase orders in one integrated system for mid-size auto parts retailers.",
+        "excerpt": "An auto parts store with thousands of SKUs and dozens of workshop accounts on credit needs more than a manual ledger. Here is what a custom management app costs, includes, and delivers.",
+        "tags": [
+          "auto parts inventory software",
+          "workshop credit management",
+          "parts cross-reference system"
+        ]
+      },
+      "zh": {
+        "title": "汽车配件店管理系统:库存、跨品牌互查与维修厂账期管理",
+        "description": "为中型汽车配件批发零售店打造一体化管理系统,涵盖数千种库存单品的进销存、跨品牌配件互查、维修厂客户账期管理与供应商采购。",
+        "excerpt": "拥有数千种库存单品和数十家赊账维修厂客户的配件店,单靠手写账本已无法支撑。本文介绍定制配件店管理系统的功能、成本与真实案例。",
+        "tags": [
+          "配件店管理系统",
+          "汽车配件库存软件",
+          "维修厂账期管理"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-peternakan-ternak-digital",
+    "date": "2026-08-10",
+    "readMinutes": 10,
+    "c": "#166534",
+    "c2": "#14532D",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Peternakan Ternak Digital: Solusi Custom untuk Peternak Sapi, Kambing, dan Ayam Petelur",
+        "description": "Panduan lengkap aplikasi manajemen peternakan ternak digital untuk peternakan sapi, kambing, dan ayam petelur skala menengah di Indonesia, dari rekam kesehatan ternak hingga pelacakan pakan dan reproduksi.",
+        "excerpt": "Bagaimana aplikasi manajemen peternakan digital membantu peternak sapi, kambing, dan ayam petelur mencatat kesehatan, pakan, dan produksi ternak secara akurat, dan berapa kisaran biayanya.",
+        "tags": [
+          "Manajemen Peternakan",
+          "Aplikasi Ternak Digital",
+          "Software Agribisnis"
+        ]
+      },
+      "en": {
+        "title": "Digital Livestock Management App: Custom Software for Cattle, Goat, and Layer Chicken Farms",
+        "description": "A complete guide to digital livestock management applications for medium-scale cattle, goat, and layer chicken farms in Indonesia, from animal health records to feed and breeding tracking.",
+        "excerpt": "How a digital livestock management app helps cattle, goat, and layer chicken farms track health, feed, and production accurately, plus realistic cost ranges.",
+        "tags": [
+          "Livestock Management",
+          "Digital Farm App",
+          "Agribusiness Software"
+        ]
+      },
+      "zh": {
+        "title": "数字化畜牧管理应用：为牛、羊和蛋鸡养殖场定制的软件系统",
+        "description": "面向印尼中型牛、羊和蛋鸡养殖场的数字化畜牧管理应用完整指南，从牲畜健康档案到饲料与繁殖跟踪。",
+        "excerpt": "数字化畜牧管理应用如何帮助牛、羊和蛋鸡养殖场准确记录健康、饲料和产量数据，以及合理的成本区间。",
+        "tags": [
+          "畜牧管理",
+          "数字养殖应用",
+          "农牧业软件"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-manajemen-distributor-atk-alat-tulis-kantor",
     "date": "2026-08-09",
     "readMinutes": 10,

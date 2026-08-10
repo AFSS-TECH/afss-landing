@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Sun, 09 Aug 2026 16:22:19 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 02:16:25 GMT</lastBuildDate>
+    <item>
+      <title>Aplikasi Manajemen Jasa Service AC dan Elektronik Rumah Tangga: Dari Booking Online sampai Laporan Digital</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-jasa-service-ac-elektronik</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-jasa-service-ac-elektronik</guid>
+      <description>Dari jadwal bentrok sampai sengketa garansi, ini biaya nyata menjalankan usaha jasa service AC dan elektronik tanpa sistem terpusat, dan fitur kunci yang menyelesaikannya.</description>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+      <category>jasa service AC</category>
+      <category>aplikasi maintenance</category>
+      <category>manajemen teknisi lapangan</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Travel Haji dan Umroh: Solusi Digital untuk PIHK-PPIU</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-travel-haji-umroh</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-travel-haji-umroh</guid>
+      <description>Dari buku besar cicilan yang tercecer sampai kuota keberangkatan yang bentrok, travel haji dan umroh skala menengah punya masalah operasional yang unik. Ini panduan lengkap membangun sistem manajemen khusus PIHK-PPIU.</description>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Aplikasi Travel Haji</category>
+      <category>Manajemen Umroh</category>
+      <category>Sistem PIHK PPIU</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Jasa Translasi dan Interpretasi untuk Agensi Penerjemah Tersumpah</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-jasa-translasi-interpretasi</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-jasa-translasi-interpretasi</guid>
+      <description>Agensi penerjemah tersumpah sering kehilangan klien besar bukan karena kualitas terjemahan buruk, tapi karena deadline dan status dokumen tercecer di WhatsApp dan spreadsheet. Ini cara sistem manajemen khusus jasa translasi memperbaikinya.</description>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+      <category>aplikasi penerjemah tersumpah</category>
+      <category>manajemen agensi translasi</category>
+      <category>software jasa interpretasi</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Toko Sparepart Otomotif: Stok, Cross-Reference, dan Piutang Bengkel</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-toko-sparepart-otomotif</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-toko-sparepart-otomotif</guid>
+      <description>Toko sparepart dengan ribuan SKU dan puluhan bengkel langganan butuh lebih dari nota manual. Ini fitur, biaya, dan studi kasus aplikasi manajemen toko sparepart otomotif custom.</description>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+      <category>manajemen toko sparepart</category>
+      <category>software otomotif</category>
+      <category>sistem inventori bengkel</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Peternakan Ternak Digital: Solusi Custom untuk Peternak Sapi, Kambing, dan Ayam Petelur</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-peternakan-ternak-digital</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-peternakan-ternak-digital</guid>
+      <description>Bagaimana aplikasi manajemen peternakan digital membantu peternak sapi, kambing, dan ayam petelur mencatat kesehatan, pakan, dan produksi ternak secara akurat, dan berapa kisaran biayanya.</description>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+      <category>Manajemen Peternakan</category>
+      <category>Aplikasi Ternak Digital</category>
+      <category>Software Agribisnis</category>
+    </item>
     <item>
       <title>Aplikasi Manajemen Distributor ATK &amp; Alat Tulis Kantor: Kontrak Harga, Rute Kirim, dan Piutang dalam Satu Sistem</title>
       <link>https://afss.tech/blog/aplikasi-manajemen-distributor-atk-alat-tulis-kantor</link>
