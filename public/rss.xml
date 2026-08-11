@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 10 Aug 2026 14:46:52 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 15:38:41 GMT</lastBuildDate>
+    <item>
+      <title>Kedaulatan Data 2026: Kenapa Lokasi Server Bisnis Penting</title>
+      <link>https://afss.tech/blog/kedaulatan-data-sovereign-cloud-bisnis-indonesia</link>
+      <guid>https://afss.tech/blog/kedaulatan-data-sovereign-cloud-bisnis-indonesia</guid>
+      <description>Server yang salah lokasi bukan cuma soal harga murah, tapi bisa berujung denda regulator, tender batal, dan aplikasi lumpuh saat data center asing down.</description>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+      <category>kedaulatan data</category>
+      <category>cloud lokal indonesia</category>
+      <category>kepatuhan uu pdp</category>
+    </item>
+    <item>
+      <title>Core Web Vitals 2026: Kecepatan Situs vs Peringkat Google &amp; AI</title>
+      <link>https://afss.tech/blog/core-web-vitals-performa-website-ai-search-2026</link>
+      <guid>https://afss.tech/blog/core-web-vitals-performa-website-ai-search-2026</guid>
+      <description>Situs Anda mungkin sudah tidak terlihat lagi—bukan cuma di Google, tapi di setiap jawaban yang dihasilkan AI.</description>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+      <category>core-web-vitals</category>
+      <category>kecepatan-website</category>
+      <category>seo-ai</category>
+    </item>
+    <item>
+      <title>ERP Composable 2026: Solusi Modular Anti Vendor Lock-in</title>
+      <link>https://afss.tech/blog/erp-composable-arsitektur-modular-2026</link>
+      <guid>https://afss.tech/blog/erp-composable-arsitektur-modular-2026</guid>
+      <description>Berhenti menunggu roadmap vendor ERP Anda. Arsitektur composable memungkinkan setiap modul diganti, di-upgrade, dan diskalakan sendiri-sendiri.</description>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+      <category>erp composable</category>
+      <category>arsitektur modular</category>
+      <category>vendor lock-in</category>
+    </item>
+    <item>
+      <title>Strategi API 2026: Kenapa Bisnis Anda Butuh Ekonomi API</title>
+      <link>https://afss.tech/blog/strategi-api-ekonomi-bisnis-digital-terbuka</link>
+      <guid>https://afss.tech/blog/strategi-api-ekonomi-bisnis-digital-terbuka</guid>
+      <description>Satu API yang terdokumentasi bisa jadi pembeda antara menang kontrak miliaran rupiah atau kehilangannya ke kompetitor dalam hitungan hari.</description>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+      <category>strategi-api</category>
+      <category>ekonomi-digital</category>
+      <category>integrasi-bisnis</category>
+    </item>
+    <item>
+      <title>Aksesibilitas Website WCAG: Wajib Hukum bagi Bisnis 2026</title>
+      <link>https://afss.tech/blog/aksesibilitas-website-wcag-bisnis-inklusif</link>
+      <guid>https://afss.tech/blog/aksesibilitas-website-wcag-bisnis-inklusif</guid>
+      <description>Aksesibilitas web bukan lagi fitur tambahan — ini gerbang menuju 1,3 miliar konsumen dan perisai dari gugatan hukum yang mengintai bisnis digital.</description>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+      <category>aksesibilitas web</category>
+      <category>kepatuhan wcag</category>
+      <category>desain inklusif</category>
+    </item>
     <item>
       <title>Aplikasi Manajemen Jasa Service AC dan Elektronik Rumah Tangga: Dari Booking Online sampai Laporan Digital</title>
       <link>https://afss.tech/blog/aplikasi-manajemen-jasa-service-ac-elektronik</link>

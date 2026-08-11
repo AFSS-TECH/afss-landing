@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "kedaulatan-data-sovereign-cloud-bisnis-indonesia",
+    "date": "2026-08-11",
+    "readMinutes": 10,
+    "c": "#4338CA",
+    "c2": "#1E1B4B",
+    "i18n": {
+      "id": {
+        "title": "Kedaulatan Data 2026: Kenapa Lokasi Server Bisnis Penting",
+        "description": "Lokasi server bisa jadi alasan bisnis kena denda UU PDP, kalah tender BUMN, atau offline saat cloud asing down. Ini cara membangun sistem yang patuh.",
+        "excerpt": "Server yang salah lokasi bukan cuma soal harga murah, tapi bisa berujung denda regulator, tender batal, dan aplikasi lumpuh saat data center asing down.",
+        "tags": [
+          "kedaulatan data",
+          "cloud lokal indonesia",
+          "kepatuhan uu pdp"
+        ]
+      },
+      "en": {
+        "title": "Data Sovereignty 2026: Why Server Location Matters Now",
+        "description": "Where your app and database physically run now decides GDPR fines, tender eligibility, and outage resilience. Here is how to architect it correctly.",
+        "excerpt": "The wrong server region does not just cost more in latency, it can cost you a GDPR fine, a government contract, and hours of downtime you never saw coming.",
+        "tags": [
+          "data sovereignty",
+          "sovereign cloud",
+          "regional data compliance"
+        ]
+      },
+      "zh": {
+        "title": "2026年数据主权指南:企业服务器该放在哪里",
+        "description": "服务器与数据库究竟部署在哪个国家,正日益决定企业能否通过《个人数据保护法》与GDPR合规审计、能否赢得政府与企业招标资格、能否在境外云服务商发生区域性宕机时依旧保持业务正常运转。本文详细拆解数据主权与主权云架构的核心要点、落地成本区间与真实迁移案例,帮助企业提前规避风险,少走弯路。",
+        "excerpt": "选错云区域不只是多花钱那么简单,它可能意味着监管罚款、招标出局,以及境外机房宕机时业务彻底停摆。",
+        "tags": [
+          "数据主权",
+          "主权云",
+          "合规托管"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "core-web-vitals-performa-website-ai-search-2026",
+    "date": "2026-08-11",
+    "readMinutes": 11,
+    "c": "#EA580C",
+    "c2": "#7C2D12",
+    "i18n": {
+      "id": {
+        "title": "Core Web Vitals 2026: Kecepatan Situs vs Peringkat Google & AI",
+        "description": "Pelajari cara LCP, INP, dan CLS 2026 menentukan peringkat Google sekaligus apakah AI Overviews, ChatGPT, dan Perplexity bisa mengutip situs Anda.",
+        "excerpt": "Situs Anda mungkin sudah tidak terlihat lagi—bukan cuma di Google, tapi di setiap jawaban yang dihasilkan AI.",
+        "tags": [
+          "core-web-vitals",
+          "kecepatan-website",
+          "seo-ai"
+        ]
+      },
+      "en": {
+        "title": "Core Web Vitals 2026: Site Speed for Google & AI Rankings",
+        "description": "How LCP, INP, and CLS in 2026 decide both your Google ranking and whether ChatGPT, Perplexity, and AI Overviews can crawl and cite your site.",
+        "excerpt": "Your website might already be invisible—not just on Google, but inside every answer AI generates.",
+        "tags": [
+          "core-web-vitals",
+          "website-speed",
+          "ai-seo"
+        ]
+      },
+      "zh": {
+        "title": "2026核心网页指标:网站速度决定谷歌排名与AI搜索可见度",
+        "description": "了解LCP、INP和CLS如何在2026年同时决定谷歌搜索排名与AI能否抓取引用你的网站,从而决定你的企业在AI时代是否还看得见。",
+        "excerpt": "你的网站可能早已“隐形”——不只是在谷歌搜索里,更是在AI生成的每一条答案中。",
+        "tags": [
+          "核心网页指标",
+          "网站速度",
+          "AI搜索优化"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "erp-composable-arsitektur-modular-2026",
+    "date": "2026-08-11",
+    "readMinutes": 10,
+    "c": "#059669",
+    "c2": "#064E3B",
+    "i18n": {
+      "id": {
+        "title": "ERP Composable 2026: Solusi Modular Anti Vendor Lock-in",
+        "description": "ERP monolitik menahan pertumbuhan bisnis Anda? Kenali arsitektur ERP composable/modular MACH, bebas vendor lock-in, plus kisaran biaya dan waktunya.",
+        "excerpt": "Berhenti menunggu roadmap vendor ERP Anda. Arsitektur composable memungkinkan setiap modul diganti, di-upgrade, dan diskalakan sendiri-sendiri.",
+        "tags": [
+          "erp composable",
+          "arsitektur modular",
+          "vendor lock-in"
+        ]
+      },
+      "en": {
+        "title": "Composable ERP 2026: Escape Monolithic Vendor Lock-In",
+        "description": "Rigid ERP suites are slowing growing businesses down. See how composable, MACH-based modular ERP architecture cuts vendor lock-in, cost, and delay.",
+        "excerpt": "Your ERP shouldn't dictate how fast your business can grow. Composable architecture lets you swap, upgrade, and scale each module on its own terms.",
+        "tags": [
+          "composable erp",
+          "modular architecture",
+          "vendor lock-in"
+        ]
+      },
+      "zh": {
+        "title": "2026可组合式ERP:告别单体架构与供应商锁定",
+        "description": "僵化的单体ERP正在拖慢企业成长。了解基于MACH原则的可组合式模块化ERP架构,如何降低供应商锁定风险、削减成本并缩短新功能上线的等待周期。",
+        "excerpt": "别再被ERP供应商的产品路线图牵着走。可组合式架构让每个模块都能独立替换、升级与扩展。",
+        "tags": [
+          "可组合式erp",
+          "模块化架构",
+          "供应商锁定"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "strategi-api-ekonomi-bisnis-digital-terbuka",
+    "date": "2026-08-11",
+    "readMinutes": 10,
+    "c": "#0EA5E9",
+    "c2": "#0C4A6E",
+    "i18n": {
+      "id": {
+        "title": "Strategi API 2026: Kenapa Bisnis Anda Butuh Ekonomi API",
+        "description": "Tanpa strategi API, bisnis Anda kehilangan kemitraan, marketplace, dan bahkan akses ke agen AI. Pelajari cara membangun ekonomi API yang solid di 2026.",
+        "excerpt": "Satu API yang terdokumentasi bisa jadi pembeda antara menang kontrak miliaran rupiah atau kehilangannya ke kompetitor dalam hitungan hari.",
+        "tags": [
+          "strategi-api",
+          "ekonomi-digital",
+          "integrasi-bisnis"
+        ]
+      },
+      "en": {
+        "title": "The API Economy: Why Every Business Needs a Strategy in 2026",
+        "description": "Businesses without an API strategy lose partnerships, marketplace access, and visibility to AI agents. Here's how to build a real API economy play in 2026.",
+        "excerpt": "One documented API can be the difference between winning a seven-figure partnership and losing it to a competitor within days.",
+        "tags": [
+          "api-strategy",
+          "digital-ecosystem",
+          "business-integration"
+        ]
+      },
+      "zh": {
+        "title": "API经济时代:2026年企业为什么必须制定API战略",
+        "description": "没有API战略的企业正在错失合作伙伴、电商平台和AI智能体带来的收入。本文讲清楚2026年企业该如何构建真正可落地的API经济战略。",
+        "excerpt": "一套文档完善的API,可能就是几天内拿下百万级合作,还是眼睁睁看着竞争对手抢走订单的差别。",
+        "tags": [
+          "api战略",
+          "数字生态",
+          "系统集成"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aksesibilitas-website-wcag-bisnis-inklusif",
+    "date": "2026-08-11",
+    "readMinutes": 10,
+    "c": "#7C3AED",
+    "c2": "#4C1D95",
+    "i18n": {
+      "id": {
+        "title": "Aksesibilitas Website WCAG: Wajib Hukum bagi Bisnis 2026",
+        "description": "Website tak aksesibel kini berisiko digugat, kehilangan hingga 16% calon pelanggan, dan kalah peringkat SEO. Ini panduan kepatuhan WCAG 2.2 untuk bisnis Anda.",
+        "excerpt": "Aksesibilitas web bukan lagi fitur tambahan — ini gerbang menuju 1,3 miliar konsumen dan perisai dari gugatan hukum yang mengintai bisnis digital.",
+        "tags": [
+          "aksesibilitas web",
+          "kepatuhan wcag",
+          "desain inklusif"
+        ]
+      },
+      "en": {
+        "title": "Web Accessibility in 2026: Why WCAG Compliance Is Now a Must",
+        "description": "Inaccessible websites now risk lawsuits, lost customers, and SEO penalties. Here's what WCAG 2.2 AA compliance really requires — and what it costs to fix.",
+        "excerpt": "An inaccessible website isn't just a UX flaw — it's a legal liability and a locked door in front of 1.3 billion potential customers worldwide.",
+        "tags": [
+          "web accessibility",
+          "wcag compliance",
+          "inclusive design"
+        ]
+      },
+      "zh": {
+        "title": "2026年网页无障碍:WCAG合规为何成为企业刚需",
+        "description": "不合规的网站正面临诉讼、客户流失与搜索排名下滑三重风险。本文详解WCAG 2.2 AA合规要点、全球监管趋势、必备无障碍功能,以及成本与实施周期区间。",
+        "excerpt": "网页无障碍不再是锦上添花的功能,而是通往全球13亿潜在用户的大门,也是抵御法律诉讼风险的护城河。",
+        "tags": [
+          "网页无障碍",
+          "wcag合规",
+          "包容性设计"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-manajemen-jasa-service-ac-elektronik",
     "date": "2026-08-10",
     "readMinutes": 10,
