@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Tue, 11 Aug 2026 15:38:41 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 02:22:16 GMT</lastBuildDate>
+    <item>
+      <title>RAG untuk Bisnis: Cara Membangun Asisten AI Internal yang Bisa Dipercaya</title>
+      <link>https://afss.tech/blog/rag-ai-knowledge-assistant-bisnis-2026</link>
+      <guid>https://afss.tech/blog/rag-ai-knowledge-assistant-bisnis-2026</guid>
+      <description>Chatbot AI generik menebak-nebak jawaban dan bisa merugikan bisnis Anda. RAG memaksa AI menjawab berdasarkan dokumen asli perusahaan — ini cara kerja dan biayanya.</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
+      <category>kecerdasan buatan</category>
+      <category>asisten ai bisnis</category>
+      <category>rag knowledge base</category>
+    </item>
+    <item>
+      <title>Embedded Finance 2026: Cara Bisnis Non-Fintech Membangun Banking-as-a-Service ke Dalam Aplikasi</title>
+      <link>https://afss.tech/blog/embedded-finance-banking-as-a-service-bisnis-2026</link>
+      <guid>https://afss.tech/blog/embedded-finance-banking-as-a-service-bisnis-2026</guid>
+      <description>Payment gateway hanya memindahkan uang dari satu titik ke titik lain. Embedded finance membuat Anda memiliki alur kerjanya — dan menangkap marginnya sendiri.</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
+      <category>embedded finance</category>
+      <category>banking as a service</category>
+      <category>aplikasi bisnis digital</category>
+    </item>
+    <item>
+      <title>FinOps 2026: Cara Mengendalikan Biaya Cloud yang Membengkak Tanpa Terkendali</title>
+      <link>https://afss.tech/blog/finops-optimasi-biaya-cloud-bisnis-2026</link>
+      <guid>https://afss.tech/blog/finops-optimasi-biaya-cloud-bisnis-2026</guid>
+      <description>Tagihan cloud yang naik diam-diam bisa menggerogoti margin bisnis digital dalam hitungan bulan. Inilah cara FinOps mencegahnya sebelum finance kaget di akhir kuartal.</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
+      <category>finops</category>
+      <category>optimasi biaya cloud</category>
+      <category>arsitektur software</category>
+    </item>
+    <item>
+      <title>Green Software Engineering: Kenapa Efisiensi Kode Jadi Urusan Bisnis di 2026</title>
+      <link>https://afss.tech/blog/green-software-engineering-bisnis-berkelanjutan-2026</link>
+      <guid>https://afss.tech/blog/green-software-engineering-bisnis-berkelanjutan-2026</guid>
+      <description>Tagihan cloud yang membengkak diam-diam dan laporan ESG yang mulai menagih data karbon digital — dua alasan efisiensi software bukan lagi wacana, tapi keputusan bisnis.</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
+      <category>green software engineering</category>
+      <category>efisiensi cloud bisnis</category>
+      <category>carbon-aware computing</category>
+    </item>
+    <item>
+      <title>Keamanan Pasca-Kuantum untuk Bisnis: Kenapa Harus Mulai Sekarang</title>
+      <link>https://afss.tech/blog/keamanan-pasca-kuantum-bisnis-2026</link>
+      <guid>https://afss.tech/blog/keamanan-pasca-kuantum-bisnis-2026</guid>
+      <description>Komputer kuantum yang bisa membobol RSA belum ada, tapi data Anda mungkin sedang dicuri dan disimpan hari ini untuk dibuka nanti. Inilah yang harus dilakukan bisnis sekarang.</description>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
+      <category>keamanan siber</category>
+      <category>kriptografi pasca-kuantum</category>
+      <category>arsitektur perangkat lunak</category>
+    </item>
     <item>
       <title>Kedaulatan Data 2026: Kenapa Lokasi Server Bisnis Penting</title>
       <link>https://afss.tech/blog/kedaulatan-data-sovereign-cloud-bisnis-indonesia</link>

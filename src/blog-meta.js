@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "rag-ai-knowledge-assistant-bisnis-2026",
+    "date": "2026-08-12",
+    "readMinutes": 11,
+    "c": "#9333EA",
+    "c2": "#581C87",
+    "i18n": {
+      "id": {
+        "title": "RAG untuk Bisnis: Cara Membangun Asisten AI Internal yang Bisa Dipercaya",
+        "description": "Kenapa chatbot AI generik berisiko bagi bisnis, dan bagaimana RAG membangun asisten AI internal yang akurat, aman, dan jawabannya bisa dilacak sumbernya.",
+        "excerpt": "Chatbot AI generik menebak-nebak jawaban dan bisa merugikan bisnis Anda. RAG memaksa AI menjawab berdasarkan dokumen asli perusahaan — ini cara kerja dan biayanya.",
+        "tags": [
+          "kecerdasan buatan",
+          "asisten ai bisnis",
+          "rag knowledge base"
+        ]
+      },
+      "en": {
+        "title": "RAG for Business: How to Build an AI Knowledge Assistant You Can Trust",
+        "description": "Why generic AI chatbots are risky for business, and how Retrieval-Augmented Generation (RAG) builds an internal AI assistant with accurate, traceable answers.",
+        "excerpt": "Generic AI chatbots guess at answers and it can cost your business dearly. RAG forces AI to answer from your real documents — here is how it works and what it costs.",
+        "tags": [
+          "artificial intelligence",
+          "business ai assistant",
+          "rag knowledge base"
+        ]
+      },
+      "zh": {
+        "title": "企业RAG知识助手指南：为什么通用AI聊天机器人不可靠",
+        "description": "了解检索增强生成（RAG）的工作原理，为什么通用AI聊天机器人对企业存在风险，以及如何构建准确、可追溯、值得信赖的企业AI知识助手。",
+        "excerpt": "通用AI聊天机器人只是在猜测答案，可能让企业付出高昂代价。RAG让AI基于企业真实文档作答——本文讲解其原理与实施成本。",
+        "tags": [
+          "人工智能",
+          "企业ai助手",
+          "rag知识库"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "embedded-finance-banking-as-a-service-bisnis-2026",
+    "date": "2026-08-12",
+    "readMinutes": 11,
+    "c": "#0891B2",
+    "c2": "#164E63",
+    "i18n": {
+      "id": {
+        "title": "Embedded Finance 2026: Cara Bisnis Non-Fintech Membangun Banking-as-a-Service ke Dalam Aplikasi",
+        "description": "Pelajari cara bisnis retail, marketplace, dan logistik menanamkan rekening virtual, pencairan instan, dan pinjaman ke dalam aplikasi mereka di tahun 2026.",
+        "excerpt": "Payment gateway hanya memindahkan uang dari satu titik ke titik lain. Embedded finance membuat Anda memiliki alur kerjanya — dan menangkap marginnya sendiri.",
+        "tags": [
+          "embedded finance",
+          "banking as a service",
+          "aplikasi bisnis digital"
+        ]
+      },
+      "en": {
+        "title": "Embedded Finance in 2026: How Non-Fintech Businesses Build Banking-as-a-Service Into Their Apps",
+        "description": "See how retail, marketplace, and logistics firms embed virtual accounts, instant payouts, and lending into their apps to boost revenue and retention in 2026.",
+        "excerpt": "A payment gateway just moves money from one place to another. Embedded finance lets you own the workflow itself — and capture the margin.",
+        "tags": [
+          "embedded finance",
+          "banking as a service",
+          "fintech app development"
+        ]
+      },
+      "zh": {
+        "title": "2026年嵌入式金融指南:非金融科技企业如何把银行即服务嵌入自家应用",
+        "description": "了解零售、电商、物流与B2B分销企业如何把虚拟账户、即时到账、嵌入式信贷、嵌入式保险与数字钱包等银行即服务功能,直接嵌入自家应用之中,从而在2026年提升收入来源、增强用户粘性,并改善整体资金流可视性与监管合规管理水平,抢占市场先机。",
+        "excerpt": "支付网关只是把资金从一处转移到另一处,嵌入式金融则让你拥有整个工作流,并把属于自己的margin真正收进口袋。",
+        "tags": [
+          "嵌入式金融",
+          "银行即服务",
+          "企业数字化应用"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "finops-optimasi-biaya-cloud-bisnis-2026",
+    "date": "2026-08-12",
+    "readMinutes": 11,
+    "c": "#2563EB",
+    "c2": "#1E3A8A",
+    "i18n": {
+      "id": {
+        "title": "FinOps 2026: Cara Mengendalikan Biaya Cloud yang Membengkak Tanpa Terkendali",
+        "description": "Panduan praktis FinOps untuk bisnis digital yang tumbuh: kenapa tagihan cloud dan API AI membengkak, dan cara membangun visibilitas biaya sejak awal arsitektur.",
+        "excerpt": "Tagihan cloud yang naik diam-diam bisa menggerogoti margin bisnis digital dalam hitungan bulan. Inilah cara FinOps mencegahnya sebelum finance kaget di akhir kuartal.",
+        "tags": [
+          "finops",
+          "optimasi biaya cloud",
+          "arsitektur software"
+        ]
+      },
+      "en": {
+        "title": "FinOps in 2026: How to Stop Runaway Cloud Costs Before They Sink Your Margins",
+        "description": "A practical FinOps guide for scaling digital businesses: why cloud bills and AI API spend spiral out of control, and how to build cost visibility from day one.",
+        "excerpt": "A cloud bill that creeps up quietly can quietly eat your margins for months before anyone notices. Here is how FinOps catches it before finance gets the surprise.",
+        "tags": [
+          "finops",
+          "cloud cost optimization",
+          "software architecture"
+        ]
+      },
+      "zh": {
+        "title": "2026年FinOps指南：如何在云成本失控吞噬利润之前将其驯服",
+        "description": "面向成长型数字企业的实用FinOps指南：详解云账单与AI接口费用为何会持续失控攀升，以及企业应如何从系统架构设计之初，就主动建立起清晰可追踪的成本可见性体系与关键监控指标，从根源上避免预算悄然超支、利润被逐月侵蚀，以及财务在季度末才被账单意外惊吓、被迫削减产品功能的尴尬困境与代价。",
+        "excerpt": "悄悄攀升的云账单可能在几个月内不知不觉侵蚀企业利润。这篇文章讲清楚FinOps如何在财务部门被账单吓到之前就把问题拦下来。",
+        "tags": [
+          "finops成本治理",
+          "云成本优化",
+          "软件架构设计"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "green-software-engineering-bisnis-berkelanjutan-2026",
+    "date": "2026-08-12",
+    "readMinutes": 11,
+    "c": "#16A34A",
+    "c2": "#14532D",
+    "i18n": {
+      "id": {
+        "title": "Green Software Engineering: Kenapa Efisiensi Kode Jadi Urusan Bisnis di 2026",
+        "description": "Panduan green software engineering: cara kode boros menaikkan tagihan cloud, risiko ESG operasi digital, dan kisaran biaya audit efisiensi di Indonesia.",
+        "excerpt": "Tagihan cloud yang membengkak diam-diam dan laporan ESG yang mulai menagih data karbon digital — dua alasan efisiensi software bukan lagi wacana, tapi keputusan bisnis.",
+        "tags": [
+          "green software engineering",
+          "efisiensi cloud bisnis",
+          "carbon-aware computing"
+        ]
+      },
+      "en": {
+        "title": "Green Software Engineering: Why Energy-Efficient Code Became a Business Issue in 2026",
+        "description": "A practical guide to green software engineering: how bloated code inflates cloud bills, why ESG reporting now touches digital operations, and what it costs.",
+        "excerpt": "A quietly ballooning cloud bill and an ESG questionnaire that suddenly asks about digital carbon footprint — two reasons software efficiency stopped being optional.",
+        "tags": [
+          "green software engineering",
+          "carbon-aware computing",
+          "cloud cost efficiency"
+        ]
+      },
+      "zh": {
+        "title": "绿色软件工程：2026年为什么节能代码成了企业必答题",
+        "description": "面向企业的绿色软件工程实用指南：臃肿代码如何推高云账单、ESG报告为何开始涉及数字运营碳足迹，以及审计与重构的合理预算区间。",
+        "excerpt": "云账单悄悄涨了六成,合作伙伴的ESG问卷突然多了一栏数字碳足迹——这两件事让软件能效不再是可选项。",
+        "tags": [
+          "绿色软件工程",
+          "碳感知计算",
+          "云成本优化"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "keamanan-pasca-kuantum-bisnis-2026",
+    "date": "2026-08-12",
+    "readMinutes": 11,
+    "c": "#6D28D9",
+    "c2": "#3B0764",
+    "i18n": {
+      "id": {
+        "title": "Keamanan Pasca-Kuantum untuk Bisnis: Kenapa Harus Mulai Sekarang",
+        "description": "Serangan 'harvest now, decrypt later' mengancam data bisnis Anda hari ini. Pelajari standar PQC NIST dan cara membangun arsitektur crypto-agile bersama AFSS.",
+        "excerpt": "Komputer kuantum yang bisa membobol RSA belum ada, tapi data Anda mungkin sedang dicuri dan disimpan hari ini untuk dibuka nanti. Inilah yang harus dilakukan bisnis sekarang.",
+        "tags": [
+          "keamanan siber",
+          "kriptografi pasca-kuantum",
+          "arsitektur perangkat lunak"
+        ]
+      },
+      "en": {
+        "title": "Post-Quantum Security for Business: Why 'Harvest Now, Decrypt Later' Demands Action Today",
+        "description": "No quantum computer can break RSA yet, but attackers may be harvesting your encrypted data now. Learn NIST's PQC standards and crypto-agile architecture.",
+        "excerpt": "No quantum computer can break RSA-2048 today, but your sensitive data may already be stolen and stockpiled for the day one can. Here's what businesses need to do now.",
+        "tags": [
+          "cybersecurity",
+          "post-quantum cryptography",
+          "software architecture"
+        ]
+      },
+      "zh": {
+        "title": "企业后量子安全:为什么“先窃后解”意味着现在就要行动",
+        "description": "能破解RSA的量子计算机尚未出现,但攻击者可能已在窃取并囤积您加密的数据。了解NIST后量子密码标准与加密敏捷架构。",
+        "excerpt": "今天还没有量子计算机能破解RSA-2048,但您的敏感数据可能此刻已被窃取囤积,只等未来某天被解密。企业现在就该行动。",
+        "tags": [
+          "网络安全",
+          "后量子密码学",
+          "软件架构"
+        ]
+      }
+    }
+  },
+  {
     "slug": "kedaulatan-data-sovereign-cloud-bisnis-indonesia",
     "date": "2026-08-11",
     "readMinutes": 10,
