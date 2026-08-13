@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Wed, 12 Aug 2026 02:22:16 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 02:21:41 GMT</lastBuildDate>
+    <item>
+      <title>Personalisasi Website Bertenaga AI: Kunci Konversi Bisnis 2026</title>
+      <link>https://afss.tech/blog/personalisasi-website-ai-konversi-bisnis-2026</link>
+      <guid>https://afss.tech/blog/personalisasi-website-ai-konversi-bisnis-2026</guid>
+      <description>Website generik yang menampilkan konten sama ke semua orang kini kalah bersaing. Simak cara kerja personalisasi bertenaga AI dan berapa biaya membangunnya di Indonesia.</description>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+      <category>personalisasi website</category>
+      <category>ai untuk bisnis</category>
+      <category>konversi e-commerce</category>
+    </item>
+    <item>
+      <title>Observability &amp; SRE: Kunci Keandalan Aplikasi Bisnis 2026</title>
+      <link>https://afss.tech/blog/observability-sre-keandalan-aplikasi-bisnis-2026</link>
+      <guid>https://afss.tech/blog/observability-sre-keandalan-aplikasi-bisnis-2026</guid>
+      <description>Downtime yang tak terdeteksi bisa merugikan ratusan juta rupiah dalam hitungan jam. Begini cara observability dan SRE melindungi bisnis digital Anda.</description>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+      <category>observability</category>
+      <category>sre</category>
+      <category>keandalan sistem</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Kontraktor Listrik &amp; MEP: Sertifikasi hingga K3</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-kontraktor-listrik-mep-k3</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-kontraktor-listrik-mep-k3</guid>
+      <description>Satu teknisi tanpa SKTTK yang lolos penugasan bisa membuat klien menahan ratusan juta rupiah pembayaran. Begini cara sistem terpusat mencegahnya.</description>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+      <category>kontraktor listrik</category>
+      <category>manajemen mep</category>
+      <category>aplikasi k3</category>
+    </item>
+    <item>
+      <title>Sistem Manajemen Distributor Farmasi (PBF): Cold Chain &amp; CDOB</title>
+      <link>https://afss.tech/blog/sistem-distributor-farmasi-pbf-cold-chain-bpom</link>
+      <guid>https://afss.tech/blog/sistem-distributor-farmasi-pbf-cold-chain-bpom</guid>
+      <description>Satu excursion suhu yang tak terdeteksi bisa memusnahkan ratusan juta rupiah stok vaksin dalam semalam. Begini cara PBF modern mencegahnya dengan sistem terpusat.</description>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+      <category>distributor farmasi</category>
+      <category>cold chain</category>
+      <category>cdob</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Firma Hukum: Case, Billing &amp; Trust Account</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-firma-hukum-legal-practice</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-firma-hukum-legal-practice</guid>
+      <description>Tenggat sidang terlewat dan billable hours yang menguap bisa merugikan firma hukum ratusan juta rupiah setahun — begini cara sistem terpusat menghentikannya.</description>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+      <category>manajemen firma hukum</category>
+      <category>legal tech</category>
+      <category>time &amp; billing</category>
+    </item>
     <item>
       <title>RAG untuk Bisnis: Cara Membangun Asisten AI Internal yang Bisa Dipercaya</title>
       <link>https://afss.tech/blog/rag-ai-knowledge-assistant-bisnis-2026</link>

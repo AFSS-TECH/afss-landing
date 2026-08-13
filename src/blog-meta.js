@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "personalisasi-website-ai-konversi-bisnis-2026",
+    "date": "2026-08-13",
+    "readMinutes": 11,
+    "c": "#DB2777",
+    "c2": "#500724",
+    "i18n": {
+      "id": {
+        "title": "Personalisasi Website Bertenaga AI: Kunci Konversi Bisnis 2026",
+        "description": "Pelajari cara personalisasi website bertenaga AI meningkatkan konversi bisnis e-commerce dan ritel di Indonesia lewat segmentasi real-time, rekomendasi dinamis, dan harga personal di 2026.",
+        "excerpt": "Website generik yang menampilkan konten sama ke semua orang kini kalah bersaing. Simak cara kerja personalisasi bertenaga AI dan berapa biaya membangunnya di Indonesia.",
+        "tags": [
+          "personalisasi website",
+          "ai untuk bisnis",
+          "konversi e-commerce"
+        ]
+      },
+      "en": {
+        "title": "AI-Driven Website Personalization: Boosting Conversions in 2026",
+        "description": "See how AI-driven website personalization lifts e-commerce and retail conversions in Indonesia through real-time segmentation, dynamic recommendations, and personalized pricing in 2026.",
+        "excerpt": "A one-size-fits-all website is now a competitive liability. Here's how AI personalization works and what it costs to build in Indonesia.",
+        "tags": [
+          "website personalization",
+          "ai for business",
+          "ecommerce conversion"
+        ]
+      },
+      "zh": {
+        "title": "AI驱动网站个性化:2026年提升企业转化率的关键",
+        "description": "了解AI驱动的网站个性化如何通过实时分群、动态推荐和个性化定价,提升印尼电商与零售企业2026年的转化率。",
+        "excerpt": "千篇一律的通用网站正在失去竞争力。看看AI个性化如何运作,以及在印尼构建这套系统需要多少投入。",
+        "tags": [
+          "网站个性化",
+          "企业AI应用",
+          "电商转化率"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "observability-sre-keandalan-aplikasi-bisnis-2026",
+    "date": "2026-08-13",
+    "readMinutes": 11,
+    "c": "#4F46E5",
+    "c2": "#1E1B4B",
+    "i18n": {
+      "id": {
+        "title": "Observability & SRE: Kunci Keandalan Aplikasi Bisnis 2026",
+        "description": "Pelajari mengapa logs, metrics, traces, SLO, dan on-call kini wajib bagi bisnis Indonesia yang bergantung pada aplikasi, demi mencegah kerugian akibat downtime yang tak terdeteksi.",
+        "excerpt": "Downtime yang tak terdeteksi bisa merugikan ratusan juta rupiah dalam hitungan jam. Begini cara observability dan SRE melindungi bisnis digital Anda.",
+        "tags": [
+          "observability",
+          "sre",
+          "keandalan sistem"
+        ]
+      },
+      "en": {
+        "title": "Observability & SRE: The Key to Reliable Business Apps in 2026",
+        "description": "Learn why logs, metrics, traces, SLOs, and on-call rotations are now essential for Indonesian businesses running production apps, to stop losing revenue to undetected outages.",
+        "excerpt": "An undetected outage can cost hundreds of millions of rupiah in just hours. Here's how observability and SRE protect your digital business.",
+        "tags": [
+          "observability",
+          "sre",
+          "system reliability"
+        ]
+      },
+      "zh": {
+        "title": "可观测性与SRE:2026年业务应用可靠性的关键",
+        "description": "了解为何日志、指标、链路追踪、SLO与值班机制已成为印尼企业运行生产系统的必备能力,避免因未被发现的故障而持续流失收入。",
+        "excerpt": "未被察觉的宕机可能在几小时内造成数亿印尼盾损失。了解可观测性与SRE如何保护您的数字业务。",
+        "tags": [
+          "可观测性",
+          "sre",
+          "系统可靠性"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-kontraktor-listrik-mep-k3",
+    "date": "2026-08-13",
+    "readMinutes": 10,
+    "c": "#B45309",
+    "c2": "#451A03",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Kontraktor Listrik & MEP: Sertifikasi hingga K3",
+        "description": "Panduan lengkap aplikasi manajemen kontraktor listrik dan MEP di Indonesia: work order, sertifikasi SKTTK, checklist K3, dan biaya bangun sistem custom.",
+        "excerpt": "Satu teknisi tanpa SKTTK yang lolos penugasan bisa membuat klien menahan ratusan juta rupiah pembayaran. Begini cara sistem terpusat mencegahnya.",
+        "tags": [
+          "kontraktor listrik",
+          "manajemen mep",
+          "aplikasi k3"
+        ]
+      },
+      "en": {
+        "title": "Electrical & MEP Contractor Management App: Certs to K3 Safety",
+        "description": "A complete guide to electrical and MEP contractor management software in Indonesia: work orders, SKTTK certification, K3 checklists, and custom build costs.",
+        "excerpt": "One uncertified technician slipping through scheduling can cost a contractor hundreds of millions of rupiah in withheld payment. Here is how a centralized system prevents it.",
+        "tags": [
+          "electrical contractor",
+          "mep management",
+          "k3 compliance app"
+        ]
+      },
+      "zh": {
+        "title": "电气与MEP承包商管理应用:从证书追踪到K3安全合规",
+        "description": "印尼电气与MEP承包商管理软件完整指南:工单排班、SKTTK证书追踪、K3安全检查清单,以及定制系统的建设成本。",
+        "excerpt": "一名未持证技术人员被误排上工,就可能让客户扣留上亿印尼盾的付款。集中化系统正是为了防止这种情况发生。",
+        "tags": [
+          "电气承包商",
+          "mep管理",
+          "k3合规应用"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "sistem-distributor-farmasi-pbf-cold-chain-bpom",
+    "date": "2026-08-13",
+    "readMinutes": 11,
+    "c": "#047857",
+    "c2": "#052E16",
+    "i18n": {
+      "id": {
+        "title": "Sistem Manajemen Distributor Farmasi (PBF): Cold Chain & CDOB",
+        "description": "Panduan lengkap sistem manajemen distributor farmasi (PBF) untuk cold chain monitoring, pelacakan batch, FEFO, dan kepatuhan CDOB bagi bisnis distribusi obat di Indonesia.",
+        "excerpt": "Satu excursion suhu yang tak terdeteksi bisa memusnahkan ratusan juta rupiah stok vaksin dalam semalam. Begini cara PBF modern mencegahnya dengan sistem terpusat.",
+        "tags": [
+          "distributor farmasi",
+          "cold chain",
+          "cdob"
+        ]
+      },
+      "en": {
+        "title": "Pharmaceutical Distributor (PBF) Management System: Cold Chain & CDOB",
+        "description": "A complete guide to pharmaceutical wholesale distributor (PBF) management systems covering cold chain monitoring, batch tracking, FEFO rotation, and CDOB compliance in Indonesia.",
+        "excerpt": "One undetected temperature excursion can wipe out hundreds of millions of rupiah in vaccine stock overnight. Here is how modern PBF companies prevent it with a centralized system.",
+        "tags": [
+          "pharma distribution",
+          "cold chain",
+          "cdob compliance"
+        ]
+      },
+      "zh": {
+        "title": "医药批发分销（PBF）管理系统：冷链监控与CDOB合规",
+        "description": "全面解析医药批发分销（PBF）管理系统,涵盖冷链温度监控、批号追溯、FEFO库存轮转与印尼CDOB合规要求。",
+        "excerpt": "一次未被及时发现的温度异常,可能一夜之间销毁价值数亿印尼盾的疫苗库存。看现代PBF企业如何用集中化系统预防这一切。",
+        "tags": [
+          "医药分销",
+          "冷链管理",
+          "cdob合规"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-firma-hukum-legal-practice",
+    "date": "2026-08-13",
+    "readMinutes": 11,
+    "c": "#1E3A8A",
+    "c2": "#0F172A",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Firma Hukum: Case, Billing & Trust Account",
+        "description": "Panduan lengkap aplikasi manajemen firma hukum di Indonesia: manajemen perkara, billing per jam, portal klien, trust account, biaya, dan waktu pengerjaan custom.",
+        "excerpt": "Tenggat sidang terlewat dan billable hours yang menguap bisa merugikan firma hukum ratusan juta rupiah setahun — begini cara sistem terpusat menghentikannya.",
+        "tags": [
+          "manajemen firma hukum",
+          "legal tech",
+          "time & billing"
+        ]
+      },
+      "en": {
+        "title": "Legal Practice Management Software: Case, Billing & Trust",
+        "description": "A complete guide to legal practice management software for Indonesian law firms: matter management, hourly billing, client portal, trust accounting, and custom build costs.",
+        "excerpt": "Missed court deadlines and uncaptured billable hours can quietly cost a law firm hundreds of millions of rupiah a year — here is how a centralized system fixes it.",
+        "tags": [
+          "legal practice management",
+          "legal tech",
+          "time & billing"
+        ]
+      },
+      "zh": {
+        "title": "律师事务所管理软件：案件、计费与信托账户一体化",
+        "description": "印尼律师事务所管理软件完整指南：案件管理、按小时计费、客户门户、信托账户核算,以及定制开发的成本与工期参考。",
+        "excerpt": "错过的开庭截止日期和未计费的工时,每年可能悄悄让律所损失数亿印尼盾——集中化系统如何从根本上解决这个问题。",
+        "tags": [
+          "法律事务管理",
+          "法律科技",
+          "工时计费"
+        ]
+      }
+    }
+  },
+  {
     "slug": "rag-ai-knowledge-assistant-bisnis-2026",
     "date": "2026-08-12",
     "readMinutes": 11,
