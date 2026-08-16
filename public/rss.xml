@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Thu, 13 Aug 2026 02:21:41 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 16 Aug 2026 15:47:08 GMT</lastBuildDate>
+    <item>
+      <title>Aplikasi Manajemen Toko Bunga: Solusi Stok Mudah Busuk, Pre-Order Acara, dan Pengiriman Same-Day</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-toko-bunga-florist</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-toko-bunga-florist</guid>
+      <description>Toko bunga menghadapi tantangan yang tidak dimiliki bisnis retail lain: bunga segar yang cepat rusak, pesanan pernikahan yang dipesan berbulan-bulan sebelumnya, dan pengiriman bunga duka cita yang harus tepat waktu. Simak bagaimana aplikasi manajemen toko bunga menjawab semua ini.</description>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+      <category>toko bunga</category>
+      <category>florist</category>
+      <category>software custom</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Bengkel Bubut dan CNC Machining: Panduan Lengkap untuk Job Shop Presisi</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-bengkel-bubut-cnc-machining</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-bengkel-bubut-cnc-machining</guid>
+      <description>Bengkel bubut dan CNC machining yang mengandalkan kartu job kertas dan spreadsheet rawan salah hitung biaya, bentrok jadwal mesin, dan kehilangan rekam QC toleransi. Berikut kebutuhan sistem manajemen job shop presisi yang sebenarnya.</description>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+      <category>CNC machining</category>
+      <category>bengkel bubut</category>
+      <category>software manufaktur</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Toko dan Service HP: Dari Jual Beli sampai Perbaikan dalam Satu Sistem</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-toko-service-hp-gadget</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-toko-service-hp-gadget</guid>
+      <description>Toko HP dan gadget yang merangkap konter service punya masalah unik: unit tertukar, IMEI tukar tambah bermasalah, status servis yang gelap bagi pelanggan, sampai stok sparepart yang kacau. Berikut cara sistem custom menyelesaikan semuanya.</description>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+      <category>aplikasi toko hp</category>
+      <category>software service hp</category>
+      <category>manajemen inventori IMEI</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Coffee Shop: Standarisasi Resep dan Stok Multi-Outlet Kedai Kopi</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-coffee-shop-kedai-kopi</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-coffee-shop-kedai-kopi</guid>
+      <description>Dari resep digital per cangkir sampai pelacakan batch roasting dan program loyalitas, begini cara aplikasi manajemen coffee shop menjaga konsistensi rasa di semua outlet kedai kopi Anda.</description>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+      <category>coffee shop</category>
+      <category>manajemen kedai kopi</category>
+      <category>software FnB</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Barbershop: Sistem untuk Rantai Pangkas Rambut Modern</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-barbershop-pangkas-rambut</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-barbershop-pangkas-rambut</guid>
+      <description>Dari sengketa komisi capster sampai antrean yang kacau, begini cara aplikasi manajemen barbershop custom menyatukan booking, komisi, membership, dan stok produk retail dalam satu sistem.</description>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+      <category>barbershop</category>
+      <category>software bisnis</category>
+      <category>manajemen retail</category>
+    </item>
     <item>
       <title>Personalisasi Website Bertenaga AI: Kunci Konversi Bisnis 2026</title>
       <link>https://afss.tech/blog/personalisasi-website-ai-konversi-bisnis-2026</link>

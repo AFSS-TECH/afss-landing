@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-manajemen-toko-bunga-florist",
+    "date": "2026-08-16",
+    "readMinutes": 10,
+    "c": "#BE185D",
+    "c2": "#831843",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Toko Bunga: Solusi Stok Mudah Busuk, Pre-Order Acara, dan Pengiriman Same-Day",
+        "description": "Panduan lengkap aplikasi manajemen toko bunga dan florist di Indonesia: pelacakan stok mudah busuk, kalender pre-order pernikahan dengan DP, penjadwalan pengiriman same-day, hingga kisaran biaya membangun sistem custom.",
+        "excerpt": "Toko bunga menghadapi tantangan yang tidak dimiliki bisnis retail lain: bunga segar yang cepat rusak, pesanan pernikahan yang dipesan berbulan-bulan sebelumnya, dan pengiriman bunga duka cita yang harus tepat waktu. Simak bagaimana aplikasi manajemen toko bunga menjawab semua ini.",
+        "tags": [
+          "toko bunga",
+          "florist",
+          "software custom"
+        ]
+      },
+      "en": {
+        "title": "Flower Shop Management Software: Solving Perishable Stock, Event Pre-Orders, and Same-Day Delivery",
+        "description": "A complete guide to flower shop and florist management software in Indonesia: perishable inventory tracking, wedding pre-order calendars with deposits, same-day delivery scheduling, and realistic custom development cost ranges.",
+        "excerpt": "Flower shops face challenges no other retail business deals with: fresh flowers that spoil fast, wedding orders booked months ahead, and condolence deliveries that absolutely must arrive on time. Here is how flower shop management software solves all of it.",
+        "tags": [
+          "flower shop",
+          "florist software",
+          "custom software"
+        ]
+      },
+      "zh": {
+        "title": "花店管理软件:解决易腐库存、活动预订与当日配送难题",
+        "description": "印尼花店与花艺工作室管理软件完整指南:易腐花材保质期追踪、婚礼活动预订日历与订金管理、当日配送调度,以及定制系统开发的合理报价区间。",
+        "excerpt": "花店面对的挑战是其他零售行业没有的:鲜花极易凋谢腐坏、婚礼订单提前数月预订、悼念用花的配送必须分秒不差。看看花店管理软件如何一次性解决这些难题。",
+        "tags": [
+          "花店管理",
+          "花艺软件",
+          "定制系统"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-bengkel-bubut-cnc-machining",
+    "date": "2026-08-16",
+    "readMinutes": 10,
+    "c": "#334155",
+    "c2": "#0F172A",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Bengkel Bubut dan CNC Machining: Panduan Lengkap untuk Job Shop Presisi",
+        "description": "Panduan lengkap membangun aplikasi manajemen bengkel bubut dan CNC machining: costing per job order, penjadwalan multi-mesin, tracking material, hingga rekam QC toleransi presisi.",
+        "excerpt": "Bengkel bubut dan CNC machining yang mengandalkan kartu job kertas dan spreadsheet rawan salah hitung biaya, bentrok jadwal mesin, dan kehilangan rekam QC toleransi. Berikut kebutuhan sistem manajemen job shop presisi yang sebenarnya.",
+        "tags": [
+          "CNC machining",
+          "bengkel bubut",
+          "software manufaktur"
+        ]
+      },
+      "en": {
+        "title": "CNC and Precision Machining Job Shop Management Software: A Complete Guide",
+        "description": "A complete guide to building CNC and precision machining job shop management software: per-job costing, multi-machine scheduling, material tracking, and tolerance QC records.",
+        "excerpt": "CNC turning and machining job shops that still rely on paper job cards and spreadsheets are prone to costing errors, machine schedule conflicts, and lost tolerance QC records. Here is what a real precision job shop management system needs.",
+        "tags": [
+          "CNC machining",
+          "precision turning",
+          "manufacturing software"
+        ]
+      },
+      "zh": {
+        "title": "数控车床与精密加工车间管理软件完整指南",
+        "description": "数控车床与精密加工车间管理软件完整指南：单件订单成本核算、多机台排程、原材料追踪与公差质检记录。",
+        "excerpt": "仍依赖纸质工单和电子表格的数控车床与精密加工车间,极易出现成本核算错误、机台排程冲突和公差质检记录丢失等问题。本文介绍精密加工车间真正需要的管理系统。",
+        "tags": [
+          "数控加工",
+          "精密车床",
+          "制造业软件"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-toko-service-hp-gadget",
+    "date": "2026-08-16",
+    "readMinutes": 10,
+    "c": "#1E3A8A",
+    "c2": "#0F172A",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Toko dan Service HP: Dari Jual Beli sampai Perbaikan dalam Satu Sistem",
+        "description": "Toko HP yang jual unit sekaligus terima service butuh sistem lebih dari POS biasa: inventori per-IMEI, valuasi tukar tambah, tiket servis, dan stok sparepart terpisah. Ini panduan lengkapnya.",
+        "excerpt": "Toko HP dan gadget yang merangkap konter service punya masalah unik: unit tertukar, IMEI tukar tambah bermasalah, status servis yang gelap bagi pelanggan, sampai stok sparepart yang kacau. Berikut cara sistem custom menyelesaikan semuanya.",
+        "tags": [
+          "aplikasi toko hp",
+          "software service hp",
+          "manajemen inventori IMEI"
+        ]
+      },
+      "en": {
+        "title": "Phone Store and Repair Shop Management Software: One System for Sales and Service",
+        "description": "Phone shops that both sell handsets and run a repair counter need more than standard retail POS: IMEI-level inventory, trade-in valuation, repair job tickets, and separate parts stock. Here is the complete guide.",
+        "excerpt": "Phone and gadget stores that also run a repair counter face unique problems: mixed-up units, risky trade-in IMEIs, repair status that stays invisible to customers, and chaotic parts stock. Here is how a custom system fixes all of it.",
+        "tags": [
+          "phone store software",
+          "repair shop management",
+          "IMEI inventory system"
+        ]
+      },
+      "zh": {
+        "title": "手机与数码产品店维修管理软件：销售与维修一体化系统",
+        "description": "既卖手机又提供维修服务的门店,需要的不只是普通零售POS系统,还要有IMEI级库存追踪、以旧换新估价、维修工单管理和独立的配件库存。以下是完整指南。",
+        "excerpt": "既卖手机又经营维修柜台的门店面临独特难题:机型混淆丢失、以旧换新IMEI风险、维修进度对顾客不透明、配件库存混乱。以下介绍定制系统如何解决这一切。",
+        "tags": [
+          "手机店软件",
+          "维修店管理系统",
+          "IMEI库存系统"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-coffee-shop-kedai-kopi",
+    "date": "2026-08-16",
+    "readMinutes": 10,
+    "c": "#78350F",
+    "c2": "#451A03",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Coffee Shop: Standarisasi Resep dan Stok Multi-Outlet Kedai Kopi",
+        "description": "Kedai kopi kekinian Anda punya banyak outlet tapi rasa dan stok tidak konsisten? Ini fitur aplikasi manajemen coffee shop yang wajib ada, lengkap dengan kisaran biaya di Indonesia.",
+        "excerpt": "Dari resep digital per cangkir sampai pelacakan batch roasting dan program loyalitas, begini cara aplikasi manajemen coffee shop menjaga konsistensi rasa di semua outlet kedai kopi Anda.",
+        "tags": [
+          "coffee shop",
+          "manajemen kedai kopi",
+          "software FnB"
+        ]
+      },
+      "en": {
+        "title": "Coffee Shop Management Software: Standardizing Recipes and Stock Across Outlets",
+        "description": "Running a growing coffee shop chain but taste and stock keep drifting between outlets? Here are the must-have features of coffee shop management software, plus real cost ranges in Indonesia.",
+        "excerpt": "From per-cup digital recipes to roast batch tracking and loyalty programs, here is how coffee shop management software keeps every outlet in your coffee chain consistent.",
+        "tags": [
+          "coffee shop software",
+          "coffee chain management",
+          "FnB technology"
+        ]
+      },
+      "zh": {
+        "title": "咖啡连锁店管理软件:多门店配方标准化与库存追踪指南",
+        "description": "咖啡连锁品牌门店越开越多,但口味和库存却越来越难统一?本文介绍咖啡连锁店管理软件必备功能,以及印尼市场的真实报价区间。",
+        "excerpt": "从每杯饮品的数字配方到烘焙批次追踪与忠诚度计划,了解咖啡连锁店管理软件如何让您旗下每家门店都保持一致的品质。",
+        "tags": [
+          "咖啡馆管理软件",
+          "咖啡连锁店系统",
+          "餐饮科技"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-barbershop-pangkas-rambut",
+    "date": "2026-08-16",
+    "readMinutes": 10,
+    "c": "#B45309",
+    "c2": "#78350F",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Barbershop: Sistem untuk Rantai Pangkas Rambut Modern",
+        "description": "Panduan lengkap membangun aplikasi manajemen barbershop untuk rantai pangkas rambut: komisi capster, antrean hybrid walk-in dan booking, membership, hingga stok produk retail.",
+        "excerpt": "Dari sengketa komisi capster sampai antrean yang kacau, begini cara aplikasi manajemen barbershop custom menyatukan booking, komisi, membership, dan stok produk retail dalam satu sistem.",
+        "tags": [
+          "barbershop",
+          "software bisnis",
+          "manajemen retail"
+        ]
+      },
+      "en": {
+        "title": "Barbershop Chain Management Software: A System for Modern Grooming Businesses",
+        "description": "A complete guide to building barbershop chain management software: capster commission tracking, hybrid walk-in and booking queues, memberships, and retail product inventory.",
+        "excerpt": "From capster commission disputes to chaotic queues, here is how custom barbershop management software brings booking, commissions, memberships, and retail stock into one system.",
+        "tags": [
+          "barbershop software",
+          "grooming business",
+          "retail management"
+        ]
+      },
+      "zh": {
+        "title": "理发连锁店管理软件：现代男士理容连锁的系统方案",
+        "description": "全面指南：如何为理发连锁店打造管理软件，涵盖发型师提成核算、随到随剪与预约混合排队、会员套餐以及零售产品库存管理。",
+        "excerpt": "从提成纠纷到排队混乱，定制理发店管理软件如何把预约、提成、会员和零售库存整合进一套系统，本文用真实案例说明。",
+        "tags": [
+          "理发店软件",
+          "理容连锁",
+          "零售管理"
+        ]
+      }
+    }
+  },
+  {
     "slug": "personalisasi-website-ai-konversi-bisnis-2026",
     "date": "2026-08-13",
     "readMinutes": 11,
