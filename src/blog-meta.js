@@ -4,6 +4,201 @@
 // have to bundle src/blog.js (~600KB of markdown).
 export const postsMeta = [
   {
+    "slug": "aplikasi-manajemen-showroom-dealer-motor-bekas",
+    "date": "2026-08-17",
+    "readMinutes": 10,
+    "c": "#0891B2",
+    "c2": "#164E63",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Dealer Motor Bekas: Kelola Dokumen, Leasing & Rekondisi",
+        "description": "Aplikasi manajemen dealer motor bekas custom untuk lacak STNK/BPKB per unit, komisi leasing otomatis, dan biaya rekondisi agar margin selalu akurat.",
+        "excerpt": "Satu unit dengan pajak mati yang lolos ke pembeli bisa merusak reputasi dealer dalam semalam. Simak bagaimana aplikasi manajemen dealer motor bekas custom menutup celah dokumen, komisi leasing, dan margin rekondisi.",
+        "tags": [
+          "aplikasi dealer motor bekas",
+          "manajemen showroom motor",
+          "software leasing motor bekas"
+        ]
+      },
+      "en": {
+        "title": "Used Motorcycle Dealer Management Software: Documents, Financing & Recon Costs",
+        "description": "Custom used motorcycle dealer management software to track per-unit STNK/BPKB documents, automate financing partner commissions, and get true margins.",
+        "excerpt": "One unit with an unpaid tax slipping past to a buyer can wreck a dealership's reputation overnight. Here's how custom dealer management software closes the gaps in documents, financing commissions, and recon margins.",
+        "tags": [
+          "used motorcycle dealer software",
+          "motorcycle showroom management",
+          "dealer financing tracking"
+        ]
+      },
+      "zh": {
+        "title": "二手摩托车经销商管理软件:证件追踪、融资租赁佣金与翻新成本一站式管理",
+        "description": "定制二手摩托车经销商管理软件,按单车追踪STNK/BPKB证件与完税状态,自动计算多家融资租赁佣金,精确核算翻新成本与真实利润,避免库存积压。",
+        "excerpt": "一辆完税状态有问题的摩托车流入买家手中,足以在一夜之间毁掉经销商的口碑和数百万盾的利润。看看定制管理软件如何同时堵住证件、融资佣金与翻新利润这三个漏洞。",
+        "tags": [
+          "二手摩托车经销商软件",
+          "摩托车展厅管理系统",
+          "经销商融资佣金追踪"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-rental-kamera-alat-fotografi",
+    "date": "2026-08-17",
+    "readMinutes": 10,
+    "c": "#7C3AED",
+    "c2": "#4C1D95",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Rental Kamera: Cegah Bentrok Booking dan Sengketa Kerusakan",
+        "description": "Aplikasi manajemen rental kamera membantu bisnis penyewaan alat fotografi melacak unit per serial, mencegah bentrok booking, dan mengelola deposit secara digital dan rapi.",
+        "excerpt": "Satu lensa, dua booking, satu akhir pekan yang sama. Begini cerita pemilik rental kamera di Bandung yang akhirnya meninggalkan spreadsheet dan WhatsApp demi sistem manajemen rental kamera terpusat.",
+        "tags": [
+          "aplikasi rental kamera",
+          "manajemen rental alat fotografi",
+          "software rental kamera"
+        ]
+      },
+      "en": {
+        "title": "Camera Rental Management Software: Stop Double-Bookings and Damage Disputes",
+        "description": "Camera rental management software helps photography equipment rental businesses track serialized units, prevent double-bookings, and manage deposits digitally.",
+        "excerpt": "One lens, two weddings, the same Saturday. Here is how a camera rental owner in Bandung finally moved off WhatsApp and spreadsheets into a centralized camera rental management system.",
+        "tags": [
+          "camera rental software",
+          "equipment rental management",
+          "photography rental system"
+        ]
+      },
+      "zh": {
+        "title": "相机租赁管理软件：杜绝重复预订与损坏赔偿纠纷",
+        "description": "相机租赁管理软件帮助摄影器材租赁企业按序列号追踪每件设备、防止重复预订同一实物、并数字化管理押金与身份验证流程。",
+        "excerpt": "同一支镜头,同一个周末,却被预订给了两场不同的婚礼。这是万隆一家相机租赁店老板最终放弃WhatsApp和Excel表格、转向集中式相机租赁管理系统的真实故事。",
+        "tags": [
+          "相机租赁管理软件",
+          "摄影器材租赁系统",
+          "设备租赁管理"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-toko-oleh-oleh-souvenir",
+    "date": "2026-08-17",
+    "readMinutes": 10,
+    "c": "#0D9488",
+    "c2": "#134E4A",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Toko Oleh-Oleh: Atasi Titip Jual UMKM dan Stok Musiman",
+        "description": "Toko oleh-oleh dengan banyak UMKM titip jual dan stok musiman butuh sistem khusus. Pelajari fitur, biaya, dan studi kasus aplikasi manajemen toko oleh-oleh di Indonesia.",
+        "excerpt": "Ribuan SKU dari puluhan UMKM, camilan yang bisa kedaluwarsa, dan lonjakan wisatawan musiman—toko oleh-oleh butuh lebih dari kasir biasa. Ini cerita toko yang hampir kolaps sebelum berbenah.",
+        "tags": [
+          "aplikasi manajemen toko oleh-oleh",
+          "software toko souvenir",
+          "sistem titip jual UMKM"
+        ]
+      },
+      "en": {
+        "title": "Souvenir Shop Management Software: Solving Consignment and Seasonal Stock Chaos",
+        "description": "Souvenir shops juggling UMKM consignment suppliers and seasonal tourist demand need more than generic POS. See features, real costs, and a case study.",
+        "excerpt": "Thousands of SKUs from dozens of local artisans, snacks that expire, and tourist demand that swings wildly by season—running a souvenir shop on spreadsheets eventually breaks down.",
+        "tags": [
+          "souvenir shop management software",
+          "gift shop inventory system",
+          "consignment retail software"
+        ]
+      },
+      "zh": {
+        "title": "伴手礼店管理软件:解决寄售管理与季节性库存难题",
+        "description": "经营伴手礼店需要管理众多本地寄售供应商和季节性游客需求波动,通用零售系统远远不够。了解核心功能、开发成本与真实案例。",
+        "excerpt": "数千个SKU来自几十家本地手工艺人,易过期的零食,加上旅游旺季与淡季的巨大波动——靠Excel管理伴手礼店迟早会出问题。这是一家险些因此失去信誉的门店的故事。",
+        "tags": [
+          "伴手礼店管理软件",
+          "礼品店库存系统",
+          "寄售管理系统"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-toko-sepatu-sneakers",
+    "date": "2026-08-17",
+    "readMinutes": 10,
+    "c": "#DC2626",
+    "c2": "#7F1D1D",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Toko Sepatu Sneakers: Atasi Size Matrix & Konsinyasi",
+        "description": "Aplikasi manajemen toko sepatu sneakers bantu kelola stok size matrix, konsinyasi, legit check, dan drop rilisan dalam satu sistem terpusat.",
+        "excerpt": "Dari kamar kos di Bandung sampai tiga outlet dan omzet miliaran rupiah per bulan, kisah Kick Radar menunjukkan kenapa toko sneakers butuh sistem lebih dari sekadar Excel dan feeling.",
+        "tags": [
+          "aplikasi manajemen toko sepatu",
+          "software toko sneakers",
+          "sistem konsinyasi sepatu"
+        ]
+      },
+      "en": {
+        "title": "Sneaker Store Management Software: Solve Size Matrix & Consignment Chaos",
+        "description": "Sneaker store management software centralizes size-matrix inventory, consignment payouts, legit checks, and drop management for growing shoe retailers.",
+        "excerpt": "From a boarding-house side hustle to three outlets and billions in monthly revenue, Kick Radar's story shows why sneaker stores outgrow spreadsheets fast.",
+        "tags": [
+          "sneaker store management software",
+          "shoe retail software",
+          "consignment inventory system"
+        ]
+      },
+      "zh": {
+        "title": "运动鞋店管理软件:破解尺码矩阵库存与寄售分成难题",
+        "description": "运动鞋店管理软件专为运动鞋零售打造,整合尺码矩阵库存、寄售分成计算、球鞋验真记录与限量发售抽签管理,帮助多渠道运营的鞋店告别混乱的Excel表格。",
+        "excerpt": "从万隆出租屋里的三双寄卖球鞋,到如今三家门店、月流水超Rp 21亿的Kick Radar,这个故事揭示了运动鞋店为何终将告别Excel表格,转向真正为行业设计的管理系统。",
+        "tags": [
+          "运动鞋店管理软件",
+          "鞋类零售系统",
+          "寄售库存管理"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "aplikasi-manajemen-bakery-toko-roti-kue",
+    "date": "2026-08-17",
+    "readMinutes": 10,
+    "c": "#C2410C",
+    "c2": "#7C2D12",
+    "i18n": {
+      "id": {
+        "title": "Aplikasi Manajemen Bakery dan Toko Roti: Atasi Waste, HPP, dan Pre-Order Kue",
+        "description": "Aplikasi manajemen bakery membantu toko roti dan kue multi-outlet mengelola stok kadaluarsa, HPP resep, pre-order DP, dan konsinyasi secara terpusat dan akurat.",
+        "excerpt": "Video viral roti berjamur dan sengketa DP kue pernikahan yang bentrok jadwal membuka mata pemilik bakery ini: tanpa sistem terpusat, pertumbuhan multi-outlet justru mengundang bencana.",
+        "tags": [
+          "aplikasi manajemen bakery",
+          "sistem HPP roti",
+          "software toko kue"
+        ]
+      },
+      "en": {
+        "title": "Bakery Management Software: Fixing Waste, Costing, and Pre-Orders",
+        "description": "Bakery management software helps multi-outlet bread and cake businesses control expiry, recipe costing, pre-order deposits, and consignment sales.",
+        "excerpt": "A viral video of moldy bread and a double-booked wedding cake deposit exposed the limits of spreadsheets — here's how one Bandung bakery chain fixed it.",
+        "tags": [
+          "bakery management software",
+          "bakery inventory system",
+          "custom POS for bakery"
+        ]
+      },
+      "zh": {
+        "title": "面包店管理软件:多门店面包蛋糕店的保质期、成本与预订管理方案",
+        "description": "面包店管理软件帮助多门店面包蛋糕连锁企业集中管理保质期库存、配方成本(HPP)核算、定制蛋糕定金预订及寄卖对账,减少浪费提升效率。",
+        "excerpt": "一段发霉面包的病毒视频和情人节婚礼蛋糕定金冲突,揭示了印尼一家面包连锁企业依赖笔记本和聊天记录管理业务的致命弱点。",
+        "tags": [
+          "面包店管理软件",
+          "面包店成本核算系统",
+          "面包店库存管理"
+        ]
+      }
+    }
+  },
+  {
     "slug": "aplikasi-manajemen-toko-bunga-florist",
     "date": "2026-08-16",
     "readMinutes": 10,

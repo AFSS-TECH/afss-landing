@@ -6,7 +6,57 @@
     <atom:link href="https://afss.tech/rss.xml" rel="self" type="application/rss+xml" />
     <description>Tips & panduan pembuatan website, aplikasi mobile, dan strategi digital untuk bisnis di Indonesia.</description>
     <language>id-ID</language>
-    <lastBuildDate>Sun, 16 Aug 2026 15:47:08 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 02:27:11 GMT</lastBuildDate>
+    <item>
+      <title>Aplikasi Manajemen Dealer Motor Bekas: Kelola Dokumen, Leasing &amp; Rekondisi</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-showroom-dealer-motor-bekas</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-showroom-dealer-motor-bekas</guid>
+      <description>Satu unit dengan pajak mati yang lolos ke pembeli bisa merusak reputasi dealer dalam semalam. Simak bagaimana aplikasi manajemen dealer motor bekas custom menutup celah dokumen, komisi leasing, dan margin rekondisi.</description>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+      <category>aplikasi dealer motor bekas</category>
+      <category>manajemen showroom motor</category>
+      <category>software leasing motor bekas</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Rental Kamera: Cegah Bentrok Booking dan Sengketa Kerusakan</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-rental-kamera-alat-fotografi</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-rental-kamera-alat-fotografi</guid>
+      <description>Satu lensa, dua booking, satu akhir pekan yang sama. Begini cerita pemilik rental kamera di Bandung yang akhirnya meninggalkan spreadsheet dan WhatsApp demi sistem manajemen rental kamera terpusat.</description>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+      <category>aplikasi rental kamera</category>
+      <category>manajemen rental alat fotografi</category>
+      <category>software rental kamera</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Toko Oleh-Oleh: Atasi Titip Jual UMKM dan Stok Musiman</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-toko-oleh-oleh-souvenir</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-toko-oleh-oleh-souvenir</guid>
+      <description>Ribuan SKU dari puluhan UMKM, camilan yang bisa kedaluwarsa, dan lonjakan wisatawan musiman—toko oleh-oleh butuh lebih dari kasir biasa. Ini cerita toko yang hampir kolaps sebelum berbenah.</description>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+      <category>aplikasi manajemen toko oleh-oleh</category>
+      <category>software toko souvenir</category>
+      <category>sistem titip jual UMKM</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Toko Sepatu Sneakers: Atasi Size Matrix &amp; Konsinyasi</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-toko-sepatu-sneakers</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-toko-sepatu-sneakers</guid>
+      <description>Dari kamar kos di Bandung sampai tiga outlet dan omzet miliaran rupiah per bulan, kisah Kick Radar menunjukkan kenapa toko sneakers butuh sistem lebih dari sekadar Excel dan feeling.</description>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+      <category>aplikasi manajemen toko sepatu</category>
+      <category>software toko sneakers</category>
+      <category>sistem konsinyasi sepatu</category>
+    </item>
+    <item>
+      <title>Aplikasi Manajemen Bakery dan Toko Roti: Atasi Waste, HPP, dan Pre-Order Kue</title>
+      <link>https://afss.tech/blog/aplikasi-manajemen-bakery-toko-roti-kue</link>
+      <guid>https://afss.tech/blog/aplikasi-manajemen-bakery-toko-roti-kue</guid>
+      <description>Video viral roti berjamur dan sengketa DP kue pernikahan yang bentrok jadwal membuka mata pemilik bakery ini: tanpa sistem terpusat, pertumbuhan multi-outlet justru mengundang bencana.</description>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+      <category>aplikasi manajemen bakery</category>
+      <category>sistem HPP roti</category>
+      <category>software toko kue</category>
+    </item>
     <item>
       <title>Aplikasi Manajemen Toko Bunga: Solusi Stok Mudah Busuk, Pre-Order Acara, dan Pengiriman Same-Day</title>
       <link>https://afss.tech/blog/aplikasi-manajemen-toko-bunga-florist</link>
